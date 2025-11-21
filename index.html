@@ -682,10 +682,10 @@
                     <div>
                         <label for="numQuestions" class="block text-lg font-semibold text-gray-700 mb-2">Questions per Session</label>
                         <p class="text-sm text-gray-500 mb-3">Set how many questions you want in a session. (Max: ${maxQ})</p>
-                        <input type="range" id="numQuestions" min="1" max="${maxQ}" value="${quizSettings.numQuestions}" oninput="updateSettingsAuto(); document.getElementById('numQValue').textContent = this.value" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
-                        <div class="flex justify-between text-sm text-gray-600 mt-2">
+                        <input type="range" id="numQuestions" min="1" max="${maxQ}" value="${quizSettings.numQuestions}" oninput="updateSettingsAuto(); document.getElementById('numQInput').value = this.value" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                        <div class="flex justify-between items-center text-sm text-gray-600 mt-2">
                             <span>1</span>
-                            <span class="font-bold text-blue-600" id="numQValue">${quizSettings.numQuestions}</span>
+                            <input type="number" id="numQInput" min="1" max="${maxQ}" value="${quizSettings.numQuestions}" onchange="if(this.value > ${maxQ}) this.value = ${maxQ}; if(this.value < 1) this.value = 1; document.getElementById('numQuestions').value = this.value; updateSettingsAuto();" class="w-24 px-3 py-2 border border-gray-300 rounded-lg text-center font-semibold text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                             <span>${maxQ}</span>
                         </div>
                     </div>
