@@ -124,6 +124,21 @@
             <!-- Dynamic content will be rendered here -->
         </main>
 
+        <!-- Loading Indicator -->
+        <div id="loading-indicator" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div class="bg-white rounded-lg p-8 max-w-md shadow-2xl">
+                <div class="flex flex-col items-center">
+                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mb-4"></div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Loading Questions</h3>
+                    <p class="text-gray-600 text-center mb-4" id="loading-status">Scanning for question files...</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div id="loading-progress" class="bg-blue-600 h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-4" id="loading-count">0 questions loaded</p>
+                </div>
+            </div>
+        </div>
+
         <!-- Message Box for Alerts -->
         <div id="message-box" class="fixed bottom-4 right-4 p-4 rounded-lg shadow-xl text-white font-semibold transition-all duration-300 transform translate-y-full opacity-0 z-50"></div>
 
@@ -256,12 +271,21 @@
             
             // Combine all paths (Default questions first for priority)
             const allPathsToTry = [...new Set([...defaultQuestionsFiles, ...otherFilesToTry])];
+            let filesProcessed = 0;
+            const totalFiles = allPathsToTry.length;
 
             for (const filePath of allPathsToTry) {
                 try {
                     // Append cache buster to the URL
                     const urlWithCacheBuster = `${filePath}?${cacheBuster}`;
                     const response = await fetch(urlWithCacheBuster);
+                    filesProcessed++;
+                    
+                    // Update progress bar
+                    const progressPercent = (filesProcessed / totalFiles) * 100;
+                    document.getElementById('loading-progress').style.width = progressPercent + '%';
+                    document.getElementById('loading-count').textContent = `${allQuestionsLoaded.length} questions loaded | Checking ${filesProcessed}/${totalFiles} files...`;
+                    
                     if (!response.ok) continue; // Skip if file doesn't exist
                     
                     const data = await response.json();
@@ -282,6 +306,7 @@
                     
                     if (validCount > 0) {
                         console.log(`Successfully loaded ${validCount} questions from: ${filePath}`);
+                        document.getElementById('loading-status').textContent = `Found ${validCount} questions in ${filePath}`;
                     }
                 } catch (e) {
                     // Silently skip files that don't exist or fail to parse
@@ -293,13 +318,23 @@
         }
 
         async function loadState() {
+            // Show loading indicator
+            const loadingIndicator = document.getElementById('loading-indicator');
+            loadingIndicator.classList.remove('hidden');
+            
             // 1. Recursively load and merge all valid JSON files from base directory
             try {
                 console.log("Starting to load questions from available sources...");
                 let loadedQuestions = await fetchJsonFilesRecursively();
                 
+                // Update progress bar
+                document.getElementById('loading-progress').style.width = '100%';
+                document.getElementById('loading-status').textContent = 'Organizing questions...';
+                
                 if (loadedQuestions.length > 0) {
                     console.log(`Successfully loaded ${loadedQuestions.length} unique questions`);
+                    document.getElementById('loading-count').textContent = `${loadedQuestions.length} questions loaded`;
+                    
                     // Restructure IDs to be sequential
                     allQuestions = loadedQuestions.map((q, index) => ({
                         ...q,
@@ -312,6 +347,8 @@
                 }
             } catch (e) {
                 console.error("Error loading question files:", e);
+                document.getElementById('loading-status').textContent = 'Error loading questions, checking cache...';
+                
                 // Fallback: try local storage, then empty state
                 const savedQuestions = localStorage.getItem(LOCAL_STORAGE_KEY);
                 if (savedQuestions) {
@@ -353,6 +390,11 @@
 
             // 4. Re-render based on loaded state
             setView(currentView);
+            
+            // 5. Hide loading indicator
+            setTimeout(() => {
+                document.getElementById('loading-indicator').classList.add('hidden');
+            }, 500); // Small delay for smooth transition
         }
 
         function saveQuestions(questions) {
