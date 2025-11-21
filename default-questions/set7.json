@@ -188,9 +188,8 @@
       "C": "Assistant Director II (AD II)",
       "D": "Deputy Director (DD)"
     },
-    "answer": "C",
-    "explanation": "The jump from the teaching/non-management class (SS I) to the management class starts at AD II."
-  },
+    "answer": "B",
+    "explanation": "The common progression for the teaching staff is: Superintendent II (Sup. II) -> Superintendent I (Sup. I) -> Senior Superintendent II (SS II) -> Senior Superintendent I (SS I) -> Principal Superintendent (PS) -> Assistant Director II (AD II) -> Assistant Director I (AD I)."  },
   {
     "id": 17,
     "question": "The **Public Procurement Act** mandates that the **Open Competitive Tendering** method must always be used unless:",
