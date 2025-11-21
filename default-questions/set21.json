@@ -1,0 +1,902 @@
+[
+  {
+    "id": 1,
+    "question": "Which specific legislative instrument established the Ghana Education Service (GES)?",
+    "options": {
+      "A": "Education Act, 2008 (Act 778)",
+      "B": "Ghana Education Service Act, 1995 (Act 506)",
+      "C": "Pre-Tertiary Education Act, 2020 (Act 1049)",
+      "D": "The Public Service Act, 1994 (Act 483)"
+    },
+    "answer": "B",
+    "explanation": "The Ghana Education Service Act, 1995 (Act 506) formally established the GES and defined its functions."
+  },
+  {
+    "id": 2,
+    "question": "Under the Education Act, 2008 (Act 778), what is the minimum compulsory period of Basic Education defined for Ghana?",
+    "options": {
+      "A": "Six years",
+      "B": "Nine years",
+      "C": "Ten years",
+      "D": "Twelve years"
+    },
+    "answer": "B",
+    "explanation": "Act 778 defines Basic Education as nine years (Kindergarten 2 is often included in policy, but the core compulsory period stipulated in the Act is nine years, covering Primary 1 to JHS 3)."
+  },
+  {
+    "id": 3,
+    "question": "Which section of the GES Act, 1995 (Act 506) mandates the Service to ensure effective distribution of teachers and educational materials?",
+    "options": {
+      "A": "Section 1(2)",
+      "B": "Section 3(a)",
+      "C": "Section 5(b)",
+      "D": "Section 10(4)"
+    },
+    "answer": "B",
+    "explanation": "Section 3 outlines the core functions of the Service, which include securing the effective and efficient administration of the Service and schools."
+  },
+  {
+    "id": 4,
+    "question": "The National Teaching Council (NTC) was established to regulate the teaching profession, with its functions detailed and consolidated in which Act of Parliament?",
+    "options": {
+      "A": "GES Act, 1995 (Act 506)",
+      "B": "Education Act, 2008 (Act 778)",
+      "C": "Pre-Tertiary Education Act, 2020 (Act 1049)",
+      "D": "The Children's Act, 1998 (Act 560)"
+    },
+    "answer": "C",
+    "explanation": "The Pre-Tertiary Education Act, 2020 (Act 1049) consolidates and updates the laws governing the NTC, including its role in licensing and professional standards."
+  },
+  {
+    "id": 5,
+    "question": "Which Article of the 1992 Constitution guarantees the right to education and mandates the state to provide free, compulsory, and universal basic education?",
+    "options": {
+      "A": "Article 12",
+      "B": "Article 25",
+      "C": "Article 37",
+      "D": "Article 55"
+    },
+    "answer": "B",
+    "explanation": "Article 25 of the 1992 Constitution sets out the fundamental human right to education."
+  },
+  {
+    "id": 6,
+    "question": "Who is responsible for the overall supervision of pre-tertiary education policy in Ghana, as stipulated by the foundational Acts?",
+    "options": {
+      "A": "The Director-General of the GES",
+      "B": "The Minister for Education",
+      "C": "The Head of Civil Service",
+      "D": "The President of the Republic"
+    },
+    "answer": "B",
+    "explanation": "The Minister for Education is responsible for the overall formulation and supervision of education policy."
+  },
+  {
+    "id": 7,
+    "question": "Under Act 778, which entity is charged with the function of approving the curriculum for Basic and Senior High Schools?",
+    "options": {
+      "A": "National Council for Curriculum and Assessment (NaCCA)",
+      "B": "Ghana Education Service Council",
+      "C": "Ministry of Education Headquarters",
+      "D": "National Teaching Council (NTC)"
+    },
+    "answer": "A",
+    "explanation": "NaCCA, as established under the Pre-Tertiary Education Act, 2020 (Act 1049), is the body responsible for curriculum and assessment for pre-tertiary education."
+  },
+  {
+    "id": 8,
+    "question": "The GES Act, 1995 (Act 506) outlines the composition of the GES Council. How many members, excluding the Director-General, shall be appointed by the President?",
+    "options": {
+      "A": "Seven",
+      "B": "Nine",
+      "C": "Eleven",
+      "D": "Thirteen"
+    },
+    "answer": "D",
+    "explanation": "Section 4 of Act 506 specifies the composition of the GES Council, which includes the Director-General and thirteen other members appointed by the President, in consultation with the Council of State."
+  },
+  {
+    "id": 9,
+    "question": "A key objective of the Education Act, 2008 (Act 778) is to address equity and access. This is achieved through the promotion of:",
+    "options": {
+      "A": "Private school partnerships only.",
+      "B": "Distance education and open schooling.",
+      "C": "Single-sex boarding schools.",
+      "D": "The establishment of specialized universities."
+    },
+    "answer": "B",
+    "explanation": "Section 2(e) of Act 778 specifically includes promoting distance education and open schooling as a way to increase access and equity."
+  },
+  {
+    "id": 10,
+    "question": "Which of the following is NOT a principal function of the Ghana Education Service (GES) under the GES Act, 1995 (Act 506)?",
+    "options": {
+      "A": "Implement Government policies on pre-tertiary education.",
+      "B": "Advise the Minister on matters relating to pre-tertiary education.",
+      "C": "Develop the curriculum for Basic and Senior High Schools.",
+      "D": "Promote the efficiency and welfare of staff."
+    },
+    "answer": "C",
+    "explanation": "The development of the curriculum is primarily the function of NaCCA (under Act 1049), not the GES itself, although GES implements it."
+  },
+  {
+    "id": 11,
+    "question": "What is the primary legal purpose of issuing a Professional Teaching Licence under the Pre-Tertiary Education Act, 2020 (Act 1049)?",
+    "options": {
+      "A": "To grant teachers the right to strike.",
+      "B": "To authorize an individual to teach in a school.",
+      "C": "To exempt a teacher from Continuous Professional Development (CPD).",
+      "D": "To ensure employment is provided by the government."
+    },
+    "answer": "B",
+    "explanation": "The license confirms that the holder meets the required professional standards and is authorized by law to practice as a teacher."
+  },
+  {
+    "id": 12,
+    "question": "The establishment of Technical and Vocational Education and Training (TVET) institutions is primarily governed by which body and its corresponding legislation?",
+    "options": {
+      "A": "GES under Act 506",
+      "B": "Council for Technical and Vocational Education and Training (COTVET) under the TVET Act (Now covered by Act 1049)",
+      "C": "NAQAA under Act 1024",
+      "D": "National Development Planning Commission (NDPC) Act"
+    },
+    "answer": "B",
+    "explanation": "While COTVET's role has evolved, the TVET Act/Act 1049 governs the standards, structures, and establishment of TVET institutions."
+  },
+  {
+    "id": 13,
+    "question": "According to the Education Act, 2008 (Act 778), the ownership and management of a private school is subject to registration and regulation by:",
+    "options": {
+      "A": "The local Metropolitan, Municipal, or District Assembly (MMDA).",
+      "B": "The Ghana National Association of Private Schools (GNAPS).",
+      "C": "The Minister for Education and the GES.",
+      "D": "The Registrar-General’s Department only."
+    },
+    "answer": "C",
+    "explanation": "Act 778 Section 25-30 mandates that private institutions must be registered and adhere to standards set by the Minister and the GES."
+  },
+  {
+    "id": 14,
+    "question": "The Director-General of the GES is appointed by the President, in accordance with which law?",
+    "options": {
+      "A": "GES Act, 1995 (Act 506)",
+      "B": "The Public Services Commission Act, 1994 (Act 482)",
+      "C": "Civil Service Act, 1993 (PNDCL 327)",
+      "D": "Education Act, 2008 (Act 778)"
+    },
+    "answer": "A",
+    "explanation": "Section 9 of the GES Act, 1995 (Act 506) governs the appointment, functions, and duties of the Director-General."
+  },
+  {
+    "id": 15,
+    "question": "What does the Pre-Tertiary Education Act, 2020 (Act 1049) mandate regarding the formation of school governing bodies (Boards or Committees)?",
+    "options": {
+      "A": "Governing bodies are only required for Senior High Schools.",
+      "B": "All pre-tertiary schools must have a governing body.",
+      "C": "Governing bodies are optional and subject to the Minister’s discretion.",
+      "D": "Only private schools are required to have governing boards."
+    },
+    "answer": "B",
+    "explanation": "Act 1049 requires the establishment of management and governing structures for all pre-tertiary institutions, including Basic Schools (SMC) and SHS (Boards of Governors)."
+  },
+  {
+    "id": 16,
+    "question": "Which subsidiary law outlines the ethical standards and professional conduct expected of all GES employees?",
+    "options": {
+      "A": "Education Service Regulations (L.I. 1530)",
+      "B": "The GES Code of Professional Conduct and Internal Rules",
+      "C": "The Labour Act, 2003 (Act 651)",
+      "D": "The Public Procurement Act, 2003 (Act 663)"
+    },
+    "answer": "B",
+    "explanation": "The GES Code of Professional Conduct and Internal Rules, derived from Act 506, sets the specific behavioral and ethical framework for GES staff."
+  },
+  {
+    "id": 17,
+    "question": "A disciplinary action involving a GES staff member is typically administered under the authority derived from which parent law?",
+    "options": {
+      "A": "Criminal Offences Act, 1960 (Act 29)",
+      "B": "GES Act, 1995 (Act 506)",
+      "C": "Data Protection Act, 2012 (Act 843)",
+      "D": "Local Governance Act, 2016 (Act 936)"
+    },
+    "answer": "B",
+    "explanation": "Act 506 empowers the GES Council and its structures to formulate and enforce disciplinary rules for its employees."
+  },
+  {
+    "id": 18,
+    "question": "The fundamental mandate for the decentralization of education management to the regional and district levels is contained within which Act?",
+    "options": {
+      "A": "Education Act, 2008 (Act 778)",
+      "B": "Local Governance Act, 2016 (Act 936)",
+      "C": "National Teaching Council Act (Act 1049)",
+      "D": "GES Act, 1995 (Act 506)"
+    },
+    "answer": "A",
+    "explanation": "Act 778 establishes the roles and responsibilities of District Education Offices and Regional Directorates in the management of pre-tertiary education."
+  },
+  {
+    "id": 19,
+    "question": "What is the legal status of the Ministry of Education (MoE) in relation to the GES, as per the constituting Acts?",
+    "options": {
+      "A": "The MoE is a unit under the GES.",
+      "B": "The GES is a sub-agency under the MoE, responsible for implementation.",
+      "C": "They are two co-equal independent statutory bodies.",
+      "D": "The MoE is only responsible for tertiary education."
+    },
+    "answer": "B",
+    "explanation": "The GES is an agency under the MoE, responsible for implementing the policies formulated by the Minister/MoE."
+  },
+  {
+    "id": 20,
+    "question": "Which legal provision guides the requirement for educational facilities to be accessible to persons with disabilities?",
+    "options": {
+      "A": "The Education Act, 2008 (Act 778)",
+      "B": "The Persons with Disability Act, 2006 (Act 715)",
+      "C": "The Public Health Act, 2012 (Act 851)",
+      "D": "The Local Governance Act, 2016 (Act 936)"
+    },
+    "answer": "B",
+    "explanation": "Act 715 mandates accessibility in infrastructure and education for persons with disabilities, which applies directly to the GES and MoE."
+  },
+  {
+    "id": 21,
+    "question": "The Children's Act, 1998 (Act 560) is highly relevant to the GES/MoE. What is its minimum age for criminal responsibility in Ghana, which directly impacts school discipline?",
+    "options": {
+      "A": "Seven years",
+      "B": "Ten years",
+      "C": "Twelve years",
+      "D": "Fourteen years"
+    },
+    "answer": "C",
+    "explanation": "Section 26 of Act 560 sets the minimum age of criminal responsibility at twelve years, guiding how schools must handle serious offences by minors."
+  },
+  {
+    "id": 22,
+    "question": "Who is the legally mandated Chairperson of the Ghana Education Service Council, as per Act 506?",
+    "options": {
+      "A": "The Director-General of the GES.",
+      "B": "The Minister for Education.",
+      "C": "A person appointed by the President.",
+      "D": "The Head of the National Association of Graduate Teachers (NAGRAT)."
+    },
+    "answer": "C",
+    "explanation": "Section 5 of the GES Act states that the President shall appoint the Chairperson of the Council."
+  },
+  {
+    "id": 23,
+    "question": "Which Act repealed the original Education Act, 1961 (Act 87), consolidating and replacing it with the current framework?",
+    "options": {
+      "A": "Education Act, 2008 (Act 778)",
+      "B": "GES Act, 1995 (Act 506)",
+      "C": "Pre-Tertiary Education Act, 2020 (Act 1049)",
+      "D": "Civil Service Law, 1993 (PNDCL 327)"
+    },
+    "answer": "A",
+    "explanation": "Act 778 repealed and replaced Act 87, establishing the modern structure of Ghanaian education."
+  },
+  {
+    "id": 24,
+    "question": "Under the Pre-Tertiary Education Act, 2020 (Act 1049), which body is responsible for regulating the activities of teacher training institutions (Colleges of Education)?",
+    "options": {
+      "A": "GES",
+      "B": "National Teaching Council (NTC)",
+      "C": "National Council for Tertiary Education (NCTE)",
+      "D": "National Accreditation and Quality Assurance Authority (NAQAA)"
+    },
+    "answer": "D",
+    "explanation": "NAQAA (Act 1024) and Act 1049 ensure quality assurance and accreditation of tertiary and pre-tertiary institutions, including Colleges of Education."
+  },
+  {
+    "id": 25,
+    "question": "The legal provision for the establishment of a School Management Committee (SMC) for a Basic School is found in which primary Act?",
+    "options": {
+      "A": "The 1992 Constitution",
+      "B": "Education Act, 2008 (Act 778)",
+      "C": "Public Services Commission Act, 1994 (Act 482)",
+      "D": "GES Act, 1995 (Act 506)"
+    },
+    "answer": "B",
+    "explanation": "Act 778 makes provision for the establishment of SMCs and Boards of Governors to manage public institutions."
+  },
+  {
+    "id": 26,
+    "question": "Which Act mandates that a person cannot teach in a Ghanaian school without a valid professional license issued by the NTC?",
+    "options": {
+      "A": "GES Act, 1995 (Act 506)",
+      "B": "Education Act, 2008 (Act 778)",
+      "C": "Pre-Tertiary Education Act, 2020 (Act 1049)",
+      "D": "Public Financial Management Act, 2016 (Act 921)"
+    },
+    "answer": "C",
+    "explanation": "Act 1049 clearly spells out the requirement for licensing by the NTC for all teachers in pre-tertiary institutions."
+  },
+  {
+    "id": 27,
+    "question": "The Public Financial Management Act (PFMA), 2016 (Act 921), requires the MoE and GES to submit which report annually?",
+    "options": {
+      "A": "An Annual Curriculum Review Report",
+      "B": "A Human Resource Audit Report",
+      "C": "An Annual Budget and Financial Report",
+      "D": "A Student Enrollment Census"
+    },
+    "answer": "C",
+    "explanation": "The PFMA mandates all public sector entities, including the MoE and GES, to adhere to strict financial reporting and accountability standards."
+  },
+  {
+    "id": 28,
+    "question": "The legal framework for registering, auditing, and regulating all educational textbooks and learning materials in pre-tertiary schools is primarily under the purview of which institution, as empowered by Act 1049?",
+    "options": {
+      "A": "GES Curriculum Directorate",
+      "B": "Ghana Book Development Council (GBDC)",
+      "C": "NaCCA",
+      "D": "NTC"
+    },
+    "answer": "C",
+    "explanation": "NaCCA's mandate extends to approving and regulating the quality of educational materials that support the approved curriculum."
+  },
+  {
+    "id": 29,
+    "question": "Which Act makes provision for the establishment of the National Education Service to support the functions of the MoE and GES?",
+    "options": {
+      "A": "Education Act, 2008 (Act 778)",
+      "B": "Pre-Tertiary Education Act, 2020 (Act 1049)",
+      "C": "Civil Service Act, 1993 (PNDCL 327)",
+      "D": "Local Governance Act, 2016 (Act 936)"
+    },
+    "answer": "B",
+    "explanation": "Act 1049 consolidated several education-related bodies and created the National Education Service (NES)."
+  },
+  {
+    "id": 30,
+    "question": "The GES Act, 1995 (Act 506) allows the GES Council to make regulations on certain matters. Who must approve these regulations before they take effect?",
+    "options": {
+      "A": "The Director-General of GES",
+      "B": "The Minister for Education",
+      "C": "The Parliament of Ghana",
+      "D": "The Public Services Commission"
+    },
+    "answer": "B",
+    "explanation": "Section 15 of Act 506 states that the Minister may by legislative instrument make Regulations to provide for any matter necessary for the effective operation of the Act."
+  },
+  {
+    "id": 31,
+    "question": "The National Education Service (NES), as stipulated in the Pre-Tertiary Education Act, 2020 (Act 1049), primarily performs what function?",
+    "options": {
+      "A": "Managing teachers' salaries and pensions.",
+      "B": "Coordinating and implementing education policies.",
+      "C": "Issuing professional licenses to teachers.",
+      "D": "Setting fees for private schools."
+    },
+    "answer": "B",
+    "explanation": "The NES is intended to be the central implementing and coordinating body for the Ministry of Education's policies across the pre-tertiary sector."
+  },
+  {
+    "id": 32,
+    "question": "According to the Constitution (Article 25), the establishment of private educational institutions is permitted, provided they adhere to:",
+    "options": {
+      "A": "The financial dictates of the MoE.",
+      "B": "The standards set by the state.",
+      "C": "Only religious or moral education standards.",
+      "D": "Only infrastructure requirements."
+    },
+    "answer": "B",
+    "explanation": "Article 25(3) permits private institutions, but they must be registered and meet the minimum standards set by the state."
+  },
+  {
+    "id": 33,
+    "question": "The GES Act, 1995 (Act 506) gives the GES Council power to establish committees. Which of these committees is NOT statutorily mandated by the Act?",
+    "options": {
+      "A": "Management Committee",
+      "B": "Finance Committee",
+      "C": "Disciplinary Committee",
+      "D": "The Procurement Committee"
+    },
+    "answer": "D",
+    "explanation": "While necessary, the Procurement Committee's establishment is mandated by the Public Procurement Act, 2003 (Act 663), not directly by Act 506."
+  },
+  {
+    "id": 34,
+    "question": "Under the Education Act, 2008 (Act 778), who has the statutory power to close down a school if it fails to meet the prescribed minimum standards?",
+    "options": {
+      "A": "The District Chief Executive (DCE)",
+      "B": "The Minister for Education or a person authorised by the Minister",
+      "C": "The Inspector-General of Police",
+      "D": "The Head of the National Fire Service"
+    },
+    "answer": "B",
+    "explanation": "The Minister has the ultimate statutory authority to ensure standards are met, including the closure of non-compliant schools."
+  },
+  {
+    "id": 35,
+    "question": "The legal basis for the employment and conditions of service for all GES staff is drawn from the GES Act, 1995 (Act 506) and which general legislation?",
+    "options": {
+      "A": "Labour Act, 2003 (Act 651)",
+      "B": "Civil Service Act, 1993 (PNDCL 327)",
+      "C": "The National Media Commission Act, 1993 (Act 449)",
+      "D": "Ghana Aids Commission Act, 2016 (Act 918)"
+    },
+    "answer": "A",
+    "explanation": "The Labour Act, 2003 (Act 651) provides the general framework for employment relationships and conditions for all workers in Ghana, including GES staff."
+  },
+  {
+    "id": 36,
+    "question": "Which Act mandates the state to ensure that every educational institution is adequately staffed with professionals who are trained, licensed, and registered?",
+    "options": {
+      "A": "GES Act, 1995 (Act 506)",
+      "B": "Pre-Tertiary Education Act, 2020 (Act 1049)",
+      "C": "Local Governance Act, 2016 (Act 936)",
+      "D": "Education Act, 2008 (Act 778)"
+    },
+    "answer": "B",
+    "explanation": "Act 1049, through its provisions for NTC and professional standards, puts this mandate into statutory effect."
+  },
+  {
+    "id": 37,
+    "question": "The legal mandate for continuous professional development (CPD) for teachers is primarily driven by which statutory body, as defined by Act 1049?",
+    "options": {
+      "A": "GES",
+      "B": "NTC",
+      "C": "NaCCA",
+      "D": "GNAT"
+    },
+    "answer": "B",
+    "explanation": "The NTC is the regulatory body tasked with developing and enforcing the CPD framework for maintaining professional standards and licenses."
+  },
+  {
+    "id": 38,
+    "question": "Under Act 778, the District Education Oversight Committee (DEOC) is established to:",
+    "options": {
+      "A": "Manage all school funds and budgets.",
+      "B": "Oversee the overall administration of basic education in the district.",
+      "C": "Conduct national examinations.",
+      "D": "Recruit and deploy teachers."
+    },
+    "answer": "B",
+    "explanation": "The DEOC is the decentralized body at the district level responsible for oversight of education, in line with the Local Governance Act."
+  },
+  {
+    "id": 39,
+    "question": "Which Act provides the legal framework for public sector procurement, which MoE and GES must strictly comply with for all purchases of goods and services?",
+    "options": {
+      "A": "Public Financial Management Act, 2016 (Act 921)",
+      "B": "Public Procurement Act, 2003 (Act 663)",
+      "C": "Contracts Act, 1960 (Act 25)",
+      "D": "GES Act, 1995 (Act 506)"
+    },
+    "answer": "B",
+    "explanation": "All government entities, including GES and MoE, are bound by the provisions of the Public Procurement Act, 2003 (Act 663)."
+  },
+  {
+    "id": 40,
+    "question": "The legal requirement for every child of school-going age to receive basic education is an enforcement of which constitutional provision?",
+    "options": {
+      "A": "Article 15 (Protection of Human Dignity)",
+      "B": "Article 17 (Equality and Freedom from Discrimination)",
+      "C": "Article 25 (Right to Education)",
+      "D": "Article 33 (Enforcement of Fundamental Rights)"
+    },
+    "answer": "C",
+    "explanation": "Article 25 explicitly mandates the provision of free, compulsory, and universal basic education."
+  },
+  {
+    "id": 41,
+    "question": "Under the Pre-Tertiary Education Act, 2020 (Act 1049), which body is responsible for conducting the certification examinations for pre-tertiary schools?",
+    "options": {
+      "A": "GES Assessment Unit",
+      "B": "West African Examinations Council (WAEC)",
+      "C": "National Teaching Council (NTC)",
+      "D": "NaCCA"
+    },
+    "answer": "B",
+    "explanation": "While NaCCA handles curriculum and assessment standards, the external examination and certification is primarily conducted by WAEC, whose operations are also governed by a specific Act."
+  },
+  {
+    "id": 42,
+    "question": "The GES Act, 1995 (Act 506) outlines the general functions of the Service. What specific section details the power to appoint, promote, and discipline teaching and non-teaching staff?",
+    "options": {
+      "A": "Section 3 (Functions)",
+      "B": "Section 9 (Director-General)",
+      "C": "Section 12 (Staff of the Service)",
+      "D": "Section 15 (Regulations)"
+    },
+    "answer": "C",
+    "explanation": "Section 12 of Act 506 grants the GES Council the authority over the appointment, promotion, transfer, and discipline of staff, subject to the Constitution and relevant public service laws."
+  },
+  {
+    "id": 43,
+    "question": "The legal framework requiring schools to maintain a secure and safe environment for students is strongly supported by which two Acts?",
+    "options": {
+      "A": "GES Act and Fire Service Act",
+      "B": "Children's Act and Education Act",
+      "C": "Public Health Act and PFMA",
+      "D": "Criminal Offences Act and Civil Service Act"
+    },
+    "answer": "B",
+    "explanation": "The Children's Act (Act 560) focuses on child welfare and protection, while the Education Act (Act 778) mandates the establishment of safe school environments."
+  },
+  {
+    "id": 44,
+    "question": "Which Act gives the Minister for Education the authority to give general directions in writing to the GES Council on matters of policy?",
+    "options": {
+      "A": "GES Act, 1995 (Act 506)",
+      "B": "Public Services Commission Act, 1994 (Act 482)",
+      "C": "Education Act, 2008 (Act 778)",
+      "D": "All of the above"
+    },
+    "answer": "A",
+    "explanation": "Section 6 of the GES Act, 1995 (Act 506) gives the Minister the power to issue policy directions to the Council."
+  },
+  {
+    "id": 45,
+    "question": "What is the legal implication if a teacher's professional license, issued under Act 1049, expires?",
+    "options": {
+      "A": "The teacher is automatically dismissed from the GES.",
+      "B": "The teacher cannot lawfully practice in any pre-tertiary institution.",
+      "C": "The teacher must pay a fine but can continue teaching.",
+      "D": "The teacher is demoted one rank in the GES."
+    },
+    "answer": "B",
+    "explanation": "A valid license is a statutory requirement to practice teaching, making it unlawful to teach with an expired license."
+  },
+  {
+    "id": 46,
+    "question": "Which Act provides the comprehensive legal definition and scope of the term 'Basic Education' in Ghana?",
+    "options": {
+      "A": "GES Act, 1995 (Act 506)",
+      "B": "Education Act, 2008 (Act 778)",
+      "C": "National Teaching Council Act, 2020 (Act 1049)",
+      "D": "The Constitution of Ghana, 1992"
+    },
+    "answer": "B",
+    "explanation": "Act 778 details the structure and compulsory nature of Basic Education in the current system."
+  },
+  {
+    "id": 47,
+    "question": "Under Act 778, the District Assembly, in consultation with the GES, is responsible for:",
+    "options": {
+      "A": "The maintenance of Basic School infrastructure.",
+      "B": "Recruiting and paying all teachers.",
+      "C": "Setting the national curriculum.",
+      "D": "Issuing professional teaching licenses."
+    },
+    "answer": "A",
+    "explanation": "The decentralized nature of education management under Act 778 places infrastructure maintenance for Basic Schools primarily with the local Assemblies."
+  },
+  {
+    "id": 48,
+    "question": "The legal requirement for inclusive education in Ghana, ensuring all children, including those with special needs, are catered for in the mainstream system, is covered by which Act?",
+    "options": {
+      "A": "GES Act (Act 506)",
+      "B": "Persons with Disability Act (Act 715)",
+      "C": "Public Services Act (Act 483)",
+      "D": "Local Governance Act (Act 936)"
+    },
+    "answer": "B",
+    "explanation": "The Persons with Disability Act, 2006 (Act 715) mandates the provision of inclusive facilities and education."
+  },
+  {
+    "id": 49,
+    "question": "Which of the following bodies is NOT established or given functions under the Pre-Tertiary Education Act, 2020 (Act 1049)?",
+    "options": {
+      "A": "National Education Service (NES)",
+      "B": "National Teaching Council (NTC)",
+      "C": "West African Examinations Council (WAEC)",
+      "D": "National Council for Curriculum and Assessment (NaCCA)"
+    },
+    "answer": "C",
+    "explanation": "WAEC is an international body established by a separate Act and convention, though its operations are recognized by Act 1049."
+  },
+  {
+    "id": 50,
+    "question": "The GES Act, 1995 (Act 506) mandates the GES to submit its annual report to which three entities?",
+    "options": {
+      "A": "Parliament, Ministry of Finance, and National Teaching Council",
+      "B": "The President, Minister for Education, and Parliament",
+      "C": "The Director-General, GES Council, and NaCCA",
+      "D": "The Council of State, Auditor-General, and Civil Service"
+    },
+    "answer": "B",
+    "explanation": "Section 14 of Act 506 requires the Service to submit annual reports on its activities to the President, the Minister, and Parliament."
+  },
+  {
+    "id": 51,
+    "question": "The legal power to prosecute parents who refuse to enroll their children of school-going age into Basic Education is derived from provisions in which Act?",
+    "options": {
+      "A": "The Children's Act, 1998 (Act 560)",
+      "B": "Education Act, 2008 (Act 778)",
+      "C": "Criminal Offences Act, 1960 (Act 29)",
+      "D": "GES Act, 1995 (Act 506)"
+    },
+    "answer": "B",
+    "explanation": "Section 4 of Act 778 makes the failure to enroll a child in basic education an offence and outlines the penalty."
+  },
+  {
+    "id": 52,
+    "question": "The right of teachers to form and join trade unions to negotiate conditions of service is guaranteed by which part of the Constitution and Labour Law?",
+    "options": {
+      "A": "Article 33 (Enforcement of Rights)",
+      "B": "Article 17 (Equality) and Act 651",
+      "C": "Article 24 (Economic Rights) and Act 651",
+      "D": "Article 21 (Fundamental Freedoms)"
+    },
+    "answer": "C",
+    "explanation": "Article 24 guarantees the right to work and form/join trade unions, and the Labour Act (Act 651) operationalizes this right for all workers."
+  },
+  {
+    "id": 53,
+    "question": "Which Act requires the GES and MoE to ensure that the medium of instruction at the lower primary level is predominantly a Ghanaian language?",
+    "options": {
+      "A": "Education Act, 2008 (Act 778)",
+      "B": "GES Act, 1995 (Act 506)",
+      "C": "Pre-Tertiary Education Act, 2020 (Act 1049)",
+      "D": "The Languages Act, 2001 (Act 612)"
+    },
+    "answer": "A",
+    "explanation": "Section 3(2) of Act 778 mandates the use of a Ghanaian language as the medium of instruction at the lower levels of basic education."
+  },
+  {
+    "id": 54,
+    "question": "According to the Public Financial Management Act (PFMA), 2016 (Act 921), the Principal Spending Officer for the Ministry of Education is typically the:",
+    "options": {
+      "A": "Minister for Education",
+      "B": "Chief Director",
+      "C": "Director-General of GES",
+      "D": "Head of Internal Audit"
+    },
+    "answer": "B",
+    "explanation": "In ministries, the Chief Director is usually designated as the Principal Spending Officer, accountable for financial control and compliance under the PFMA."
+  },
+  {
+    "id": 55,
+    "question": "The GES Act, 1995 (Act 506) is explicit that the Service is to be managed and controlled by:",
+    "options": {
+      "A": "The Director-General",
+      "B": "The Minister for Education",
+      "C": "The GES Council",
+      "D": "The Public Services Commission"
+    },
+    "answer": "C",
+    "explanation": "Section 4 of Act 506 states, 'The governing body of the Service is the Council.'"
+  },
+  {
+    "id": 56,
+    "question": "Which Act gives the GES the legal authority to set school terms and holidays for pre-tertiary institutions?",
+    "options": {
+      "A": "Education Act, 2008 (Act 778)",
+      "B": "GES Act, 1995 (Act 506)",
+      "C": "Public Holidays Act, 2001 (Act 601)",
+      "D": "Pre-Tertiary Education Act, 2020 (Act 1049)"
+    },
+    "answer": "A",
+    "explanation": "Act 778 and its regulations empower the GES, under the Minister's direction, to determine the school calendar."
+  },
+  {
+    "id": 57,
+    "question": "What is the legal status of the GES Code of Professional Conduct in relation to the GES Act, 1995 (Act 506)?",
+    "options": {
+      "A": "It is an independent international treaty.",
+      "B": "It is a subsidiary legislation or internal regulation derived from the Act.",
+      "C": "It is merely a suggestion for best practice.",
+      "D": "It is only binding on newly recruited teachers."
+    },
+    "answer": "B",
+    "explanation": "The Code is a set of rules established by the Council under the powers granted by Act 506 to regulate the conduct of its staff."
+  },
+  {
+    "id": 58,
+    "question": "The Children's Act, 1998 (Act 560), Section 8, prohibits which practice that is highly relevant to school disciplinary policies?",
+    "options": {
+      "A": "Exams for Basic School students.",
+      "B": "Corporal punishment.",
+      "C": "Charging fees for basic education.",
+      "D": "Teaching vocational skills."
+    },
+    "answer": "B",
+    "explanation": "The Children's Act reinforces the protection of the child's dignity and forbids practices like corporal punishment, which has been banned by the MoE/GES."
+  },
+  {
+    "id": 59,
+    "question": "According to the Public Financial Management Act (Act 921), all public funds, including those generated by schools, must be paid into the:",
+    "options": {
+      "A": "A school-specific bank account.",
+      "B": "Consolidated Fund or other designated public fund.",
+      "C": "Local District Assembly account.",
+      "D": "GES Welfare Fund."
+    },
+    "answer": "B",
+    "explanation": "The PFMA mandates that all government revenue must be accounted for in the Consolidated Fund or a legally established public fund."
+  },
+  {
+    "id": 60,
+    "question": "Which of the following is NOT a defined part of the Basic Education system under the Education Act, 2008 (Act 778)?",
+    "options": {
+      "A": "Kindergarten",
+      "B": "Primary School",
+      "C": "Junior High School",
+      "D": "Senior High School"
+    },
+    "answer": "D",
+    "explanation": "Senior High School is considered part of Secondary Education, which follows Basic Education (Kindergarten to JHS 3)."
+  },
+  {
+    "id": 61,
+    "question": "The legal basis for the establishment of Regional and District Education Offices as arms of the GES is found within which Act?",
+    "options": {
+      "A": "Civil Service Act, 1993 (PNDCL 327)",
+      "B": "GES Act, 1995 (Act 506)",
+      "C": "Local Governance Act, 2016 (Act 936)",
+      "D": "Education Act, 2008 (Act 778)"
+    },
+    "answer": "B",
+    "explanation": "Act 506 defines the Service's structure, including the establishment of regional and district branches to facilitate decentralized management."
+  },
+  {
+    "id": 62,
+    "question": "The legal framework that ensures the continuous registration, accreditation, and quality assurance of all types of educational institutions (public and private) falls under the mandate of which authority, governed by the NAQAA Act (Act 1024)?",
+    "options": {
+      "A": "GES",
+      "B": "MoE",
+      "C": "National Accreditation and Quality Assurance Authority (NAQAA)",
+      "D": "NTC"
+    },
+    "answer": "C",
+    "explanation": "NAQAA, though more commonly associated with tertiary institutions, has a mandate for quality assurance across the entire education spectrum, overlapping with MoE/GES regulatory functions."
+  },
+  {
+    "id": 63,
+    "question": "Which Section of the GES Act, 1995 (Act 506) outlines the criteria for appointment to the position of Director-General?",
+    "options": {
+      "A": "Section 9",
+      "B": "Section 1",
+      "C": "Section 14",
+      "D": "Section 5"
+    },
+    "answer": "A",
+    "explanation": "Section 9 of Act 506 deals specifically with the appointment and functions of the Director-General."
+  },
+  {
+    "id": 64,
+    "question": "Under the Pre-Tertiary Education Act, 2020 (Act 1049), who is ultimately responsible for the maintenance of student discipline in a public school?",
+    "options": {
+      "A": "The Head of the institution",
+      "B": "The Police Commander in the area",
+      "C": "The Board of Governors/SMC",
+      "D": "The District Education Director"
+    },
+    "answer": "A",
+    "explanation": "The Head of the institution is legally mandated to ensure discipline and safety within the school premises, subject to policy directives."
+  },
+  {
+    "id": 65,
+    "question": "The legal provision that requires the GES to promote the teaching and learning of science, technology, and mathematics is found in which Act?",
+    "options": {
+      "A": "The Constitution of Ghana, 1992",
+      "B": "Education Act, 2008 (Act 778)",
+      "C": "Science and Technology Act, 1996 (Act 521)",
+      "D": "GES Act, 1995 (Act 506)"
+    },
+    "answer": "B",
+    "explanation": "Act 778 includes the specific objective of promoting science and technology education to meet national development needs."
+  },
+  {
+    "id": 66,
+    "question": "Which specific law stipulates the processes and penalties for a teacher who has committed professional misconduct, leading to the possible revocation of their license?",
+    "options": {
+      "A": "Criminal Offences Act, 1960 (Act 29)",
+      "B": "GES Code of Professional Conduct",
+      "C": "Pre-Tertiary Education Act, 2020 (Act 1049)",
+      "D": "Labour Act, 2003 (Act 651)"
+    },
+    "answer": "C",
+    "explanation": "Act 1049 empowers the NTC (and its Disciplinary Committee) to regulate licenses and enforce professional standards, including revocation."
+  },
+  {
+    "id": 67,
+    "question": "The constitutional provision that mandates the state to take steps to encourage private educational institutions to provide qualitative education is found in Article:",
+    "options": {
+      "A": "21(d)",
+      "B": "25(3)",
+      "C": "34(1)",
+      "D": "38(2)"
+    },
+    "answer": "D",
+    "explanation": "Article 38(2) of the Directive Principles of State Policy provides a directive to the state to promote educational institutions at all levels."
+  },
+  {
+    "id": 68,
+    "question": "What is the maximum penalty for a parent who fails to comply with the compulsory basic education requirement under the Education Act, 2008 (Act 778)?",
+    "options": {
+      "A": "A fine not exceeding 100 penalty units or imprisonment up to 6 months, or both.",
+      "B": "A fine not exceeding 50 penalty units.",
+      "C": "Public caning and a warning.",
+      "D": "Loss of government welfare benefits."
+    },
+    "answer": "A",
+    "explanation": "Act 778 provides for a penalty of a fine not exceeding 100 penalty units or a term of imprisonment not exceeding 6 months, or both."
+  },
+  {
+    "id": 69,
+    "question": "Under the GES Act, 1995 (Act 506), the Service is required to ensure that public schools provide instruction in 'literacy, numeracy, and life skills.' This falls under which category of functions?",
+    "options": {
+      "A": "Administrative Functions",
+      "B": "Curriculum Development Functions",
+      "C": "Professional and Instructional Functions",
+      "D": "Financial Management Functions"
+    },
+    "answer": "C",
+    "explanation": "This is a core mandate related to the content and delivery of education by the Service."
+  },
+  {
+    "id": 70,
+    "question": "Which Act mandates that educational materials must be reviewed every four years or at the Minister's direction?",
+    "options": {
+      "A": "GES Act, 1995 (Act 506)",
+      "B": "Education Act, 2008 (Act 778)",
+      "C": "Public Procurement Act, 2003 (Act 663)",
+      "D": "Pre-Tertiary Education Act, 2020 (Act 1049)"
+    },
+    "answer": "D",
+    "explanation": "Act 1049 establishes the role of NaCCA in reviewing curriculum and materials periodically."
+  },
+  {
+    "id": 71,
+    "question": "The legal requirement for the appointment of an Internal Auditor for the GES and MoE is established by which financial governance law?",
+    "options": {
+      "A": "Audit Service Act, 2000 (Act 584)",
+      "B": "Public Financial Management Act, 2016 (Act 921)",
+      "C": "Financial Administration Act, 2003 (Act 654)",
+      "D": "GES Act, 1995 (Act 506)"
+    },
+    "answer": "B",
+    "explanation": "The PFMA mandates the establishment of an internal audit unit in all government entities."
+  },
+  {
+    "id": 72,
+    "question": "Which body, under the Education Act, 2008 (Act 778), advises the Minister on the promotion and development of technical and vocational education and training?",
+    "options": {
+      "A": "NaCCA",
+      "B": "National Vocational Training Council",
+      "C": "Council for Technical and Vocational Education and Training (COTVET)",
+      "D": "The GES TVET Directorate"
+    },
+    "answer": "C",
+    "explanation": "While its name and specific functions have been subject to legislative changes (Act 1049), COTVET (or its successor bodies under Act 1049) retains the core advisory role on TVET."
+  },
+  {
+    "id": 73,
+    "question": "The legal principle of *locus standi* (right to bring an action) in educational matters is primarily governed by which section of the Constitution, allowing citizens to challenge state action?",
+    "options": {
+      "A": "Article 15 (Protection of Human Dignity)",
+      "B": "Article 33 (Enforcement of Fundamental Rights)",
+      "C": "Article 42 (Right to Vote)",
+      "D": "Article 73 (Treaties)"
+    },
+    "answer": "B",
+    "explanation": "Article 33 gives any person the right to apply to the High Court to enforce a fundamental human right, including the right to education (Article 25)."
+  },
+  {
+    "id": 74,
+    "question": "Which Act gives the GES the power to charge fees for services, provided the fees are approved by the Minister and Parliament?",
+    "options": {
+      "A": "Fees and Charges (Miscellaneous Provisions) Act, 2016 (Act 916)",
+      "B": "GES Act, 1995 (Act 506)",
+      "C": "Education Act, 2008 (Act 778)",
+      "D": "Public Financial Management Act, 2016 (Act 921)"
+    },
+    "answer": "A",
+    "explanation": "Fees for services by government agencies are regulated by the Fees and Charges Act, requiring Ministerial and Parliamentary approval."
+  },
+  {
+    "id": 75,
+    "question": "Under the Pre-Tertiary Education Act, 2020 (Act 1049), the ultimate responsibility for the continuous assessment of students, used as part of certification, rests with which institution?",
+    "options": {
+      "A": "The school’s Management Committee",
+      "B": "NaCCA",
+      "C": "GES Assessment Unit",
+      "D": "The NTC"
+    },
+    "answer": "B",
+    "explanation": "NaCCA sets the standards and framework for all forms of assessment, including continuous assessment, which contributes to final certification."
+  }
+]
