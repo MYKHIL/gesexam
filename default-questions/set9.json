@@ -1,0 +1,862 @@
+[
+  {
+    "id": 1,
+    "question": "Which document primarily outlines the required ethical behaviour and professional duties for all staff under the Ghana Education Service (GES)?",
+    "options": {
+      "A": "The Education Act (2008)",
+      "B": "The Scheme of Service for Teachers",
+      "C": "The GES Code of Professional Conduct",
+      "D": "The Curriculum for Primary Schools"
+    },
+    "answer": "C",
+    "explanation": "The GES Code of Professional Conduct and Ethics defines the expected standards of behaviour and duty of care for all GES personnel."
+  },
+  {
+    "id": 2,
+    "question": "The National Teaching Council (NTC) is responsible for which of the following core functions?",
+    "options": {
+      "A": "Paying monthly salaries to teachers.",
+      "B": "Promoting teachers from one grade to another.",
+      "C": "Registering and licensing teachers.",
+      "D": "Approving the annual budget for schools."
+    },
+    "answer": "C",
+    "explanation": "The NTC's primary role is the professionalization of the teaching profession, including the registration, licensing, and setting of professional standards for teachers."
+  },
+  {
+    "id": 3,
+    "question": "What is the highest-ranking officer position within the overall structure of the Ghana Education Service?",
+    "options": {
+      "A": "Regional Director of Education",
+      "B": "Director-General of GES",
+      "C": "Minister of Education",
+      "D": "Head of School"
+    },
+    "answer": "B",
+    "explanation": "The Director-General is the administrative and professional head of the Ghana Education Service."
+  },
+  {
+    "id": 4,
+    "question": "The Scheme of Service for GES staff is primarily used to determine:",
+    "options": {
+      "A": "The daily school timetable.",
+      "B": "The criteria for promotion and career progression.",
+      "C": "The number of periods a teacher must teach weekly.",
+      "D": "The selection of textbooks for a subject."
+    },
+    "answer": "B",
+    "explanation": "The Scheme of Service sets out the structure, grades, qualifications, and criteria for entry and promotion within the various cadres of the Service."
+  },
+  {
+    "id": 5,
+    "question": "Which institution is mandated to develop, review, and approve the pre-tertiary curriculum in Ghana?",
+    "options": {
+      "A": "Ghana National Association of Teachers (GNAT)",
+      "B": "National Council for Curriculum and Assessment (NaCCA)",
+      "C": "West African Examinations Council (WAEC)",
+      "D": "Ministry of Finance (MoF)"
+    },
+    "answer": "B",
+    "explanation": "NaCCA is the regulatory body responsible for all curriculum and assessment matters at the pre-tertiary level."
+  },
+  {
+    "id": 6,
+    "question": "In the GES hierarchy, the District Director of Education reports directly to the:",
+    "options": {
+      "A": "Head of School",
+      "B": "Director-General of GES",
+      "C": "Regional Director of Education",
+      "D": "Minister of Education"
+    },
+    "answer": "C",
+    "explanation": "The District Director is responsible to the Regional Director of Education for the effective administration of education in the district."
+  },
+  {
+    "id": 7,
+    "question": "What is the maximum amount of sick leave, with pay, that a staff member can be granted in one calendar year under GES regulations?",
+    "options": {
+      "A": "30 days",
+      "B": "90 days",
+      "C": "180 days",
+      "D": "365 days"
+    },
+    "answer": "B",
+    "explanation": "GES regulations generally allow for up to 90 days of sick leave with full pay in a calendar year, subject to medical certification."
+  },
+  {
+    "id": 8,
+    "question": "A teacher's refusal to accept a lawful transfer instruction from a competent authority, without a valid reason, constitutes:",
+    "options": {
+      "A": "A minor professional disagreement.",
+      "B": "A legitimate exercise of personal choice.",
+      "C": "An act of insubordination and misconduct.",
+      "D": "Grounds for immediate promotion."
+    },
+    "answer": "C",
+    "explanation": "Refusal to obey lawful instructions, including transfer orders, is a serious offence classified as misconduct under GES regulations."
+  },
+  {
+    "id": 9,
+    "question": "What is the primary objective of the Standard-Based Curriculum (SBC) introduced in Ghana?",
+    "options": {
+      "A": "To reduce the number of subjects taught in school.",
+      "B": "To ensure students acquire specific, measurable learning outcomes.",
+      "C": "To replace all Ghanaian language instruction with English.",
+      "D": "To increase the duration of the school day by two hours."
+    },
+    "answer": "B",
+    "explanation": "The SBC focuses on clearly defined learning standards and competencies that students must achieve at each stage of their education."
+  },
+  {
+    "id": 10,
+    "question": "Which of the following is NOT an acceptable source of Internal Generated Funds (IGF) for a public school in Ghana?",
+    "options": {
+      "A": "Sale of agricultural produce from the school farm.",
+      "B": "Donations from the Parent-Teacher Association (PTA).",
+      "C": "Fees charged for official government textbooks.",
+      "D": "Rent collected from a commercial property owned by the school."
+    },
+    "answer": "C",
+    "explanation": "Fees charged for government-provided educational materials (like textbooks) are generally not permitted, especially in the context of Free Senior High School (FSHS) or basic education policies."
+  },
+  {
+    "id": 11,
+    "question": "The School Management Committee (SMC) in a Basic School is required to meet at least:",
+    "options": {
+      "A": "Once every month.",
+      "B": "Once every academic term.",
+      "C": "Twice every year.",
+      "D": "Once every week."
+    },
+    "answer": "B",
+    "explanation": "School Management Committees and Boards of Governors are typically required to meet at least once every term (session) to oversee the management of the school."
+  },
+  {
+    "id": 12,
+    "question": "A newly recruited teacher must complete a period of mandatory professional induction/mentorship before being considered for:",
+    "options": {
+      "A": "A transfer to another school.",
+      "B": "Confirmation of appointment.",
+      "C": "Appointment as Head of Department.",
+      "D": "Granting of annual leave."
+    },
+    "answer": "B",
+    "explanation": "Confirmation of appointment from temporary/probationary status to permanent status is contingent upon the satisfactory completion of the induction and mentorship period."
+  },
+  {
+    "id": 13,
+    "question": "Which of the following is considered a major misconduct under GES regulations?",
+    "options": {
+      "A": "Late submission of lesson notes.",
+      "B": "Absence from duty without permission for 10 consecutive working days.",
+      "C": "Wearing improper professional attire once.",
+      "D": "Losing a school exercise book."
+    },
+    "answer": "B",
+    "explanation": "Absence from duty without permission for an extended period is classified as 'Desertion of Post,' which is a major misconduct leading to dismissal."
+  },
+  {
+    "id": 14,
+    "question": "The policy of Continuous Assessment is aimed at:",
+    "options": {
+      "A": "Replacing all end-of-term examinations.",
+      "B": "Integrating assessment into the teaching and learning process.",
+      "C": "Reducing teacher workload.",
+      "D": "Ensuring all assessment is done by external bodies."
+    },
+    "answer": "B",
+    "explanation": "Continuous Assessment ensures regular feedback and monitoring of student progress throughout the academic term, making it an integral part of the learning cycle."
+  },
+  {
+    "id": 15,
+    "question": "In the 'Teacher Professional Standards', the domain 'Professional Knowledge and Skills' primarily focuses on the teacher's:",
+    "options": {
+      "A": "Ability to manage school finances.",
+      "B": "Understanding of subject matter and effective instructional strategies.",
+      "C": "Relationship with the Parent-Teacher Association (PTA).",
+      "D": "Competence in using social media."
+    },
+    "answer": "B",
+    "explanation": "This domain covers the core aspects of teaching: content knowledge, pedagogical skills, and knowledge of the curriculum."
+  },
+  {
+    "id": 16,
+    "question": "When developing lesson notes, the specific measurable actions that students are expected to achieve by the end of the lesson are known as:",
+    "options": {
+      "A": "Teaching Methods",
+      "B": "Learning Outcomes",
+      "C": "Resource Materials",
+      "D": "Introductory Activities"
+    },
+    "answer": "B",
+    "explanation": "Learning outcomes (or objectives) are statements that describe what students will know or be able to do as a result of the lesson."
+  },
+  {
+    "id": 17,
+    "question": "Under the new curriculum, the '4Rs' of education stand for:",
+    "options": {
+      "A": "Reading, 'Riting, 'Rithmetic, and Robotics.",
+      "B": "Reading, 'Riting, 'Rithmetic, and Research.",
+      "C": "Reading, 'Riting, 'Rithmetic, and Reasoning.",
+      "D": "Reading, Resourcing, Reflection, and Reorganization."
+    },
+    "answer": "C",
+    "explanation": "The '4Rs' refer to Reading, Writing (or 'Riting'), Arithmetic (or 'Rithmetic'), and Reasoning/Creativity, emphasizing foundational literacy and numeracy skills."
+  },
+  {
+    "id": 18,
+    "question": "The primary role of the Guidance and Counselling Coordinator in a school is to:",
+    "options": {
+      "A": "Conduct end-of-term examinations.",
+      "B": "Provide academic, career, and personal/social support to students.",
+      "C": "Collect school fees from students.",
+      "D": "Manage the school's sports teams."
+    },
+    "answer": "B",
+    "explanation": "Guidance and Counselling focuses on holistic student development, offering support in academic planning, career exploration, and resolving personal/social issues."
+  },
+  {
+    "id": 19,
+    "question": "Which mode of communication is generally considered the official and most authoritative for policy dissemination within the GES structure?",
+    "options": {
+      "A": "WhatsApp messages",
+      "B": "Circulars or Official Letters",
+      "C": "Unsigned notes posted on a notice board",
+      "D": "Verbal instructions from a colleague"
+    },
+    "answer": "B",
+    "explanation": "Official communication and policy directives are communicated through numbered Circulars, letters signed by the Director-General or other authorized officers, or through gazettes."
+  },
+  {
+    "id": 20,
+    "question": "The term 'Core Competencies' in the Ghanaian curriculum refers to:",
+    "options": {
+      "A": "The minimum attendance required by a student.",
+      "B": "The essential skills, attitudes, and values needed for success in life.",
+      "C": "The list of approved textbooks for a subject.",
+      "D": "The total number of staff required in a school."
+    },
+    "answer": "B",
+    "explanation": "Core Competencies are cross-cutting skills (e.g., Critical Thinking, Communication and Collaboration) that are developed across all subject areas."
+  },
+  {
+    "id": 21,
+    "question": "In disciplinary matters, the 'Rule of Natural Justice' requires that:",
+    "options": {
+      "A": "The accused must always be found guilty.",
+      "B": "The accused must be given a fair hearing.",
+      "C": "The hearing must be conducted by the police.",
+      "D": "The matter must be settled outside of school."
+    },
+    "answer": "B",
+    "explanation": "The Rule of Natural Justice includes the right to be heard (audi alteram partem) and the rule against bias (nemo judex in causa sua), ensuring a fair disciplinary process."
+  },
+  {
+    "id": 22,
+    "question": "Which type of leave is granted to a female staff member for childbirth and childcare immediately following delivery?",
+    "options": {
+      "A": "Study Leave",
+      "B": "Sabbatical Leave",
+      "C": "Maternity Leave",
+      "D": "Annual Leave"
+    },
+    "answer": "C",
+    "explanation": "Maternity leave is a specific type of leave granted to female staff for a period before and after childbirth, typically three months with full pay."
+  },
+  {
+    "id": 23,
+    "question": "A teacher who enrolls in a university program on a full-time basis without prior official approval from the GES has violated the regulations on:",
+    "options": {
+      "A": "Annual Leave",
+      "B": "Study Leave",
+      "C": "Compassionate Leave",
+      "D": "Sick Leave"
+    },
+    "answer": "B",
+    "explanation": "Formal study leave must be applied for and approved before commencing a full-time academic programme, otherwise, it constitutes unauthorized absence or professional misconduct."
+  },
+  {
+    "id": 24,
+    "question": "Which of the following describes the 'Explanatory Text' within the curriculum document?",
+    "options": {
+      "A": "The specific list of textbooks to be used.",
+      "B": "Detailed guidance on the content, teaching methods, and assessment for a learning area.",
+      "C": "The annual report of the school's financial activities.",
+      "D": "A list of all teachers in the country."
+    },
+    "answer": "B",
+    "explanation": "The Explanatory Text provides necessary context and instruction for teachers to effectively deliver the curriculum, including suggested activities and assessments."
+  },
+  {
+    "id": 25,
+    "question": "What is the primary function of the Internal Audit Unit within the GES structure?",
+    "options": {
+      "A": "To approve teacher transfers.",
+      "B": "To ensure compliance with financial regulations and control systems.",
+      "C": "To develop the curriculum for basic schools.",
+      "D": "To manage the placement of students into Senior High Schools."
+    },
+    "answer": "B",
+    "explanation": "The Internal Audit Unit provides an independent appraisal function to examine and evaluate the adequacy and effectiveness of the Service's system of internal control."
+  },
+  {
+    "id": 26,
+    "question": "The use of anecdotal records, checklists, and rating scales are assessment tools best suited for gathering data for:",
+    "options": {
+      "A": "Summative Evaluation",
+      "B": "Portfolio Assessment",
+      "C": "Continuous Assessment",
+      "D": "High-Stakes External Examinations"
+    },
+    "answer": "C",
+    "explanation": "These are common formative assessment tools used by teachers to document ongoing student performance and behaviour as part of continuous assessment."
+  },
+  {
+    "id": 27,
+    "question": "The Parent-Teacher Association (PTA) in a school is primarily a platform for:",
+    "options": {
+      "A": "Imposing mandatory levies on all students.",
+      "B": "Collaborating on the welfare and development of the school and students.",
+      "C": "Managing the disciplinary action of staff members.",
+      "D": "Setting the national educational policy."
+    },
+    "answer": "B",
+    "explanation": "The PTA is a key stakeholder body aimed at fostering cooperation between parents and teachers for the overall benefit of the students and the school."
+  },
+  {
+    "id": 28,
+    "question": "What is the typical reporting period for a teacher's Annual Performance Appraisal Report (APAR)?",
+    "options": {
+      "A": "Daily",
+      "B": "Monthly",
+      "C": "Annually",
+      "D": "Bi-annually"
+    },
+    "answer": "C",
+    "explanation": "The APAR is an annual document used to evaluate a staff member's performance and competence over the course of a year."
+  },
+  {
+    "id": 29,
+    "question": "The term 'Learning Episode' in the curriculum framework refers to:",
+    "options": {
+      "A": "A single day of school activities.",
+      "B": "A defined structure for conducting a lesson, involving specific phases.",
+      "C": "The duration of an academic term.",
+      "D": "An assembly period."
+    },
+    "answer": "B",
+    "explanation": "A Learning Episode is the structured sequence of teaching and learning activities that constitute a lesson delivery."
+  },
+  {
+    "id": 30,
+    "question": "The GES regulation regarding 'Involvement with the Opposite Sex' places particular emphasis on maintaining a professional distance and avoiding:",
+    "options": {
+      "A": "Conversations with colleagues.",
+      "B": "Any form of intimate relationship with a student.",
+      "C": "Attending social events.",
+      "D": "Sharing lesson notes with the opposite sex."
+    },
+    "answer": "B",
+    "explanation": "The Code strictly prohibits sexual relationships or inappropriate association between staff and students, which is considered a high-level misconduct."
+  },
+  {
+    "id": 31,
+    "question": "Which of these is a key responsibility of the Head of Department (HOD) in a Senior High School?",
+    "options": {
+      "A": "Teaching all subjects in the department.",
+      "B": "Overseeing curriculum delivery and mentorship of teachers within the department.",
+      "C": "Managing the school's kitchen and dining hall.",
+      "D": "Approving the posting of new teachers to the school."
+    },
+    "answer": "B",
+    "explanation": "The HOD is responsible for the academic leadership and supervision of teachers within their specific subject area."
+  },
+  {
+    "id": 32,
+    "question": "Which financial source is the Government of Ghana (GoG) primarily responsible for funding in public schools?",
+    "options": {
+      "A": "PTA levies for school projects.",
+      "B": "Teachers' salaries and government intervention programs.",
+      "C": "Funds generated from the school farm.",
+      "D": "Donations from alumni associations."
+    },
+    "answer": "B",
+    "explanation": "Teachers' salaries, government-approved grants, and major policy implementation costs (like FSHS) are primarily funded by the Government of Ghana (GoG)."
+  },
+  {
+    "id": 33,
+    "question": "Disciplinary proceedings against a Head of School or institution are typically initiated at the level of the:",
+    "options": {
+      "A": "School Management Committee (SMC)",
+      "B": "District Director of Education (DDE)",
+      "C": "Regional Director of Education (RDE)",
+      "D": "Director-General (DG)"
+    },
+    "answer": "C",
+    "explanation": "The RDE typically has the jurisdiction and responsibility to initiate disciplinary action against a Head of School within their region."
+  },
+  {
+    "id": 34,
+    "question": "The mandatory retirement age for GES staff is currently:",
+    "options": {
+      "A": "55 years",
+      "B": "60 years",
+      "C": "65 years",
+      "D": "70 years"
+    },
+    "answer": "B",
+    "explanation": "The compulsory retirement age for all public sector workers in Ghana, including GES staff, is 60 years."
+  },
+  {
+    "id": 35,
+    "question": "What does the abbreviation 'IPPD' stand for in the context of GES payroll administration?",
+    "options": {
+      "A": "Integrated Personal Payroll Database",
+      "B": "Institutional Performance Project Document",
+      "C": "Individual Professional Placement Directive",
+      "D": "In-service Professional Development Drive"
+    },
+    "answer": "A",
+    "explanation": "IPPD (Integrated Personal Payroll Database) is the system used for managing personnel records and payroll."
+  },
+  {
+    "id": 36,
+    "question": "The use of lesson notes/plans is mandatory because it ensures:",
+    "options": {
+      "A": "Teachers adhere to the curriculum and structure their lessons logically.",
+      "B": "Teachers have something to present during staff meetings.",
+      "C": "Students receive homework every day.",
+      "D": "The school receives its monthly grant."
+    },
+    "answer": "A",
+    "explanation": "Lesson notes are essential planning tools to ensure the curriculum is covered systematically and lessons are delivered effectively."
+  },
+  {
+    "id": 37,
+    "question": "Which of the following is the final stage in the professional disciplinary process within the GES framework?",
+    "options": {
+      "A": "Written query to the staff member.",
+      "B": "Disciplinary Committee Hearing.",
+      "C": "Decision and Sanction by the Appointing Authority.",
+      "D": "Issuance of a warning letter."
+    },
+    "answer": "C",
+    "explanation": "The decision on the disciplinary case and the application of sanctions (if any) is the final administrative stage, carried out by the authority responsible for the staff member's appointment (e.g., the Director-General or Regional Director)."
+  },
+  {
+    "id": 38,
+    "question": "In a basic school, who is primarily responsible for the day-to-day supervision of teaching and learning activities?",
+    "options": {
+      "A": "The District Chief Executive (DCE)",
+      "B": "The Headteacher",
+      "C": "The PTA Chairman",
+      "D": "The School Nurse"
+    },
+    "answer": "B",
+    "explanation": "The Headteacher (or Head of School) is the instructional and administrative leader responsible for all daily activities, including academic supervision."
+  },
+  {
+    "id": 39,
+    "question": "The promotion interview process for GES staff is primarily designed to assess the candidate's:",
+    "options": {
+      "A": "Personal wealth and financial stability.",
+      "B": "Punctuality and attendance record.",
+      "C": "Competence, leadership skills, and professional experience for the higher grade.",
+      "D": "Ability to recruit new students to the school."
+    },
+    "answer": "C",
+    "explanation": "Promotion interviews evaluate a candidate's readiness and suitability for higher responsibility based on their professional capabilities and experience."
+  },
+  {
+    "id": 40,
+    "question": "The Education Act (2008), Act 778, mandates which body to manage the schools and colleges in the public education system?",
+    "options": {
+      "A": "The Ghana Education Service (GES)",
+      "B": "The Ghana Police Service (GPS)",
+      "C": "The Ghana Revenue Authority (GRA)",
+      "D": "The National Service Scheme (NSS)"
+    },
+    "answer": "A",
+    "explanation": "GES is the public service institution responsible for the implementation of approved national education policies and management of schools and colleges."
+  },
+  {
+    "id": 41,
+    "question": "Which term describes the process of systematically observing and evaluating a teacher’s classroom performance to provide feedback for improvement?",
+    "options": {
+      "A": "Classroom Teaching",
+      "B": "In-Service Training",
+      "C": "Instructional Supervision/Monitoring",
+      "D": "Curriculum Development"
+    },
+    "answer": "C",
+    "explanation": "Instructional supervision involves the Head of School, HODs, or Education Officers observing lessons and providing constructive feedback to enhance teaching quality."
+  },
+  {
+    "id": 42,
+    "question": "If a teacher wishes to appeal a disciplinary decision, to which authority should the appeal first be directed?",
+    "options": {
+      "A": "The local chief or traditional ruler.",
+      "B": "The immediate Appointing Authority who made the decision.",
+      "C": "The UN Educational, Scientific and Cultural Organization (UNESCO).",
+      "D": "The President of the Republic."
+    },
+    "answer": "B",
+    "explanation": "The standard procedure is to appeal to the immediate superior authority of the one who imposed the sanction. If the decision was made by the RDE, the appeal goes to the DG. If by the DG, it goes to the Governing Council/Board."
+  },
+  {
+    "id": 43,
+    "question": "The use of indigenous languages as the medium of instruction is mandated up to which level of basic education in Ghana?",
+    "options": {
+      "A": "Primary 3",
+      "B": "Junior High School 1",
+      "C": "Senior High School 1",
+      "D": "Basic 10"
+    },
+    "answer": "A",
+    "explanation": "Current policy mandates the use of Ghanaian languages as the medium of instruction in the lower primary (KG to Primary 3) and English from Primary 4 onwards."
+  },
+  {
+    "id": 44,
+    "question": "Which of the following describes the 'Curriculum Standard' for a learning area?",
+    "options": {
+      "A": "A list of required textbooks.",
+      "B": "The broad statement of learning expectations for a particular grade level or phase.",
+      "C": "The teacher's monthly salary scale.",
+      "D": "The minimum number of students allowed in a class."
+    },
+    "answer": "B",
+    "explanation": "The Curriculum Standard defines the expected knowledge, skills, and values that students should acquire over a specific educational phase."
+  },
+  {
+    "id": 45,
+    "question": "The practice of 'moonlighting' (engaging in unauthorized supplementary employment) by a GES staff member is allowed only if:",
+    "options": {
+      "A": "It is done outside working hours and does not interfere with official duties, and prior written permission is obtained.",
+      "B": "It generates significant income for the staff member.",
+      "C": "The staff member is paid for the additional work by another government agency.",
+      "D": "It is not disclosed to the Head of School."
+    },
+    "answer": "A",
+    "explanation": "Public sector regulations require staff to seek and obtain prior written permission from the appropriate authority before engaging in any private employment, ensuring it doesn't conflict with their public service obligations."
+  },
+  {
+    "id": 46,
+    "question": "A teacher is required to hand over all school property (including lesson notes, student records, and keys) before:",
+    "options": {
+      "A": "Attending the school's sports day.",
+      "B": "Taking annual leave for less than two weeks.",
+      "C": "Proceeding on transfer or retirement.",
+      "D": "Writing the end-of-term examinations."
+    },
+    "answer": "C",
+    "explanation": "A proper handing over is mandatory upon transfer, resignation, retirement, or termination to ensure continuity and accountability for school assets and records."
+  },
+  {
+    "id": 47,
+    "question": "The primary purpose of the 'Staff Development Day' in the academic calendar is to:",
+    "options": {
+      "A": "Discuss students' misbehaviour.",
+      "B": "Provide in-service training for teachers and update professional skills.",
+      "C": "Clean the school compound.",
+      "D": "Collect fees from parents."
+    },
+    "answer": "B",
+    "explanation": "Staff Development Days are dedicated to Continuous Professional Development (CPD), ensuring teachers update their pedagogical and subject-matter knowledge."
+  },
+  {
+    "id": 48,
+    "question": "Which document specifies the duties, responsibilities, and reporting lines for various GES positions?",
+    "options": {
+      "A": "The Ghana Education Service Act (1995)",
+      "B": "The Conditions of Service",
+      "C": "The National Budget Statement",
+      "D": "The Public Health Act"
+    },
+    "answer": "B",
+    "explanation": "The Conditions of Service document details the terms of employment, including the duties, entitlements, and obligations of GES staff."
+  },
+  {
+    "id": 49,
+    "question": "Financial regulations require that all official school funds must be banked in a designated bank account and not:",
+    "options": {
+      "A": "Kept in a safe box in the school office.",
+      "B": "Used to purchase new books.",
+      "C": "Used to pay salaries to staff.",
+      "D": "Used for school excursions."
+    },
+    "answer": "A",
+    "explanation": "All public funds, including IGF, must be promptly deposited into the school's official bank account to ensure transparency, security, and proper accountability."
+  },
+  {
+    "id": 50,
+    "question": "The term 'Child Protection Policy' in schools primarily seeks to safeguard students from:",
+    "options": {
+      "A": "Excessive homework.",
+      "B": "Abuse, neglect, and exploitation.",
+      "C": "Long school holidays.",
+      "D": "The use of poor-quality writing pens."
+    },
+    "answer": "B",
+    "explanation": "Child Protection policies are designed to create a safe environment and establish procedures for preventing and responding to all forms of harm against children."
+  },
+  {
+    "id": 51,
+    "question": "True or False: The Regional Director of Education (RDE) has the authority to sanction a teacher's final dismissal from the Service.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The final authority for the dismissal of senior staff (which includes most professional teachers) is often vested in the Director-General or the GES Council, not the RDE."
+  },
+  {
+    "id": 52,
+    "question": "True or False: A professional teacher's license issued by the NTC has an indefinite lifespan and does not require periodic renewal.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The Teacher Professional Licence is subject to renewal, usually after a set number of years, contingent on continuous professional development (CPD) compliance."
+  },
+  {
+    "id": 53,
+    "question": "True or False: The use of corporal punishment on students is officially prohibited in all pre-tertiary schools under the Ghana Education Service.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The GES issued a directive banning all forms of corporal punishment in schools."
+  },
+  {
+    "id": 54,
+    "question": "True or False: Teachers are allowed to openly solicit gifts or favours from students and parents for official duties.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The Code of Conduct prohibits soliciting gifts or demanding favours in connection with official duties, as it can be interpreted as corruption or an abuse of office."
+  },
+  {
+    "id": 55,
+    "question": "True or False: The School Management Committee (SMC) is responsible for the appointment and transfer of all teaching staff.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Staff appointments and transfers are the prerogative of the GES/Appointing Authority (Director-General, Regional/District Directors), not the SMC."
+  },
+  {
+    "id": 56,
+    "question": "True or False: All teachers, regardless of their grade, are eligible for a one-year Sabbatical Leave with full pay after every five years of service.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Sabbatical leave is not an entitlement for all staff. It is usually conditional, requires specific criteria (e.g., higher professional grades), and is often unpaid or partially paid."
+  },
+  {
+    "id": 57,
+    "question": "True or False: The District Director of Education (DDE) must approve all lesson notes prepared by teachers within their district before they can be used in class.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Lesson notes are typically checked and approved by the Head of School or the Head of Department (HOD), not the DDE."
+  },
+  {
+    "id": 58,
+    "question": "True or False: The GES is a part of the Ministry of Education (MoE) but operates as a separate agency for management of pre-tertiary education.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "GES is an agency under the MoE, responsible for implementing the Ministry's policies at the pre-tertiary level."
+  },
+  {
+    "id": 59,
+    "question": "True or False: Continuous Professional Development (CPD) activities are voluntary and have no bearing on a teacher's promotion or license renewal.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "CPD is mandatory, and evidence of CPD points is required by the NTC for teacher license renewal and is often a factor in promotion."
+  },
+  {
+    "id": 60,
+    "question": "True or False: The introduction of the Standard-Based Curriculum (SBC) means that all teaching must be strictly teacher-centred, with the teacher as the sole source of knowledge.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The SBC is competency-based and encourages learner-centred, participatory, and inquiry-based pedagogical approaches."
+  },
+  {
+    "id": 61,
+    "question": "True or False: A staff member who is arrested and detained by the police for more than 48 hours must report this immediately to their Head of School or the Director.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "GES regulations require prompt reporting of any staff detention or criminal charge, as it affects the staff member's duty status and professional standing."
+  },
+  {
+    "id": 62,
+    "question": "True or False: The financial audit of a school's accounts must only be conducted by an external body and not by the GES Internal Audit Unit.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Both internal (GES/MoE Audit) and external (Auditor-General) audits are mandatory for public school accounts."
+  },
+  {
+    "id": 63,
+    "question": "True or False: In the new curriculum, assessment must focus primarily on memorization of facts rather than the application of knowledge and skills.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Competency-Based Curriculum assessment prioritizes the application of knowledge, critical thinking, and demonstration of core competencies."
+  },
+  {
+    "id": 64,
+    "question": "True or False: Annual leave is an earned right and can only be taken during official school breaks or vacations.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "For teaching staff, annual leave is generally tied to official school vacations to ensure the academic calendar is not disrupted."
+  },
+  {
+    "id": 65,
+    "question": "True or False: The Head of School is responsible for the safe custody and maintenance of all school assets and inventory.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The Head of School is the principal custodian and accounting officer for all physical and financial assets of the institution."
+  },
+  {
+    "id": 66,
+    "question": "True or False: A teacher is permitted to teach in their school without a valid professional license, provided they are actively pursuing CPD courses.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "A valid license/registration is a legal prerequisite for practicing as a teacher in Ghana."
+  },
+  {
+    "id": 67,
+    "question": "True or False: The only approved method for communicating official school events to parents is through printed circulars sent home with students.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While printed circulars are official, modern communication methods (SMS, email, school websites, approved social media channels) are also used and accepted."
+  },
+  {
+    "id": 68,
+    "question": "True or False: The GES is prohibited from transferring a teacher who is currently enjoying a study leave with pay.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "A teacher on approved study leave (especially full-time) is typically expected to complete their program before being transferred, as their current station is the study location."
+  },
+  {
+    "id": 69,
+    "question": "True or False: The School Performance Appraisal Meeting (SPAM) is a stakeholder meeting held at the end of the academic year to review the school's overall performance.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "SPAM is a key accountability meeting involving school staff, SMC/Board, and the District Education Office to evaluate goals and performance."
+  },
+  {
+    "id": 70,
+    "question": "True or False: A teacher must obtain permission from the Director-General before organizing a field trip for their class within the district.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Permission for local field trips is typically granted by the Head of School, often with notification to the District Director, but usually not the Director-General."
+  },
+  {
+    "id": 71,
+    "question": "True or False: The GES policy mandates that all staff must actively participate in one or more co-curricular activities in the school.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Involvement in co-curricular activities is a fundamental expectation for teachers to contribute to the holistic development of students."
+  },
+  {
+    "id": 72,
+    "question": "True or False: Failure to submit lesson notes for inspection on time is classified as a major misconduct and leads to immediate dismissal.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While it is a misconduct, it is generally considered a minor professional misconduct, usually leading to warnings or reprimands, not immediate dismissal."
+  },
+  {
+    "id": 73,
+    "question": "True or False: The 'Learner's Report Card' under the new curriculum should only contain marks/grades from the end-of-term examination.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The report card integrates both Continuous Assessment scores and Summative End-of-Term examination scores, along with qualitative remarks on competencies."
+  },
+  {
+    "id": 74,
+    "question": "True or False: A GES staff member is allowed to engage in active partisan politics while officially on duty.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Public sector staff, including GES personnel, are generally restricted from active partisan political engagement or using their office for political purposes."
+  },
+  {
+    "id": 75,
+    "question": "True or False: The term 'NaCCA' is an abbreviation for the National Association of Curriculum Controllers and Assessors.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "NaCCA stands for the National Council for Curriculum and Assessment."
+  },
+  {
+    "id": 76,
+    "question": "True or False: When a school receives a government intervention grant, the Head of School must obtain verbal approval from all teachers before spending any of the funds.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Spending must follow public financial regulations and the approved school budget, often requiring approval from the School Board/SMC and District Office, not just verbal approval from staff."
+  }
+]

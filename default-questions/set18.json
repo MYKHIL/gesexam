@@ -1,0 +1,831 @@
+[
+  {
+    "id": 151,
+    "question": "Which GES policy document provides the explicit legal framework prohibiting corporal punishment in all pre-tertiary schools?",
+    "options": {
+      "A": "The Procurement Manual.",
+      "B": "The GES Child Protection Policy (CPP).",
+      "C": "The School Feeding Guidelines.",
+      "D": "The Sports and Games Regulation."
+    },
+    "answer": "B",
+    "explanation": "The Child Protection Policy (CPP) and the Positive Discipline toolkit explicitly ban corporal punishment and mandate positive, non-violent forms of discipline."
+  },
+  {
+    "id": 152,
+    "question": "True or False: A teacher's primary legal duty of care extends to ensuring the physical safety of students only while they are inside the classroom.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The duty of care covers the student from the time they arrive on school premises until they leave, and potentially during organized school activities outside the premises."
+  },
+  {
+    "id": 153,
+    "question": "In the context of school administration, what is the mandatory document a teacher must prepare weekly, detailing the learning objectives, content, and activities for the week?",
+    "options": {
+      "A": "The School Budget.",
+      "B": "The Scheme of Work.",
+      "C": "The Lesson Note/Plan.",
+      "D": "The Inter-School Transfer Form."
+    },
+    "answer": "C",
+    "explanation": "The Lesson Note/Plan is the detailed daily/weekly operational document for teaching, prepared based on the Scheme of Work."
+  },
+  {
+    "id": 154,
+    "question": "The Head of School is administratively responsible for ensuring all staff submit their mandatory appraisal reports (Performance Contract) to which body?",
+    "options": {
+      "A": "The Local Market Queen.",
+      "B": "The District/Regional Education Office.",
+      "C": "The Ministry of Foreign Affairs.",
+      "D": "The School Choir."
+    },
+    "answer": "B",
+    "explanation": "Appraisal reports are submitted up the administrative hierarchy (District/Regional) for verification, promotion consideration, and overall human resource management."
+  },
+  {
+    "id": 155,
+    "question": "True or False: Under the GES Data Protection Policy, a teacher can share a student's personal health information with another colleague without parental consent.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Sharing sensitive personal data, especially health information, is restricted by the Data Protection Act and GES policy, usually requiring consent or a strictly justifiable need-to-know basis."
+  },
+  {
+    "id": 156,
+    "question": "The legal purpose of the School Management Committee (SMC) or Board of Governors (BoG) is primarily to:",
+    "options": {
+      "A": "Manage the school kitchen.",
+      "B": "Provide participatory oversight and advice on governance and administration.",
+      "C": "Mark all student exams.",
+      "D": "Organize the school's sports activities."
+    },
+    "answer": "B",
+    "explanation": "SMCs/BoGs serve as the highest oversight bodies at the school level, ensuring accountability and community involvement in governance."
+  },
+  {
+    "id": 157,
+    "question": "According to the Education Act, the responsibility for maintaining accurate and up-to-date student attendance records rests primarily with the:",
+    "options": {
+      "A": "The Watchman.",
+      "B": "The Classroom Teacher.",
+      "C": "The Local Politician.",
+      "D": "The School Chaplain."
+    },
+    "answer": "B",
+    "explanation": "The classroom teacher is the immediate custodian of the attendance register and has the initial responsibility for accurate daily record keeping."
+  },
+  {
+    "id": 158,
+    "question": "True or False: The use of mobile phones by students during instructional hours is generally permitted under the GES guidelines, provided they are on silent mode.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "GES policy generally restricts or bans the use of personal mobile phones during instructional time to minimize distraction and promote focus."
+  },
+  {
+    "id": 159,
+    "question": "Which agency under the MoE is responsible for conducting external assessments and quality checks on schools' instructional delivery and infrastructure?",
+    "options": {
+      "A": "The National Teaching Council (NTC).",
+      "B": "The National Schools Inspectorate Authority (NaSIA).",
+      "C": "The West African Examinations Council (WAEC).",
+      "D": "The Controller and Accountant General’s Department (CAGD)."
+    },
+    "answer": "B",
+    "explanation": "NaSIA is the regulatory body mandated to inspect and ensure quality standards are maintained across all pre-tertiary institutions."
+  },
+  {
+    "id": 160,
+    "question": "True or False: The Head of School is obligated to report all serious incidents of bullying, assault, or sexual abuse to the District Director and appropriate law enforcement agencies.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Reporting such incidents is a non-negotiable legal and policy mandate under the GES Child Protection Policy and the Children's Act."
+  },
+  {
+    "id": 161,
+    "question": "What is the primary management document used by the Head of School to organize the distribution of teaching load, classes, and subjects among staff?",
+    "options": {
+      "A": "The School Feeding Roster.",
+      "B": "The School Timetable.",
+      "C": "The Staff Salary Slip.",
+      "D": "The Annual Sports Report."
+    },
+    "answer": "B",
+    "explanation": "The timetable is the core administrative tool for scheduling and managing all instructional activities and staff duties."
+  },
+  {
+    "id": 162,
+    "question": "True or False: The Inclusive Education Policy requires that all public schools must make reasonable adjustments to accommodate the needs of children with disabilities.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The policy mandates schools to ensure accessibility and provide necessary support (reasonable accommodation) for all learners."
+  },
+  {
+    "id": 163,
+    "question": "Which Act gives the GES the legal authority to enforce its standardized curriculum across all public basic schools in Ghana?",
+    "options": {
+      "A": "The Roads Act.",
+      "B": "The Education Act, 2008 (Act 778).",
+      "C": "The Currency Act.",
+      "D": "The Wildlife Act."
+    },
+    "answer": "B",
+    "explanation": "Act 778 mandates the use of the national curriculum developed and approved by NaCCA and enforced by the GES."
+  },
+  {
+    "id": 164,
+    "question": "The professional requirement for a teacher to ensure that learning activities are linked sequentially and progressively to the curriculum is known as:",
+    "options": {
+      "A": "Curriculum Alignment/Pacing.",
+      "B": "Lesson Note Decoration.",
+      "C": "Classroom Lighting.",
+      "D": "Student Uniform Checking."
+    },
+    "answer": "A",
+    "explanation": "Teachers must align their teaching (pacing) with the scheme of work and the curriculum standards to ensure effective learning outcomes."
+  },
+  {
+    "id": 165,
+    "question": "True or False: All fees collected by a public school (e.g., PTA dues, examination fees) must be accounted for and audited as part of the school's public funds.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Even non-governmental funds collected and managed by the school administration must be properly accounted for and are subject to external audit, usually by the Auditor-General."
+  },
+  {
+    "id": 166,
+    "question": "The primary administrative reporting line for a District Director of Education is directly to the:",
+    "options": {
+      "A": "The Minister of Finance.",
+      "B": "The Regional Director of Education.",
+      "C": "The Speaker of Parliament.",
+      "D": "The Chief Justice."
+    },
+    "answer": "B",
+    "explanation": "The District Director reports to the Regional Director, who in turn reports to the Director-General at GES Headquarters."
+  },
+  {
+    "id": 167,
+    "question": "True or False: GES policy on school feeding requires Headteachers to procure all food items from a single, pre-approved national supplier.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The policy usually emphasizes local procurement from designated caterers or suppliers to support local economies, subject to public procurement rules."
+  },
+  {
+    "id": 168,
+    "question": "Which type of administrative record legally validates the completion of the prescribed teaching syllabus for the academic year?",
+    "options": {
+      "A": "The Staff Meeting Minutes.",
+      "B": "The Record of Work (or Log Book).",
+      "C": "The Visitors' Book.",
+      "D": "The Sick Bay Register."
+    },
+    "answer": "B",
+    "explanation": "The Record of Work is the official document that tracks the content taught, confirming syllabus coverage and pacing."
+  },
+  {
+    "id": 169,
+    "question": "True or False: A staff member must obtain written permission from the GES before contesting a political election.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Public service rules require staff to obtain permission before engaging in active partisan politics (e.g., contesting an election) to maintain neutrality and avoid conflict of interest."
+  },
+  {
+    "id": 170,
+    "question": "The administrative process of formally acknowledging and recording a new staff member's details into the Service's database upon appointment is known as:",
+    "options": {
+      "A": "Indoctrination.",
+      "B": "Staff Manning/Documentation.",
+      "C": "Interdiction.",
+      "D": "Retirement."
+    },
+    "answer": "B",
+    "explanation": "This refers to the HR process of formally onboarding and registering the employee into the payroll and human resource management systems."
+  },
+  {
+    "id": 171,
+    "question": "Which GES policy governs the issuance of official testimonials and certificates to students who complete their education?",
+    "options": {
+      "A": "The Examinations and Records Policy.",
+      "B": "The School Garden Policy.",
+      "C": "The Staff Welfare Policy.",
+      "D": "The Canteen Menu Policy."
+    },
+    "answer": "A",
+    "explanation": "The policy ensures that records are accurate, verifiable, and issued uniformly across the Service."
+  },
+  {
+    "id": 172,
+    "question": "True or False: The Head of School has the legal authority to unilaterally expel a student from the school premises permanently for any offense.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Expulsion is the most severe sanction and requires approval from the Regional Director or higher authority, following a prescribed disciplinary hearing process."
+  },
+  {
+    "id": 173,
+    "question": "The minimum number of weeks of instructional time required per academic term for basic schools is typically specified in the:",
+    "options": {
+      "A": "The GES Academic Calendar.",
+      "B": "The School Choir List.",
+      "C": "The Local Assembly Budget.",
+      "D": "The Traffic Regulations."
+    },
+    "answer": "A",
+    "explanation": "The official calendar determines the number of contact days/weeks and is legally binding on all public schools."
+  },
+  {
+    "id": 174,
+    "question": "True or False: The GES allows teachers to solicit or accept private gifts or rewards from students or parents in exchange for educational services.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The GES Code of Conduct strictly prohibits accepting gifts or soliciting rewards in exchange for services, as this constitutes bribery or corruption."
+  },
+  {
+    "id": 175,
+    "question": "The National Teaching Council (NTC) requires teachers to participate in professional learning communities (PLCs). What is the main objective of this mandate?",
+    "options": {
+      "A": "To sell teaching materials.",
+      "B": "To promote collaborative practice and continuous professional development.",
+      "C": "To organize weekly parties.",
+      "D": "To lobby for school infrastructure."
+    },
+    "answer": "B",
+    "explanation": "PLCs are mandated as a low-cost, effective strategy for peer-to-peer learning and accumulating CPD points, aligning with Act 1021."
+  },
+  {
+    "id": 176,
+    "question": "True or False: When applying for study leave with pay, a GES staff member is typically required to sign a bond to serve the Service for a specified period upon completion.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The bonding system ensures that the Service recovers the investment made in the staff member's training."
+  },
+  {
+    "id": 177,
+    "question": "The administrative duty of preparing the School's Annual Development Plan (SDP) is primarily assigned to the:",
+    "options": {
+      "A": "The School Driver.",
+      "B": "The Head of School in consultation with the SMC/BoG.",
+      "C": "The Local Fisherman.",
+      "D": "The Student Council President."
+    },
+    "answer": "B",
+    "explanation": "The SDP is a strategic plan that is developed and implemented by the Head but requires the input and approval of the oversight bodies."
+  },
+  {
+    "id": 178,
+    "question": "True or False: The GES is responsible for ensuring that all textbooks used in public basic schools are approved by the National Council for Curriculum and Assessment (NaCCA).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "NaCCA vets and approves all instructional materials to ensure curriculum fidelity, and the GES enforces their use."
+  },
+  {
+    "id": 179,
+    "question": "The policy that outlines the process for handling learner grievances and complaints in a non-punitive manner is a key component of the:",
+    "options": {
+      "A": "School Bus Route.",
+      "B": "GES Child Protection Policy (CPP).",
+      "C": "The Staff Promotions List.",
+      "D": "The School Canteen Roster."
+    },
+    "answer": "B",
+    "explanation": "The CPP ensures that children have safe channels to report issues without fear of retaliation."
+  },
+  {
+    "id": 180,
+    "question": "True or False: Teachers are allowed to openly use derogatory or abusive language towards students as a form of verbal discipline.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Verbal abuse is prohibited as it falls under emotional abuse, a breach of the GES Code of Conduct and the CPP."
+  },
+  {
+    "id": 181,
+    "question": "The GES mandate to promote the teaching and learning of a local Ghanaian language in basic schools is derived from the national commitment to:",
+    "options": {
+      "A": "Cultural Preservation and Language Policy.",
+      "B": "Uniform Wearing.",
+      "C": "Road Safety.",
+      "D": "Firefighting."
+    },
+    "answer": "A",
+    "explanation": "National education policy strongly supports the use of mother tongue/local languages, especially at the lower primary level."
+  },
+  {
+    "id": 182,
+    "question": "True or False: The Head of School can refuse to grant a staff member sick leave if the illness is not contagious.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Sick leave is granted based on medical need, substantiated by a medical certificate, regardless of contagiousness, in line with the Labour Act and GES Conditions of Service."
+  },
+  {
+    "id": 183,
+    "question": "In school administration, the term 'Float Teacher' refers to a staff member who:",
+    "options": {
+      "A": "Teaches only in a boat.",
+      "B": "Does not have a fixed classroom but covers absent teachers or subjects.",
+      "C": "Specializes in swimming.",
+      "D": "Manages the school garden."
+    },
+    "answer": "B",
+    "explanation": "A float teacher is an administrative resource used for contingency planning and timetable management."
+  },
+  {
+    "id": 184,
+    "question": "True or False: A GES staff member can be dismissed solely on the basis of negative rumors circulating in the community without a formal disciplinary hearing.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "All major sanctions, especially dismissal, require a formal investigation, charge, and disciplinary hearing to ensure due process and natural justice."
+  },
+  {
+    "id": 185,
+    "question": "The administrative process of inventorying and verifying all school assets (e.g., computers, furniture) annually is mandated by the:",
+    "options": {
+      "A": "Public Financial Management Act (PFMA) and GES regulations.",
+      "B": "The School Flag Code.",
+      "C": "The School Choir Rules.",
+      "D": "The Local Traffic Rules."
+    },
+    "answer": "A",
+    "explanation": "Accountability for public assets is required under the PFMA and internal GES asset management protocols."
+  },
+  {
+    "id": 186,
+    "question": "True or False: The GES is required to consult with the National Council on Persons with Disability (NCPD) when developing specific policies for inclusive education.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Consultation with relevant bodies like the NCPD is crucial to ensure policies comply with the Persons with Disability Act and are practically sound."
+  },
+  {
+    "id": 187,
+    "question": "The role of the District Education Oversight Committee (DEOC) is primarily to:",
+    "options": {
+      "A": "Set national examination questions.",
+      "B": "Monitor and supervise the performance of the GES within the District.",
+      "C": "Manage the national pension scheme.",
+      "D": "Appoint the Minister of Education."
+    },
+    "answer": "B",
+    "explanation": "DEOCs act as local supervisory bodies to ensure the delivery of quality education at the district level."
+  },
+  {
+    "id": 188,
+    "question": "True or False: Teachers are allowed to use personal social media platforms to criticize GES policies using their official title/designation.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The Code of Conduct requires staff to maintain the dignity and reputation of the Service and restricts open criticism using official identity, falling under the rules of public service decorum."
+  },
+  {
+    "id": 189,
+    "question": "Which administrative record must be maintained by the Head of School to document formal communications and directives received from the District/Regional Office?",
+    "options": {
+      "A": "The School Garden Register.",
+      "B": "The Official Correspondence/Letter Dispatch Book.",
+      "C": "The School Choir Attendance.",
+      "D": "The Sports Team Register."
+    },
+    "answer": "B",
+    "explanation": "Maintaining a record of official correspondence is essential for accountability and institutional memory."
+  },
+  {
+    "id": 190,
+    "question": "True or False: The Head of School must seek approval from the SMC/BoG before spending any Capitation Grant funds received.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Spending public funds requires consultation and oversight from the governing body to ensure fiscal responsibility and accountability."
+  },
+  {
+    "id": 191,
+    "question": "The GES requirement for teachers to prepare a 'Scheme of Work' is essential for ensuring:",
+    "options": {
+      "A": "The teacher is happy.",
+      "B": "Systematic coverage of the entire curriculum over the term/year.",
+      "C": "The students wear clean shoes.",
+      "D": "The school gates are locked."
+    },
+    "answer": "B",
+    "explanation": "The Scheme of Work is the long-term plan (termly/yearly) that maps the curriculum topics and sequencing."
+  },
+  {
+    "id": 192,
+    "question": "True or False: The NTC has the legal right to impose disciplinary sanctions on an unlicensed person who is found teaching in a Ghanaian school.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The NTC Act gives the Council the power to regulate the teaching profession, including sanctioning unauthorized practice."
+  },
+  {
+    "id": 193,
+    "question": "The administrative instrument that legally defines the roles, responsibilities, and progression paths for various categories of GES staff is the:",
+    "options": {
+      "A": "The National Anthem.",
+      "B": "The GES Scheme of Service.",
+      "C": "The School Library Rules.",
+      "D": "The School Bus Timetable."
+    },
+    "answer": "B",
+    "explanation": "The Scheme of Service details the HR structure, job descriptions, and promotion criteria for the Service."
+  },
+  {
+    "id": 194,
+    "question": "True or False: The GES allows teachers to administer formal internal examinations to students without first having taught the corresponding curriculum content.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Assessment must be based on taught content (curriculum alignment), and testing untaught material is professionally unethical."
+  },
+  {
+    "id": 195,
+    "question": "The legal principle that requires schools to provide reasonable warning and safety measures before engaging students in potentially hazardous activities (e.g., field trips, science experiments) is known as:",
+    "options": {
+      "A": "The Principle of Procrastination.",
+      "B": "The Principle of Foreseeability (part of Duty of Care).",
+      "C": "The Principle of Surprise.",
+      "D": "The Principle of Exclusion."
+    },
+    "answer": "B",
+    "explanation": "The duty of care requires anticipating and mitigating potential risks (foreseeability) to ensure student safety."
+  },
+  {
+    "id": 196,
+    "question": "True or False: The National Schools Inspectorate Authority (NaSIA) is responsible for regulating the academic content of the curriculum.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Curriculum content is the responsibility of the National Council for Curriculum and Assessment (NaCCA), while NaSIA focuses on quality assurance, enforcement, and inspection."
+  },
+  {
+    "id": 197,
+    "question": "The GES administrative structure requires that all Heads of Departments (HODs) report directly to the:",
+    "options": {
+      "A": "The District Assembly Presiding Member.",
+      "B": "The Head of School/Assistant Head.",
+      "C": "The School Cook.",
+      "D": "The Regional Police Commander."
+    },
+    "answer": "B",
+    "explanation": "HODs form part of the internal school management structure and report to the Head of School for day-to-day operations."
+  },
+  {
+    "id": 198,
+    "question": "True or False: When a student transfers to another school, the previous school is legally required to release the student's academic records promptly upon formal request.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "explanation": "Continuity of education and access to records are mandated by GES policy to ensure smooth transitions for learners."
+  },
+  {
+    "id": 199,
+    "question": "The GES Code of Conduct mandates that staff should report to work promptly and remain at post until the official closing time. This relates to the principle of:",
+    "options": {
+      "A": "Political Neutrality.",
+      "B": "Punctuality and Due Diligence.",
+      "C": "Financial Prudence.",
+      "D": "External Auditing."
+    },
+    "answer": "B",
+    "explanation": "Adherence to the schedule and presence at the workstation are fundamental requirements of employment."
+  },
+  {
+    "id": 200,
+    "question": "True or False: The Minister of Education is legally allowed to issue Directives to the Director-General of the GES regarding the overall direction and policy of the Service.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The Minister exercises overall policy control and direction over the GES, as mandated by the Education Act and the Constitution."
+  },
+  {
+    "id": 201,
+    "question": "The administrative document used to track and reconcile the receipt and expenditure of all monies in a public school is the:",
+    "options": {
+      "A": "The School Prospectus.",
+      "B": "The Cash Book and Payment Vouchers.",
+      "C": "The Visitors' Log.",
+      "D": "The School Team Roster."
+    },
+    "answer": "B",
+    "explanation": "These are essential financial records mandated by the PFMA for public institutions."
+  },
+  {
+    "id": 202,
+    "question": "True or False: A teacher who fails to submit their Lesson Notes for inspection on time can face administrative sanction, such as a query or reprimand.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Timely submission of Lesson Notes is a mandatory professional duty; failure constitutes negligence of duty."
+  },
+  {
+    "id": 203,
+    "question": "The GES is mandated to provide equal opportunities for promotion to all staff members, regardless of gender, religion, or ethnic origin. This is an application of the constitutional principle of:",
+    "options": {
+      "A": "Affirmative Action.",
+      "B": "Non-discrimination and Equity.",
+      "C": "Socioeconomic Stability.",
+      "D": "Administrative Efficiency."
+    },
+    "answer": "B",
+    "explanation": "Constitutional Article 17 guarantees equality before the law and prohibits discrimination."
+  },
+  {
+    "id": 204,
+    "question": "True or False: The Head of School is not authorized to grant Casual Leave (Short Leave) to a staff member; this must be approved by the District Director.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Heads are typically delegated the authority to grant short-term casual leave to manage day-to-day staff attendance."
+  },
+  {
+    "id": 205,
+    "question": "Which of these is a prohibited form of financial misconduct under the GES Code of Conduct?",
+    "options": {
+      "A": "Buying pens.",
+      "B": "Misappropriation of school funds.",
+      "C": "Paying utility bills.",
+      "D": "Buying textbooks."
+    },
+    "answer": "B",
+    "explanation": "Misappropriation (stealing or misdirecting) of public funds is a serious criminal and disciplinary offense."
+  },
+  {
+    "id": 206,
+    "question": "True or False: The GES encourages the Parent-Teacher Association (PTA) to take over the primary responsibility for paying teacher salaries.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Teacher salaries are a state responsibility (CAGD). The PTA's role is supplementary (projects, welfare), not primary government functions."
+  },
+  {
+    "id": 207,
+    "question": "The legal justification for conducting mandatory internal audits of school accounts comes from the need to ensure adherence to the:",
+    "options": {
+      "A": "National Sports Regulations.",
+      "B": "Public Financial Management Act (PFMA).",
+      "C": "School Bus Safety Manual.",
+      "D": "The Local Culture Act."
+    },
+    "answer": "B",
+    "explanation": "Internal and external auditing are mandated by the PFMA to safeguard public resources."
+  },
+  {
+    "id": 208,
+    "question": "True or False: A GES staff member is allowed to engage in personal commercial activities on school premises during instructional hours.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Commercial activities that interfere with official duties or misuse public property are prohibited by the Code of Conduct and employment rules."
+  },
+  {
+    "id": 209,
+    "question": "The Ministry of Education's overarching goal for education is mandated by which legal authority?",
+    "options": {
+      "A": "The Constitution of Ghana (Directive Principles of State Policy).",
+      "B": "The School Feeding Roster.",
+      "C": "The Local Council of Elders.",
+      "D": "The WASSCE Grading System."
+    },
+    "answer": "A",
+    "explanation": "The Constitution, particularly Chapter 6, outlines the State's duty to provide quality education."
+  },
+  {
+    "id": 210,
+    "question": "True or False: The Head of School must maintain a confidential record of all disciplinary actions taken against staff members for future reference.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Disciplinary records are part of a staff member's official file and are necessary for administrative decisions like promotion and subsequent disciplinary actions."
+  },
+  {
+    "id": 211,
+    "question": "The legal instrument that established the National Council for Tertiary Education (NCTE), which formerly regulated Colleges of Education, has largely been superseded by the:",
+    "options": {
+      "A": "The Fisheries Act.",
+      "B": "Education Regulatory Bodies Act, 2020 (Act 1021).",
+      "C": "The Currency Act.",
+      "D": "The Local Traffic Act."
+    },
+    "answer": "B",
+    "explanation": "Act 1021 restructured the regulatory landscape, creating the GTEC (Ghana Tertiary Education Commission) and consolidating regulatory roles."
+  },
+  {
+    "id": 212,
+    "question": "True or False: A student who refuses to participate in school clean-up activities can be permanently expelled under GES rules.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Expulsion is reserved for extremely grave offenses. Refusal to clean is a minor offense and should be dealt with through counseling, community service, or detention."
+  },
+  {
+    "id": 213,
+    "question": "The administrative mandate to ensure all students are checked for proper dress, grooming, and uniform compliance before entering the classroom is the responsibility of the:",
+    "options": {
+      "A": "The Local Assemblyman.",
+      "B": "The School Authorities (including all teachers).",
+      "C": "The National Sports Authority.",
+      "D": "The School Bus Driver."
+    },
+    "answer": "B",
+    "explanation": "Enforcing school rules and discipline is a collective responsibility of all school authorities."
+  },
+  {
+    "id": 214,
+    "question": "True or False: When a teacher transfers schools, they are required to carry a formal 'Release Letter' from the previous authority before the new station can process their documents.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The Release Letter is a mandatory HR document confirming that the staff member has been officially released and cleared of all responsibilities (financial/material) at the former station."
+  },
+  {
+    "id": 215,
+    "question": "The GES is legally obliged to provide annual school safety and fire evacuation drills. This is part of its:",
+    "options": {
+      "A": "Mandate to maintain school infrastructure.",
+      "B": "Statutory duty of care for safety and security.",
+      "C": "Curriculum planning.",
+      "D": "Recruitment mandate."
+    },
+    "answer": "B",
+    "explanation": "Occupational Health and Safety regulations and the duty of care require schools to prepare for emergencies."
+  },
+  {
+    "id": 216,
+    "question": "True or False: GES staff can organize and lead a public demonstration against government policy while wearing their official school uniform/ID badge.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Public service rules restrict staff from engaging in partisan politics or protests using their official identity, which could compromise the neutrality and integrity of the Service."
+  },
+  {
+    "id": 217,
+    "question": "The administrative responsibility for compiling and submitting accurate student population data (enrollment) to the District Office lies with the:",
+    "options": {
+      "A": "The Local Farmer.",
+      "B": "The Head of School.",
+      "C": "The National Film Board.",
+      "D": "The Weather Forecast Agency."
+    },
+    "answer": "B",
+    "explanation": "Heads are the certifying officers for school-level data, including enrollment, which affects resource allocation like Capitation Grants."
+  },
+  {
+    "id": 218,
+    "question": "True or False: The GES is mandated to use standardized school report cards across all public basic schools for uniformity in assessment reporting.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Standardization is necessary for comparative analysis, data integrity, and compliance across the Service."
+  },
+  {
+    "id": 219,
+    "question": "The legal term for the act of failing to perform a mandatory duty required of a public officer is:",
+    "options": {
+      "A": "Laissez-faire.",
+      "B": "Negligence of Duty (or Dereliction of Duty).",
+      "C": "Innovation.",
+      "D": "Delegation."
+    },
+    "answer": "B",
+    "explanation": "Negligence of duty is a serious disciplinary offense under the public service code."
+  },
+  {
+    "id": 220,
+    "question": "True or False: A staff member can legally refuse a transfer directive from the Regional Director if the new station is more than 50km away from their current residence.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Transfers are a fundamental condition of public service employment (Service-wide deployability). Refusal is usually considered insubordination unless there is a verifiable compassionate or medical reason."
+  },
+  {
+    "id": 221,
+    "question": "The administrative structure of the GES mandates that the final appeal against a major disciplinary sanction lies with the:",
+    "options": {
+      "A": "The Local Choir Master.",
+      "B": "The Public Services Commission (PSC).",
+      "C": "The School Library Committee.",
+      "D": "The Local Fisherman."
+    },
+    "answer": "B",
+    "explanation": "The PSC serves as the final arbiter for appeals concerning major administrative actions (dismissal, reduction in rank) against public servants."
+  },
+  {
+    "id": 222,
+    "question": "True or False: The Head of School must obtain a written 'clearance' from the District Director before going on a long annual leave (more than two weeks).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Longer leaves for Heads require prior administrative clearance to ensure continuous leadership and proper handover."
+  },
+  {
+    "id": 223,
+    "question": "The GES policy on school assets requires that all assets purchased with public funds must be marked with:",
+    "options": {
+      "A": "The school logo and an official asset tag/inventory number.",
+      "B": "The Headteacher's name.",
+      "C": "The date of the next school holiday.",
+      "D": "The teacher's favorite color."
+    },
+    "answer": "A",
+    "explanation": "Asset marking and tagging are mandatory procedures for inventory control and accountability under the PFMA."
+  },
+  {
+    "id": 224,
+    "question": "True or False: The GES allows teachers to recommend specific private vendors or traders to students for the purchase of uniforms, books, or materials for private financial gain.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "This is a form of conflict of interest and is prohibited by the Code of Conduct."
+  },
+  {
+    "id": 225,
+    "question": "The MoE mandate requiring schools to integrate national values and patriotic education into the curriculum supports which constitutional objective?",
+    "options": {
+      "A": "Promoting National Unity and Cohesion.",
+      "B": "Ensuring daily rainfall.",
+      "C": "Controlling the stock exchange.",
+      "D": "Setting the price of gold."
+    },
+    "answer": "A",
+    "explanation": "The education system is constitutionally tasked with promoting civic responsibility, patriotism, and national integration."
+  }
+]

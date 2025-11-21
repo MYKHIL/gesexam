@@ -1,0 +1,872 @@
+[
+  {
+    "id": 1,
+    "question": "In what year was the Ghana Education Service (GES) established, as part of the Public Service of Ghana, by NRCD 247?",
+    "options": {
+      "A": "1968",
+      "B": "1974",
+      "C": "1987",
+      "D": "1995"
+    },
+    "answer": "B",
+    "explanation": "The GES was formally established in 1974 by NRCD 247."
+  },
+  {
+    "id": 2,
+    "question": "Which Act governs the establishment and operations of the GES, providing the framework for basic and second cycle education delivery?",
+    "options": {
+      "A": "Public Services Act, 2001 (Act 600)",
+      "B": "Education Act, 2008 (Act 778)",
+      "C": "Ghana Education Service Act, 1995 (Act 506)",
+      "D": "Education Regulatory Bodies Act, 2020 (Act 1023)"
+    },
+    "answer": "C",
+    "explanation": "Act 506 (1995) is the primary legislation that restructured the Education Service and established the framework for its operations."
+  },
+  {
+    "id": 3,
+    "question": "Which of the following ranks must an officer typically have held, and for what minimum period, before applying for promotion to Assistant Director II?",
+    "options": {
+      "A": "Senior Superintendent I, since 2021 or earlier",
+      "B": "Assistant Director I, since 2021 or earlier",
+      "C": "Deputy Director, since 2021 or earlier",
+      "D": "Principal Superintendent, since 2021 or earlier"
+    },
+    "answer": "D",
+    "explanation": "Applicants for the AD II rank must have held the rank of Principal Superintendent (PS) since 2021 or earlier."
+  },
+  {
+    "id": 4,
+    "question": "The core function of the Ghana Education Service (GES) is primarily concerned with:",
+    "options": {
+      "A": "Conducting and managing national promotion examination.",
+      "B": "Developing and implementing tertiary education curriculum.",
+      "C": "Managing and implementing pre-tertiary educational policies.",
+      "D": "Overseeing basic, secondary and university education."
+    },
+    "answer": "C",
+    "explanation": "The GES is responsible for managing and implementing policies solely for pre-tertiary education (basic and second cycle)."
+  },
+  {
+    "id": 5,
+    "question": "According to the Education Act, 2008 (Act 778), executive responsibility for the provision and management of basic and second cycle schools shall be effectively decentralized to which entity?",
+    "options": {
+      "A": "Regional Coordinating Councils",
+      "B": "Metropolitan, Municipal, and District Assemblies (MMDAs)",
+      "C": "School Boards of Governors",
+      "D": "Ministry of Local Government"
+    },
+    "answer": "B",
+    "explanation": "Act 778 mandates the effective decentralization of executive responsibility for school management and provision to the District Assemblies."
+  },
+  {
+    "id": 6,
+    "question": "The primary object of the GES, as stipulated by its founding legislation, is to:",
+    "options": {
+      "A": "Provide employment for all qualified Ghanaian teachers.",
+      "B": "Guarantee compulsory technical education up to the SHS level.",
+      "C": "Provide a framework for the effective delivery of basic and second cycle education.",
+      "D": "Ensure teacher professional development and licensing."
+    },
+    "answer": "C",
+    "explanation": "The explicit object of the Service is to provide a framework for the effective delivery of basic and second cycle education."
+  },
+  {
+    "id": 7,
+    "question": "Which government agency is primarily responsible for the rigorous review, evaluation, and approval of textbooks and instructional materials to ensure alignment with national curriculum standards?",
+    "options": {
+      "A": "Ghana Education Service (GES)",
+      "B": "National Teaching Council (NTC)",
+      "C": "National Council for Curriculum and Assessment (NaCCA)",
+      "D": "Ghana Tertiary Education Commission (GTEC)"
+    },
+    "answer": "C",
+    "explanation": "NaCCA is the body responsible for rigorously reviewing, evaluating, and approving instructional materials to align with national curriculum standards."
+  },
+  {
+    "id": 8,
+    "question": "The Assistant Director II is mandated to organize meetings/durbars at circuit centres and in the communities, but requires prior approval from which authority?",
+    "options": {
+      "A": "The District Assembly Chief Executive",
+      "B": "The Circuit Supervisor",
+      "C": "The Director-General",
+      "D": "The Director"
+    },
+    "answer": "D",
+    "explanation": "The AD II is required to organize meetings/durbars in consultation with the Director's approval."
+  },
+  {
+    "id": 9,
+    "question": "The promotion system explicitly recognizes which of the following qualifications obtained after a previous promotion for out-of-turn consideration?",
+    "options": {
+      "A": "Diploma in Education",
+      "B": "Approved Master's or PhD degrees",
+      "C": "Post-Graduate Certificate in Teaching",
+      "D": "Professional Teacher License"
+    },
+    "answer": "B",
+    "explanation": "Teachers with approved Master's or PhD degrees may apply for promotion out of turn, subject to conditions."
+  },
+  {
+    "id": 10,
+    "question": "Which Act led to the restructuring of the Education Service and established the framework for its modern operations?",
+    "options": {
+      "A": "Education Act 1974 (NRCD 247)",
+      "B": "Ghana Education Service Act, 1995 (Act 506)",
+      "C": "Public Services Commission Act 1994 (Act 482)",
+      "D": "Education Act 2008 (Act 778)"
+    },
+    "answer": "B",
+    "explanation": "Act 506 (1995) restructured the Education Service."
+  },
+  {
+    "id": 11,
+    "question": "The philosophical underpinning of Ghana's educational system, according to the Review of Education Reforms (2002), is the creation of individuals who are:",
+    "options": {
+      "A": "Intellectually superior and focused on globalization.",
+      "B": "Well-balanced (intellectually, spiritually, emotionally, and physically).",
+      "C": "Primarily focused on vocational and technical skills.",
+      "D": "Dedicated only to formal sector employment."
+    },
+    "answer": "B",
+    "explanation": "The philosophy is the creation of well-balanced individuals (intellectually, spiritually, emotionally, and physically)."
+  },
+  {
+    "id": 12,
+    "question": "The promotion examination process for ranks like AD II is managed and scheduled under the authority of the:",
+    "options": {
+      "A": "Ghana Education Service Human Resource Division.",
+      "B": "Ministry of Education Examinations Unit.",
+      "C": "Public Services Commission.",
+      "D": "National Teaching Council."
+    },
+    "answer": "C",
+    "explanation": "The promotion examination process is managed and coordinated by the Public Services Commission (PSC)."
+  },
+  {
+    "id": 13,
+    "question": "The AD II assists in which key function regarding reports from Circuit Supervisors?",
+    "options": {
+      "A": "Drafting the initial inspection report templates.",
+      "B": "Analyzing supervision reports and ensuring appropriate actions are taken promptly.",
+      "C": "Direct implementation of disciplinary action against staff mentioned in the reports.",
+      "D": "Determining the official publication status of the reports."
+    },
+    "answer": "B",
+    "explanation": "The AD II is tasked with analyzing supervision reports received from circuit supervisors and ensuring prompt action is taken."
+  },
+  {
+    "id": 14,
+    "question": "The Education Act, 2008 (Act 778) stipulates that the District Assembly shall, subject to central direction, provide:",
+    "options": {
+      "A": "Salaries for teachers.",
+      "B": "Professional development training.",
+      "C": "Necessary infrastructural needs and other facilities for basic and second cycle education.",
+      "D": "Curriculum content and syllabuses."
+    },
+    "answer": "C",
+    "explanation": "The District Assembly is responsible for providing necessary infrastructural needs and other facilities for education."
+  },
+  {
+    "id": 15,
+    "question": "The mission of the Ministry of Education (MoE) is to provide:",
+    "options": {
+      "A": "employment for graduates.",
+      "B": "free education for all.",
+      "C": "compulsory technical education.",
+      "D": "inclusive and equitable quality education."
+    },
+    "answer": "D",
+    "explanation": "The mission of the Ministry of Education is to provide inclusive and equitable quality education."
+  },
+  {
+    "id": 16,
+    "question": "What is the current structure of pre-tertiary education in Ghana?",
+    "options": {
+      "A": "3 years KG, 6 years Primary, 3 years JHS, 3 years SHS",
+      "B": "2 years KG, 6 years Primary, 3 years JHS, 4 years SHS/TVET",
+      "C": "2 years KG, 6 years Primary, 3 years JHS, 3 years SHS/TVET",
+      "D": "3 years KG, 5 years Primary, 4 years JHS, 3 years SHS/TVET"
+    },
+    "answer": "C",
+    "explanation": "The current structure is 2 years KG, 6 years Primary, 3 years JHS, and 3 years SHS/TVET."
+  },
+  {
+    "id": 17,
+    "question": "The Education Strategic Plan (ESP 2018–2030) tracks performance using various indicators. Which of the following is a key ratio tracked for quality and efficiency?",
+    "options": {
+      "A": "Teacher Absenteeism Rate (TAR)",
+      "B": "School Management Index (SMI)",
+      "C": "Gross Enrolment Ratio (GER) and Pupil to Trained Teacher Ratio (PTTR)",
+      "D": "Infrastructure Development Index (IDI)"
+    },
+    "answer": "C",
+    "explanation": "Key ratios tracked by the ESP include Gross Enrolment Ratio (GER) and Pupil to Trained Teacher Ratio (PTTR)."
+  },
+  {
+    "id": 18,
+    "question": "Which of the following is/are managerial implications of the National Pre-tertiary Education Curriculum Framework? I. Teachers must adopt a dialogic approach to teaching. II. Schools must shift emphasis from summative to formative assessment. III. Continuing Professional Development (CPD) must be an embedded practice. IV. Only children reading on grade level should participate in creative writing activities.",
+    "options": {
+      "A": "I and IV only",
+      "B": "I, II, and III only",
+      "C": "II, III, and IV only",
+      "D": "I, II, III, and IV"
+    },
+    "answer": "B",
+    "explanation": "The curriculum framework requires dialogic teaching (I), a shift to formative assessment (II), and embedded CPD (III). Creative writing is for all children, not just those reading on grade level (IV is incorrect)."
+  },
+  {
+    "id": 19,
+    "question": "The Ghana Reading Action Plan (G-RAP) is primarily aimed at:",
+    "options": {
+      "A": "Standardizing assessment for teacher trainees.",
+      "B": "Improving the school curriculum to enhance knowledge, skills, and competencies, particularly in literacy and numeracy.",
+      "C": "Providing financial support to rural schools.",
+      "D": "Expanding access to technology in basic schools."
+    },
+    "answer": "B",
+    "explanation": "The G-RAP's main objective is to improve the school curriculum to enhance literacy and numeracy outcomes."
+  },
+  {
+    "id": 20,
+    "question": "The current vision of the Director-General of GES identifies which of the following as a key strategic pillar?",
+    "options": {
+      "A": "Reducing class sizes to a maximum of 30 students.",
+      "B": "Expanding university intake through scholarship schemes.",
+      "C": "Improving Data Management using Technology (GESMIS).",
+      "D": "Privatizing secondary school management."
+    },
+    "answer": "C",
+    "explanation": "Improving Data Management using Technology (GESMIS) is one of the four key strategic pillars."
+  },
+  {
+    "id": 21,
+    "question": "The Ghana Education Service Management Information System (GESMIS), launched in 2024, is primarily intended to:",
+    "options": {
+      "A": "Automate teacher salary processing.",
+      "B": "Centralize educational data management, streamlining tracking of school performance indicators and teacher deployment.",
+      "C": "Facilitate the application process for teacher licensure.",
+      "D": "Manage the procurement of textbooks."
+    },
+    "answer": "B",
+    "explanation": "GESMIS is a centralized platform to streamline data management for tracking performance, enrollment, and teacher deployment."
+  },
+  {
+    "id": 22,
+    "question": "The deployment of ICT into education, according to the 2009 ICT in Education Policy, aims to achieve which of the following? I. Create new possibilities for learners and teachers in information acquisition. II. Enhance access to education. III. Improve the quality of education delivery on an equitable basis. IV. Strictly limit the use of open-source software to maintain standards.",
+    "options": {
+      "A": "I and IV only",
+      "B": "I, II, and III only",
+      "C": "II and IV only",
+      "D": "I, II, III, and IV"
+    },
+    "answer": "B",
+    "explanation": "The deployment of ICT is intended to create new possibilities (I), enhance access (II), and improve quality on an equitable basis (III). Norms and standards (IV) are for defining acceptable use, not strictly limiting open-source software."
+  },
+  {
+    "id": 23,
+    "question": "The School Health Education Programme (SHEP) Unit's goal is to ensure the provision of comprehensive health and nutrition education in schools to achieve what outcome?",
+    "options": {
+      "A": "Exclusive focus on staff training in sanitation practices.",
+      "B": "Provision of specialized medical treatment for students.",
+      "C": "Improvements in child survival, school enrolment, retention, and academic performance.",
+      "D": "Annual monitoring of cafeteria hygiene by the District Health Directorate."
+    },
+    "answer": "C",
+    "explanation": "The goal of SHEP is to lead to improvements in child survival, school enrolment, retention, and academic performance."
+  },
+  {
+    "id": 24,
+    "question": "Which major historical educational reform focused on increasing access to basic education, shortening the pre-university structure from 17 years to 12 years, and making education more relevant to socio-economic conditions?",
+    "options": {
+      "A": "The 1961 Education Act",
+      "B": "The 1987 Education Reform",
+      "C": "The 1995 GES Act",
+      "D": "The 2008 Education Act"
+    },
+    "answer": "B",
+    "explanation": "The 1987 Education Reform focused on shortening the structure from 17 to 12 years and improving relevance to socio-economic conditions."
+  },
+  {
+    "id": 25,
+    "question": "The shift from a centralized educational system to one where executive responsibility is devolved to District Assemblies (DAs) is primarily mandated by:",
+    "options": {
+      "A": "The PFM Act 2016 (Act 921)",
+      "B": "The Labour Act 651",
+      "C": "The Education Act 2008 (Act 778)",
+      "D": "The NaCCA Act 2020 (Act 1023)"
+    },
+    "answer": "C",
+    "explanation": "The decentralization of executive responsibility for school management is mandated by the Education Act 2008 (Act 778)."
+  },
+  {
+    "id": 26,
+    "question": "The AD II must be cognizant that the National Pre-tertiary Education Curriculum Framework positions the school curriculum to develop graduates who are primarily:",
+    "options": {
+      "A": "Proficient only in Ghanaian languages.",
+      "B": "Problem solvers with the ability to think creatively and participate fully in society.",
+      "C": "Focused solely on passing high-stakes examinations.",
+      "D": "Qualified for immediate tertiary education enrolment."
+    },
+    "answer": "B",
+    "explanation": "The curriculum framework aims to develop graduates who are problem solvers, think creatively, and participate fully in society."
+  },
+  {
+    "id": 27,
+    "question": "The importance of fostering Strong Performance Management and Accountability Regime at all levels is emphasized in the current GES strategic mandate for the purpose of:",
+    "options": {
+      "A": "Reducing the workload of Circuit Supervisors.",
+      "B": "Ensuring that management decisions are data-driven and efficient.",
+      "C": "Streamlining the promotion process.",
+      "D": "Limiting community involvement in school governance."
+    },
+    "answer": "B",
+    "explanation": "Strong Performance Management and Accountability is a pillar aimed at ensuring data-driven decision-making and efficiency."
+  },
+  {
+    "id": 28,
+    "question": "The current pre-tertiary education curriculum encourages and supports teachers to engage in:",
+    "options": {
+      "A": "Rote learning and memorization practices.",
+      "B": "Creative and dialogic instructional practices.",
+      "C": "Summative assessments only.",
+      "D": "Individual research separate from curriculum delivery."
+    },
+    "answer": "B",
+    "explanation": "The framework encourages and supports teachers to engage in creative and dialogic instructional practices."
+  },
+  {
+    "id": 29,
+    "question": "The purpose of the ICT in Education Strategic Implementation Plan is to ensure that ICT is efficiently integrated into Ghana's educational system to fulfill the goals and guiding principles in national policy frameworks, such as:",
+    "options": {
+      "A": "The Ghana Poverty Reduction Strategy Paper (GPRS I&II).",
+      "B": "The Ghana Teacher Licensure Examination (GTLE).",
+      "C": "The GES Collective Bargaining Agreement (CBA).",
+      "D": "The Public Procurement Act (Act 663)."
+    },
+    "answer": "A",
+    "explanation": "The ICT plan is aligned with national policy frameworks such as the Ghana Poverty Reduction Strategy Paper (GPRS I&II)."
+  },
+  {
+    "id": 30,
+    "question": "The emphasis on promoting Science, Technology, Engineering and Mathematics (STEM) is a current strategic focus for GES across which educational levels?",
+    "options": {
+      "A": "Tertiary level only.",
+      "B": "Junior High School and Senior High School levels only.",
+      "C": "Primary Schools to the Senior High School levels.",
+      "D": "Basic Education only (KG to JHS)."
+    },
+    "answer": "C",
+    "explanation": "GES is committed to promoting STEM right from Primary Schools through to the Senior High School levels."
+  },
+  {
+    "id": 31,
+    "question": "An AD II conducting an analysis of supervision reports should use current performance data, often tracked via GESMIS, to monitor the achievement of strategic indicators, such as improvements in the:",
+    "options": {
+      "A": "Number of non-teaching staff recruited.",
+      "B": "Gross Enrolment Ratio (GER) and Pupil to Trained Teacher Ratio (PTTR).",
+      "C": "Rate of salary increment for teachers.",
+      "D": "Total number of days allocated for leave."
+    },
+    "answer": "B",
+    "explanation": "GER and PTTR are key strategic indicators tracked under the Education Strategic Plan."
+  },
+  {
+    "id": 32,
+    "question": "Which institution is expected to ensure that designs for schools are user-friendly for children with special needs, promoting inclusive education?",
+    "options": {
+      "A": "The National Teaching Council and the GES Director-General.",
+      "B": "The District Assemblies and heads of institutions.",
+      "C": "The Ministry of Finance and the GETFund.",
+      "D": "The Ghana National Association of Teachers (GNAT)."
+    },
+    "answer": "B",
+    "explanation": "The Education Act, 2008 (Act 778) stipulates that District Assemblies and heads of institutions shall ensure designs are user-friendly for children with special needs."
+  },
+  {
+    "id": 33,
+    "question": "Which of the following is NOT one of the four key strategic pillars pursued under the current GES Director-General’s mandate (2022-2024)?",
+    "options": {
+      "A": "Improving Data Management using Technology.",
+      "B": "Improving Working Conditions of Staff.",
+      "C": "Implementing a centralized Teacher Posting System (TPS).",
+      "D": "Strong Performance Management and Accountability Regime."
+    },
+    "answer": "C",
+    "explanation": "While improving data management and working conditions are pillars, the recruitment module introduced was 'self-posting', not a centralized TPS."
+  },
+  {
+    "id": 34,
+    "question": "The ICT in Education Policy noted in 2009 that the deployment of ICT would enhance access to education and improve quality delivery on an equitable basis by creating new possibilities for:",
+    "options": {
+      "A": "Financial disbursement.",
+      "B": "Learners and teachers to engage in new ways of information acquisition and analysis.",
+      "C": "International donor engagement.",
+      "D": "Reducing the teacher workforce size."
+    },
+    "answer": "B",
+    "explanation": "ICT deployment was expected to create new possibilities for learners and teachers in information acquisition and analysis."
+  },
+  {
+    "id": 35,
+    "question": "The Public Financial Management Act (Act 921) was enacted in which year, consolidating disparate financial laws and regulations?",
+    "options": {
+      "A": "2008",
+      "B": "2011",
+      "C": "2016",
+      "D": "2020"
+    },
+    "answer": "C",
+    "explanation": "The Public Financial Management Act (Act 921) was enacted in 2016."
+  },
+  {
+    "id": 36,
+    "question": "All covered entities, including the GES, are enjoined by the PFM Act and its regulations to use which platform for managing public funds?",
+    "options": {
+      "A": "Internal Audit Reporting System (IARS)",
+      "B": "Ghana Integrated Financial Management Information System (GIFMIS)",
+      "C": "Consolidated Fund Management System (CFMS)",
+      "D": "Public Sector Payroll System (PSPS)"
+    },
+    "answer": "B",
+    "explanation": "Covered entities are enjoined by the PFM Act and its Regulation to use the GIFMIS platform."
+  },
+  {
+    "id": 37,
+    "question": "A core objective achieved by the PFM Act, 2016 (Act 921), is the statutory authorization for the adoption of which internationally recognized financial reporting protocol?",
+    "options": {
+      "A": "Generally Accepted Accounting Principles (GAAP)",
+      "B": "International Financial Reporting Standards (IFRS)",
+      "C": "International Public Sector Accounting Standards (IPSAS)",
+      "D": "Global Reporting Initiative (GRI) Standards"
+    },
+    "answer": "C",
+    "explanation": "Act 921 provides statutory authorization for the adoption of accrual-based International Public Sector Accounting Standards (IPSAS)."
+  },
+  {
+    "id": 38,
+    "question": "According to financial regulations for public institutions, Imprest Cash Funds established for change funds or petty cash:",
+    "options": {
+      "A": "May be used temporarily for staff travel reimbursement.",
+      "B": "Must be maintained in a general office safe accessible to all unit heads.",
+      "C": "Cannot be loaned or used to cash personal checks.",
+      "D": "Must be audited monthly by the Controller and Accountant-General’s Department."
+    },
+    "answer": "C",
+    "explanation": "Imprest Cash Funds cannot be loaned or used to cash personal checks, as per Imprest Cash Fund controls."
+  },
+  {
+    "id": 39,
+    "question": "The practice of 'Bid Splitting' in procurement is defined as:",
+    "options": {
+      "A": "Negotiating lower prices with multiple vendors simultaneously.",
+      "B": "Separating a single purchase or service into smaller work orders to evade competitive procurement thresholds.",
+      "C": "Utilizing local preference purchasing policies.",
+      "D": "Issuing a Single Source Justification for necessary proprietary equipment."
+    },
+    "answer": "B",
+    "explanation": "Bid Splitting is the violation of separating a project/purchase into smaller orders to evade competitive procurement requirements."
+  },
+  {
+    "id": 40,
+    "question": "What is the fundamental responsibility of the fund custodian for an Imprest Cash Fund?",
+    "options": {
+      "A": "Authorizing requests for expenditure above the set limit.",
+      "B": "Determining the budget allocation for the fund.",
+      "C": "Safeguarding and accounting for the fund during its existence.",
+      "D": "Reconciling the fund with the bank statement monthly."
+    },
+    "answer": "C",
+    "explanation": "The fund custodian's role is to safeguard and account for the fund during its existence."
+  },
+  {
+    "id": 41,
+    "question": "For a new Imprest Cash Fund to be established or an existing fund to be changed, whose signature, alongside the fund's custodian, is typically required as the Higher Administrative Authority (HAA)?",
+    "options": {
+      "A": "The District Education Officer (DEO).",
+      "B": "The Unit Financial Representative and an HAA (often the Director).",
+      "C": "The Auditor-General.",
+      "D": "The Head of the Parent Teacher Association (PTA)."
+    },
+    "answer": "B",
+    "explanation": "The Imprest Cash Fund Request/Change Agreement must be signed by the custodian and approved by a Unit Financial Representative and a Higher Administrative Authority."
+  },
+  {
+    "id": 42,
+    "question": "The PFM Act is designed to strengthen public financial management systems through which of the following mechanisms? I. Improved quality and credibility of financial reporting. II. Enhanced accountability, transparency, and governance frameworks. III. Superior financial information accessibility for decision-making. IV. Elimination of external audit requirements for internally generated funds.",
+    "options": {
+      "A": "I, II, and IV only",
+      "B": "I, II, and III only",
+      "C": "II, III, and IV only",
+      "D": "I only"
+    },
+    "answer": "B",
+    "explanation": "The PFM Act is designed to achieve I, II, and III. It does not eliminate external audit requirements (IV is false)."
+  },
+  {
+    "id": 43,
+    "question": "Which entity is statutorily mandated to ensure public expenditure compliance with established financial regulatory frameworks in Ghana?",
+    "options": {
+      "A": "The Minister of Finance",
+      "B": "The Controller and Accountant-General",
+      "C": "The Bank of Ghana",
+      "D": "The Auditor-General"
+    },
+    "answer": "B",
+    "explanation": "The Controller and Accountant-General is mandated to ensure public expenditure compliance with established regulatory frameworks."
+  },
+  {
+    "id": 44,
+    "question": "An AD II must recognize that, under procurement ethics, accepting something of value from a vendor (such as a gift, gratuity, or 'kickback') that is not part of the official offer is:",
+    "options": {
+      "A": "Permitted if the value is minimal.",
+      "B": "Permitted only if the school benefits directly.",
+      "C": "Strictly prohibited.",
+      "D": "Subject to approval by the School Management Committee."
+    },
+    "answer": "C",
+    "explanation": "Public officers must not accept unauthorized 'kickbacks,' gifts, or gratuities from vendors."
+  },
+  {
+    "id": 45,
+    "question": "Imprest Cash Funds are typically set to expire annually on which date, requiring renewal if there is a continuing need?",
+    "options": {
+      "A": "January 1st",
+      "B": "March 31st",
+      "C": "June 30th",
+      "D": "December 31st"
+    },
+    "answer": "C",
+    "explanation": "Imprest Cash Funds are typically set to expire on June 30th annually."
+  },
+  {
+    "id": 46,
+    "question": "What type of Imprest Cash Fund is established for the sole purpose of making change for customer sales?",
+    "options": {
+      "A": "Petty Cash Fund",
+      "B": "Contingency Fund",
+      "C": "Change Fund",
+      "D": "Operational Float"
+    },
+    "answer": "C",
+    "explanation": "Change Funds are established for the sole purpose of making change for customer sales."
+  },
+  {
+    "id": 47,
+    "question": "The AD II must advise against the use of multiple low-dollar Purchase Orders for smaller sections of a total requirement because this violates the policy against:",
+    "options": {
+      "A": "Over-expenditure.",
+      "B": "Local preference purchasing.",
+      "C": "Bid Splitting.",
+      "D": "Non-budgetary allocation."
+    },
+    "answer": "C",
+    "explanation": "This practice is defined as Bid Splitting, which is a violation of competitive procurement requirements."
+  },
+  {
+    "id": 48,
+    "question": "A core operational advantage of implementing IPSAS accrual accounting standards, as mandated by the PFM Act 921, is:",
+    "options": {
+      "A": "Reduced complexity in budgeting procedures.",
+      "B": "Standardization of financial operations harmonization across public sector entities.",
+      "C": "Increased flexibility in the use of the Consolidated Fund.",
+      "D": "Elimination of parliamentary scrutiny over expenditure."
+    },
+    "answer": "B",
+    "explanation": "A major advantage of IPSAS is the standardization of financial operations harmonization across public sector entities."
+  },
+  {
+    "id": 49,
+    "question": "Public funds managed via GIFMIS platform, as enjoined by the PFM Act and its regulations, include:",
+    "options": {
+      "A": "The Consolidated Fund, internally generated funds, statutory funds, and donor funds.",
+      "B": "Only donor funds and the Consolidated Fund.",
+      "C": "Only internally generated funds (IGF) and statutory funds.",
+      "D": "Only the budgets allocated directly by the MoE."
+    },
+    "answer": "A",
+    "explanation": "GIFMIS must be used to manage all public funds, including the Consolidated Fund, internally generated funds, statutory funds, and donor funds."
+  },
+  {
+    "id": 50,
+    "question": "Under the GES Collective Agreement, if an employee joins a spouse on an approved posting overseas, leave without pay for a period of up to one (1) year requires approval from which authority?",
+    "options": {
+      "A": "The immediate Head of Institution",
+      "B": "The Regional Director",
+      "C": "The Director-General",
+      "D": "The Minister of Education"
+    },
+    "answer": "C",
+    "explanation": "Leave without pay for up to one year for this purpose requires the approval of the Director-General."
+  },
+  {
+    "id": 51,
+    "question": "The purpose of progressive employee disciplinary action within the GES is primarily to:",
+    "options": {
+      "A": "Terminate employment immediately upon discovery of misconduct.",
+      "B": "Document staff failures for potential legal action.",
+      "C": "Modify or correct unacceptable employee behavior.",
+      "D": "Reduce the overall number of staff through sanctions."
+    },
+    "answer": "C",
+    "explanation": "The primary purpose of disciplinary action is to modify or correct unacceptable employee behavior."
+  },
+  {
+    "id": 52,
+    "question": "Which of the following is typically NOT considered a ground for disciplinary action under the Conditions of Service?",
+    "options": {
+      "A": "Professional incompetence or failure to maintain an acceptable quality of job performance.",
+      "B": "Refusal to perform duties properly assigned (insubordination).",
+      "C": "Habitual tardiness or failure to observe assigned work hours.",
+      "D": "Reporting for duty promptly on the day instructed to do so."
+    },
+    "answer": "D",
+    "explanation": "Reporting for duty promptly is a requirement of service, whereas A, B, and C are forms of misconduct."
+  },
+  {
+    "id": 53,
+    "question": "The general progression of disciplinary action typically rises through which sequence of steps?",
+    "options": {
+      "A": "Written Reprimand, Termination, Verbal Warning.",
+      "B": "Verbal Warning, Written Reprimand, Disciplinary Probation, Termination.",
+      "C": "Suspension, Hearing, Termination.",
+      "D": "Investigation, Termination, Appeal."
+    },
+    "answer": "B",
+    "explanation": "Progressive discipline generally rises through Verbal Warning, Written Reprimand, Disciplinary Probation, and Termination."
+  },
+  {
+    "id": 54,
+    "question": "The GES Collective Agreement states that maternity leave entitlement shall be:",
+    "options": {
+      "A": "Part of the employee’s annual leave entitlement.",
+      "B": "Additional to annual leave entitlement or leave earned in the leave year.",
+      "C": "Dependent on the duration of service since the last promotion.",
+      "D": "Limited to employees with fewer than two children."
+    },
+    "answer": "B",
+    "explanation": "Maternity leave shall be additional to annual leave entitlement or leave earned in the leave year."
+  },
+  {
+    "id": 55,
+    "question": "According to procedural fairness in disciplinary matters, what key step must follow the initial identification of an issue before any formal sanction is decided?",
+    "options": {
+      "A": "Immediate suspension without pay.",
+      "B": "Carrying out a thorough investigation.",
+      "C": "Submission of a letter of resignation.",
+      "D": "Transferring the employee to another unit."
+    },
+    "answer": "B",
+    "explanation": "A fair procedure requires carrying out a thorough investigation (Step 3) before moving to a formal hearing (Step 4) or deciding an outcome (Step 5)."
+  },
+  {
+    "id": 56,
+    "question": "Which of the following represents an act of misconduct that an AD II must address through the disciplinary procedure?",
+    "options": {
+      "A": "Excessive use of leave or unauthorized leave.",
+      "B": "Participation in approved union activities.",
+      "C": "Seeking approval for higher education.",
+      "D": "Reporting observed misconduct to management."
+    },
+    "answer": "A",
+    "explanation": "Excessive use of leave or unauthorized leave is explicitly listed as a ground for discipline."
+  },
+  {
+    "id": 57,
+    "question": "An AD II must ensure that new teacher appointments for a school term are made effective from:",
+    "options": {
+      "A": "The date the teacher physically reports for duty.",
+      "B": "The last day of the preceding month.",
+      "C": "The first day of the month in which the school term begins.",
+      "D": "The date the posting letter is received by the institution."
+    },
+    "answer": "C",
+    "explanation": "Appointments for a new school term shall be made effective from the first day of the month in which the school term begins."
+  },
+  {
+    "id": 58,
+    "question": "The duration of the GES Collective Agreement is typically set for a period of:",
+    "options": {
+      "A": "One year.",
+      "B": "Three years.",
+      "C": "Five years.",
+      "D": "Indefinite duration until rescinded."
+    },
+    "answer": "B",
+    "explanation": "The duration of the Collective Agreement is typically set for three (3) years."
+  },
+  {
+    "id": 59,
+    "question": "Which action constitutes a violation of institutional policy by an employee?",
+    "options": {
+      "A": "Cooperating fully with administrative investigations.",
+      "B": "Failure to notify appropriate personnel when absent from work for up to two workdays.",
+      "C": "Utilizing a reasonable amount of annual leave.",
+      "D": "Adhering to the dress code policy."
+    },
+    "answer": "B",
+    "explanation": "Failure to report to work and not notifying appropriate personnel for up to two workdays is listed as misconduct (gross neglect of work)."
+  },
+  {
+    "id": 60,
+    "question": "An employee who is absent without reasonable cause on the day they have been instructed to report for a new term is subject to which condition regarding pay?",
+    "options": {
+      "A": "They receive half pay for that month.",
+      "B": "They receive full pay for the month only if they report on time.",
+      "C": "They forfeit all annual leave.",
+      "D": "They are immediately subjected to termination proceedings."
+    },
+    "answer": "B",
+    "explanation": "An employee shall receive full pay for the month only if they report for duty on the day instructed to do so."
+  },
+  {
+    "id": 61,
+    "question": "The Education Regulatory Bodies Act, 2020 (Act 1023) primarily establishes regulatory oversight for pre-tertiary education only, excluding tertiary education institutions.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Act 1023 explicitly established the Ghana Tertiary Education Commission to regulate tertiary education in all its forms, making the statement false."
+  },
+  {
+    "id": 62,
+    "question": "The Assistant Director II is responsible for the financial appropriateness of rational pre-tertiary education, according to the functions of the GES.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "One function of the Service is to monitor the financial appropriateness for rational pre-tertiary education."
+  },
+  {
+    "id": 63,
+    "question": "Promotion to the rank of Assistant Director II (AD II) is exclusively decided by an interview panel, and no written aptitude test is administered.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Promotion to AD II involves a written aptitude test, as confirmed by the official promotion test results release."
+  },
+  {
+    "id": 64,
+    "question": "The PSC recommends that the list of all qualified and recommended candidates for promotion should be submitted directly by the candidate to the Commission, bypassing their respective Ministry, Department, or Agency (MDA).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Candidates are explicitly NOT allowed to submit forms directly to the Public Services Commission (PSC) without passing them through the Heads of their respective MDAs."
+  },
+  {
+    "id": 65,
+    "question": "The National Pre-tertiary Education Curriculum Framework emphasizes an aggressive shift towards a strong summative assessment philosophy over formative assessment.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The framework mandates a shift from an emphasis primarily on summative assessment to formative assessment."
+  },
+  {
+    "id": 66,
+    "question": "One objective of the 1987 Education Reform was to shorten the pre-university education structure from 17 years to 12 years.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Shortening the pre-university education structure was a core objective of the 1987 Education Reform."
+  },
+  {
+    "id": 67,
+    "question": "The current GES strategic agenda includes promoting Art and Cultural Education but places no emphasis on Science, Technology, Engineering, and Mathematics (STEM) until the tertiary level.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "GES is committed to promoting STEM education from Primary Schools to the Senior High School levels."
+  },
+  {
+    "id": 68,
+    "question": "The AD II must incorporate the strategic requirement for Continuing Professional Development (CPD) of teachers as an embedded practice in management plans, as stipulated by the National Curriculum Framework.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The curriculum framework dictates that CPD must be viewed as a critical and necessary embedded practice in teacher-centered schools."
+  },
+  {
+    "id": 69,
+    "question": "Imprest Cash Funds may be utilized to reimburse employees for official travel and hosting expenses, provided proper receipts are attached.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Imprest Cash Funds cannot be used to reimburse employees for travel and hosting expenses."
+  },
+  {
+    "id": 70,
+    "question": "The Public Financial Management Act (Act 921) permits covered entities to use alternative financial management software instead of GIFMIS, provided those systems are internationally recognized.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Covered entities are strictly enjoined by the PFM Act and its Regulation to use the GIFMIS platform for managing public funds."
+  },
+  {
+    "id": 71,
+    "question": "Bid Splitting, the separation of purchases to avoid competitive thresholds, is considered a significant administrative malpractice within the public sector procurement framework.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Bid Splitting is a recognized violation of policy intended to evade competitive procurement requirements."
+  },
+  {
+    "id": 72,
+    "question": "The implementation of International Public Sector Accounting Standards (IPSAS) aims to enhance the quality and credibility of financial reporting documentation.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "IPSAS adoption, authorized by the PFM Act 921, is designed to enhance the quality and credibility of financial reporting."
+  },
+  {
+    "id": 73,
+    "question": "The general progression of disciplinary action allows for the immediate imposition of termination, bypassing verbal warnings and written reprimands, at the discretion of the AD II.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While levels may be omitted, the process is progressive, and due process steps (investigation/hearing) must be followed before termination."
+  },
+  {
+    "id": 74,
+    "question": "An employee returning from maternity leave loses their accumulated annual leave entitlement for that leave year.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Maternity leave is explicitly stated as being additional to annual leave entitlement."
+  },
+  {
+    "id": 75,
+    "question": "Professional incompetence or failure to maintain an acceptable quality of job performance is explicitly listed as misconduct for which an employee may be disciplined.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Professional incompetence or failure to maintain an acceptable quality of job performance is listed as a ground for disciplinary action."
+  }
+]
