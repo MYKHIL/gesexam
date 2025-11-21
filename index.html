@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GES Promotion Exam Quiz - Management System</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8K659BSH3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-T8K659BSH3');
+    </script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
@@ -106,6 +117,9 @@
         <header class="text-center mb-8">
             <h1 class="text-3xl font-extrabold text-blue-800 tracking-tight">GES Promotion Exam Practice</h1>
             <p id="quiz-title" class="text-gray-600 mt-2">Immediate Feedback Mode</p>
+            <div class="mt-3 inline-block bg-gradient-to-r from-green-100 to-emerald-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold shadow-sm border border-green-300">
+                <span id="online-users-icon">🟢</span> <span id="online-users-count">1</span> user(s) online
+            </div>
         </header>
 
         <nav class="bg-white p-2 mb-6 rounded-xl shadow-lg flex justify-center space-x-2 sm:space-x-4">
@@ -1290,6 +1304,74 @@
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full" style="width: ${progressPercentage}%"></div></div>`;
         }
+
+        // --- Online Users Tracking ---
+        
+        const ONLINE_USERS_KEY = 'gesAdiiOnlineUsers';
+        const USER_SESSION_ID = 'gesAdiiSession_' + Math.random().toString(36).substr(2, 9);
+        const SESSION_TIMEOUT = 5 * 60 * 1000; // 5 minutes of inactivity
+        
+        function updateOnlineUsers() {
+            try {
+                // Get all stored sessions
+                const onlineUsers = JSON.parse(localStorage.getItem(ONLINE_USERS_KEY) || '{}');
+                const now = Date.now();
+                
+                // Remove expired sessions
+                for (const sessionId in onlineUsers) {
+                    if (now - onlineUsers[sessionId] > SESSION_TIMEOUT) {
+                        delete onlineUsers[sessionId];
+                    }
+                }
+                
+                // Add/update current session
+                onlineUsers[USER_SESSION_ID] = now;
+                
+                // Save updated sessions
+                localStorage.setItem(ONLINE_USERS_KEY, JSON.stringify(onlineUsers));
+                
+                // Update UI with user count
+                const count = Object.keys(onlineUsers).length;
+                const countElement = document.getElementById('online-users-count');
+                if (countElement) {
+                    countElement.textContent = count;
+                    
+                    // Change color based on user count
+                    const iconElement = document.getElementById('online-users-icon');
+                    if (iconElement) {
+                        if (count === 1) {
+                            iconElement.textContent = '🟢';
+                        } else if (count <= 5) {
+                            iconElement.textContent = '🟡';
+                        } else {
+                            iconElement.textContent = '🔴';
+                        }
+                    }
+                }
+            } catch (e) {
+                console.error('Error updating online users:', e);
+            }
+        }
+        
+        // Update online users immediately and every 30 seconds
+        updateOnlineUsers();
+        setInterval(updateOnlineUsers, 30000);
+        
+        // Update on user activity (mouse, keyboard, touch)
+        document.addEventListener('mousemove', updateOnlineUsers);
+        document.addEventListener('keypress', updateOnlineUsers);
+        document.addEventListener('touchstart', updateOnlineUsers);
+        
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', function() {
+            try {
+                const onlineUsers = JSON.parse(localStorage.getItem(ONLINE_USERS_KEY) || '{}');
+                delete onlineUsers[USER_SESSION_ID];
+                localStorage.setItem(ONLINE_USERS_KEY, JSON.stringify(onlineUsers));
+            } catch (e) {
+                console.error('Error cleaning up session:', e);
+            }
+        });
 
         // Initialize the quiz on load
         window.onload = function() {
