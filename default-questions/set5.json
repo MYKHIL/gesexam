@@ -114,7 +114,7 @@
       "A": "Assistant Director II or I.",
       "B": "Deputy Director or Director II.",
       "C": "Director I or above.",
-      "D": "Chief Superintendent."
+      "D": "Principal Superintendent."
     },
     "answer": "C",
     "explanation": "RDEs are very senior management positions, typically held by officers ranked Director I or higher."
@@ -751,7 +751,7 @@
   },
   {
     "id": 64,
-    "question": "The **Regional Director of Education (RDE)** is the appointing and disciplinary authority for all Chief Superintendents and below in their region.",
+    "question": "The **Regional Director of Education (RDE)** is the appointing and disciplinary authority for all Principal Superintendents and below in their region.",
     "options": {
       "A": "True",
       "B": "False"

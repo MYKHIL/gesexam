@@ -565,15 +565,15 @@
   },
   {
     "id": 48,
-    "question": "The rank of **Chief Superintendent (CS)** is often an administrative and supervisory position at which level?",
+    "question": "The **School Improvement Support Officer (SISO)**  is often an administrative and supervisory position at which level?",
     "options": {
       "A": "GES Headquarters Chief Director.",
       "B": "District Education Office (as a Unit Head or Deputy Director).",
-      "C": "Ministerial level.",
+      "C": "Circuit level.",
       "D": "Overseas missions."
     },
     "answer": "B",
-    "explanation": "CS is a high rank often found in administrative/supervisory roles at the district or municipal level."
+    "explanation": "This is the administrative area immediately below the District/Municipal/Metropolitan Education Directorate. A district is typically subdivided into several Circuits for effective supervision. The SISO is the highest administrative officer within a specific Circuit."
   },
   {
     "id": 49,

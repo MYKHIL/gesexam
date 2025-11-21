@@ -188,7 +188,7 @@
       "C": "Assistant Director II (AD II)",
       "D": "Deputy Director (DD)"
     },
-    "answer": "B",
+    "answer": "A",
     "explanation": "The common progression for the teaching staff is: Superintendent II (Sup. II) -> Superintendent I (Sup. I) -> Senior Superintendent II (SS II) -> Senior Superintendent I (SS I) -> Principal Superintendent (PS) -> Assistant Director II (AD II) -> Assistant Director I (AD I)."  },
   {
     "id": 17,
@@ -387,12 +387,12 @@
     "question": "The GES staff rank that is typically responsible for coordinating curriculum implementation and supervision at the District Education Office is:",
     "options": {
       "A": "Senior Superintendent II.",
-      "B": "Principal Superintendent/Chief Superintendent.",
+      "B": "Assistant Director II (AD II).",
       "C": "Headmaster of a Basic School.",
       "D": "Director-General."
     },
     "answer": "B",
-    "explanation": "Supervisory and coordinating roles at the District level are often held by officers at the Principal or Chief Superintendent ranks."
+    "explanation": "The GES staff rank that is typically responsible for coordinating curriculum implementation and supervision at the District Education Office is the Assistant Director II or Assistant Director I rank, specifically serving as the Assistant Director, Supervision."
   },
   {
     "id": 34,

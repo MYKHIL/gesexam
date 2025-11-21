@@ -174,7 +174,7 @@
       "A": "Director",
       "B": "Deputy Director",
       "C": "Assistant Director I or II",
-      "D": "Chief Superintendent"
+      "D": "Principal Superintendent"
     },
     "answer": "C",
     "explanation": "Heads of Primary and JHS schools are typically Assistant Directors (I or II) depending on the size and complexitiy of the school."
@@ -824,8 +824,8 @@
       "C": "Chief Superintendent",
       "D": "Deputy Director"
     },
-    "answer": "C",
-    "explanation": "Chief Superintendent (CS) is typically the highest rank attainable through the teaching track, recognizing pedagogical excellence and subject leadership."
+    "answer": "B",
+    "explanation": "The highest professional teaching rank for an officer who remains primarily in the classroom but demonstrates excellence and leadership is the Principal Superintendent (PS) rank."
   },
   {
     "id": 70,
