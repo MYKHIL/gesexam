@@ -183,6 +183,7 @@
         const SETTINGS_KEY = 'gesAdiiQuizSettings';
         const SESSION_HISTORY_KEY = 'gesAdiiSessionHistory';
         
+        let renderResultsCalled = false;
         let allQuestions = []; // Master list of all questions (static or uploaded)
         let sessionQuestions = []; // Subset of questions for the current session (based on settings)
         let currentView = 'home';
@@ -1313,7 +1314,7 @@
                             <button onclick="clearLeaderboard()" class="px-4 py-2 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition flex-1 sm:flex-none">
                                 Clear All
                             </button>
-                            <button onclick="renderResults()" class="px-4 py-2 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700 transition flex-1 sm:flex-none">
+                            <button onclick="handleBackToHome()" class="px-4 py-2 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700 transition flex-1 sm:flex-none">
                                 Back to Home
                             </button>
                         </div>
@@ -1477,8 +1478,17 @@
                 </div>
             `;
         }
+
+        function handleBackToHome() {
+            if (!renderResultsCalled) {
+                setView('home');
+            } else {
+                renderResults();
+            }
+        }
         
         function renderResults() {
+              renderResultsCalled = true;
             window.speechSynthesis.cancel();
             const result = calculateScore();
             const percentage = ((result.correct / result.total) * 100).toFixed(1);
