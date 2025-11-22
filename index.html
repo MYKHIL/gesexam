@@ -498,14 +498,26 @@
             };
 
             synth.speak(utterance);
-
-            synth.speak(utterance);
         }
         
         function toggleTts() {
             quizSettings.ttsEnabled = !quizSettings.ttsEnabled;
             if (!quizSettings.ttsEnabled) {
                 window.speechSynthesis.cancel(); // Stop speech immediately
+            } else {
+                // Re-speak current content when TTS is toggled on
+                if (Object.keys(userAnswers).length > 0 && sessionQuestions.length > 0) {
+                    const q = sessionQuestions[currentQuestionIndex];
+                    if (q && !feedbackShown) {
+                        let textToSpeak = `Question ${currentQuestionIndex + 1}. ${q.question}. Options: `;
+                        textToSpeak += Object.entries(q.options).map(([key, value]) => `Option ${key}: ${value}.`).join(' ');
+                        speak(textToSpeak);
+                    } else if (q && feedbackShown) {
+                        const userAnswer = userAnswers[q.id];
+                        let feedbackText = `${userAnswer === q.answer ? 'Correct' : 'Incorrect'}. ${q.explanation} so the correct answer is ${q.answer}: ${q.options[q.answer]}.`;
+                        speak(feedbackText);
+                    }
+                }
             }
             saveSettings();
             updateTtsButtons();
@@ -593,6 +605,9 @@
                         </button>
                         <button onclick="startSession()" class="w-full sm:w-auto px-10 py-4 bg-green-600 text-white font-extrabold text-xl rounded-xl hover:bg-green-700 transition duration-150 shadow-lg transform hover:scale-105">
                             Start Session (${quizSettings.numQuestions} Qs)
+                        </button>
+                        <button onclick="setView('leaderboard')" class="w-full sm:w-auto px-6 py-3 bg-indigo-600 text-white font-bold rounded-xl hover:bg-indigo-700 transition duration-150 shadow-md">
+                            View Leaderboard
                         </button>
                     </div>
                     
@@ -1020,9 +1035,11 @@
             } else {
                 feedbackArea.classList.add('hidden');
                 feedbackArea.innerHTML = '';
-                let textToSpeak = `Question ${currentQuestionIndex + 1}. ${q.question}. Options: `;
-                textToSpeak += Object.entries(q.options).map(([key, value]) => `Option ${key}: ${value}.`).join(' ');
-                speak(textToSpeak);
+                if (quizSettings.ttsEnabled && userAnswer === null) {
+                    let textToSpeak = `Question ${currentQuestionIndex + 1}. ${q.question}. Options: `;
+                    textToSpeak += Object.entries(q.options).map(([key, value]) => `Option ${key}: ${value}.`).join(' ');
+                    speak(textToSpeak);
+                }
             }
         }
 
@@ -1238,6 +1255,22 @@
             }
         }
 
+        function clearLeaderboard() {
+            const confirmed = confirm("Are you sure you want to clear all session history? This action cannot be undone.");
+            if (confirmed) {
+                sessionHistory = [];
+                try {
+                    localStorage.removeItem(SESSION_HISTORY_KEY);
+                    console.log("Session history cleared");
+                    showMessage("Leaderboard has been cleared.", 'info');
+                    renderLeaderboardView(); // Refresh the leaderboard view
+                } catch (e) {
+                    console.error("Error clearing session history:", e);
+                    showMessage("Error clearing leaderboard data.", 'error');
+                }
+            }
+        }
+
         function renderLeaderboardView() {
             const historyTableBody = sessionHistory.length === 0 ? 
                 '<tr><td colspan="5" class="px-6 py-4 text-center text-gray-500">No sessions yet. Complete a quiz to start tracking history.</td></tr>' :
@@ -1246,12 +1279,12 @@
                     const formattedDate = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
                     const formattedTime = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
                     return `
-                        <tr class="border-b hover:bg-gray-100 transition">
-                            <td class="px-6 py-4 font-semibold text-gray-700">#${sessionHistory.length - index}</td>
-                            <td class="px-6 py-4 text-gray-600">${session.totalQuestions}</td>
-                            <td class="px-6 py-4 text-green-600 font-semibold">${session.correctAnswers}</td>
-                            <td class="px-6 py-4 text-blue-600 font-bold text-lg">${session.percentage}%</td>
-                            <td class="px-6 py-4 text-gray-500 text-sm">${formattedDate} at ${formattedTime}</td>
+                        <tr class="border-b hover:bg-gray-100 transition text-sm sm:text-base">
+                            <td class="px-2 sm:px-4 py-2 sm:py-4 font-semibold text-gray-700">#${sessionHistory.length - index}</td>
+                            <td class="px-2 sm:px-4 py-2 sm:py-4 text-gray-600 hidden sm:table-cell">${session.totalQuestions}</td>
+                            <td class="px-2 sm:px-4 py-2 sm:py-4 text-green-600 font-semibold">${session.correctAnswers}</td>
+                            <td class="px-2 sm:px-4 py-2 sm:py-4 text-blue-600 font-bold">${session.percentage}%</td>
+                            <td class="px-2 sm:px-4 py-2 sm:py-4 text-gray-500 text-xs sm:text-sm hidden md:table-cell">${formattedDate} at ${formattedTime}</td>
                         </tr>
                     `;
                 }).join('');
@@ -1264,49 +1297,68 @@
                 Math.min(...sessionHistory.map(s => s.percentage)) : 0;
 
             contentArea.innerHTML = `
-                <div class="p-8 bg-white rounded-xl shadow-lg">
-                    <div class="flex justify-between items-center mb-8">
-                        <h2 class="text-3xl font-bold text-gray-800">Session History</h2>
-                        <button onclick="setView('home')" class="px-4 py-2 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700 transition">Back to Home</button>
-                    </div>
-
-                    <div class="grid grid-cols-3 gap-4 mb-8">
-                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg">
-                            <div class="text-2xl font-bold text-blue-600">${sessionHistory.length}</div>
-                            <div class="text-sm text-gray-600">Total Sessions</div>
-                        </div>
-                        <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-lg">
-                            <div class="text-2xl font-bold text-green-600">${avgScore}%</div>
-                            <div class="text-sm text-gray-600">Average Score</div>
-                        </div>
-                        <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-lg">
-                            <div class="text-2xl font-bold text-purple-600">${bestScore}%</div>
-                            <div class="text-sm text-gray-600">Best Score</div>
+                <div class="p-4 sm:p-6 lg:p-8 bg-white rounded-xl shadow-lg">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+                        <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Session History</h2>
+                        <div class="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
+                            <button onclick="clearLeaderboard()" class="px-4 py-2 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition flex-1 sm:flex-none">
+                                Clear All
+                            </button>
+                            <button onclick="setView('home')" class="px-4 py-2 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700 transition flex-1 sm:flex-none">
+                                Back to Home
+                            </button>
                         </div>
                     </div>
 
-                    <div class="mb-8">
-                        <table class="w-full border-collapse border border-gray-300 rounded-lg overflow-hidden">
-                            <thead class="bg-blue-600 text-white">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mb-8">
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-3 sm:p-4 rounded-lg">
+                            <div class="text-xl sm:text-2xl font-bold text-blue-600">${sessionHistory.length}</div>
+                            <div class="text-xs sm:text-sm text-gray-600">Total Sessions</div>
+                        </div>
+                        <div class="bg-green-50 border-l-4 border-green-500 p-3 sm:p-4 rounded-lg">
+                            <div class="text-xl sm:text-2xl font-bold text-green-600">${avgScore}%</div>
+                            <div class="text-xs sm:text-sm text-gray-600">Average Score</div>
+                        </div>
+                        <div class="bg-purple-50 border-l-4 border-purple-500 p-3 sm:p-4 rounded-lg">
+                            <div class="text-xl sm:text-2xl font-bold text-purple-600">${bestScore}%</div>
+                            <div class="text-xs sm:text-sm text-gray-600">Best Score</div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8 overflow-x-auto">
+                        ${sessionHistory.length === 0 ? 
+                            `<div class="text-center py-8 text-gray-500">No sessions recorded yet. Complete a quiz to get started!</div>` :
+                            `<table class="w-full border-collapse border border-gray-300 rounded-lg">
+                            <thead class="bg-blue-600 text-white text-sm">
                                 <tr>
-                                    <th class="px-6 py-3 text-left">Session</th>
-                                    <th class="px-6 py-3 text-left">Questions</th>
-                                    <th class="px-6 py-3 text-left">Correct</th>
-                                    <th class="px-6 py-3 text-left">Score</th>
-                                    <th class="px-6 py-3 text-left">Date & Time</th>
+                                    <th class="px-2 sm:px-4 py-2 sm:py-3 text-left">Session</th>
+                                    <th class="px-2 sm:px-4 py-2 sm:py-3 text-left hidden sm:table-cell">Questions</th>
+                                    <th class="px-2 sm:px-4 py-2 sm:py-3 text-left">Correct</th>
+                                    <th class="px-2 sm:px-4 py-2 sm:py-3 text-left">Score</th>
+                                    <th class="px-2 sm:px-4 py-2 sm:py-3 text-left hidden md:table-cell">Date & Time</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 ${historyTableBody}
                             </tbody>
-                        </table>
+                        </table>`
+                        }
                     </div>
 
                     ${sessionHistory.length > 0 ? `
-                        <button onclick="setView('graph')" class="w-full px-6 py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 transition">
-                            View Progress Graph
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <button onclick="setView('graph')" class="px-6 py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 transition">
+                                View Progress Graph
+                            </button>
+                            <button onclick="setView('home')" class="px-6 py-3 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700 transition">
+                                Back to Home
+                            </button>
+                        </div>
+                    ` : `
+                        <button onclick="setView('home')" class="w-full px-6 py-3 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700 transition">
+                            Back to Home
                         </button>
-                    ` : ''}
+                    `}
                 </div>
             `;
         }
@@ -1473,8 +1525,10 @@
                     <div id="progress-bar-review" class="mt-8"></div>
                 </div>`;
             
-            // Save session to history
-            saveSessionToHistory(result.correct, result.total);
+            // Save session to history only if quiz was fully completed
+            if (result.total > 0 && Object.keys(userAnswers).length === result.total) {
+                saveSessionToHistory(result.correct, result.total);
+            }
 
             // Speak the appraisal
             speak(appraisal);
