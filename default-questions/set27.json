@@ -505,15 +505,15 @@
   },
   {
     "id": 43,
-    "question": "What school culture is being shared by the headteacher?",
+    "question": "Which of the following best describes *school culture*?",
     "options": {
-      "A": "Reflective practice",
-      "B": "Innovative practice",
-      "C": "Teacher-centered practice",
-      "D": "Student-centered practice"
+      "A": "The formal rules and regulations written in the school's handbook",
+      "B": "The shared beliefs, values, attitudes, and behaviours that shape how people interact within the school",
+      "C": "The academic performance of students in core subjects",
+      "D": "The physical appearance and infrastructure of the school"
     },
-    "answer": "A",
-    "explanation": "The emphasis on examining beliefs, aligning practice, and self-evaluation defines a reflective practice culture."
+    "answer": "B",
+    "explanation": "School culture refers to the shared norms, values, traditions, and behaviours that influence how teachers, students, and administrators relate and work together. It is more about ‘how things are done’ in the school community than about rules, buildings, or academic outcomes."
   },
   {
     "id": 44,

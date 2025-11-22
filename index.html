@@ -518,7 +518,7 @@
             }
             saveSettings();
             updateTtsButtons();
-            showMessage(`TTS is now ${quizSettings.ttsEnabled ? 'Enabled' : 'Disabled'}.`, 'info');
+            showMessage(`Reader is now ${quizSettings.ttsEnabled ? 'Enabled' : 'Disabled'}.`, 'info');
         }
         
         function updateTtsButtons() {
@@ -529,11 +529,11 @@
                     if (quizSettings.ttsEnabled) {
                         buttonEl.classList.remove('bg-gray-200', 'text-gray-700', 'hover:bg-gray-300');
                         buttonEl.classList.add('bg-green-500', 'text-white', 'hover:bg-green-600');
-                        buttonEl.innerHTML = `<svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.47-9.544a8 8 0 010 12.728m-9.544-2.47a5 5 0 017.072 0M6 18h2V6H6v12zm-3 0h2V6H3v12zm18 0h2V6h-2v12z"></path></svg>TTS ON`;
+                        buttonEl.innerHTML = `<svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.47-9.544a8 8 0 010 12.728m-9.544-2.47a5 5 0 017.072 0M6 18h2V6H6v12zm-3 0h2V6H3v12zm18 0h2V6h-2v12z"></path></svg>Reader ON`;
                     } else {
                         buttonEl.classList.remove('bg-green-500', 'text-white', 'hover:bg-green-600');
                         buttonEl.classList.add('bg-gray-200', 'text-gray-700', 'hover:bg-gray-300');
-                        buttonEl.innerHTML = `<svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.47-9.544a8 8 0 010 12.728m-9.544-2.47a5 5 0 017.072 0M6 18h2V6H6v12zm-3 0h2V6H3v12zm18 0h2V6h-2v12zM7 9l4-4 4 4m-4 4v7"></path></svg>TTS OFF`;
+                        buttonEl.innerHTML = `<svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.47-9.544a8 8 0 010 12.728m-9.544-2.47a5 5 0 017.072 0M6 18h2V6H6v12zm-3 0h2V6H3v12zm18 0h2V6h-2v12zM7 9l4-4 4 4m-4 4v7"></path></svg>Reader OFF`;
                     }
                 }
             });
@@ -718,7 +718,7 @@
                     <div class="border-t pt-4 space-y-4">
                         <h3 class="text-xl font-semibold text-gray-800">Text-to-Speech (TTS)</h3>
                         <div class="flex items-center justify-between">
-                            <label for="ttsEnabled" class="text-lg font-semibold text-gray-700">Enable TTS</label>
+                            <label for="ttsEnabled" class="text-lg font-semibold text-gray-700">Enable Reader</label>
                             <input type="checkbox" id="ttsEnabled" ${quizSettings.ttsEnabled ? 'checked' : ''} onchange="updateSettingsAuto()" class="w-5 h-5 text-blue-600 rounded">
                         </div>
 
@@ -1313,7 +1313,7 @@
                             <button onclick="clearLeaderboard()" class="px-4 py-2 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition flex-1 sm:flex-none">
                                 Clear All
                             </button>
-                            <button onclick="setView('home')" class="px-4 py-2 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700 transition flex-1 sm:flex-none">
+                            <button onclick="goBack() class="px-4 py-2 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700 transition flex-1 sm:flex-none">
                                 Back to Home
                             </button>
                         </div>
@@ -1359,12 +1359,12 @@
                             <button onclick="setView('graph')" class="px-6 py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 transition">
                                 View Progress Graph
                             </button>
-                            <button onclick="setView('home')" class="px-6 py-3 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700 transition">
+                            <button onclick="goBack()" class="px-6 py-3 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700 transition">
                                 Back to Home
                             </button>
                         </div>
                     ` : `
-                        <button onclick="setView('home')" class="w-full px-6 py-3 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700 transition">
+                        <button onclick="goBack()" class="w-full px-6 py-3 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700 transition">
                             Back to Home
                         </button>
                     `}
@@ -1478,7 +1478,7 @@
                         <button onclick="setView('leaderboard')" class="px-6 py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 transition">
                             Back to Leaderboard
                         </button>
-                        <button onclick="setView('home')" class="px-6 py-3 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700 transition">
+                        <button onclick="goBack()" class="px-6 py-3 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700 transition">
                             Back to Home
                         </button>
                     </div>

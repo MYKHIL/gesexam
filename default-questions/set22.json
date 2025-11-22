@@ -486,8 +486,8 @@
       "A": "True",
       "B": "False"
     },
-    "answer": "B",
-    "explanation": "False. Certain public office holders are required to declare their assets and liabilities to the Auditor-General, but the timeframe is typically every four years or upon assuming/leaving office."
+    "answer": "A",
+    "explanation": "Under Article 286 of Ghana’s 1992 Constitution, a public officer must declare their assets and liabilities to the Auditor-General at the end of every four years. Also, the Public Office Holders (Declaration of Assets and Disqualification) Act, 1998 (Act 550) requires the declaration **at the end of every four years.**"
   },
   {
     "id": 50,
