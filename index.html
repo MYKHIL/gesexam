@@ -1480,10 +1480,12 @@
         }
 
         function handleBackToHome() {
-            if (!renderResultsCalled) {
-                setView('home');
-            } else {
+            // If we came from results page, go back to results
+            // Otherwise, go to home
+            if (renderResultsCalled) {
                 renderResults();
+            } else {
+                setView('home');
             }
         }
         
@@ -1573,6 +1575,7 @@
             sessionQuestions = [];
             reviewMode = false;
             sessionResultsSaved = false; // Reset the save flag for new session
+            renderResultsCalled = false; // Reset the results flag for new session
             // Go back to home view to show pre-start screen
             setView('home');
         }
