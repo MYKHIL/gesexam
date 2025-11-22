@@ -186,12 +186,14 @@
         let allQuestions = []; // Master list of all questions (static or uploaded)
         let sessionQuestions = []; // Subset of questions for the current session (based on settings)
         let currentView = 'home';
+        let previousView = 'home'; // Track previous view for back navigation
         let currentQuestionIndex = 0;
         let userAnswers = {};
         let currentSelection = null;
         let feedbackShown = false;
         let reviewMode = false; // Flag to track if we're in review mode
         let sessionHistory = []; // Array to store all session scores and timestamps
+        let sessionResultsSaved = false; // Flag to prevent duplicate session saves
         
         // Updated quizSettings with new native TTS options
         let quizSettings = {
@@ -245,7 +247,7 @@
         }
 
         async function fetchJsonFilesRecursively(basePath = '.') {
-            // Optimized: Only scan the default-questions folder for set*.json files
+            // Optimized: Only scan existing files in the default-questions folder
             
             const allQuestionsLoaded = [];
             const seenHashes = new Set();
@@ -260,9 +262,25 @@
             }
             
             let filesProcessed = 0;
-            const totalFiles = filesToTry.length;
+            const existingFiles = []; // Store only confirmed existing files
 
+            // First pass: Check which files exist without loading them
             for (const filePath of filesToTry) {
+                try {
+                    const headResponse = await fetch(filePath, { method: 'HEAD' });
+                    if (headResponse.ok) {
+                        existingFiles.push(filePath);
+                    }
+                } catch (e) {
+                    // Silently skip - file doesn't exist or fetch not supported
+                }
+            }
+            
+            const totalFiles = existingFiles.length;
+            if (totalFiles === 0) return allQuestionsLoaded; // No files found, return empty
+
+            // Second pass: Load only existing files
+            for (const filePath of existingFiles) {
                 try {
                     // Append cache buster to the URL
                     const urlWithCacheBuster = `${filePath}?${cacheBuster}`;
@@ -272,9 +290,9 @@
                     // Update progress bar
                     const progressPercent = (filesProcessed / totalFiles) * 100;
                     document.getElementById('loading-progress').style.width = progressPercent + '%';
-                    document.getElementById('loading-count').textContent = `${allQuestionsLoaded.length} questions loaded | Scanning set${filesProcessed}...`;
+                    document.getElementById('loading-count').textContent = `${allQuestionsLoaded.length} questions loaded | Loading set${filesProcessed} of ${totalFiles}...`;
                     
-                    if (!response.ok) continue; // Skip if file doesn't exist
+                    if (!response.ok) continue; // Skip if file can't be read
                     
                     const data = await response.json();
                     if (!Array.isArray(data)) continue;
@@ -297,7 +315,7 @@
                         document.getElementById('loading-status').textContent = `Found ${validCount} questions in set${filesProcessed}.json`;
                     }
                 } catch (e) {
-                    // Silently skip files that don't exist or fail to parse
+                    // Silently skip files that fail to parse
                     console.debug(`Skipped ${filePath}:`, e.message);
                 }
             }
@@ -360,14 +378,15 @@
             if (savedSettings) {
                 try {
                     const loadedSettings = JSON.parse(savedSettings);
-                    // Ensure new settings have default values if they don't exist in loaded data
-                    loadedSettings.ttsEnabled = loadedSettings.ttsEnabled || false;
+                    // Preserve exact TTS enabled state from localStorage
+                    loadedSettings.ttsEnabled = loadedSettings.hasOwnProperty('ttsEnabled') ? loadedSettings.ttsEnabled : false;
                     loadedSettings.ttsVoice = loadedSettings.ttsVoice || null;
                     loadedSettings.ttsRate = loadedSettings.ttsRate || 1;
                     loadedSettings.ttsPitch = loadedSettings.ttsPitch || 1;
                     
                     loadedSettings.numQuestions = Math.min(loadedSettings.numQuestions, allQuestions.length);
                     Object.assign(quizSettings, loadedSettings);
+                    console.log("Settings loaded. TTS Enabled:", quizSettings.ttsEnabled);
                 } catch (e) {
                     console.error("Error parsing saved settings:", e);
                 }
@@ -478,17 +497,21 @@
             if (!quizSettings.ttsEnabled) {
                 window.speechSynthesis.cancel(); // Stop speech immediately
             } else {
-                // Re-speak current content when TTS is toggled on
-                if (Object.keys(userAnswers).length > 0 && sessionQuestions.length > 0) {
+                // Re-speak current content when TTS is toggled on during a session
+                if (sessionQuestions.length > 0) {
                     const q = sessionQuestions[currentQuestionIndex];
-                    if (q && !feedbackShown) {
-                        let textToSpeak = `Question ${currentQuestionIndex + 1}. ${q.question}. Options: `;
-                        textToSpeak += Object.entries(q.options).map(([key, value]) => `Option ${key}: ${value}.`).join(' ');
-                        speak(textToSpeak);
-                    } else if (q && feedbackShown) {
-                        const userAnswer = userAnswers[q.id];
-                        let feedbackText = `${userAnswer === q.answer ? 'Correct' : 'Incorrect'}. ${q.explanation} so the correct answer is ${q.answer}: ${q.options[q.answer]}.`;
-                        speak(feedbackText);
+                    if (q) {
+                        if (feedbackShown) {
+                            // If feedback is shown, speak the feedback
+                            const userAnswer = userAnswers[q.id];
+                            let feedbackText = `${userAnswer === q.answer ? 'Correct' : 'Incorrect'}. ${q.explanation} so the correct answer is ${q.answer}: ${q.options[q.answer]}.`;
+                            speak(feedbackText);
+                        } else {
+                            // If no feedback shown yet, speak the question
+                            let textToSpeak = `Question ${currentQuestionIndex + 1}. ${q.question}. Options: `;
+                            textToSpeak += Object.entries(q.options).map(([key, value]) => `Option ${key}: ${value}.`).join(' ');
+                            speak(textToSpeak);
+                        }
                     }
                 }
             }
@@ -518,7 +541,15 @@
 
         // --- View Management ---
 
+        function goBack() {
+            setView(previousView);
+        }
+
         function setView(view) {
+            // Track previous view before changing
+            if (view !== 'home' || currentView !== 'home') {
+                previousView = currentView;
+            }
             currentView = view;
             window.speechSynthesis.cancel(); // Stop speech when changing views
             
@@ -1387,7 +1418,7 @@
                 <div class="p-8 bg-white rounded-xl shadow-lg">
                     <div class="flex justify-between items-center mb-8">
                         <h2 class="text-3xl font-bold text-gray-800">Performance Progress</h2>
-                        <button onclick="setView('leaderboard')" class="px-4 py-2 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700 transition">Back to Leaderboard</button>
+                        <button onclick="goBack()" class="flex items-center px-4 py-2 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700 transition"><svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>Back</button>
                     </div>
 
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
@@ -1489,7 +1520,7 @@
                 <div id="quiz-container-review" class="hidden">
                     <div class="flex justify-end gap-2 mb-4">
                         <button id="tts-toggle-btn-review" onclick="toggleTts()" class="flex items-center px-4 py-2 text-sm font-bold rounded-full transition duration-150 shadow-md"></button>
-                        <button onclick="returnToResults()" class="flex items-center px-4 py-2 text-sm font-bold rounded-full bg-gray-500 text-white hover:bg-gray-600 transition duration-150 shadow-md">Back to Results</button>
+                        <button onclick="returnToResults()" class="flex items-center px-4 py-2 text-sm font-bold rounded-full bg-gray-500 text-white hover:bg-gray-600 transition duration-150 shadow-md"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>Back</button>
                     </div>
                     <div id="question-area-review"></div>
                     <div id="feedback-area-review" class="mt-6 hidden"></div>
@@ -1498,9 +1529,10 @@
                     <div id="progress-bar-review" class="mt-8"></div>
                 </div>`;
             
-            // Save session to history only if quiz was fully completed
-            if (result.total > 0 && Object.keys(userAnswers).length === result.total) {
+            // Save session to history only once when quiz is completed
+            if (!sessionResultsSaved && result.total > 0 && Object.keys(userAnswers).length === result.total) {
                 saveSessionToHistory(result.correct, result.total);
+                sessionResultsSaved = true;
             }
 
             // Speak the appraisal
@@ -1533,6 +1565,7 @@
             feedbackShown = false;
             sessionQuestions = [];
             reviewMode = false;
+            sessionResultsSaved = false; // Reset the save flag for new session
             // Go back to home view to show pre-start screen
             setView('home');
         }
