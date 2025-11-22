@@ -194,6 +194,7 @@
         let reviewMode = false; // Flag to track if we're in review mode
         let sessionHistory = []; // Array to store all session scores and timestamps
         let sessionResultsSaved = false; // Flag to prevent duplicate session saves
+        let shouldAutoSpeakQuestion = false; // Flag to trigger auto-speak on question render
         
         // Updated quizSettings with new native TTS options
         let quizSettings = {
@@ -1039,10 +1040,11 @@
             } else {
                 feedbackArea.classList.add('hidden');
                 feedbackArea.innerHTML = '';
-                if (quizSettings.ttsEnabled && (currentQuestionIndex === 0 || userAnswer === null)) {
+                if (quizSettings.ttsEnabled && (currentQuestionIndex === 0 || userAnswer === null || shouldAutoSpeakQuestion)) {
                     let textToSpeak = `Question ${currentQuestionIndex + 1}. ${q.question}. Options: `;
                     textToSpeak += Object.entries(q.options).map(([key, value]) => `Option ${key}: ${value}.`).join(' ');
                     speak(textToSpeak);
+                    shouldAutoSpeakQuestion = false; // Reset flag after speaking
                 }
             }
         }
@@ -1196,8 +1198,10 @@
             window.speechSynthesis.cancel();
             if (direction === 'next' && currentQuestionIndex < sessionQuestions.length - 1) {
                 currentQuestionIndex++;
+                shouldAutoSpeakQuestion = true; // Set flag to auto-speak next question
             } else if (direction === 'prev' && currentQuestionIndex > 0) {
                 currentQuestionIndex--;
+                shouldAutoSpeakQuestion = true; // Set flag to auto-speak previous question
             }
             renderQuestion();
         }
@@ -1220,6 +1224,7 @@
         function goToQuestion(index) {
             window.speechSynthesis.cancel();
             currentQuestionIndex = index;
+            shouldAutoSpeakQuestion = true; // Set flag to auto-speak when jumping to question
             renderQuestion();
         }
 
