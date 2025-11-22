@@ -245,7 +245,7 @@
         }
 
         async function fetchJsonFilesRecursively(basePath = '.') {
-            // Scan the Default questions folder and other common directories for JSON files
+            // Optimized: Only scan the default-questions folder for set*.json files
             
             const allQuestionsLoaded = [];
             const seenHashes = new Set();
@@ -253,43 +253,16 @@
             // Cache busting: add timestamp to prevent browser caching
             const cacheBuster = `v=${Date.now()}`;
             
-            // Primary search: Default questions folder with all possible set files (set1 through set50)
-            // Support both 'Default questions' and 'default-questions' folder names for cross-platform compatibility
-            const defaultQuestionsFiles = [];
-            const folderNames = ['Default questions', 'default-questions'];
-            
-            for (let i = 1; i <= 100; i++) {
-                for (const folderName of folderNames) {
-                    defaultQuestionsFiles.push(`${folderName}/set${i}.json`);
-                }
-            }
-            defaultQuestionsFiles.push('Default questions/questions.json');
-            defaultQuestionsFiles.push('default-questions/questions.json');
-            
-            // Secondary search: other common directories and root level
-            const otherSearchPaths = [
-                '.',
-                './data',
-                './questions',
-                './assets',
-                './quiz',
-                './Default questions',
-                './default-questions'
-            ];
-            
-            const otherFilesToTry = [];
-            for (const dir of otherSearchPaths) {
-                otherFilesToTry.push(`${dir}/questions.json`);
-                otherFilesToTry.push(`${dir}/quiz.json`);
-                otherFilesToTry.push(`${dir}/data.json`);
+            // Target only the default-questions folder with set files
+            const filesToTry = [];
+            for (let i = 1; i <= 50; i++) {
+                filesToTry.push(`default-questions/set${i}.json`);
             }
             
-            // Combine all paths (Default questions first for priority)
-            const allPathsToTry = [...new Set([...defaultQuestionsFiles, ...otherFilesToTry])];
             let filesProcessed = 0;
-            const totalFiles = allPathsToTry.length;
+            const totalFiles = filesToTry.length;
 
-            for (const filePath of allPathsToTry) {
+            for (const filePath of filesToTry) {
                 try {
                     // Append cache buster to the URL
                     const urlWithCacheBuster = `${filePath}?${cacheBuster}`;
@@ -299,7 +272,7 @@
                     // Update progress bar
                     const progressPercent = (filesProcessed / totalFiles) * 100;
                     document.getElementById('loading-progress').style.width = progressPercent + '%';
-                    document.getElementById('loading-count').textContent = `${allQuestionsLoaded.length} questions loaded | Checking ${filesProcessed}/${totalFiles} files...`;
+                    document.getElementById('loading-count').textContent = `${allQuestionsLoaded.length} questions loaded | Scanning set${filesProcessed}...`;
                     
                     if (!response.ok) continue; // Skip if file doesn't exist
                     
@@ -321,7 +294,7 @@
                     
                     if (validCount > 0) {
                         console.log(`Successfully loaded ${validCount} questions from: ${filePath}`);
-                        document.getElementById('loading-status').textContent = `Found ${validCount} questions in ${filePath}`;
+                        document.getElementById('loading-status').textContent = `Found ${validCount} questions in set${filesProcessed}.json`;
                     }
                 } catch (e) {
                     // Silently skip files that don't exist or fail to parse
@@ -1035,7 +1008,7 @@
             } else {
                 feedbackArea.classList.add('hidden');
                 feedbackArea.innerHTML = '';
-                if (quizSettings.ttsEnabled && userAnswer === null) {
+                if (quizSettings.ttsEnabled && (currentQuestionIndex === 0 || userAnswer === null)) {
                     let textToSpeak = `Question ${currentQuestionIndex + 1}. ${q.question}. Options: `;
                     textToSpeak += Object.entries(q.options).map(([key, value]) => `Option ${key}: ${value}.`).join(' ');
                     speak(textToSpeak);
