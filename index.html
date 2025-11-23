@@ -1227,11 +1227,19 @@
                         ${sessionQuestions.map((q, index) => {
                             const statusClass = userAnswers[q.id] ? 'nav-answered' : 'nav-unanswered';
                             const isCurrent = index === currentQuestionIndex ? 'nav-current' : '';
-                            return `<button class="question-nav-button ${statusClass} ${isCurrent} flex-shrink-0" onclick="goToQuestion(${index})">${index + 1}</button>`;
+                            return `<button class="question-nav-button ${statusClass} ${isCurrent} flex-shrink-0" id="nav-btn-${index}" onclick="goToQuestion(${index})">${index + 1}</button>`;
                         }).join('')}
                     </div>
                 </div>
             `;
+            
+            // Auto-scroll to the current question button
+            setTimeout(() => {
+                const currentButton = document.getElementById(`nav-btn-${currentQuestionIndex}`);
+                if (currentButton) {
+                    currentButton.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                }
+            }, 0);
         }
 
         function goToQuestion(index) {
