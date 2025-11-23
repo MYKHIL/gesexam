@@ -169,7 +169,7 @@
   },
   {
     "id": 15,
-    "question": "Which of the following statement about teacher performance evaluation is not correct? The process can be …… ",
+    "question": "Which of the following statement about teacher performance evaluation is **not** correct? The process can be …… ",
     "options": {
       "A": "Both formative and summative",
       "B": "Formative",
