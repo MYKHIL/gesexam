@@ -761,7 +761,19 @@
 
         function formatText(text) {
             // Replace **text** with <span class="text-blue-700 font-bold">text</span>
-            return text.replace(/\*\*([^*]+)\*\*/g, '<span class="text-blue-700 font-bold">$1</span>');
+            let formatted = text.replace(/\*\*([^*]+)\*\*/g, '<span class="text-blue-700 font-bold">$1</span>');
+            
+            // Replace *text* with <span class="text-blue-700 font-bold">text</span>
+            formatted = formatted.replace(/\*([^*]+)\*/g, '<span class="text-blue-700 font-bold">$1</span>');
+            
+            // Replace 'text' with <span class="text-blue-700 font-bold">text</span>
+            formatted = formatted.replace(/'([^']+)'/g, '<span class="text-blue-700 font-bold">$1</span>');
+            
+            // Add line breaks before listed items (Roman numerals, letters, or numbers followed by period/parenthesis)
+            // Patterns: I., II., III., IV., etc. or (I), (II), etc. or A., B., C., etc. or 1., 2., 3., etc.
+            formatted = formatted.replace(/\s+((?:[IVX]+|[A-Za-z]|[0-9]+)[\.\)]\s+)/g, '<br>$1');
+            
+            return formatted;
         }
 
         function testVoice() {
