@@ -459,8 +459,8 @@
                 voices = synth.getVoices().filter(v => v.lang.startsWith('en')); // Filter for English voices
                 console.log(`Found ${voices.length} English voices available`);
                 if (voices.length === 0) {
-                    console.warn("No English voices found for TTS.");
-                    quizSettings.ttsEnabled = false;
+                    console.warn("No English voices found for TTS (may load shortly).");
+                    // Do not disable the reader here — voices sometimes load async via onvoiceschanged.
                 } else {
                     console.log("Available voices:", voices.map(v => v.name));
                 }
@@ -474,6 +474,12 @@
             if (synth.onvoiceschanged !== undefined) {
                 synth.onvoiceschanged = populateVoiceList;
                 console.log("Voice change listener attached");
+            }
+            // Ensure UI buttons reflect the current reader setting after initialization
+            try {
+                updateTtsButtons();
+            } catch (e) {
+                console.warn('updateTtsButtons not available yet:', e);
             }
         }
 
