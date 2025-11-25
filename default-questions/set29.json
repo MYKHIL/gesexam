@@ -204,7 +204,7 @@
   },
   {
     "id": 18,
-    "question": "Role learning is more common with ______ curriculum.",
+    "question": "Role learning is more common with  curriculum.",
     "options": {
       "A": "Learner-centered",
       "B": "Problem-based",
@@ -384,7 +384,7 @@
   },
   {
     "id": 33,
-    "question": "'Restate concept in own words' is example of ______ test question frame.",
+    "question": "'Restate concept in own words' is example of  test question frame.",
     "options": {
       "A": "Analysis",
       "B": "Comprehension",
@@ -396,7 +396,7 @@
   },
   {
     "id": 34,
-    "question": "A question asking learners to 'infer from a concept' is example of ______ frame.",
+    "question": "A question asking learners to 'infer from a concept' is example of  frame.",
     "options": {
       "A": "Analysis",
       "B": "Application",
@@ -408,7 +408,7 @@
   },
   {
     "id": 35,
-    "question": "'What is meant by...?' is example of ______ test frame.",
+    "question": "'What is meant by...?' is example of  test frame.",
     "options": {
       "A": "Analysis",
       "B": "Application",
@@ -576,7 +576,7 @@
   },
   {
     "id": 49,
-    "question": "Teachers investigating their own practices to improve them is called ______ research.",
+    "question": "Teachers investigating their own practices to improve them is called  research.",
     "options": {
       "A": "Action",
       "B": "Basic",

@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "question": "The Education Regulatory Bodies Act, 2020 (Act 1023) is an Act that ______",
+    "question": "The Education Regulatory Bodies Act, 2020 (Act 1023) is an Act that ",
     "options": {
       "A": "Establishes the Commission for Technical and Vocational Education and Training",
       "B": "Establishes the National Accreditation Board",
@@ -25,7 +25,7 @@
   },
   {
     "id": 3,
-    "question": "The National Teaching Council Board may suspend the registration of a teacher ______",
+    "question": "The National Teaching Council Board may suspend the registration of a teacher ",
     "options": {
       "A": "When an allegation of misconduct in relation to the teacher is reported",
       "B": "When the teacher has applied for a transfer to another school district",
@@ -61,7 +61,7 @@
   },
   {
     "id": 6,
-    "question": "Teachers facilitate learning in the classroom when ______",
+    "question": "Teachers facilitate learning in the classroom when ",
     "options": {
       "A": "Students help in establishing classroom guidelines",
       "B": "A student's destructive behaviour is addressed at the end of the class",
@@ -73,7 +73,7 @@
   },
   {
     "id": 7,
-    "question": "Peer teaching as a classroom management strategy is adopted in situations where ______",
+    "question": "Peer teaching as a classroom management strategy is adopted in situations where ",
     "options": {
       "A": "Top performers can help educate and engage struggling students",
       "B": "Colleague teachers can teach the same topic",
@@ -85,7 +85,7 @@
   },
   {
     "id": 8,
-    "question": "A mentor teacher uses a strategy shifting responsibility from teacher to students through focused instruction, guided instruction, collaborative learning, and independent learning. The observed teaching strategy moves through sequential stages of ______",
+    "question": "A mentor teacher uses a strategy shifting responsibility from teacher to students through focused instruction, guided instruction, collaborative learning, and independent learning. The observed teaching strategy moves through sequential stages of ",
     "options": {
       "A": "Focused instruction; guided instruction; collaborative learning; independent learning",
       "B": "Guided instruction; focused instruction; collaborative learning; independent learning",
@@ -169,7 +169,7 @@
   },
   {
     "id": 15,
-    "question": "A teacher adopting student self-discipline approach believes that ______",
+    "question": "A teacher adopting student self-discipline approach believes that ",
     "options": {
       "A": "Students can be trusted to evaluate and change their actions",
       "B": "Students can be trusted to mete out punishment",
@@ -217,7 +217,7 @@
   },
   {
     "id": 19,
-    "question": "The apex disciplinary authority with power to endorse recommendation to summarily dismiss GES personnel is the ______",
+    "question": "The apex disciplinary authority with power to endorse recommendation to summarily dismiss GES personnel is the ",
     "options": {
       "A": "Board of Governors",
       "B": "Director-General of GES",
@@ -229,7 +229,7 @@
   },
   {
     "id": 20,
-    "question": "Consensus as a decision-making strategy refers to ______",
+    "question": "Consensus as a decision-making strategy refers to ",
     "options": {
       "A": "Determining which faction's position will prevail",
       "B": "Reaching a decision everyone can accept",
@@ -253,7 +253,7 @@
   },
   {
     "id": 22,
-    "question": "A teacher has students working outside the classroom on waste management, examining the school's disposal system. The strategy enables students to ______",
+    "question": "A teacher has students working outside the classroom on waste management, examining the school's disposal system. The strategy enables students to ",
     "options": {
       "A": "Apply knowledge to solve real-world problems",
       "B": "Illustrate how to use a taught concept",
@@ -301,7 +301,7 @@
   },
   {
     "id": 26,
-    "question": "The core element of cooperative learning is to ______",
+    "question": "The core element of cooperative learning is to ",
     "options": {
       "A": "Encourage contracts between teachers and parents",
       "B": "Foster competition rather than support",
@@ -313,7 +313,7 @@
   },
   {
     "id": 27,
-    "question": "The teaching strategy responding to variance among learners in the classroom is called ______",
+    "question": "The teaching strategy responding to variance among learners in the classroom is called ",
     "options": {
       "A": "Team instruction",
       "B": "Focused instruction",
@@ -349,7 +349,7 @@
   },
   {
     "id": 30,
-    "question": "A headteacher in a learner-centered school undertakes all to enhance teaching and learning except ______",
+    "question": "A headteacher in a learner-centered school undertakes all to enhance teaching and learning except ",
     "options": {
       "A": "Empowering teachers to involve each learner",
       "B": "Encouraging teachers to avoid tests and assessments",
@@ -361,7 +361,7 @@
   },
   {
     "id": 31,
-    "question": "The teaching strategy utilizing both online and in-person learning experiences is called ______",
+    "question": "The teaching strategy utilizing both online and in-person learning experiences is called ",
     "options": {
       "A": "Zoom learning",
       "B": "Virtual learning",
@@ -373,7 +373,7 @@
   },
   {
     "id": 32,
-    "question": "End-of-term examinations conducted in schools are largely ______",
+    "question": "End-of-term examinations conducted in schools are largely ",
     "options": {
       "A": "Achievement test",
       "B": "Aptitude test",
@@ -385,7 +385,7 @@
   },
   {
     "id": 33,
-    "question": "The pedagogy actively engaging students through integration of reading, writing, discussion and practical activities is known as ______",
+    "question": "The pedagogy actively engaging students through integration of reading, writing, discussion and practical activities is known as ",
     "options": {
       "A": "Activity-based",
       "B": "Student-based",
@@ -397,7 +397,7 @@
   },
   {
     "id": 34,
-    "question": "Evaluation of students is intended to make ______ about their performance.",
+    "question": "Evaluation of students is intended to make  about their performance.",
     "options": {
       "A": "Decision",
       "B": "Judgement",
@@ -409,7 +409,7 @@
   },
   {
     "id": 35,
-    "question": "A formal and systematic procedure for getting information about how much students have learned is ______",
+    "question": "A formal and systematic procedure for getting information about how much students have learned is ",
     "options": {
       "A": "Assessment",
       "B": "Evaluation",
@@ -421,7 +421,7 @@
   },
   {
     "id": 36,
-    "question": "The re-appointment of a teacher who was on interdiction but cleared of all charges is referred to as ______",
+    "question": "The re-appointment of a teacher who was on interdiction but cleared of all charges is referred to as ",
     "options": {
       "A": "Re-instatement",
       "B": "Reactivation",
@@ -445,7 +445,7 @@
   },
   {
     "id": 38,
-    "question": "A double-barrelled question is ______",
+    "question": "A double-barrelled question is ",
     "options": {
       "A": "Convergent and seeks a single answer tied to a specific learning target",
       "B": "More open and used to direct exploration of a concept",
@@ -457,7 +457,7 @@
   },
   {
     "id": 39,
-    "question": "In an open school climate ______",
+    "question": "In an open school climate ",
     "options": {
       "A": "All decisions are made by PTA",
       "B": "Interactions among stakeholders are promoted",
@@ -481,7 +481,7 @@
   },
   {
     "id": 41,
-    "question": "A school culture requires teachers to examine beliefs about teaching and align with classroom practice. This culture enables teachers to ______",
+    "question": "A school culture requires teachers to examine beliefs about teaching and align with classroom practice. This culture enables teachers to ",
     "options": {
       "A": "Conduct self-assessments of instructional techniques",
       "B": "Stay with instructional pedagogy they are used to",
@@ -529,7 +529,7 @@
   },
   {
     "id": 45,
-    "question": "Achievement tests are developed to ______",
+    "question": "Achievement tests are developed to ",
     "options": {
       "A": "Measure a learner's acquisition of skills and knowledge in a grade level",
       "B": "Determine a learner's cognitive ability in a grade level",
@@ -541,7 +541,7 @@
   },
   {
     "id": 46,
-    "question": "Which statement about year-round school calendar is NOT correct? It increases ______",
+    "question": "Which statement about year-round school calendar is NOT correct? It increases ",
     "options": {
       "A": "Student retention rates",
       "B": "Functional capacity of a school",
@@ -565,7 +565,7 @@
   },
   {
     "id": 48,
-    "question": "The National Teachers' Standards is divided into three main domains: ______",
+    "question": "The National Teachers' Standards is divided into three main domains: ",
     "options": {
       "A": "Professional practice, professional associations, professional license",
       "B": "Professional practice, professional knowledge, professional license",
@@ -589,7 +589,7 @@
   },
   {
     "id": 50,
-    "question": "Multiple causation is a defining characteristic of ______",
+    "question": "Multiple causation is a defining characteristic of ",
     "options": {
       "A": "Classical theory of management",
       "B": "Systems theory of management",
@@ -613,7 +613,7 @@
   },
   {
     "id": 52,
-    "question": "Team teaching improves quality because ______",
+    "question": "Team teaching improves quality because ",
     "options": {
       "A": "Various experts approach the same topic from different angles",
       "B": "Teachers can take periodic breaks",
@@ -649,7 +649,7 @@
   },
   {
     "id": 55,
-    "question": "The observed team teaching strategy shows that teachers ______",
+    "question": "The observed team teaching strategy shows that teachers ",
     "options": {
       "A": "Are open to diverse ways of thinking",
       "B": "Practice absolutism",
