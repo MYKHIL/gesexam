@@ -906,8 +906,8 @@
       "A": "True",
       "B": "False"
     },
-    "answer": "A",
-    "explanation": "TED is indeed a division of GES Headquarters responsible for teacher professional development."
+    "answer": "B",
+    "explanation": "Teacher Education Division is no longer one of the divisions at GES Headquarters. As part of ongoing reforms, the Teacher Education Division of GES was re-aligned to become an autonomous agency under the Ministry of Education, now known as the National Teaching Council (NTC)"
   },
   {
     "id": 92,
@@ -1566,8 +1566,8 @@
       "A": "True",
       "B": "False"
     },
-    "answer": "A",
-    "explanation": "This is a duplicate of question 91. TED is indeed a GES Headquarters division responsible for teacher professional development."
+    "answer": "B",
+    "explanation": "Teacher Education Division is no longer one of the divisions at GES Headquarters. As part of ongoing reforms, the Teacher Education Division of GES was re-aligned to become an autonomous agency under the Ministry of Education, now known as the National Teaching Council (NTC)"
   },
   {
     "id": 158,
