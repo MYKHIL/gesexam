@@ -146,6 +146,11 @@
                         <div id="loading-progress" class="bg-blue-600 h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
                     </div>
                     <p class="text-sm text-gray-500 mt-4" id="loading-count">0 questions loaded</p>
+                    <p class="text-xs text-gray-600 mt-4 text-center">
+                        For best compatibility, we recommend opening this app in
+                        <a href="https://www.google.com/chrome/" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-semibold hover:underline">Google Chrome</a>.
+                        Some browsers may not fully support the built-in reader or file loading behavior.
+                    </p>
                 </div>
             </div>
         </div>
@@ -201,7 +206,7 @@
         let quizSettings = {
             numQuestions: 25,
             randomize: true,
-            ttsEnabled: false,
+            ttsEnabled: true, // Reader ON by default
             ttsVoice: null, // URI of the selected voice
             ttsRate: 1,     // Playback rate (0.1 to 10)
             ttsPitch: 1     // Playback pitch (0 to 2)
@@ -380,8 +385,8 @@
             if (savedSettings) {
                 try {
                     const loadedSettings = JSON.parse(savedSettings);
-                    // Preserve exact TTS enabled state from localStorage
-                    loadedSettings.ttsEnabled = loadedSettings.hasOwnProperty('ttsEnabled') ? loadedSettings.ttsEnabled : false;
+                    // Preserve exact TTS enabled state from localStorage, fallback to default in quizSettings
+                    loadedSettings.ttsEnabled = loadedSettings.hasOwnProperty('ttsEnabled') ? loadedSettings.ttsEnabled : quizSettings.ttsEnabled;
                     loadedSettings.ttsVoice = loadedSettings.ttsVoice || null;
                     loadedSettings.ttsRate = loadedSettings.ttsRate || 1;
                     loadedSettings.ttsPitch = loadedSettings.ttsPitch || 1;
@@ -391,6 +396,14 @@
                     console.log("Settings loaded. TTS Enabled:", quizSettings.ttsEnabled);
                 } catch (e) {
                     console.error("Error parsing saved settings:", e);
+                }
+            } else {
+                // No saved settings found: persist current defaults (reader on by default)
+                try {
+                    saveSettings();
+                    console.log('No saved settings found - persisted default settings.');
+                } catch (e) {
+                    console.warn('Could not persist default settings:', e);
                 }
             }
             
