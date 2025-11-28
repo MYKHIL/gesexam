@@ -187,6 +187,9 @@
         const LOCAL_STORAGE_KEY = 'gesAdiiQuizQuestions';
         const SETTINGS_KEY = 'gesAdiiQuizSettings';
         const SESSION_HISTORY_KEY = 'gesAdiiSessionHistory';
+        // JSONBin.io configuration (provided by user)
+        const JSONBIN_BIN_ID = '69296a23ae596e708f7617ae';
+        const JSONBIN_MASTER_KEY = '$2a$10$Zwr/q5r0c.Lv/6Ikq9a.ROrJruWGsHzf8uSI/HWq7yjG.4OrsE2O6';
         
         let renderResultsCalled = false;
         let allQuestions = []; // Master list of all questions (static or uploaded)
@@ -413,7 +416,15 @@
             // 4. Load session history
             loadSessionHistory();
 
-            // 5. Re-render based on loaded state
+            // 5. Ensure device is registered on the remote leaderboard store
+            try {
+                await ensureRegistered();
+            } catch (e) {
+                console.error('Registration check failed:', e);
+                // allow app to continue but user will need to register to start sessions
+            }
+
+            // 6. Re-render based on loaded state
             setView(currentView);
             
             // 6. Hide loading indicator
@@ -596,6 +607,10 @@
                 renderLeaderboardView();
             } else if (view === 'graph') {
                 renderProgressGraphView();
+            } else if (view === 'register') {
+                renderRegistrationView();
+            } else if (view === 'rankings') {
+                renderRankingsView();
             }
         }
 
@@ -796,6 +811,273 @@
             formatted = formatted.replace(/\s+((?:[IVX]+|[A-Za-z]|[0-9]+)[\.\)]\s+)/g, '<br>$1');
             
             return formatted;
+        }
+
+        // --- Device registration & JSONBin.io integration ---
+
+        function uuidv4() {
+            // Simple UUID generator
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                const r = Math.random() * 16 | 0;
+                const v = c === 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+
+        function getDeviceId() {
+            try {
+                let id = localStorage.getItem('gesDeviceId');
+                if (!id) {
+                    id = uuidv4();
+                    localStorage.setItem('gesDeviceId', id);
+                }
+                return id;
+            } catch (e) {
+                console.error('Could not access localStorage for device id:', e);
+                return null;
+            }
+        }
+
+        async function fetchJsonBinData() {
+            if (!JSONBIN_BIN_ID || !JSONBIN_MASTER_KEY) throw new Error('JSONBin not configured');
+            const url = `https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}/latest`;
+            const resp = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    'X-Master-Key': JSONBIN_MASTER_KEY
+                }
+            });
+            if (!resp.ok) throw new Error(`jsonbin GET failed: ${resp.status}`);
+            const body = await resp.json();
+            // v3 returns { record: ... }
+            return body && (body.record || body);
+        }
+
+        async function putJsonBinData(newData) {
+            const url = `https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}`;
+            const resp = await fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-Master-Key': JSONBIN_MASTER_KEY
+                },
+                body: JSON.stringify(newData)
+            });
+            if (!resp.ok) throw new Error(`jsonbin PUT failed: ${resp.status}`);
+            return await resp.json();
+        }
+
+        // registration promise control so ensureRegistered can wait until user registers
+        let _registrationResolver = null;
+
+        async function ensureRegistered() {
+            const deviceId = getDeviceId();
+            if (!deviceId) return; // cannot proceed without device id
+
+            try {
+                const data = await fetchJsonBinData();
+                const users = Array.isArray(data) ? data : (data && data.users ? data.users : []);
+                const found = users.find(u => u.deviceId === deviceId);
+                if (found) {
+                    // store current user locally for quick access
+                    try { localStorage.setItem('gesCurrentUser', JSON.stringify(found)); } catch (e) {}
+                    return; // already registered
+                }
+            } catch (e) {
+                console.warn('Could not fetch jsonbin data during registration check:', e);
+                // Allow registration flow even if fetch failed
+            }
+
+            // Not registered: hide loading overlay, render registration view and wait until registration completes
+            const li = document.getElementById('loading-indicator');
+            if (li) li.classList.add('hidden');
+            setView('register');
+            return new Promise((resolve) => {
+                _registrationResolver = resolve;
+            });
+        }
+
+        function renderRegistrationView() {
+            contentArea.innerHTML = `
+                <div class="p-6 bg-white rounded-xl shadow-lg max-w-2xl mx-auto">
+                    <h2 class="text-2xl font-bold mb-4">Register Your Device</h2>
+                    <p class="text-sm text-gray-600 mb-4">Please provide your name, email and phone number to register this device. You must register before starting sessions.</p>
+                    <div class="grid grid-cols-1 gap-3">
+                        <input id="reg-name" placeholder="Full name" class="p-3 border rounded-lg" />
+                        <input id="reg-email" placeholder="Email address" class="p-3 border rounded-lg" />
+                        <input id="reg-phone" placeholder="Phone number" class="p-3 border rounded-lg" />
+                        <div class="flex gap-3">
+                            <button onclick="submitRegistration()" class="px-4 py-2 bg-green-600 text-white rounded-lg">Register</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        async function submitRegistration() {
+            const name = document.getElementById('reg-name').value.trim();
+            const email = document.getElementById('reg-email').value.trim();
+            const phone = document.getElementById('reg-phone').value.trim();
+            if (!name || !email || !phone) { showMessage('Please fill all registration fields.', 'error'); return; }
+
+            const deviceId = getDeviceId();
+            const userObj = {
+                name, email, phone,
+                deviceId,
+                createdAt: new Date().toISOString(),
+                latestScore: null,
+                lastTimestamp: null,
+                scores: []
+            };
+
+            try {
+                await registerUserToJsonBin(userObj);
+                try { localStorage.setItem('gesCurrentUser', JSON.stringify(userObj)); } catch (e) {}
+                showMessage('Registration successful.', 'success');
+                if (_registrationResolver) {
+                    _registrationResolver();
+                    _registrationResolver = null;
+                }
+                setView('home');
+            } catch (e) {
+                console.error('Registration failed:', e);
+                showMessage('Registration failed. See console for details.', 'error');
+            }
+        }
+
+        async function registerUserToJsonBin(userObj) {
+            // Read existing data
+            let data = [];
+            try {
+                const fetched = await fetchJsonBinData();
+                if (Array.isArray(fetched)) data = fetched;
+                else if (fetched && Array.isArray(fetched.users)) data = fetched.users;
+            } catch (e) {
+                console.warn('Assuming empty jsonbin; will create new array.');
+            }
+            // Add user
+            data.push(userObj);
+            // Write back (either as array or as { users: [...] } depending on existing structure)
+            try {
+                // If fetched data originally was an object with 'users', preserve structure
+                const payload = Array.isArray(data) ? data : { users: data };
+                await putJsonBinData(payload);
+            } catch (e) {
+                throw e;
+            }
+        }
+
+        async function updateUserScore(deviceId, percentage, timestamp, correctAnswers = null, totalQuestions = null) {
+            try {
+                const fetched = await fetchJsonBinData();
+                let users = Array.isArray(fetched) ? fetched : (fetched && Array.isArray(fetched.users) ? fetched.users : []);
+                let changed = false;
+                users = users.map(u => {
+                    if (u.deviceId === deviceId) {
+                        const score = { percentage: parseFloat(percentage), timestamp, correctAnswers: correctAnswers, totalQuestions: totalQuestions };
+                        u.scores = Array.isArray(u.scores) ? u.scores : [];
+                        u.scores.push(score);
+                        u.latestScore = parseFloat(percentage);
+                        u.lastTimestamp = timestamp;
+                        if (correctAnswers != null) u.latestCorrect = correctAnswers;
+                        if (totalQuestions != null) u.latestTotal = totalQuestions;
+                        changed = true;
+                    }
+                    return u;
+                });
+                if (!changed) {
+                    // If user not present, optionally create a minimal record
+                    users.push({ deviceId, latestScore: parseFloat(percentage), lastTimestamp: timestamp, latestCorrect: correctAnswers, latestTotal: totalQuestions, scores: [{ percentage: parseFloat(percentage), timestamp, correctAnswers: correctAnswers, totalQuestions: totalQuestions }] });
+                }
+                const payload = Array.isArray(fetched) ? users : { users };
+                await putJsonBinData(payload);
+            } catch (e) {
+                console.error('Could not update user score on jsonbin:', e);
+                throw e;
+            }
+        }
+
+        async function renderRankingsView() {
+            contentArea.innerHTML = `<div class="p-6 bg-white rounded-xl shadow-lg">Loading rankings...</div>`;
+            try {
+                const fetched = await fetchJsonBinData();
+                const users = Array.isArray(fetched) ? fetched : (fetched && Array.isArray(fetched.users) ? fetched.users : []);
+                if (!users || users.length === 0) {
+                    contentArea.innerHTML = `<div class="p-6 bg-white rounded-xl shadow-lg text-center">No registered users found.</div>`;
+                    return;
+                }
+                const ranked = users.map(u => ({
+                    name: u.name || 'Unknown',
+                    latestScore: (u.latestScore != null ? u.latestScore : 0),
+                    latestCorrect: (u.latestCorrect != null ? u.latestCorrect : (u.scores && u.scores.length ? u.scores[u.scores.length-1].correctAnswers || 0 : 0)),
+                    latestTotal: (u.latestTotal != null ? u.latestTotal : (u.scores && u.scores.length ? u.scores[u.scores.length-1].totalQuestions || 0 : 0)),
+                    phone: u.phone || '',
+                    email: u.email || ''
+                })).sort((a,b) => {
+                    // Primary: percentage desc, Secondary: total questions desc
+                    if (b.latestScore !== a.latestScore) return b.latestScore - a.latestScore;
+                    return b.latestTotal - a.latestTotal;
+                });
+
+                // Assign competition-style ranks (ties share same rank; next rank = position index+1)
+                let rowsArr = [];
+                let prevScore = null;
+                let prevTotal = null;
+                let itemsBefore = 0;
+                let currentRank = 1;
+                for (let i = 0; i < ranked.length; i++) {
+                    const u = ranked[i];
+                    let rank;
+                    if (prevScore === u.latestScore && prevTotal === u.latestTotal) {
+                        // same group as previous -> same rank
+                        rank = currentRank;
+                    } else {
+                        rank = itemsBefore + 1;
+                        currentRank = rank;
+                        prevScore = u.latestScore;
+                        prevTotal = u.latestTotal;
+                    }
+                    itemsBefore++;
+                    rowsArr.push(`
+                    <tr class="border-b hover:bg-gray-50">
+                        <td class="px-4 py-3 font-semibold">#${rank}</td>
+                        <td class="px-4 py-3">${u.name}</td>
+                        <td class="px-4 py-3 text-green-600 font-semibold">${u.latestCorrect}/${u.latestTotal}</td>
+                        <td class="px-4 py-3 text-blue-600 font-bold">${u.latestScore}%</td>
+                    </tr>
+                `);
+                }
+                const rows = rowsArr.join('');
+
+                contentArea.innerHTML = `
+                    <div class="p-6 bg-white rounded-xl shadow-lg">
+                        <div class="flex justify-between items-center mb-4">
+                            <h2 class="text-2xl font-bold">Global Rankings</h2>
+                            <div class="flex gap-2">
+                                <button onclick="setView('leaderboard')" class="px-3 py-2 bg-gray-600 text-white rounded-lg">Back</button>
+                            </div>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full border-collapse">
+                                <thead class="bg-blue-600 text-white">
+                                    <tr>
+                                        <th class="px-4 py-2 text-left">Rank</th>
+                                        <th class="px-4 py-2 text-left">Name</th>
+                                        <th class="px-4 py-2 text-left">Correct / Questions</th>
+                                        <th class="px-4 py-2 text-left">Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${rows}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                `;
+            } catch (e) {
+                console.error('Failed to render rankings:', e);
+                contentArea.innerHTML = `<div class="p-6 bg-white rounded-xl shadow-lg text-red-600">Could not load rankings. See console for details.</div>`;
+            }
         }
 
         function testVoice() {
@@ -1291,6 +1573,15 @@
             try {
                 localStorage.setItem(SESSION_HISTORY_KEY, JSON.stringify(sessionHistory));
                 console.log("Session saved to history:", session);
+                // Also update the user's record in jsonbin (if registered)
+                try {
+                    const deviceId = getDeviceId();
+                    if (deviceId) {
+                        updateUserScore(deviceId, session.percentage, session.timestamp, session.correctAnswers, session.totalQuestions).catch(err => console.error('Failed to update user score:', err));
+                    }
+                } catch (e) {
+                    console.warn('Could not update remote user score:', e);
+                }
             } catch (e) {
                 console.error("Error saving session to history:", e);
             }
@@ -1326,13 +1617,14 @@
         function renderLeaderboardView() {
             const historyTableBody = sessionHistory.length === 0 ? 
                 '<tr><td colspan="5" class="px-6 py-4 text-center text-gray-500">No sessions yet. Complete a quiz to start tracking history.</td></tr>' :
-                sessionHistory.reverse().map((session, index) => {
+                // Sort ascending by timestamp (oldest first)
+                [...sessionHistory].sort((a,b) => new Date(a.timestamp) - new Date(b.timestamp)).map((session, index) => {
                     const date = new Date(session.timestamp);
                     const formattedDate = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
                     const formattedTime = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
                     return `
                         <tr class="border-b hover:bg-gray-100 transition text-sm sm:text-base">
-                            <td class="px-2 sm:px-4 py-2 sm:py-4 font-semibold text-gray-700">#${sessionHistory.length - index}</td>
+                            <td class="px-2 sm:px-4 py-2 sm:py-4 font-semibold text-gray-700">#${index + 1}</td>
                             <td class="px-2 sm:px-4 py-2 sm:py-4 text-gray-600 hidden sm:table-cell">${session.totalQuestions}</td>
                             <td class="px-2 sm:px-4 py-2 sm:py-4 text-green-600 font-semibold">${session.correctAnswers}</td>
                             <td class="px-2 sm:px-4 py-2 sm:py-4 text-blue-600 font-bold">${session.percentage}%</td>
@@ -1357,6 +1649,9 @@
                         <div class="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
                             <button onclick="clearLeaderboard()" class="px-4 py-2 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition flex-1 sm:flex-none">
                                 Clear All
+                            </button>
+                            <button onclick="setView('rankings')" class="px-4 py-2 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 transition flex-1 sm:flex-none">
+                                View Global Rankings
                             </button>
                             <button onclick="handleBackToHome()" class="px-4 py-2 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700 transition flex-1 sm:flex-none">
                                 ${backButtonText}
