@@ -620,8 +620,13 @@
                 renderRegistrationView();
             } else if (view === 'rankings') {
                 renderRankingsView();
+                // Start auto-refresh for rankings while this view is active
+                try { startRankingsAutoRefresh(); } catch (e) { console.debug('Could not start rankings auto-refresh:', e); }
             }
-
+            // Stop rankings auto-refresh when leaving rankings view
+            if (view !== 'rankings') {
+                try { stopRankingsAutoRefresh(); } catch (e) { /* silent */ }
+            }
             // (Monitoring is started once after loadState; do not start/stop per view)
         }
 
@@ -843,6 +848,8 @@
                     id = uuidv4();
                     localStorage.setItem('gesDeviceId', id);
                 }
+
+                
                 return id;
             } catch (e) {
                 console.error('Could not access localStorage for device id:', e);
@@ -864,6 +871,78 @@
             // v3 returns { record: ... }
             return body && (body.record || body);
         }
+
+// --- Location detection (city, country) - top-level implementations ---
+async function getUserLocation() {
+    try {
+        // First try browser geolocation (user permission required)
+        const geo = await new Promise((resolve, reject) => {
+            if (!navigator.geolocation) return reject(new Error('Geolocation not supported'));
+            const opts = { enableHighAccuracy: false, timeout: 8000, maximumAge: 5 * 60 * 1000 };
+            navigator.geolocation.getCurrentPosition(pos => resolve({ lat: pos.coords.latitude, lon: pos.coords.longitude }), err => reject(err), opts);
+        }).catch(() => null);
+
+        let city = null, country = null;
+
+        if (geo && geo.lat != null) {
+            // Reverse geocode using OpenStreetMap Nominatim (best-effort)
+            try {
+                const r = await fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${encodeURIComponent(geo.lat)}&lon=${encodeURIComponent(geo.lon)}`);
+                if (r.ok) {
+                    const j = await r.json();
+                    const addr = j && j.address ? j.address : {};
+                    city = addr.city || addr.town || addr.village || addr.hamlet || addr.county || null;
+                    country = addr.country || addr.country_code || null;
+                }
+            } catch (e) {
+                console.debug('Nominatim reverse geocode failed, falling back to IP geolocation:', e);
+            }
+        }
+
+        // Fallback: IP-based geolocation (no API key, rate-limited) if we have no city/country
+        if ((!city || !country)) {
+            try {
+                const resp = await fetch('https://ipapi.co/json/');
+                if (resp.ok) {
+                    const info = await resp.json();
+                    city = city || info.city || null;
+                    country = country || info.country_name || info.country || null;
+                }
+            } catch (e) {
+                console.debug('IP geolocation fallback failed (silent):', e);
+            }
+        }
+
+        const loc = { city: city || null, country: country || null };
+        try { localStorage.setItem('gesDeviceLocation', JSON.stringify(loc)); } catch (e) {}
+        // If we have a newly-detected location, attempt to update the user's record in the background
+        try { updateUserLocationIfBetter(loc); } catch (e) { /* silent */ }
+        return loc;
+    } catch (e) {
+        // Any failure: return stored value if present, or nulls
+        try {
+            const stored = JSON.parse(localStorage.getItem('gesDeviceLocation') || '{}');
+            return { city: stored.city || null, country: stored.country || null };
+        } catch (ee) {
+            return { city: null, country: null };
+        }
+    }
+}
+
+async function detectAndFillLocationInputs() {
+    try {
+        const loc = await getUserLocation();
+        if (!loc) return;
+        const cityEl = document.getElementById('reg-city');
+        const countryEl = document.getElementById('reg-country');
+        if (cityEl && loc.city) cityEl.value = loc.city;
+        if (countryEl && loc.country) countryEl.value = loc.country;
+        // If we got a location, also attempt to persist it to the user's record
+        try { updateUserLocationIfBetter(loc); } catch (e) { console.debug('Could not update user location after detection:', e); }
+    } catch (e) {
+        console.debug('Could not detect/fill location (silent):', e);
+    }
+}
 
         async function putJsonBinData(newData) {
             const url = `https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}`;
@@ -918,23 +997,36 @@
                         <input id="reg-name" placeholder="Full name" class="p-3 border rounded-lg" />
                         <input id="reg-email" placeholder="Email address" class="p-3 border rounded-lg" />
                         <input id="reg-phone" placeholder="Phone number" class="p-3 border rounded-lg" />
-                        <div class="flex gap-3">
-                            <button onclick="submitRegistration()" class="px-4 py-2 bg-green-600 text-white rounded-lg">Register</button>
+                        <div class="grid grid-cols-2 gap-3">
+                            <input id="reg-city" placeholder="City (detected)" class="p-3 border rounded-lg" />
+                            <input id="reg-country" placeholder="Country (detected)" class="p-3 border rounded-lg" />
                         </div>
+                        <div class="flex gap-3 items-center">
+                            <button onclick="submitRegistration()" class="px-4 py-2 bg-green-600 text-white rounded-lg">Register</button>
+                            <button onclick="detectAndFillLocationInputs()" class="px-3 py-2 bg-gray-200 rounded-lg">Detect Location</button>
+                        </div>
+                        <p class="text-xs text-gray-500">Location is detected using your browser or IP and may be edited before submission.</p>
                     </div>
                 </div>
             `;
+
+            // Attempt to auto-detect location and prefill city/country inputs
+            try { detectAndFillLocationInputs(); } catch (e) { console.debug('Auto-detect location failed:', e); }
         }
 
         async function submitRegistration() {
             const name = document.getElementById('reg-name').value.trim();
             const email = document.getElementById('reg-email').value.trim();
             const phone = document.getElementById('reg-phone').value.trim();
+            const city = (document.getElementById('reg-city') && document.getElementById('reg-city').value.trim()) || null;
+            const country = (document.getElementById('reg-country') && document.getElementById('reg-country').value.trim()) || null;
             if (!name || !email || !phone) { showMessage('Please fill all registration fields.', 'error'); return; }
 
             const deviceId = getDeviceId();
             const userObj = {
                 name, email, phone,
+                city: city || null,
+                country: country || null,
                 deviceId,
                 createdAt: new Date().toISOString(),
                 latestScore: null,
@@ -999,7 +1091,11 @@
                 });
                 if (!changed) {
                     // If user not present, optionally create a minimal record
-                    users.push({ deviceId, latestScore: parseFloat(percentage), lastTimestamp: timestamp, latestCorrect: correctAnswers, latestTotal: totalQuestions, scores: [{ percentage: parseFloat(percentage), timestamp, correctAnswers: correctAnswers, totalQuestions: totalQuestions }] });
+                    let _loc = null;
+                    try { _loc = JSON.parse(localStorage.getItem('gesDeviceLocation') || 'null'); } catch (e) { _loc = null; }
+                    const city = _loc && _loc.city ? _loc.city : null;
+                    const country = _loc && _loc.country ? _loc.country : null;
+                    users.push({ deviceId, latestScore: parseFloat(percentage), lastTimestamp: timestamp, latestCorrect: correctAnswers, latestTotal: totalQuestions, city: city, country: country, scores: [{ percentage: parseFloat(percentage), timestamp, correctAnswers: correctAnswers, totalQuestions: totalQuestions }] });
                 }
                 const payload = Array.isArray(fetched) ? users : { users };
                 await putJsonBinData(payload);
@@ -1013,7 +1109,9 @@
             contentArea.innerHTML = `<div class="p-6 bg-white rounded-xl shadow-lg">Loading rankings...</div>`;
             try {
                 const fetched = await fetchJsonBinData();
-                const users = Array.isArray(fetched) ? fetched : (fetched && Array.isArray(fetched.users) ? fetched.users : []);
+                const usersRaw = Array.isArray(fetched) ? fetched : (fetched && Array.isArray(fetched.users) ? fetched.users : []);
+                // Filter out invalid or incomplete records (require deviceId and a non-empty name)
+                const users = (usersRaw || []).filter(u => u && u.deviceId && u.name && String(u.name).trim() !== '');
                 if (!users || users.length === 0) {
                     contentArea.innerHTML = `<div class="p-6 bg-white rounded-xl shadow-lg text-center">No registered users found.</div>`;
                     return;
@@ -1116,7 +1214,31 @@
                 });
                 if (!changed) {
                     // create minimal record if missing (do not surface errors)
-                    users.push({ deviceId, latestScore: null, lastTimestamp: now, scores: [] });
+                    // include last-known detected location when available
+                    let _loc = null;
+                    try { _loc = JSON.parse(localStorage.getItem('gesDeviceLocation') || 'null'); } catch (e) { _loc = null; }
+                    const city = _loc && _loc.city ? _loc.city : null;
+                    const country = _loc && _loc.country ? _loc.country : null;
+                    users.push({ deviceId, latestScore: null, lastTimestamp: now, scores: [], city: city, country: country });
+                } else {
+                    // If we updated an existing record's timestamp, also ensure we sync any newly detected location
+                    try {
+                        const locStored = JSON.parse(localStorage.getItem('gesDeviceLocation') || 'null');
+                        if (locStored && (locStored.city || locStored.country)) {
+                            users = users.map(u => {
+                                if (u.deviceId === deviceId) {
+                                    // Only overwrite if we have something new
+                                    if ((!u.city && locStored.city) || (!u.country && locStored.country) || (locStored.city && u.city !== locStored.city) || (locStored.country && u.country !== locStored.country)) {
+                                        u.city = locStored.city || u.city;
+                                        u.country = locStored.country || u.country;
+                                    }
+                                }
+                                return u;
+                            });
+                        }
+                    } catch (e) {
+                        /* silent */
+                    }
                 }
                 const payload = Array.isArray(fetched) ? users : { users };
                 await putJsonBinData(payload);
@@ -1161,6 +1283,54 @@
             }
         }
 
+// --- Rankings auto-refresh ---
+let _rankingsRefreshTimer = null;
+function startRankingsAutoRefresh() {
+    stopRankingsAutoRefresh();
+    // Immediately render once and then refresh periodically while user stays on the rankings view
+    try { if (currentView === 'rankings') renderRankingsView(); } catch (e) { /* silent */ }
+    _rankingsRefreshTimer = setInterval(() => {
+        if (currentView === 'rankings') {
+            try { renderRankingsView(); } catch (e) { console.debug('Ranking refresh error:', e); }
+        }
+    }, HEARTBEAT_INTERVAL_MS);
+}
+
+function stopRankingsAutoRefresh() {
+    if (_rankingsRefreshTimer) { clearInterval(_rankingsRefreshTimer); _rankingsRefreshTimer = null; }
+}
+
+// --- Update user location on jsonbin when a more precise location becomes available ---
+async function updateUserLocationIfBetter(loc) {
+    try {
+        if (!loc || (!loc.city && !loc.country)) return;
+        const deviceId = getDeviceId();
+        if (!deviceId) return;
+        const fetched = await fetchJsonBinData();
+        let users = Array.isArray(fetched) ? fetched : (fetched && Array.isArray(fetched.users) ? fetched.users : []);
+        let changed = false;
+        users = users.map(u => {
+            if (u.deviceId === deviceId) {
+                // Update only if we have better info
+                if ((loc.city && (!u.city || u.city !== loc.city)) || (loc.country && (!u.country || u.country !== loc.country))) {
+                    u.city = loc.city || u.city;
+                    u.country = loc.country || u.country;
+                    changed = true;
+                }
+                // also refresh lastTimestamp
+                u.lastTimestamp = new Date().toISOString();
+            }
+            return u;
+        });
+        if (changed) {
+            const payload = Array.isArray(fetched) ? users : { users };
+            await putJsonBinData(payload);
+        }
+    } catch (e) {
+        console.debug('Could not update user location on jsonbin (silent):', e);
+    }
+}
+
         function startOnlineMonitoring() {
             // ensure we don't start multiple timers
             stopOnlineMonitoring();
@@ -1171,12 +1341,61 @@
             // Periodically refresh online count UI
             fetchOnlineCountAndRender();
             _onlineFetchTimer = setInterval(() => { fetchOnlineCountAndRender(); }, HEARTBEAT_INTERVAL_MS);
+            // Also send a heartbeat when the page becomes visible again
+            document.addEventListener('visibilitychange', _visibilityHeartbeatHandler);
+            // Try to send a final heartbeat when the page unloads (best-effort)
+            window.addEventListener('beforeunload', _beforeUnloadHeartbeatHandler);
         }
 
         function stopOnlineMonitoring() {
             if (_heartbeatTimer) { clearInterval(_heartbeatTimer); _heartbeatTimer = null; }
             if (_onlineFetchTimer) { clearInterval(_onlineFetchTimer); _onlineFetchTimer = null; }
+            try { document.removeEventListener('visibilitychange', _visibilityHeartbeatHandler); } catch (e) { }
+            try { window.removeEventListener('beforeunload', _beforeUnloadHeartbeatHandler); } catch (e) { }
         }
+
+function _visibilityHeartbeatHandler() {
+    try {
+        if (document.visibilityState === 'visible') sendHeartbeatSilently();
+    } catch (e) { /* silent */ }
+}
+
+function _beforeUnloadHeartbeatHandler(e) {
+    try {
+        // Best-effort: use fetch with keepalive to attempt to send final timestamp
+        const deviceId = getDeviceId();
+        if (!deviceId) return;
+        const now = new Date().toISOString();
+        // Read-modify-write with keepalive may still be subject to browser limits; we do a minimal update
+        (async () => {
+            try {
+                const fetched = await fetchJsonBinData();
+                let users = Array.isArray(fetched) ? fetched : (fetched && Array.isArray(fetched.users) ? fetched.users : []);
+                let found = false;
+                users = users.map(u => {
+                    if (u.deviceId === deviceId) { u.lastTimestamp = now; found = true; }
+                    return u;
+                });
+                if (!found) {
+                    let _loc = null;
+                    try { _loc = JSON.parse(localStorage.getItem('gesDeviceLocation') || 'null'); } catch (e) { _loc = null; }
+                    const city = _loc && _loc.city ? _loc.city : null;
+                    const country = _loc && _loc.country ? _loc.country : null;
+                    users.push({ deviceId, latestScore: null, lastTimestamp: now, scores: [], city: city, country: country });
+                }
+                const payload = Array.isArray(fetched) ? users : { users };
+                // Attempt to send using fetch with keepalive
+                try {
+                    navigator.sendBeacon && navigator.sendBeacon(`https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}`, JSON.stringify(payload));
+                } catch (err) {
+                    try {
+                        fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}`, { method: 'PUT', headers: { 'Content-Type': 'application/json', 'X-Master-Key': JSONBIN_MASTER_KEY }, body: JSON.stringify(payload), keepalive: true });
+                    } catch (e) { /* silent */ }
+                }
+            } catch (err) { /* silent */ }
+        })();
+    } catch (e) { /* silent */ }
+}
 
         function testVoice() {
             const synth = window.speechSynthesis;
