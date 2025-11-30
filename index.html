@@ -630,6 +630,29 @@
             // (Monitoring is started once after loadState; do not start/stop per view)
         }
 
+        // Disable or enable top navigation buttons (used to lock tabs during registration)
+        function setNavDisabled(disabled) {
+            try {
+                const navButtons = document.querySelectorAll('nav button');
+                navButtons.forEach(btn => {
+                    btn.disabled = !!disabled;
+                    if (disabled) {
+                        btn.classList.add('opacity-50', 'cursor-not-allowed');
+                        btn.classList.remove('hover:bg-gray-100');
+                        btn.setAttribute('aria-disabled', 'true');
+                        btn.tabIndex = -1;
+                    } else {
+                        btn.classList.remove('opacity-50', 'cursor-not-allowed');
+                        btn.classList.add('hover:bg-gray-100');
+                        btn.removeAttribute('aria-disabled');
+                        btn.tabIndex = 0;
+                    }
+                });
+            } catch (e) {
+                console.debug('Could not toggle nav disabled state:', e);
+            }
+        }
+
         function renderHomeView() {
             if (allQuestions.length === 0) {
                  contentArea.innerHTML = `
@@ -982,6 +1005,8 @@ async function detectAndFillLocationInputs() {
             // Not registered: hide loading overlay, render registration view and wait until registration completes
             const li = document.getElementById('loading-indicator');
             if (li) li.classList.add('hidden');
+            // Disable nav to prevent tab switching until registration completes
+            try { setNavDisabled(true); } catch (e) {}
             setView('register');
             return new Promise((resolve) => {
                 _registrationResolver = resolve;
@@ -1042,6 +1067,8 @@ async function detectAndFillLocationInputs() {
                     _registrationResolver();
                     _registrationResolver = null;
                 }
+                // Re-enable navigation after successful registration
+                try { setNavDisabled(false); } catch (e) {}
                 setView('home');
             } catch (e) {
                 console.error('Registration failed:', e);
@@ -1069,6 +1096,8 @@ async function detectAndFillLocationInputs() {
             } catch (e) {
                 throw e;
             }
+            // After creating a new user remotely, re-enable navigation if it was disabled
+            try { setNavDisabled(false); } catch (e) {}
         }
 
         async function updateUserScore(deviceId, percentage, timestamp, correctAnswers = null, totalQuestions = null) {
@@ -1110,20 +1139,59 @@ async function detectAndFillLocationInputs() {
             try {
                 const fetched = await fetchJsonBinData();
                 const usersRaw = Array.isArray(fetched) ? fetched : (fetched && Array.isArray(fetched.users) ? fetched.users : []);
-                // Filter out invalid or incomplete records (require deviceId and a non-empty name)
-                const users = (usersRaw || []).filter(u => u && u.deviceId && u.name && String(u.name).trim() !== '');
+
+                // Helper: pick the most recent non-zero score entry for a user
+                function getLatestNonZeroScore(u) {
+                    if (!u) return null;
+                    // Prefer explicit latestTotal/latestScore if it represents a completed run
+                    if (u.latestTotal != null && Number(u.latestTotal) > 0) {
+                        return {
+                            percentage: (u.latestScore != null ? parseFloat(u.latestScore) : 0),
+                            correct: (u.latestCorrect != null ? u.latestCorrect : 0),
+                            total: Number(u.latestTotal),
+                            timestamp: u.lastTimestamp || null
+                        };
+                    }
+                    // Otherwise scan the scores array from newest to oldest for a non-zero total
+                    if (Array.isArray(u.scores) && u.scores.length) {
+                        for (let i = u.scores.length - 1; i >= 0; i--) {
+                            const s = u.scores[i];
+                            const total = (s && (s.totalQuestions != null ? s.totalQuestions : (s.total != null ? s.total : 0)));
+                            if (total && Number(total) > 0) {
+                                return {
+                                    percentage: (s.percentage != null ? parseFloat(s.percentage) : 0),
+                                    correct: (s.correctAnswers != null ? s.correctAnswers : (s.correct != null ? s.correct : 0)),
+                                    total: Number(total),
+                                    timestamp: s.timestamp || null
+                                };
+                            }
+                        }
+                    }
+                    return null;
+                }
+
+                // Filter and only include users that have a most recent non-zero completed run
+                const users = (usersRaw || []).filter(u => {
+                    if (!u || !u.deviceId || !u.name || String(u.name).trim() === '') return false;
+                    const recent = getLatestNonZeroScore(u);
+                    return recent !== null && recent.total > 0;
+                });
                 if (!users || users.length === 0) {
                     contentArea.innerHTML = `<div class="p-6 bg-white rounded-xl shadow-lg text-center">No registered users found.</div>`;
                     return;
                 }
-                const ranked = users.map(u => ({
-                    name: u.name || 'Unknown',
-                    latestScore: (u.latestScore != null ? u.latestScore : 0),
-                    latestCorrect: (u.latestCorrect != null ? u.latestCorrect : (u.scores && u.scores.length ? u.scores[u.scores.length-1].correctAnswers || 0 : 0)),
-                    latestTotal: (u.latestTotal != null ? u.latestTotal : (u.scores && u.scores.length ? u.scores[u.scores.length-1].totalQuestions || 0 : 0)),
-                    phone: u.phone || '',
-                    email: u.email || ''
-                })).sort((a,b) => {
+                const ranked = users.map(u => {
+                    const recent = getLatestNonZeroScore(u) || { percentage: 0, correct: 0, total: 0, timestamp: null };
+                    return {
+                        name: u.name || 'Unknown',
+                        latestScore: recent.percentage,
+                        latestCorrect: recent.correct,
+                        latestTotal: recent.total,
+                        phone: u.phone || '',
+                        email: u.email || '',
+                        timestamp: recent.timestamp
+                    };
+                }).sort((a,b) => {
                     // Primary: percentage desc, Secondary: total questions desc
                     if (b.latestScore !== a.latestScore) return b.latestScore - a.latestScore;
                     return b.latestTotal - a.latestTotal;
