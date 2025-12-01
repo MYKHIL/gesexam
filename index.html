@@ -999,19 +999,36 @@
         }
 
         function formatText(text) {
-            // Replace **text** with <span class="text-blue-700 font-bold">text</span>
-            let formatted = text.replace(/\*\*([^*]+)\*\*/g, '<span class="text-blue-700 font-bold">$1</span>');
-            
-            // Replace *text* with <span class="text-blue-700 font-bold">text</span>
+            if (!text && text !== 0) return '';
+            let formatted = String(text);
+
+            // Normalize common newline markers: actual newlines, literal \n, or /n
+            // Replace with <br> for HTML display
+            try {
+                formatted = formatted.replace(/\\r\\n|\\r|\\n/g, '<br>'); // actual newlines
+            } catch (e) {}
+            try {
+                formatted = formatted.replace(/\\n/g, '<br>'); // literal backslash-n
+            } catch (e) {}
+            try {
+                formatted = formatted.replace(/\/n/g, '<br>'); // slash-n
+            } catch (e) {}
+
+            // Replace **text** with bold span
+            formatted = formatted.replace(/\*\*([^*]+)\*\*/g, '<span class="text-blue-700 font-bold">$1</span>');
+
+            // Replace *text* with bold span (single asterisks)
             formatted = formatted.replace(/\*([^*]+)\*/g, '<span class="text-blue-700 font-bold">$1</span>');
-            
-            // Replace 'text' with <span class="text-blue-700 font-bold">text</span>
-            formatted = formatted.replace(/'([^']+)'/g, '<span class="text-blue-700 font-bold">$1</span>');
-            
+
+            // Replace 'text' with bold span only when surrounded by whitespace or string boundaries
+            // This avoids matching possessive forms like "teacher's"
+            formatted = formatted.replace(/(^|\s)'([^']+)'(\s|$)/g, function(_, pre, inner, post) {
+                return (pre || '') + `<span class="text-blue-700 font-bold">${inner}</span>` + (post || '');
+            });
+
             // Add line breaks before listed items (Roman numerals, letters, or numbers followed by period/parenthesis)
-            // Patterns: I., II., III., IV., etc. or (I), (II), etc. or A., B., C., etc. or 1., 2., 3., etc.
             formatted = formatted.replace(/\s+((?:[IVX]+|[A-Za-z]|[0-9]+)[\.\)]\s+)/g, '<br>$1');
-            
+
             return formatted;
         }
 
@@ -1205,6 +1222,19 @@ async function detectAndFillLocationInputs() {
                 let reporterLocation = null;
                 try { reporterLocation = JSON.parse(localStorage.getItem('gesDeviceLocation') || 'null'); } catch (e) { reporterLocation = null; }
 
+                // Normalize source file and line information. Some question sources include the line
+                // number appended in brackets/parentheses (e.g. "set25.json [123]") — parse that out.
+                let sourceFileRaw = q.__sourceFile || null;
+                let sourceLineRaw = q.__sourceLine || null;
+                if (sourceFileRaw && !sourceLineRaw && typeof sourceFileRaw === 'string') {
+                    // Try patterns like: "file.ext [123]", "file.ext (123)", "file.ext:123", "file.ext - line 123"
+                    const bracketMatch = sourceFileRaw.match(/^(.*?)\s*[\[\(:\-]\s*line?\s*:?\s*(\d+)\s*[\]\)]?$/i) || sourceFileRaw.match(/^(.*?)[\s]*[\[\(:]\s*(\d+)\s*[\]\)]?$/);
+                    if (bracketMatch) {
+                        sourceFileRaw = (bracketMatch[1] || '').trim();
+                        sourceLineRaw = parseInt(bracketMatch[2], 10) || null;
+                    }
+                }
+
                 const report = {
                     id: `r_${Date.now()}_${Math.random().toString(36).slice(2,8)}`,
                     deviceId,
@@ -1214,8 +1244,8 @@ async function detectAndFillLocationInputs() {
                     questionId: q.id || null,
                     question: q.question || null,
                     fullQuestionObject: q,
-                    sourceFile: q.__sourceFile || null,
-                    sourceLine: q.__sourceLine || null,
+                    sourceFile: sourceFileRaw || null,
+                    sourceLine: sourceLineRaw || null,
                     sourceIndex: q.__sourceIndex || null,
                     tags,
                     comment,
@@ -2161,6 +2191,89 @@ async function detectAndFillLocationInputs() {
             }
         }
 
+        // Show a transient popup with current online usernames when the header badge is clicked
+        async function showOnlineUsersPopup(ev) {
+            try {
+                // Toggle behavior: hide if already visible
+                const existing = document.getElementById('online-users-popup');
+                if (existing) { existing.remove(); document.removeEventListener('click', _onlinePopupOutsideClickHandler); document.removeEventListener('touchstart', _onlinePopupOutsideClickHandler); return; }
+
+                // Fetch users (prefer Firestore, fallback to jsonbin)
+                let users = [];
+                try {
+                    if (!firebaseInitialized) await initFirebase();
+                    if (firebaseInitialized && firestoreDb && window._fb && window._fb.getDocs) {
+                        const qs = await window._fb.getDocs(window._fb.collection(firestoreDb, 'users'));
+                        qs.forEach(d => users.push(d.data()));
+                    }
+                } catch (e) {
+                    console.debug('Could not fetch users from Firestore for online list (fallback to jsonbin):', e);
+                }
+                if (!users || users.length === 0) {
+                    const fetched = await fetchJsonBinData().catch(() => null);
+                    users = Array.isArray(fetched) ? fetched : (fetched && Array.isArray(fetched.users) ? fetched.users : []);
+                }
+
+                const threshold = Date.now() - ONLINE_WINDOW_MS;
+                const onlineUsers = users.filter(u => {
+                    if (!u || !u.lastTimestamp) return false;
+                    const t = Date.parse(u.lastTimestamp);
+                    return !isNaN(t) && t >= threshold;
+                }).filter(u => u && u.name).map(u => ({ name: u.name }));
+
+                // Build popup element
+                const popup = document.createElement('div');
+                popup.id = 'online-users-popup';
+                popup.className = 'bg-white rounded-lg shadow-lg border p-3 text-sm z-50';
+                popup.style.position = 'absolute';
+                popup.style.minWidth = '200px';
+                popup.style.maxWidth = '360px';
+                popup.style.boxSizing = 'border-box';
+
+                if (onlineUsers.length === 0) {
+                    popup.innerHTML = `<div class="font-semibold">No users currently online</div>`;
+                } else {
+                    const items = onlineUsers.map(u => `<div class="py-1">${escapeHtml(u.name)}</div>`).join('');
+                    popup.innerHTML = `<div class="font-semibold mb-2">Users online</div><div>${items}</div>`;
+                }
+
+                document.body.appendChild(popup);
+
+                // Position the popup under the badge
+                const badge = document.getElementById('online-badge');
+                if (badge) {
+                    const rect = badge.getBoundingClientRect();
+                    // prefer showing below the badge; if near viewport bottom, show above
+                    const top = (rect.bottom + 8 + popup.offsetHeight) > window.innerHeight ? (rect.top - 8 - popup.offsetHeight) : (rect.bottom + 8);
+                    const left = Math.max(8, Math.min(window.innerWidth - popup.offsetWidth - 8, rect.left));
+                    popup.style.top = `${top + window.scrollY}px`;
+                    popup.style.left = `${left + window.scrollX}px`;
+                } else {
+                    // default center-top
+                    popup.style.top = `${50 + window.scrollY}px`;
+                    popup.style.left = `${window.innerWidth/2 - 180 + window.scrollX}px`;
+                }
+
+                // Hide when clicking/tapping outside (support touch devices)
+                document.addEventListener('click', _onlinePopupOutsideClickHandler);
+                document.addEventListener('touchstart', _onlinePopupOutsideClickHandler);
+            } catch (e) {
+                console.debug('Failed to show online users popup:', e);
+            }
+        }
+
+        function _onlinePopupOutsideClickHandler(ev) {
+            try {
+                const popup = document.getElementById('online-users-popup');
+                const badge = document.getElementById('online-badge');
+                if (!popup) { document.removeEventListener('click', _onlinePopupOutsideClickHandler); return; }
+                const target = ev.target;
+                if (popup.contains(target) || (badge && badge.contains(target))) return; // click inside -> ignore
+                popup.remove();
+                document.removeEventListener('click', _onlinePopupOutsideClickHandler);
+            } catch (e) { /* silent */ }
+        }
+
 // --- Rankings auto-refresh ---
 let _rankingsRefreshTimer = null;
 function startRankingsAutoRefresh() {
@@ -2253,6 +2366,15 @@ async function updateUserLocationIfBetter(loc) {
             document.addEventListener('visibilitychange', _visibilityHeartbeatHandler);
             // Try to send a final heartbeat when the page unloads (best-effort)
             window.addEventListener('beforeunload', _beforeUnloadHeartbeatHandler);
+            // Attach click handler to header badge to show online users popup
+            try {
+                const badge = document.getElementById('online-badge');
+                if (badge && !badge._onlineClickAttached) {
+                    badge.addEventListener('click', showOnlineUsersPopup);
+                    badge.addEventListener('touchstart', showOnlineUsersPopup);
+                    badge._onlineClickAttached = true;
+                }
+            } catch (e) { /* silent */ }
         }
 
         function stopOnlineMonitoring() {
@@ -2260,6 +2382,17 @@ async function updateUserLocationIfBetter(loc) {
             if (_onlineFetchTimer) { clearInterval(_onlineFetchTimer); _onlineFetchTimer = null; }
             try { document.removeEventListener('visibilitychange', _visibilityHeartbeatHandler); } catch (e) { }
             try { window.removeEventListener('beforeunload', _beforeUnloadHeartbeatHandler); } catch (e) { }
+            try {
+                const badge = document.getElementById('online-badge');
+                if (badge && badge._onlineClickAttached) {
+                    badge.removeEventListener('click', showOnlineUsersPopup);
+                    try { badge.removeEventListener('touchstart', showOnlineUsersPopup); } catch (e) { }
+                    delete badge._onlineClickAttached;
+                }
+                // Ensure popup removed
+                const popup = document.getElementById('online-users-popup'); if (popup) popup.remove();
+                document.removeEventListener('click', _onlinePopupOutsideClickHandler);
+            } catch (e) { /* silent */ }
         }
 
 function _visibilityHeartbeatHandler() {
@@ -2590,7 +2723,7 @@ function _beforeUnloadHeartbeatHandler(e) {
                 } else if (key === currentSelection) {
                     className += ' selected';
                 }
-                optionsHtml += `<button id="option-${key}" class="${className}" data-option="${key}" onclick="selectOption('${key}')" ${feedbackShown || reviewMode ? 'disabled' : ''}><span class="option-letter">${key}.</span><span class="text-left">${q.options[key]}</span></button>`;
+                optionsHtml += `<button id="option-${key}" class="${className}" data-option="${key}" onclick="selectOption('${key}')" ${feedbackShown || reviewMode ? 'disabled' : ''}><span class="option-letter">${key}.</span><span class="text-left">${formatText(q.options[key])}</span></button>`;
             }
 
             questionArea.innerHTML = `
@@ -2708,7 +2841,7 @@ function _beforeUnloadHeartbeatHandler(e) {
                 let className = 'option-button';
                 if (key === q.answer) className += ' correct';
                 else if (key === userAnswer && userAnswer !== q.answer) className += ' incorrect';
-                optionsHtml += `<button class="${className}" disabled><span class="option-letter">${key}.</span><span class="text-left">${q.options[key]}</span></button>`;
+                optionsHtml += `<button class="${className}" disabled><span class="option-letter">${key}.</span><span class="text-left">${formatText(q.options[key])}</span></button>`;
             }
 
             questionArea.innerHTML = `
