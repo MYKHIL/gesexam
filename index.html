@@ -1921,12 +1921,39 @@ async function detectAndFillLocationInputs() {
 
                     // include explicit latest fields if available
                     try {
-                        if (u.latestTotal != null && Number(u.latestTotal) > 0 && u.lastTimestamp) {
+                        if (u.latestTotal != null && Number(u.latestTotal) > 0) {
+                            // Prefer an explicit timestamp for the latest score if available.
+                            // Look for common property names or try to find a matching entry in u.scores.
+                            let ts = null;
+                            const preferNames = ['latestScoreTimestamp','latestTimestamp','latestAt','latest_time','latest_time_ms'];
+                            for (const p of preferNames) {
+                                if (u[p]) { ts = u[p]; break; }
+                            }
+                            // If not found, try to correlate with an entry in scores[]
+                            try {
+                                if (!ts && Array.isArray(u.scores) && u.scores.length) {
+                                    for (let i = u.scores.length - 1; i >= 0; i--) {
+                                        const s = u.scores[i];
+                                        const total = (s && (s.totalQuestions != null ? s.totalQuestions : (s.total != null ? s.total : 0)));
+                                        const perc = (s && s.percentage != null) ? parseFloat(s.percentage) : null;
+                                        if (total && Number(total) > 0 && Number(total) === Number(u.latestTotal)) {
+                                            // If percentage matches or no explicit latestScore, accept this
+                                            if (perc !== null && u.latestScore != null) {
+                                                if (Math.abs(perc - parseFloat(u.latestScore)) < 0.0001) { ts = s.timestamp || s.time || s.t || null; break; }
+                                            } else {
+                                                ts = s.timestamp || s.time || s.t || null; break;
+                                            }
+                                        }
+                                    }
+                                }
+                            } catch (e) { /* ignore correlation errors */ }
+                            // Fallback to lastTimestamp if still unknown
+                            if (!ts) ts = u.lastTimestamp || null;
                             candidates.push({
                                 percentage: (u.latestScore != null ? parseFloat(u.latestScore) : 0),
                                 correct: (u.latestCorrect != null ? u.latestCorrect : 0),
                                 total: Number(u.latestTotal),
-                                timestamp: u.lastTimestamp
+                                timestamp: ts
                             });
                         }
                     } catch (e) { /* ignore malformed */ }
