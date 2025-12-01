@@ -197,6 +197,109 @@
         // JSONBin.io configuration (provided by user)
         const JSONBIN_BIN_ID = '69296a23ae596e708f7617ae';
         const JSONBIN_MASTER_KEY = '$2a$10$Zwr/q5r0c.Lv/6Ikq9a.ROrJruWGsHzf8uSI/HWq7yjG.4OrsE2O6';
+        // Admin password to view reported questions (client-side check)
+        // NOTE: In production, move admin validation to a server-side endpoint.
+        const JSONBIN_ADMIN_PASSWORD = 'admin-password-placeholder';
+        // Separate JSONBin for question reviews/reports (per user's request)
+        const JSONBIN_REVIEWS_BIN_ID = '692ddf72ae596e708f7cd475';
+        // Firebase configuration (primary database)
+        const FIREBASE_CONFIG = {
+            apiKey: "AIzaSyD64PHz4QI-Qjls55BGjkhtLi-Ro0IFxxc",
+            authDomain: "ges-promotions-exam.firebaseapp.com",
+            projectId: "ges-promotions-exam",
+            storageBucket: "ges-promotions-exam.firebasestorage.app",
+            messagingSenderId: "466473513288",
+            appId: "1:466473513288:web:4106ce050d91783416c37d",
+            measurementId: "G-6MYF15GZWE"
+        };
+
+        // Toggle user-facing Firebase failure notifications (set to false to suppress)
+        const FIREBASE_NOTIFICATION_ENABLED = false;
+        // Number of days a score remains eligible for global rankings
+        const RANKING_TTL_DAYS = 5;
+        // Whether to attempt automatic anonymous Firebase Authentication
+        const FIREBASE_AUTO_ANONYMOUS = true;
+
+        // Firestore reference (initialized later)
+        let firestoreDb = null;
+        let firebaseInitialized = false;
+
+        async function initFirebase() {
+            if (firebaseInitialized) return;
+            try {
+                const { initializeApp } = await import('https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js');
+                const { getFirestore, doc, getDoc, setDoc, updateDoc, collection, getDocs, deleteDoc } = await import('https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js');
+                const { getAuth, signInAnonymously, onAuthStateChanged } = await import('https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js');
+                const { getAnalytics } = await import('https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js');
+
+                const app = initializeApp(FIREBASE_CONFIG);
+                const auth = getAuth(app);
+                firestoreDb = getFirestore(app);
+
+                // Expose commonly used functions via a small shim
+                window._fb = { doc, getDoc, setDoc, updateDoc, collection, getDocs, deleteDoc, auth };
+
+                // Initialize Analytics (best-effort) and attempt anonymous sign-in when configured to do so
+                try {
+                    if (getAnalytics) {
+                        try { getAnalytics(app); } catch (e) { console.debug('getAnalytics failed (non-fatal):', e); }
+                    }
+                } catch (e) { /* ignore */ }
+                if (FIREBASE_AUTO_ANONYMOUS) {
+                    try {
+                        // signInAnonymously will create a valid auth token required by rules that check request.auth
+                        await signInAnonymously(auth);
+                        // Wait until auth state is settled
+                        await new Promise((resolve) => {
+                            const unsub = onAuthStateChanged(auth, (user) => {
+                                if (user) {
+                                    console.log('Firebase auth ready (uid):', user.uid);
+                                } else {
+                                    console.log('Firebase auth state change: no user');
+                                }
+                                unsub();
+                                resolve();
+                            });
+                        });
+                    } catch (authErr) {
+                        // Build concise details
+                        const authCode = authErr && authErr.code ? authErr.code : null;
+                        const authMessage = authErr && authErr.message ? authErr.message : String(authErr);
+                        const usedCreds = {
+                            projectId: FIREBASE_CONFIG && FIREBASE_CONFIG.projectId ? FIREBASE_CONFIG.projectId : null,
+                            authDomain: FIREBASE_CONFIG && FIREBASE_CONFIG.authDomain ? FIREBASE_CONFIG.authDomain : null,
+                            apiKey: FIREBASE_CONFIG && FIREBASE_CONFIG.apiKey ? FIREBASE_CONFIG.apiKey : null,
+                            appId: FIREBASE_CONFIG && FIREBASE_CONFIG.appId ? FIREBASE_CONFIG.appId : null
+                        };
+
+                        // Log full details to console for debugging
+                        console.error('Firebase anonymous auth failed:', { code: authCode, message: authMessage, usedCreds, fullError: authErr });
+
+                        // Provide an actionable, user-facing hint when possible
+                        let hint = '';
+                        if (authCode && (authCode.indexOf('operation-not-allowed') !== -1 || authCode.indexOf('operation-not-allowed') !== -1)) {
+                            hint = 'Enable Anonymous sign-in in Firebase Console → Authentication → Sign-in method.';
+                        } else if (authCode && authCode.indexOf('configuration') !== -1) {
+                            hint = 'Check your Firebase project configuration (apiKey, authDomain, projectId, appId) in the app.';
+                        }
+
+                        try {
+                            if (FIREBASE_NOTIFICATION_ENABLED) {
+                                const shortMsg = authCode ? `${authCode}: ${authMessage}` : authMessage;
+                                showMessage(`Firebase auth failed: ${shortMsg}. ${hint} See console for details.`, 'error');
+                            }
+                        } catch (err) {}
+                    }
+                }
+
+                firebaseInitialized = true;
+                console.log('Firebase initialized and Firestore is available');
+            } catch (e) {
+                console.warn('Could not initialize Firebase (will use jsonbin fallback):', e);
+                try { if (FIREBASE_NOTIFICATION_ENABLED) showMessage('Could not initialize Firebase — falling back to jsonbin.io', 'info'); } catch (err) { /* ignore showMessage errors */ }
+                firebaseInitialized = false;
+            }
+        }
         
         let renderResultsCalled = false;
         let allQuestions = []; // Master list of all questions (static or uploaded)
@@ -248,6 +351,16 @@
                 messageBox.className = baseClass + styleClass + ' translate-y-full opacity-0';
             }, 3000);
         }
+
+                function escapeHtml(unsafe) {
+                        if (!unsafe) return '';
+                        return String(unsafe)
+                            .replace(/&/g, '&amp;')
+                            .replace(/</g, '&lt;')
+                            .replace(/>/g, '&gt;')
+                            .replace(/"/g, '&quot;')
+                            .replace(/'/g, '&#039;');
+                }
 
         function isValidQuestion(item) {
             return item && 
@@ -310,19 +423,48 @@
                     document.getElementById('loading-count').textContent = `${allQuestionsLoaded.length} questions loaded | Loading set${filesProcessed} of ${totalFiles}...`;
                     
                     if (!response.ok) continue; // Skip if file can't be read
-                    
-                    const data = await response.json();
+
+                    // Load raw text to capture source file and approximate line numbers
+                    const rawText = await response.text();
+                    let data;
+                    try {
+                        data = JSON.parse(rawText);
+                    } catch (e) {
+                        console.debug(`Failed to parse JSON from ${filePath}:`, e);
+                        continue; // skip file if not valid JSON
+                    }
                     if (!Array.isArray(data)) continue;
 
-                    // Validate and deduplicate
+                    // Validate and deduplicate, attach source metadata
                     let validCount = 0;
-                    for (const item of data) {
+                    for (let i = 0; i < data.length; i++) {
+                        const item = data[i];
                         if (isValidQuestion(item)) {
                             const hash = createQuestionHash(item);
                             if (!seenHashes.has(hash)) {
                                 seenHashes.add(hash);
-                                allQuestionsLoaded.push(item);
-                                validCount++;
+                                // Attach source metadata so we can identify file and approximate line later
+                                try {
+                                    // Attempt to find the stringified item in the raw text to get a line number
+                                    const itemString = JSON.stringify(item);
+                                    let idx = rawText.indexOf(itemString);
+                                    // If not found, try a more robust approach using the question text
+                                    if (idx === -1 && item.question) {
+                                        idx = rawText.indexOf(item.question);
+                                    }
+                                    const lineNumber = idx === -1 ? null : (rawText.slice(0, idx).split('\n').length + 1);
+                                    const enriched = Object.assign({}, item, {
+                                        __sourceFile: filePath,
+                                        __sourceIndex: i,
+                                        __sourceLine: lineNumber
+                                    });
+                                    allQuestionsLoaded.push(enriched);
+                                    validCount++;
+                                } catch (e) {
+                                    // Fallback: still include item without line info
+                                    allQuestionsLoaded.push(Object.assign({}, item, { __sourceFile: filePath, __sourceIndex: i, __sourceLine: null }));
+                                    validCount++;
+                                }
                             }
                         }
                     }
@@ -423,12 +565,27 @@
             // 4. Load session history
             loadSessionHistory();
 
-            // 5. Ensure device is registered on the remote leaderboard store
+            // 5. Initialize Firebase first so registration checks can query Firestore
+            try {
+                await initFirebase();
+            } catch (e) {
+                console.debug('Firebase init skipped or failed (will fallback to jsonbin):', e);
+            }
+
+            // Ensure device is registered on the remote leaderboard store
             try {
                 await ensureRegistered();
             } catch (e) {
                 console.error('Registration check failed:', e);
                 // allow app to continue but user will need to register to start sessions
+            }
+
+            // Attempt one-time migration from JSONBin -> Firebase (non-blocking)
+            try {
+                try { await migrateJsonbinToFirebase(); } catch (e) { console.debug('Migration error (non-fatal)', e); }
+                try { await migrateUsersJsonbinToFirebase(); } catch (e) { console.debug('User migration error (non-fatal)', e); }
+            } catch (e) {
+                console.debug('Firebase migration step encountered an error (non-fatal):', e);
             }
 
             // 6. Re-render based on loaded state
@@ -818,6 +975,11 @@
                             <input type="range" id="ttsPitch" min="0" max="2" step="0.1" value="${quizSettings.ttsPitch}" oninput="updateSettingsAuto(); document.getElementById('ttsPitchValue').textContent = this.value" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
                         </div>
                     </div>
+                    <div class="border-t pt-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Admin</h3>
+                        <p class="text-sm text-gray-600 mb-3">View and manage questions reported by users. Requires admin password.</p>
+                        <button onclick="promptAdminAndShowReports()" class="px-4 py-2 bg-yellow-600 text-white rounded-lg font-semibold hover:bg-yellow-700">View Reported Questions (Admin)</button>
+                    </div>
                 </div>
             `;
         }
@@ -880,9 +1042,21 @@
             }
         }
 
-        async function fetchJsonBinData() {
-            if (!JSONBIN_BIN_ID || !JSONBIN_MASTER_KEY) throw new Error('JSONBin not configured');
-            const url = `https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}/latest`;
+        // Returns true if a user has completed registration (local marker)
+        function isUserRegistered() {
+            try {
+                const cu = localStorage.getItem('gesCurrentUser');
+                if (!cu) return false;
+                const parsed = JSON.parse(cu);
+                return !!(parsed && parsed.deviceId);
+            } catch (e) {
+                return false;
+            }
+        }
+
+        async function fetchJsonBinData(binId = JSONBIN_BIN_ID) {
+            if (!binId || !JSONBIN_MASTER_KEY) throw new Error('JSONBin not configured');
+            const url = `https://api.jsonbin.io/v3/b/${binId}/latest`;
             const resp = await fetch(url, {
                 method: 'GET',
                 headers: {
@@ -967,8 +1141,8 @@ async function detectAndFillLocationInputs() {
     }
 }
 
-        async function putJsonBinData(newData) {
-            const url = `https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}`;
+        async function putJsonBinData(newData, binId = JSONBIN_BIN_ID) {
+            const url = `https://api.jsonbin.io/v3/b/${binId}`;
             const resp = await fetch(url, {
                 method: 'PUT',
                 headers: {
@@ -981,6 +1155,463 @@ async function detectAndFillLocationInputs() {
             return await resp.json();
         }
 
+        // --- Reporting Problematic Questions ---
+        function _createModalContainer(id) {
+            let el = document.getElementById(id);
+            if (el) return el;
+            el = document.createElement('div');
+            el.id = id;
+            document.body.appendChild(el);
+            return el;
+        }
+
+        function openReportDialog() {
+            const q = sessionQuestions[currentQuestionIndex];
+            if (!q) { showMessage('No question available to report.', 'error'); return; }
+            const modal = _createModalContainer('report-modal');
+            modal.innerHTML = `
+                <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-60">
+                    <div class="bg-white rounded-lg p-6 max-w-2xl w-full shadow-2xl">
+                        <h3 class="text-xl font-bold mb-2">Report Question</h3>
+                        <p class="text-sm text-gray-600 mb-3">Please describe the issue and add optional tags (comma-separated).</p>
+                        <div class="mb-3 text-sm text-gray-800 p-3 bg-gray-50 rounded">${formatText(q.question)}</div>
+                        <input id="report-tags" placeholder="Tags (e.g. typo,wrong-answer,ambiguous)" class="w-full p-2 border rounded mb-2" />
+                        <textarea id="report-comment" placeholder="Comment (what's wrong?)" rows="4" class="w-full p-2 border rounded mb-3"></textarea>
+                        <div class="flex justify-end gap-2">
+                            <button onclick="closeReportDialog()" class="px-4 py-2 bg-gray-200 rounded">Cancel</button>
+                            <button onclick="submitReport()" class="px-4 py-2 bg-yellow-500 text-white rounded">Submit Report</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function closeReportDialog() {
+            const modal = document.getElementById('report-modal');
+            if (modal) modal.innerHTML = '';
+        }
+
+        async function submitReport() {
+            try {
+                const q = sessionQuestions[currentQuestionIndex];
+                if (!q) { showMessage('No question found to report.', 'error'); return; }
+                const tagsRaw = (document.getElementById('report-tags') && document.getElementById('report-tags').value) || '';
+                const tags = tagsRaw.split(',').map(t => t.trim()).filter(Boolean);
+                const comment = (document.getElementById('report-comment') && document.getElementById('report-comment').value.trim()) || null;
+                const deviceId = getDeviceId();
+                let currentUser = null;
+                try { currentUser = JSON.parse(localStorage.getItem('gesCurrentUser') || 'null'); } catch (e) { currentUser = null; }
+                // Attempt to include reporter location if available
+                let reporterLocation = null;
+                try { reporterLocation = JSON.parse(localStorage.getItem('gesDeviceLocation') || 'null'); } catch (e) { reporterLocation = null; }
+
+                const report = {
+                    id: `r_${Date.now()}_${Math.random().toString(36).slice(2,8)}`,
+                    deviceId,
+                    reporterName: currentUser ? (currentUser.name || null) : null,
+                    reporterEmail: currentUser ? (currentUser.email || null) : null,
+                    reporterLocation: reporterLocation || null,
+                    questionId: q.id || null,
+                    question: q.question || null,
+                    fullQuestionObject: q,
+                    sourceFile: q.__sourceFile || null,
+                    sourceLine: q.__sourceLine || null,
+                    sourceIndex: q.__sourceIndex || null,
+                    tags,
+                    comment,
+                    status: 'open',
+                    createdAt: new Date().toISOString()
+                };
+
+                await appendReportToJsonBin(report);
+                closeReportDialog();
+                showMessage('Report submitted. Thank you.', 'success');
+            } catch (e) {
+                console.error('Failed to submit report:', e);
+                showMessage('Could not submit report. Try again later.', 'error');
+            }
+        }
+
+        async function appendReportToJsonBin(report) {
+            // Try to save to Firebase first (preferred). If that fails, fall back to jsonbin.
+            try {
+                if (!firebaseInitialized) await initFirebase();
+                if (firebaseInitialized && firestoreDb && window._fb && window._fb.setDoc) {
+                    await window._fb.setDoc(window._fb.doc(firestoreDb, 'reviews', report.id), report);
+                    return true;
+                }
+            } catch (e) {
+                console.warn('Saving report to Firebase failed, falling back to jsonbin:', e);
+            }
+
+            try {
+                // Use the dedicated reviews bin for reports
+                const data = await fetchJsonBinData(JSONBIN_REVIEWS_BIN_ID).catch(() => null);
+                // Ensure we have an object to modify
+                const base = (data && typeof data === 'object') ? data : {};
+                base.reports = Array.isArray(base.reports) ? base.reports : [];
+                base.reports.push(report);
+                await putJsonBinData(base, JSONBIN_REVIEWS_BIN_ID);
+                return true;
+            } catch (e) {
+                console.error('appendReportToJsonBin error (jsonbin fallback):', e);
+                throw e;
+            }
+        }
+
+        // Update status (open/resolved) for a report and persist to the reviews bin
+        async function updateReportStatus(reportId, newStatus) {
+            // Try Firestore update first (best-effort), then fallback to jsonbin
+            try {
+                if (!firebaseInitialized) await initFirebase();
+                if (firebaseInitialized && firestoreDb && window._fb && window._fb.getDoc && window._fb.setDoc) {
+                    try {
+                        const docRef = window._fb.doc(firestoreDb, 'reviews', reportId);
+                        const snap = await window._fb.getDoc(docRef).catch(() => null);
+                        const exists = snap && (typeof snap.exists === 'function' ? snap.exists() : snap.exists);
+                        if (!exists) throw new Error('Report not found');
+                        const report = snap.data ? snap.data() : (snap && snap.data) || {};
+                        report.status = newStatus;
+                        if (newStatus === 'resolved') report.resolvedAt = new Date().toISOString();
+                        else report.resolvedAt = null;
+                        await window._fb.setDoc(docRef, report);
+                        return report;
+                    } catch (e) {
+                        console.debug('Firestore updateReportStatus failed, falling back to jsonbin:', e);
+                        // fall through to jsonbin fallback
+                    }
+                }
+            } catch (e) {
+                console.debug('updateReportStatus (firestore check) error:', e);
+            }
+
+            // Fallback: update in JSONBin
+            try {
+                const data = await fetchJsonBinData(JSONBIN_REVIEWS_BIN_ID);
+                const base = (data && typeof data === 'object') ? data : {};
+                base.reports = Array.isArray(base.reports) ? base.reports : [];
+                const idx = base.reports.findIndex(r => r.id === reportId);
+                if (idx === -1) throw new Error('Report not found');
+                base.reports[idx].status = newStatus;
+                if (newStatus === 'resolved') base.reports[idx].resolvedAt = new Date().toISOString();
+                else base.reports[idx].resolvedAt = null;
+                await putJsonBinData(base, JSONBIN_REVIEWS_BIN_ID);
+                return base.reports[idx];
+            } catch (e) {
+                console.error('updateReportStatus error:', e);
+                throw e;
+            }
+        }
+
+        // Replace the whole reports list in the reviews bin (helper)
+        async function saveReportsListToBin(reports) {
+            try {
+                const base = { reports: Array.isArray(reports) ? reports : [] };
+                await putJsonBinData(base, JSONBIN_REVIEWS_BIN_ID);
+                return true;
+            } catch (e) {
+                console.error('saveReportsListToBin error:', e);
+                throw e;
+            }
+        }
+
+        // Delete a report permanently (prefer Firestore, fallback to jsonbin)
+        async function deleteReport(reportId) {
+            // Try Firestore delete first
+            try {
+                if (!firebaseInitialized) await initFirebase();
+                if (firebaseInitialized && firestoreDb && window._fb && window._fb.deleteDoc && window._fb.doc) {
+                    const docRef = window._fb.doc(firestoreDb, 'reviews', reportId);
+                    await window._fb.deleteDoc(docRef);
+                    return true;
+                }
+            } catch (e) {
+                console.debug('Firestore deleteReport failed, falling back to jsonbin:', e);
+            }
+
+            // Fallback: remove from JSONBin reviews bin
+            try {
+                const data = await fetchJsonBinData(JSONBIN_REVIEWS_BIN_ID);
+                const base = (data && typeof data === 'object') ? data : {};
+                base.reports = Array.isArray(base.reports) ? base.reports : [];
+                const idx = base.reports.findIndex(r => r.id === reportId);
+                if (idx === -1) throw new Error('Report not found');
+                base.reports.splice(idx, 1);
+                await putJsonBinData(base, JSONBIN_REVIEWS_BIN_ID);
+                return true;
+            } catch (e) {
+                console.error('deleteReport error (jsonbin fallback):', e);
+                throw e;
+            }
+        }
+
+        // Fetch reports from Firebase (returns array) if available
+        async function fetchReportsFromFirebase() {
+            if (!firebaseInitialized) await initFirebase();
+            if (!firebaseInitialized || !firestoreDb || !window._fb || !window._fb.getDocs) return null;
+            try {
+                const qs = await window._fb.getDocs(window._fb.collection(firestoreDb, 'reviews'));
+                const arr = [];
+                qs.forEach(d => arr.push(d.data()));
+                return arr;
+            } catch (e) {
+                console.error('fetchReportsFromFirebase error:', e);
+                return null;
+            }
+        }
+
+        // Helper: load reports preferring Firestore, fallback to JSONBin; returns an object { reports: [...] }
+        async function loadReportsObject() {
+            try {
+                const fbReports = await fetchReportsFromFirebase();
+                if (Array.isArray(fbReports) && fbReports.length >= 0) return { reports: fbReports };
+            } catch (e) { /* silent */ }
+            try {
+                const data = await fetchJsonBinData(JSONBIN_REVIEWS_BIN_ID).catch(() => null);
+                if (data && typeof data === 'object') return data;
+            } catch (e) { /* silent */ }
+            return { reports: [] };
+        }
+
+        // Read admin password from Firestore document.
+        // Document: collection 'adminpassword', id '3hd77Y0mqg69DXNIBco1'
+        async function fetchAdminPasswordFromFirebase() {
+            try {
+                if (!firebaseInitialized) await initFirebase();
+                if (!firebaseInitialized || !firestoreDb || !window._fb || !window._fb.getDoc) return null;
+                const docRef = window._fb.doc(firestoreDb, 'adminpassword', '3hd77Y0mqg69DXNIBco1');
+                const snap = await window._fb.getDoc(docRef);
+                if (!snap || (typeof snap.exists === 'function' ? !snap.exists() : !snap.exists)) return null;
+                const data = snap.data ? snap.data() : (snap && snap.data) || null;
+                if (!data) return null;
+                // Try several common field names
+                return data.password || data.adminPassword || data.pw || data.value || null;
+            } catch (e) {
+                console.debug('fetchAdminPasswordFromFirebase error:', e);
+                return null;
+            }
+        }
+
+        // Migrate any reports from JSONBin -> Firebase if missing
+        async function migrateJsonbinToFirebase() {
+            try {
+                if (!firebaseInitialized) await initFirebase();
+                if (!firebaseInitialized || !firestoreDb || !window._fb || !window._fb.getDoc) return;
+                const data = await fetchJsonBinData(JSONBIN_REVIEWS_BIN_ID).catch(() => null);
+                const reports = (data && Array.isArray(data.reports)) ? data.reports : [];
+                if (!reports || reports.length === 0) return;
+                for (const r of reports) {
+                    try {
+                        const snap = await window._fb.getDoc(window._fb.doc(firestoreDb, 'reviews', r.id));
+                        if (!snap || !snap.exists || !snap.exists()) {
+                            // create in firebase
+                            await window._fb.setDoc(window._fb.doc(firestoreDb, 'reviews', r.id), r);
+                        }
+                    } catch (e) {
+                        console.debug('Could not migrate report', r && r.id, e);
+                    }
+                }
+                console.log('JSONBin -> Firebase migration complete (best-effort)');
+            } catch (e) {
+                console.debug('Migration skipped or failed:', e);
+            }
+        }
+
+        // Migrate user records from the main JSONBin into Firestore 'users' collection
+        async function migrateUsersJsonbinToFirebase() {
+            try {
+                if (!firebaseInitialized) await initFirebase();
+                if (!firebaseInitialized || !firestoreDb || !window._fb || !window._fb.getDoc) return;
+
+                const data = await fetchJsonBinData(JSONBIN_BIN_ID).catch(() => null);
+                // data may be an array of users, or an object with `users` property
+                const usersArr = Array.isArray(data) ? data : (data && Array.isArray(data.users) ? data.users : []);
+                if (!usersArr || usersArr.length === 0) {
+                    console.debug('No users found in JSONBin for migration');
+                    return;
+                }
+
+                let migrated = 0;
+                for (const u of usersArr) {
+                    try {
+                        if (!u || !u.deviceId) continue;
+                        const docRef = window._fb.doc(firestoreDb, 'users', u.deviceId);
+                        const snap = await window._fb.getDoc(docRef);
+                        const exists = snap && (typeof snap.exists === 'function' ? snap.exists() : snap.exists);
+                        if (!exists) {
+                            // Prepare user object to write (avoid storing large arrays of questions)
+                            const writeObj = Object.assign({}, u);
+                            await window._fb.setDoc(docRef, writeObj);
+                            migrated++;
+                        }
+                    } catch (e) {
+                        console.debug('Failed migrating user', u && u.deviceId, e);
+                    }
+                }
+                console.log(`User migration complete. Migrated ${migrated} users (best-effort).`);
+                if (migrated > 0) showMessage(`Migrated ${migrated} user(s) to Firebase.`, 'info');
+            } catch (e) {
+                console.debug('User migration skipped or failed:', e);
+            }
+        }
+
+        // Admin: prompt for password then display reported questions
+        async function promptAdminAndShowReports() {
+            // Fetch admin password from Firebase if available (best-effort)
+            let expectedPw = JSONBIN_ADMIN_PASSWORD;
+            try {
+                const fetched = await fetchAdminPasswordFromFirebase();
+                if (fetched) expectedPw = fetched;
+            } catch (e) {
+                console.debug('Could not read admin password from Firebase, using fallback.', e);
+            }
+
+            const pw = prompt('Enter admin password to view reported questions:');
+            if (!pw) return;
+            if (pw !== expectedPw) { showMessage('Invalid admin password.', 'error'); return; }
+
+            // Try Firebase first, then jsonbin fallback for the reports
+            try {
+                const fbReports = await fetchReportsFromFirebase();
+                if (Array.isArray(fbReports) && fbReports.length > 0) {
+                    renderReportsList(fbReports);
+                    return;
+                }
+            } catch (e) {
+                console.debug('Could not fetch reports from Firebase (fallback to jsonbin):', e);
+            }
+            try {
+                const data = await fetchJsonBinData(JSONBIN_REVIEWS_BIN_ID);
+                const reports = (data && Array.isArray(data.reports)) ? data.reports : [];
+                renderReportsList(reports);
+            } catch (e) {
+                console.error('Could not fetch reports from jsonbin:', e);
+                showMessage('Failed to load reports.', 'error');
+            }
+        }
+
+        function renderReportsList(reports) {
+            const modal = _createModalContainer('reports-modal');
+            // Build an interactive admin UI: filters + actionable list
+            const safeReports = Array.isArray(reports) ? reports.slice().reverse() : [];
+            const modalHtml = `
+                <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-60">
+                    <div class="bg-white rounded-lg p-4 max-w-[92vw] sm:max-w-3xl md:max-w-5xl w-full shadow-2xl max-h-[85vh] overflow-auto mx-2">
+                        <div class="flex items-start justify-between mb-4">
+                            <h3 class="text-xl font-bold">Reported Questions (${safeReports.length})</h3>
+                            <div class="space-x-2">
+                                <button onclick="closeReportsModal()" class="px-3 py-1 bg-gray-200 rounded">Close</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 mb-4">
+                            <div>
+                                <label class="text-sm font-semibold">Status</label>
+                                <select id="report-filter-status" class="w-full p-2 border rounded">
+                                    <option value="all">All</option>
+                                    <option value="open">Open</option>
+                                    <option value="resolved">Resolved</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="text-sm font-semibold">Tag</label>
+                                <input id="report-filter-tag" class="w-full p-2 border rounded" placeholder="tag filter (e.g. typo)" />
+                            </div>
+                            <div>
+                                <label class="text-sm font-semibold">Set #</label>
+                                <input id="report-filter-set" class="w-full p-2 border rounded" placeholder="e.g. 3" />
+                            </div>
+                            <div>
+                                <label class="text-sm font-semibold">Search</label>
+                                <input id="report-filter-search" class="w-full p-2 border rounded" placeholder="search question or comment" />
+                            </div>
+                        </div>
+                        <div id="reports-list-container" class="space-y-2">
+                        </div>
+                    </div>
+                </div>
+            `;
+            modal.innerHTML = modalHtml;
+
+            // Render list with filters applied
+            function renderList() {
+                const status = (document.getElementById('report-filter-status') && document.getElementById('report-filter-status').value) || 'all';
+                const tag = (document.getElementById('report-filter-tag') && document.getElementById('report-filter-tag').value.trim().toLowerCase()) || '';
+                const setNum = (document.getElementById('report-filter-set') && document.getElementById('report-filter-set').value.trim()) || '';
+                const search = (document.getElementById('report-filter-search') && document.getElementById('report-filter-search').value.trim().toLowerCase()) || '';
+
+                const container = document.getElementById('reports-list-container');
+                if (!container) return;
+
+                const filtered = safeReports.filter(r => {
+                    if (status !== 'all' && ((r.status || 'open') !== status)) return false;
+                    if (tag) {
+                        const tags = Array.isArray(r.tags) ? r.tags.map(t => t.toLowerCase()) : [];
+                        if (!tags.includes(tag)) return false;
+                    }
+                    if (setNum) {
+                        const setMatch = r.sourceFile ? (r.sourceFile.match(/set(\d+)\.json/) || []) : [];
+                        const s = setMatch[1] || '';
+                        if (s !== setNum) return false;
+                    }
+                    if (search) {
+                        const hay = ((r.question||'') + ' ' + (r.comment||'')).toLowerCase();
+                        if (!hay.includes(search)) return false;
+                    }
+                    return true;
+                });
+
+                if (filtered.length === 0) {
+                    container.innerHTML = `<div class="p-4 text-sm text-gray-600">No reports match the current filters.</div>`;
+                    return;
+                }
+
+                container.innerHTML = filtered.map(r => {
+                    const setMatch = r.sourceFile ? (r.sourceFile.match(/set(\d+)\.json/) || []) : [];
+                    const setNum = setMatch[1] || 'N/A';
+                    const reporter = r.reporterName ? `${r.reporterName}${r.reporterLocation && (r.reporterLocation.city || r.reporterLocation.country) ? ' — ' + (r.reporterLocation.city ? r.reporterLocation.city + ', ' : '') + (r.reporterLocation.country || '') : ''}` : (r.deviceId || 'Anonymous');
+                    const statusLabel = (r.status || 'open') === 'resolved' ? '<span class="text-green-700 font-semibold">Resolved</span>' : '<span class="text-yellow-700 font-semibold">Open</span>';
+                    return `
+                        <div class="border rounded p-3 bg-white">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-1">
+                                    <div class="text-sm text-gray-500">Set: ${setNum} • ${r.sourceFile || 'unknown'}${r.sourceLine ? ' (line ' + r.sourceLine + ')' : ''}</div>
+                                    <div class="font-semibold mt-1">${(r.question||'').substring(0,200)}</div>
+                                    <div class="text-sm text-gray-700 mt-2">Comment: ${r.comment || '<i>none</i>'}</div>
+                                    <div class="text-sm text-gray-600 mt-2">Tags: ${Array.isArray(r.tags) ? r.tags.join(', ') : ''}</div>
+                                </div>
+                                <div class="ml-4 text-right">
+                                    <div>${statusLabel}</div>
+                                    <div class="text-xs text-gray-500 mt-2">${new Date(r.createdAt).toLocaleString()}</div>
+                                    <div class="mt-3 flex flex-col items-end gap-2">
+                                        ${ (r.status || 'open') !== 'resolved' ? `<button onclick="(async()=>{ if(confirm('Mark this report as resolved?')){ try{ await updateReportStatus('${r.id}','resolved'); const freshObj = await loadReportsObject(); renderReportsList(freshObj && Array.isArray(freshObj.reports) ? freshObj.reports : []); showMessage('Marked resolved','success'); }catch(e){ showMessage('Failed to update report','error'); } } })()" class="px-3 py-1 bg-green-600 text-white rounded text-sm">Mark Resolved</button>` : `<div class="flex gap-2"><button onclick="(async()=>{ if(confirm('Reopen this report?')){ try{ await updateReportStatus('${r.id}','open'); const freshObj = await loadReportsObject(); renderReportsList(freshObj && Array.isArray(freshObj.reports) ? freshObj.reports : []); showMessage('Reopened report','info'); }catch(e){ showMessage('Failed to update report','error'); } } })()" class="px-3 py-1 bg-gray-200 rounded text-sm">Reopen</button>` +
+                                            ` <button onclick="(async()=>{ if(confirm('Delete this report permanently?')){ try{ await deleteReport('${r.id}'); const freshObj = await loadReportsObject(); renderReportsList(freshObj && Array.isArray(freshObj.reports) ? freshObj.reports : []); showMessage('Deleted report','success'); }catch(e){ console.error(e); showMessage('Failed to delete report','error'); } } })()" class="px-3 py-1 bg-red-600 text-white rounded text-sm">Delete</button></div>` }
+                                    </div>
+                                    <div class="mt-2 text-xs text-gray-500">Reporter: ${escapeHtml(reporter)}</div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // Attach filter listeners
+            ['report-filter-status','report-filter-tag','report-filter-set','report-filter-search'].forEach(id => {
+                const el = document.getElementById(id);
+                if (!el) return;
+                el.oninput = () => renderList();
+                el.onchange = () => renderList();
+            });
+
+            // Initial render
+            renderList();
+            return;
+        }
+
+        function closeReportsModal() {
+            const modal = document.getElementById('reports-modal');
+            if (modal) modal.innerHTML = '';
+        }
+
         // registration promise control so ensureRegistered can wait until user registers
         let _registrationResolver = null;
 
@@ -989,13 +1620,34 @@ async function detectAndFillLocationInputs() {
             if (!deviceId) return; // cannot proceed without device id
 
             try {
+                // Try Firestore first (if initialized)
+                if (window._fb && window._fb.getDoc && window._fb.doc) {
+                    try {
+                        const docRef = window._fb.doc(firestoreDb, 'users', deviceId);
+                        const snap = await window._fb.getDoc(docRef).catch(() => null);
+                        const exists = snap && (typeof snap.exists === 'function' ? snap.exists() : snap.exists);
+                        if (exists) {
+                            const fbUser = snap.data ? snap.data() : (snap && snap.data) || null;
+                            if (fbUser) {
+                                try { localStorage.setItem('gesCurrentUser', JSON.stringify(fbUser)); } catch (e) {}
+                                return; // already registered in Firestore
+                            }
+                        }
+                    } catch (e) {
+                            console.warn('Firestore check failed during registration:', e);
+                            try { if (FIREBASE_NOTIFICATION_ENABLED) showMessage('Could not access Firebase during registration check — falling back to jsonbin.io', 'info'); } catch (err) {}
+                            // fall through to jsonbin fallback
+                    }
+                }
+
+                // Fallback to jsonbin check
                 const data = await fetchJsonBinData();
                 const users = Array.isArray(data) ? data : (data && data.users ? data.users : []);
                 const found = users.find(u => u.deviceId === deviceId);
                 if (found) {
                     // store current user locally for quick access
                     try { localStorage.setItem('gesCurrentUser', JSON.stringify(found)); } catch (e) {}
-                    return; // already registered
+                    return; // already registered in jsonbin
                 }
             } catch (e) {
                 console.warn('Could not fetch jsonbin data during registration check:', e);
@@ -1077,7 +1729,20 @@ async function detectAndFillLocationInputs() {
         }
 
         async function registerUserToJsonBin(userObj) {
-            // Read existing data
+            // Prefer Firebase: write single user document to 'users' collection
+            try {
+                if (!firebaseInitialized) await initFirebase();
+                if (firebaseInitialized && firestoreDb && window._fb && window._fb.setDoc) {
+                    await window._fb.setDoc(window._fb.doc(firestoreDb, 'users', userObj.deviceId), userObj);
+                    try { setNavDisabled(false); } catch (e) {}
+                    return;
+                }
+            } catch (e) {
+                console.debug('Firebase registration write failed, falling back to jsonbin:', e);
+                try { if (FIREBASE_NOTIFICATION_ENABLED) showMessage('Could not write registration to Firebase; saving to jsonbin.io instead.', 'info'); } catch (err) {}
+            }
+
+            // Fallback: read-modify-write the jsonbin
             let data = [];
             try {
                 const fetched = await fetchJsonBinData();
@@ -1086,21 +1751,54 @@ async function detectAndFillLocationInputs() {
             } catch (e) {
                 console.warn('Assuming empty jsonbin; will create new array.');
             }
-            // Add user
             data.push(userObj);
-            // Write back (either as array or as { users: [...] } depending on existing structure)
             try {
-                // If fetched data originally was an object with 'users', preserve structure
                 const payload = Array.isArray(data) ? data : { users: data };
                 await putJsonBinData(payload);
+                try { setNavDisabled(false); } catch (e) {}
+                return;
             } catch (e) {
                 throw e;
             }
-            // After creating a new user remotely, re-enable navigation if it was disabled
-            try { setNavDisabled(false); } catch (e) {}
         }
 
         async function updateUserScore(deviceId, percentage, timestamp, correctAnswers = null, totalQuestions = null) {
+            // Prefer Firestore: update single user document
+            // Do not create or update remote user records for unregistered devices
+            if (!isUserRegistered()) {
+                try { showMessage('Register to save your score and appear on the leaderboard.', 'info'); } catch (e) {}
+                return;
+            }
+            try {
+                if (!firebaseInitialized) await initFirebase();
+                if (firebaseInitialized && firestoreDb && window._fb && window._fb.getDoc && window._fb.setDoc) {
+                    const docRef = window._fb.doc(firestoreDb, 'users', deviceId);
+                    const snap = await window._fb.getDoc(docRef).catch(() => null);
+                    let user = snap && snap.exists ? snap.data() : null;
+                    if (user) {
+                        const score = { percentage: parseFloat(percentage), timestamp, correctAnswers: correctAnswers, totalQuestions: totalQuestions };
+                        user.scores = Array.isArray(user.scores) ? user.scores : [];
+                        user.scores.push(score);
+                        user.latestScore = parseFloat(percentage);
+                        user.lastTimestamp = timestamp;
+                        if (correctAnswers != null) user.latestCorrect = correctAnswers;
+                        if (totalQuestions != null) user.latestTotal = totalQuestions;
+                    } else {
+                        let _loc = null;
+                        try { _loc = JSON.parse(localStorage.getItem('gesDeviceLocation') || 'null'); } catch (e) { _loc = null; }
+                        const city = _loc && _loc.city ? _loc.city : null;
+                        const country = _loc && _loc.country ? _loc.country : null;
+                        user = { deviceId, latestScore: parseFloat(percentage), lastTimestamp: timestamp, latestCorrect: correctAnswers, latestTotal: totalQuestions, city: city, country: country, scores: [{ percentage: parseFloat(percentage), timestamp, correctAnswers: correctAnswers, totalQuestions: totalQuestions }] };
+                    }
+                    await window._fb.setDoc(docRef, user);
+                    return;
+                }
+            } catch (e) {
+                console.debug('Firestore user score update failed, falling back to jsonbin:', e);
+                try { if (FIREBASE_NOTIFICATION_ENABLED) showMessage('Could not update score to Firebase; falling back to jsonbin.io', 'info'); } catch (err) {}
+            }
+
+            // Fallback: update jsonbin array
             try {
                 const fetched = await fetchJsonBinData();
                 let users = Array.isArray(fetched) ? fetched : (fetched && Array.isArray(fetched.users) ? fetched.users : []);
@@ -1128,8 +1826,9 @@ async function detectAndFillLocationInputs() {
                 }
                 const payload = Array.isArray(fetched) ? users : { users };
                 await putJsonBinData(payload);
+                return;
             } catch (e) {
-                console.error('Could not update user score on jsonbin:', e);
+                console.error('Could not update user score on jsonbin (fallback failed):', e);
                 throw e;
             }
         }
@@ -1137,8 +1836,22 @@ async function detectAndFillLocationInputs() {
         async function renderRankingsView() {
             contentArea.innerHTML = `<div class="p-6 bg-white rounded-xl shadow-lg">Loading rankings...</div>`;
             try {
-                const fetched = await fetchJsonBinData();
-                const usersRaw = Array.isArray(fetched) ? fetched : (fetched && Array.isArray(fetched.users) ? fetched.users : []);
+                // Prefer Firebase for fetching users; fallback to JSONBin
+                let usersRaw = [];
+                try {
+                    if (!firebaseInitialized) await initFirebase();
+                    if (firebaseInitialized && firestoreDb && window._fb && window._fb.getDocs) {
+                        const qs = await window._fb.getDocs(window._fb.collection(firestoreDb, 'users'));
+                        qs.forEach(d => usersRaw.push(d.data()));
+                    }
+                } catch (e) {
+                        console.debug('Could not fetch users from Firestore (fallback to jsonbin):', e);
+                        try { if (FIREBASE_NOTIFICATION_ENABLED) showMessage('Could not load leaderboard from Firebase; falling back to jsonbin.io', 'info'); } catch (err) {}
+                }
+                if (!usersRaw || usersRaw.length === 0) {
+                    const fetched = await fetchJsonBinData();
+                    usersRaw = Array.isArray(fetched) ? fetched : (fetched && Array.isArray(fetched.users) ? fetched.users : []);
+                }
 
                 // Helper: pick the most recent non-zero score entry for a user
                 function getLatestNonZeroScore(u) {
@@ -1170,26 +1883,82 @@ async function detectAndFillLocationInputs() {
                     return null;
                 }
 
-                // Filter and only include users that have a most recent non-zero completed run
+                // Helper: pick the best score for a user within the cutoff (highest percentage,
+                // tie-breaker: higher total, then newest timestamp)
+                function getBestScoreWithinWindow(u, cutoffTs) {
+                    if (!u) return null;
+                    const candidates = [];
+
+                    // include explicit latest fields if available
+                    try {
+                        if (u.latestTotal != null && Number(u.latestTotal) > 0 && u.lastTimestamp) {
+                            candidates.push({
+                                percentage: (u.latestScore != null ? parseFloat(u.latestScore) : 0),
+                                correct: (u.latestCorrect != null ? u.latestCorrect : 0),
+                                total: Number(u.latestTotal),
+                                timestamp: u.lastTimestamp
+                            });
+                        }
+                    } catch (e) { /* ignore malformed */ }
+
+                    // include entries from scores array
+                    if (Array.isArray(u.scores) && u.scores.length) {
+                        for (const s of u.scores) {
+                            try {
+                                const total = (s && (s.totalQuestions != null ? s.totalQuestions : (s.total != null ? s.total : 0)));
+                                if (!total || Number(total) <= 0) continue;
+                                const ts = s.timestamp || s.time || s.t || null;
+                                if (!ts) continue;
+                                candidates.push({
+                                    percentage: (s.percentage != null ? parseFloat(s.percentage) : 0),
+                                    correct: (s.correctAnswers != null ? s.correctAnswers : (s.correct != null ? s.correct : 0)),
+                                    total: Number(total),
+                                    timestamp: ts
+                                });
+                            } catch (e) { /* skip malformed entries */ }
+                        }
+                    }
+
+                    // filter by cutoff
+                    const valid = candidates.map(c => {
+                        const t = Date.parse(c.timestamp);
+                        return isNaN(t) ? null : Object.assign({}, c, { _ts: t });
+                    }).filter(Boolean).filter(c => c._ts >= cutoffTs);
+
+                    if (!valid || valid.length === 0) return null;
+
+                    // pick best by percentage, then total, then newest timestamp
+                    valid.sort((a,b) => {
+                        if (b.percentage !== a.percentage) return b.percentage - a.percentage;
+                        if (b.total !== a.total) return b.total - a.total;
+                        return b._ts - a._ts;
+                    });
+
+                    const best = valid[0];
+                    return { percentage: best.percentage, correct: best.correct, total: best.total, timestamp: new Date(best._ts).toISOString() };
+                }
+
+                // Filter and only include users that have at least one completed run within the TTL window
+                const cutoff = Date.now() - (RANKING_TTL_DAYS * 24 * 60 * 60 * 1000);
                 const users = (usersRaw || []).filter(u => {
                     if (!u || !u.deviceId || !u.name || String(u.name).trim() === '') return false;
-                    const recent = getLatestNonZeroScore(u);
-                    return recent !== null && recent.total > 0;
+                    const best = getBestScoreWithinWindow(u, cutoff);
+                    return best !== null;
                 });
                 if (!users || users.length === 0) {
                     contentArea.innerHTML = `<div class="p-6 bg-white rounded-xl shadow-lg text-center">No registered users found.</div>`;
                     return;
                 }
                 const ranked = users.map(u => {
-                    const recent = getLatestNonZeroScore(u) || { percentage: 0, correct: 0, total: 0, timestamp: null };
+                    const best = getBestScoreWithinWindow(u, cutoff) || { percentage: 0, correct: 0, total: 0, timestamp: null };
                     return {
                         name: u.name || 'Unknown',
-                        latestScore: recent.percentage,
-                        latestCorrect: recent.correct,
-                        latestTotal: recent.total,
+                        latestScore: best.percentage,
+                        latestCorrect: best.correct,
+                        latestTotal: best.total,
                         phone: u.phone || '',
                         email: u.email || '',
-                        timestamp: recent.timestamp
+                        timestamp: best.timestamp
                     };
                 }).sort((a,b) => {
                     // Primary: percentage desc, Secondary: total questions desc
@@ -1222,6 +1991,7 @@ async function detectAndFillLocationInputs() {
                         <td class="px-4 py-3">${u.name}</td>
                         <td class="px-4 py-3 text-green-600 font-semibold">${u.latestCorrect}/${u.latestTotal}</td>
                         <td class="px-4 py-3 text-blue-600 font-bold">${u.latestScore}%</td>
+                        <td class="px-4 py-3 text-sm text-gray-600">${u.timestamp ? new Date(u.timestamp).toLocaleString() : '—'}</td>
                     </tr>
                 `);
                 }
@@ -1241,8 +2011,9 @@ async function detectAndFillLocationInputs() {
                                     <tr>
                                         <th class="px-4 py-2 text-left">Rank</th>
                                         <th class="px-4 py-2 text-left">Name</th>
-                                        <th class="px-4 py-2 text-left">Correct / Questions</th>
                                         <th class="px-4 py-2 text-left">Score</th>
+                                        <th class="px-4 py-2 text-left">Correct / Questions</th>
+                                        <th class="px-4 py-2 text-left">Date Obtained</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -1268,11 +2039,43 @@ async function detectAndFillLocationInputs() {
             try {
                 const deviceId = getDeviceId();
                 if (!deviceId) return;
-                // Update only lastTimestamp for this user
+                // Do not create or update remote user records for unregistered devices
+                if (!isUserRegistered()) return;
+                // Prefer updating a single user doc in Firestore
+                const now = new Date().toISOString();
+                try {
+                    if (!firebaseInitialized) await initFirebase();
+                    if (firebaseInitialized && firestoreDb && window._fb && window._fb.getDoc && window._fb.setDoc) {
+                        const docRef = window._fb.doc(firestoreDb, 'users', deviceId);
+                        const snap = await window._fb.getDoc(docRef).catch(() => null);
+                        let user = snap && (snap.exists ? snap.exists() : (typeof snap.exists === 'function' ? snap.exists() : snap.exists)) ? snap.data() : null;
+                        if (user) {
+                            user.lastTimestamp = now;
+                            // sync location if available
+                            try {
+                                const locStored = JSON.parse(localStorage.getItem('gesDeviceLocation') || 'null');
+                                if (locStored && (locStored.city || locStored.country)) {
+                                    if ((!user.city && locStored.city) || (!user.country && locStored.country) || (locStored.city && user.city !== locStored.city) || (locStored.country && user.country !== locStored.country)) {
+                                        user.city = locStored.city || user.city;
+                                        user.country = locStored.country || user.country;
+                                    }
+                                }
+                            } catch (e) { /* silent */ }
+                        }
+                        // Only write back if the record exists; do not create new user documents here
+                        if (user) {
+                            await window._fb.setDoc(docRef, user);
+                        }
+                        return;
+                    }
+                } catch (e) {
+                    console.debug('Heartbeat update to Firestore failed, falling back to jsonbin:', e);
+                }
+
+                // Fallback: update jsonbin array record
                 const fetched = await fetchJsonBinData();
                 let users = Array.isArray(fetched) ? fetched : (fetched && Array.isArray(fetched.users) ? fetched.users : []);
                 let changed = false;
-                const now = new Date().toISOString();
                 users = users.map(u => {
                     if (u.deviceId === deviceId) {
                         u.lastTimestamp = now;
@@ -1281,21 +2084,14 @@ async function detectAndFillLocationInputs() {
                     return u;
                 });
                 if (!changed) {
-                    // create minimal record if missing (do not surface errors)
-                    // include last-known detected location when available
-                    let _loc = null;
-                    try { _loc = JSON.parse(localStorage.getItem('gesDeviceLocation') || 'null'); } catch (e) { _loc = null; }
-                    const city = _loc && _loc.city ? _loc.city : null;
-                    const country = _loc && _loc.country ? _loc.country : null;
-                    users.push({ deviceId, latestScore: null, lastTimestamp: now, scores: [], city: city, country: country });
+                    // Do not create a new jsonbin user for unregistered devices
+                    // (only update existing records)
                 } else {
-                    // If we updated an existing record's timestamp, also ensure we sync any newly detected location
                     try {
                         const locStored = JSON.parse(localStorage.getItem('gesDeviceLocation') || 'null');
                         if (locStored && (locStored.city || locStored.country)) {
                             users = users.map(u => {
                                 if (u.deviceId === deviceId) {
-                                    // Only overwrite if we have something new
                                     if ((!u.city && locStored.city) || (!u.country && locStored.country) || (locStored.city && u.city !== locStored.city) || (locStored.country && u.country !== locStored.country)) {
                                         u.city = locStored.city || u.city;
                                         u.country = locStored.country || u.country;
@@ -1304,12 +2100,13 @@ async function detectAndFillLocationInputs() {
                                 return u;
                             });
                         }
-                    } catch (e) {
-                        /* silent */
-                    }
+                    } catch (e) { /* silent */ }
                 }
-                const payload = Array.isArray(fetched) ? users : { users };
-                await putJsonBinData(payload);
+                // Only persist updates back to jsonbin when we actually changed an existing user
+                if (changed) {
+                    const payload = Array.isArray(fetched) ? users : { users };
+                    await putJsonBinData(payload);
+                }
             } catch (e) {
                 // silent: do not show errors to user
                 console.debug('Heartbeat update failed (silent):', e);
@@ -1318,8 +2115,21 @@ async function detectAndFillLocationInputs() {
 
         async function fetchOnlineCountAndRender() {
             try {
-                const fetched = await fetchJsonBinData();
-                const users = Array.isArray(fetched) ? fetched : (fetched && Array.isArray(fetched.users) ? fetched.users : []);
+                // Prefer fetching from Firestore first
+                let users = [];
+                try {
+                    if (!firebaseInitialized) await initFirebase();
+                    if (firebaseInitialized && firestoreDb && window._fb && window._fb.getDocs) {
+                        const qs = await window._fb.getDocs(window._fb.collection(firestoreDb, 'users'));
+                        qs.forEach(d => users.push(d.data()));
+                    }
+                } catch (e) {
+                    console.debug('Could not fetch users from Firestore for online count (fallback to jsonbin):', e);
+                }
+                if (!users || users.length === 0) {
+                    const fetched = await fetchJsonBinData();
+                    users = Array.isArray(fetched) ? fetched : (fetched && Array.isArray(fetched.users) ? fetched.users : []);
+                }
                 const threshold = Date.now() - ONLINE_WINDOW_MS;
                 const count = users.reduce((acc, u) => {
                     if (!u || !u.lastTimestamp) return acc;
@@ -1374,6 +2184,36 @@ async function updateUserLocationIfBetter(loc) {
         if (!loc || (!loc.city && !loc.country)) return;
         const deviceId = getDeviceId();
         if (!deviceId) return;
+        // Only modify remote records for registered users
+        if (!isUserRegistered()) return;
+        // Try Firestore update first
+        try {
+            if (!firebaseInitialized) await initFirebase();
+            if (firebaseInitialized && firestoreDb && window._fb && window._fb.getDoc && window._fb.setDoc) {
+                const docRef = window._fb.doc(firestoreDb, 'users', deviceId);
+                const snap = await window._fb.getDoc(docRef).catch(() => null);
+                const exists = snap && (typeof snap.exists === 'function' ? snap.exists() : snap.exists);
+                let user = exists ? (snap.data ? snap.data() : (snap && snap.data) || {}) : null;
+                let changed = false;
+                if (user) {
+                    if ((loc.city && (!user.city || user.city !== loc.city)) || (loc.country && (!user.country || user.country !== loc.country))) {
+                        user.city = loc.city || user.city;
+                        user.country = loc.country || user.country;
+                        changed = true;
+                    }
+                    user.lastTimestamp = new Date().toISOString();
+                }
+                // Only update if the user record exists and there are changes
+                if (changed && user) {
+                    await window._fb.setDoc(docRef, user);
+                }
+                return;
+            }
+        } catch (e) {
+            console.debug('Could not update user location in Firestore (fallback to jsonbin):', e);
+        }
+
+        // Fallback: update jsonbin array
         const fetched = await fetchJsonBinData();
         let users = Array.isArray(fetched) ? fetched : (fetched && Array.isArray(fetched.users) ? fetched.users : []);
         let changed = false;
@@ -1436,31 +2276,60 @@ function _beforeUnloadHeartbeatHandler(e) {
         const now = new Date().toISOString();
         // Read-modify-write with keepalive may still be subject to browser limits; we do a minimal update
         (async () => {
-            try {
-                const fetched = await fetchJsonBinData();
-                let users = Array.isArray(fetched) ? fetched : (fetched && Array.isArray(fetched.users) ? fetched.users : []);
-                let found = false;
-                users = users.map(u => {
-                    if (u.deviceId === deviceId) { u.lastTimestamp = now; found = true; }
-                    return u;
-                });
-                if (!found) {
-                    let _loc = null;
-                    try { _loc = JSON.parse(localStorage.getItem('gesDeviceLocation') || 'null'); } catch (e) { _loc = null; }
-                    const city = _loc && _loc.city ? _loc.city : null;
-                    const country = _loc && _loc.country ? _loc.country : null;
-                    users.push({ deviceId, latestScore: null, lastTimestamp: now, scores: [], city: city, country: country });
-                }
-                const payload = Array.isArray(fetched) ? users : { users };
-                // Attempt to send using fetch with keepalive
-                try {
-                    navigator.sendBeacon && navigator.sendBeacon(`https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}`, JSON.stringify(payload));
-                } catch (err) {
                     try {
-                        fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}`, { method: 'PUT', headers: { 'Content-Type': 'application/json', 'X-Master-Key': JSONBIN_MASTER_KEY }, body: JSON.stringify(payload), keepalive: true });
-                    } catch (e) { /* silent */ }
-                }
-            } catch (err) { /* silent */ }
+                        // Only send final heartbeat for registered users
+                        if (!isUserRegistered()) return;
+                        // Try Firestore quick-write first (best-effort)
+                        try {
+                            if (!firebaseInitialized) await initFirebase();
+                            if (firebaseInitialized && firestoreDb && window._fb && window._fb.getDoc && window._fb.setDoc) {
+                                const docRef = window._fb.doc(firestoreDb, 'users', deviceId);
+                                const snap = await window._fb.getDoc(docRef).catch(() => null);
+                                const exists = snap && (typeof snap.exists === 'function' ? snap.exists() : snap.exists);
+                                let user = exists ? (snap.data ? snap.data() : (snap && snap.data) || {}) : null;
+                                if (user) {
+                                    user.lastTimestamp = now;
+                                    await window._fb.setDoc(docRef, user);
+                                    return; // done
+                                } else {
+                                    let _loc = null;
+                                    try { _loc = JSON.parse(localStorage.getItem('gesDeviceLocation') || 'null'); } catch (e) { _loc = null; }
+                                    const city = _loc && _loc.city ? _loc.city : null;
+                                    const country = _loc && _loc.country ? _loc.country : null;
+                                    user = { deviceId, latestScore: null, lastTimestamp: now, scores: [], city: city, country: country };
+                                    await window._fb.setDoc(docRef, user);
+                                    return; // done
+                                }
+                            }
+                        } catch (e) {
+                            console.debug('beforeunload: Firestore quick update failed, will fallback to jsonbin:', e);
+                        }
+
+                        // Fallback: update JSONBin via sendBeacon/PUT
+                        const fetched = await fetchJsonBinData();
+                        let users = Array.isArray(fetched) ? fetched : (fetched && Array.isArray(fetched.users) ? fetched.users : []);
+                        let found = false;
+                        users = users.map(u => {
+                            if (u.deviceId === deviceId) { u.lastTimestamp = now; found = true; }
+                            return u;
+                        });
+                        if (!found) {
+                            let _loc = null;
+                            try { _loc = JSON.parse(localStorage.getItem('gesDeviceLocation') || 'null'); } catch (e) { _loc = null; }
+                            const city = _loc && _loc.city ? _loc.city : null;
+                            const country = _loc && _loc.country ? _loc.country : null;
+                            users.push({ deviceId, latestScore: null, lastTimestamp: now, scores: [], city: city, country: country });
+                        }
+                        const payload = Array.isArray(fetched) ? users : { users };
+                        // Attempt to send using fetch with keepalive
+                        try {
+                            navigator.sendBeacon && navigator.sendBeacon(`https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}`, JSON.stringify(payload));
+                        } catch (err) {
+                            try {
+                                fetch(`https://api.jsonbin.io/v3/b/${JSONBIN_BIN_ID}`, { method: 'PUT', headers: { 'Content-Type': 'application/json', 'X-Master-Key': JSONBIN_MASTER_KEY }, body: JSON.stringify(payload), keepalive: true });
+                            } catch (e) { /* silent */ }
+                        }
+                    } catch (err) { /* silent */ }
         })();
     } catch (e) { /* silent */ }
 }
@@ -1725,9 +2594,24 @@ function _beforeUnloadHeartbeatHandler(e) {
             }
 
             questionArea.innerHTML = `
-                <div class="text-xl font-semibold text-gray-800 mb-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500 shadow-inner">
-                    <span class="text-blue-700 mr-2">Question ${currentQuestionIndex + 1} of ${totalQuestions}:</span>
-                    ${formatText(q.question)}
+                <div class="mb-6 p-0">
+                    <div class="flex flex-col sm:flex-row justify-between items-start text-gray-800">
+                        <div class="flex-1 text-xl font-semibold p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500 shadow-inner">
+                            <div class="mb-2"><span class="text-blue-700 mr-2">Question ${currentQuestionIndex + 1} of ${totalQuestions}:</span></div>
+                            <div class="prose">${formatText(q.question)}</div>
+                        </div>
+                        <div class="w-full sm:w-56 mt-3 sm:mt-0 sm:ml-4">
+                            <div class="bg-white p-3 rounded-lg border border-yellow-200 shadow-sm h-full flex flex-col justify-between">
+                                <div>
+                                    <div class="text-sm font-semibold text-gray-700">Problem with this question?</div>
+                                    <div class="text-xs text-gray-500 mt-1">Click the button below to flag typos, wrong answers, or ambiguous wording.</div>
+                                </div>
+                                <div class="mt-3">
+                                    <button onclick="openReportDialog()" title="Report this question" class="w-full px-3 py-2 bg-yellow-500 text-white rounded-lg font-semibold hover:bg-yellow-600">Report Problem</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="options-container grid grid-cols-1 sm:grid-cols-2 gap-3">${optionsHtml}</div>
             `;
