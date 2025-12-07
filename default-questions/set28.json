@@ -848,5 +848,27 @@
     },
     "answer": "A",
     "explanation": "Teachers can utilize formative, summative, diagnostic, peer, self, portfolio, and performance assessments for comprehensive evaluation."
+  },
+  {
+    "id": 76,
+    "question": "Teachers should avoid using humor in the classroom as it may distract students.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Appropriate humor can enhance engagement, reduce anxiety, and build rapport, contributing positively to the learning environment."
+  },
+  {
+    "id": 77,
+    "question": "According to the **2024 Corruption Perception Index (CPI)** released by Transparency International, what was Ghana's score and its overall trend compared to the four previous years (2020-2023)?",
+    "options": {
+      "A": "43, showing a 1-point increase from the previous four years.",
+      "B": "42, showing a 1-point decrease from the previous four years.",
+      "C": "45, showing a significant improvement over the past five years.",
+      "D": "38, showing a steep decline compared to the previous four years."
+    },
+    "answer": "B",
+    "explanation": "Ghana's 2024 CPI score was 42. This marked a 1-point decline from the score of 43 that the country had recorded consistently in the four preceding years (2020, 2021, 2022, and 2023), indicating stagnation and a slight regression in the fight against public sector corruption."
   }
 ]
