@@ -1,0 +1,851 @@
+[
+  {
+    "id": 1,
+    "question": "The Common Core Programme (CCP) for Junior and Senior High Schools consists of how many subjects?",
+    "options": {
+      "A": "7",
+      "B": "8",
+      "C": "9",
+      "D": "10"
+    },
+    "answer": "C",
+    "explanation": "Ghana's CCP curriculum comprises 9 core subjects: English, Mathematics, Science, Social Studies, Ghanaian Language, Religious & Moral Education, Creative Arts & Design, Career Technology, and Physical & Health Education as per NaCCA guidelines."
+  },
+  {
+    "id": 2,
+    "question": "Which agency is NOT a body under the Ministry of Education that implements its policies and programmes?",
+    "options": {
+      "A": "Complementary Education Agency",
+      "B": "Ghana Library Board",
+      "C": "Ghana Tertiary Education Commission",
+      "D": "National Commission for Civic Education"
+    },
+    "answer": "D",
+    "explanation": "The National Commission for Civic Education (NCCE) is an independent constitutional body established under Article 231 of the Constitution, not under the Ministry of Education's administrative structure."
+  },
+  {
+    "id": 3,
+    "question": "Which were objectives of the 1987 Education Reform? I. Increase access to basic education II. Shorten pre-university structure from 17 to 12 years III. Make education cost-effective IV. Improve quality by making it more relevant to socio-economic conditions",
+    "options": {
+      "A": "I only",
+      "B": "I, II and IV",
+      "C": "I, II, III and IV",
+      "D": "III only"
+    },
+    "answer": "C",
+    "explanation": "The 1987 FCUBE reforms comprehensively addressed all four areas: expanding access, restructuring duration, improving cost-effectiveness, and enhancing quality/relevance to Ghana's development needs."
+  },
+  {
+    "id": 4,
+    "question": "Which programmes/interventions were implemented to facilitate FCUBE objectives? I. Quality Improvement in Primary Schools (QUIPS) II. Child School Community Progress in Education (Child Scope) III. Performance Monitoring Test (PMT) IV. District Teacher Support Team (DTST)",
+    "options": {
+      "A": "I, II and III only",
+      "B": "I, II, III and IV",
+      "C": "II and III only",
+      "D": "III only"
+    },
+    "answer": "B",
+    "explanation": "All four were key FCUBE interventions designed to improve quality, monitor performance, and support teachers at the district level between 1996-2005."
+  },
+  {
+    "id": 5,
+    "question": "Ghana's system of education is aimed at which aspects of development?",
+    "options": {
+      "A": "Character formation",
+      "B": "Personality development",
+      "C": "Preservation of culture",
+      "D": "All of the above"
+    },
+    "answer": "D",
+    "explanation": "Ghana's Education Strategic Plan (2018-2030) outlines holistic development including character, personality, and cultural preservation alongside academic achievement."
+  },
+  {
+    "id": 6,
+    "question": "The Ghana Education Service was established by the Ghana Education Service Act 1995,",
+    "options": {
+      "A": "Act 506",
+      "B": "Act 778",
+      "C": "Act 788"
+    },
+    "answer": "A",
+    "explanation": "Act 506 (1995) formally established GES as the implementing agency for pre-tertiary education, replacing previous administrative structures."
+  },
+  {
+    "id": 7,
+    "question": "Which is/are NOT ways through which education policies are formulated? I. Imposition by elites II. Political discussions III. Stakeholder consultations",
+    "options": {
+      "A": "I only",
+      "B": "I, II and III",
+      "C": "II only",
+      "D": "III only"
+    },
+    "answer": "A",
+    "explanation": "While elite imposition historically occurred, democratic policy formulation emphasizes stakeholder consultation and political discourse, not top-down imposition."
+  },
+  {
+    "id": 8,
+    "question": "Which subject is NOT part of the Common Core Programme for JHS and SHS?",
+    "options": {
+      "A": "Career Technology",
+      "B": "History",
+      "C": "Physical and Health Education",
+      "D": "Religious and Moral Education"
+    },
+    "answer": "B",
+    "explanation": "History is integrated within Social Studies; it is not a standalone subject in the CCP curriculum framework developed by NaCCA."
+  },
+  {
+    "id": 9,
+    "question": "Who is the current Deputy Director-General of GES in charge of Quality and Access?",
+    "options": {
+      "A": "Dr. Kwabena Bempah Tandoh",
+      "B": "Lawyer Anthony Boateng",
+      "C": "Professor Kwasi Opoku-Amankwah",
+      "D": "Professor Matthew Opoku Prempeh"
+    },
+    "answer": "A",
+    "explanation": "As of 2023, Dr. Kwabena Bempah Tandoh serves as DDG (Quality & Access). Verify current appointment with GES headquarters."
+  },
+  {
+    "id": 10,
+    "question": "Membership of the Ghana Education Service is made up of all except",
+    "options": {
+      "A": "All stakeholders in education",
+      "B": "Other persons employed for the service",
+      "C": "Teachers and non-teaching personnel",
+      "D": "Personnel existing before Act 1995"
+    },
+    "answer": "A",
+    "explanation": "GES membership comprises employees (teachers and support staff), not all stakeholders like parents, community members, or students."
+  },
+  {
+    "id": 11,
+    "question": "Which is the LEAST effective remedy for student absenteeism?",
+    "options": {
+      "A": "Parents should be counseled",
+      "B": "Parents should supervise activities",
+      "C": "Pupils should be punished",
+      "D": "Teachers should desist from harassing students"
+    },
+    "answer": "C",
+    "explanation": "Punishment is counterproductive for absenteeism; research shows positive engagement, parental involvement, and supportive environments are more effective."
+  },
+  {
+    "id": 12,
+    "question": "The headteacher in a learner-centered school undertakes all to enhance teaching and learning except",
+    "options": {
+      "A": "Empowering teachers to involve each learner",
+      "B": "Encouraging teachers to avoid tests because they demoralize students",
+      "C": "Encouraging lesson plans using existing knowledge",
+      "D": "Motivating teachers"
+    },
+    "answer": "B",
+    "explanation": "Assessment is integral to learner-centered education; avoiding tests contradicts evidence-based practice. Formative assessment supports learning."
+  },
+  {
+    "id": 13,
+    "question": "Which is the most common role of teachers in education?",
+    "options": {
+      "A": "Build warm environment",
+      "B": "Mentor and nurture students",
+      "C": "Provide leadership for learning",
+      "D": "Set classroom tone"
+    },
+    "answer": "B",
+    "explanation": "While all are teacher roles, mentoring and nurturing students is fundamental to the professional identity and daily practice of teaching."
+  },
+  {
+    "id": 14,
+    "question": "Which is NOT a core competency emphasized in the Standards-Based Curriculum?",
+    "options": {
+      "A": "Clarity",
+      "B": "Collaboration",
+      "C": "Communication",
+      "D": "Critical thinking"
+    },
+    "answer": "A",
+    "explanation": "The 4Cs are Critical Thinking, Communication, Collaboration, and Creativity. Clarity is an instructional principle, not a student competency."
+  },
+  {
+    "id": 15,
+    "question": "Which methods are encouraged for effective teaching? I. Building on prior learning II. Guided practice before independence III. Motivating students IV. Involving each learner V. Even distribution of questions",
+    "options": {
+      "A": "I, II and III only",
+      "B": "I, II, III, IV and V",
+      "C": "I, II, III and IV only",
+      "D": "II and III only"
+    },
+    "answer": "B",
+    "explanation": "All five principles align with effective pedagogy: building schema, scaffolding, motivation, inclusion, and equitable participation."
+  },
+  {
+    "id": 16,
+    "question": "Supervision of teaching mainly ensures",
+    "options": {
+      "A": "Achievement of exam success",
+      "B": "Advancement of pupil welfare",
+      "C": "Proper utilization of facilities",
+      "D": "Quality delivery of curriculum"
+    },
+    "answer": "D",
+    "explanation": "Instructional supervision focuses on ensuring teachers effectively implement curriculum standards and use quality pedagogical practices."
+  },
+  {
+    "id": 17,
+    "question": "Management is commonly defined as",
+    "options": {
+      "A": "Getting things done so demand is fulfilled",
+      "B": "Getting things done through other people",
+      "C": "Knowing what has been produced",
+      "D": "Working for others"
+    },
+    "answer": "B",
+    "explanation": "Mary Parker Follett's classic definition emphasizes achieving organizational goals by coordinating and directing human effort."
+  },
+  {
+    "id": 18,
+    "question": "Role learning is more common with  curriculum.",
+    "options": {
+      "A": "Learner-centered",
+      "B": "Problem-based",
+      "C": "Standard-centered",
+      "D": "Subject-centered"
+    },
+    "answer": "D",
+    "explanation": "Subject-centered curricula emphasize content mastery and predetermined roles, while learner-centered approaches promote active construction of knowledge."
+  },
+  {
+    "id": 19,
+    "question": "All statements about teachers are correct except",
+    "options": {
+      "A": "Impose ideas on pupils",
+      "B": "Is seen as role model",
+      "C": "Is leader of the class",
+      "D": "Serves as facilitator"
+    },
+    "answer": "A",
+    "explanation": "Effective teachers facilitate learning rather than impose ideas; imposing contradicts constructivist and student-centered pedagogical principles."
+  },
+  {
+    "id": 20,
+    "question": "Teaching objectives should be all the following except",
+    "options": {
+      "A": "Achievable",
+      "B": "Realistic",
+      "C": "Rigid",
+      "D": "Time-bound"
+    },
+    "answer": "C",
+    "explanation": "Objectives must be flexible to accommodate diverse learner needs and emerging circumstances; rigidity prevents responsive teaching."
+  },
+  {
+    "id": 21,
+    "question": "The maturity of students determines the",
+    "options": {
+      "A": "Appropriate motivational techniques",
+      "B": "Learning tasks",
+      "C": "Teaching methods",
+      "D": "All of the above"
+    },
+    "answer": "D",
+    "explanation": "Developmental stage influences all instructional decisions including choice of methods, task complexity, and motivational strategies."
+  },
+  {
+    "id": 22,
+    "question": "Why should teachers ensure physical pathways in the classroom? The pathways",
+    "options": {
+      "A": "Allow private space",
+      "B": "Make it easier to attend to individual needs",
+      "C": "Make it easier to see the board",
+      "D": "Make students less distracted"
+    },
+    "answer": "B",
+    "explanation": "Pathways enable teachers to circulate, provide one-on-one support, monitor progress, and respond to individual learner needs effectively."
+  },
+  {
+    "id": 23,
+    "question": "To present information interestingly, teachers should start from what students",
+    "options": {
+      "A": "Already know",
+      "B": "Are to know",
+      "C": "Are willing to know",
+      "D": "Don't know"
+    },
+    "answer": "A",
+    "explanation": "Activating prior knowledge (schema theory) makes new information meaningful and connects learning to students' existing cognitive frameworks."
+  },
+  {
+    "id": 24,
+    "question": "To effect purposeful change in schools, a leader should ask",
+    "options": {
+      "A": "What do we hope to accomplish?",
+      "B": "What resources are required?",
+      "C": "Why is change taking place?",
+      "D": "All of the above"
+    },
+    "answer": "D",
+    "explanation": "Strategic change requires clarity of vision, resource planning, and rationale (the 'why') to build buy-in and ensure successful implementation."
+  },
+  {
+    "id": 25,
+    "question": "Heads can ensure COVID-19 safety except by providing",
+    "options": {
+      "A": "Face masks",
+      "B": "Hand gloves",
+      "C": "Hand sanitizer",
+      "D": "Water and liquid soaps"
+    },
+    "answer": "B",
+    "explanation": "WHO and GHS guidelines do not recommend routine glove use in schools; proper hand hygiene, masks, and distancing are primary controls."
+  },
+  {
+    "id": 26,
+    "question": "Which question helps LEAST to specify lesson objectives?",
+    "options": {
+      "A": "What do I want students to learn?",
+      "B": "What do I want them to understand and do?",
+      "C": "What is the topic of the lesson?",
+      "D": "What will I do to explain the topic?"
+    },
+    "answer": "C",
+    "explanation": "Topic identification is preliminary; it doesn't specify learning outcomes. Objectives must articulate what students will know and be able to do."
+  },
+  {
+    "id": 27,
+    "question": "Which reflective question best helps design learning activities?",
+    "options": {
+      "A": "How will I check preconceptions?",
+      "B": "What real-life examples help understanding?",
+      "C": "What questions check understanding?",
+      "D": "What will students do to demonstrate following?"
+    },
+    "answer": "D",
+    "explanation": "D focuses on active student demonstration, which directly informs activity design. However, B is also strong. The answer emphasizes performance-based activity planning."
+  },
+  {
+    "id": 28,
+    "question": "Which Ghanaian Language is NOT approved for teaching in schools?",
+    "options": {
+      "A": "Dangme",
+      "B": "Kasem",
+      "C": "Nzema",
+      "D": "Sefwi"
+    },
+    "answer": "D",
+    "explanation": "Approved languages include Dangme, Kasem, Nzema, Ga, Twi, Fante, Ewe, Dagaare, Gonja, and Dagbane. Sefwi is not standardly approved."
+  },
+  {
+    "id": 29,
+    "question": "Which learner attribute is NOT a major aspect of school bonding? Attachment to",
+    "options": {
+      "A": "Friends",
+      "B": "Teachers",
+      "C": "The non-teaching staff",
+      "D": "The school"
+    },
+    "answer": "C",
+    "explanation": "School bonding theory (Hirschi) emphasizes attachment to teachers, peers, and institution; non-teaching staff are not primary attachment figures."
+  },
+  {
+    "id": 30,
+    "question": "What reason might prevent a school from maintaining quality and discipline?",
+    "options": {
+      "A": "Both diversity and segregation",
+      "B": "Diversity",
+      "C": "None of the above",
+      "D": "Segregation"
+    },
+    "answer": "D",
+    "explanation": "Segregation (by ability, gender, or socio-economic status) undermines equity and quality; diversity, when managed well, enhances learning."
+  },
+  {
+    "id": 31,
+    "question": "Which assessment type measures high-order cognitive skills?",
+    "options": {
+      "A": "Essay",
+      "B": "Multiple choice",
+      "C": "Short Answer",
+      "D": "True-False"
+    },
+    "answer": "A",
+    "explanation": "Essay questions can assess analysis, synthesis, and evaluation. While well-constructed MCQs can too, essays are most effective for higher-order thinking."
+  },
+  {
+    "id": 32,
+    "question": "All key terms relate to reliability except",
+    "options": {
+      "A": "Consistency",
+      "B": "Credibility",
+      "C": "Dependability",
+      "D": "Trustworthiness"
+    },
+    "answer": "B",
+    "explanation": "Reliability refers to consistency, dependability, replicability. Credibility relates to validity and believability of results."
+  },
+  {
+    "id": 33,
+    "question": "'Restate concept in own words' is example of  test question frame.",
+    "options": {
+      "A": "Analysis",
+      "B": "Comprehension",
+      "C": "Knowledge",
+      "D": "Synthesis"
+    },
+    "answer": "B",
+    "explanation": "Restating in one's own words demonstrates comprehension (understanding) rather than mere recall (knowledge) or manipulation (analysis)."
+  },
+  {
+    "id": 34,
+    "question": "A question asking learners to 'infer from a concept' is example of  frame.",
+    "options": {
+      "A": "Analysis",
+      "B": "Application",
+      "C": "Knowledge",
+      "D": "Synthesis"
+    },
+    "answer": "B",
+    "explanation": "Inference involves applying understanding to draw conclusions, which falls under application. However, it could also be analysis. The answer reflects applying knowledge to new situations."
+  },
+  {
+    "id": 35,
+    "question": "'What is meant by...?' is example of  test frame.",
+    "options": {
+      "A": "Analysis",
+      "B": "Application",
+      "C": "Knowledge",
+      "D": "Synthesis"
+    },
+    "answer": "C",
+    "explanation": "Defining or explaining meaning demonstrates recall and understanding of factual knowledge, the lowest cognitive level."
+  },
+  {
+    "id": 36,
+    "question": "Which statement is NOT correct about examination malpractice?",
+    "options": {
+      "A": "It is a sure way for candidates not to fail",
+      "B": "It may lead to cancellation of school results",
+      "C": "People caught may be prosecuted",
+      "D": "Public may lose confidence in certificates"
+    },
+    "answer": "A",
+    "explanation": "Malpractice does not guarantee passing; it often leads to failure, disqualification, and severe consequences for candidates and institutions."
+  },
+  {
+    "id": 37,
+    "question": "Which describes summative programme evaluation?",
+    "options": {
+      "A": "Determine if programme met goals",
+      "B": "Get input from teachers",
+      "C": "Provide information to improve programme",
+      "D": "None of the above"
+    },
+    "answer": "A",
+    "explanation": "Summative evaluation assesses final outcomes against predetermined goals, typically at programme completion, for accountability and future planning."
+  },
+  {
+    "id": 38,
+    "question": "Out of 50 students who took a test, 45 passed. What percentage failed?",
+    "options": {
+      "A": "5%",
+      "B": "10%",
+      "C": "20%",
+      "D": "30%"
+    },
+    "answer": "B",
+    "explanation": "5 students failed (50-45). 5/50 × 100 = 10% failure rate. Basic percentage calculation."
+  },
+  {
+    "id": 39,
+    "question": "Which is an example of learning assessment metric for Ghanaian basic schools?",
+    "options": {
+      "A": "Early Grade Mathematics Assessment (EGMA)",
+      "B": "Early Grade Reading Assessment (EGRA)",
+      "C": "National Examination Assessment (NEA)",
+      "D": "Trends in International Mathematics and Science Study (TIMSS)"
+    },
+    "answer": "C",
+    "explanation": "NEA is Ghana's National Education Assessment administered at primary level. EGMA/EGRA are diagnostic tools; TIMSS is international."
+  },
+  {
+    "id": 40,
+    "question": "The general name for scoring guide used to evaluate student quality is",
+    "options": {
+      "A": "Checklist",
+      "B": "Inventory",
+      "C": "Rating scale",
+      "D": "Rubric"
+    },
+    "answer": "D",
+    "explanation": "Rubrics are detailed scoring guides with criteria and performance levels that provide transparent, consistent evaluation standards."
+  },
+  {
+    "id": 41,
+    "question": "The SDG that ensures inclusive and equitable quality lifelong opportunities is",
+    "options": {
+      "A": "Equitable education for all, especially girl-child",
+      "B": "Improved access and participation",
+      "C": "Inclusive and equitable quality lifelong opportunities for all",
+      "D": "Universal basic education for all"
+    },
+    "answer": "C",
+    "explanation": "SDG 4.1 specifically targets inclusive, equitable quality education and lifelong learning opportunities for all by 2030."
+  },
+  {
+    "id": 42,
+    "question": "Government interventions to mitigate graduate unemployment except",
+    "options": {
+      "A": "Nation Builders Corps",
+      "B": "National Youth Employment Programme",
+      "C": "Teachers and Nurses allowances",
+      "D": "Youth in Afforestation"
+    },
+    "answer": "B",
+    "explanation": "National Youth Employment Programme (NYEP) was replaced by NABCO and other programs. The others are current interventions."
+  },
+  {
+    "id": 43,
+    "question": "Minimum Standards for beginner teachers include all except",
+    "options": {
+      "A": "Ethics",
+      "B": "Knowledge",
+      "C": "Practice",
+      "D": "Values"
+    },
+    "answer": "A",
+    "explanation": "NTS has three domains: Professional Knowledge, Professional Practice, Professional Values and Attitudes (which includes ethics). Ethics is not separate."
+  },
+  {
+    "id": 44,
+    "question": "Which competence promotes entrepreneurial skills in learners?",
+    "options": {
+      "A": "Communication and Collaboration",
+      "B": "Creativity and Innovation",
+      "C": "Critical thinking and problem solving",
+      "D": "Personal development and Leadership"
+    },
+    "answer": "B",
+    "explanation": "Creativity and Innovation directly foster entrepreneurial mindsets, ideation, and value creation capabilities per Ghana's curriculum framework."
+  },
+  {
+    "id": 45,
+    "question": "A student's ability to analyse issues leading to problem resolution demonstrates what competence?",
+    "options": {
+      "A": "Communication and Collaboration",
+      "B": "Creativity and innovation",
+      "C": "Cultural identity and Global Citizenship",
+      "D": "Personal Development and Leadership"
+    },
+    "answer": "B",
+    "explanation": "NOTE: This appears mis-marked; analyzing issues is CRITICAL THINKING, not Creativity/Innovation. However, problem resolution involves innovative application. The answer may be interpreting 'resolution' as creative problem-solving."
+  },
+  {
+    "id": 46,
+    "question": "Which body has overall responsibility for education sector policy formulation?",
+    "options": {
+      "A": "Ghana Education Service",
+      "B": "Ministry of Education",
+      "C": "National Council for Curriculum and Assessment",
+      "D": "National Council for Curriculum Education"
+    },
+    "answer": "B",
+    "explanation": "The Ministry of Education is the apex policy-making body responsible for strategic planning, policy formulation, and sector coordination."
+  },
+  {
+    "id": 47,
+    "question": "Which is NOT a major regulatory law governing financial administration in schools?",
+    "options": {
+      "A": "Education Act 778 of 2008",
+      "B": "The Constitution of Ghana",
+      "C": "The Internal Audit Act, 2003 (Act 658)",
+      "D": "Public Financial Management Act, 2016 (Act 921)"
+    },
+    "answer": "B",
+    "explanation": "While supreme, the Constitution is not a financial administration law. The other Acts specifically regulate school financial management and auditing."
+  },
+  {
+    "id": 48,
+    "question": "Which is NOT a major aim of the double-track intervention in SHS?",
+    "options": {
+      "A": "Create room for increased enrollment",
+      "B": "Expand physical infrastructure",
+      "C": "Increase holidays for teachers",
+      "D": "Reduce class size"
+    },
+    "answer": "C",
+    "explanation": "The double-track system actually leads to year-round schooling for the infrastructure and, in many cases, requires teachers to be active for a larger portion of the calendar year to cover the alternating sessions. Therefore, increasing holidays for teachers is contradictory to the operational demands of the system."
+  },
+  {
+    "id": 49,
+    "question": "Teachers investigating their own practices to improve them is called  research.",
+    "options": {
+      "A": "Action",
+      "B": "Basic",
+      "C": "Qualitative",
+      "D": "Quantitative"
+    },
+    "answer": "A",
+    "explanation": "Action research is practitioner-led inquiry focused on solving immediate classroom/school problems and improving professional practice."
+  },
+  {
+    "id": 50,
+    "question": "Which MoE office houses EMIS data?",
+    "options": {
+      "A": "Administration and General Services",
+      "B": "Free Senior High School Secretariat",
+      "C": "Reform Secretariat",
+      "D": "Statistics, Research and Information Management (SRIM)"
+    },
+    "answer": "D",
+    "explanation": "SRIM is the official unit responsible for collecting, managing, and disseminating Education Management Information System (EMIS) data for planning."
+  },
+  {
+    "id": 51,
+    "question": "SDG 4 Target 1 states all boys and girls complete equitable quality primary and secondary education by 2030.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "SDG 4.1 explicitly targets completion of equitable, quality primary and secondary education leading to relevant learning outcomes by 2030."
+  },
+  {
+    "id": 52,
+    "question": "A school can directly improve student performance by improving teachers' note-taking skills.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Student performance is not directly linked to teachers' personal note-taking skills but to instructional quality, assessment, and student engagement."
+  },
+  {
+    "id": 53,
+    "question": "One major quality assurance issue for SHS heads is encroachment on lands by chiefs.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Land encroachment is a property management issue, not a direct quality assurance concern which focuses on teaching, learning, and standards."
+  },
+  {
+    "id": 54,
+    "question": "The school timetable brings together subjects, teachers, classes, rooms and equipment optimally.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Timetabling is the scheduling process coordinating all educational resources—human, material, and physical—to maximize efficient utilization."
+  },
+  {
+    "id": 55,
+    "question": "The overall goal of Ministry of Education is to provide relevant quality education for SOME Ghanaians.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "MoE's mandate is to provide quality education for ALL Ghanaians, not just some; equity and universal access are core principles."
+  },
+  {
+    "id": 56,
+    "question": "The goal of the education sector is in accordance with Education Act 778.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Education Act 778 (2008) legally establishes the framework and goals for Ghana's education system, including basic education provisions."
+  },
+  {
+    "id": 57,
+    "question": "The guiding principle of guidance and counselling is that optimum emotional and physiological well-being determines effective learning.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Maslow's hierarchy and modern learning theory confirm that well-being is foundational for cognitive engagement and academic success."
+  },
+  {
+    "id": 58,
+    "question": "Outstanding teachers may be selected for awards by support officers, students, heads, and colleagues.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Ghana Teacher Prize and other awards accept nominations from multiple stakeholders who observe and appreciate teaching excellence."
+  },
+  {
+    "id": 59,
+    "question": "Quality of teaching is determined by total number of pupils in a class.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Class size is one factor but quality depends more on teacher competence, pedagogy, resources, and classroom management. Small classes can still have poor instruction."
+  },
+  {
+    "id": 60,
+    "question": "School closures due to COVID-19 disturbed teaching but could not affect education since teaching and learning still went on.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "COVID-19 closures significantly disrupted education globally, causing learning loss, dropout increases, and inequity despite emergency remote learning efforts."
+  },
+  {
+    "id": 61,
+    "question": "Equity, inclusion, gender and teachers are cross-cutting issues in education.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "These are indeed cross-cutting themes integrated across all education policies and programs to ensure universal, equitable access and quality."
+  },
+  {
+    "id": 62,
+    "question": "Basic education is designed for Ghanaian children age 4-15 over 11 years.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Basic education includes 2 years KG (ages 4-6), 6 years primary (6-12), and 3 years JHS (12-15), totaling 11 years."
+  },
+  {
+    "id": 63,
+    "question": "Creativity and innovation skills enable learners to develop cognitive abilities to analyse issues leading to problem resolution.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "NOTE: Original marked False but this is TRUE. Creativity/Innovation involves analyzing problems and generating solutions. The correct answer is A."
+  },
+  {
+    "id": 64,
+    "question": "Anticipating students' questions is an important strategy to introduce your topic.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "NOTE: Original marked False but this is TRUE. Anticipating questions helps teachers address misconceptions proactively and engage learners. The correct answer is A."
+  },
+  {
+    "id": 65,
+    "question": "Summative assessment can take the form of progress review meetings during term.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Progress review meetings are formative; summative assessment is final evaluation (end of term exams, final projects) determining mastery."
+  },
+  {
+    "id": 66,
+    "question": "It is not recommended to take statements directly from text to make good true/false questions.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "NOTE: Original marked False but this is TRUE. Good T/F items should test understanding, not just recall, requiring rephrasing. The correct answer is A."
+  },
+  {
+    "id": 67,
+    "question": "Detailed test questions, clear directions, and clear grading criteria increase test reliability.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Standardized procedures and clear expectations reduce scorer subjectivity and increase consistency, which is reliability."
+  },
+  {
+    "id": 68,
+    "question": "Two key characteristics of assessment are validity and reliability. Reliability is replicability.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Reliability means consistent results across time, raters, and instruments; replicability is a core aspect of this consistency."
+  },
+  {
+    "id": 69,
+    "question": "Student performance is higher when teachers devote large amounts of time to materials rather than teaching content.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "NOTE: Original marked True but this is FALSE. Content instruction is primary; materials management should be efficient, not time-consuming. The correct answer is B."
+  },
+  {
+    "id": 70,
+    "question": "In Ghana financial accounting is one of the major responsibilities of school heads.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Heads are designated accounting officers responsible for school funds, procurement, and financial reporting under Act 921."
+  },
+  {
+    "id": 71,
+    "question": "Procrastination is productive behavior enhancing efficiency by focusing on non-priorities.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Procrastination is counterproductive, causing stress, missed deadlines, and reduced quality; it hampers rather than enhances efficiency."
+  },
+  {
+    "id": 72,
+    "question": "An advantage of planning is focusing on what works today and dealing with tomorrow's issues.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Planning is strategic, focusing on future goals and long-term direction, not just immediate or reactive issue management."
+  },
+  {
+    "id": 73,
+    "question": "Teacher Education Division (TED) is one of the Divisions at GES Headquarters.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "TED is under MoE's Policy, Planning and Budgeting Directorate, not GES Headquarters, which implements rather than formulates teacher education policy."
+  },
+  {
+    "id": 74,
+    "question": "The Ghana Tertiary Education Commission comprises the National Accreditation Board and National Council for Tertiary Education.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Act 1023 merged NAB and NCTE to form GTEC in 2020, streamlining tertiary education regulation and accreditation functions."
+  },
+  {
+    "id": 75,
+    "question": "The Ghana Education Service Council submits recommendations for tertiary education policies to the Minister.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "GES Council's mandate covers pre-tertiary education only; tertiary education policy is handled by Ministry of Education and Ghana Tertiary Education Commission."
+  }
+]

@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GES Promotion Exam Quiz - Management System</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8K659BSH3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-T8K659BSH3');
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc;
+            min-height: 100vh; /* Ensure full viewport height */
+        }
+        .option-button {
+            display: flex;
+            align-items: flex-start;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #e5e7eb;
+            background-color: #ffffff;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: left;
+            width: 100%;
+        }
+        .option-button:hover:not(:disabled) {
+            border-color: #3b82f6;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+        .option-button.selected {
+            background-color: #dbeafe;
+            border-color: #3b82f6;
+        }
+        .option-button.correct {
+            background-color: #d1fae5 !important;
+            border-color: #10b981 !important;
+            font-weight: 600;
+        }
+        .option-button.incorrect {
+            background-color: #fee2e2 !important;
+            border-color: #ef4444 !important;
+            font-weight: 600;
+        }
+        .option-letter {
+            font-weight: 700;
+            width: 2rem;
+            flex-shrink: 0;
+            margin-right: 0.5rem;
+            color: #4b5563;
+        }
+        .question-nav-button {
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .nav-current {
+            background-color: #3b82f6;
+            color: white;
+            box-shadow: 0 2px 4px rgba(59, 130, 246, 0.5);
+        }
+        .nav-answered {
+            background-color: #10b981;
+            color: white;
+        }
+        .nav-unanswered {
+            background-color: #e5e7eb;
+            color: #4b5563;
+        }
+        /* CRITICAL: Ensure horizontal scrolling is contained within the nav area */
+        .grid-container {
+            overflow-x: auto; 
+            white-space: nowrap;
+            /* Use padding for internal spacing rather than margin to prevent overflow */
+            padding-bottom: 0.5rem; 
+        }
+        /* Custom file input styling */
+        .custom-file-input {
+            border: 2px dashed #9ca3af;
+            padding: 1rem;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s;
+        }
+        .custom-file-input:hover {
+            border-color: #3b82f6;
+            background-color: #eff6ff;
+        }
+        .file-list {
+            margin-top: 0.5rem;
+            font-size: 0.875rem;
+            color: #4b5563;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <div id="app" class="max-w-4xl mx-auto p-4 sm:p-6 lg:p-8">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl font-extrabold text-blue-800 tracking-tight">GES Promotion Exam Practice</h1>
+            <p id="quiz-title" class="text-gray-600 mt-2">Immediate Feedback Mode</p>
+        </header>
+
+        <nav class="bg-white p-2 mb-6 rounded-xl shadow-lg flex justify-center space-x-2 sm:space-x-4">
+            <button onclick="setView('home')" id="nav-home" class="px-3 sm:px-4 py-2 text-sm font-medium rounded-lg transition-colors bg-blue-500 text-white">
+                Study
+            </button>
+            <button onclick="setView('management')" id="nav-management" class="px-3 sm:px-4 py-2 text-sm font-medium rounded-lg transition-colors text-gray-700 hover:bg-gray-100">
+                Management
+            </button>
+            <button onclick="setView('settings')" id="nav-settings" class="px-3 sm:px-4 py-2 text-sm font-medium rounded-lg transition-colors text-gray-700 hover:bg-gray-100">
+                Settings
+            </button>
+        </nav>
+
+        <main id="content-area" class="bg-white p-6 sm:p-8 rounded-xl shadow-2xl">
+            <!-- Dynamic content will be rendered here -->
+        </main>
+
+        <!-- Loading Indicator -->
+        <div id="loading-indicator" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div class="bg-white rounded-lg p-8 max-w-md shadow-2xl">
+                <div class="flex flex-col items-center">
+                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mb-4"></div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Loading Questions</h3>
+                    <p class="text-gray-600 text-center mb-4" id="loading-status">Scanning for question files...</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div id="loading-progress" class="bg-blue-600 h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-4" id="loading-count">0 questions loaded</p>
+                    <p class="text-xs text-gray-600 mt-4 text-center">
+                        For best compatibility, we recommend opening this app in
+                        <a href="https://www.google.com/chrome/" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-semibold hover:underline">Google Chrome</a>.
+                        Some browsers may not fully support the built-in reader or file loading behavior.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Message Box for Alerts -->
+        <div id="message-box" class="fixed bottom-4 right-4 p-4 rounded-lg shadow-xl text-white font-semibold transition-all duration-300 transform translate-y-full opacity-0 z-50"></div>
+
+        <!-- Developer Contact Footer -->
+        <footer class="mt-8 bg-gradient-to-r from-blue-600 to-blue-800 text-white p-6 rounded-xl shadow-lg">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- Developer Info -->
+                <div class="text-center sm:text-left">
+                    <h3 class="text-lg font-bold mb-2">Developer Contact</h3>
+                    <p class="text-blue-100 mb-1"><span class="font-semibold">Name:</span> Mr. Michael Darko</p>
+                    <p class="text-blue-100 mb-1"><span class="font-semibold">School:</span> Ayirebi D/A Basic School 'B'</p>
+                    <p class="text-blue-100 mb-1"><span class="font-semibold">District:</span> Akyemansa</p>
+                    <p class="text-blue-100"><span class="font-semibold">Phone:</span> <a href="tel:+233542410613" class="hover:underline">0542410613</a></p>
+                </div>
+                <!-- Donation Info -->
+                <div class="text-center sm:text-left">
+                    <h3 class="text-lg font-bold mb-2">Support This Project</h3>
+                    <p class="text-blue-100 mb-1">If you find this helpful, please consider donating:</p>
+                    <p class="text-blue-100"><span class="font-semibold">Mobile Money:</span> <a href="tel:+233241899862" class="hover:underline font-bold text-yellow-300">0241899862</a></p>
+                </div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-blue-400 text-center text-sm text-blue-100">
+                <p>© 2025 GES Promotion Exam Practice. Built with passion to help students succeed.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // --- Global State and Constants ---
+        const LOCAL_STORAGE_KEY = 'gesAdiiQuizQuestions';
+        const SETTINGS_KEY = 'gesAdiiQuizSettings';
+        const SESSION_HISTORY_KEY = 'gesAdiiSessionHistory';
+        
+        let renderResultsCalled = false;
+        let allQuestions = []; // Master list of all questions (static or uploaded)
+        let sessionQuestions = []; // Subset of questions for the current session (based on settings)
+        let currentView = 'home';
+        let previousView = 'home'; // Track previous view for back navigation
+        let currentQuestionIndex = 0;
+        let userAnswers = {};
+        let currentSelection = null;
+        let feedbackShown = false;
+        let reviewMode = false; // Flag to track if we're in review mode
+        let sessionHistory = []; // Array to store all session scores and timestamps
+        let sessionResultsSaved = false; // Flag to prevent duplicate session saves
+        let shouldAutoSpeakQuestion = false; // Flag to trigger auto-speak on question render
+        
+        // Updated quizSettings with new native TTS options
+        let quizSettings = {
+            numQuestions: 25,
+            randomize: true,
+            ttsEnabled: true, // Reader ON by default
+            ttsVoice: null, // URI of the selected voice
+            ttsRate: 1,     // Playback rate (0.1 to 10)
+            ttsPitch: 1     // Playback pitch (0 to 2)
+        };
+
+        const contentArea = document.getElementById('content-area');
+        const messageBox = document.getElementById('message-box');
+        const quizTitleEl = document.getElementById('quiz-title');
+        let voices = []; // To store available system voices
+
+        // --- Utility Functions ---
+
+        function showMessage(message, type = 'success') {
+            const baseClass = 'fixed bottom-4 right-4 p-4 rounded-lg shadow-xl font-semibold text-white transition-all duration-300 transform ';
+            let styleClass = '';
+
+            if (type === 'success') {
+                styleClass = 'bg-green-600';
+            } else if (type === 'error') {
+                styleClass = 'bg-red-600';
+            } else if (type === 'info') {
+                styleClass = 'bg-blue-600';
+            }
+
+            messageBox.className = baseClass + styleClass + ' translate-y-0 opacity-100';
+            messageBox.textContent = message;
+
+            setTimeout(() => {
+                messageBox.className = baseClass + styleClass + ' translate-y-full opacity-0';
+            }, 3000);
+        }
+
+        function isValidQuestion(item) {
+            return item && 
+                   typeof item.question === 'string' && 
+                   typeof item.options === 'object' && 
+                   typeof item.answer === 'string' && 
+                   typeof item.explanation === 'string';
+        }
+
+        function createQuestionHash(question) {
+            // Create a hash of the entire question to detect true duplicates
+            // Includes question, options, answer, and explanation
+            return JSON.stringify(question);
+        }
+
+        async function fetchJsonFilesRecursively(basePath = '.') {
+            // Optimized: Only scan existing files in the default-questions folder
+            
+            const allQuestionsLoaded = [];
+            const seenHashes = new Set();
+            
+            // Cache busting: add timestamp to prevent browser caching
+            const cacheBuster = `v=${Date.now()}`;
+            
+            // Target only the default-questions folder with set files
+            const filesToTry = [];
+            for (let i = 1; i <= 50; i++) {
+                filesToTry.push(`default-questions/set${i}.json`);
+            }
+            
+            let filesProcessed = 0;
+            const existingFiles = []; // Store only confirmed existing files
+
+            // First pass: Check which files exist without loading them
+            for (const filePath of filesToTry) {
+                try {
+                    const headResponse = await fetch(filePath, { method: 'HEAD' });
+                    if (headResponse.ok) {
+                        existingFiles.push(filePath);
+                    }
+                } catch (e) {
+                    // Silently skip - file doesn't exist or fetch not supported
+                }
+            }
+            
+            const totalFiles = existingFiles.length;
+            if (totalFiles === 0) return allQuestionsLoaded; // No files found, return empty
+
+            // Second pass: Load only existing files
+            for (const filePath of existingFiles) {
+                try {
+                    // Append cache buster to the URL
+                    const urlWithCacheBuster = `${filePath}?${cacheBuster}`;
+                    const response = await fetch(urlWithCacheBuster);
+                    filesProcessed++;
+                    
+                    // Update progress bar
+                    const progressPercent = (filesProcessed / totalFiles) * 100;
+                    document.getElementById('loading-progress').style.width = progressPercent + '%';
+                    document.getElementById('loading-count').textContent = `${allQuestionsLoaded.length} questions loaded | Loading set${filesProcessed} of ${totalFiles}...`;
+                    
+                    if (!response.ok) continue; // Skip if file can't be read
+                    
+                    const data = await response.json();
+                    if (!Array.isArray(data)) continue;
+
+                    // Validate and deduplicate
+                    let validCount = 0;
+                    for (const item of data) {
+                        if (isValidQuestion(item)) {
+                            const hash = createQuestionHash(item);
+                            if (!seenHashes.has(hash)) {
+                                seenHashes.add(hash);
+                                allQuestionsLoaded.push(item);
+                                validCount++;
+                            }
+                        }
+                    }
+                    
+                    if (validCount > 0) {
+                        console.log(`Successfully loaded ${validCount} questions from: ${filePath}`);
+                        document.getElementById('loading-status').textContent = `Found ${validCount} questions in set${filesProcessed}.json`;
+                    }
+                } catch (e) {
+                    // Silently skip files that fail to parse
+                    console.debug(`Skipped ${filePath}:`, e.message);
+                }
+            }
+
+            return allQuestionsLoaded;
+        }
+
+        async function loadState() {
+            // Show loading indicator
+            const loadingIndicator = document.getElementById('loading-indicator');
+            loadingIndicator.classList.remove('hidden');
+            
+            // 1. Recursively load and merge all valid JSON files from base directory
+            try {
+                console.log("Starting to load questions from available sources...");
+                let loadedQuestions = await fetchJsonFilesRecursively();
+                
+                // Update progress bar
+                document.getElementById('loading-progress').style.width = '100%';
+                document.getElementById('loading-status').textContent = 'Organizing questions...';
+                
+                if (loadedQuestions.length > 0) {
+                    console.log(`Successfully loaded ${loadedQuestions.length} unique questions`);
+                    document.getElementById('loading-count').textContent = `${loadedQuestions.length} questions loaded`;
+                    
+                    // Restructure IDs to be sequential
+                    allQuestions = loadedQuestions.map((q, index) => ({
+                        ...q,
+                        id: index + 1
+                    }));
+                    quizTitleEl.textContent = `Quiz Loaded: ${allQuestions.length} Total Questions`;
+                    showMessage(`Loaded ${allQuestions.length} questions from ${loadedQuestions.length} sources (duplicates removed).`, 'info');
+                } else {
+                    throw new Error('No valid question files found');
+                }
+            } catch (e) {
+                console.error("Error loading question files:", e);
+                document.getElementById('loading-status').textContent = 'Error loading questions, checking cache...';
+                
+                // Fallback: try local storage, then empty state
+                const savedQuestions = localStorage.getItem(LOCAL_STORAGE_KEY);
+                if (savedQuestions) {
+                    try {
+                        allQuestions = JSON.parse(savedQuestions);
+                        quizTitleEl.textContent = `Quiz Loaded: ${allQuestions.length} Total Questions (from cache)`;
+                        showMessage(`Loaded ${allQuestions.length} questions from cache.`, 'info');
+                    } catch (parseErr) {
+                        console.error("Error parsing cached questions:", parseErr);
+                        allQuestions = [];
+                        showMessage('Could not load questions. Please go to Management to upload a quiz file.', 'error');
+                    }
+                } else {
+                    allQuestions = [];
+                    showMessage('Could not find any question files. Please go to Management to upload a quiz file.', 'error');
+                }
+            }
+            
+            // 2. Load Settings
+            const savedSettings = localStorage.getItem(SETTINGS_KEY);
+            if (savedSettings) {
+                try {
+                    const loadedSettings = JSON.parse(savedSettings);
+                    // Preserve exact TTS enabled state from localStorage, fallback to default in quizSettings
+                    loadedSettings.ttsEnabled = loadedSettings.hasOwnProperty('ttsEnabled') ? loadedSettings.ttsEnabled : quizSettings.ttsEnabled;
+                    loadedSettings.ttsVoice = loadedSettings.ttsVoice || null;
+                    loadedSettings.ttsRate = loadedSettings.ttsRate || 1;
+                    loadedSettings.ttsPitch = loadedSettings.ttsPitch || 1;
+                    
+                    loadedSettings.numQuestions = Math.min(loadedSettings.numQuestions, allQuestions.length);
+                    Object.assign(quizSettings, loadedSettings);
+                    console.log("Settings loaded. TTS Enabled:", quizSettings.ttsEnabled);
+                } catch (e) {
+                    console.error("Error parsing saved settings:", e);
+                }
+            } else {
+                // No saved settings found: persist current defaults (reader on by default)
+                try {
+                    saveSettings();
+                    console.log('No saved settings found - persisted default settings.');
+                } catch (e) {
+                    console.warn('Could not persist default settings:', e);
+                }
+            }
+            
+            // 3. Initialize TTS
+            initializeTts();
+
+            // 4. Load session history
+            loadSessionHistory();
+
+            // 5. Re-render based on loaded state
+            setView(currentView);
+            
+            // 6. Hide loading indicator
+            setTimeout(() => {
+                document.getElementById('loading-indicator').classList.add('hidden');
+            }, 500); // Small delay for smooth transition
+        }
+
+        function saveQuestions(questions) {
+            allQuestions = questions;
+            try {
+                localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(questions));
+                quizTitleEl.textContent = `Quiz Loaded: ${allQuestions.length} Total Questions`;
+                showMessage(`Successfully loaded and saved ${questions.length} questions.`, 'success');
+            } catch (e) {
+                showMessage('Could not save data to local storage.', 'error');
+                console.error("Local storage error:", e);
+            }
+        }
+
+        function saveSettings() {
+            try {
+                localStorage.setItem(SETTINGS_KEY, JSON.stringify(quizSettings));
+                showMessage('Settings saved successfully.', 'success');
+            } catch (e) {
+                showMessage('Could not save settings.', 'error');
+                console.error("Local storage error:", e);
+            }
+        }
+        
+        // --- NATIVE TTS IMPLEMENTATION ---
+
+        function initializeTts() {
+            const synth = window.speechSynthesis;
+            if (!synth) {
+                console.warn("Browser Speech Synthesis not supported.");
+                quizSettings.ttsEnabled = false; // Disable TTS if not supported
+                return;
+            }
+            console.log("TTS initialized successfully");
+
+            function populateVoiceList() {
+                voices = synth.getVoices().filter(v => v.lang.startsWith('en')); // Filter for English voices
+                console.log(`Found ${voices.length} English voices available`);
+                if (voices.length === 0) {
+                    console.warn("No English voices found for TTS (may load shortly).");
+                    // Do not disable the reader here — voices sometimes load async via onvoiceschanged.
+                } else {
+                    console.log("Available voices:", voices.map(v => v.name));
+                }
+                // If a view is active that needs the voice list, re-render it
+                if (currentView === 'settings') {
+                    renderSettingsView();
+                }
+            }
+
+            populateVoiceList();
+            if (synth.onvoiceschanged !== undefined) {
+                synth.onvoiceschanged = populateVoiceList;
+                console.log("Voice change listener attached");
+            }
+            // Ensure UI buttons reflect the current reader setting after initialization
+            try {
+                updateTtsButtons();
+            } catch (e) {
+                console.warn('updateTtsButtons not available yet:', e);
+            }
+        }
+
+        function speak(text) {
+            const synth = window.speechSynthesis;
+            if (!quizSettings.ttsEnabled || !synth || !text) return;
+
+            // Cancel any ongoing speech
+            synth.cancel();
+
+            // Remove asterisks for TTS (they're just formatting)
+            const cleanText = text.replace(/\*\*/g, '');
+            const utterance = new SpeechSynthesisUtterance(cleanText);
+            
+            // Find the selected voice
+            if (quizSettings.ttsVoice) {
+                const selectedVoice = voices.find(v => v.voiceURI === quizSettings.ttsVoice);
+                if (selectedVoice) {
+                    utterance.voice = selectedVoice;
+                }
+            }
+            
+            utterance.rate = quizSettings.ttsRate;
+            utterance.pitch = quizSettings.ttsPitch;
+            
+            utterance.onerror = (event) => {
+                console.error('SpeechSynthesisUtterance.onerror', event);
+                showMessage('An error occurred during speech synthesis.', 'error');
+            };
+
+            synth.speak(utterance);
+        }
+        
+        function toggleTts() {
+            quizSettings.ttsEnabled = !quizSettings.ttsEnabled;
+            if (!quizSettings.ttsEnabled) {
+                window.speechSynthesis.cancel(); // Stop speech immediately
+            } else {
+                // Re-speak current content when TTS is toggled on during a session
+                if (sessionQuestions.length > 0) {
+                    const q = sessionQuestions[currentQuestionIndex];
+                    if (q) {
+                        if (feedbackShown) {
+                            // If feedback is shown, speak the feedback
+                            const userAnswer = userAnswers[q.id];
+                            let feedbackText = `${userAnswer === q.answer ? 'Correct' : 'Incorrect'}. ${q.explanation} so the correct answer is ${q.answer}: ${q.options[q.answer]}.`;
+                            speak(feedbackText);
+                        } else {
+                            // If no feedback shown yet, speak the question
+                            let textToSpeak = `Question ${currentQuestionIndex + 1}. ${q.question}. Options: `;
+                            textToSpeak += Object.entries(q.options).map(([key, value]) => `Option ${key}: ${value}.`).join(' ');
+                            speak(textToSpeak);
+                        }
+                    }
+                }
+            }
+            saveSettings();
+            updateTtsButtons();
+            showMessage(`Reader is now ${quizSettings.ttsEnabled ? 'Enabled' : 'Disabled'}.`, 'info');
+        }
+        
+        function updateTtsButtons() {
+            const buttonIds = ['tts-toggle-btn', 'tts-toggle-btn-pre'];
+            buttonIds.forEach(id => {
+                const buttonEl = document.getElementById(id);
+                if (buttonEl) {
+                    if (quizSettings.ttsEnabled) {
+                        buttonEl.classList.remove('bg-gray-200', 'text-gray-700', 'hover:bg-gray-300');
+                        buttonEl.classList.add('bg-green-500', 'text-white', 'hover:bg-green-600');
+                        buttonEl.innerHTML = `<svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.47-9.544a8 8 0 010 12.728m-9.544-2.47a5 5 0 017.072 0M6 18h2V6H6v12zm-3 0h2V6H3v12zm18 0h2V6h-2v12z"></path></svg>Reader ON`;
+                    } else {
+                        buttonEl.classList.remove('bg-green-500', 'text-white', 'hover:bg-green-600');
+                        buttonEl.classList.add('bg-gray-200', 'text-gray-700', 'hover:bg-gray-300');
+                        buttonEl.innerHTML = `<svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.47-9.544a8 8 0 010 12.728m-9.544-2.47a5 5 0 017.072 0M6 18h2V6H6v12zm-3 0h2V6H3v12zm18 0h2V6h-2v12zM7 9l4-4 4 4m-4 4v7"></path></svg>Reader OFF`;
+                    }
+                }
+            });
+        }
+
+
+        // --- View Management ---
+
+        function goBack() {
+            setView(previousView);
+        }
+
+        function setView(view) {
+            // Track previous view before changing
+            if (view !== 'home' || currentView !== 'home') {
+                previousView = currentView;
+            }
+            currentView = view;
+            window.speechSynthesis.cancel(); // Stop speech when changing views
+            
+            // Reset navigation button styles
+            document.querySelectorAll('nav button').forEach(btn => {
+                btn.classList.remove('bg-blue-500', 'text-white');
+                btn.classList.add('text-gray-700', 'hover:bg-gray-100');
+            });
+            const navButton = document.getElementById(`nav-${view}`);
+            if (navButton) {
+                navButton.classList.remove('text-gray-700', 'hover:bg-gray-100');
+                navButton.classList.add('bg-blue-500', 'text-white');
+            }
+
+            // Render the content for the selected view
+            if (view === 'home') {
+                renderHomeView();
+            } else if (view === 'management') {
+                renderManagementView();
+            } else if (view === 'settings') {
+                renderSettingsView();
+            } else if (view === 'leaderboard') {
+                renderLeaderboardView();
+            } else if (view === 'graph') {
+                renderProgressGraphView();
+            }
+        }
+
+        function renderHomeView() {
+            if (allQuestions.length === 0) {
+                 contentArea.innerHTML = `
+                    <div class="text-center p-8 bg-yellow-50 rounded-lg border-2 border-yellow-300">
+                        <h3 class="text-2xl font-bold text-yellow-800 mb-4">No Quiz Data Loaded</h3>
+                        <p class="text-gray-700 mb-6">Please go to the "Management" section to upload a quiz file or ensure 'questions.json' is present.</p>
+                        <button onclick="setView('management')" class="w-full sm:w-auto px-6 py-3 bg-yellow-600 text-white font-bold rounded-lg hover:bg-yellow-700 transition duration-150 shadow-md">
+                            Go to Management
+                        </button>
+                    </div>
+                `;
+                return;
+            }
+            
+            contentArea.innerHTML = `
+                <div id="quiz-pre-start" class="text-center p-6 sm:p-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Start Your Study Session</h2>
+                    <p class="text-lg text-blue-600 mb-2 cursor-pointer hover:underline hover:text-blue-700 font-semibold flex items-center justify-center gap-2" onclick="setView('settings')" role="button" tabindex="0" aria-label="Open settings" onkeydown="if(event.key === 'Enter' || event.key === ' ') setView('settings')">
+                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0a1.724 1.724 0 002.196 1.17c.957-.34 1.98.418 1.648 1.363a1.724 1.724 0 001.102 2.16c.92.381.92 1.724 0 2.105a1.724 1.724 0 00-1.102 2.16c.332.945-.691 1.703-1.648 1.363a1.724 1.724 0 00-2.196 1.17c-.299.921-1.602.921-1.902 0a1.724 1.724 0 00-2.196-1.17c-.957.34-1.98-.418-1.648-1.363a1.724 1.724 0 00-1.102-2.16c-.92-.381-.92-1.724 0-2.105a1.724 1.724 0 001.102-2.16c-.332-.945.691-1.703 1.648-1.363.83.295 1.76-.17 2.196-1.17z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <span>Configure your session and start practicing</span>
+                    </p>
+                    
+                    <div class="inline-flex flex-wrap justify-center space-x-4 p-3 bg-blue-50 rounded-lg shadow-inner mb-6 text-lg font-medium">
+                        <span>${quizSettings.numQuestions} Questions</span>
+                        <span>|</span>
+                        <span>${quizSettings.randomize ? 'Randomized' : 'Sequential'}</span>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                         <button id="tts-toggle-btn-pre" onclick="toggleTts()" class="flex items-center justify-center px-6 py-3 font-bold rounded-xl transition duration-150 shadow-md">
+                            <!-- Button content will be updated by updateTtsButton -->
+                        </button>
+                        <button onclick="startSession()" class="w-full sm:w-auto px-10 py-4 bg-green-600 text-white font-extrabold text-xl rounded-xl hover:bg-green-700 transition duration-150 shadow-lg transform hover:scale-105">
+                            Start Session (${quizSettings.numQuestions} Qs)
+                        </button>
+                        <button onclick="setView('leaderboard')" class="w-full sm:w-auto px-6 py-3 bg-indigo-600 text-white font-bold rounded-xl hover:bg-indigo-700 transition duration-150 shadow-md">
+                            View Leaderboard
+                        </button>
+                    </div>
+                    
+                    <p class="mt-6 text-gray-500 text-sm">You can change these settings in the 'Settings' tab.</p>
+                </div>
+                
+                <div id="quiz-container" class="hidden">
+                    <div class="flex justify-end gap-2 mb-4">
+                        <button id="tts-toggle-btn" onclick="toggleTts()" class="flex items-center px-4 py-2 text-sm font-bold rounded-full transition duration-150 shadow-md">
+                            <!-- Button content will be updated by updateTtsButton -->
+                        </button>
+                        <button id="quit-quiz-btn" onclick="confirmQuitQuiz()" class="flex items-center px-4 py-2 text-sm font-bold rounded-full bg-red-500 text-white hover:bg-red-600 transition duration-150 shadow-md" style="display: ${reviewMode ? 'none' : 'block'};">Quit Quiz</button>
+                    </div>
+                    <div id="question-area"></div>
+                    <div id="feedback-area" class="mt-6 hidden"></div>
+                    <div id="action-buttons" class="mt-8 flex justify-between items-center flex-wrap gap-4"></div>
+                    <div id="navigation-area" class="mt-8"></div>
+                    <div id="progress-bar" class="mt-8"></div>
+                </div>
+            `;
+            updateTtsButtons();
+            if (Object.keys(userAnswers).length > 0) {
+                document.getElementById('quiz-pre-start').classList.add('hidden');
+                document.getElementById('quiz-container').classList.remove('hidden');
+                renderQuestion();
+            }
+        }
+
+        function renderManagementView() {
+            contentArea.innerHTML = `
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Quiz Management & Import/Export</h2>
+                <div class="space-y-6">
+                    <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-md">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-3">Upload Quiz Files (JSON)</h3>
+                        <p class="text-gray-600 mb-4">Select one or more JSON files. New uploads will <span class="font-bold text-red-500">REPLACE</span> the current question set.</p>
+                        <input type="file" id="quizFileInput" accept=".json" multiple class="hidden" onchange="handleFileSelection(event)">
+                        <label for="quizFileInput" class="custom-file-input rounded-lg block">
+                            <svg class="w-8 h-8 mx-auto text-blue-500 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+                            <span id="upload-label" class="text-blue-500 font-medium">Click to select JSON file(s)</span>
+                        </label>
+                        <ul id="file-list" class="file-list italic pl-4 list-disc">No files selected.</ul>
+                        <button id="process-files-btn" onclick="processSelectedFiles()" class="mt-4 w-full sm:w-auto px-6 py-2 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition duration-150 shadow-md disabled:bg-gray-400" disabled>
+                            Process & Load Questions
+                        </button>
+                        <div class="mt-4 text-sm text-gray-500">Current Quiz Questions Loaded: <span class="font-bold text-blue-600">${allQuestions.length}</span></div>
+                    </div>
+                    <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-md">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-3">Download Options</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <button onclick="downloadTemplate()" class="flex items-center justify-center w-full px-4 py-3 bg-indigo-500 text-white font-bold rounded-lg hover:bg-indigo-600 transition duration-150 shadow-md">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                Download Template
+                            </button>
+                            <button onclick="downloadQuiz()" class="flex items-center justify-center w-full px-4 py-3 bg-purple-500 text-white font-bold rounded-lg hover:bg-purple-600 transition duration-150 shadow-md">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.885 2.624L7 20h10l.885-1.376A4 4 0 0117 16V9a2 2 0 00-2-2h-1"></path></svg>
+                                Download Current Quiz (${allQuestions.length} Qs)
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-red-50 border border-red-200 rounded-xl shadow-md">
+                        <h3 class="text-xl font-semibold text-red-700 mb-3">Reset to Default</h3>
+                        <p class="text-gray-600 mb-4">This will clear any uploaded quiz and reload from the original 'questions.json' file.</p>
+                        <button onclick="confirmReset()" class="w-full sm:w-auto px-4 py-2 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition duration-150 shadow-md">
+                            Reset Quiz Data
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderSettingsView() {
+            const maxQ = allQuestions.length > 0 ? allQuestions.length : 1;
+            
+            let voiceOptions = '<option value="">Default</option>';
+            if (voices.length > 0) {
+                voiceOptions = voices.map(voice => 
+                    `<option value="${voice.voiceURI}" ${quizSettings.ttsVoice === voice.voiceURI ? 'selected' : ''}>
+                        ${voice.name} (${voice.lang})
+                    </option>`
+                ).join('');
+            }
+
+            contentArea.innerHTML = `
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Study Session Settings</h2>
+                <div class="p-6 bg-white border border-gray-200 rounded-xl shadow-md space-y-6">
+                    
+                    <div>
+                        <label for="numQuestions" class="block text-lg font-semibold text-gray-700 mb-2">Questions per Session</label>
+                        <p class="text-sm text-gray-500 mb-3">Set how many questions you want in a session. (Max: ${maxQ})</p>
+                        <input type="range" id="numQuestions" min="1" max="${maxQ}" value="${quizSettings.numQuestions}" oninput="updateSettingsAuto(); document.getElementById('numQInput').value = this.value" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                        <div class="flex justify-between items-center text-sm text-gray-600 mt-2">
+                            <span>1</span>
+                            <input type="number" id="numQInput" min="1" max="${maxQ}" value="${quizSettings.numQuestions}" onchange="if(this.value > ${maxQ}) this.value = ${maxQ}; if(this.value < 1) this.value = 1; document.getElementById('numQuestions').value = this.value; updateSettingsAuto();" class="w-24 px-3 py-2 border border-gray-300 rounded-lg text-center font-semibold text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <span>${maxQ}</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between border-t pt-4">
+                        <label for="randomize" class="text-lg font-semibold text-gray-700">Randomize Question Order</label>
+                        <input type="checkbox" id="randomize" ${quizSettings.randomize ? 'checked' : ''} onchange="updateSettingsAuto()" class="w-5 h-5 text-blue-600 rounded">
+                    </div>
+                    
+                    <div class="border-t pt-4 space-y-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Text-to-Speech (TTS)</h3>
+                        <div class="flex items-center justify-between">
+                            <label for="ttsEnabled" class="text-lg font-semibold text-gray-700">Enable Reader</label>
+                            <input type="checkbox" id="ttsEnabled" ${quizSettings.ttsEnabled ? 'checked' : ''} onchange="updateSettingsAuto()" class="w-5 h-5 text-blue-600 rounded">
+                        </div>
+
+                        <div>
+                            <label for="ttsVoice" class="block text-lg font-semibold text-gray-700 mb-2">Voice</label>
+                            <div class="flex gap-2">
+                                <select id="ttsVoice" onchange="updateSettingsAuto(); testVoice()" class="flex-1 p-2 border border-gray-300 rounded-lg bg-white">${voiceOptions}</select>
+                                <button onclick="testVoice()" class="px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 whitespace-nowrap">Test Voice</button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="ttsRate" class="block text-lg font-semibold text-gray-700 mb-2">Rate: <span id="ttsRateValue">${quizSettings.ttsRate}</span></label>
+                            <input type="range" id="ttsRate" min="0.5" max="2" step="0.1" value="${quizSettings.ttsRate}" oninput="updateSettingsAuto(); document.getElementById('ttsRateValue').textContent = this.value" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                        </div>
+
+                        <div>
+                            <label for="ttsPitch" class="block text-lg font-semibold text-gray-700 mb-2">Pitch: <span id="ttsPitchValue">${quizSettings.ttsPitch}</span></label>
+                            <input type="range" id="ttsPitch" min="0" max="2" step="0.1" value="${quizSettings.ttsPitch}" oninput="updateSettingsAuto(); document.getElementById('ttsPitchValue').textContent = this.value" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // --- Settings Logic ---
+
+        function updateSettingsAuto() {
+            quizSettings.numQuestions = parseInt(document.getElementById('numQuestions').value, 10);
+            quizSettings.randomize = document.getElementById('randomize').checked;
+            quizSettings.ttsEnabled = document.getElementById('ttsEnabled').checked;
+            quizSettings.ttsVoice = document.getElementById('ttsVoice').value;
+            quizSettings.ttsRate = parseFloat(document.getElementById('ttsRate').value);
+            quizSettings.ttsPitch = parseFloat(document.getElementById('ttsPitch').value);
+
+            saveSettings();
+            updateTtsButtons();
+        }
+
+        function formatText(text) {
+            // Replace **text** with <span class="text-blue-700 font-bold">text</span>
+            let formatted = text.replace(/\*\*([^*]+)\*\*/g, '<span class="text-blue-700 font-bold">$1</span>');
+            
+            // Replace *text* with <span class="text-blue-700 font-bold">text</span>
+            formatted = formatted.replace(/\*([^*]+)\*/g, '<span class="text-blue-700 font-bold">$1</span>');
+            
+            // Replace 'text' with <span class="text-blue-700 font-bold">text</span>
+            formatted = formatted.replace(/'([^']+)'/g, '<span class="text-blue-700 font-bold">$1</span>');
+            
+            // Add line breaks before listed items (Roman numerals, letters, or numbers followed by period/parenthesis)
+            // Patterns: I., II., III., IV., etc. or (I), (II), etc. or A., B., C., etc. or 1., 2., 3., etc.
+            formatted = formatted.replace(/\s+((?:[IVX]+|[A-Za-z]|[0-9]+)[\.\)]\s+)/g, '<br>$1');
+            
+            return formatted;
+        }
+
+        function testVoice() {
+            const synth = window.speechSynthesis;
+            if (!synth) return;
+
+            // Cancel any ongoing speech
+            synth.cancel();
+
+            const testText = "This is a test of the selected voice. You can now hear how the voice sounds.";
+            const utterance = new SpeechSynthesisUtterance(testText);
+            
+            // Get the selected voice from the dropdown
+            const selectedVoiceURI = document.getElementById('ttsVoice').value;
+            if (selectedVoiceURI) {
+                const selectedVoice = voices.find(v => v.voiceURI === selectedVoiceURI);
+                if (selectedVoice) {
+                    utterance.voice = selectedVoice;
+                }
+            }
+            
+            // Use the rate and pitch from the sliders
+            utterance.rate = parseFloat(document.getElementById('ttsRate').value);
+            utterance.pitch = parseFloat(document.getElementById('ttsPitch').value);
+            
+            synth.speak(utterance);
+        }
+
+
+        // --- File Handling Logic (Remaining functions are unchanged) ---
+
+        let selectedFiles = [];
+
+        function handleFileSelection(event) {
+            selectedFiles = Array.from(event.target.files);
+            const fileListEl = document.getElementById('file-list');
+            const processBtn = document.getElementById('process-files-btn');
+            
+            if (selectedFiles.length > 0) {
+                fileListEl.innerHTML = selectedFiles.map(file => `<li><span class="font-semibold">${file.name}</span> (${(file.size / 1024).toFixed(1)} KB)</li>`).join('');
+                fileListEl.classList.remove('italic');
+                processBtn.disabled = false;
+            } else {
+                fileListEl.textContent = 'No files selected.';
+                fileListEl.classList.add('italic');
+                processBtn.disabled = true;
+            }
+        }
+
+        function isValidQuiz(data) {
+            if (!Array.isArray(data) || data.length === 0) {
+                return false;
+            }
+            // Basic validation check on the first question
+            const firstQ = data[0];
+            return firstQ.question && firstQ.options && firstQ.answer && firstQ.explanation &&
+                   typeof firstQ.question === 'string' && typeof firstQ.options === 'object' && typeof firstQ.answer === 'string';
+        }
+
+        async function processSelectedFiles() {
+            if (selectedFiles.length === 0) {
+                showMessage("Please select one or more JSON files first.", 'error');
+                return;
+            }
+            
+            const processBtn = document.getElementById('process-files-btn');
+            processBtn.disabled = true;
+            const originalText = processBtn.textContent;
+            processBtn.textContent = 'Processing...';
+
+            let combinedQuestions = [];
+            let errors = 0;
+
+            for (const file of selectedFiles) {
+                try {
+                    const content = await readFileAsText(file);
+                    const fileData = JSON.parse(content);
+                    
+                    if (!isValidQuiz(fileData)) {
+                        errors++;
+                        throw new Error(`Invalid structure in ${file.name}.`);
+                    }
+                    
+                    combinedQuestions = combinedQuestions.concat(fileData);
+                    
+                } catch (error) {
+                    showMessage(`Error loading ${file.name}: ${error.message}`, 'error');
+                    console.error("File processing error:", error);
+                    errors++;
+                }
+            }
+            
+            processBtn.textContent = originalText;
+            selectedFiles = []; // Clear file list after processing
+            document.getElementById('quizFileInput').value = null; // Clear file input
+            document.getElementById('file-list').innerHTML = 'No files selected.';
+            document.getElementById('file-list').classList.add('italic');
+
+            if (combinedQuestions.length === 0) {
+                showMessage(`No valid questions were loaded. ${errors} file(s) failed to load.`, 'error');
+                renderManagementView();
+                return;
+            }
+
+            // 4. Auto-reorganize and re-index IDs
+            const finalQuestions = combinedQuestions.map((q, index) => ({
+                ...q,
+                id: index + 1 // Assign new sequential ID
+            }));
+
+            // 5. Save the new set
+            saveQuestions(finalQuestions);
+            
+            // 6. Update settings based on max length
+            quizSettings.numQuestions = Math.min(quizSettings.numQuestions, finalQuestions.length);
+            saveSettings();
+
+            showMessage(`Successfully combined and loaded ${finalQuestions.length} questions from ${selectedFiles.length - errors} file(s).`, 'success');
+            renderManagementView(); // Rerender to show new question count
+            setView('home'); // Go to home to start the quiz
+        }
+
+        function readFileAsText(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = (e) => resolve(e.target.result);
+                reader.onerror = (e) => reject(e.target.error);
+                reader.readAsText(file);
+            });
+        }
+
+        function downloadFile(content, fileName, mimeType) {
+            const blob = new Blob([content], { type: mimeType });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = fileName;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showMessage(`Downloaded file: ${fileName}`, 'success');
+        }
+
+        function downloadTemplate() {
+            const template = [
+                {
+                    "id": 1,
+                    "question": "Example: What is the primary purpose of the GES Code of Conduct?",
+                    "options": {
+                        "A": "To mandate weekly staff meetings.",
+                        "B": "To define ethical and professional standards for staff.",
+                        "C": "To provide a list of all school infrastructure.",
+                        "D": "To set the budget for the District Education Office."
+                    },
+                    "answer": "B",
+                    "explanation": "The Code of Professional Conduct outlines the required behaviour, duties, and ethical standards for all personnel."
+                },
+                {
+                    "id": 2,
+                    "question": "Example: Which body issues the Teacher Professional Licence?",
+                    "options": {
+                        "A": "GES",
+                        "B": "MoE",
+                        "C": "NTC",
+                        "D": "GNAT"
+                    },
+                    "answer": "C",
+                    "explanation": "The National Teaching Council (NTC) is the statutory body responsible for licensing teachers."
+                }
+            ];
+            downloadFile(JSON.stringify(template, null, 2), 'quiz_template.json', 'application/json');
+        }
+
+        function downloadQuiz() {
+            if (allQuestions.length === 0) {
+                showMessage("No quiz data to download.", 'error');
+                return;
+            }
+            downloadFile(JSON.stringify(allQuestions, null, 2), `ges_promotion_quiz_${allQuestions.length}Qs.json`, 'application/json');
+        }
+
+        /**
+         * Resets local storage and restores the default question set.
+         */
+        function confirmReset() {
+            localStorage.removeItem(LOCAL_STORAGE_KEY);
+            userAnswers = {};
+            loadState(); // This will reload from questions.json
+            showMessage(`Quiz data has been reset from 'questions.json'.`, 'success');
+        }
+
+        // --- Quiz Session Logic ---
+        
+        function shuffle(array) {
+            let currentIndex = array.length, randomIndex;
+            while (currentIndex !== 0) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex--;
+                [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+            }
+            return array;
+        }
+
+        function startSession() {
+            if (allQuestions.length === 0) {
+                showMessage("Cannot start session. No questions loaded.", 'error');
+                return;
+            }
+            
+            window.speechSynthesis.cancel();
+
+            let pool = [...allQuestions];
+            if (quizSettings.randomize) {
+                pool = shuffle(pool);
+            }
+            
+            sessionQuestions = pool.slice(0, quizSettings.numQuestions);
+            currentQuestionIndex = 0;
+            userAnswers = {};
+            currentSelection = null;
+            feedbackShown = false;
+
+            document.getElementById('quiz-pre-start').classList.add('hidden');
+            document.getElementById('quiz-container').classList.remove('hidden');
+
+            renderQuestion();
+            showMessage(`New session started with ${sessionQuestions.length} questions.`, 'info');
+        }
+
+        function renderQuestion() {
+            const q = sessionQuestions[currentQuestionIndex];
+            if (!q) {
+                window.speechSynthesis.cancel();
+                renderResults();
+                return;
+            }
+
+            const userAnswer = userAnswers[q.id];
+            currentSelection = userAnswer || null;
+            feedbackShown = !!userAnswer;
+
+            const questionArea = document.getElementById('question-area');
+            const navigationArea = document.getElementById('navigation-area');
+            const progressContainer = document.getElementById('progress-bar');
+            const actionButtons = document.getElementById('action-buttons');
+            const feedbackArea = document.getElementById('feedback-area');
+            const totalQuestions = sessionQuestions.length;
+
+            let optionsHtml = '';
+            for (const key in q.options) {
+                let className = 'option-button';
+                if (feedbackShown) {
+                    if (key === q.answer) className += ' correct';
+                    else if (key === userAnswer) className += ' incorrect';
+                } else if (key === currentSelection) {
+                    className += ' selected';
+                }
+                optionsHtml += `<button id="option-${key}" class="${className}" data-option="${key}" onclick="selectOption('${key}')" ${feedbackShown || reviewMode ? 'disabled' : ''}><span class="option-letter">${key}.</span><span class="text-left">${q.options[key]}</span></button>`;
+            }
+
+            questionArea.innerHTML = `
+                <div class="text-xl font-semibold text-gray-800 mb-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500 shadow-inner">
+                    <span class="text-blue-700 mr-2">Question ${currentQuestionIndex + 1} of ${totalQuestions}:</span>
+                    ${formatText(q.question)}
+                </div>
+                <div class="options-container grid grid-cols-1 sm:grid-cols-2 gap-3">${optionsHtml}</div>
+            `;
+            
+            updateTtsButtons();
+            renderActionButtons(actionButtons);
+            renderNavigation(navigationArea);
+            renderProgressBar(progressContainer);
+            
+            if (feedbackShown) {
+                displayFeedback(q, userAnswer, feedbackArea, false); 
+            } else {
+                feedbackArea.classList.add('hidden');
+                feedbackArea.innerHTML = '';
+                if (quizSettings.ttsEnabled && (currentQuestionIndex === 0 || userAnswer === null || shouldAutoSpeakQuestion)) {
+                    let textToSpeak = `Question ${currentQuestionIndex + 1}. ${q.question}. Options: `;
+                    textToSpeak += Object.entries(q.options).map(([key, value]) => `Option ${key}: ${value}.`).join(' ');
+                    speak(textToSpeak);
+                    shouldAutoSpeakQuestion = false; // Reset flag after speaking
+                }
+            }
+        }
+
+        function selectOption(optionKey) {
+            if (feedbackShown) return; 
+
+            currentSelection = optionKey;
+            
+            document.querySelectorAll('.option-button').forEach(btn => {
+                btn.classList.remove('selected');
+                if (btn.dataset.option === optionKey) {
+                    btn.classList.add('selected');
+                }
+            });
+            renderActionButtons(document.getElementById('action-buttons'));
+        }
+
+        function renderActionButtons(actionButtons) {
+            actionButtons.innerHTML = '';
+            const prevBtn = `<button onclick="navigate('prev')" ${currentQuestionIndex === 0 ? 'disabled' : ''} class="w-full sm:w-auto px-4 py-2 bg-gray-200 text-gray-700 font-bold rounded-lg hover:bg-gray-300 disabled:opacity-50">Previous</button>`;
+            actionButtons.innerHTML += prevBtn;
+
+            if (feedbackShown) {
+                const isLastQuestion = currentQuestionIndex === sessionQuestions.length - 1;
+                actionButtons.innerHTML += `<button onclick="navigate('next')" ${isLastQuestion ? 'disabled' : ''} class="w-full sm:w-auto px-4 py-2 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 disabled:opacity-50">${isLastQuestion ? 'Review Complete' : 'Next'}</button>`;
+            } else if (currentSelection) {
+                actionButtons.innerHTML += `<button onclick="checkAnswer()" class="w-full sm:w-auto px-6 py-3 bg-green-600 text-white font-bold rounded-xl">Check Answer</button>`;
+            } else {
+                actionButtons.innerHTML += `<button disabled class="w-full sm:w-auto px-6 py-3 bg-gray-400 text-white font-bold rounded-xl">Select an Option</button>`;
+            }
+
+            if (currentQuestionIndex === sessionQuestions.length - 1 && feedbackShown) {
+                actionButtons.innerHTML = `${prevBtn} <button onclick="renderResults()" class="w-full sm:w-auto px-6 py-3 bg-purple-600 text-white font-bold rounded-xl">View Score</button>`;
+            }
+        }
+        
+        // Updated displayFeedback signature to control TTS
+        function displayFeedback(q, selectedOption, feedbackArea, useTts = true) {
+            const isCorrect = selectedOption === q.answer;
+            const statusClass = isCorrect ? 'bg-green-100 border-green-500 text-green-800' : 'bg-red-100 border-red-500 text-red-800';
+            const statusText = isCorrect ? 'Correct!' : 'Incorrect.';
+            
+            feedbackArea.innerHTML = `
+                <div class="p-4 rounded-lg border-l-4 ${statusClass}">
+                    <h4 class="font-bold text-lg">${statusText}</h4>
+                    <p>The correct answer is <span class="font-extrabold">${q.answer}</span>: ${formatText(q.options[q.answer])}</p>
+                    <p class="mt-2 text-sm"><b>Explanation:</b> ${formatText(q.explanation)}</p>
+                </div>`;
+            feedbackArea.classList.remove('hidden');
+            
+            if (useTts) {
+                let feedbackText = `${statusText} ${q.explanation} so the correct answer is ${q.answer}: ${q.options[q.answer]}.`;
+                speak(feedbackText);
+            }
+        }
+
+        function renderReviewQuestion() {
+            const q = sessionQuestions[currentQuestionIndex];
+            if (!q) {
+                returnToResults();
+                return;
+            }
+
+            const userAnswer = userAnswers[q.id];
+            const questionArea = document.getElementById('question-area-review');
+            const navigationArea = document.getElementById('navigation-area-review');
+            const progressContainer = document.getElementById('progress-bar-review');
+            const actionButtons = document.getElementById('action-buttons-review');
+            const feedbackArea = document.getElementById('feedback-area-review');
+            const totalQuestions = sessionQuestions.length;
+
+            let optionsHtml = '';
+            for (const key in q.options) {
+                let className = 'option-button';
+                if (key === q.answer) className += ' correct';
+                else if (key === userAnswer && userAnswer !== q.answer) className += ' incorrect';
+                optionsHtml += `<button class="${className}" disabled><span class="option-letter">${key}.</span><span class="text-left">${q.options[key]}</span></button>`;
+            }
+
+            questionArea.innerHTML = `
+                <div class="text-xl font-semibold text-gray-800 mb-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500 shadow-inner">
+                    <span class="text-blue-700 mr-2">Question ${currentQuestionIndex + 1} of ${totalQuestions}:</span>
+                    ${formatText(q.question)}
+                </div>
+                <div class="options-container grid grid-cols-1 sm:grid-cols-2 gap-3">${optionsHtml}</div>
+            `;
+
+            // Show feedback with explanation
+            displayFeedback(q, userAnswer, feedbackArea, false);
+
+            renderReviewActionButtons(actionButtons);
+            renderReviewNavigation(navigationArea);
+            renderProgressBar(progressContainer);
+        }
+
+        function renderReviewActionButtons(actionButtons) {
+            actionButtons.innerHTML = '';
+            const prevBtn = `<button onclick="navigateReview('prev')" ${currentQuestionIndex === 0 ? 'disabled' : ''} class="w-full sm:w-auto px-4 py-2 bg-gray-200 text-gray-700 font-bold rounded-lg hover:bg-gray-300 disabled:opacity-50">Previous</button>`;
+            actionButtons.innerHTML += prevBtn;
+
+            const isLastQuestion = currentQuestionIndex === sessionQuestions.length - 1;
+            if (isLastQuestion) {
+                actionButtons.innerHTML += `<button onclick="returnToResults()" class="w-full sm:w-auto px-6 py-3 bg-purple-600 text-white font-bold rounded-xl">Review Complete</button>`;
+            } else {
+                actionButtons.innerHTML += `<button onclick="navigateReview('next')" class="w-full sm:w-auto px-4 py-2 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700">Next</button>`;
+            }
+        }
+
+        function renderReviewNavigation(navigationArea) {
+            navigationArea.innerHTML = `
+                <div class="mt-8">
+                    <h3 class="text-lg font-semibold mb-3 text-gray-700">Question Navigator</h3>
+                    <div class="grid-container flex gap-2 p-2 bg-gray-100 rounded-lg">
+                        ${sessionQuestions.map((q, index) => {
+                            const statusClass = userAnswers[q.id] ? 'nav-answered' : 'nav-unanswered';
+                            const isCurrent = index === currentQuestionIndex ? 'nav-current' : '';
+                            return `<button class="question-nav-button ${statusClass} ${isCurrent} flex-shrink-0" onclick="goToReviewQuestion(${index})">${index + 1}</button>`;
+                        }).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function navigateReview(direction) {
+            window.speechSynthesis.cancel();
+            if (direction === 'next' && currentQuestionIndex < sessionQuestions.length - 1) {
+                currentQuestionIndex++;
+            } else if (direction === 'prev' && currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+            }
+            renderReviewQuestion();
+        }
+
+        function goToReviewQuestion(index) {
+            window.speechSynthesis.cancel();
+            currentQuestionIndex = index;
+            renderReviewQuestion();
+        }
+
+        function checkAnswer() {
+            if (!currentSelection) return;
+            const q = sessionQuestions[currentQuestionIndex];
+            userAnswers[q.id] = currentSelection;
+            feedbackShown = true;
+            renderQuestion(); 
+            displayFeedback(q, currentSelection, document.getElementById('feedback-area'), true);
+        }
+        
+        function navigate(direction) {
+            window.speechSynthesis.cancel();
+            if (direction === 'next' && currentQuestionIndex < sessionQuestions.length - 1) {
+                currentQuestionIndex++;
+                shouldAutoSpeakQuestion = true; // Set flag to auto-speak next question
+            } else if (direction === 'prev' && currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                shouldAutoSpeakQuestion = true; // Set flag to auto-speak previous question
+            }
+            renderQuestion();
+        }
+
+        function renderNavigation(navigationArea) {
+            navigationArea.innerHTML = `
+                <div class="mt-8">
+                    <h3 class="text-lg font-semibold mb-3 text-gray-700">Question Navigator</h3>
+                    <div class="grid-container flex gap-2 p-2 bg-gray-100 rounded-lg">
+                        ${sessionQuestions.map((q, index) => {
+                            const statusClass = userAnswers[q.id] ? 'nav-answered' : 'nav-unanswered';
+                            const isCurrent = index === currentQuestionIndex ? 'nav-current' : '';
+                            return `<button class="question-nav-button ${statusClass} ${isCurrent} flex-shrink-0" id="nav-btn-${index}" onclick="goToQuestion(${index})">${index + 1}</button>`;
+                        }).join('')}
+                    </div>
+                </div>
+            `;
+            
+            // Auto-scroll to the current question button
+            setTimeout(() => {
+                const currentButton = document.getElementById(`nav-btn-${currentQuestionIndex}`);
+                if (currentButton) {
+                    currentButton.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                }
+            }, 0);
+        }
+
+        function goToQuestion(index) {
+            window.speechSynthesis.cancel();
+            currentQuestionIndex = index;
+            shouldAutoSpeakQuestion = true; // Set flag to auto-speak when jumping to question
+            renderQuestion();
+        }
+
+        function calculateScore() {
+            let correctCount = 0;
+            sessionQuestions.forEach(q => {
+                if (userAnswers[q.id] === q.answer) correctCount++;
+            });
+            return { correct: correctCount, total: sessionQuestions.length };
+        }
+
+        function saveSessionToHistory(correctAnswers, totalQuestions) {
+            const percentage = ((correctAnswers / totalQuestions) * 100).toFixed(1);
+            const session = {
+                correctAnswers: correctAnswers,
+                totalQuestions: totalQuestions,
+                percentage: parseFloat(percentage),
+                timestamp: new Date().toISOString()
+            };
+            sessionHistory.push(session);
+            try {
+                localStorage.setItem(SESSION_HISTORY_KEY, JSON.stringify(sessionHistory));
+                console.log("Session saved to history:", session);
+            } catch (e) {
+                console.error("Error saving session to history:", e);
+            }
+        }
+
+        function loadSessionHistory() {
+            try {
+                const saved = localStorage.getItem(SESSION_HISTORY_KEY);
+                sessionHistory = saved ? JSON.parse(saved) : [];
+                console.log(`Loaded ${sessionHistory.length} previous sessions from history`);
+            } catch (e) {
+                console.error("Error loading session history:", e);
+                sessionHistory = [];
+            }
+        }
+
+        function clearLeaderboard() {
+            const confirmed = confirm("Are you sure you want to clear all session history? This action cannot be undone.");
+            if (confirmed) {
+                sessionHistory = [];
+                try {
+                    localStorage.removeItem(SESSION_HISTORY_KEY);
+                    console.log("Session history cleared");
+                    showMessage("Leaderboard has been cleared.", 'info');
+                    renderLeaderboardView(); // Refresh the leaderboard view
+                } catch (e) {
+                    console.error("Error clearing session history:", e);
+                    showMessage("Error clearing leaderboard data.", 'error');
+                }
+            }
+        }
+
+        function renderLeaderboardView() {
+            const historyTableBody = sessionHistory.length === 0 ? 
+                '<tr><td colspan="5" class="px-6 py-4 text-center text-gray-500">No sessions yet. Complete a quiz to start tracking history.</td></tr>' :
+                sessionHistory.reverse().map((session, index) => {
+                    const date = new Date(session.timestamp);
+                    const formattedDate = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                    const formattedTime = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+                    return `
+                        <tr class="border-b hover:bg-gray-100 transition text-sm sm:text-base">
+                            <td class="px-2 sm:px-4 py-2 sm:py-4 font-semibold text-gray-700">#${sessionHistory.length - index}</td>
+                            <td class="px-2 sm:px-4 py-2 sm:py-4 text-gray-600 hidden sm:table-cell">${session.totalQuestions}</td>
+                            <td class="px-2 sm:px-4 py-2 sm:py-4 text-green-600 font-semibold">${session.correctAnswers}</td>
+                            <td class="px-2 sm:px-4 py-2 sm:py-4 text-blue-600 font-bold">${session.percentage}%</td>
+                            <td class="px-2 sm:px-4 py-2 sm:py-4 text-gray-500 text-xs sm:text-sm hidden md:table-cell">${formattedDate} at ${formattedTime}</td>
+                        </tr>
+                    `;
+                }).join('');
+
+            const avgScore = sessionHistory.length > 0 ? 
+                (sessionHistory.reduce((sum, s) => sum + s.percentage, 0) / sessionHistory.length).toFixed(1) : 0;
+            const bestScore = sessionHistory.length > 0 ? 
+                Math.max(...sessionHistory.map(s => s.percentage)) : 0;
+            const worstScore = sessionHistory.length > 0 ? 
+                Math.min(...sessionHistory.map(s => s.percentage)) : 0;
+
+            const backButtonText = renderResultsCalled ? 'Back to Results' : 'Back to Home';
+
+            contentArea.innerHTML = `
+                <div class="p-4 sm:p-6 lg:p-8 bg-white rounded-xl shadow-lg">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+                        <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Session History</h2>
+                        <div class="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
+                            <button onclick="clearLeaderboard()" class="px-4 py-2 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition flex-1 sm:flex-none">
+                                Clear All
+                            </button>
+                            <button onclick="handleBackToHome()" class="px-4 py-2 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700 transition flex-1 sm:flex-none">
+                                ${backButtonText}
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mb-8">
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-3 sm:p-4 rounded-lg">
+                            <div class="text-xl sm:text-2xl font-bold text-blue-600">${sessionHistory.length}</div>
+                            <div class="text-xs sm:text-sm text-gray-600">Total Sessions</div>
+                        </div>
+                        <div class="bg-green-50 border-l-4 border-green-500 p-3 sm:p-4 rounded-lg">
+                            <div class="text-xl sm:text-2xl font-bold text-green-600">${avgScore}%</div>
+                            <div class="text-xs sm:text-sm text-gray-600">Average Score</div>
+                        </div>
+                        <div class="bg-purple-50 border-l-4 border-purple-500 p-3 sm:p-4 rounded-lg">
+                            <div class="text-xl sm:text-2xl font-bold text-purple-600">${bestScore}%</div>
+                            <div class="text-xs sm:text-sm text-gray-600">Best Score</div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8 overflow-x-auto">
+                        ${sessionHistory.length === 0 ? 
+                            `<div class="text-center py-8 text-gray-500">No sessions recorded yet. Complete a quiz to get started!</div>` :
+                            `<table class="w-full border-collapse border border-gray-300 rounded-lg">
+                            <thead class="bg-blue-600 text-white text-sm">
+                                <tr>
+                                    <th class="px-2 sm:px-4 py-2 sm:py-3 text-left">Session</th>
+                                    <th class="px-2 sm:px-4 py-2 sm:py-3 text-left hidden sm:table-cell">Questions</th>
+                                    <th class="px-2 sm:px-4 py-2 sm:py-3 text-left">Correct</th>
+                                    <th class="px-2 sm:px-4 py-2 sm:py-3 text-left">Score</th>
+                                    <th class="px-2 sm:px-4 py-2 sm:py-3 text-left hidden md:table-cell">Date & Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${historyTableBody}
+                            </tbody>
+                        </table>`
+                        }
+                    </div>
+
+                    ${sessionHistory.length > 0 ? `
+                    <button onclick="setView('graph')" 
+                        class="w-full px-6 py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 transition">
+                        View Progress Graph
+                    </button>
+                ` : ``}
+                </div>
+            `;
+        }
+
+        function renderProgressGraphView() {
+            if (sessionHistory.length === 0) {
+                contentArea.innerHTML = `
+                    <div class="p-8 text-center bg-yellow-50 rounded-lg border-2 border-yellow-300">
+                        <h3 class="text-2xl font-bold text-yellow-800 mb-4">No Data to Display</h3>
+                        <p class="text-gray-700 mb-6">Complete a quiz to see your progress graph.</p>
+                        <button onclick="setView('leaderboard')" class="px-6 py-3 bg-yellow-600 text-white font-bold rounded-lg hover:bg-yellow-700 transition">
+                            Back to Leaderboard
+                        </button>
+                    </div>
+                `;
+                return;
+            }
+
+            const stats = {
+                avgScore: (sessionHistory.reduce((sum, s) => sum + s.percentage, 0) / sessionHistory.length).toFixed(1),
+                bestScore: Math.max(...sessionHistory.map(s => s.percentage)),
+                worstScore: Math.min(...sessionHistory.map(s => s.percentage)),
+                totalSessions: sessionHistory.length,
+                improvementTrend: sessionHistory.length > 1 ? 
+                    (sessionHistory[sessionHistory.length - 1].percentage - sessionHistory[0].percentage).toFixed(1) : 0
+            };
+
+            // Create SVG line graph
+            const canvasWidth = 900;
+            const canvasHeight = 400;
+            const padding = 60;
+            const plotWidth = canvasWidth - (padding * 2);
+            const plotHeight = canvasHeight - (padding * 2);
+
+            const maxScore = 100;
+            const minScore = 0;
+            const yRange = maxScore - minScore;
+
+            let pathData = [];
+            sessionHistory.forEach((session, index) => {
+                const x = padding + (index / (sessionHistory.length - 1 || 1)) * plotWidth;
+                const y = canvasHeight - padding - ((session.percentage - minScore) / yRange) * plotHeight;
+                pathData.push(`${index === 0 ? 'M' : 'L'} ${x} ${y}`);
+            });
+
+            const svgLines = sessionHistory.map((session, index) => {
+                const x = padding + (index / (sessionHistory.length - 1 || 1)) * plotWidth;
+                const y = canvasHeight - padding - ((session.percentage - minScore) / yRange) * plotHeight;
+                return `<circle cx="${x}" cy="${y}" r="5" fill="#3b82f6" stroke="white" stroke-width="2" class="hover:r-7 transition" title="${session.percentage}%"/>`;
+            }).join('');
+
+            contentArea.innerHTML = `
+                <div class="p-8 bg-white rounded-xl shadow-lg">
+                    <div class="flex justify-between items-center mb-8">
+                        <h2 class="text-3xl font-bold text-gray-800">Performance Progress</h2>
+                        <button onclick="goBack()" class="flex items-center px-4 py-2 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700 transition"><svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>Back</button>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-blue-600">${stats.avgScore}%</div>
+                            <div class="text-sm text-gray-600">Average Score</div>
+                        </div>
+                        <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-green-600">${stats.bestScore}%</div>
+                            <div class="text-sm text-gray-600">Best Score</div>
+                        </div>
+                        <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-red-600">${stats.worstScore}%</div>
+                            <div class="text-sm text-gray-600">Worst Score</div>
+                        </div>
+                        <div class="bg-purple-50 border-l-4 border-purple-500 p-4 rounded-lg">
+                            <div class="text-2xl font-bold ${stats.improvementTrend >= 0 ? 'text-purple-600' : 'text-red-600'}">${stats.improvementTrend >= 0 ? '+' : ''}${stats.improvementTrend}%</div>
+                            <div class="text-sm text-gray-600">Overall Trend</div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8 bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Score Progression Over Time</h3>
+                        <svg width="100%" height="400" viewBox="0 0 900 400" style="background: white; border: 1px solid #e5e7eb; border-radius: 8px;">
+                            <!-- Grid lines -->
+                            <line x1="${padding}" y1="${padding}" x2="${padding}" y2="${canvasHeight - padding}" stroke="#999" stroke-width="2"/>
+                            <line x1="${padding}" y1="${canvasHeight - padding}" x2="${canvasWidth - padding}" y2="${canvasHeight - padding}" stroke="#999" stroke-width="2"/>
+                            
+                            <!-- Y-axis labels -->
+                            <text x="${padding - 40}" y="${canvasHeight - padding + 5}" font-size="12" fill="#666">0%</text>
+                            <text x="${padding - 40}" y="${padding + 5}" font-size="12" fill="#666">100%</text>
+                            <text x="${padding - 40}" y="${Math.floor(canvasHeight - padding - plotHeight/2) + 5}" font-size="12" fill="#666">50%</text>
+
+                            <!-- Horizontal grid lines -->
+                            <line x1="${padding}" y1="${canvasHeight - padding - plotHeight/2}" x2="${canvasWidth - padding}" y2="${canvasHeight - padding - plotHeight/2}" stroke="#ddd" stroke-width="1" stroke-dasharray="5,5"/>
+
+                            <!-- Line path -->
+                            <path d="${pathData.join(' ')}" stroke="#3b82f6" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+                            <!-- Data points -->
+                            ${svgLines}
+
+                            <!-- X-axis labels -->
+                            ${sessionHistory.map((session, index) => {
+                                const x = padding + (index / (sessionHistory.length - 1 || 1)) * plotWidth;
+                                return `<text x="${x}" y="${canvasHeight - padding + 20}" font-size="12" fill="#666" text-anchor="middle">#${index + 1}</text>`;
+                            }).join('')}
+                        </svg>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <button onclick="setView('leaderboard')" class="px-6 py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 transition">
+                            Back to Leaderboard
+                        </button>
+                        <button onclick="setView('home')" class="px-6 py-3 bg-gray-600 text-white font-bold rounded-lg hover:bg-gray-700 transition">
+                            Back to Home
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function handleBackToHome() {
+            // If we came from results page, go back to results
+            // Otherwise, go to home
+            if (renderResultsCalled) {
+                renderResults();
+            } else {
+                setView('home');
+            }
+        }
+        
+        function renderResults() {
+              renderResultsCalled = true;
+            window.speechSynthesis.cancel();
+            const result = calculateScore();
+            const percentage = ((result.correct / result.total) * 100).toFixed(1);
+            
+            // Generate performance appraisal
+            let appraisal = '';
+            if (percentage >= 90) {
+                appraisal = `Excellent work! You scored ${percentage} percent, which is outstanding. You have demonstrated exceptional knowledge and mastery of the material.`;
+            } else if (percentage >= 80) {
+                appraisal = `Great job! You scored ${percentage} percent. You have a strong understanding of the material.`;
+            } else if (percentage >= 70) {
+                appraisal = `Good effort! You scored ${percentage} percent. You have a solid understanding of the material.`;
+            } else if (percentage >= 60) {
+                appraisal = `You scored ${percentage} percent. While you have a basic understanding, consider reviewing the material to improve your performance.`;
+            } else {
+                appraisal = `You scored ${percentage} percent. It is recommended that you review the material thoroughly and attempt the quiz again.`;
+            }
+            
+            contentArea.innerHTML = `
+                <div id="results-container" class="text-center p-8 bg-blue-50 rounded-xl">
+                    <h2 class="text-4xl font-extrabold text-blue-700">Session Complete!</h2>
+                    <div class="grid grid-cols-3 gap-4 text-white font-bold my-6">
+                        <div class="bg-blue-600 p-4 rounded-lg"><div class="text-3xl">${result.total}</div><div>Total</div></div>
+                        <div class="bg-green-600 p-4 rounded-lg"><div class="text-3xl">${result.correct}</div><div>Correct</div></div>
+                        <div class="bg-red-600 p-4 rounded-lg"><div class="text-3xl">${percentage}%</div><div>Score</div></div>
+                    </div>
+                    <div class="my-6 p-4 bg-white rounded-lg border-l-4 border-blue-500">
+                        <p class="text-gray-700 font-semibold">${appraisal}</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
+                        <button onclick="resetAndStartNewSession()" class="px-6 py-3 bg-purple-600 text-white font-bold rounded-lg hover:bg-purple-700">New Session</button>
+                        <button onclick="startReview()" class="px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700">Review Questions</button>
+                        <button onclick="setView('leaderboard')" class="px-6 py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700">View Leaderboard</button>
+                    </div>
+                </div>
+                <div id="quiz-container-review" class="hidden">
+                    <div class="flex justify-end gap-2 mb-4">
+                        <button id="tts-toggle-btn-review" onclick="toggleTts()" class="flex items-center px-4 py-2 text-sm font-bold rounded-full transition duration-150 shadow-md"></button>
+                        <button onclick="returnToResults()" class="flex items-center px-4 py-2 text-sm font-bold rounded-full bg-gray-500 text-white hover:bg-gray-600 transition duration-150 shadow-md"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>Back</button>
+                    </div>
+                    <div id="question-area-review"></div>
+                    <div id="feedback-area-review" class="mt-6 hidden"></div>
+                    <div id="action-buttons-review" class="mt-8 flex justify-between items-center flex-wrap gap-4"></div>
+                    <div id="navigation-area-review" class="mt-8"></div>
+                    <div id="progress-bar-review" class="mt-8"></div>
+                </div>`;
+            
+            // Save session to history only once when quiz is completed
+            if (!sessionResultsSaved && result.total > 0 && Object.keys(userAnswers).length === result.total) {
+                saveSessionToHistory(result.correct, result.total);
+                sessionResultsSaved = true;
+            }
+
+            // Speak the appraisal
+            speak(appraisal);
+        }
+
+        function startReview() {
+            reviewMode = true;
+            currentQuestionIndex = 0;
+            currentSelection = null;
+            feedbackShown = false;
+            // Show quiz review container
+            document.getElementById('results-container').classList.add('hidden');
+            document.getElementById('quiz-container-review').classList.remove('hidden');
+            updateTtsButtons();
+            renderReviewQuestion();
+        }
+
+        function returnToResults() {
+            reviewMode = false;
+            document.getElementById('quiz-container-review').classList.add('hidden');
+            document.getElementById('results-container').classList.remove('hidden');
+        }
+
+        function resetAndStartNewSession() {
+            // Reset all session state
+            userAnswers = {};
+            currentQuestionIndex = 0;
+            currentSelection = null;
+            feedbackShown = false;
+            sessionQuestions = [];
+            reviewMode = false;
+            sessionResultsSaved = false; // Reset the save flag for new session
+            renderResultsCalled = false; // Reset the results flag for new session
+            // Go back to home view to show pre-start screen
+            setView('home');
+        }
+
+        function confirmQuitQuiz() {
+            const answeredCount = Object.keys(userAnswers).length;
+            if (answeredCount > 0) {
+                const proceed = confirm(`You have answered ${answeredCount} question(s). Are you sure you want to quit without completing the quiz?`);
+                if (!proceed) return;
+            }
+            resetAndStartNewSession();
+        }
+
+        function renderProgressBar(progressContainer) {
+            const answeredCount = Object.keys(userAnswers).length;
+            const totalQuestions = sessionQuestions.length;
+            const progressPercentage = totalQuestions > 0 ? ((answeredCount / totalQuestions) * 100) : 0;
+            
+            progressContainer.innerHTML = `
+                <div class="flex justify-between mb-1 text-sm font-medium">
+                    <span>Answered: ${answeredCount} / ${totalQuestions}</span>
+                    <span>${progressPercentage.toFixed(0)}%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full" style="width: ${progressPercentage}%"></div></div>`;
+        }
+
+        // Initialize the quiz on load
+        window.onload = function() {
+            loadState();
+        };
+
+    </script>
+</body>
+</html>

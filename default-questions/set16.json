@@ -1,0 +1,828 @@
+[
+  {
+    "id": 1,
+    "question": "Which specific constitutional provision in Ghana generally guarantees the right to education?",
+    "options": {
+      "A": "Article 15 (Right to Dignity).",
+      "B": "Article 25 (Educational Rights).",
+      "C": "Article 33 (Fundamental Freedoms).",
+      "D": "Article 37 (Directive Principles of State Policy)."
+    },
+    "answer": "B",
+    "explanation": "Article 25 of the 1992 Constitution guarantees the right to equal educational opportunities and facilities, specifying free, compulsory, and universal basic education."
+  },
+  {
+    "id": 2,
+    "question": "True or False: The Education Act, 2008 (Act 778), mandates that basic education in Ghana must be free, compulsory, and universal.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Act 778 operationalizes the constitutional mandate, making F(ree) C(ompulsory) U(niversal) B(asic) E(ducation) a legal requirement."
+  },
+  {
+    "id": 3,
+    "question": "The Ghana Education Service (GES) was established by which primary legislative instrument?",
+    "options": {
+      "A": "Act 1021.",
+      "B": "Act 506.",
+      "C": "Act 778.",
+      "D": "LI 1968."
+    },
+    "answer": "B",
+    "explanation": "The Ghana Education Service Act, 1995 (Act 506), formally established the GES as the body responsible for implementing pre-tertiary education policies."
+  },
+  {
+    "id": 4,
+    "question": "True or False: The National Teaching Council (NTC) derives its power to license and register teachers from the GES Act, 1995 (Act 506).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The NTC's powers are derived from the National Teaching Council Act, 2020 (Act 1021), making it the sole regulator for teaching professionalism."
+  },
+  {
+    "id": 5,
+    "question": "According to the Education Act, the highest governing body for pre-tertiary education in Ghana is the:",
+    "options": {
+      "A": "The GES Council.",
+      "B": "The Cabinet.",
+      "C": "The Minister of Education.",
+      "D": "The District Assembly."
+    },
+    "answer": "C",
+    "explanation": "Under the Constitution and the Education Act, policy direction and ultimate ministerial oversight rest with the Minister of Education."
+  },
+  {
+    "id": 6,
+    "question": "True or False: The use of corporal punishment in schools is explicitly prohibited under the GES disciplinary regulations and policy directives, regardless of past practices.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "GES policy directives align with child protection laws and have formally banned corporal punishment, emphasizing positive discipline methods."
+  },
+  {
+    "id": 7,
+    "question": "Which Act sets the requirements for a person to be registered, licensed, and certified to teach in Ghana?",
+    "options": {
+      "A": "The Local Governance Act.",
+      "B": "The Public Health Act.",
+      "C": "The NTC Act (Act 1021).",
+      "D": "The Labour Act."
+    },
+    "answer": "C",
+    "explanation": "Act 1021 mandates teacher professionalism, licensing, registration, and continuing professional development (CPD)."
+  },
+  {
+    "id": 8,
+    "question": "True or False: The GES Council is responsible for the appointment of the Director-General of the Ghana Education Service.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The Director-General is appointed by the President of Ghana, in accordance with the advice of the Council of State and the recommendation of the Public Services Commission."
+  },
+  {
+    "id": 9,
+    "question": "Under Act 778, the curriculum for basic schools is determined by the:",
+    "options": {
+      "A": "The Parent-Teacher Association (PTA).",
+      "B": "The National Council for Curriculum and Assessment (NaCCA).",
+      "C": "Individual Headmasters.",
+      "D": "The School Management Committee (SMC)."
+    },
+    "answer": "B",
+    "explanation": "NaCCA is the statutory body mandated to develop, approve, and review the national curriculum for pre-tertiary education."
+  },
+  {
+    "id": 10,
+    "question": "True or False: The Education Act, 2008, permits private institutions to operate without being officially registered and accredited by the GES.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "All schools, both public and private, must be registered and adhere to standards set by the Ministry and regulated by the GES to ensure quality and safety."
+  },
+  {
+    "id": 11,
+    "question": "Which body is responsible for conducting the Basic Education Certificate Examination (BECE) and the West African Senior School Certificate Examination (WASSCE)?",
+    "options": {
+      "A": "The Ministry of Education.",
+      "B": "The West African Examinations Council (WAEC).",
+      "C": "The GES Headquarters.",
+      "D": "The NTC."
+    },
+    "answer": "B",
+    "explanation": "WAEC, an external body established by law, manages public examinations in Ghana."
+  },
+  {
+    "id": 12,
+    "question": "True or False: Financial transactions involving government funds at the school level must comply with the Public Financial Management Act (PFMA) and its regulations.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "All public institutions, including schools, are subject to the PFMA regarding budgeting, expenditure, and accountability."
+  },
+  {
+    "id": 13,
+    "question": "The power of the Minister of Education to issue policy directives and regulations to the GES is derived from:",
+    "options": {
+      "A": "The school's PTA by-laws.",
+      "B": "The Education Act (Act 778).",
+      "C": "The Traffic Act.",
+      "D": "The Ghana Education Service Act (Act 506)."
+    },
+    "answer": "D",
+    "explanation": "Act 506 specifically states that the GES shall be subject to the general direction of the Minister responsible for Education."
+  },
+  {
+    "id": 14,
+    "question": "True or False: A teacher's professional license issued by the NTC is valid indefinitely and does not require periodic renewal.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The NTC Act requires periodic renewal of the license, often linked to the completion of Continuous Professional Development (CPD) points."
+  },
+  {
+    "id": 15,
+    "question": "The legislation that outlines the general conditions of service, allowances, and disciplinary procedures for public servants, including GES staff, is primarily the:",
+    "options": {
+      "A": "The Labour Act, 2003 (Act 651).",
+      "B": "The National Teaching Council Act.",
+      "C": "The Companies Act.",
+      "D": "The Rent Act."
+    },
+    "answer": "A",
+    "explanation": "The Labour Act governs the general employment relationship, including terms of service, termination, and grievances, unless overridden by specific GES regulations."
+  },
+  {
+    "id": 16,
+    "question": "True or False: Under the Education Act, a District Assembly is legally required to establish and maintain basic educational institutions in its district.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The Act assigns specific responsibilities to the District Assembly for the provision and maintenance of basic school infrastructure and materials."
+  },
+  {
+    "id": 17,
+    "question": "The GES Act, 1995, makes the GES responsible for recruiting, appointing, and promoting personnel. This falls under the function of the:",
+    "options": {
+      "A": "Human Resource Management Division (HRMD).",
+      "B": "Public Relations Unit (PRU).",
+      "C": "Guidance and Counselling Unit (G&C).",
+      "D": "Curriculum Development Unit."
+    },
+    "answer": "A",
+    "explanation": "HRMD manages the human resource life cycle, including recruitment, progression, and retirement, as mandated by the Act 506 functions."
+  },
+  {
+    "id": 18,
+    "question": "True or False: The GES is legally mandated to provide special education for children with disabilities, in accordance with the Education Act, 2008.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Act 778 explicitly addresses the need for special education services to ensure inclusive and equitable access for all children."
+  },
+  {
+    "id": 19,
+    "question": "According to the NTC Act (Act 1021), a teacher can lose their professional license if they are found guilty of:",
+    "options": {
+      "A": "Failing to attend the school's annual funfair.",
+      "B": "Professional misconduct or gross violation of the NTC Code of Ethics.",
+      "C": "Writing on the blackboard with red chalk.",
+      "D": "Being late once for class."
+    },
+    "answer": "B",
+    "explanation": "The NTC has a Disciplinary Committee empowered to investigate and sanction teachers for serious ethical or professional misconduct, including revocation of the license."
+  },
+  {
+    "id": 20,
+    "question": "True or False: GES staff can seek redress for unfair disciplinary action through the established grievance procedures and, if necessary, through the courts, as provided by law.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "As employees protected by the Constitution and Labour Act, staff have the right to due process and avenues for appeal against administrative decisions."
+  },
+  {
+    "id": 21,
+    "question": "The legal power to impose a levy or fee on students in public schools, even if for development, ultimately rests with the:",
+    "options": {
+      "A": "The Head of School alone.",
+      "B": "The Minister of Education, often in consultation with the GES Council and relevant stakeholders.",
+      "C": "The Form Teacher.",
+      "D": "The School Farm Manager."
+    },
+    "answer": "B",
+    "explanation": "Due to the Free SHS and FCUBE policies, non-statutory levies require central government approval (MoE/GES Headquarters)."
+  },
+  {
+    "id": 22,
+    "question": "True or False: The Education Act specifies that the maximum age of admission to basic school (primary 1) should be 10 years.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While specific regulations guide enrollment age, the FCUBE is targeted at children between 4 and 15 years, with primary 1 generally starting around age 6."
+  },
+  {
+    "id": 23,
+    "question": "The primary role of the Audit Service in relation to the GES is to ensure:",
+    "options": {
+      "A": "That all staff wear uniforms.",
+      "B": "That public funds are utilized efficiently, effectively, and in accordance with the PFMA and approved budget lines.",
+      "C": "That the grass on the school park is cut.",
+      "D": "That students always pass their exams."
+    },
+    "answer": "B",
+    "explanation": "The Audit Service, mandated by the Constitution, checks the financial integrity and accountability of all public entities."
+  },
+  {
+    "id": 24,
+    "question": "True or False: The GES is a government agency and is thus classified as a part of the Public Services of Ghana.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The GES is explicitly listed under the Public Services Commission, meaning its staff are public servants governed by relevant public service laws."
+  },
+  {
+    "id": 25,
+    "question": "The statutory body responsible for setting the standards for teacher education institutions (Colleges of Education) is the:",
+    "options": {
+      "A": "The Head of School.",
+      "B": "The National Teaching Council (NTC).",
+      "C": "The District Director.",
+      "D": "The Local Market Queen."
+    },
+    "answer": "B",
+    "explanation": "Act 1021 grants the NTC the power to regulate the minimum standards of teacher training and qualifications."
+  },
+  {
+    "id": 26,
+    "question": "True or False: The Education Act, 2008, permits the Minister of Education to close down a private school if it fails to meet the prescribed health and safety standards.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The Minister has the authority to revoke the registration and shut down any educational institution that endangers the health or safety of students."
+  },
+  {
+    "id": 27,
+    "question": "Which body is legally responsible for ensuring continuous professional development (CPD) for all teachers, leading to the accumulation of CPD points?",
+    "options": {
+      "A": "The Parent-Teacher Association (PTA).",
+      "B": "The National Teaching Council (NTC).",
+      "C": "The Ministry of Health.",
+      "D": "The National Disaster Management Organization (NADMO)."
+    },
+    "answer": "B",
+    "explanation": "The NTC Act makes CPD mandatory and links it to the renewal of the professional license."
+  },
+  {
+    "id": 28,
+    "question": "True or False: The GES can transfer a staff member to any part of the country, provided the transfer is for official administrative reasons and aligns with the Conditions of Service.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The employment contract with the GES, as a national institution, includes the liability to serve anywhere in the country as required by administrative exigencies."
+  },
+  {
+    "id": 29,
+    "question": "The legal principle that mandates GES staff to act in the best interest of the child, ensuring their safety and welfare, is known as:",
+    "options": {
+      "A": "Financial Prudence.",
+      "B": "The Duty of Care.",
+      "C": "The Right to Strike.",
+      "D": "The Principle of Transfer."
+    },
+    "answer": "B",
+    "explanation": "The Duty of Care is a common law and statutory obligation (aligned with the Children's Act) that requires reasonable steps to protect children from foreseeable harm."
+  },
+  {
+    "id": 30,
+    "question": "True or False: The GES is prohibited from collaborating with international bodies and NGOs to implement educational programmes and projects.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The GES Act and MoE policy actively encourage partnerships with development partners to enhance educational delivery."
+  },
+  {
+    "id": 31,
+    "question": "The document that provides a framework for the classification of offenses and corresponding disciplinary sanctions for GES staff is the:",
+    "options": {
+      "A": "The School Canteen Policy.",
+      "B": "The Disciplinary and Grievance Procedures (GES Scheme of Service and Regulations).",
+      "C": "The Curriculum Framework.",
+      "D": "The Annual Sports Report."
+    },
+    "answer": "B",
+    "explanation": "GES administrative regulations detail the process and sanctions for misconduct."
+  },
+  {
+    "id": 32,
+    "question": "True or False: The Head of School has the legal authority to dismiss a teaching staff member summarily without recourse to the District or Regional Disciplinary Committee.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Dismissal is a severe sanction that must follow established disciplinary procedures, involving recommendation and approval from the appropriate GES appointing authority (Regional/Headquarters level)."
+  },
+  {
+    "id": 33,
+    "question": "The legal provision that gives a student the right to appeal a disciplinary decision (e.g., suspension or expulsion) is rooted in the principle of:",
+    "options": {
+      "A": "Free Lunch.",
+      "B": "Natural Justice/Due Process.",
+      "C": "Physical Fitness.",
+      "D": "Daily Homework."
+    },
+    "answer": "B",
+    "explanation": "Natural Justice dictates that every person affected by an administrative decision has the right to be heard and the right to appeal."
+  },
+  {
+    "id": 34,
+    "question": "True or False: The Education Act allows for the establishment of community-run schools that are not fully integrated into the public or private school systems.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "All educational institutions must fall under the regulatory framework of either the MoE/GES (Public) or be duly registered and accredited (Private/Other), preventing unstandardized schooling."
+  },
+  {
+    "id": 35,
+    "question": "Which key national policy is primarily responsible for the financing of all tuition and non-tuition costs for students in public senior high schools (SHS)?",
+    "options": {
+      "A": "The Capitation Grant.",
+      "B": "The Free Senior High School (FSHS) Policy.",
+      "C": "The GetFund Act.",
+      "D": "The COVID-19 Relief Fund."
+    },
+    "answer": "B",
+    "explanation": "The Free SHS Policy, backed by budgetary allocation, covers the fees and associated costs for SHS education."
+  },
+  {
+    "id": 36,
+    "question": "True or False: A staff member who is pursuing an external, non-educational political office is required to inform the GES administration and may be compelled to take leave without pay.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Public servants engaging in active partisan politics must seek permission and often take leave to prevent conflict of interest or abuse of official position."
+  },
+  {
+    "id": 37,
+    "question": "The legal mechanism for funding educational infrastructure and projects in Ghana, managed under a specific Act of Parliament, is the:",
+    "options": {
+      "A": "The National Football Fund.",
+      "B": "The Ghana Education Trust Fund (GETFund).",
+      "C": "The Student Loan Trust Fund.",
+      "D": "The Social Security and National Insurance Trust (SSNIT)."
+    },
+    "answer": "B",
+    "explanation": "GETFund is established by law to provide supplementary funding for the provision of educational facilities and equipment."
+  },
+  {
+    "id": 38,
+    "question": "True or False: The Children's Act, 1998 (Act 560), supersedes any local school rule regarding the protection and welfare of the child.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The Children's Act is a national law setting the legal baseline for child rights and protection, which all schools must comply with."
+  },
+  {
+    "id": 39,
+    "question": "Which of these is NOT a function of the GES Council as stipulated by Act 506?",
+    "options": {
+      "A": "Determining policy guidelines for the appointment and promotion of staff.",
+      "B": "Formulating regulations for the effective administration of the GES.",
+      "C": "Appointing the Minister of Education.",
+      "D": "Providing oversight for the financial affairs of the GES."
+    },
+    "answer": "C",
+    "explanation": "The Minister is appointed by the President, not the GES Council."
+  },
+  {
+    "id": 40,
+    "question": "True or False: A student who refuses to attend school can be legally penalized under the Education Act, as attendance at basic level is compulsory.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The compulsory aspect of FCUBE carries legal weight, enabling action against parents/guardians who fail to ensure their child attends school, though action against the child directly is generally disciplinary, not legal."
+  },
+  {
+    "id": 41,
+    "question": "The policy that ensures that funds (e.g., Capitation Grant, FSHS) are directly transferred from the central government to the school's account, bypassing intermediate levels, is part of:",
+    "options": {
+      "A": "The Direct Debit System.",
+      "B": "The Government’s Decentralization/Public Financial Management reforms.",
+      "C": "The Staff Welfare Policy.",
+      "D": "The School Library Rules."
+    },
+    "answer": "B",
+    "explanation": "Decentralization aims to increase efficiency and accountability by placing funds closer to the point of expenditure (the school)."
+  },
+  {
+    "id": 42,
+    "question": "True or False: The National Teaching Council is legally entitled to regulate the professional standards of both public and private school teachers.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The NTC's mandate covers anyone who teaches in a pre-tertiary institution in Ghana, regardless of whether it is public or private."
+  },
+  {
+    "id": 43,
+    "question": "The legal instrument used to change the specific administrative boundaries of District or Regional Education Offices is typically a:",
+    "options": {
+      "A": "A verbal announcement by the Head of School.",
+      "B": "A Legislative Instrument (LI) or Executive Instrument (EI).",
+      "C": "A PTA resolution.",
+      "D": "A sports committee decision."
+    },
+    "answer": "B",
+    "explanation": "Administrative boundaries are established and altered through formal governmental instruments (LIs/EIs)."
+  },
+  {
+    "id": 44,
+    "question": "True or False: In legal terms, the GES staff member is held accountable to the standard of a 'Reasonably Competent Teacher' in matters of professional conduct and duty of care.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "This legal benchmark is used in negligence cases to determine if a professional failed to meet the expected standard of skill and care."
+  },
+  {
+    "id": 45,
+    "question": "Which Act establishes the legal framework for collective bargaining and negotiations between teacher unions (e.g., GNAT, NAGRAT, CCT-GH) and the GES/MoE?",
+    "options": {
+      "A": "The Wildlife Act.",
+      "B": "The Labour Act (Act 651).",
+      "C": "The Immigration Act.",
+      "D": "The Fisheries Act."
+    },
+    "answer": "B",
+    "explanation": "The Labour Act governs the formation of unions, collective agreements, and the resolution of industrial disputes."
+  },
+  {
+    "id": 46,
+    "question": "True or False: According to the Education Act, the Head of School must delegate all supervisory duties to the Head of Department (HODs) to focus solely on administration.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While delegation is necessary, the Head remains ultimately accountable for all supervision and instructional quality assurance in the school."
+  },
+  {
+    "id": 47,
+    "question": "The legal term for officially documenting and verifying a staff member's previous service, especially when joining the GES from another public sector organization, is:",
+    "options": {
+      "A": "Posting.",
+      "B": "Authentication of Records.",
+      "C": "Auditing.",
+      "D": "Gazetting."
+    },
+    "answer": "B",
+    "explanation": "This is crucial for determining accurate seniority, salary step, and pension rights."
+  },
+  {
+    "id": 48,
+    "question": "True or False: The Minister of Education is legally prohibited from intervening in disciplinary matters at the school level.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "As the ultimate political head, the Minister can intervene in any matter, though in practice, they usually delegate these matters to the GES Council/Director-General."
+  },
+  {
+    "id": 49,
+    "question": "The GES is required by law to consult with which of these groups before introducing major national curriculum changes?",
+    "options": {
+      "A": "The Local Assembly of Fishermen.",
+      "B": "The National Council for Curriculum and Assessment (NaCCA) and relevant stakeholder groups (e.g., teacher unions, parents).",
+      "C": "The School Janitors.",
+      "D": "The Minister of Finance."
+    },
+    "answer": "B",
+    "explanation": "Consultation with stakeholders is a legal requirement for major policy changes, especially those related to curriculum."
+  },
+  {
+    "id": 50,
+    "question": "True or False: The National Teaching Council (NTC) has the legal mandate to determine the minimum salary structure for teachers in public schools.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Salary determination is typically handled by the Fair Wages and Salaries Commission (FWSC) and the Ministry of Finance, following the Labour Act and relevant collective agreements."
+  },
+  {
+    "id": 51,
+    "question": "Under the Education Act, a child with severe special educational needs is entitled to a free education in an appropriate educational setting, which may include:",
+    "options": {
+      "A": "Only a regular mainstream classroom.",
+      "B": "Special schools, inclusive resource centers, or a home-based program.",
+      "C": "A military academy.",
+      "D": "Only an online distance learning program."
+    },
+    "answer": "B",
+    "explanation": "The Act promotes inclusive education but recognizes the need for diverse placement options to meet complex needs."
+  },
+  {
+    "id": 52,
+    "question": "True or False: The GES is legally obligated to ensure that school infrastructure and facilities comply with basic accessibility standards for persons with disabilities.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "This requirement stems from the Persons with Disability Act, 2006 (Act 715), which mandates accessibility in public buildings and services."
+  },
+  {
+    "id": 53,
+    "question": "Which Act requires all public institutions, including schools, to respond to official requests for information from the public within a reasonable time frame?",
+    "options": {
+      "A": "The Right to Information Act, 2019 (Act 989).",
+      "B": "The Noise Pollution Act.",
+      "C": "The Local Farming Act.",
+      "D": "The Public Transport Act."
+    },
+    "answer": "A",
+    "explanation": "Act 989 promotes transparency and accountability in public administration by granting the public the right to access official information."
+  },
+  {
+    "id": 54,
+    "question": "True or False: The Head of School is personally and criminally liable if a student engages in minor acts of vandalism on school property.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The Head is administratively accountable for property, but generally not criminally liable for minor student misconduct unless proven to be grossly negligent in supervision."
+  },
+  {
+    "id": 55,
+    "question": "The legal term for the period within which a staff member must file an appeal against a disciplinary decision is known as the:",
+    "options": {
+      "A": "Statutory Limitation Period.",
+      "B": "Academic Year.",
+      "C": "Vacation Term.",
+      "D": "Lunch Break."
+    },
+    "answer": "A",
+    "explanation": "Administrative regulations usually specify a fixed period (e.g., 21 days) within which official appeals must be lodged."
+  },
+  {
+    "id": 56,
+    "question": "True or False: The GES is required by law to conduct regular school inspections and quality assurance checks across all pre-tertiary schools.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Quality assurance and supervision are core mandated functions of the GES, typically led by the Inspectorate Division and Circuit Supervisors."
+  },
+  {
+    "id": 57,
+    "question": "Which of these is a ground for disciplinary action under the GES Act and Regulations?",
+    "options": {
+      "A": "Punctuality.",
+      "B": "Negligence of duty.",
+      "C": "Diligent record-keeping.",
+      "D": "Mentoring a junior colleague."
+    },
+    "answer": "B",
+    "explanation": "Negligence of duty, such as chronic failure to prepare lesson notes or supervise students, is a recognized offense."
+  },
+  {
+    "id": 58,
+    "question": "True or False: The GES must ensure that all staff members are covered by the national social security and insurance scheme (SSNIT) as required by law.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Compliance with the Pensions Act and SSNIT regulations is mandatory for all formal sector employers, including the GES."
+  },
+  {
+    "id": 59,
+    "question": "The legal provision that gives the GES authority to issue specific directives on the administration of examinations, including invigilation rules, is under the broad powers granted by:",
+    "options": {
+      "A": "The Education Act (Act 778).",
+      "B": "The Agriculture Act.",
+      "C": "The Film Censorship Act.",
+      "D": "The Fisheries Act."
+    },
+    "answer": "A",
+    "explanation": "Act 778 empowers the GES/MoE to regulate the conduct of examinations to maintain integrity."
+  },
+  {
+    "id": 60,
+    "question": "True or False: Under the NTC Act, the professional licensing requirement applies to both newly recruited teachers and those who have been teaching for decades.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Licensing is a universal requirement for professional practice in teaching in Ghana."
+  },
+  {
+    "id": 61,
+    "question": "The legal instrument that details the specific duties, qualifications, and career progression paths for various GES staff roles is known as the:",
+    "options": {
+      "A": "Scheme of Work.",
+      "B": "Scheme of Service.",
+      "C": "Staff Timetable.",
+      "D": "School Calendar."
+    },
+    "answer": "B",
+    "explanation": "The Scheme of Service is the administrative regulation detailing HR requirements, appointments, and promotions."
+  },
+  {
+    "id": 62,
+    "question": "True or False: The Education Act, 2008, obligates parents to provide textbooks and other basic school supplies for their children, even under FCUBE.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The Free and Compulsory aspect means that essential learning materials, including core textbooks, are usually provided or funded by the government."
+  },
+  {
+    "id": 63,
+    "question": "The legal term for the act of transferring funds from a budget line item where there is a surplus to one where there is a deficit is:",
+    "options": {
+      "A": "Earmarking.",
+      "B": "Virement.",
+      "C": "Laundering.",
+      "D": "Auditing."
+    },
+    "answer": "B",
+    "explanation": "Virement is a formal administrative/financial procedure for reallocating funds within approved budget heads, which usually requires formal approval."
+  },
+  {
+    "id": 64,
+    "question": "True or False: The GES is bound by national procurement laws when acquiring goods and services for schools.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The Public Procurement Act governs how all public entities, including schools, must purchase items to ensure value for money and fairness."
+  },
+  {
+    "id": 65,
+    "question": "The GES policy on 'Inclusion' is legally supported by the mandate of the Education Act to provide:",
+    "options": {
+      "A": "Educational equality and equity.",
+      "B": "Daily sports practice.",
+      "C": "Compulsory mathematics lessons.",
+      "D": "Only specialized schools."
+    },
+    "answer": "A",
+    "explanation": "The push for inclusion is fundamentally driven by the constitutional and statutory requirement for equal and equitable access to education."
+  },
+  {
+    "id": 66,
+    "question": "True or False: Any person found guilty of engaging in examination malpractice, whether a teacher or student, is liable to penalties as defined by the WAEC Act.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "WAEC, as a statutory examination body, has legal powers to sanction and prosecute individuals involved in malpractice."
+  },
+  {
+    "id": 67,
+    "question": "The statutory body responsible for setting and monitoring national standards for teaching and learning in pre-tertiary education is primarily the:",
+    "options": {
+      "A": "The GNAT.",
+      "B": "The GES and NaCCA.",
+      "C": "The Bank of Ghana.",
+      "D": "The Electoral Commission."
+    },
+    "answer": "B",
+    "explanation": "NaCCA handles curriculum and standards development, while the GES handles policy implementation and monitoring."
+  },
+  {
+    "id": 68,
+    "question": "True or False: The GES Council can override a directive issued by the Minister of Education if they believe it conflicts with the GES Act.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The GES Act states that the GES shall be subject to the *general direction of the Minister*. The Minister's policy directives generally take precedence over the Council's internal regulations, provided they are lawful."
+  },
+  {
+    "id": 69,
+    "question": "The administrative process that ensures a staff member is notified, given an opportunity to defend themselves, and has the right to appeal before sanction is called:",
+    "options": {
+      "A": "Administrative Rigidity.",
+      "B": "Due Process/Fair Hearing.",
+      "C": "Official Query.",
+      "D": "Final Warning."
+    },
+    "answer": "B",
+    "explanation": "Due Process is the legal minimum standard for all administrative and disciplinary actions in the public service."
+  },
+  {
+    "id": 70,
+    "question": "True or False: The GES Act permits the Director-General to delegate specific administrative and financial powers to the Regional and District Directors of Education.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Delegation of authority is necessary for the efficient running of a decentralized, nationwide organization like the GES."
+  },
+  {
+    "id": 71,
+    "question": "The official document that grants the use of government land to a public school is known as the:",
+    "options": {
+      "A": "The Land Commission Lease/Allocation Document.",
+      "B": "The School Farm Permit.",
+      "C": "The Student ID Card.",
+      "D": "The Staff Meeting Minutes."
+    },
+    "answer": "A",
+    "explanation": "School land must be properly acquired and documented by the Lands Commission for public use."
+  },
+  {
+    "id": 72,
+    "question": "True or False: The NTC Act recognizes teaching experience acquired in non-formal education settings as valid for professional licensing purposes.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The NTC mandate is broad and aims to incorporate diverse teaching backgrounds, including those from technical, vocational, and potentially non-formal sectors, provided standards are met."
+  },
+  {
+    "id": 73,
+    "question": "The primary objective of the Local Governance Act, as it relates to education, is to:",
+    "options": {
+      "A": "Manage all university affairs.",
+      "B": "Decentralize the management of basic education to the District Assemblies for local supervision and provision.",
+      "C": "Set the national budget.",
+      "D": "Determine teacher qualifications."
+    },
+    "answer": "B",
+    "explanation": "The Local Governance Act (and its predecessors) promotes decentralization, making District Assemblies key stakeholders in local basic education management."
+  },
+  {
+    "id": 74,
+    "question": "True or False: The Education Act, 2008, includes provisions that encourage the integration of local culture, arts, and traditions into the school curriculum.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The Act promotes culturally relevant education and the transmission of national values."
+  },
+  {
+    "id": 75,
+    "question": "A staff member who engages in political activities or speeches that incite violence or disorder is violating the law and the GES Code of Conduct relating to:",
+    "options": {
+      "A": "Punctuality.",
+      "B": "Public Order and Bringing the Service into Disrepute.",
+      "C": "Lesson Note Preparation.",
+      "D": "School Feeding."
+    },
+    "answer": "B",
+    "explanation": "Public servants are expected to maintain public order and conduct themselves in a manner that does not compromise the reputation or stability of the Service."
+  }
+]

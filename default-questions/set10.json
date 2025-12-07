@@ -1,0 +1,752 @@
+[
+  {
+    "id": 1,
+    "question": "The Ghana Education Service (GES) is primarily responsible for the management of the education system from basic to tertiary levels in Ghana.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The GES manages pre-tertiary education (Basic and Secondary). Tertiary education is largely managed by other bodies and institutions."
+  },
+  {
+    "id": 2,
+    "question": "A teacher's professional licence is issued by the National Teaching Council (NTC).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The National Teaching Council (NTC) is the statutory body responsible for licensing teachers in Ghana."
+  },
+  {
+    "id": 3,
+    "question": "Continuous Professional Development (CPD) is mandatory for all licensed teachers.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "CPD is mandatory for the renewal of the Teacher Professional Licence."
+  },
+  {
+    "id": 4,
+    "question": "A teacher is permitted to administer corporal punishment as a first resort for minor disciplinary issues.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Corporal punishment is banned in schools under the GES. Teachers must use positive discipline methods."
+  },
+  {
+    "id": 5,
+    "question": "The school curriculum for pre-tertiary education is primarily developed by the National Council for Curriculum and Assessment (NaCCA).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "NaCCA is the mandated body for developing the national curriculum for pre-tertiary education."
+  },
+  {
+    "id": 6,
+    "question": "The GES Code of Professional Conduct only applies to teaching staff, not non-teaching staff.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The Code applies to all GES employees, including teaching and non-teaching staff."
+  },
+  {
+    "id": 7,
+    "question": "A staff member is allowed to use their official position for private financial gain.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "This is a violation of the conflict of interest and ethical standards outlined in the Code of Conduct."
+  },
+  {
+    "id": 8,
+    "question": "Teachers are encouraged to maintain strict professional boundaries with their students, both physically and virtually.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Professionalism requires maintaining appropriate boundaries to protect both students and the teacher."
+  },
+  {
+    "id": 9,
+    "question": "All public basic schools in Ghana fall under the direct authority of the Ghana Education Service.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "GES oversees and manages all public basic and second-cycle institutions."
+  },
+  {
+    "id": 10,
+    "question": "A teacher can be dismissed immediately without an investigation for habitual absenteeism.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "All disciplinary actions must follow due process, including a formal investigation and hearing."
+  },
+  {
+    "id": 11,
+    "question": "The 'Teacher Portfolio' is a requirement for teacher promotion and appraisal.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The Teacher Portfolio is a key component of the new teacher standards and appraisal system (GTLE)."
+  },
+  {
+    "id": 12,
+    "question": "The GES has the authority to transfer teachers across different regions of the country.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Inter-regional transfers are a management function of the GES Headquarters."
+  },
+  {
+    "id": 13,
+    "question": "It is acceptable for a teacher to share confidential student information with parents who are not related to the child, if they are friends.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Confidential student information must only be shared with those who have a legal and professional need to know."
+  },
+  {
+    "id": 14,
+    "question": "A probationary teacher is not eligible to participate in any GES professional development workshops.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Probationary teachers are required to undergo mentoring and professional development as part of their induction."
+  },
+  {
+    "id": 15,
+    "question": "The standard duration for the Teacher Professional Licence before renewal is five years.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The initial NTC professional licence is typically valid for five years, subject to renewal based on CPD points."
+  },
+  {
+    "id": 16,
+    "question": "Ghana's educational system includes Kindergarten, Primary, and Junior High School under the term 'Basic Education'.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Basic Education spans from Kindergarten (2 years), through Primary (6 years), to Junior High School (3 years)."
+  },
+  {
+    "id": 17,
+    "question": "A teacher is required to provide lesson notes for every lesson taught, regardless of experience level.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The preparation and submission of lesson notes (or schemes of work) is a fundamental professional requirement for all teachers."
+  },
+  {
+    "id": 18,
+    "question": "A District Education Director reports directly to the Head of the school.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "A District Education Director reports to the Regional Education Director, who in turn reports to the Director-General of GES."
+  },
+  {
+    "id": 19,
+    "question": "The GES frowns upon teachers engaging in private tutoring for their own students for monetary gain.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The practice can create a conflict of interest, as it may suggest withholding effort during regular school hours."
+  },
+  {
+    "id": 20,
+    "question": "A teacher may refuse to teach a subject assigned to them if they feel underqualified, provided they inform the Headmaster.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "A teacher is expected to execute any reasonable duty or assignment given by the Head of the institution. Concerns about qualifications should be raised, but refusal is a breach of duty."
+  },
+  {
+    "id": 21,
+    "question": "All GES staff must declare their assets before taking up a post.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Not all GES (Ghana Education Service) staff are required to declare assets before taking up a post. The Public Office Holders (Declaration of Assets) Act (Act 550) applies to “public offices” as defined in the law."
+  },
+  {
+    "id": 22,
+    "question": "The NTC is responsible for teacher salaries and promotion decisions.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The NTC handles licensing and professional development; GES handles employment, promotion, and salary administration."
+  },
+  {
+    "id": 23,
+    "question": "The use of mobile phones by students is generally prohibited during contact hours in public schools.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "There are strict rules against student mobile phone use during instructional time to prevent distraction."
+  },
+  {
+    "id": 24,
+    "question": "A teacher's sick leave must be supported by a medical certificate from a qualified practitioner if it exceeds a certain number of days.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Official GES regulations require medical evidence for extended sick leave."
+  },
+  {
+    "id": 25,
+    "question": "GES operates a decentralized system of management, with significant authority vested in Regional and District Offices.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The structure of GES is decentralized to allow for effective local administration and supervision."
+  },
+  {
+    "id": 26,
+    "question": "The term 'Second Cycle Education' refers only to Senior High Schools (SHS).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "It includes SHS, Secondary Technical, and Vocational/Technical Institutes."
+  },
+  {
+    "id": 27,
+    "question": "A teacher is fully protected from any disciplinary action if they report misconduct of a colleague (whistleblowing).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While whistleblowers are protected, protection is not absolute and depends on the validity and good faith of the report."
+  },
+  {
+    "id": 28,
+    "question": "Teachers must attend all official school functions and ceremonies as part of their professional duty.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Attendance at official functions is a core part of a teacher's role in the school community."
+  },
+  {
+    "id": 29,
+    "question": "The ultimate goal of the Ghanaian educational system is to produce well-rounded individuals capable of contributing to national development.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "This aligns with the general philosophy and mission of education in Ghana."
+  },
+  {
+    "id": 30,
+    "question": "It is the responsibility of the District Education Office to provide teaching and learning materials (TLMs) to every single school.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While they distribute, the provision is a collaborative effort involving MoE, GES, and school-level initiatives."
+  },
+  {
+    "id": 31,
+    "question": "The NTC is responsible for the Ghana Teacher Licensure Examination (GTLE).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The NTC administers the GTLE as a prerequisite for professional licensing."
+  },
+  {
+    "id": 32,
+    "question": "Teachers are allowed to publicly criticise GES policies or officials through social media without consequence.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Public servants are expected to exercise restraint and channel grievances through appropriate formal avenues."
+  },
+  {
+    "id": 33,
+    "question": "Lateness to school or classes is considered a form of professional misconduct.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Punctuality and diligence are key standards of professional conduct."
+  },
+  {
+    "id": 34,
+    "question": "The basic school structure in Ghana is 6 years of Primary and 3 years of JHS.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "This is the current structure for the Primary and Junior High components of Basic Education."
+  },
+  {
+    "id": 35,
+    "question": "A teacher must always cooperate with and assist colleagues in the performance of their duties.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Collaboration and collegiality are explicit professional standards."
+  },
+  {
+    "id": 36,
+    "question": "Financial dealings between a teacher and a student's family are strictly forbidden under any circumstances.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While generally discouraged, minor transactions (e.g., school fees payment to a bursar) are necessary. However, personal financial gain is prohibited."
+  },
+  {
+    "id": 37,
+    "question": "The appraisal system for teachers focuses solely on classroom performance and ignores professional development records.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The appraisal system (e.g., the Teacher Portfolio) is holistic and includes professional development, community involvement, and other duties."
+  },
+  {
+    "id": 38,
+    "question": "A Head of School is solely responsible for disciplinary matters and does not need to consult a disciplinary committee.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Serious disciplinary matters require the involvement of a Disciplinary Committee and adherence to due process."
+  },
+  {
+    "id": 39,
+    "question": "GES is a service under the Ministry of Education (MoE).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "GES is an agency under the MoE, tasked with implementing government education policies."
+  },
+  {
+    "id": 40,
+    "question": "All GES teachers are automatically members of the Ghana National Association of Teachers (GNAT).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Membership in GNAT or other unions is voluntary, although most teachers choose to join one."
+  },
+  {
+    "id": 41,
+    "question": "The use of teaching aids is a requirement, not an option, in professional lesson delivery.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Effective use of TLMs is considered a core element of effective pedagogical practice."
+  },
+  {
+    "id": 42,
+    "question": "School Inspection and Supervision are primarily the role of the Head of the school.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Inspection is carried out by the National Schools Inspectorate Authority (NaSIA) and GES officials, in addition to the Head's internal supervision."
+  },
+  {
+    "id": 43,
+    "question": "A teacher is required to respect the cultural and religious diversity of all students.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Non-discrimination and respect for diversity are fundamental principles of the Code of Conduct."
+  },
+  {
+    "id": 44,
+    "question": "The term 'Professional Negligence' includes habitually failing to mark students' work.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Failing to perform core duties like assessment and feedback falls under professional negligence."
+  },
+  {
+    "id": 45,
+    "question": "Teachers are allowed to engage in trade or business activities during official contact hours, provided they are not in the classroom.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Official time must be dedicated to official duties. Outside of official time, ethical considerations still apply."
+  },
+  {
+    "id": 46,
+    "question": "The final authority on the curriculum for Senior High Schools is the West African Examinations Council (WAEC).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "NaCCA sets the curriculum; WAEC conducts the examinations based on the curriculum."
+  },
+  {
+    "id": 47,
+    "question": "A teacher's personal social media content is entirely private and has no bearing on their professional standing.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Content that brings the profession or the school into disrepute can constitute misconduct."
+  },
+  {
+    "id": 48,
+    "question": "The compulsory age for Basic Education in Ghana is 6 years.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Compulsory education starts at Primary 1, which is typically age 6."
+  },
+  {
+    "id": 49,
+    "question": "It is mandatory for schools to have a Parent-Teacher Association (PTA).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "PTAs are required to foster community engagement and support for schools."
+  },
+  {
+    "id": 50,
+    "question": "GES staff cannot accept gifts of any kind from students or parents.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Small, token gifts of appreciation may be accepted, but substantial or monetary gifts are generally disallowed due to conflict of interest rules."
+  },
+  {
+    "id": 51,
+    "question": "The Head of School must maintain a confidential record of every staff member's performance.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Performance records are essential for appraisals, promotion, and disciplinary decisions."
+  },
+  {
+    "id": 52,
+    "question": "Teachers must report any suspected abuse or neglect of a student to the relevant authorities.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Teachers have a duty of care and mandated reporting responsibilities."
+  },
+  {
+    "id": 53,
+    "question": "The promotion of a teacher is based solely on their years of service.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Promotion is based on a combination of years of service, qualifications, and performance appraisal."
+  },
+  {
+    "id": 54,
+    "question": "The GES has an official policy supporting inclusive education for children with special educational needs.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "GES promotes inclusive education, often through its Special Education Unit (SPED)."
+  },
+  {
+    "id": 55,
+    "question": "A teacher on study leave with pay is not entitled to their full monthly salary.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Study leave 'with pay' means the teacher continues to receive their salary."
+  },
+  {
+    "id": 56,
+    "question": "Lesson plans should include specific learning objectives for the students.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Learning objectives are a critical component of professional lesson planning."
+  },
+  {
+    "id": 57,
+    "question": "The concept of 'learner-centred' pedagogy encourages students to be active participants in their learning.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Learner-centred approaches shift the focus from the teacher lecturing to the student actively engaging with the material."
+  },
+  {
+    "id": 58,
+    "question": "A teacher is permitted to be under the influence of alcohol or non-prescribed drugs while on duty.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "This constitutes gross professional misconduct."
+  },
+  {
+    "id": 59,
+    "question": "GES operates an online portal for the processing of recruitment, promotion, and staff records.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "GES has implemented digital systems for managing personnel records and services."
+  },
+  {
+    "id": 60,
+    "question": "The minimum qualification for teaching at the basic school level is a Diploma in Basic Education.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The current policy and NTC standards generally require a Bachelor of Education (B.Ed.) degree for professional teaching."
+  },
+  {
+    "id": 61,
+    "question": "Teachers are not required to participate in community development activities organized by the school.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Community involvement is part of a teacher's wider professional role."
+  },
+  {
+    "id": 62,
+    "question": "The GES has the mandate to close down a school that consistently fails to meet safety standards.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Protecting the safety and welfare of students and staff is a core responsibility."
+  },
+  {
+    "id": 63,
+    "question": "A teacher may use their position to coerce students into supporting their political views.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Teachers must maintain political neutrality in the classroom and avoid exploitation of their position."
+  },
+  {
+    "id": 64,
+    "question": "The 'Contact Hours' for a teacher strictly include only the time spent in the classroom teaching.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Contact hours include other duties like supervision, meetings, and extra-curricular activities."
+  },
+  {
+    "id": 65,
+    "question": "NTC CPD points can be accrued through external training programs approved by the Council.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "CPD allows for internal GES training and external, accredited programs."
+  },
+  {
+    "id": 66,
+    "question": "Teachers are required to maintain accurate and up-to-date records of student attendance.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Attendance tracking is a mandatory professional duty."
+  },
+  {
+    "id": 67,
+    "question": "The GES is responsible for the payment of pensions for all retired teachers.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Pensions are handled by the Social Security and National Insurance Trust (SSNIT) in collaboration with the Controller and Accountant General's Department, not GES directly."
+  },
+  {
+    "id": 68,
+    "question": "The term 'Professional Ethics' for a teacher covers their behaviour both inside and outside the school premises.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "A teacher's conduct outside school can still impact their professional reputation and integrity."
+  },
+  {
+    "id": 69,
+    "question": "The GES promotes the use of indigenous languages as the medium of instruction at the lower primary level.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Policy encourages teaching in the Mother Tongue/Language of the immediate environment in the early years of primary school."
+  },
+  {
+    "id": 70,
+    "question": "In a disciplinary hearing, a teacher has the right to be represented by a legal counsel or a union representative.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The right to representation is part of the due process for disciplinary procedures."
+  },
+  {
+    "id": 71,
+    "question": "The establishment of all new public schools must be approved by the GES and the MoE.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Central government approval is required for the establishment of public educational institutions."
+  },
+  {
+    "id": 72,
+    "question": "Teachers can take unilateral action to raise funds from students for school projects without consulting school authorities.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "All financial transactions and fundraising must be transparent and authorized by school administration."
+  },
+  {
+    "id": 73,
+    "question": "The GES uses a grading system for assessing schools, which includes teaching quality and infrastructure.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "School assessment (often through NaSIA) is comprehensive, covering multiple areas including academic and physical environment."
+  },
+  {
+    "id": 74,
+    "question": "It is an ethical requirement for teachers to disclose any personal relationship with a student's guardian that may affect their professional judgment.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Disclosure of conflicts of interest is a core ethical standard."
+  },
+  {
+    "id": 75,
+    "question": "A teacher on maternity leave is not entitled to their full monthly salary during the period of absence.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Maternity leave for GES staff is fully paid, as per standard public service regulations."
+  }
+]

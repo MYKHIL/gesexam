@@ -1,0 +1,75 @@
+  cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation
+(anonymous) @ (index):64
+ Starting to load questions from available sources...
+default-questions/set31.json:1   Failed to load resource: the server responded with a status of 404 (File not found)
+default-questions/set32.json:1   Failed to load resource: the server responded with a status of 404 (File not found)
+default-questions/set33.json:1   Failed to load resource: the server responded with a status of 404 (File not found)
+default-questions/set34.json:1   Failed to load resource: the server responded with a status of 404 (File not found)
+default-questions/set35.json:1   Failed to load resource: the server responded with a status of 404 (File not found)
+default-questions/set36.json:1   Failed to load resource: the server responded with a status of 404 (File not found)
+default-questions/set37.json:1   Failed to load resource: the server responded with a status of 404 (File not found)
+default-questions/set38.json:1   Failed to load resource: the server responded with a status of 404 (File not found)
+default-questions/set39.json:1   Failed to load resource: the server responded with a status of 404 (File not found)
+default-questions/set40.json:1   Failed to load resource: the server responded with a status of 404 (File not found)
+default-questions/set41.json:1   Failed to load resource: the server responded with a status of 404 (File not found)
+default-questions/set42.json:1   Failed to load resource: the server responded with a status of 404 (File not found)
+default-questions/set43.json:1   Failed to load resource: the server responded with a status of 404 (File not found)
+default-questions/set44.json:1   Failed to load resource: the server responded with a status of 404 (File not found)
+default-questions/set45.json:1   Failed to load resource: the server responded with a status of 404 (File not found)
+default-questions/set46.json:1   Failed to load resource: the server responded with a status of 404 (File not found)
+default-questions/set47.json:1   Failed to load resource: the server responded with a status of 404 (File not found)
+default-questions/set48.json:1   Failed to load resource: the server responded with a status of 404 (File not found)
+default-questions/set49.json:1   Failed to load resource: the server responded with a status of 404 (File not found)
+default-questions/set50.json:1   Failed to load resource: the server responded with a status of 404 (File not found)
+ Successfully loaded 75 questions from: default-questions/set1.json
+ Successfully loaded 75 questions from: default-questions/set2.json
+ Successfully loaded 75 questions from: default-questions/set3.json
+ Successfully loaded 75 questions from: default-questions/set4.json
+ Successfully loaded 75 questions from: default-questions/set5.json
+ Successfully loaded 75 questions from: default-questions/set6.json
+ Successfully loaded 74 questions from: default-questions/set7.json
+ Successfully loaded 75 questions from: default-questions/set8.json
+ Successfully loaded 76 questions from: default-questions/set9.json
+ Successfully loaded 75 questions from: default-questions/set10.json
+ Successfully loaded 75 questions from: default-questions/set11.json
+ Successfully loaded 75 questions from: default-questions/set12.json
+ Successfully loaded 75 questions from: default-questions/set13.json
+ Successfully loaded 75 questions from: default-questions/set14.json
+ Successfully loaded 75 questions from: default-questions/set15.json
+ Successfully loaded 75 questions from: default-questions/set16.json
+ Successfully loaded 75 questions from: default-questions/set17.json
+ Successfully loaded 74 questions from: default-questions/set18.json
+ Successfully loaded 75 questions from: default-questions/set19.json
+ Successfully loaded 75 questions from: default-questions/set20.json
+ Successfully loaded 75 questions from: default-questions/set21.json
+ Successfully loaded 75 questions from: default-questions/set22.json
+ Successfully loaded 75 questions from: default-questions/set23.json
+ Successfully loaded 75 questions from: default-questions/set24.json
+ Successfully loaded 75 questions from: default-questions/set25.json
+index.html:471 Successfully loaded 75 questions from: default-questions/set26.json
+index.html:471 Successfully loaded 75 questions from: default-questions/set27.json
+index.html:471 Successfully loaded 75 questions from: default-questions/set28.json
+index.html:471 Successfully loaded 75 questions from: default-questions/set29.json
+index.html:471 Successfully loaded 200 questions from: default-questions/set30.json
+index.html:498 Successfully loaded 2374 unique questions
+index.html:546 Settings loaded. TTS Enabled: false
+index.html:631 TTS initialized successfully
+index.html:635 Found 0 English voices available
+index.html:637  No English voices found for TTS (may load shortly).
+populateVoiceList @ index.html:637
+index.html:651 Voice change listener attached
+index.html:2762 Loaded 1 previous sessions from history
+index.html:635 Found 50 English voices available
+index.html:640 Available voices: Array(50)
+environment.ts:120  [2025-12-01T20:41:22.537Z]  @firebase/analytics: Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) This is a browser extension environment. (analytics/invalid-analytics-context).
+defaultLogHandler @ environment.ts:120
+identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyD64PHz4QI-Qjls55BGjkhtLi-Ro0IFxxc:1   Failed to load resource: the server responded with a status of 400 ()
+index.html:274  Firebase anonymous auth failed: Object
+initFirebase @ index.html:274
+index.html:294 Firebase initialized and Firestore is available
+firestore.googleapis.com/google.firestore.v1.Firestore/Listen/channel?VER=8&database=projects%2Fges-promotions-exam%2Fdatabases%2F(default)&RID=15229&CVER=22&X-HTTP-Session-Id=gsessionid&zx=h223ygyze02m&t=1:1   Failed to load resource: net::ERR_CONNECTION_CLOSED
+logger.ts:123  [2025-12-01T20:41:23.281Z]  @firebase/firestore: Firestore (12.6.0): WebChannelConnection RPC 'Listen' stream 0x7a0fe78f transport errored. Name: undefined Message: undefined
+defaultLogHandler @ logger.ts:123
+logger.ts:123  [2025-12-01T20:41:23.283Z]  @firebase/firestore: Firestore (12.6.0): Could not reach Cloud Firestore backend. Connection failed 1 times. Most recent error: FirebaseError: [code=unavailable]: The operation could not be completed
+This typically indicates that your device does not have a healthy Internet connection at the moment. The client will operate in offline mode until it is able to successfully connect to the backend.
+defaultLogHandler @ logger.ts:123

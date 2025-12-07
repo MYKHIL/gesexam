@@ -1,0 +1,852 @@
+[
+  {
+    "id": 1,
+    "question": "Which of the following is not a value of the education section?",
+    "options": {
+      "A": "Accountability and Transparency",
+      "B": "Efficient Management of Resources",
+      "C": "environmental resource inflows",
+      "D": "Quality Education"
+    },
+    "answer": "C",
+    "explanation": "Accountability, Efficiency, and Quality Education are core values. 'Environmental resource inflows' is not typically listed as a core value of the education *section* itself."
+  },
+  {
+    "id": 2,
+    "question": "What is the core mandate of the Ghana Education Service?",
+    "options": {
+      "A": "To develop rational conclusion on education to be implemented by the Ministry of Education.",
+      "B": "To formulate approved national polices and programmes on education.",
+      "C": "To implement approved national polices and programmes on education.",
+      "D": "To prepare approved salary structure for teacher for the Ministry of Education."
+    },
+    "answer": "C",
+    "explanation": "The Ministry of Education (MoE) formulates policy, and the Ghana Education Service (GES) is the implementing body for these approved national policies and programmes."
+  },
+  {
+    "id": 3,
+    "question": "The governing body of Ghana Education Service is the",
+    "options": {
+      "A": "Director of Education",
+      "B": "Ghana Education Service Council",
+      "C": "The Director-General of Ghana Education Service",
+      "D": "The Ghana education Service Headquarters"
+    },
+    "answer": "B",
+    "explanation": "The GES Council is the highest governing body, providing strategic direction and oversight to the Service."
+  },
+  {
+    "id": 4,
+    "question": "Distinguish between Scheme of Work (S) and Terms and Conditions of Service (T).",
+    "options": {
+      "A": "S refers to classroom teachers' job description while T refers to construct of appointment regulating teachers' compensation, progress, work ethics, discipline, etc.",
+      "B": "S refers to contract of appointment which regulates the relationship between the GES and teachers while T refers to classroom teachers' job description based on the syllabus.",
+      "C": "S refers to the syllabus while T refers to contract of appointment which regulates the relationship between the GES and teachers.",
+      "D": "S refers to class, teachers' job description while T refers to the code of conduct for teachers."
+    },
+    "answer": "A",
+    "explanation": "The Scheme of Work outlines the content delivery plan (job description), while Terms and Conditions of Service define the employment relationship, conduct, and compensation."
+  },
+  {
+    "id": 5,
+    "question": "The only apex disciplining authority that has the power to endorse any recommendation to summarily dismiss a teaching and non-teaching personnel from GES is the",
+    "options": {
+      "A": "Board of Governor",
+      "B": "Director-General of GES",
+      "C": "GES Council",
+      "D": "Ministry of Education"
+    },
+    "answer": "C",
+    "explanation": "The GES Council holds the final authority for high-stakes decisions like summary dismissal of personnel."
+  },
+  {
+    "id": 6,
+    "question": "Ghana Education Fund (GET Fund), provides support mainly in the area of ....",
+    "options": {
+      "A": "Administration expenses",
+      "B": "Assets and investment expenditure",
+      "C": "Compensation of employees",
+      "D": "Strategies services"
+    },
+    "answer": "B",
+    "explanation": "GETFund primarily focuses on providing financial support for educational infrastructure, equipment, and assets (investment expenditure)."
+  },
+  {
+    "id": 7,
+    "question": "Under the new primary school curriculum 'reformed standard-based curriculum' means",
+    "options": {
+      "A": "Pupils shall demonstrate understanding and mastery of knowledge and skills as they progress in their education",
+      "B": "Pupils shall demonstrate understanding and mastery of knowledge and skills through a standard examination or assessment.",
+      "C": "Standard assessment system to provide sufficient data to help fashion improvement to teaching and learning.",
+      "D": "There shall be a National Assessment at P2, P4 and P6 to track children's performance"
+    },
+    "answer": "A",
+    "explanation": "A standard-based curriculum is designed to ensure learners achieve defined outcomes and mastery at progressive levels of learning."
+  },
+  {
+    "id": 8,
+    "question": "The processes that improve the quality of teaching and learning are: I. Use of questioning, illustrations and demonstrations in lesson delivery; II. Creation of opportunities for all learners to express their views; III. Encouragement of learner-initiated tasks through motivation such as praise and friendly dialogue; IV. Effective class control by following established rules of conduct and checking disruptive behaviour; V. Use the appropriate procedures of assessing learners’ work.",
+    "options": {
+      "A": "I, II and III only",
+      "B": "II and III only",
+      "C": "I, II, III and IV only",
+      "D": "I, II, III, IV and V"
+    },
+    "answer": "D",
+    "explanation": "All listed points are critical elements of good pedagogy, classroom management, and effective assessment, which collectively improve the quality of teaching and learning."
+  },
+  {
+    "id": 9,
+    "question": "A teacher is to use appropriate methods, techniques and sound principles of teaching and learning such as: I. Building on past knowledge or previous knowledge and positive reinforcement; II. Providing guidance and practice in class before independent practice; III. Motivating and sustaining pupils’ interest; IV. Involving each learner in the teaching process; V. Distribution evaluative questions evenly.",
+    "options": {
+      "A": "I, II and III only",
+      "B": "II, and III only",
+      "C": "I, II, III and IV",
+      "D": "I, II, III, IV and V"
+    },
+    "answer": "D",
+    "explanation": "All listed principles, including scaffolding (II), motivation (III), and inclusivity (IV), are fundamental to sound pedagogical practice."
+  },
+  {
+    "id": 10,
+    "question": "Complete the following Vision Statements of the Ghana Education Service. The Ghana Education Service seeks to create an enabling environment in all educational institutions and management positions that will ………",
+    "options": {
+      "A": "Develop effective learning and efficiency in management institutions",
+      "B": "Facilitate effective normal and informal education in pre- tertiary institutions.",
+      "C": "Facilitate effective teaching and learning and efficiency in the management of the attainment of goals of the service",
+      "D": "Promotes effective teaching and efficiency in management of goals of the service"
+    },
+    "answer": "C",
+    "explanation": "The vision statement combines the core educational goal ('effective teaching and learning') with the administrative goal ('efficiency in the management')."
+  },
+  {
+    "id": 11,
+    "question": "Which of the following is not a special duty of the Ghana Education Service?",
+    "options": {
+      "A": "Develop educational positions and programmes",
+      "B": "Maintain profession standards and the conduct of personnel (knowledge of conditions of service are code of conduct requires)",
+      "C": "Register teachers and keep an up-to-date register of all teachers in the public system",
+      "D": "Register, supervise and inspect private Pre- tertiary Education and Institutions"
+    },
+    "answer": "C",
+    "explanation": "Under current law, the duty to *register* teachers and keep a central register is the statutory responsibility of the **National Teaching Council (NTC)**, not the Ghana Education Service."
+  },
+  {
+    "id": 12,
+    "question": "In a learner-centered environment, which of the following activities would the school head encourage?",
+    "options": {
+      "A": "Parents to design the curriculum",
+      "B": "Students to design the curriculum",
+      "C": "Teachers to avoid test and other assessment because they demonstrate to students",
+      "D": "Teachers to develop lesson plans that uses existing knowledge to construct new knowledge"
+    },
+    "answer": "D",
+    "explanation": "A learner-centered approach is constructivist, meaning it focuses on linking new concepts to the learner's prior knowledge to actively build understanding."
+  },
+  {
+    "id": 13,
+    "question": "Which of the following statements about students grouping is correct?",
+    "options": {
+      "A": "Grouping should be done throughout the school day rather than selective during the school day",
+      "B": "Heterogenous grouping is preferable to homogeneous grouping",
+      "C": "Homogeneous grouping is preferable to heterogenous grouping",
+      "D": "None of the above"
+    },
+    "answer": "B",
+    "explanation": "Heterogeneous (mixed-ability) grouping is generally favored in collaborative learning environments to maximize peer teaching and learning opportunities for all students."
+  },
+  {
+    "id": 14,
+    "question": "A test that measures a student’s knowledge or skill in relation to curriculum standard is",
+    "options": {
+      "A": "Criterion-referenced",
+      "B": "Issue-referenced",
+      "C": "Norm-referenced",
+      "D": "Textbook referenced"
+    },
+    "answer": "A",
+    "explanation": "Criterion-referenced tests measure performance against a fixed set of criteria or standards (like curriculum objectives), regardless of how other students perform."
+  },
+  {
+    "id": 15,
+    "question": "Which of the following statement about teacher performance evaluation is **not** correct? The process can be …… ",
+    "options": {
+      "A": "Both formative and summative",
+      "B": "Formative",
+      "C": "Summative nor formative",
+      "D": "Summative"
+    },
+    "answer": "C",
+    "explanation": "Evaluation is almost always intended to be formative (for improvement) or summative (for final judgment), or both. Stating it is 'neither' is incorrect."
+  },
+  {
+    "id": 16,
+    "question": "Which of the following statements about teacher summative performance evaluation is correct? The primary process is to ……",
+    "options": {
+      "A": "Determine if a teacher should be re-employed",
+      "B": "Force teachers to develop lesson plan",
+      "C": "Improve the teacher’s performance",
+      "D": "Remind teachers they are being watched"
+    },
+    "answer": "A",
+    "explanation": "Summative evaluation is used to make high-stakes, final judgments about competence, such as for retention, promotion, or re-employment decisions."
+  },
+  {
+    "id": 17,
+    "question": "Which of the following statements about cooperative learning is correct? Cooperative learning…..",
+    "options": {
+      "A": "Is another term for ability grouping",
+      "B": "Refers to learning contracts between teachers and parents",
+      "C": "Stresses student cooperation rather than student competition",
+      "D": "To services delivered by joint service centers"
+    },
+    "answer": "C",
+    "explanation": "The core principle of cooperative learning is students working together to achieve a shared goal, promoting cooperation over competition."
+  },
+  {
+    "id": 18,
+    "question": "In performance evaluation, merit and worth are important concepts. Which of the following statements about them is correct?",
+    "options": {
+      "A": "Both merit and worth pertain to measuring an employee’s effectiveness",
+      "B": "Merit pertains to measuring an employee’s effectiveness",
+      "C": "Merit pertains to measuring an employee’s value to the school",
+      "D": "Worth pertains to measuring an employee’s effectiveness"
+    },
+    "answer": "B",
+    "explanation": "Merit refers to the quality of the individual's performance (effectiveness), whereas worth relates to the value or importance of the role itself to the organization."
+  },
+  {
+    "id": 19,
+    "question": "Which of the following is/are data produced by norm-referenced test?",
+    "options": {
+      "A": "Determination of weather students are performing at grade-level",
+      "B": "Mastery of specific objectives in the curriculum",
+      "C": "Mastery of specific skills related to the curriculum",
+      "D": "All of the above"
+    },
+    "answer": "A",
+    "explanation": "Norm-referenced tests compare a student's performance to the 'norm' (a peer group), allowing for ranking or determining if they are performing above, at, or below average grade-level expectations."
+  },
+  {
+    "id": 20,
+    "question": "Which of the following statements about interdisciplinary teacher team is correct?",
+    "options": {
+      "A": "In terms, teacher preferences and power can result in one subject dominating other subjects",
+      "B": "Teaming is intended to accommodate curriculum constructed around contemporary subjects and problems rather than disciplines (separate subjects)",
+      "C": "Teams are usually more open to considering change than are traditional academic departments",
+      "D": "None of the above"
+    },
+    "answer": "B",
+    "explanation": "Interdisciplinary teams are designed to integrate knowledge across subjects, teaching around themes or problems rather than in isolation."
+  },
+  {
+    "id": 21,
+    "question": "Which of the following statements about a multi-track, year-around calendar is correct?",
+    "options": {
+      "A": "Decreases the need for storage change",
+      "B": "Is intended to increases the functional capacity of a school",
+      "C": "Is intended to increase the functional capacity of a school",
+      "D": "Reduces staffing needs"
+    },
+    "answer": "C",
+    "explanation": "The primary goal of a multi-track system is to rotate students through the same facilities, thereby increasing the number of students the school can accommodate (functional capacity)."
+  },
+  {
+    "id": 22,
+    "question": "In a typical teaching and learning environment, students are most likely to be intrinsically motivated to learn when they ……",
+    "options": {
+      "A": "Anticipate that they will receive positive rewards for achieving instructional objectives",
+      "B": "Are interested in what they are learning and understand how it relates to their own life",
+      "C": "Knowing that they will be written a test or examination in the near future",
+      "D": "Perceive that their performance compares favorably with that of their peers engaged in the same tasks"
+    },
+    "answer": "B",
+    "explanation": "Intrinsic motivation stems from internal interest, relevance, and enjoyment of the task itself, not external rewards (A) or competitive comparison (D)."
+  },
+  {
+    "id": 23,
+    "question": "Which of the following statements about school culture is correct?",
+    "options": {
+      "A": "A principal’s behaviour is sole determinant of school culture",
+      "B": "B school culture consists of shared values and benefits that tell educators how to address problems",
+      "C": "School culture describes a school’s mission",
+      "D": "School culture describes the demographic composition of a school"
+    },
+    "answer": "B",
+    "explanation": "School culture is defined by the underlying, often unspoken, shared values, beliefs, and norms that guide behavior and problem-solving within the community."
+  },
+  {
+    "id": 24,
+    "question": "Which of the following statements accurately describes the process of reaching consensus? Consensus …..",
+    "options": {
+      "A": "Involves determining which fashion’s position will prevail",
+      "B": "Involves reaching a decision everyone can accept",
+      "C": "In another term for voting",
+      "D": "Is the process of reaching an ideal decision"
+    },
+    "answer": "B",
+    "explanation": "Consensus means that everyone in the group supports the decision and can live with it, even if it wasn't their first choice, ensuring collective buy-in."
+  },
+  {
+    "id": 25,
+    "question": "Decision about what to do to improve schools entails higher levels of uncertainty. Why?",
+    "options": {
+      "A": "A lot of time is spent on school improvement efforts",
+      "B": "Future conditions cannot be predicted accurately",
+      "C": "Teachers are not interested in participating in school improvement efforts",
+      "D": "The school may be autocratic"
+    },
+    "answer": "B",
+    "explanation": "Uncertainty is inherent in school improvement because interventions deal with complex human variables, and the future impact cannot be fully known in advance."
+  },
+  {
+    "id": 26,
+    "question": "School philosophy is cornerstone for continuous school improvement. Which of the following best explains a school philosophy? School philosophy……",
+    "options": {
+      "A": "Addresses the shared values and beliefs of the school",
+      "B": "Describes the shared purpose of the school",
+      "C": "Entails the strategies for reaching the preferred future",
+      "D": "Is the shared preferred future of the school"
+    },
+    "answer": "A",
+    "explanation": "School philosophy is the foundation of shared values and fundamental beliefs that underpin all decisions and activities of the institution."
+  },
+  {
+    "id": 27,
+    "question": "In an open climate, ………",
+    "options": {
+      "A": "All decisions are made by the P.T.A",
+      "B": "Interactions among stakeholders are prompted",
+      "C": "Parents do not participate in decision making",
+      "D": "Principals interact only with teachers"
+    },
+    "answer": "B",
+    "explanation": "An open organizational climate is characterized by trust, transparency, and high frequency and ease of interaction and communication among all stakeholders."
+  },
+  {
+    "id": 28,
+    "question": "A conflict matrix in relation to time tabling is designed to determine which of the following? Course that ……",
+    "options": {
+      "A": "Cannot be scheduled at the anytime",
+      "B": "Cannot not be scheduled at the same time",
+      "C": "Teachers are unwilling to teach",
+      "D": "Teachers cannot teach"
+    },
+    "answer": "B",
+    "explanation": "A conflict matrix identifies shared resources (e.g., teachers teaching multiple subjects) and constraints to ensure no two courses that need the same resource are scheduled simultaneously."
+  },
+  {
+    "id": 29,
+    "question": "As a strategy to improve schools, which information is false about intensification mandates?",
+    "options": {
+      "A": "They are imposed on schools from external stakeholders",
+      "B": "They are uniformly applied to all schools",
+      "C": "They require schools to do more of what they are already doing",
+      "D": "The require schools to use their plans to drive improvement"
+    },
+    "answer": "D",
+    "explanation": "Intensification mandates are externally imposed demands (e.g., increased reporting, testing) that add workload, rather than requiring internal, plan-driven improvement."
+  },
+  {
+    "id": 30,
+    "question": "Teachers pursuing moral and ethical behaviour in their schools usually ………",
+    "options": {
+      "A": "Cater for the needs of their constituency",
+      "B": "Do not promote data-drive decision",
+      "C": "Seeks to represent all stakeholders fairly and equally",
+      "D": "All of the above"
+    },
+    "answer": "C",
+    "explanation": "Ethical behavior in teaching requires fairness, impartiality, and equitable consideration of all stakeholders (students, parents, colleagues)."
+  },
+  {
+    "id": 31,
+    "question": "Which of the following statements about discipline and punishment is correct?",
+    "options": {
+      "A": "Discipline focuses on imposing and punishment focuses on promotion behaviour",
+      "B": "Discipline focuses on promoting positive behaviour and punishment focuses on imposing controls",
+      "C": "Discipline is the responsibility of the punishment is the responsibility of the superintendent",
+      "D": "Discipline is the responsibility of the superintendent and punishment is the responsibility of the principal"
+    },
+    "answer": "B",
+    "explanation": "In an educational context, discipline is proactive (teaching and promoting positive behaviour), while punishment is reactive (using negative controls or sanctions)."
+  },
+  {
+    "id": 32,
+    "question": "Teachers are advised that in matters of student discipline, students should ……..",
+    "options": {
+      "A": "Have a fair and impartial hearing",
+      "B": "Have no resources to appeal decision",
+      "C": "Present only the class teacher as witness",
+      "D": "All of the above"
+    },
+    "answer": "A",
+    "explanation": "The principle of due process dictates that students facing serious disciplinary action must be afforded the opportunity for a fair, impartial hearing."
+  },
+  {
+    "id": 33,
+    "question": "Teachers are expected to engage extensive analysis when making unprogrammed decisions in the school. Why?",
+    "options": {
+      "A": "Existing policies and rules do not prescribe the action to be taken",
+      "B": "The decision is of less importance to the school",
+      "C": "The decision would be evaluated by the school head",
+      "D": "The existing policies and rules prescribe the action to be taken"
+    },
+    "answer": "A",
+    "explanation": "Unprogrammed decisions are novel, complex, or non-routine situations for which no standard policy or rule exists, requiring detailed, in-depth analysis."
+  },
+  {
+    "id": 34,
+    "question": "Which of the following statements about teacher group decision making is correct?",
+    "options": {
+      "A": "Group decision making indicates teacher have taken over decision making in school",
+      "B": "Group decision making produces shared leadership in the school",
+      "C": "Group decision making shows individual teachers are unable to take decision",
+      "D": "In group decision making, only unimportant decisions are made"
+    },
+    "answer": "B",
+    "explanation": "Involving teachers in group decision-making is the definition and practice of shared or distributed leadership within the school."
+  },
+  {
+    "id": 35,
+    "question": "Effective teaching recommendations include…… I. Presenting new materials in small steps with learner practice after each step; II. Guiding learners as they begin to practice; III. Providing systematic feedback and correction; IV. Teacher consulting parents on what to teach",
+    "options": {
+      "A": "I and II only",
+      "B": "I, II and III only",
+      "C": "II and III only",
+      "D": "I, II, III and Iv"
+    },
+    "answer": "B",
+    "explanation": "Items I, II, and III are core elements of effective, structured instruction (direct instruction/mastery learning). Consulting parents (IV) is supportive but does not determine *what* to teach."
+  },
+  {
+    "id": 36,
+    "question": "Which of the statements below is not an expectation of the National Teachers’ standard? The standards expect the teacher to ……….",
+    "options": {
+      "A": "Demonstrate good knowledge in the relevant subjects(s) and curriculum areas",
+      "B": "Demonstrate knowledge and understanding of how different learning styles impact on teaching",
+      "C": "Have a sound knowledge of learners’ different ways of organizing their learning",
+      "D": "Reflect on previous knowledge and utilize it as the only source of knowledge to teach"
+    },
+    "answer": "D",
+    "explanation": "The standards require teachers to be reflective (D), but they must draw upon multiple sources (research, CPD, curriculum) and not rely *only* on previous knowledge."
+  },
+  {
+    "id": 37,
+    "question": "Which of the following constitutes the National Teachers Standard?",
+    "options": {
+      "A": "Professional Associates, Professional practice, Professional Licence",
+      "B": "Professional Knowledge, Professional Practice, Professional Licence",
+      "C": "Professional Values and Attitudes, Professional Associations, Professional Practice",
+      "D": "Professional Values and Attitudes, professional knowledge, professional Practice"
+    },
+    "answer": "D",
+    "explanation": "The Ghana National Teachers' Standards (GNTS) are structured around three domains: Values and Attitudes, Knowledge, and Practice."
+  },
+  {
+    "id": 38,
+    "question": "Effective classroom management strategies do not include……..",
+    "options": {
+      "A": "Encouraging initiative",
+      "B": "Letting students help establish guidelines",
+      "C": "Modelling ideal behaviour",
+      "D": "Providing text books"
+    },
+    "answer": "D",
+    "explanation": "Providing textbooks is a resource provision task. The other three options are specific, core strategies for managing student behaviour and the classroom environment."
+  },
+  {
+    "id": 39,
+    "question": "Differentiated instruction is an effected method of teaching. Which statement accurately describes differentiated instruction? Differentiated instruction ………….",
+    "options": {
+      "A": "Breaks lesson notes into smaller units",
+      "B": "Facilitates the timely construction of lesson notes",
+      "C": "Is a teacher’s response to meeting the needs of learners",
+      "D": "Works best with homogeneous learner group"
+    },
+    "answer": "C",
+    "explanation": "Differentiation is a teacher's proactive effort to plan and carry out varied approaches to content, process, and product to meet the needs of diverse learners."
+  },
+  {
+    "id": 40,
+    "question": "One of the key learning objectives of Sustainable Development Goals (SDG) 4; “to insure inclusive and equitable quality education and promote lifelong learning opportunities for all is that the learner …..",
+    "options": {
+      "A": "Is able to identify his/her individual rights and clarify his/her needs and values related to work",
+      "B": "Is able to recognize the intrinsic value of education and analyse and identify his/her own learning needs in his/her own personal development",
+      "C": "Know the basic principles of sustainable planning and building, and can identify opportunities for making his/her own area more sustainable and inclusive",
+      "D": "Understands inequality is a major driver for societal problems and individual dissatisfaction"
+    },
+    "answer": "B",
+    "explanation": "SDG 4 focuses on lifelong learning, requiring the learner to take responsibility for their continuous personal development and learning needs."
+  },
+  {
+    "id": 41,
+    "question": "A/An ………… is an instrument used for measuring sample of behaviour",
+    "options": {
+      "A": "Assessment",
+      "B": "Evaluation",
+      "C": "Measurement",
+      "D": "Test"
+    },
+    "answer": "D",
+    "explanation": "A test is a specific device or systematic procedure (instrument) used to obtain a sample of a person's behavior (e.g., knowledge or skill)."
+  },
+  {
+    "id": 42,
+    "question": "Which of the following processes is limited to quantitative description of a pupils performance?",
+    "options": {
+      "A": "Assessment",
+      "B": "Evaluation",
+      "C": "Measurement",
+      "D": "Test"
+    },
+    "answer": "C",
+    "explanation": "Measurement is the process of assigning numerical values (scores) to attributes or performance, making it purely quantitative."
+  },
+  {
+    "id": 43,
+    "question": "The purpose of evaluation is to make ………….. about students.",
+    "options": {
+      "A": "Decision",
+      "B": "Judgement",
+      "C": "Opinion",
+      "D": "Prediction"
+    },
+    "answer": "B",
+    "explanation": "Evaluation involves making a value judgment (e.g., good, fair, needs improvement) based on collected data (measurements/assessments)."
+  },
+  {
+    "id": 44,
+    "question": "Evaluation is done to make judgement about the ………. of education",
+    "options": {
+      "A": "Age",
+      "B": "Quality",
+      "C": "Quantity",
+      "D": "Time period"
+    },
+    "answer": "B",
+    "explanation": "Educational evaluation aims to determine the worth or quality of the learning process, the curriculum, or student outcomes."
+  },
+  {
+    "id": 45,
+    "question": "The type of evaluations that monitors progress is ……….. evaluation.",
+    "options": {
+      "A": "Diagnostics",
+      "B": "Formative",
+      "C": "Placement",
+      "D": "Summative"
+    },
+    "answer": "B",
+    "explanation": "Formative evaluation takes place *during* instruction to monitor learning, provide feedback, and adjust teaching strategies."
+  },
+  {
+    "id": 46,
+    "question": "Which of the following is a process of obtaining numerical values of students’ characteristics?",
+    "options": {
+      "A": "Assessment",
+      "B": "Evaluation",
+      "C": "Measurement",
+      "D": "Test"
+    },
+    "answer": "C",
+    "explanation": "Measurement is the process of assigning numerical values (quantification) to characteristics or performance."
+  },
+  {
+    "id": 47,
+    "question": "A formal and systematic procedure of getting information about how much students have learnt is ……….",
+    "options": {
+      "A": "Assessment",
+      "B": "Evaluation",
+      "C": "Measurement",
+      "D": "Test"
+    },
+    "answer": "A",
+    "explanation": "Assessment is the comprehensive process of gathering, documenting, and using data (information) on student knowledge, skills, and attitudes."
+  },
+  {
+    "id": 48,
+    "question": "The purpose of evaluation in education is to ………..",
+    "options": {
+      "A": "Assign a mark or score to student",
+      "B": "Measure the achievement of student",
+      "C": "Test the student in a subject",
+      "D": "Make judgement about the equality of learning"
+    },
+    "answer": "D",
+    "explanation": "Evaluation is the judgment phase, determining the quality or worth of learning outcomes."
+  },
+  {
+    "id": 49,
+    "question": "The best possible way of evaluating student’s performance is through……….",
+    "options": {
+      "A": "An on-going overall assessment throughout the year",
+      "B": "Annual test",
+      "C": "Monthly test",
+      "D": "Weekly test"
+    },
+    "answer": "A",
+    "explanation": "Continuous, ongoing assessment (a combination of formative and summative data) provides the most holistic and reliable picture of student performance over time."
+  },
+  {
+    "id": 50,
+    "question": "The end of term exams conducted schools are largely",
+    "options": {
+      "A": "Achievements tests",
+      "B": "Aptitude tests",
+      "C": "Intelligence tests",
+      "D": "Standardized attendance tests"
+    },
+    "answer": "A",
+    "explanation": "End-of-term exams measure what students have *achieved* or learned during a specific period of instruction."
+  },
+  {
+    "id": 51,
+    "question": "The District Education Oversight Committee (DEOC) is a structure to facilitate community participation in education.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The DEOC is an authorized body designed to bring community stakeholders together to monitor and advise on educational matters in the district."
+  },
+  {
+    "id": 52,
+    "question": "The Capitation Grant was introduced in basic schools to remove fees as a barrier to access to Education.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The Capitation Grant provides non-fee funds to schools to ensure basic education is free and to remove financial barriers to enrollment."
+  },
+  {
+    "id": 53,
+    "question": "One of the objectives of the 2008 education reform programme is to enhance education sector management and budgeting procedures.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Major reforms, including the 2008 programme, typically target improvements in administrative efficiency, management, and financial oversight alongside curricular changes."
+  },
+  {
+    "id": 54,
+    "question": "An attitude of good governance of GES is not delegation of management control of an institution.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Delegating management control to the institutional level (decentralization) is a key feature of modern good governance, making the statement False."
+  },
+  {
+    "id": 55,
+    "question": "The core function of the Ghana Education Service is to formulate approved structure and content of an institution.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The GES's core function is **implementation**. The **formulation** of curriculum structure and content is the responsibility of the Ministry of Education and the National Council for Curriculum and Assessment (NaCCA)."
+  },
+  {
+    "id": 56,
+    "question": "The Ghana Education Service Act, 2008 (Act, 778) is the current Act governing the Ghana Education Service.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Act 778 of 2008 remains the principal legislative instrument establishing and governing the GES."
+  },
+  {
+    "id": 57,
+    "question": "A school’s 'informal organization' refers to the structure of extra-curricular activities.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The informal organization refers to the unspoken norms, relationships, social networks, and unwritten rules that exist alongside the formal structure, not just extra-curricular activities."
+  },
+  {
+    "id": 58,
+    "question": "Giving teachers the authority and responsibility to apply their own professional knowledge to make decision in area of responsibility is an important aspect of collegiality.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Collegiality includes mutual respect and shared professional practice, which encompasses empowering colleagues to make decisions based on their expertise."
+  },
+  {
+    "id": 59,
+    "question": "Teacher survey is not an effective process for collecting data about instruction and organizational effectiveness.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Teacher surveys are a standard and effective tool for gathering insights, morale data, and feedback on instructional needs and organizational climate, making the statement False."
+  },
+  {
+    "id": 60,
+    "question": "Norm-referenced test cannot be used to improve instruction.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While primarily comparative, the *results* of norm-referenced tests (e.g., comparison to national data) can highlight areas of weakness and inform the need for instructional improvement, making the statement False."
+  },
+  {
+    "id": 61,
+    "question": "Value-added assessment focused on learning gains in an academic year.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Value-added models measure the amount of academic progress or 'gain' a student makes from one point in time to another, often within a single school year."
+  },
+  {
+    "id": 62,
+    "question": "Complexity in school scheduling relates to meeting the different needs of students.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Scheduling complexity arises from the need to balance resource availability with the diverse academic and elective needs of all students."
+  },
+  {
+    "id": 63,
+    "question": "School heads should refrain from conducting community surveys.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Community surveys are vital for building school-community relationships and ensuring that school policies and decisions align with local needs and expectations, making the statement False."
+  },
+  {
+    "id": 64,
+    "question": "Newly trained teachers are socialized in order to perpetuate the culture of the school.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Organizational socialization is the process of integrating new members by teaching them the existing values, norms, and behaviors, which helps maintain (perpetuate) the established culture."
+  },
+  {
+    "id": 65,
+    "question": "Teachers exercise leadership in the school in their operation.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Teachers are expected to display professional leadership not only in the classroom but also in school-wide initiatives and collaborative teams."
+  },
+  {
+    "id": 66,
+    "question": "A school is considered efficient if inputs are low and outputs are high.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Efficiency is the ratio of output to input; a school is efficient if it achieves high educational outcomes (output) with minimal resources (input)."
+  },
+  {
+    "id": 67,
+    "question": "Grading students’ performance has a powerful influence on school culture and contribute to shape how students learn both in the classroom and outside the classroom.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Grading systems convey the school's priorities. High-stakes, competitive grading fosters a different culture and study habit than mastery-based or collaborative grading."
+  },
+  {
+    "id": 68,
+    "question": "Consensus in planning increases teacher sense of ownership in school improvement efforts.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Consensus ensures that all teachers feel heard and committed to the final decision, leading to a greater sense of responsibility and ownership."
+  },
+  {
+    "id": 69,
+    "question": "Visioning identifies destination; planning provides the goal and strategies to get there.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The vision is the desired future state (the destination), and strategic planning details the specific objectives (goals) and actions (strategies) needed to reach that state."
+  },
+  {
+    "id": 70,
+    "question": "Efficiency as a value affects school policy decisions.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Policies regarding resource allocation, class sizes, and technology integration are frequently influenced by the need for efficiency (maximizing outcome per cedi spent)."
+  },
+  {
+    "id": 71,
+    "question": "Normative strategies such as grading on the curve, work against collaborative learning strategies.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Grading on a curve forces competition among students, which directly contradicts the supportive, shared success model of collaborative learning."
+  },
+  {
+    "id": 72,
+    "question": "Involving teachers in the employment interview of prospective teachers for the department is a bad way.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Involving teachers in the interview process is a best practice that promotes shared leadership and helps ensure new staff are a good professional fit for the department, making the statement False."
+  },
+  {
+    "id": 73,
+    "question": "Performance task are hands-on activities that require students to demonstrate their strategy to perform certain actions.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "A performance task requires students to apply knowledge and skills through an authentic, hands-on activity, rather than simply recalling information."
+  },
+  {
+    "id": 74,
+    "question": "It is important to know the purpose of assessment before selecting an assessment approach.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The purpose (e.g., diagnostic, formative, summative) dictates the type of assessment (e.g., quiz, portfolio, final exam) that is most appropriate."
+  },
+  {
+    "id": 75,
+    "question": "Grades as indicators of what students have learned become **tainted** if non- academic factors are counted and included in the evaluation.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "When non-academic factors (like effort or behaviour) are included in a grade intended to measure *academic* achievement, the academic integrity of the score is compromised or 'tainted'."
+  }
+]

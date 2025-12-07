@@ -1,0 +1,902 @@
+[
+  {
+    "id": 1,
+    "question": "Which government body is mandated to license and regulate the teaching profession in Ghana?",
+    "options": {
+      "A": "Ghana Education Service (GES)",
+      "B": "National Teaching Council (NTC)",
+      "C": "Ministry of Education (MoE)",
+      "D": "Ghana National Association of Teachers (GNAT)"
+    },
+    "answer": "B",
+    "explanation": "The National Teaching Council (NTC) is the statutory body responsible for setting professional standards, registering, and licensing teachers in Ghana."
+  },
+  {
+    "id": 2,
+    "question": "What is the primary focus of the Standards-Based Curriculum (SBC) introduced by the National Council for Curriculum and Assessment (NaCCA)?",
+    "options": {
+      "A": "Rote memorization of factual content.",
+      "B": "Developing essential skills and 4 C's (Creativity, Communication, Collaboration, Critical Thinking).",
+      "C": "Reducing the number of instructional hours per week.",
+      "D": "Eliminating all forms of standardized testing."
+    },
+    "answer": "B",
+    "explanation": "The SBC focuses on developing foundational skills, critical thinking, problem-solving, and the 4 C's, shifting away from a purely content-based approach."
+  },
+  {
+    "id": 3,
+    "question": "According to the GES structure, who is the administrative head of a District Education Directorate?",
+    "options": {
+      "A": "The Headmaster/Headmistress",
+      "B": "The District Chief Executive",
+      "C": "The District Director of Education (DDE)",
+      "D": "The Regional Director of Education (RDE)"
+    },
+    "answer": "C",
+    "explanation": "The District Director of Education (DDE) is the overall administrative and professional head of the Ghana Education Service in the district."
+  },
+  {
+    "id": 4,
+    "question": "Which document outlines the acceptable professional and ethical conduct expected of all personnel within the Ghana Education Service?",
+    "options": {
+      "A": "The Teachers' Collective Bargaining Agreement.",
+      "B": "The GES Scheme of Service.",
+      "C": "The GES Code of Professional Conduct.",
+      "D": "The NTC Teacher Education Policy."
+    },
+    "answer": "C",
+    "explanation": "The GES Code of Professional Conduct details the specific ethical responsibilities and required behaviour for GES staff."
+  },
+  {
+    "id": 5,
+    "question": "In the context of the Standards-Based Curriculum, what does 'B5.2.1.2' represent?",
+    "options": {
+      "A": "A topic of learning.",
+      "B": "A content standard.",
+      "C": "A specific indicator.",
+      "D": "A curriculum sub-strand."
+    },
+    "answer": "B",
+    "explanation": "In the Standards-Based Curriculum (SBC) of Ghana, codes such as B5.2.1.2 follow a fixed structure. Breakdown of B5.2.1.2: B5 → Basic 5 (year/grade level); 2 → Strand 2: 1 →  Sub-strand 1: 2 → Content Standard 2"
+  },
+  {
+    "id": 6,
+    "question": "The three key pillars of the National Teacher Professional Development (TPD) policy are:",
+    "options": {
+      "A": "Subject Knowledge, Pedagogical Skills, and Classroom Management.",
+      "B": "Initial Teacher Education, Induction, and Continuous Professional Development.",
+      "C": "Licensure, Registration, and Certification.",
+      "D": "Monitoring, Supervision, and Evaluation."
+    },
+    "answer": "B",
+    "explanation": "The TPD policy structures teacher development into Initial Teacher Education, a structured Induction phase, and ongoing Continuous Professional Development (CPD)."
+  },
+  {
+    "id": 7,
+    "question": "A teacher who fails to submit examination records on time is liable to which disciplinary action according to the GES disciplinary framework?",
+    "options": {
+      "A": "Instant dismissal.",
+      "B": "Warning or reprimand.",
+      "C": "Demotion.",
+      "D": "Surcharge."
+    },
+    "answer": "B",
+    "explanation": "Failing to submit required records on time is generally classified as a minor professional misconduct, warranting a formal warning or reprimand."
+  },
+  {
+    "id": 8,
+    "question": "What is the mandatory period of induction for newly qualified professional teachers in Ghana, as regulated by the NTC?",
+    "options": {
+      "A": "Six months.",
+      "B": "One academic year.",
+      "C": "Two years.",
+      "D": "Three years."
+    },
+    "answer": "B",
+    "explanation": "The induction period for new teachers is typically one academic year, during which they receive mentoring and guided practice before full licensure."
+  },
+  {
+    "id": 9,
+    "question": "Which of the following is NOT a core component of formative assessment?",
+    "options": {
+      "A": "Providing timely and specific feedback.",
+      "B": "Adjusting instruction based on student responses.",
+      "C": "Assigning a final grade for the term.",
+      "D": "Using questioning techniques to gauge understanding."
+    },
+    "answer": "C",
+    "explanation": "Assigning a final grade is characteristic of summative assessment. Formative assessment is focused on monitoring learning and providing feedback to improve instruction *during* the learning process."
+  },
+  {
+    "id": 10,
+    "question": "The term 'Child-Centered Pedagogy' primarily suggests that instructional strategies should be focused on the:",
+    "options": {
+      "A": "Teacher's convenience.",
+      "B": "Curriculum document.",
+      "C": "Learner's needs, interests, and prior knowledge.",
+      "D": "School's infrastructural capacity."
+    },
+    "answer": "C",
+    "explanation": "Child-Centered Pedagogy places the learner at the heart of the educational process, tailoring methods to their unique needs and abilities."
+  },
+  {
+    "id": 11,
+    "question": "What is the maximum duration for which a teacher can be interdicted while disciplinary proceedings are pending?",
+    "options": {
+      "A": "Three months.",
+      "B": "Six months.",
+      "C": "Twelve months.",
+      "D": "There is no maximum time limit."
+    },
+    "answer": "B",
+    "explanation": "The official maximum duration for interdiction, pending investigation and determination of a case, is generally six months."
+  },
+  {
+    "id": 12,
+    "question": "The GES Council is primarily responsible for:",
+    "options": {
+      "A": "Appointing classroom teachers.",
+      "B": "Determining the curriculum content.",
+      "C": "Formulating policies for the GES.",
+      "D": "Conducting the Basic Education Certificate Examination (BECE)."
+    },
+    "answer": "C",
+    "explanation": "The GES Council, as the highest policy-making body for the Service, is responsible for formulating overall policies for the management of the GES."
+  },
+  {
+    "id": 13,
+    "question": "Which part of the professional teacher's portfolio serves as evidence of Continuous Professional Development (CPD) activities?",
+    "options": {
+      "A": "Lesson note book.",
+      "B": "Logbook.",
+      "C": "CPD points record.",
+      "D": "Scheme of work."
+    },
+    "answer": "C",
+    "explanation": "Teachers are required to accumulate a minimum number of CPD points annually, and this record serves as evidence of their ongoing professional learning."
+  },
+  {
+    "id": 14,
+    "question": "Which educational reform introduced the current 6-3-3-4 structure of education in Ghana (6 years primary, 3 years JHS, 3 years SHS, 4 years University)?",
+    "options": {
+      "A": "The 1987 Educational Reform.",
+      "B": "The 2007 Educational Reform.",
+      "C": "The 1974 Dzobo Committee Report.",
+      "D": "The 2017 Pre-Tertiary Education Review."
+    },
+    "answer": "A",
+    "explanation": "The 1987 Education Reform is credited with introducing the 6-3-3-4 system, replacing the previous structure."
+  },
+  {
+    "id": 15,
+    "question": "The concept of 'Inclusion' in the Ghanaian educational context primarily refers to:",
+    "options": {
+      "A": "Including technology in all lessons.",
+      "B": "Including all subjects in the timetable.",
+      "C": "Educating all children, including those with special needs, in mainstream classrooms.",
+      "D": "Including teachers in management decisions."
+    },
+    "answer": "C",
+    "explanation": "Inclusion is the practice of ensuring all learners, regardless of disability or challenge, are educated together in a regular school environment."
+  },
+  {
+    "id": 16,
+    "question": "What is the required minimum CPD points a teacher must accumulate to renew their Professional Licence with the NTC?",
+    "options": {
+      "A": "100 points over 2 years.",
+      "B": "75 points over 3 years.",
+      "C": "100 points over 3 years.",
+      "D": "50 points over 5 years."
+    },
+    "answer": "C",
+    "explanation": "While exact requirements may be updated, the common requirement is 100 points over a three-year licensure cycle for renewal."
+  },
+  {
+    "id": 17,
+    "question": "The GES document titled 'The New Professional Standard for Teachers' is a key resource for understanding:",
+    "options": {
+      "A": "The disciplinary process.",
+      "B": "The minimum salary scale.",
+      "C": "The expected competencies and behaviours of a teacher.",
+      "D": "The annual budget allocation for schools."
+    },
+    "answer": "C",
+    "explanation": "The Professional Standards define the three main domains (Professional Knowledge and Practice, Professional Development, and Professional Ethics) and the competencies expected of teachers at different career stages."
+  },
+  {
+    "id": 18,
+    "question": "Which of the following describes the 'Mentoring' phase for a beginning teacher?",
+    "options": {
+      "A": "Independent research for promotion.",
+      "B": "Working alone for the first year.",
+      "C": "Structured support and guidance from an experienced colleague.",
+      "D": "Only formal training workshops."
+    },
+    "answer": "C",
+    "explanation": "Mentoring is a crucial part of the induction period, providing structured, one-on-one support from a seasoned mentor teacher."
+  },
+  {
+    "id": 19,
+    "question": "The term 'Schema' in cognitive learning theory refers to:",
+    "options": {
+      "A": "The teacher's lesson plan structure.",
+      "B": "Mental frameworks or structures for organizing and interpreting information.",
+      "C": "A physical diagram drawn on the board.",
+      "D": "A type of formative assessment."
+    },
+    "answer": "B",
+    "explanation": "A schema is a conceptual framework that helps individuals organize and interpret information in the world."
+  },
+  {
+    "id": 20,
+    "question": "Who is the custodian of all educational records, including personnel and financial documents, at the school level?",
+    "options": {
+      "A": "The Senior Housemaster.",
+      "B": "The School Accountant.",
+      "C": "The Headmaster/Headmistress.",
+      "D": "The PTA Chairman."
+    },
+    "answer": "C",
+    "explanation": "The Head of the school is ultimately responsible for the custody, management, and integrity of all school records."
+  },
+  {
+    "id": 21,
+    "question": "The GES 'Policy on Absenteeism' stipulates that a staff member must obtain written permission from the Head when absent for more than:",
+    "options": {
+      "A": "One day.",
+      "B": "Two days.",
+      "C": "Three days.",
+      "D": "One week."
+    },
+    "answer": "B",
+    "explanation": "Usually, for an absence exceeding 48 hours (two working days), prior written permission or submission of a report (like a medical certificate) is mandatory."
+  },
+  {
+    "id": 22,
+    "question": "What is the primary objective of School Performance Appraisal Meetings (SPAMs)?",
+    "options": {
+      "A": "To fine teachers for poor performance.",
+      "B": "To ensure accountability and improve teaching and learning outcomes.",
+      "C": "To elect new school board members.",
+      "D": "To review the school's infrastructure budget."
+    },
+    "answer": "B",
+    "explanation": "SPAMs are designed to regularly review progress, identify challenges, and strategize for improved school performance and accountability."
+  },
+  {
+    "id": 23,
+    "question": "In the Standards-Based Curriculum, what is the 'Content Standard'?",
+    "options": {
+      "A": "What the teacher must teach.",
+      "B": "What the learner should know and be able to do.",
+      "C": "The number of periods allocated to a subject.",
+      "D": "The minimum passing score in an exam."
+    },
+    "answer": "B",
+    "explanation": "The Content Standard is a clear statement of the knowledge, understanding, skills, and values that learners should exhibit after a period of learning."
+  },
+  {
+    "id": 24,
+    "question": "Which of the following is NOT a level of Bloom's Taxonomy of cognitive domains?",
+    "options": {
+      "A": "Remembering.",
+      "B": "Applying.",
+      "C": "Evaluating.",
+      "D": "Visualizing."
+    },
+    "answer": "D",
+    "explanation": "Visualizing is not one of the six main levels in the revised Bloom's Taxonomy (Remembering, Understanding, Applying, Analyzing, Evaluating, Creating)."
+  },
+  {
+    "id": 25,
+    "question": "The NTC is required to renew a teacher's professional licence after the stipulated period, provided the teacher has met the required:",
+    "options": {
+      "A": "Salary grade and rank.",
+      "B": "CPD points and positive appraisal reports.",
+      "C": "Number of years of service in one school.",
+      "D": "Attendance record only."
+    },
+    "answer": "B",
+    "explanation": "Licence renewal is contingent upon demonstrating professional growth, primarily through accumulated CPD points and satisfactory performance as documented by appraisals."
+  },
+  {
+    "id": 26,
+    "question": "According to the GES Code of Conduct, a teacher should NOT accept a gift from a student or parent if it is likely to influence:",
+    "options": {
+      "A": "The teacher's fashion choices.",
+      "B": "The teacher's professional judgment.",
+      "C": "The school's cleanliness.",
+      "D": "The price of textbooks."
+    },
+    "answer": "B",
+    "explanation": "Teachers must avoid conflicts of interest, and accepting gifts that could be perceived as influencing grading, assessment, or professional conduct is strictly prohibited."
+  },
+  {
+    "id": 27,
+    "question": "What does 'SBA' stand for in the context of school-level assessment?",
+    "options": {
+      "A": "School Budget Allocation.",
+      "B": "Standards-Based Assessment.",
+      "C": "School-Based Assessment.",
+      "D": "School Building Authority."
+    },
+    "answer": "C",
+    "explanation": "SBA refers to School-Based Assessment, which is the continuous assessment done by the classroom teacher to inform instruction and grading."
+  },
+  {
+    "id": 28,
+    "question": "The Head of a Basic School reports directly to the:",
+    "options": {
+      "A": "Regional Director of Education.",
+      "B": "Minister of Education.",
+      "C": "District Director of Education (DDE).",
+      "D": "The Local Assembly Member."
+    },
+    "answer": "C",
+    "explanation": "The school head is accountable to the District Director of Education, who oversees all Basic Schools within their jurisdiction."
+  },
+  {
+    "id": 29,
+    "question": "Which teaching method aligns best with Vygotsky's Zone of Proximal Development (ZPD)?",
+    "options": {
+      "A": "Independent, unsupervised learning.",
+      "B": "Direct instruction and lecturing.",
+      "C": "Scaffolding and collaborative learning.",
+      "D": "Rote memorization drills."
+    },
+    "answer": "C",
+    "explanation": "The ZPD suggests that learners can achieve more with the help of a more knowledgeable other (MKO). Scaffolding provides this necessary temporary support, and collaboration encourages peer assistance."
+  },
+  {
+    "id": 30,
+    "question": "The core function of the National Council for Curriculum and Assessment (NaCCA) is to:",
+    "options": {
+      "A": "Pay teacher salaries.",
+      "B": "Develop and review the national curriculum.",
+      "C": "Manage teacher placements.",
+      "D": "Appoint Regional Directors of Education."
+    },
+    "answer": "B",
+    "explanation": "NaCCA is responsible for ensuring the quality, relevance, and alignment of the national curriculum and associated assessments."
+  },
+  {
+    "id": 31,
+    "question": "The GES 'Scheme of Service' outlines the conditions for:",
+    "options": {
+      "A": "Student admission to school.",
+      "B": "Teacher promotion and career progression.",
+      "C": "The curriculum for JHS.",
+      "D": "The procedure for closing a school."
+    },
+    "answer": "B",
+    "explanation": "The Scheme of Service details the professional requirements, criteria, and procedure for career progression and promotion within the GES."
+  },
+  {
+    "id": 32,
+    "question": "What is the primary role of the Inspectorate Division of the GES?",
+    "options": {
+      "A": "Collecting school fees.",
+      "B": "Conducting regular supervisory visits and ensuring quality of instruction.",
+      "C": "Processing teacher leave applications.",
+      "D": "Managing the school feeding programme."
+    },
+    "answer": "B",
+    "explanation": "The Inspectorate is responsible for quality assurance, monitoring, and supervising teaching and learning in schools."
+  },
+  {
+    "id": 33,
+    "question": "Which ethical principle is violated if a teacher uses corporal punishment on a student?",
+    "options": {
+      "A": "Respect for diversity.",
+      "B": "Professional competence.",
+      "C": "Protection of the child's dignity and rights.",
+      "D": "Commitment to community service."
+    },
+    "answer": "C",
+    "explanation": "The GES policy on discipline prohibits corporal punishment, upholding the child's rights and dignity, and promoting positive discipline methods."
+  },
+  {
+    "id": 34,
+    "question": "The 'Big Six' skills promoted by the Standards-Based Curriculum includes the 4 C's plus:",
+    "options": {
+      "A": "Literacy and Numeracy.",
+      "B": "Technology and Leadership.",
+      "C": "Geography and History.",
+      "D": "Assessment and Evaluation."
+    },
+    "answer": "A",
+    "explanation": "The Big Six are the 4 C's (Creativity, Communication, Collaboration, Critical Thinking) plus Literacy and Numeracy."
+  },
+  {
+    "id": 35,
+    "question": "What is the core purpose of a 'Portfolio Assessment'?",
+    "options": {
+      "A": "To check a student's handwriting.",
+      "B": "To collect evidence of a student's learning progress and achievements over time.",
+      "C": "To assess a teacher's fashion sense.",
+      "D": "To determine the school's population."
+    },
+    "answer": "B",
+    "explanation": "Portfolio assessment involves collecting a selection of student work and reflections to show growth and mastery of competencies over a period."
+  },
+  {
+    "id": 36,
+    "question": "Which section of the GES Code of Conduct governs a teacher's involvement in partisan political activities?",
+    "options": {
+      "A": "The section on Professional Competence.",
+      "B": "The section on Conflicts of Interest.",
+      "C": "The section on Relation with Colleagues.",
+      "D": "The section on Disciplinary Procedures."
+    },
+    "answer": "B",
+    "explanation": "Involvement in partisan politics, especially holding executive positions, is restricted for public servants like teachers due to potential conflict of interest with their professional duties."
+  },
+  {
+    "id": 37,
+    "question": "The concept of 'Equity' in education primarily aims to ensure that:",
+    "options": {
+      "A": "All schools receive the same amount of funding.",
+      "B": "All students receive the specific resources and support they need to succeed.",
+      "C": "All students pass the BECE.",
+      "D": "All teachers are paid the same salary."
+    },
+    "answer": "B",
+    "explanation": "Equity means providing tailored support and resources to overcome specific disadvantages, ensuring a fair opportunity for all, unlike 'equality' (providing the same to everyone)."
+  },
+  {
+    "id": 38,
+    "question": "What is the official term for the person who coordinates all professional development activities at the district level for the GES?",
+    "options": {
+      "A": "The District Chief Executive.",
+      "B": "The District Professional Development Coordinator (DPDC).",
+      "C": "The Circuit Supervisor.",
+      "D": "The District Budget Officer."
+    },
+    "answer": "B",
+    "explanation": "The DPDC is the key officer in charge of planning, implementing, and monitoring TPD activities at the district level."
+  },
+  {
+    "id": 39,
+    "question": "When developing a lesson note for the Standards-Based Curriculum, the 'Performance Indicator' helps the teacher to:",
+    "options": {
+      "A": "Measure how well the learner has achieved the content standard.",
+      "B": "Know the number of students present.",
+      "C": "Determine the date of the next holiday.",
+      "D": "Decide on the lunch menu."
+    },
+    "answer": "A",
+    "explanation": "The Performance Indicator specifies the expected evidence of learning, enabling the teacher to assess student mastery of the content standard."
+  },
+  {
+    "id": 40,
+    "question": "Which of the following describes a 'Project-Based Learning' (PBL) activity?",
+    "options": {
+      "A": "Students individually copying notes from the board.",
+      "B": "Students collaborating over several weeks to solve a real-world problem.",
+      "C": "A 10-minute quiz after a lesson.",
+      "D": "The teacher reading a textbook aloud to the class."
+    },
+    "answer": "B",
+    "explanation": "PBL is an instructional approach where students gain knowledge and skills by working for an extended period to investigate and respond to an engaging, complex question, problem, or challenge."
+  },
+  {
+    "id": 41,
+    "question": "The primary objective of the 'Pre-Tertiary Education Bill' is to:",
+    "options": {
+      "A": "Introduce Free Senior High School.",
+      "B": "Restructure the management of pre-tertiary education.",
+      "C": "Abolish the use of textbooks.",
+      "D": "Introduce mandatory vocational training for all students."
+    },
+    "answer": "B",
+    "explanation": "The Bill aims to modernize and streamline the management, administration, and governance of all pre-tertiary schools under the Ministry of Education."
+  },
+  {
+    "id": 42,
+    "question": "What is the critical minimum number of students required to form a Parents-Teacher Association (PTA) in a Ghanaian school?",
+    "options": {
+      "A": "10 students.",
+      "B": "25 students.",
+      "C": "There is no minimum specified; it is dependent on the school population.",
+      "D": "PTA is no longer a mandatory body."
+    },
+    "answer": "C",
+    "explanation": "The PTA is formed by the parents and teachers of the school, so the required size depends on the existing population and is not fixed by a small number."
+  },
+  {
+    "id": 43,
+    "question": "The concept of 'Reflective Practice' requires a teacher to:",
+    "options": {
+      "A": "Always follow the Headmaster's instructions without question.",
+      "B": "Continuously examine and evaluate their own teaching methods and experiences.",
+      "C": "Teach only one subject for their entire career.",
+      "D": "Work only during school hours."
+    },
+    "answer": "B",
+    "explanation": "Reflective practice involves a cycle of experience, observation, conceptualization, and active experimentation to continuously improve one's professional performance."
+  },
+  {
+    "id": 44,
+    "question": "The GES 'Policy on Sexual Harassment and Abuse' places primary responsibility for reporting incidents on:",
+    "options": {
+      "A": "Only the victims themselves.",
+      "B": "All GES personnel, including colleagues and supervisors.",
+      "C": "Only law enforcement agencies.",
+      "D": "The District Assembly."
+    },
+    "answer": "B",
+    "explanation": "All GES personnel have a mandatory duty to report any observed or suspected case of sexual harassment or abuse immediately to the appropriate authorities."
+  },
+  {
+    "id": 45,
+    "question": "Which of the following is an example of an 'Authentic Assessment' task?",
+    "options": {
+      "A": "A multiple-choice quiz on vocabulary.",
+      "B": "A final examination involving true/false questions.",
+      "C": "Students designing and presenting a marketing campaign for a local product.",
+      "D": "A test requiring memorized definitions."
+    },
+    "answer": "C",
+    "explanation": "Authentic assessment tasks require students to apply knowledge and skills in real-world contexts, like the presentation of a marketing campaign."
+  },
+  {
+    "id": 46,
+    "question": "The highest authority in the GES organizational chart is the:",
+    "options": {
+      "A": "Director-General.",
+      "B": "Minister of Education.",
+      "C": "The President of the Republic.",
+      "D": "The GES Council."
+    },
+    "answer": "D",
+    "explanation": "The GES Council is the highest policy-making body responsible for the Service, while the Director-General is the administrative and professional head."
+  },
+  {
+    "id": 47,
+    "question": "Under the new curriculum, the emphasis on 'Literacy and Numeracy' in the early grades is aimed at:",
+    "options": {
+      "A": "Preparing students for university entrance exams.",
+      "B": "Ensuring a solid foundation for all future learning.",
+      "C": "Reducing the number of teachers in the classroom.",
+      "D": "Focusing only on STEM subjects."
+    },
+    "answer": "B",
+    "explanation": "Strong foundational literacy and numeracy skills are considered essential prerequisites for success in all other learning areas and future academic pursuits."
+  },
+  {
+    "id": 48,
+    "question": "A teacher engaging in 'Plagiarism' in their promotion thesis is committing an offense against:",
+    "options": {
+      "A": "The school's catering services.",
+      "B": "Intellectual property and ethical standards.",
+      "C": "Classroom attendance rules.",
+      "D": "School furniture maintenance."
+    },
+    "answer": "B",
+    "explanation": "Plagiarism is a serious ethical violation involving the unauthorized use of another person's work and presenting it as one's own."
+  },
+  {
+    "id": 49,
+    "question": "Which management style is characterized by the Headmaster making decisions without consulting staff?",
+    "options": {
+      "A": "Democratic.",
+      "B": "Laissez-faire.",
+      "C": "Autocratic.",
+      "D": "Situational."
+    },
+    "answer": "C",
+    "explanation": "An autocratic or authoritarian style involves concentrated power and decision-making by the leader with little or no staff consultation."
+  },
+  {
+    "id": 50,
+    "question": "The main purpose of the 'Staff Appraisal Report' (SAR) system is to:",
+    "options": {
+      "A": "Punish teachers who fail.",
+      "B": "Provide constructive feedback and facilitate professional growth.",
+      "C": "Reduce the total number of teachers.",
+      "D": "Determine the date for the next staff meeting."
+    },
+    "answer": "B",
+    "explanation": "SARs are instruments for performance management, providing regular feedback to staff and identifying areas for improvement and professional development."
+  },
+  {
+    "id": 51,
+    "question": "In classroom management, 'Proximity Control' is an example of a technique used to:",
+    "options": {
+      "A": "Monitor student work from the back of the room.",
+      "B": "Prevent disruptive behaviour by simply moving closer to the student.",
+      "C": "Ensure all students are sitting close together.",
+      "D": "Control the room temperature."
+    },
+    "answer": "B",
+    "explanation": "Proximity control is a non-verbal intervention where a teacher uses their physical presence (walking closer) to redirect off-task behaviour without interrupting the lesson."
+  },
+  {
+    "id": 52,
+    "question": "What is the primary objective of the GES 'Monitoring and Supervision' exercise?",
+    "options": {
+      "A": "To verify the number of students enrolled.",
+      "B": "To ensure compliance with educational standards and policies.",
+      "C": "To distribute school uniforms.",
+      "D": "To audit the canteen services."
+    },
+    "answer": "B",
+    "explanation": "Monitoring and supervision aim to ensure that teaching and learning activities, as well as school administration, adhere to established professional and statutory standards."
+  },
+  {
+    "id": 53,
+    "question": "According to the NTC's Continuous Professional Development (CPD) framework, which category of activities carries the highest point value?",
+    "options": {
+      "A": "Attending a short school-level staff meeting.",
+      "B": "Independent study of a new textbook.",
+      "C": "Mentoring a beginning teacher for a whole year.",
+      "D": "Participating in a regional one-day workshop."
+    },
+    "answer": "C",
+    "explanation": "Structured, sustained activities that require significant effort and demonstrate a high impact on professional practice, such as year-long mentoring, typically yield the highest CPD points."
+  },
+  {
+    "id": 54,
+    "question": "The GES 'Guideline on Financial Management' mandates that all financial records must be submitted to the District Office for auditing:",
+    "options": {
+      "A": "Daily.",
+      "B": "Weekly.",
+      "C": "Termly or as stipulated by the DDE.",
+      "D": "Only when requested by the Minister."
+    },
+    "answer": "C",
+    "explanation": "Financial reports and records are typically required at the end of each term or per the specific directives and timeline set by the District Director."
+  },
+  {
+    "id": 55,
+    "question": "A teacher who consistently shows up late to school is guilty of:",
+    "options": {
+      "A": "Gross misconduct.",
+      "B": "Professional incompetence.",
+      "C": "Tardiness, a minor misconduct.",
+      "D": "Financial misappropriation."
+    },
+    "answer": "C",
+    "explanation": "Consistent lateness (tardiness) is a common form of minor professional misconduct that typically leads to a written warning or reprimand upon established proof."
+  },
+  {
+    "id": 56,
+    "question": "What is the term for the process of determining a student's prior knowledge before starting a new topic?",
+    "options": {
+      "A": "Summative Assessment.",
+      "B": "Diagnostic Assessment.",
+      "C": "Benchmark Assessment.",
+      "D": "Criterion-Referenced Test."
+    },
+    "answer": "B",
+    "explanation": "Diagnostic assessment is conducted before instruction to ascertain students' strengths, weaknesses, prior knowledge, and skills."
+  },
+  {
+    "id": 57,
+    "question": "The '4 C's' of the Standards-Based Curriculum are essential for:",
+    "options": {
+      "A": "Teaching agricultural science.",
+      "B": "Developing the 21st-century skills needed for success.",
+      "C": "Managing school finances.",
+      "D": "Organizing staff meetings."
+    },
+    "answer": "B",
+    "explanation": "The 4 C's (Creativity, Communication, Collaboration, Critical Thinking) are globally recognized as critical competencies for success in the modern workforce and society."
+  },
+  {
+    "id": 58,
+    "question": "Which theory of motivation emphasizes the importance of feeling competent and self-determined in one's actions (autonomy, competence, relatedness)?",
+    "options": {
+      "A": "Maslow's Hierarchy of Needs.",
+      "B": "Skinner's Operant Conditioning.",
+      "C": "Self-Determination Theory (SDT).",
+      "D": "Vygotsky's Sociocultural Theory."
+    },
+    "answer": "C",
+    "explanation": "Self-Determination Theory focuses on the three innate psychological needs: competence, autonomy, and psychological relatedness."
+  },
+  {
+    "id": 59,
+    "question": "The primary role of the NTC Teacher Portal Ghana (TPG) is to facilitate:",
+    "options": {
+      "A": "Online shopping for teachers.",
+      "B": "Registration, licensing, and professional development management.",
+      "C": "Distribution of salary pay slips.",
+      "D": "School infrastructure planning."
+    },
+    "answer": "B",
+    "explanation": "The TPG is the central online platform for NTC-related services, including initial registration, licence renewal, and tracking CPD points."
+  },
+  {
+    "id": 60,
+    "question": "What is the key difference between a 'Content Standard' and an 'Indicator' in the SBC?",
+    "options": {
+      "A": "Content Standard is broad, Indicator is specific and measurable.",
+      "B": "Content Standard is for JHS, Indicator is for SHS.",
+      "C": "Content Standard is theory, Indicator is practice.",
+      "D": "There is no difference; they are interchangeable."
+    },
+    "answer": "A",
+    "explanation": "The Content Standard states the overall knowledge/skill, while the Indicator details the specific, measurable evidence that demonstrates the learner has achieved that standard."
+  },
+  {
+    "id": 61,
+    "question": "The 'Circuit Supervisor' (CS) in the GES hierarchy reports directly to the:",
+    "options": {
+      "A": "Regional Director of Education.",
+      "B": "Headmaster of the Circuit's largest school.",
+      "C": "District Director of Education.",
+      "D": "The Chief Examiner."
+    },
+    "answer": "C",
+    "explanation": "The Circuit Supervisor is an officer of the District Education Directorate and reports directly to the District Director of Education (DDE)."
+  },
+  {
+    "id": 62,
+    "question": "Which of the following describes 'Instructional Supervision'?",
+    "options": {
+      "A": "Checking the Headmaster's car.",
+      "B": "Providing constructive feedback to teachers to improve their teaching methods.",
+      "C": "Monitoring the time a lesson starts and ends.",
+      "D": "Counting the number of textbooks in the school."
+    },
+    "answer": "B",
+    "explanation": "Instructional supervision is focused on the improvement of instruction and pedagogy through observation, conferencing, and targeted support for teachers."
+  },
+  {
+    "id": 63,
+    "question": "According to the GES Code of Conduct, a teacher engaging in private business must ensure it does NOT interfere with:",
+    "options": {
+      "A": "Their personal time off.",
+      "B": "Their official duties and school schedule.",
+      "C": "The school's colour scheme.",
+      "D": "The student's lunch break."
+    },
+    "answer": "B",
+    "explanation": "While teachers can engage in private business, it must not be carried out during official working hours or compromise their professional responsibilities to the Service."
+  },
+  {
+    "id": 64,
+    "question": "The 'School Improvement Support Officer' (SISO) is a term often used interchangeably with:",
+    "options": {
+      "A": "The Headmaster.",
+      "B": "The Accountant.",
+      "C": "The Circuit Supervisor.",
+      "D": "The Regional Director."
+    },
+    "answer": "C",
+    "explanation": "SISO is a modern term for the Circuit Supervisor, emphasizing their role in providing support and mentoring for school improvement."
+  },
+  {
+    "id": 65,
+    "question": "What is the primary risk of using 'Norm-Referenced' assessment in a diverse classroom?",
+    "options": {
+      "A": "It is too expensive to administer.",
+      "B": "It only measures performance against other students, not against mastery of content standards.",
+      "C": "It takes too much time to mark.",
+      "D": "It requires special computer software."
+    },
+    "answer": "B",
+    "explanation": "Norm-referenced tests compare a student's performance to a pre-defined group (the 'norm'). Criterion-referenced assessment (like the SBC) is preferred because it measures performance against absolute learning standards (criteria)."
+  },
+  {
+    "id": 66,
+    "question": "The term 'Differentiation' in teaching refers to:",
+    "options": {
+      "A": "Treating all students equally.",
+      "B": "Adjusting instruction to meet the varied needs of students in a classroom.",
+      "C": "Teaching only one subject at a time.",
+      "D": "Using only high-tech teaching tools."
+    },
+    "answer": "B",
+    "explanation": "Differentiation is a pedagogical approach where teachers modify content, process, products, and learning environment to meet individual learner readiness, interest, and learning profile."
+  },
+  {
+    "id": 67,
+    "question": "Which ethical violation is committed by a teacher who solicits funds from students for a school project without official approval?",
+    "options": {
+      "A": "Misapplication of funds.",
+      "B": "Abuse of office/Extortion.",
+      "C": "Poor classroom management.",
+      "D": "Failure to plan lessons."
+    },
+    "answer": "B",
+    "explanation": "Soliciting funds without proper authorization, especially from students, can be seen as abusing the professional position and may constitute extortion."
+  },
+  {
+    "id": 68,
+    "question": "The 'School Improvement Plan' (SIP) is a mandatory document that details:",
+    "options": {
+      "A": "The school's historical timeline.",
+      "B": "The strategic goals, activities, and budget for the school's growth.",
+      "C": "The personal goals of the Headmaster.",
+      "D": "A list of all school alumni."
+    },
+    "answer": "B",
+    "explanation": "The SIP is a strategic document used for performance management, outlining focused areas for improvement with measurable targets and action plans."
+  },
+  {
+    "id": 69,
+    "question": "Which of the following is NOT a mandatory record a classroom teacher must keep?",
+    "options": {
+      "A": "Register of Attendance.",
+      "B": "Scheme of Work/Syllabus.",
+      "C": "Daily Lesson Note/Plan.",
+      "D": "Record of staff meeting minutes."
+    },
+    "answer": "D",
+    "explanation": "While teachers attend staff meetings, the official record of meeting minutes is typically kept by the school administration, not the individual classroom teacher."
+  },
+  {
+    "id": 70,
+    "question": "The GES Act 506 (1995) established the GES and defined its core function as:",
+    "options": {
+      "A": "Managing national elections.",
+      "B": "Implementing pre-tertiary education policies of the government.",
+      "C": "Training university lecturers.",
+      "D": "Running the national airline."
+    },
+    "answer": "B",
+    "explanation": "The Act legally defined the GES's mandate to implement the government's pre-tertiary education policies and manage the school system."
+  },
+  {
+    "id": 71,
+    "question": "The GES 'Policy on Interdiction' allows for half-pay during the period of interdiction. The reason for this is:",
+    "options": {
+      "A": "To punish the teacher immediately.",
+      "B": "To ensure the teacher is available for investigation and is not financially incapacitated.",
+      "C": "To save the GES money.",
+      "D": "To encourage the teacher to resign."
+    },
+    "answer": "B",
+    "explanation": "Half-pay is provided to ensure the teacher's availability for the investigative process and to prevent undue financial hardship while the case is being processed."
+  },
+  {
+    "id": 72,
+    "question": "The term 'Learning Outcomes' in curriculum planning specifies:",
+    "options": {
+      "A": "The final grade achieved by the student.",
+      "B": "What the teacher plans to teach.",
+      "C": "The skills, knowledge, and abilities a student will have upon completion of a lesson/unit.",
+      "D": "The textbooks used in the course."
+    },
+    "answer": "C",
+    "explanation": "Learning outcomes are explicit statements that describe what students should know, understand, and be able to do as a result of completing a learning process."
+  },
+  {
+    "id": 73,
+    "question": "Which of the following best describes the 'Competency-Based' approach of the SBC?",
+    "options": {
+      "A": "Focus on standardized test scores.",
+      "B": "Focus on what students can *do* with the knowledge they acquire.",
+      "C": "Focus on the length of the curriculum document.",
+      "D": "Focus on strict adherence to a single textbook."
+    },
+    "answer": "B",
+    "explanation": "Competency-Based Learning emphasizes practical application and mastery of skills and knowledge, focusing on observable demonstration of abilities."
+  },
+  {
+    "id": 74,
+    "question": "The NTC mandate includes the maintenance of a register of teachers, primarily for the purpose of:",
+    "options": {
+      "A": "Tracking their political affiliation.",
+      "B": "Ensuring only qualified and licensed professionals are in the classroom.",
+      "C": "Monitoring their clothing choices.",
+      "D": "Calculating school infrastructure needs."
+    },
+    "answer": "B",
+    "explanation": "The register ensures that the teaching profession is regulated, and only those who meet the standards and possess a valid licence are practicing."
+  },
+  {
+    "id": 75,
+    "question": "A teacher is required to follow the 'Code of Conduct' even when they are not physically on school premises, demonstrating the principle of:",
+    "options": {
+      "A": "Limited liability.",
+      "B": "Professionalism extending beyond the classroom.",
+      "C": "Physical presence.",
+      "D": "Geographical constraint."
+    },
+    "answer": "B",
+    "explanation": "The professional and ethical obligations of a teacher extend beyond the confines of the school campus, requiring high standards of conduct in all public and professional interactions."
+  }
+]

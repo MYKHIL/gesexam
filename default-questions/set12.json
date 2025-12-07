@@ -1,0 +1,828 @@
+[
+  {
+    "id": 1,
+    "question": "Which agency is primarily responsible for the *development* and review of the national pre-tertiary curriculum in Ghana?",
+    "options": {
+      "A": "Ghana Education Service (GES)",
+      "B": "National Teaching Council (NTC)",
+      "C": "West African Examinations Council (WAEC)",
+      "D": "National Council for Curriculum and Assessment (NaCCA)"
+    },
+    "answer": "D",
+    "explanation": "NaCCA holds the statutory mandate for developing, reviewing, and approving the national curriculum and associated materials."
+  },
+  {
+    "id": 2,
+    "question": "True or False: A teacher found guilty of sexual misconduct with a student is subject to a maximum sanction of interdiction (suspension) without pay.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Sexual misconduct is a severe ethical and criminal offence and is subject to immediate dismissal/termination of appointment, often followed by prosecution and license revocation."
+  },
+  {
+    "id": 3,
+    "question": "According to the Scheme of Service, which position is the immediate supervisory head for a Head of Department (HOD) in a Senior High School (SHS)?",
+    "options": {
+      "A": "District Director of Education",
+      "B": "Assistant Headmaster/Headmistress (Academic)",
+      "C": "SHS Board Chairman",
+      "D": "Regional Director of Education"
+    },
+    "answer": "B",
+    "explanation": "The Assistant Headmaster/Headmistress (Academic) usually coordinates and supervises the work of the HODs in instructional delivery."
+  },
+  {
+    "id": 4,
+    "question": "True or False: The Head of School has the unilateral authority to introduce and enforce a new school levy without consulting the School Management Committee (SMC)/Board and the District Director.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "All school levies, fees, or charges must be approved by the appropriate governing board/committee and subsequently sanctioned by the GES authority (District or Regional Director) to ensure transparency and compliance."
+  },
+  {
+    "id": 5,
+    "question": "Which of the following is *not* typically considered one of the 'Core Competencies' emphasized in the Ghanaian Standard-Based Curriculum?",
+    "options": {
+      "A": "Critical Thinking and Problem Solving",
+      "B": "Digital Literacy",
+      "C": "Financial Accounting and Bookkeeping",
+      "D": "Cultural Identity and Global Citizenship"
+    },
+    "answer": "C",
+    "explanation": "Financial Accounting is a specific subject area, whereas the others are cross-cutting skills and attitudes expected across all subjects."
+  },
+  {
+    "id": 6,
+    "question": "True or False: GES staff on 'Sick Leave' for a period exceeding 3 months are automatically removed from the payroll until they return to duty.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "If the leave is certified by a medical board, the staff member may be granted extended sick leave, often on half-pay, but not automatically removed from the payroll."
+  },
+  {
+    "id": 7,
+    "question": "What percentage of a staff member's full salary is retained during a period of interdiction (suspension pending disciplinary investigation)?",
+    "options": {
+      "A": "25%",
+      "B": "50%",
+      "C": "66.6% (Two-thirds)",
+      "D": "100%"
+    },
+    "answer": "B",
+    "explanation": "During the period of interdiction, the employee shall be entitled to be paid at the rate of half of his/her basic salary."
+  },
+  {
+    "id": 8,
+    "question": "True or False: Teachers are allowed to use corporal punishment as a last resort for chronic student indiscipline, provided it is minor and recorded.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Corporal punishment (caning, slapping, etc.) is officially banned in all Ghanaian public schools by the GES and the Ministry of Education."
+  },
+  {
+    "id": 9,
+    "question": "The primary management tool used by GES to assess the annual job performance of staff members for promotion purposes is the:",
+    "options": {
+      "A": "Continuous Professional Development (CPD) Log",
+      "B": "Annual Performance Appraisal Report (APAR)",
+      "C": "Internal Generated Fund (IGF) Report",
+      "D": "Scheme of Service Document"
+    },
+    "answer": "B",
+    "explanation": "The APAR is the formal and compulsory instrument for evaluating an individual's performance and suitability for advancement."
+  },
+  {
+    "id": 10,
+    "question": "True or False: The use of an indigenous Ghanaian language as the medium of instruction is mandatory for all subjects from KG to Primary 6.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "It is mandatory only from KG to Primary 3. English takes over as the medium of instruction from Primary 4 onwards."
+  },
+  {
+    "id": 11,
+    "question": "The concept of 'Inclusive Education' primarily focuses on ensuring educational access and equity for which group of learners?",
+    "options": {
+      "A": "High-performing students only",
+      "B": "Students with Special Educational Needs (SEN)",
+      "C": "Male students from rural areas",
+      "D": "Students attending private schools"
+    },
+    "answer": "B",
+    "explanation": "Inclusive Education is focused on providing equitable access and appropriate support for learners with varying needs, especially Special Educational Needs."
+  },
+  {
+    "id": 12,
+    "question": "True or False: Teachers are prohibited from engaging in any private business activity, even outside of official working hours, under GES regulations.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "They are permitted, provided the activity does not interfere with their official duties, does not use government resources, and usually requires prior written approval to check for conflicts of interest."
+  },
+  {
+    "id": 13,
+    "question": "Which officer is primarily responsible for ensuring that all financial records related to Internal Generated Funds (IGF) are accurately maintained and audited?",
+    "options": {
+      "A": "The School PTA Chairman",
+      "B": "The Head of School/Accountant (where applicable)",
+      "C": "The Head of Department (HOD)",
+      "D": "The NTC Licensing Officer"
+    },
+    "answer": "B",
+    "explanation": "The Head of School (or the designated School Accountant) is the principal custodian and accounting officer for all school funds, including IGF."
+  },
+  {
+    "id": 14,
+    "question": "True or False: 'Desertion of Post' is officially defined as unauthorized absence from duty for exactly three (3) consecutive working days.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The standard period constituting 'Desertion of Post' is typically ten (10) or more consecutive working days of unauthorized absence."
+  },
+  {
+    "id": 15,
+    "question": "The National Teaching Council (NTC) Teacher Professional License must typically be renewed every:",
+    "options": {
+      "A": "Year",
+      "B": "Two years",
+      "C": "Three years",
+      "D": "Five years"
+    },
+    "answer": "C",
+    "explanation": "The professional license is generally renewed every three years upon the accumulation of the required CPD points."
+  },
+  {
+    "id": 16,
+    "question": "True or False: Teachers are required to seek parental permission before administering any form of punishment to a student.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Teachers have the authority to administer appropriate, non-corporal sanctions in line with school rules without seeking specific parental permission for every instance."
+  },
+  {
+    "id": 17,
+    "question": "In the GES hierarchy, the Regional Director of Education reports directly to the:",
+    "options": {
+      "A": "Regional Minister",
+      "B": "Director-General of GES",
+      "C": "Minister of Education",
+      "D": "Chief Director of the Ministry of Education"
+    },
+    "answer": "B",
+    "explanation": "The Regional Director is the administrative head of GES in the region and reports directly to the Director-General."
+  },
+  {
+    "id": 18,
+    "question": "True or False: Maternity leave for female GES staff is typically granted for 12 weeks with full pay.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Public service regulations grant 12 weeks (3 months) of maternity leave with full pay."
+  },
+  {
+    "id": 19,
+    "question": "What is the primary objective of 'Formative Assessment' in the classroom?",
+    "options": {
+      "A": "To rank students for promotional purposes.",
+      "B": "To certify the student's mastery at the end of a unit.",
+      "C": "To monitor student learning and provide immediate feedback for improvement.",
+      "D": "To determine the teacher's annual performance bonus."
+    },
+    "answer": "C",
+    "explanation": "Formative assessment is 'assessment for learning' used to guide teaching and learning processes while they are happening."
+  },
+  {
+    "id": 20,
+    "question": "True or False: A teacher on transfer is required to complete a formal handing-over process, including all records and school property under their charge, before leaving the post.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "A mandatory handing-over is required for accountability and continuity of work when a staff member changes post."
+  },
+  {
+    "id": 21,
+    "question": "Which educational phase is classified under the 'Basic Education' structure in Ghana?",
+    "options": {
+      "A": "Senior High School (SHS)",
+      "B": "Kindergarten (KG) to Junior High School (JHS)",
+      "C": "SHS to Tertiary Education",
+      "D": "Technical and Vocational Education and Training (TVET)"
+    },
+    "answer": "B",
+    "explanation": "Basic Education comprises two years of KG, six years of Primary, and three years of JHS."
+  },
+  {
+    "id": 22,
+    "question": "True or False: The official retirement age for all GES staff is 55 years.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The compulsory retirement age for public service workers in Ghana, including GES staff, is 60 years."
+  },
+  {
+    "id": 23,
+    "question": "The primary role of the School Management Committee (SMC) in a public basic school is:",
+    "options": {
+      "A": "Disciplining students and staff.",
+      "B": "Setting the annual curriculum content.",
+      "C": "Overseeing the school's general welfare, finances, and community engagement.",
+      "D": "Conducting the final external examination."
+    },
+    "answer": "C",
+    "explanation": "The SMC is a local governing body responsible for supporting the school's administration, managing funds, and linking the school to the community."
+  },
+  {
+    "id": 24,
+    "question": "True or False: Teachers are allowed to use official school time to sell merchandise or promote personal commercial interests to students or staff.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The Code of Conduct prohibits the use of official time or position for private commercial gain, especially within the school environment."
+  },
+  {
+    "id": 25,
+    "question": "The three domains of learning emphasized in the curriculum are the Cognitive, Affective, and...",
+    "options": {
+      "A": "Social",
+      "B": "Psychomotor",
+      "C": "Digital",
+      "D": "Financial"
+    },
+    "answer": "B",
+    "explanation": "The three classical domains of educational objectives are Cognitive (knowledge), Affective (attitudes/values), and Psychomotor (skills/doing)."
+  },
+  {
+    "id": 26,
+    "question": "True or False: A teacher must obtain prior written permission from the GES authority to travel outside Ghana during an official school vacation period.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "All public servants, including GES staff, are required to obtain permission before travelling abroad, even during non-working periods."
+  },
+  {
+    "id": 27,
+    "question": "What documentation must a teacher prepare weekly to detail the content, methodology, and assessment for their upcoming classes?",
+    "options": {
+      "A": "Scheme of Work",
+      "B": "Curriculum Framework",
+      "C": "Lesson Notes/Plans",
+      "D": "Cumulative Record Card"
+    },
+    "answer": "C",
+    "explanation": "Lesson Notes (or Plans) translate the Scheme of Work into detailed, week-by-week, class-specific instructional delivery plans."
+  },
+  {
+    "id": 28,
+    "question": "True or False: The GES is only responsible for the payment of teachers' salaries and not for the provision of Teaching and Learning Materials (TLMs).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The provision of essential TLMs to public schools is a core mandate of the GES, alongside salary administration."
+  },
+  {
+    "id": 29,
+    "question": "The primary purpose of a 'Surcharge' applied against a GES staff member is to:",
+    "options": {
+      "A": "Punish the staff member with a fine.",
+      "B": "Recover verifiable financial loss caused by the staff member's negligence or misconduct.",
+      "C": "Deduct money for union dues.",
+      "D": "Fund the annual staff party."
+    },
+    "answer": "B",
+    "explanation": "A surcharge is an accountability measure to recover government funds lost due to the negligence, carelessness, or misconduct of an officer."
+  },
+  {
+    "id": 30,
+    "question": "True or False: Teachers can apply for 'Study Leave with Pay' to pursue any course of their choice, regardless of its relevance to the GES curriculum.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Study leave with pay is highly competitive and is typically granted only for courses deemed critical or relevant to the current needs and priorities of the Service."
+  },
+  {
+    "id": 31,
+    "question": "Which of these professional bodies is responsible for organizing the licensure examination for prospective teachers in Ghana?",
+    "options": {
+      "A": "Ghana National Association of Teachers (GNAT)",
+      "B": "National Teaching Council (NTC)",
+      "C": "Ministry of Education (MoE)",
+      "D": "Ghana Education Service (GES)"
+    },
+    "answer": "B",
+    "explanation": "The NTC administers the Teacher Licensure Examination as part of the regulatory process for the profession."
+  },
+  {
+    "id": 32,
+    "question": "True or False: A teacher's request for a transfer should be treated as a right and must be granted within one academic term.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Transfers are subject to administrative discretion, staffing requirements, and the availability of vacancies; they are not an automatic right."
+  },
+  {
+    "id": 33,
+    "question": "Which disciplinary sanction is considered the most severe and involves the permanent cessation of employment?",
+    "options": {
+      "A": "Reprimand",
+      "B": "Interdiction",
+      "C": "Reduction in Rank",
+      "D": "Dismissal/Termination"
+    },
+    "answer": "D",
+    "explanation": "Dismissal or termination is the ultimate sanction, resulting in the permanent loss of employment and benefits."
+  },
+  {
+    "id": 34,
+    "question": "True or False: The Parent-Teacher Association (PTA) is responsible for the appointment of Headteachers to public schools.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Headteachers are appointed, transferred, and promoted by the Ghana Education Service (GES) based on established protocols."
+  },
+  {
+    "id": 35,
+    "question": "What is the typical ratio of Continuous Assessment (CA) to Summative Assessment (End-of-Term Exam) in the current Basic School curriculum (e.g., Primary 1-3)?",
+    "options": {
+      "A": "20% CA : 80% Summative",
+      "B": "50% CA : 50% Summative",
+      "C": "60% CA : 40% Summative",
+      "D": "80% CA : 20% Summative"
+    },
+    "answer": "C",
+    "explanation": "The Standard-Based Curriculum places a heavier emphasis on continuous assessment, often recommending a 60:40 or similar split in favour of CA."
+  },
+  {
+    "id": 36,
+    "question": "True or False: A staff member is allowed to be absent from duty without seeking prior official permission, provided they inform the Head of School via text message on the day of absence.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Absence requires prior permission/approval. Informing via text is not a substitute for formal approval, especially for periods of absence longer than a few hours."
+  },
+  {
+    "id": 37,
+    "question": "Which of the following documents defines the job description, required qualification, and grade structure for various GES staff categories?",
+    "options": {
+      "A": "GES Financial Regulations",
+      "B": "The Scheme of Service",
+      "C": "The Conditions of Service",
+      "D": "The NTC Code of Ethics"
+    },
+    "answer": "B",
+    "explanation": "The Scheme of Service maps out the career progression and qualification requirements for GES staff."
+  },
+  {
+    "id": 38,
+    "question": "True or False: The Head of School must ensure that a staff attendance register is maintained, and all staff sign both in and out daily.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "This is a mandatory administrative requirement to record working hours and track staff presence."
+  },
+  {
+    "id": 39,
+    "question": "What body is responsible for regulating the activities of the Teacher Unions (like GNAT, NAGRAT, CCT) in relation to industrial action?",
+    "options": {
+      "A": "GES Disciplinary Committee",
+      "B": "National Labour Commission (NLC)",
+      "C": "Ministry of Finance",
+      "D": "National Teaching Council (NTC)"
+    },
+    "answer": "B",
+    "explanation": "The NLC is the statutory body mandated to mediate, investigate, and settle labour disputes in Ghana."
+  },
+  {
+    "id": 40,
+    "question": "True or False: If a staff member is fully exonerated after a period of interdiction, they are entitled to receive the full arrears of salary and allowances withheld during the interdiction period.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Full exoneration means the staff member is treated as if the interdiction never happened, and all withheld earnings must be restored."
+  },
+  {
+    "id": 41,
+    "question": "The concept that requires GES to provide equal educational opportunities and resources to all students, regardless of their background, location, or ability, is known as:",
+    "options": {
+      "A": "Elitism",
+      "B": "Decentralization",
+      "C": "Equity and Access",
+      "D": "Standardization"
+    },
+    "answer": "C",
+    "explanation": "Equity and Access are foundational principles of GES policy to ensure no child is left behind in education."
+  },
+  {
+    "id": 42,
+    "question": "True or False: Teachers are allowed to accept gifts of significant monetary value from students' parents as a token of appreciation for services rendered.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The Code of Conduct discourages accepting large or valuable gifts, as it can be interpreted as a conflict of interest, bribery, or an attempt to influence professional judgment."
+  },
+  {
+    "id": 43,
+    "question": "Which of these is the most appropriate step for a teacher to take if they suspect a child is being abused or neglected at home?",
+    "options": {
+      "A": "Personally investigate the family situation.",
+      "B": "Ignore it, as it is a private family matter.",
+      "C": "Report immediately to the Head of School and the Guidance and Counselling Coordinator.",
+      "D": "Discuss the suspicion openly with the child's classmates."
+    },
+    "answer": "C",
+    "explanation": "Child protection policy mandates immediate reporting to the school authorities for formal action and liaison with social welfare or police."
+  },
+  {
+    "id": 44,
+    "question": "True or False: 'Annual Leave' for GES staff is typically scheduled during the official school vacation periods to avoid disrupting instructional time.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "For teaching staff, annual leave is usually embedded within the long vacations to minimize class disruptions."
+  },
+  {
+    "id": 45,
+    "question": "The official document that outlines the daily duties and responsibilities of a specific grade of GES staff (e.g., Senior Superintendent) is contained within the:",
+    "options": {
+      "A": "National Curriculum Framework",
+      "B": "GES Financial Regulations",
+      "C": "Conditions of Service",
+      "D": "Annual School Budget"
+    },
+    "answer": "C",
+    "explanation": "Conditions of Service detail the contractual obligations, rights, duties, working hours, and remunerations for staff."
+  },
+  {
+    "id": 46,
+    "question": "True or False: The Head of School is required to seek permission from the PTA before conducting a financial audit of the school's IGF accounts.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Auditing is a required management and accountability procedure that does not require PTA permission, although the PTA may be a stakeholder in the process."
+  },
+  {
+    "id": 47,
+    "question": "Which type of professional development activity is mandated by NTC for license renewal?",
+    "options": {
+      "A": "Political party rallies.",
+      "B": "Continuous Professional Development (CPD) activities.",
+      "C": "International vacation travel.",
+      "D": "Stock market trading."
+    },
+    "answer": "B",
+    "explanation": "CPD is compulsory for license renewal, requiring the accumulation of specified points over the licensing period."
+  },
+  {
+    "id": 48,
+    "question": "True or False: When applying for Study Leave, the bond signed by the staff member requires them to serve the Service for a period *equal* to the duration of the study.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The standard bonding agreement mandates service for a period equivalent to the time spent on the study leave."
+  },
+  {
+    "id": 49,
+    "question": "The lowest point of the GES administrative structure at the local level is the:",
+    "options": {
+      "A": "Regional Education Office",
+      "B": "Headquarters in Accra",
+      "C": "Circuit Supervisor's Office",
+      "D": "Ministry of Education"
+    },
+    "answer": "C",
+    "explanation": "The Circuit Supervisor (or Circuit Coordinator) is the closest administrative officer to the schools within a small cluster/circuit."
+  },
+  {
+    "id": 50,
+    "question": "True or False: A staff member can be dismissed from the Service solely based on an anonymous complaint without any formal investigation.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Disciplinary action must follow due process, including formal notification of charges, investigation, and a hearing, regardless of the source of the complaint."
+  },
+  {
+    "id": 51,
+    "question": "Which of these is a key function of the School Guidance and Counselling Unit?",
+    "options": {
+      "A": "Managing the school's catering services.",
+      "B": "Providing academic, vocational, and personal/social advice to students.",
+      "C": "Approving the annual school budget.",
+      "D": "Conducting teacher performance appraisals."
+    },
+    "answer": "B",
+    "explanation": "The primary role is student support in their academic, career, and personal development."
+  },
+  {
+    "id": 52,
+    "question": "True or False: The use of an electronic Staff Attendance System (e.g., biometric) is mandatory for all public basic schools in the country.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While encouraged, biometric/electronic systems are not yet universally implemented or mandatory across all basic schools; paper registers are still common."
+  },
+  {
+    "id": 53,
+    "question": "If a teacher refuses to take up an officially approved transfer to a new station, the most likely disciplinary action is:",
+    "options": {
+      "A": "Reprimand",
+      "B": "Reduction in Rank",
+      "C": "Termination of Appointment (Refusal to obey lawful instructions)",
+      "D": "Mandatory six months of Compassionate Leave"
+    },
+    "answer": "C",
+    "explanation": "Refusal to obey lawful official instructions (like an approved transfer) is a serious professional misconduct that can lead to termination."
+  },
+  {
+    "id": 54,
+    "question": "True or False: A teacher's lesson notes must always be vetted and signed by the Head of School *before* the week of delivery.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Vetting (or supervision) of lesson notes is required to ensure quality, curriculum coverage, and pedagogical soundness before the lessons are taught."
+  },
+  {
+    "id": 55,
+    "question": "Which document primarily details the official procedures for handling staff disciplinary cases within the GES?",
+    "options": {
+      "A": "The National Education Strategic Plan",
+      "B": "GES Code of Professional Conduct and Disciplinary Procedures",
+      "C": "The NTC Licensing Manual",
+      "D": "The annual school prospectus"
+    },
+    "answer": "B",
+    "explanation": "This specific document provides the framework for defining misconduct and the steps for investigation and sanction."
+  },
+  {
+    "id": 56,
+    "question": "True or False: The maximum duration for 'Compassionate Leave' granted to a staff member is 60 working days.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Compassionate leave is usually short, unpaid (or paid, depending on the rules), and typically limited to a period such as 5 or 10 days for urgent personal matters like bereavement."
+  },
+  {
+    "id": 57,
+    "question": "What is the educational level immediately preceding Junior High School (JHS) in the public school structure?",
+    "options": {
+      "A": "Kindergarten (KG)",
+      "B": "Primary 6",
+      "C": "Senior High School (SHS)",
+      "D": "Technical Institute"
+    },
+    "answer": "B",
+    "explanation": "Primary 6 is the final year of the Primary cycle, which directly precedes the start of JHS 1."
+  },
+  {
+    "id": 58,
+    "question": "True or False: All public schools are mandated to hold a 'School Performance Appraisal Meeting' (SPAM) at least once every academic year.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "SPAM is a key accountability measure requiring all stakeholders to review the school's performance data and set improvement targets."
+  },
+  {
+    "id": 59,
+    "question": "The primary source of funding for infrastructure projects in public schools, aside from government subventions, is the:",
+    "options": {
+      "A": "School Canteen Profits",
+      "B": "GETFund (Ghana Education Trust Fund)",
+      "C": "The Headteacher's personal savings",
+      "D": "WAEC Registration Fees"
+    },
+    "answer": "B",
+    "explanation": "GETFund is the dedicated legal framework and funding source for educational infrastructure and facilities development."
+  },
+  {
+    "id": 60,
+    "question": "True or False: It is a breach of the professional Code of Conduct for a teacher to publicly criticize or undermine the policies of the Ghana Education Service on social media.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Public servants are expected to observe a duty of loyalty and discretion, and public criticism of employer policy, especially on platforms like social media, can constitute misconduct."
+  },
+  {
+    "id": 61,
+    "question": "Which officer in the District Education Directorate is specifically tasked with monitoring and supporting teachers and Headteachers within a defined cluster of schools?",
+    "options": {
+      "A": "The District Finance Officer",
+      "B": "The Circuit Supervisor (Circuity Coordinator)",
+      "C": "The District Director of Education (DDE)",
+      "D": "The Procurement Officer"
+    },
+    "answer": "B",
+    "explanation": "The Circuit Supervisor is the frontline monitoring and supervisory officer for a circuit of schools."
+  },
+  {
+    "id": 62,
+    "question": "True or False: Teachers are allowed to use official school equipment and resources (like photocopiers or Wi-Fi) for their private income-generating activities without authorization.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The misuse of public resources for private gain is strictly prohibited under GES and general public service financial regulations."
+  },
+  {
+    "id": 63,
+    "question": "The professional ethics of a teacher require them to maintain a confidential relationship with students, meaning information shared by a student should *only* be disclosed if:",
+    "options": {
+      "A": "The information is necessary for the teacher's lesson notes.",
+      "B": "The disclosure is required by law or to prevent harm (e.g., child abuse).",
+      "C": "The teacher finds the information amusing and wants to share it with colleagues.",
+      "D": "The student has already told their friend."
+    },
+    "answer": "B",
+    "explanation": "Confidentiality is broken only when mandated by law or when the disclosure is essential to protect the student or others from serious harm (duty to protect)."
+  },
+  {
+    "id": 64,
+    "question": "True or False: A GES staff member is allowed to run for or hold an executive position in a political party without first resigning from the Service.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While staff can be party members, holding executive/active partisan political office requires resignation or compulsory retirement from the Civil/Public Service."
+  },
+  {
+    "id": 65,
+    "question": "What is the administrative term for the temporary removal of a staff member from duty pending the outcome of a serious disciplinary investigation?",
+    "options": {
+      "A": "Resignation",
+      "B": "Retrenchment",
+      "C": "Interdiction",
+      "D": "Compassionate Leave"
+    },
+    "answer": "C",
+    "explanation": "Interdiction is the formal administrative process of temporary suspension during an investigation."
+  },
+  {
+    "id": 66,
+    "question": "True or False: If a teacher takes unauthorized absence, the salary for the days absent must be deducted (No Work, No Pay rule).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The 'No Work, No Pay' rule is enforced for all unauthorized absences from duty."
+  },
+  {
+    "id": 67,
+    "question": "The *initial* professional license for a Ghanaian teacher is issued by which body?",
+    "options": {
+      "A": "GES Regional Office",
+      "B": "National Teaching Council (NTC)",
+      "C": "Ministry of Education (MoE)",
+      "D": "WAEC"
+    },
+    "answer": "B",
+    "explanation": "The NTC is the sole licensing body for teachers."
+  },
+  {
+    "id": 68,
+    "question": "True or False: The Head of School is responsible for approving the school's annual academic calendar, including all national holidays.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The national academic calendar (term dates and holidays) is set centrally by the GES/MoE Headquarters."
+  },
+  {
+    "id": 69,
+    "question": "What is the required standard for maintaining school records, such as logbooks, registers, and inventory records?",
+    "options": {
+      "A": "They should be written in pencil for easy correction.",
+      "B": "They must be kept meticulously, permanently, and signed by responsible officers.",
+      "C": "They should only be available to the District Director.",
+      "D": "They can be disposed of after one academic year."
+    },
+    "answer": "B",
+    "explanation": "Official school records are permanent, legal documents requiring meticulous maintenance, proper archiving, and authentication."
+  },
+  {
+    "id": 70,
+    "question": "True or False: A teacher on post is responsible for paying all utility bills (electricity, water) for the classroom provided by the Service.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Utility bills for general school facilities, including classrooms, are the responsibility of the school administration/GES, not the individual teacher."
+  },
+  {
+    "id": 71,
+    "question": "The principle of 'Accountability' in the GES refers to the responsibility of staff for:",
+    "options": {
+      "A": "Attending all weddings.",
+      "B": "Being answerable for their actions, performance, and the use of public resources.",
+      "C": "Only teaching the subjects they like.",
+      "D": "Determining the curriculum content."
+    },
+    "answer": "B",
+    "explanation": "Accountability means being held responsible for duties, resource management, and outcomes."
+  },
+  {
+    "id": 72,
+    "question": "True or False: The Head of School must secure formal approval from the Regional Director before admitting a student who has been expelled from another public school.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Admission of an expelled student is a sensitive administrative matter requiring high-level approval (District/Regional) to ensure consistency and due diligence."
+  },
+  {
+    "id": 73,
+    "question": "The Ghana Education Service (GES) is an agency under which Ministry?",
+    "options": {
+      "A": "Ministry of Finance",
+      "B": "Ministry of Health",
+      "C": "Ministry of Education (MoE)",
+      "D": "Ministry of Local Government"
+    },
+    "answer": "C",
+    "explanation": "GES is the implementing agency for pre-tertiary education policies under the Ministry of Education."
+  },
+  {
+    "id": 74,
+    "question": "True or False: The performance of all teachers must be appraised by their immediate supervisor annually.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The Annual Performance Appraisal is a mandatory supervisory function for all staff, carried out by the Head of School or HOD/AHM."
+  },
+  {
+    "id": 75,
+    "question": "The core focus of 'Action Research' undertaken by teachers is to:",
+    "options": {
+      "A": "Get promoted instantly.",
+      "B": "Obtain a PhD.",
+      "C": "Systematically investigate and improve their own professional practice and classroom outcomes.",
+      "D": "Write a report on the school's finances."
+    },
+    "answer": "C",
+    "explanation": "Action research is a form of self-reflective, systematic inquiry designed to solve real problems and improve teaching effectiveness."
+  }
+]

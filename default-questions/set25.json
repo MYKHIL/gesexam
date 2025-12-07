@@ -1,0 +1,852 @@
+[
+  {
+    "id": 1,
+    "question": "Which theory of learning emphasizes the role of internal mental processes, such as memory and problem-solving, in understanding how people learn?",
+    "options": {
+      "A": "Behaviourism",
+      "B": "Cognitivism",
+      "C": "Humanism",
+      "D": "Social constructivism"
+    },
+    "answer": "B",
+    "explanation": "Cognitivism focuses on internal mental activities and how information is processed, stored, and retrieved to explain learning."
+  },
+  {
+    "id": 2,
+    "question": "Which approach to classroom management focuses on student-teacher collaboration and mutual respect, viewing interactions as interpersonal transactions?",
+    "options": {
+      "A": "Assertive discipline",
+      "B": "Behavioural modification",
+      "C": "Positive behaviour support",
+      "D": "Transactional analysis"
+    },
+    "answer": "D",
+    "explanation": "Transactional analysis is a psychological model that applies to communication and relationship dynamics, promoting mutual respect and collaborative problem-solving in the classroom."
+  },
+  {
+    "id": 3,
+    "question": "Which of the following strategies is most effective in managing a diverse classroom by addressing varied learning needs?",
+    "options": {
+      "A": "Allowing students to work independently at all times",
+      "B": "Differentiating instruction to meet varied learning needs",
+      "C": "Treating all students equally regardless of their needs",
+      "D": "Using a one-size-fits-all teaching approach"
+    },
+    "answer": "B",
+    "explanation": "Differentiating instruction involves tailoring the content, process, and product of teaching to address the varied learning styles, readiness levels, and interests of students."
+  },
+  {
+    "id": 4,
+    "question": "Which learning theory emphasizes the importance of social interactions and cultural context in the construction of knowledge?",
+    "options": {
+      "A": "Behaviourism",
+      "B": "Cognitivism",
+      "C": "Constructivism",
+      "D": "Humanism"
+    },
+    "answer": "C",
+    "explanation": "Social Constructivism (a branch of constructivism, often associated with Vygotsky) asserts that learning is a social process heavily dependent on interaction with others and the environment."
+  },
+  {
+    "id": 5,
+    "question": "What is the main strategic purpose of using a seating arrangement in classroom management?",
+    "options": {
+      "A": "To allow students to sit with their friends",
+      "B": "To establish authority and autonomy",
+      "C": "To make the classroom look organized",
+      "D": "To minimize disruptions and enhance learning"
+    },
+    "answer": "D",
+    "explanation": "Effective seating arrangements are strategic tools used to foster student engagement, encourage collaboration, and prevent disruptive behavior, directly impacting the learning environment."
+  },
+  {
+    "id": 6,
+    "question": "Which classroom management technique involves giving students choices and a voice in decision-making to enhance their autonomy and responsibility?",
+    "options": {
+      "A": "Assertive discipline",
+      "B": "Authoritative teaching",
+      "C": "Democratic teaching",
+      "D": "Permissive teaching"
+    },
+    "answer": "C",
+    "explanation": "A democratic teaching style actively involves students in decision-making and rule-setting, giving them a sense of ownership, which builds autonomy and responsibility."
+  },
+  {
+    "id": 7,
+    "question": "Which of the following is NOT explicitly listed as part of the membership of the Ghana Education Service (GES) according to its governing acts?",
+    "options": {
+      "A": "All the stakeholders in Education",
+      "B": "Personnel of the Ghana Education Service pre-1995",
+      "C": "Persons that may be employed for the service",
+      "D": "Teachers and non-teaching personnel in public tertiary educational institutions"
+    },
+    "answer": "A",
+    "explanation": "GES membership is defined by specific personnel categories (B and C) under the service, not the general term 'stakeholders in Education,' which is a broader group including parents, communities, etc. Personnel in public tertiary institutions (D) are typically under the Ghana Tertiary Education Commission (GTEC)."
+  },
+  {
+    "id": 8,
+    "question": "Which of the following is a form of positive reinforcement?",
+    "options": {
+      "A": "Giving a student extra homework",
+      "B": "Ignoring a student's efforts",
+      "C": "Praising a student for good behaviour",
+      "D": "Removing a privilege for bad behaviour"
+    },
+    "answer": "C",
+    "explanation": "Positive reinforcement involves adding a desirable stimulus (praise, reward) after a desirable behavior to increase the likelihood of that behavior happening again."
+  },
+  {
+    "id": 9,
+    "question": "The mission of the Ministry of Education (MoE) is to provide the citizens of Ghana with ………….",
+    "options": {
+      "A": "Compulsory technical education",
+      "B": "Employment for graduates",
+      "C": "Free education for all",
+      "D": "Inclusive and equitable education"
+    },
+    "answer": "D",
+    "explanation": "The MoE's mission is aligned with Sustainable Development Goal 4 (SDG 4) to ensure inclusive and equitable quality education and promote lifelong learning opportunities for all."
+  },
+  {
+    "id": 10,
+    "question": "The Education Strategic Plan (ESP) of the Ministry of Education aims primarily to …………",
+    "options": {
+      "A": "Build more senior high schools",
+      "B": "Expand higher education access",
+      "C": "Increase teacher salaries",
+      "D": "Provide equitable access to quality education"
+    },
+    "answer": "D",
+    "explanation": "The ESP focuses on the overarching goal of achieving quality, equitable education across all pre-tertiary and tertiary levels."
+  },
+  {
+    "id": 11,
+    "question": "In what year was the Ghana Education service (GES) formally established?",
+    "options": {
+      "A": "1974",
+      "B": "1987",
+      "C": "1995",
+      "D": "2000"
+    },
+    "answer": "A",
+    "explanation": "The Ghana Education Service was formally established in 1974 by the National Redemption Council Decree 247 (NRCD 247)."
+  },
+  {
+    "id": 12,
+    "question": "Which of the following is the core function of the Ghana Education Service (GES)?",
+    "options": {
+      "A": "Conducting national promotion examination for all public sector workers",
+      "B": "Developing and implementing tertiary education curriculum",
+      "C": "Managing and implementing pre-tertiary educational policies",
+      "D": "Overseeing basic, secondary and university education"
+    },
+    "answer": "C",
+    "explanation": "The GES is primarily responsible for the implementation and management of national education policies and programmes at the pre-tertiary level (Basic and Secondary)."
+  },
+  {
+    "id": 13,
+    "question": "Which Act governs the establishment and foundational operations of the Ghana Educational Service?",
+    "options": {
+      "A": "Education Act 2008 (Act 778)",
+      "B": "Ghana Education Service Act 1995 (Act 506)",
+      "C": "Public Service Act 2001 (Act 600)",
+      "D": "Teachers Service Act 1990"
+    },
+    "answer": "B",
+    "explanation": "The Ghana Education Service Act 506 of 1995 established the specific structure, functions, and management of the GES."
+  },
+  {
+    "id": 14,
+    "question": "Which of the following is an essential foundational component of effective classroom management?",
+    "options": {
+      "A": "Allowing students to set their own rules without guidance",
+      "B": "Establishing clear rules and routines",
+      "C": "Ignoring student misbehaviour consistently",
+      "D": "Using corporal punishment"
+    },
+    "answer": "B",
+    "explanation": "Establishing and consistently implementing clear rules and routines is fundamental for creating a predictable, orderly, and effective learning environment."
+  },
+  {
+    "id": 15,
+    "question": "Which of the following agencies of the Ministry of Education is responsible for regulating and implementing policies related to higher education?",
+    "options": {
+      "A": "Complementary Education Agency",
+      "B": "Ghana Library Board Authority",
+      "C": "Ghana Tertiary Education Commission",
+      "D": "National Commission for Civic Education"
+    },
+    "answer": "C",
+    "explanation": "The Ghana Tertiary Education Commission (GTEC) is the regulatory body for tertiary education institutions and policies in Ghana."
+  },
+  {
+    "id": 16,
+    "question": "Lev Vygotsky’s concept of the Zone of the Proximal Development (ZPD) refers to:",
+    "options": {
+      "A": "Skills that a learner can perform independently",
+      "B": "Tasks a learner cannot accomplish, even with assistance",
+      "C": "The difference between what a learner can do with and without help",
+      "D": "The total range of a learner’s abilities, competencies and skills"
+    },
+    "answer": "C",
+    "explanation": "The ZPD is the gap between a learner's independent ability and what they can achieve with the guidance of a more knowledgeable other (scaffolding)."
+  },
+  {
+    "id": 17,
+    "question": "Which of the following is an example of extrinsic motivation?",
+    "options": {
+      "A": "A student helping a friend because they care about them",
+      "B": "A student participating in class activities because they find the topic interesting",
+      "C": "A student reading a book because they enjoy reading",
+      "D": "A student studying hard in order to receive a scholarship"
+    },
+    "answer": "D",
+    "explanation": "Extrinsic motivation is driven by external factors such as rewards (scholarship) or avoidance of punishment, rather than internal interest."
+  },
+  {
+    "id": 18,
+    "question": "**Mr. Adom spends time generating a shared understanding of behavioral expectations, which he formalizes into a document displayed publicly. He believes the negotiation process for this Class Agreement helps learners cooperate better in groups. In daily interactions, he uses positive affirmation frequently, publicly recognizing students who meet high standards. When student disagreements occur, he addresses them quickly, ensuring he listens to all sides before arriving at a balanced resolution guided by the class's established standards.** \n\nBased on the passage about Mr. Adom, what strategy does he use to maintain order and predictability?",
+    "options": {
+      "A": "Allowing students rule making",
+      "B": "Employing multimedia resources",
+      "C": "Establishing clear rules",
+      "D": "Using praise and rewards"
+    },
+    "answer": "C",
+    "explanation": "The passage explicitly states that Mr. Adom 'establishes clear rules and routines from the first day,' which is a primary method for maintaining order."
+  },
+  {
+    "id": 19,
+    "question": "**Mr. Adom spends time generating a shared understanding of behavioral expectations, which he formalizes into a document displayed publicly. He believes the negotiation process for this Class Agreement helps learners cooperate better in groups. In daily interactions, he uses positive affirmation frequently, publicly recognizing students who meet high standards. When student disagreements occur, he addresses them quickly, ensuring he listens to all sides before arriving at a balanced resolution guided by the class's established standards.** \n\nBased on the passage about Mr. Adom, how does he proactively encourage good behaviour?",
+    "options": {
+      "A": "Allowing student rule-making",
+      "B": "Employing multimedia resources",
+      "C": "Establishing clear rules",
+      "D": "Using praise and rewards"
+    },
+    "answer": "D",
+    "explanation": "The passage indicates he 'uses praise and rewards to encourage good behaviour,' which are forms of positive reinforcement."
+  },
+  {
+    "id": 20,
+    "question": "**Mr. Adom spends time generating a shared understanding of behavioral expectations, which he formalizes into a document displayed publicly. He believes the negotiation process for this Class Agreement helps learners cooperate better in groups. In daily interactions, he uses positive affirmation frequently, publicly recognizing students who meet high standards. When student disagreements occur, he addresses them quickly, ensuring he listens to all sides before arriving at a balanced resolution guided by the class's established standards.** \n\nBased on the passage about Mr. Adom, what is the most likely reason he uses a democratic teaching style, including student involvement in a class agreement?",
+    "options": {
+      "A": "To build learner’s collaborative skills",
+      "B": "To motivate learners to achieve their learning goals",
+      "C": "To promote good behaviour among learners",
+      "D": "To reach consensus among learners"
+    },
+    "answer": "A",
+    "explanation": "A democratic teaching style, especially one involving students in creating rules or a class agreement, is fundamentally aimed at developing social, cooperation, and collaborative skills."
+  },
+  {
+    "id": 21,
+    "question": "**Mr. Adom spends time generating a shared understanding of behavioral expectations, which he formalizes into a document displayed publicly. He believes the negotiation process for this Class Agreement helps learners cooperate better in groups. In daily interactions, he uses positive affirmation frequently, publicly recognizing students who meet high standards. When student disagreements occur, he addresses them quickly, ensuring he listens to all sides before arriving at a balanced resolution guided by the class's established standards.** \n\nBased on the passage about Mr. Adom, why does he specifically use group work as an instructional strategy?",
+    "options": {
+      "A": "To build learners collaborative skills",
+      "B": "To motivate learners to achieve their learning goals",
+      "C": "To promote good behaviour among learners",
+      "D": "To reach consensus among learners"
+    },
+    "answer": "A",
+    "explanation": "Group work is a common instructional strategy designed to foster teamwork, communication, and collaboration skills among students."
+  },
+  {
+    "id": 22,
+    "question": "**Mr. Adom spends time generating a shared understanding of behavioral expectations, which he formalizes into a document displayed publicly. He believes the negotiation process for this Class Agreement helps learners cooperate better in groups. In daily interactions, he uses positive affirmation frequently, publicly recognizing students who meet high standards. When student disagreements occur, he addresses them quickly, ensuring he listens to all sides before arriving at a balanced resolution guided by the class's established standards.**\n\nBased on the passage about Mr. Adom, how does he handle conflicts?",
+    "options": {
+      "A": "He addresses them impartially",
+      "B": "He ignores them completely",
+      "C": "He lets students resolve them without intervention",
+      "D": "He sends to the principal for redress"
+    },
+    "answer": "A",
+    "explanation": "The passage states that Mr. Adom 'addresses conflicts promptly and fairly,' which means he handles them impartially."
+  },
+  {
+    "id": 23,
+    "question": "**Mrs. Agyeman believes that true learning occurs when students actively construct knowledge through interaction. Therefore, she organizes complex tasks into small teams and acts as a supportive mentor, providing temporary, structured guidance that is removed once students become proficient. She carefully selects materials ensuring they match the students' intellectual developmental stage and uses a variety of projects—from debates to drawing—to acknowledge the diverse ways her students demonstrate mastery and talent.**\n\nBased on the passage about Mrs. Agyeman, which of the theories involves collaborative learning using small groups?",
+    "options": {
+      "A": "Behaviourism",
+      "B": "Cognitivism",
+      "C": "Multiple intelligence",
+      "D": "Social constructivism"
+    },
+    "answer": "D",
+    "explanation": "Mrs. Agyeman's belief that 'learning occurs when students actively construct knowledge through interaction' and her use of 'small teams' aligns directly with **Social Constructivism**, a theory popularized by Vygotsky that emphasizes social interaction and collaboration in learning."
+  },
+  {
+    "id": 24,
+    "question": "**Mrs. Agyeman believes that true learning occurs when students actively construct knowledge through interaction. Therefore, she organizes complex tasks into small teams and acts as a supportive mentor, providing temporary, structured guidance that is removed once students become proficient. She carefully selects materials ensuring they match the students' intellectual developmental stage and uses a variety of projects—from debates to drawing—to acknowledge the diverse ways her students demonstrate mastery and talent.**\n\nFrom the passage, Mrs Agyeman uses Piaget’s theory to ensure that...",
+    "options": {
+      "A": "Individual differences are taken care of",
+      "B": "Instruction is tailored to needs of learners",
+      "C": "Tasks are appropriate to the ages of learners",
+      "D": "Teaching and learning activities are well-implemented"
+    },
+    "answer": "C",
+    "explanation": "Piaget's theory of cognitive development is the foundational theory that dictates the four stages of intellectual growth. Therefore, Mrs. Agyeman 'carefully selects materials ensuring they match the students' **intellectual developmental stage**' to make sure 'Tasks are appropriate to the ages of learners.'"
+  },
+  {
+    "id": 25,
+    "question": "**Mrs. Agyeman believes that true learning occurs when students actively construct knowledge through interaction. Therefore, she organizes complex tasks into small teams and acts as a supportive mentor, providing temporary, structured guidance that is removed once students become proficient. She carefully selects materials ensuring they match the students' intellectual developmental stage and uses a variety of projects—from debates to drawing—to acknowledge the diverse ways her students demonstrate mastery and talent.**\n\nScaffolding in teaching involves ……….",
+    "options": {
+      "A": "Issuing direct instruction",
+      "B": "Making students independent immediately",
+      "C": "Providing gradual support",
+      "D": "Undertaking group projects"
+    },
+    "answer": "C",
+    "explanation": "The passage describes the action of scaffolding when it says she acts as a mentor 'providing **temporary, structured guidance** that is **removed once students become proficient**.' This is the definition of **Providing gradual support** (Scaffolding)."
+  },
+  {
+    "id": 26,
+    "question": "**Mrs. Agyeman believes that true learning occurs when students actively construct knowledge through interaction. Therefore, she organizes complex tasks into small teams and acts as a supportive mentor, providing temporary, structured guidance that is removed once students become proficient. She carefully selects materials ensuring they match the students' intellectual developmental stage and uses a variety of projects—from debates to drawing—to acknowledge the diverse ways her students demonstrate mastery and talent.**\n\nFrom the passage, Mrs. Aagyeman uses Multiple Intelligences theory to ensure that…………….?",
+    "options": {
+      "A": "Individual differences are taken care of",
+      "B": "Instruction is tailored to the needs of intelligent learners",
+      "C": "Tasks are appropriate to the ages of learners",
+      "D": "Teaching and learning activities are well-implemented"
+    },
+    "answer": "A",
+    "explanation": "Multiple Intelligences theory (Gardner) suggests students learn in different ways. Mrs. Agyeman's use of 'a variety of projects—from debates to drawing—to acknowledge the **diverse ways her students demonstrate mastery**' is how she caters to a wide range of **Individual differences**."
+  },
+  {
+    "id": 27,
+    "question": "Which approach to classroom management focuses on proactively teaching, identifying, and reinforcing appropriate student behaviours?",
+    "options": {
+      "A": "Cognitive behavioural approach",
+      "B": "Eclectic approach",
+      "C": "Positive behavioural interventions and supports",
+      "D": "Psychoanalytic approach"
+    },
+    "answer": "C",
+    "explanation": "Positive Behavioral Interventions and Supports (PBIS) is a framework designed to proactively teach, reinforce, and celebrate expected student behaviors to prevent misbehavior."
+  },
+  {
+    "id": 28,
+    "question": "Which type of assessment is designed to measure a student’s performance against a set of predefined criteria or learning standards?",
+    "options": {
+      "A": "Criterion-referenced assessment",
+      "B": "Diagnostic assessment",
+      "C": "Norm-referenced assessment",
+      "D": "Summative assessment"
+    },
+    "answer": "A",
+    "explanation": "Criterion-referenced assessment compares a student's performance directly to learning objectives or criteria, not to the performance of other students."
+  },
+  {
+    "id": 29,
+    "question": "Which of the following accurately describes a portfolio assessment?",
+    "options": {
+      "A": "A Collection of student work that demonstrates learning progress and achievements",
+      "B": "A multiple-choice test covering all subjects and knowledge areas",
+      "C": "A standardized test that is given at the end of the year",
+      "D": "An oral examination to assess the knowledge and skills of the students"
+    },
+    "answer": "A",
+    "explanation": "A portfolio is a deliberate collection of student work (papers, projects, recordings) that showcases effort, progress, and achievement over time."
+  },
+  {
+    "id": 30,
+    "question": "Which of the following is the defining characteristic of a reliable assessment?",
+    "options": {
+      "A": "It is easy to administer among students",
+      "B": "It is fair to all students and teachers",
+      "C": "It measures what is intended to measure",
+      "D": "It yields consistent results over time"
+    },
+    "answer": "D",
+    "explanation": "Reliability refers to the consistency of a measure. If the same test or assessment yields consistent results when given repeatedly under similar conditions, it is reliable."
+  },
+  {
+    "id": 31,
+    "question": "A test that accurately measures what it is supposed to measure is said to have………",
+    "options": {
+      "A": "Fairness",
+      "B": "Objectives",
+      "C": "Reliability",
+      "D": "Validity"
+    },
+    "answer": "D",
+    "explanation": "Validity is the degree to which a test measures what it claims to be measuring."
+  },
+  {
+    "id": 32,
+    "question": "Which type of assessment is typically used to identify students' strengths and weaknesses *before* instruction begins?",
+    "options": {
+      "A": "Benchmark assessment",
+      "B": "Diagnostic assessment",
+      "C": "Formative assessment",
+      "D": "Summative assessment"
+    },
+    "answer": "B",
+    "explanation": "Diagnostic assessment is conducted prior to instruction to determine students’ prior knowledge, existing skills, and misconceptions."
+  },
+  {
+    "id": 33,
+    "question": "Which of the following is the best example of a formative assessment?",
+    "options": {
+      "A": "Classroom discussion (used for immediate feedback)",
+      "B": "End-of-term exam",
+      "C": "Final project",
+      "D": "Standardized test"
+    },
+    "answer": "A",
+    "explanation": "Formative assessments occur during instruction to provide immediate feedback to the teacher and student, helping to guide the teaching and learning process. Classroom discussions often serve this purpose."
+  },
+  {
+    "id": 34,
+    "question": "What does a 'high-stakes test' refer to?",
+    "options": {
+      "A": "A test that covers a wide range of subject areas",
+      "B": "A test that has significant consequences for the test taker (e.g., graduation)",
+      "C": "A test that is administered frequently in the classroom",
+      "D": "A test that is expensive to administer in the classroom"
+    },
+    "answer": "B",
+    "explanation": "High-stakes tests are used to make critical decisions about students, such as promotion, graduation, or placement."
+  },
+  {
+    "id": 35,
+    "question": "The primary role of rubrics in educational assessment is to:",
+    "options": {
+      "A": "Conduct standardized testing for all students",
+      "B": "Evaluate student performance based on specific criteria",
+      "C": "Measure physical fitness of all students in the school",
+      "D": "Record attendance and participation in the school"
+    },
+    "answer": "B",
+    "explanation": "Rubrics are scoring guides that evaluate student work based on a predetermined set of criteria, ensuring consistent and clear assessment."
+  },
+  {
+    "id": 36,
+    "question": "Which of the following is a major goal of inclusive education?",
+    "options": {
+      "A": "To create specialized schools for students with disabilities",
+      "B": "To eliminate standardized testing for all student with disabilities",
+      "C": "To provide equal educational opportunities for all students",
+      "D": "To separate students based on their abilities and disabilities"
+    },
+    "answer": "C",
+    "explanation": "Inclusive education aims to ensure all students, regardless of ability or disability, learn together in the same classroom with appropriate support."
+  },
+  {
+    "id": 37,
+    "question": "The Sustainable Development Goal (SDG) 4 focuses on all the following core pillars except:",
+    "options": {
+      "A": "Ensuring equitable education",
+      "B": "Ensuring free education (for all levels)",
+      "C": "Ensuring quality education",
+      "D": "Promoting life-long learning"
+    },
+    "answer": "B",
+    "explanation": "SDG 4 aims for inclusive and equitable quality education and promotes lifelong learning (A, C, D). While it specifically calls for *free* primary and secondary education (SDG 4.1), it does not promise free education for *all* levels (e.g., tertiary) globally, making B the best answer for what is not a universal focus."
+  },
+  {
+    "id": 38,
+    "question": "Which of the following best describes the purpose of the flipped classroom model?",
+    "options": {
+      "A": "To eliminate the need for textbooks and provide more homework for students",
+      "B": "To have students engage with learning material (lectures) prior to classroom engagements",
+      "C": "To increase teacher-directed lessons to provide less homework for students",
+      "D": "To provide more homework for students and increase teacher directed lesson"
+    },
+    "answer": "B",
+    "explanation": "The flipped classroom moves lecture-style content delivery outside of class (e.g., watching videos at home) and uses class time for active learning, problem-solving, and application."
+  },
+  {
+    "id": 39,
+    "question": "In the context of contemporary education, what does '21st Century Skills' primarily refer to?",
+    "options": {
+      "A": "Critical thinking, communication, collaboration and creativity (The 4Cs)",
+      "B": "Knowledge and skills related to information technology only",
+      "C": "Traditional academic skills, knowledge and competencies",
+      "D": "Vocational and technical skills and knowledge"
+    },
+    "answer": "A",
+    "explanation": "21st Century Skills are a broad set of abilities students need to succeed in the modern world, often summarized by the '4Cs': Critical thinking, Communication, Collaboration, and Creativity."
+  },
+  {
+    "id": 40,
+    "question": "Which of the following strategies can help reduce teacher burnout?",
+    "options": {
+      "A": "Increasing administrative tasks for teachers",
+      "B": "Increasing class sizes and attendance",
+      "C": "Providing professional development and support",
+      "D": "Reducing teachers’ planning time"
+    },
+    "answer": "C",
+    "explanation": "Providing adequate professional development, mentorship, and mental health support are key strategies for mitigating teacher stress and burnout."
+  },
+  {
+    "id": 41,
+    "question": "Which contemporary issue in education is most closely associated with the rapid advancement of technology and unequal access?",
+    "options": {
+      "A": "Digital divide",
+      "B": "School infrastructure",
+      "C": "Standardized testing",
+      "D": "Traditional teaching method"
+    },
+    "answer": "A",
+    "explanation": "The digital divide refers to the gap between those who have access to modern information and communication technology and those who do not."
+  },
+  {
+    "id": 42,
+    "question": "The concept of Global Citizenship aims to:",
+    "options": {
+      "A": "Focus solely on local community issues and personal awareness",
+      "B": "Foster an understanding of global issues and intercultural awareness",
+      "C": "Limit students exposure to international perspectives",
+      "D": "Promote nationalistic ideals, values and practices"
+    },
+    "answer": "B",
+    "explanation": "Global citizenship education seeks to empower learners to assume active roles to face and resolve global challenges and to become proactive contributors to a more peaceful, tolerant, inclusive and secure world."
+  },
+  {
+    "id": 43,
+    "question": "In the Revised Bloom’s Taxonomy, which level involves the highest order of thinking?",
+    "options": {
+      "A": "Analysing",
+      "B": "Applying",
+      "C": "Creating",
+      "D": "Understanding"
+    },
+    "answer": "C",
+    "explanation": "The six levels are: Remember, Understand, Apply, Analyze, Evaluate, and Create. 'Creating' (building a new product or perspective) is the most complex and highest level of cognitive thinking."
+  },
+  {
+    "id": 44,
+    "question": "John Dewey is most closely associated with which educational philosophy, advocating for experiential and student-centered learning?",
+    "options": {
+      "A": "Essentialism",
+      "B": "Perennialism",
+      "C": "Progressivism",
+      "D": "Reconstructionism"
+    },
+    "answer": "C",
+    "explanation": "John Dewey was a major proponent of Progressivism, which emphasizes that education should focus on the student, not the subject matter, and should be based on real-world experience."
+  },
+  {
+    "id": 45,
+    "question": "Which of the following is a primary characteristic of a well-managed classroom?",
+    "options": {
+      "A": "Frequent teacher reprimands",
+      "B": "High levels of student engagement",
+      "C": "Inconsistent application of rules",
+      "D": "Highly structured lesson plans with no flexibility"
+    },
+    "answer": "B",
+    "explanation": "A well-managed classroom is characterized by an orderly environment where students are focused on tasks, leading to high levels of engagement and productivity."
+  },
+  {
+    "id": 46,
+    "question": "Which of Thorndike's Laws of Learning suggests that practice and repetition are necessary for mastering skills?",
+    "options": {
+      "A": "Law of effect",
+      "B": "Law of exercise",
+      "C": "Law of primacy",
+      "D": "Law of readiness"
+    },
+    "answer": "B",
+    "explanation": "The Law of Exercise states that the more frequently a connection between a stimulus and a response is used, the stronger the connection becomes (practice makes perfect)."
+  },
+  {
+    "id": 47,
+    "question": "Constructivist teaching strategies, where students actively build knowledge, often include:",
+    "options": {
+      "A": "Project-based learning",
+      "B": "Role of memorization",
+      "C": "Standardized testing",
+      "D": "Teacher-centered lectures"
+    },
+    "answer": "A",
+    "explanation": "Project-based learning, inquiry-based learning, and hands-on activities are all key to constructivist approaches where students actively create meaning from experience."
+  },
+  {
+    "id": 48,
+    "question": "In Maslow’s hierarchy of needs, which level of need must be met first for an individual to progress to higher-level needs?",
+    "options": {
+      "A": "Esteem",
+      "B": "Physiological",
+      "C": "Safety",
+      "D": "Self-actualization"
+    },
+    "answer": "B",
+    "explanation": "Physiological needs (food, water, warmth, rest) are the most fundamental and must be satisfied first before needs for safety, belonging, and esteem can be addressed."
+  },
+  {
+    "id": 49,
+    "question": "Which of the following is a clear example of intrinsic motivation?",
+    "options": {
+      "A": "Learning a new language out of personal interest and enjoyment",
+      "B": "Participating in sports to win medals",
+      "C": "Studying hard to avoid punishment",
+      "D": "Working on a project for a monetary reward"
+    },
+    "answer": "A",
+    "explanation": "Intrinsic motivation is driven by an internal desire or satisfaction from the activity itself, such as enjoyment or personal interest."
+  },
+  {
+    "id": 50,
+    "question": "Which of the following is the primary purpose of formative assessment?",
+    "options": {
+      "A": "To assign final grades to students performance",
+      "B": "To compare students performance to national standards",
+      "C": "To evaluate the effectiveness of the educational programme after it is finished",
+      "D": "To provide ongoing feedback to improve teaching and learning"
+    },
+    "answer": "D",
+    "explanation": "Formative assessment is used during instruction to monitor student learning and provide timely, actionable feedback to both students and teachers."
+  },
+  {
+    "id": 51,
+    "question": "The digital divide refers to the gap between students with access to modern communication technology and those without access.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The digital divide is defined by the disparity in access to and ability to use information and communication technologies (ICTs)."
+  },
+  {
+    "id": 52,
+    "question": "STEM education includes the study of Science, Technology, English, and Mathematics.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The acronym STEM stands for Science, Technology, Engineering, and Mathematics, not English."
+  },
+  {
+    "id": 53,
+    "question": "A flipped classroom model typically involves students doing homework in class and watching lectures/consuming content at home.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The model 'flips' traditional teaching: direct instruction is moved outside of the classroom, and interactive application (homework) is moved into the classroom."
+  },
+  {
+    "id": 54,
+    "question": "In Ghana, 21st-Century skills are limited to technical and vocational skills.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "21st-Century skills are broad and include critical thinking, collaboration, creativity, and digital literacy, extending far beyond only technical/vocational skills."
+  },
+  {
+    "id": 55,
+    "question": "One of the challenges of the COVID-19 pandemic for educational systems has been the need to transition to remote learning solutions.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The pandemic necessitated an immediate, large-scale transition to online and remote learning, presenting significant challenges for infrastructure, training, and equity."
+  },
+  {
+    "id": 56,
+    "question": "The Ghana Education Service (GES) was established as part of the Public Service of Ghana in 1974.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The GES was formally established in 1974 by NRCD 247."
+  },
+  {
+    "id": 57,
+    "question": "The Ministry of Education (MoE) is solely responsible for higher education in Ghana.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While the MoE is the sector head, the Ghana Tertiary Education Commission (GTEC) is the specific regulatory body responsible for implementing policies and managing institutions related to higher education."
+  },
+  {
+    "id": 58,
+    "question": "The Director General is the administrative and professional head of the Ghana Education Service.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The Director General is the chief executive officer responsible for the day-to-day administration and professional direction of the GES."
+  },
+  {
+    "id": 59,
+    "question": "The National Council for Curriculum and Assessment (NaCCA) is responsible for developing the curriculum for tertiary education in Ghana.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "NaCCA is responsible for developing the curriculum for pre-tertiary education (Basic and Secondary). GTEC oversees tertiary education curricular matters."
+  },
+  {
+    "id": 60,
+    "question": "The Free Compulsory Universal Basic Education (FCUBE) policy aims to provide free tertiary education in Ghana.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "FCUBE aims to provide free, compulsory, and universal education at the *Basic* level, not the Tertiary level."
+  },
+  {
+    "id": 61,
+    "question": "The Education Strategic Plan (ESP) aims to provide equitable access to quality education for all Ghanaians.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The ESP is the framework designed to achieve the sector's overarching goal of quality, inclusive, and equitable education for all."
+  },
+  {
+    "id": 62,
+    "question": "John Dewey advocated for a traditional, teacher-centered approach to education.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Dewey advocated for Progressivism, a child-centered approach focused on practical experience, democracy in the classroom, and social interaction."
+  },
+  {
+    "id": 63,
+    "question": "According to Maslow’s Hierarchy of Needs, self-actualization is the highest level of need.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Self-actualization, the need to achieve one's full potential, sits at the peak of Maslow's five-tier pyramid."
+  },
+  {
+    "id": 64,
+    "question": "Behaviourism emphasizes the role of internal mental states in learning.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Behaviourism is focused on observable behaviors and external stimuli/reinforcement, specifically ignoring internal mental states, which is the focus of Cognitivism."
+  },
+  {
+    "id": 65,
+    "question": "Constructivist teaching often involves hands-on, experiential learning activities.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Constructivism posits that learners actively construct knowledge and meaning from experience, making hands-on and experiential learning central to its strategies."
+  },
+  {
+    "id": 66,
+    "question": "Extrinsic motivation is driven by external rewards or avoidance of punishment.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Extrinsic motivation stems from external incentives like grades, prizes, or escaping negative consequences."
+  },
+  {
+    "id": 67,
+    "question": "Positive reinforcement can be used to encourage desired behaviours in students.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Positive reinforcement is the addition of a positive stimulus to increase the likelihood of a behavior being repeated."
+  },
+  {
+    "id": 68,
+    "question": "Cognitivism focuses on observable behaviours rather than mental processes.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Cognitivism focuses on mental processes (how the brain works), while Behaviourism focuses on observable behaviors."
+  },
+  {
+    "id": 69,
+    "question": "An authoritative classroom management style combines high expectations with high levels of support and encouragement.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Authoritative teaching balances clear limits and high expectations with nurturing support, leading to the best student outcomes."
+  },
+  {
+    "id": 70,
+    "question": "Formative assessments are used primarily to evaluate a completed instructional programme.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Formative assessments are used *during* the instructional process. Summative assessments are used *after* instruction to evaluate the completed program or learning."
+  },
+  {
+    "id": 71,
+    "question": "Norm-referenced assessments compare a student’s performance to a pre-determined standard or criterion.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Norm-referenced assessments compare a student's performance to the performance of a group (the 'norm'). Criterion-referenced assessments compare performance to a standard or criterion."
+  },
+  {
+    "id": 72,
+    "question": "A valid assessment accurately measures what it is intended to measure.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Validity is the degree to which a test measures what it claims to be measuring."
+  },
+  {
+    "id": 73,
+    "question": "Summative assessments are typically administered during the instructional process to provide immediate feedback.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Summative assessments are administered *at the end* of an instructional unit. Formative assessments are used *during* the process for immediate feedback."
+  },
+  {
+    "id": 74,
+    "question": "Diagnostic assessments help identify student’s prior knowledge and misconceptions before instruction begins.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The purpose of a diagnostic assessment is to diagnose a student's current understanding, strengths, and weaknesses at the start of learning."
+  },
+  {
+    "id": 75,
+    "question": "Inclusive Education seeks to provide equal education opportunities for all students regardless of their abilities or disabilities.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Inclusive education is the practice of educating all students together in general education classrooms, ensuring equity and access."
+  }
+]

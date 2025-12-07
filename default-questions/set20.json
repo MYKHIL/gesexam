@@ -1,0 +1,914 @@
+[
+  {
+    "id": 1,
+    "question": "What is the primary legal instrument that established the Ghana Education Service (GES)?",
+    "options": {
+      "A": "Education Act, 1961 (Act 87)",
+      "B": "Ghana Education Service Act, 1995 (Act 506)",
+      "C": "Children's Act, 1998 (Act 560)",
+      "D": "Pre-Tertiary Education Act, 2020 (Act 1049)"
+    },
+    "answer": "B",
+    "explanation": "The Ghana Education Service was established by the Ghana Education Service Act, 1995 (Act 506), which defines its functions and administration."
+  },
+  {
+    "id": 2,
+    "question": "The Minister of Education is responsible for the overall policy direction of the educational sector. To whom is the Minister ultimately accountable?",
+    "options": {
+      "A": "The Director-General of GES",
+      "B": "The Speaker of Parliament and the President",
+      "C": "The Head of Civil Service",
+      "D": "The Auditor-General"
+    },
+    "answer": "B",
+    "explanation": "The Minister is a political appointee and a member of the Executive, accountable to the President and, ultimately, to Parliament."
+  },
+  {
+    "id": 3,
+    "question": "Which specific division within the GES is primarily responsible for statistical data, research, and planning in the education sector?",
+    "options": {
+      "A": "Human Resource Management and Development (HRMD)",
+      "B": "Guidance and Counselling Division (GCD)",
+      "C": "Policy Planning, Monitoring and Evaluation (PPME)",
+      "D": "Supply and Logistics Division (SLD)"
+    },
+    "answer": "C",
+    "explanation": "The Policy Planning, Monitoring and Evaluation (PPME) division handles data collection, research, strategic planning, and performance monitoring."
+  },
+  {
+    "id": 4,
+    "question": "Under GES administrative policy, how often is a teacher normally expected to write an appraisal report for promotion purposes?",
+    "options": {
+      "A": "Annually, regardless of grade.",
+      "B": "Biennially (every two years).",
+      "C": "Only when applying for a specific promotion or conversion.",
+      "D": "Monthly, for staff meetings."
+    },
+    "answer": "C",
+    "explanation": "Appraisal reports (APSER) are submitted as part of the promotion process, not necessarily on a fixed annual or biennial cycle for every staff member."
+  },
+  {
+    "id": 5,
+    "question": "What is the highest professional disciplinary body for teachers under the GES scheme of service?",
+    "options": {
+      "A": "District Education Disciplinary Committee",
+      "B": "Regional Education Disciplinary Committee",
+      "C": "GES Headquarters Disciplinary Board",
+      "D": "National Labour Commission"
+    },
+    "answer": "C",
+    "explanation": "The highest body handling professional disciplinary cases within the GES structure is typically the GES Headquarters Disciplinary Board."
+  },
+  {
+    "id": 6,
+    "question": "A teacher is aggrieved by a decision of the Head of School. To which immediate administrative authority should the teacher first appeal, according to GES procedure?",
+    "options": {
+      "A": "The Director-General of GES",
+      "B": "The District Education Director",
+      "C": "The Regional Education Director",
+      "D": "The Minister of Education"
+    },
+    "answer": "B",
+    "explanation": "The immediate administrative superior to the Head of School in matters of policy and procedure is the District Education Director."
+  },
+  {
+    "id": 7,
+    "question": "Which Act mandates the decentralization of some educational functions to the District Assemblies?",
+    "options": {
+      "A": "Local Governance Act, 2016 (Act 936)",
+      "B": "Public Financial Management Act, 2016 (Act 921)",
+      "C": "National Teaching Council Act, 2020 (Act 1025)",
+      "D": "Ghana Education Trust Fund Act, 1998 (Act 581)"
+    },
+    "answer": "A",
+    "explanation": "The Local Governance Act, 2016 (Act 936) formalizes the decentralization process, including specific functions related to basic education management, to Metropolitan, Municipal, and District Assemblies (MMDAs)."
+  },
+  {
+    "id": 8,
+    "question": "The GES Code of Conduct requires teachers to avoid partisan politics in the classroom. This policy is primarily aimed at maintaining:",
+    "options": {
+      "A": "Efficiency in lesson delivery.",
+      "B": "Neutrality and professionalism.",
+      "C": "Financial prudence.",
+      "D": "Strict adherence to the syllabus."
+    },
+    "answer": "B",
+    "explanation": "Avoiding partisan politics ensures the school and classroom remain neutral grounds for learning, preserving professionalism and the ethical standard of the service."
+  },
+  {
+    "id": 9,
+    "question": "What is the official term used by GES for the written notification required from a staff member intending to resign from the Service?",
+    "options": {
+      "A": "Exit Interview Request",
+      "B": "Voluntary Separation Notice",
+      "C": "Notice of Resignation",
+      "D": "Notice of Intent to Retire"
+    },
+    "answer": "C",
+    "explanation": "A formal 'Notice of Resignation' must be submitted, typically requiring one month's notice, as stipulated in the conditions of service."
+  },
+  {
+    "id": 10,
+    "question": "The financial administration of educational institutions under GES is governed by which general public financial management regulation?",
+    "options": {
+      "A": "GES Financial Decree",
+      "B": "Public Financial Management Act, 2016 (Act 921)",
+      "C": "The Annual Budget Statement",
+      "D": "Internal Audit Agency Act, 2003 (Act 658)"
+    },
+    "answer": "B",
+    "explanation": "All public institutions, including GES, are subject to the Public Financial Management Act, 2016 (Act 921)."
+  },
+  {
+    "id": 11,
+    "question": "Which MoE policy ensures that teaching and learning materials are available in formats accessible to students with visual or hearing impairments?",
+    "options": {
+      "A": "The ICT in Education Policy",
+      "B": "The Inclusive Education Policy",
+      "C": "The School Feeding Programme Policy",
+      "D": "The Public-Private Partnership Policy"
+    },
+    "answer": "B",
+    "explanation": "The Inclusive Education Policy focuses on ensuring equitable access and participation for all learners, including providing accessible materials."
+  },
+  {
+    "id": 12,
+    "question": "GES policy on staff transfers states that a transfer can be initiated due to:",
+    "options": {
+      "A": "Service exigencies (organizational need).",
+      "B": "A staff member's personal preference.",
+      "C": "Only disciplinary action.",
+      "D": "Only when a staff member has served for ten years."
+    },
+    "answer": "A",
+    "explanation": "Transfers can be mandatory or voluntary, but the GES can initiate a transfer based on the organizational needs (service exigencies)."
+  },
+  {
+    "id": 13,
+    "question": "What document outlines the specific duties, responsibilities, and qualifications required for each grade level within the teaching profession in GES?",
+    "options": {
+      "A": "The National Education Strategic Plan (ESP)",
+      "B": "The Scheme of Service for Teaching Staff",
+      "C": "The Collective Bargaining Agreement (CBA)",
+      "D": "The school's academic calendar"
+    },
+    "answer": "B",
+    "explanation": "The Scheme of Service provides the framework for career progression, describing the requirements and responsibilities for each position."
+  },
+  {
+    "id": 14,
+    "question": "The GES policy on Continuous Professional Development (CPD) is managed and tracked by which entity in collaboration with GES?",
+    "options": {
+      "A": "West African Examinations Council (WAEC)",
+      "B": "National Accreditation Board (NAB)",
+      "C": "National Teaching Council (NTC)",
+      "D": "Council for Technical and Vocational Education and Training (COTVET)"
+    },
+    "answer": "C",
+    "explanation": "The NTC is the regulatory body responsible for teacher professionalization, including the licensing, registration, and CPD framework."
+  },
+  {
+    "id": 15,
+    "question": "The Education Service Council (ESC) performs what main function within the GES administrative structure?",
+    "options": {
+      "A": "Approves the curriculum for basic schools.",
+      "B": "Advises the Minister on secondary education policy.",
+      "C": "Oversees the general administration and direction of the Service.",
+      "D": "Manages the school feeding programme fund."
+    },
+    "answer": "C",
+    "explanation": "The ESC is the governing body of the GES, responsible for policy implementation and general oversight of the Service's administration."
+  },
+  {
+    "id": 16,
+    "question": "A teacher going on study leave with pay is mandated by GES policy to sign a bond. What is the primary purpose of this bond?",
+    "options": {
+      "A": "To ensure the teacher pays back the full tuition fees.",
+      "B": "To ensure the teacher returns to serve the GES for a specified period.",
+      "C": "To prevent the teacher from changing courses during the leave.",
+      "D": "To guarantee the teacher's immediate promotion upon return."
+    },
+    "answer": "B",
+    "explanation": "The bond is a legal commitment requiring the teacher to serve the GES for a duration equal to the length of the study leave."
+  },
+  {
+    "id": 17,
+    "question": "Which of the following bodies is NOT directly under the oversight of the Ministry of Education (MoE)?",
+    "options": {
+      "A": "Ghana Education Trust Fund (GETFund)",
+      "B": "National Teaching Council (NTC)",
+      "C": "Council for Scientific and Industrial Research (CSIR)",
+      "D": "National Council for Curriculum and Assessment (NaCCA)"
+    },
+    "answer": "C",
+    "explanation": "The Council for Scientific and Industrial Research (CSIR) operates under the Ministry of Environment, Science, Technology and Innovation, not the Ministry of Education."
+  },
+  {
+    "id": 18,
+    "question": "In the administrative structure of GES, the Regional Education Director reports directly to the:",
+    "options": {
+      "A": "Regional Minister.",
+      "B": "Head of Civil Service.",
+      "C": "District Education Director.",
+      "D": "Director-General of GES."
+    },
+    "answer": "D",
+    "explanation": "The Regional Education Director is the head of the GES in the region and reports directly to the Director-General at the Headquarters."
+  },
+  {
+    "id": 19,
+    "question": "What is the maximum number of years a Head of a Senior High School (SHS) is typically permitted to serve in one school, based on GES policy?",
+    "options": {
+      "A": "Eight years",
+      "B": "Six years",
+      "C": "Ten years",
+      "D": "Four years"
+    },
+    "answer": "A",
+    "explanation": "GES policy on movement and transfer of Heads of SHS is generally eight years (two terms of four years) in a single school, subject to renewal or transfer based on service exigencies."
+  },
+  {
+    "id": 20,
+    "question": "The MoE is committed to providing free, compulsory, and quality basic education. This commitment is primarily anchored in which document?",
+    "options": {
+      "A": "The GES Staff Handbook",
+      "B": "The 1992 Constitution of Ghana",
+      "C": "The United Nations Charter",
+      "D": "The School Safety Protocol"
+    },
+    "answer": "B",
+    "explanation": "Article 25(1)(a) of the 1992 Constitution of Ghana explicitly states that basic education shall be free, compulsory, and available to all."
+  },
+  {
+    "id": 21,
+    "question": "Which GES policy governs the establishment and operation of private pre-tertiary educational institutions?",
+    "options": {
+      "A": "GES Private School Guidelines",
+      "B": "The Pre-Tertiary Education Act, 2020 (Act 1049)",
+      "C": "The Companies Act, 2019 (Act 992)",
+      "D": "The Public Procurement Act, 2003 (Act 663)"
+    },
+    "answer": "B",
+    "explanation": "The Pre-Tertiary Education Act, 2020 (Act 1049) is the current comprehensive law governing all pre-tertiary education, including the establishment of private schools."
+  },
+  {
+    "id": 22,
+    "question": "The GES policy on 'School Management Committees' (SMCs) in Basic Schools aims to enhance:",
+    "options": {
+      "A": "Teacher promotion.",
+      "B": "Centralized funding.",
+      "C": "Community participation and oversight.",
+      "D": "Curriculum development."
+    },
+    "answer": "C",
+    "explanation": "SMCs and Boards of Governors are mechanisms for community and stakeholder involvement in school governance and management."
+  },
+  {
+    "id": 23,
+    "question": "A teacher who fails to report for duty after the expiration of a duly approved leave of absence may be charged with which disciplinary offence?",
+    "options": {
+      "A": "Lateness",
+      "B": "Absenteeism",
+      "C": "Desertion of Post",
+      "D": "Insubordination"
+    },
+    "answer": "C",
+    "explanation": "Prolonged and unapproved absence, especially after an approved leave expires, is classified as Desertion of Post, which carries severe sanctions."
+  },
+  {
+    "id": 24,
+    "question": "The MoE's Ghana Accountability for Learning Outcomes Project (GALOP) is primarily focused on:",
+    "options": {
+      "A": "Expanding tertiary enrollment.",
+      "B": "Improving the quality of basic education in low-performing districts.",
+      "C": "Establishing new technical universities.",
+      "D": "Providing scholarships for post-graduate students."
+    },
+    "answer": "B",
+    "explanation": "GALOP is a World Bank-funded project designed to improve the quality and performance of basic education, specifically targeting low-performing schools and districts."
+  },
+  {
+    "id": 25,
+    "question": "What is the administrative term for the official GES document that records a teacher's entire service history, including postings, promotions, and disciplinary actions?",
+    "options": {
+      "A": "Scheme of Service",
+      "B": "Service Record Book (SRB)",
+      "C": "Log Book",
+      "D": "Appraisal Report (APSER)"
+    },
+    "answer": "B",
+    "explanation": "The Service Record Book (SRB) is the comprehensive document kept by the GES that tracks every administrative and professional aspect of a staff member's career."
+  },
+  {
+    "id": 26,
+    "question": "GES policy on school fees in Public Senior High Schools (SHS) is largely determined by which government initiative?",
+    "options": {
+      "A": "School Management Committee decisions",
+      "B": "The Free Senior High School (FSHS) Policy",
+      "C": "The Basic Education Certificate Examination (BECE) Regulations",
+      "D": "PTA resolutions"
+    },
+    "answer": "B",
+    "explanation": "The FSHS policy dictates that tuition, accommodation, and many other mandatory fees are absorbed by the government."
+  },
+  {
+    "id": 27,
+    "question": "The GES Human Resource Management and Development (HRMD) division is primarily responsible for all of the following EXCEPT:",
+    "options": {
+      "A": "Recruitment and posting of staff.",
+      "B": "Processing promotions and retirements.",
+      "C": "Managing staff development and training.",
+      "D": "Approving the annual budget for the entire Service."
+    },
+    "answer": "D",
+    "explanation": "The Planning, Budgeting, and Financial divisions are typically responsible for approving the annual budget."
+  },
+  {
+    "id": 28,
+    "question": "The establishment of a new public school requires administrative approval from which office/body?",
+    "options": {
+      "A": "GES Headquarters and MoE",
+      "B": "The local Traditional Council",
+      "C": "The District Assembly alone",
+      "D": "The Parent-Teacher Association (PTA)"
+    },
+    "answer": "A",
+    "explanation": "While the District Assembly is involved, the final administrative approval and integration into the public system requires clearance and authorization from the GES and MoE."
+  },
+  {
+    "id": 29,
+    "question": "Which administrative policy ensures that a GES staff member is allowed a period of time off work for medical reasons, supported by a certified medical report?",
+    "options": {
+      "A": "Compassionate Leave",
+      "B": "Maternity/Paternity Leave",
+      "C": "Sick Leave",
+      "D": "Sabbatical Leave"
+    },
+    "answer": "C",
+    "explanation": "Sick leave, supported by a medical certificate from a recognized health facility, is the policy governing absence due to illness."
+  },
+  {
+    "id": 30,
+    "question": "The 'Pupil-Teacher Ratio' (PTR) is an administrative policy metric primarily used by GES to manage:",
+    "options": {
+      "A": "The quality of textbooks.",
+      "B": "The efficiency of teacher deployment and resource allocation.",
+      "C": "The school dropout rate.",
+      "D": "The age of the school infrastructure."
+    },
+    "answer": "B",
+    "explanation": "PTR is a key indicator for determining the required number of teachers for a school and guides policy on effective teacher distribution."
+  },
+  {
+    "id": 31,
+    "question": "In the GES Organogram, the Director-General reports directly to the:",
+    "options": {
+      "A": "Speaker of Parliament",
+      "B": "GES Council and the Minister of Education",
+      "C": "Head of Civil Service",
+      "D": "Chief of Staff"
+    },
+    "answer": "B",
+    "explanation": "The Director-General is the administrative head of GES and reports to the GES Council (for policy implementation) and the Minister of Education (for strategic direction)."
+  },
+  {
+    "id": 32,
+    "question": "Which organogram level is responsible for the direct supervision and management of all schools within a defined geographical area (e.g., a municipality)?",
+    "options": {
+      "A": "GES Headquarters",
+      "B": "Regional Education Office",
+      "C": "District/Municipal Education Office",
+      "D": "Zonal Education Office"
+    },
+    "answer": "C",
+    "explanation": "The District/Municipal Education Office, headed by the District Education Director, is the closest administrative unit to the schools."
+  },
+  {
+    "id": 33,
+    "question": "The 'Ministerial Team' in the MoE Organogram typically includes the Minister, the Chief Director, and the:",
+    "options": {
+      "A": "Regional Directors.",
+      "B": "Deputy Ministers.",
+      "C": "GES Director-General.",
+      "D": "Head Teachers."
+    },
+    "answer": "B",
+    "explanation": "The Ministerial Team is the political leadership, comprising the Minister and their Deputies, who set the political agenda and oversee policy."
+  },
+  {
+    "id": 34,
+    "question": "The Technical Division of the GES that handles technical and vocational education is known as:",
+    "options": {
+      "A": "Basic Education Division",
+      "B": "Secondary Education Division",
+      "C": "TVET Division (Technical and Vocational Education and Training)",
+      "D": "Special Education Division"
+    },
+    "answer": "C",
+    "explanation": "TVET is managed by a dedicated division within the GES structure, reflecting the specialized nature of technical and vocational education."
+  },
+  {
+    "id": 35,
+    "question": "The lowest administrative level in the GES Organogram, directly managing a cluster of schools, is often referred to as the:",
+    "options": {
+      "A": "District Education Office",
+      "B": "Zonal or Circuit Education Office",
+      "C": "Regional Education Office",
+      "D": "School Management Committee"
+    },
+    "answer": "B",
+    "explanation": "The Zonal or Circuit Education Office provides immediate supervisory oversight for a group of schools under the District Office."
+  },
+  {
+    "id": 36,
+    "question": "In the MoE structure, the 'Chief Director' is the:",
+    "options": {
+      "A": "Political head of the Ministry.",
+      "B": "Administrative and coordinating head of the Ministry's Civil Service staff.",
+      "C": "Head of the GES Council.",
+      "D": "Head of the Inspectorate Board."
+    },
+    "answer": "B",
+    "explanation": "The Chief Director is the professional administrative head of the Ministry, responsible for implementing policies and managing the civil service component."
+  },
+  {
+    "id": 37,
+    "question": "The division responsible for ensuring quality and standards through inspections and monitoring across all pre-tertiary schools is the:",
+    "options": {
+      "A": "School Health Education Programme (SHEP)",
+      "B": "Internal Audit Division",
+      "C": "Ghana Education Inspectorate Division (GEID) or National Inspectorate Board (NIB)",
+      "D": "Guidance and Counselling Division"
+    },
+    "answer": "C",
+    "explanation": "Quality assurance and inspection are the mandates of the National Inspectorate Board (NIB) or its corresponding division within the GES structure."
+  },
+  {
+    "id": 38,
+    "question": "The administrative link between the Head of a Senior High School and the Regional Education Director is typically the:",
+    "options": {
+      "A": "Zonal Education Officer",
+      "B": "District Education Director",
+      "C": "Director of Secondary Education (HQ)",
+      "D": "Regional School Accountant"
+    },
+    "answer": "B",
+    "explanation": "While SHS Heads often liaise directly with the Region, the formal administrative chain of command often passes through the District/Municipal Director, though this varies slightly depending on school type and context."
+  },
+  {
+    "id": 39,
+    "question": "The GES Organogram shows that the Director in charge of Finance reports to the:",
+    "options": {
+      "A": "Minister of Education",
+      "B": "Head of Civil Service",
+      "C": "Director-General of GES",
+      "D": "Auditor-General"
+    },
+    "answer": "C",
+    "explanation": "All functional directors at the GES Headquarters report directly to the Director-General."
+  },
+  {
+    "id": 40,
+    "question": "Which of the following BEST represents the hierarchical structure of administrative oversight from top to bottom?",
+    "options": {
+      "A": "GES HQ -> District Office -> Regional Office -> School",
+      "B": "MoE -> Regional Office -> GES HQ -> School",
+      "C": "MoE -> GES HQ -> Regional Office -> District Office -> School",
+      "D": "GES Council -> Minister -> Director-General -> School"
+    },
+    "answer": "C",
+    "explanation": "The correct chain of command is: Ministry of Education (Policy) -> GES Headquarters (Management) -> Regional Education Office (Oversight) -> District Education Office (Direct Supervision) -> School (Implementation)."
+  },
+  {
+    "id": 41,
+    "question": "The 'School Management Committee' (SMC) or 'Board of Governors' (BOG) operates at which level of the education organogram?",
+    "options": {
+      "A": "National (GES Council)",
+      "B": "Regional",
+      "C": "District",
+      "D": "School"
+    },
+    "answer": "D",
+    "explanation": "The SMC and BOG are site-level governance bodies responsible for the management and oversight of the specific school."
+  },
+  {
+    "id": 42,
+    "question": "What is the primary function of the MoE's Procurement Entity?",
+    "options": {
+      "A": "Recruiting staff for the Ministry.",
+      "B": "Overseeing the purchase of all goods, works, and services.",
+      "C": "Developing the school curriculum.",
+      "D": "Handling staff disciplinary issues."
+    },
+    "answer": "B",
+    "explanation": "The Procurement Entity ensures compliance with the Public Procurement Act, managing all purchasing activities of the Ministry."
+  },
+  {
+    "id": 43,
+    "question": "The division responsible for special needs education, including policies for inclusion and resource allocation for students with disabilities, is the:",
+    "options": {
+      "A": "Curriculum Division",
+      "B": "Special Education Division (SPED)",
+      "C": "Teacher Education Division (TED)",
+      "D": "Guidance and Counselling Division"
+    },
+    "answer": "B",
+    "explanation": "SPED is the dedicated division within GES for managing and coordinating all special education programs and policies."
+  },
+  {
+    "id": 44,
+    "question": "The Director-General is assisted by Deputy Director-Generals (DDGs) who are typically in charge of:",
+    "options": {
+      "A": "Political campaigning and mobilization.",
+      "B": "Major functional areas (e.g., Management Services, Quality and Access).",
+      "C": "The external auditors.",
+      "D": "International diplomatic relations."
+    },
+    "answer": "B",
+    "explanation": "The DDGs oversee broad, defined functional areas to support the Director-General in managing the complex operations of the GES."
+  },
+  {
+    "id": 45,
+    "question": "The structure of the MoE and GES ensures that technical advice on curriculum comes from the:",
+    "options": {
+      "A": "School Board of Governors.",
+      "B": "National Teaching Council (NTC).",
+      "C": "National Council for Curriculum and Assessment (NaCCA).",
+      "D": "Public Relations Unit."
+    },
+    "answer": "C",
+    "explanation": "NaCCA is the specialized technical agency responsible for curriculum design, development, and assessment standards."
+  },
+  {
+    "id": 46,
+    "question": "What is the primary purpose of outlining the organogram of GES and MoE?",
+    "options": {
+      "A": "To create confusion among staff.",
+      "B": "To show the relationship and hierarchy between various units and personnel.",
+      "C": "To justify the annual budget expenditure.",
+      "D": "To list all the schools in Ghana."
+    },
+    "answer": "B",
+    "explanation": "An organogram visually depicts the official hierarchy, reporting lines, and functional relationships within an organization."
+  },
+  {
+    "id": 47,
+    "question": "In the administrative structure, the Head of the Internal Audit Unit at the Regional Education Office reports functionally to the:",
+    "options": {
+      "A": "Regional Education Director",
+      "B": "GES Council Chairman",
+      "C": "Internal Audit Agency (IAA)",
+      "D": "Minister of Education"
+    },
+    "answer": "C",
+    "explanation": "Internal auditors in public institutions report functionally to the Internal Audit Agency to ensure independence and accountability."
+  },
+  {
+    "id": 48,
+    "question": "The GES organogram is decentralized to the extent that which officer is directly supervised by the respective Regional Education Director?",
+    "options": {
+      "A": "The Head of a Public University",
+      "B": "The District Education Director",
+      "C": "The Minister of Education",
+      "D": "The Director-General of GES"
+    },
+    "answer": "B",
+    "explanation": "The District Education Directors (DEDs) report directly to the Regional Education Directors (REDs)."
+  },
+  {
+    "id": 49,
+    "question": "The 'Public Relations Unit' in the GES Organogram is functionally responsible for:",
+    "options": {
+      "A": "Budget allocation.",
+      "B": "Media relations, communication, and managing the public image.",
+      "C": "Overseeing staff disciplinary hearings.",
+      "D": "Writing the Scheme of Service."
+    },
+    "answer": "B",
+    "explanation": "The Public Relations Unit manages external and internal communication to ensure transparency and maintain a good public image for the Service."
+  },
+  {
+    "id": 50,
+    "question": "What key role does the National Inspectorate Board (NIB) play within the MoE/GES oversight structure?",
+    "options": {
+      "A": "Teacher training and certification.",
+      "B": "Curriculum development.",
+      "C": "External quality assurance and inspection.",
+      "D": "Financial management of GETFund."
+    },
+    "answer": "C",
+    "explanation": "The NIB is mandated to provide independent, external quality assurance services for pre-tertiary educational institutions to ensure standards are met."
+  },
+  {
+    "id": 51,
+    "question": "The current Ghanaian curriculum framework emphasizes 'standards-based' learning. What is the primary characteristic of this approach in the instructional setting?",
+    "options": {
+      "A": "Focus on rote memorization.",
+      "B": "Focus on specific learning outcomes and competencies.",
+      "C": "Focus on the teacher as the sole source of knowledge.",
+      "D": "Focus on passing the final examination only."
+    },
+    "answer": "B",
+    "explanation": "Standards-based curriculum clearly defines what students should know and be able to do (learning outcomes/competencies) at each stage."
+  },
+  {
+    "id": 52,
+    "question": "GES policy on assessment in Basic Schools mandates teachers to use 'formative assessment'. This type of assessment is primarily used for:",
+    "options": {
+      "A": "Assigning final grades for report cards.",
+      "B": "Determining student eligibility for promotion.",
+      "C": "Monitoring student progress and adjusting instruction.",
+      "D": "Ranking students competitively."
+    },
+    "answer": "C",
+    "explanation": "Formative assessment is an ongoing process used to diagnose student needs and provide immediate feedback to guide teaching and learning."
+  },
+  {
+    "id": 53,
+    "question": "Which document must a teacher prepare for every lesson as a record of instructional planning and delivery?",
+    "options": {
+      "A": "The School Safety Protocol",
+      "B": "The GES Scheme of Service",
+      "C": "The Lesson Plan (or Note of Lesson)",
+      "D": "The District Assembly Bye-laws"
+    },
+    "answer": "C",
+    "explanation": "The Lesson Plan is the mandatory administrative and instructional tool used to document the teacher's preparation for each lesson taught."
+  },
+  {
+    "id": 54,
+    "question": "The policy of 'Differentiated Instruction' in the instructional setting is designed to cater for:",
+    "options": {
+      "A": "Teachers with varying levels of experience.",
+      "B": "Students with diverse learning styles and needs.",
+      "C": "Schools in different geographical locations.",
+      "D": "Different types of curriculum content."
+    },
+    "answer": "B",
+    "explanation": "Differentiated instruction adapts teaching methods, content, and assessment to meet the varied readiness, interests, and learning profiles of students."
+  },
+  {
+    "id": 55,
+    "question": "GES policy on classroom management prohibits the use of corporal punishment. What alternative strategy is officially recommended?",
+    "options": {
+      "A": "Ignoring misbehaviour completely.",
+      "B": "Disciplinary transfer to another school.",
+      "C": "Positive reinforcement and non-violent disciplinary measures.",
+      "D": "Expulsion of the student without parental notice."
+    },
+    "answer": "C",
+    "explanation": "GES policy promotes a culture of positive discipline, focusing on behaviour modification through non-violent methods, counselling, and reinforcement."
+  },
+  {
+    "id": 56,
+    "question": "The introduction of **STEM** education in the instructional setting is a MoE policy primarily aimed at:",
+    "options": {
+      "A": "Reducing the workload of teachers.",
+      "B": "Promoting critical thinking, innovation, and skills relevant to the modern economy.",
+      "C": "Mandating a new uniform for students.",
+      "D": "Restricting student access to technical subjects."
+    },
+    "answer": "B",
+    "explanation": "Science, Technology, Engineering, and Mathematics (STEM) education is a global trend aimed at fostering creativity and 21st-century skills."
+  },
+  {
+    "id": 57,
+    "question": "What is the administrative term for the standardized written assessment that marks the end of Junior High School (JHS) and determines placement into Senior High School (SHS)?",
+    "options": {
+      "A": "WASSCE",
+      "B": "Basic Education Certificate Examination (BECE)",
+      "C": "National Standardized Test (NST)",
+      "D": "Common Entrance Examination"
+    },
+    "answer": "B",
+    "explanation": "The BECE is the nationally recognized external examination for JHS students."
+  },
+  {
+    "id": 58,
+    "question": "The GES policy on 'Inclusive Education' means that a child with special educational needs should primarily be taught:",
+    "options": {
+      "A": "In a segregated, specialized institution only.",
+      "B": "Integrated into the mainstream classroom with necessary support.",
+      "C": "Exclusively by their parents at home.",
+      "D": "By a private tutor."
+    },
+    "answer": "B",
+    "explanation": "The policy promotes the placement of students with special needs in the least restrictive environment, which is the mainstream school environment with appropriate accommodations."
+  },
+  {
+    "id": 59,
+    "question": "In the instructional setting, the use of 'Continuous Assessment' (CA) is a policy that requires a teacher to:",
+    "options": {
+      "A": "Grade students only once per year.",
+      "B": "Track student performance throughout the term/semester using various tasks.",
+      "C": "Limit all assessment to multiple-choice questions.",
+      "D": "Conduct only oral examinations."
+    },
+    "answer": "B",
+    "explanation": "Continuous Assessment involves using a variety of assessment methods (tests, projects, homework) to gather data on student learning over a period of time."
+  },
+  {
+    "id": 60,
+    "question": "According to GES policy, what is the mandatory minimum number of hours per week a teacher must dedicate to instructional activities?",
+    "options": {
+      "A": "10 hours",
+      "B": "20 hours",
+      "C": "30 hours",
+      "D": "40 hours"
+    },
+    "answer": "C",
+    "explanation": "The standard official contact hours for teaching staff are generally pegged around 30 hours per week, depending on the educational level and scheme of service."
+  },
+  {
+    "id": 61,
+    "question": "What is the administrative role of the 'Curriculum Coordinator' at the District Education Office level?",
+    "options": {
+      "A": "To handle staff payroll and pensions.",
+      "B": "To ensure the correct interpretation and implementation of the national curriculum in schools.",
+      "C": "To manage school infrastructure projects.",
+      "D": "To audit school accounts."
+    },
+    "answer": "B",
+    "explanation": "Curriculum Coordinators provide technical support and ensure fidelity to the national curriculum and instructional standards."
+  },
+  {
+    "id": 62,
+    "question": "The policy on 'School-Based Professional Development' (SBPD) is designed to ensure that CPD activities are:",
+    "A": "Mandatorily conducted by NTC only.",
+    "B": "Relevant, contextual, and directly address the specific needs of the school's teachers.",
+    "C": "Only focused on technology training.",
+    "D": "Used solely for promotion purposes."
+  },
+  {
+    "answer": "B",
+    "explanation": "SBPD emphasizes localized and peer-led training that is directly applicable to the school's unique instructional challenges and goals."
+  },
+  {
+    "id": 63,
+    "question": "GES policy on school calendar emphasizes a uniform start and end date for each term. This is primarily for the purpose of:",
+    "options": {
+      "A": "Allowing students long holidays.",
+      "B": "Ensuring instructional equity and national coordination of the curriculum coverage.",
+      "C": "Giving teachers time for private businesses.",
+      "D": "Coordinating with international sporting events."
+    },
+    "answer": "B",
+    "explanation": "Uniformity in the school calendar is essential for national planning, management of examinations, and ensuring all schools cover the required curriculum within the same timeframe."
+  },
+  {
+    "id": 64,
+    "question": "The use of the vernacular (local language) as the medium of instruction is mandated by GES policy at which level of education?",
+    "options": {
+      "A": "Senior High School (SHS)",
+      "B": "Tertiary Education",
+      "C": "Kindergarten and Lower Primary (P1-P3)",
+      "D": "Junior High School (JHS)"
+    },
+    "answer": "C",
+    "explanation": "Policy recommends the use of the relevant Ghanaian language as the Medium of Instruction for the early grades (KG to P3) to aid comprehension and foundational literacy."
+  },
+  {
+    "id": 65,
+    "question": "GES policy on school safety and security requires that all schools have a designated 'School Safety Officer' or Committee to manage:",
+    "options": {
+      "A": "The school garden.",
+      "B": "Emergency response, disaster plans, and student well-being.",
+      "C": "Only the library books.",
+      "D": "The annual Parent-Teacher Association (PTA) meeting."
+    },
+    "answer": "B",
+    "explanation": "School safety policies require dedicated personnel or committees to plan for and manage crises, health, and security issues."
+  },
+  {
+    "id": 66,
+    "question": "The instructional policy that mandates the teaching of computer literacy and digital skills across all levels is related to:",
+    "options": {
+      "A": "The School Feeding Programme.",
+      "B": "The ICT in Education Policy.",
+      "C": "The Religious and Moral Education Policy.",
+      "D": "The Agricultural Science Policy."
+    },
+    "answer": "B",
+    "explanation": "The ICT in Education Policy guides the integration of technology and digital skills into teaching, learning, and school management."
+  },
+  {
+    "id": 67,
+    "question": "The MoE/GES policy on the transition from JHS to SHS is primarily implemented through the:",
+    "options": {
+      "A": "School Management Committee selection.",
+      "B": "Computerized School Selection and Placement System (CSSPS).",
+      "C": "Regional Education Director's discretion.",
+      "D": "Interviews conducted by each SHS."
+    },
+    "answer": "B",
+    "explanation": "CSSPS is the system used to centrally manage the selection and placement of BECE graduates into public SHSs and Technical/Vocational Schools."
+  },
+  {
+    "id": 68,
+    "question": "What is the core instructional policy reason for the introduction of a new curriculum framework to replace the previous one?",
+    "options": {
+      "A": "To increase the cost of textbooks.",
+      "B": "To ensure the curriculum remains relevant to national development needs and global standards.",
+      "C": "To reduce the school day to four hours.",
+      "D": "To focus only on arts subjects."
+    },
+    "answer": "B",
+    "explanation": "Curriculum reviews are necessary to align education with the changing demands of the economy, technology, and society."
+  },
+  {
+    "id": 69,
+    "question": "According to GES policy, the responsibility for checking and initialing a teacher's lesson notes before the lesson is delivered lies with the:",
+    "options": {
+      "A": "District Education Director.",
+      "B": "Head of School or designated Department Head/Supervisor.",
+      "C": "Parent-Teacher Association (PTA) Chairman.",
+      "D": "Regional Minister."
+    },
+    "answer": "B",
+    "explanation": "The Head or a designated departmental supervisor is administratively responsible for ensuring lesson planning is done and meets the required standards."
+  },
+  {
+    "id": 70,
+    "question": "The GES policy on 'Guidance and Counselling' in schools is mandatory to support students in which areas?",
+    "options": {
+      "A": "Only academic performance.",
+      "B": "Only financial planning.",
+      "C": "Academic, career, and personal/social development.",
+      "D": "Only extracurricular activities."
+    },
+    "answer": "C",
+    "explanation": "Guidance and Counselling services are meant to provide holistic support for students across all critical areas of their development."
+  },
+  {
+    "id": 71,
+    "question": "The instructional setting requires all teachers to have a valid Teacher Professional Licence. This is a policy instituted by the:",
+    "options": {
+      "A": "Ghana National Association of Teachers (GNAT).",
+      "B": "National Teaching Council (NTC).",
+      "C": "GES Human Resource Division.",
+      "D": "West African Examinations Council (WAEC)."
+    },
+    "answer": "B",
+    "explanation": "The NTC is mandated by law to regulate the teaching profession, including the issuance of professional licenses."
+  },
+  {
+    "id": 72,
+    "question": "What is the primary instructional goal of the GES 'Reading and Numeracy' policy for the early years (KG-P3)?",
+    "options": {
+      "A": "To prepare students for WASSCE.",
+      "B": "To build strong foundational literacy and mathematical skills.",
+      "C": "To teach advanced calculus.",
+      "D": "To focus solely on science subjects."
+    },
+    "answer": "B",
+    "explanation": "A robust foundation in reading and numeracy is critical for all subsequent learning and is a key focus area of the basic education policy."
+  },
+  {
+    "id": 73,
+    "question": "GES policy requires teachers to engage in 'Action Research'. The purpose of Action Research in the instructional setting is to:",
+    "options": {
+      "A": "Write a thesis for a Master's degree.",
+      "B": "Identify and solve practical instructional problems within their own classrooms.",
+      "C": "Determine the national budget for education.",
+      "D": "Predict the results of national examinations."
+    },
+    "answer": "B",
+    "explanation": "Action research is a form of inquiry that allows teachers to systematically study their own practices to improve student learning outcomes."
+  },
+  {
+    "id": 74,
+    "question": "The use of 'Teaching and Learning Materials' (TLMs) in the classroom is an instructional policy aimed at:",
+    "options": {
+      "A": "Making the classroom colorful.",
+      "B": "Enhancing learner engagement and conceptual understanding.",
+      "C": "Increasing the administrative workload.",
+      "D": "Replacing the teacher entirely."
+    },
+    "answer": "B",
+    "explanation": "TLMs are vital tools that make abstract concepts concrete, facilitate engagement, and enhance the effectiveness of lesson delivery."
+  },
+  {
+    "id": 75,
+    "question": "Which GES policy governs the official school uniform, attendance, and general student decorum?",
+    "options": {
+      "A": "The Financial Administration Regulations.",
+      "B": "The School Rules and Regulations/Code of Conduct for Students.",
+      "C": "The Staff Scheme of Service.",
+      "D": "The Public Health Act."
+    },
+    "answer": "B",
+    "explanation": "Student discipline, dress, and behaviour are formally outlined in the School Rules, which are derived from broader GES administrative directives."
+  },
+  {
+    "id": 76,
+    "question": "The instructional setting is influenced by the GES policy on 'Teacher Motivation', which primarily focuses on:",
+    "options": {
+      "A": "Mandating longer working hours.",
+      "B": "Providing incentives, professional development, and improving working conditions.",
+      "C": "Reducing the number of students per class.",
+      "D": "Eliminating all extracurricular activities."
+    },
+    "answer": "B",
+    "explanation": "Teacher motivation policies seek to improve teacher performance and retention by offering support, recognition, and enhanced professional opportunities."
+  }
+]

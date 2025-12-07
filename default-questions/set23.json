@@ -1,0 +1,852 @@
+[
+  {
+    "id": 1,
+    "question": "Which of the following bodies is responsible for accrediting tertiary education institutions in Ghana?",
+    "options": {
+      "A": "Ghana Education Service (GES)",
+      "B": "National Accreditation Board (NAB) / Ghana Tertiary Education Commission (GTEC)",
+      "C": "Ministry of Education (MoE)",
+      "D": "National Council for Curriculum and Assessment (NaCCA)"
+    },
+    "answer": "B",
+    "explanation": "The National Accreditation Board (NAB) was subsumed into the Ghana Tertiary Education Commission (GTEC) by the Education Regulatory Bodies Act, 2020 (Act 1023), which now handles accreditation and regulation of tertiary institutions."
+  },
+  {
+    "id": 2,
+    "question": "True or False: The National Teaching Council (NTC) Act mandates that all teachers, regardless of school type (public or private), must possess a valid professional licence to practice.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The NTC Act, 2020 (Act 1021) regulates the teaching profession and makes licensing mandatory for all professional teachers in Ghana, including those in private schools."
+  },
+  {
+    "id": 3,
+    "question": "The primary objective of the Education Act, 2008 (Act 778) is to:",
+    "options": {
+      "A": "Establish the National Teaching Council.",
+      "B": "Provide for free, compulsory, universal basic education (FCUBE).",
+      "C": "Regulate tertiary education funding.",
+      "D": "Govern the procurement of educational materials."
+    },
+    "answer": "B",
+    "explanation": "Act 778 emphasizes the state's responsibility to provide and supervise free, compulsory, universal basic education (FCUBE)."
+  },
+  {
+    "id": 4,
+    "question": "Which specific body under the Ministry of Education is responsible for the overall management and implementation of pre-tertiary education policies?",
+    "options": {
+      "A": "National Schools Inspectorate Authority (NaSIA)",
+      "B": "Ghana Education Service (GES)",
+      "C": "Ghana Tertiary Education Commission (GTEC)",
+      "D": "National Council for Curriculum and Assessment (NaCCA)"
+    },
+    "answer": "B",
+    "explanation": "The Ghana Education Service (GES) is the implementation arm of the MoE for pre-tertiary education."
+  },
+  {
+    "id": 5,
+    "question": "True or False: According to the Children's Act, 1998 (Act 560), the minimum age for criminal responsibility in Ghana is 18 years.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The Children's Act (and the Criminal Offences Act) sets the minimum age of criminal responsibility at 12 years."
+  },
+  {
+    "id": 6,
+    "question": "A Head of School must ensure all procurement of goods and services is done in line with which legal framework?",
+    "options": {
+      "A": "The Companies Act, 2019 (Act 992)",
+      "B": "The Public Financial Management Act, 2016 (Act 921)",
+      "C": "The Public Procurement Act, 2003 (Act 663) as amended.",
+      "D": "The Local Governance Act, 2016 (Act 936)"
+    },
+    "answer": "C",
+    "explanation": "All public institutions, including schools, must adhere strictly to the Public Procurement Act, 2003 (Act 663) and its amendments for all purchases."
+  },
+  {
+    "id": 7,
+    "question": "The National Council for Curriculum and Assessment (NaCCA) is mandated to perform which of the following functions?",
+    "options": {
+      "A": "Pay teachers' salaries.",
+      "B": "Develop, publish, and review school curricula and assessment standards.",
+      "C": "Inspect school infrastructure.",
+      "D": "Issue professional teaching licences."
+    },
+    "answer": "B",
+    "explanation": "NaCCA's primary mandate is the development and supervision of national curriculum and assessment standards for pre-tertiary institutions."
+  },
+  {
+    "id": 8,
+    "question": "True or False: A teacher's professional licence issued by the NTC has a fixed expiry date and must be renewed, often requiring evidence of Continuous Professional Development (CPD).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Professional licences are not permanent and must be renewed periodically (e.g., every 3 years), contingent on the accumulation of CPD points."
+  },
+  {
+    "id": 9,
+    "question": "If a public basic school's funds are misappropriated, which Act provides the framework for investigating and prosecuting the offence?",
+    "options": {
+      "A": "The Labour Act, 2003 (Act 651)",
+      "B": "The Public Financial Management Act, 2016 (Act 921)",
+      "C": "The Ghana Standards Authority Act, 1973 (NRCD 173)",
+      "D": "The Data Protection Act, 2012 (Act 843)"
+    },
+    "answer": "B",
+    "explanation": "The Public Financial Management Act (PFMA) governs the management of public funds and outlines offenses related to misapplication of these funds."
+  },
+  {
+    "id": 10,
+    "question": "The legal status of the Ghana Education Service (GES) is derived from the:",
+    "options": {
+      "A": "GES Service Instrument, 1999 (CI 45)",
+      "B": "Ghana Education Service Act, 1995 (Act 506)",
+      "C": "Education Regulatory Bodies Act, 2020 (Act 1023)",
+      "D": "GES Establishment Instrument, 1994 (LI 1500)"
+    },
+    "answer": "B",
+    "explanation": "The Ghana Education Service was formally established by the Ghana Education Service Act, 1995 (Act 506)."
+  },
+  {
+    "id": 11,
+    "question": "True or False: Under the GES disciplinary procedure, a staff member is presumed guilty until they can prove their innocence.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Disciplinary procedures must adhere to the rules of natural justice, including the right to a fair hearing and the principle that a person is presumed innocent until proven guilty."
+  },
+  {
+    "id": 12,
+    "question": "Which of the following bodies is responsible for institutional inspection and quality assurance in pre-tertiary education in Ghana?",
+    "options": {
+      "A": "National Teaching Council (NTC)",
+      "B": "National Schools Inspectorate Authority (NaSIA)",
+      "C": "West African Examinations Council (WAEC)",
+      "D": "Ghana Tertiary Education Commission (GTEC)"
+    },
+    "answer": "B",
+    "explanation": "NaSIA (formerly NEB) is mandated by the Education Regulatory Bodies Act, 2020 (Act 1023) to inspect and regulate pre-tertiary educational institutions."
+  },
+  {
+    "id": 13,
+    "question": "A teacher is being investigated for misconduct. Which document governs the specific procedural steps and available sanctions?",
+    "options": {
+      "A": "The Ghanaian Constitution.",
+      "B": "The GES Code of Professional Conduct and Disciplinary Procedures.",
+      "C": "The Public Financial Management Act.",
+      "D": "The Labour Act, 2003 (Act 651)."
+    },
+    "answer": "B",
+    "explanation": "The GES Code of Professional Conduct and Disciplinary Procedures is the primary internal document detailing the process for handling misconduct and imposing sanctions."
+  },
+  {
+    "id": 14,
+    "question": "True or False: The National Council for Curriculum and Assessment (NaCCA) has the authority to directly appoint Headmasters of Senior High Schools.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The appointment of Headmasters falls under the mandate of the Ghana Education Service (GES), not NaCCA."
+  },
+  {
+    "id": 15,
+    "question": "The constitutional provision that mandates Free, Compulsory, Universal Basic Education (FCUBE) is found in which chapter of the 1992 Constitution?",
+    "options": {
+      "A": "Chapter 1",
+      "B": "Chapter 6 (Directive Principles of State Policy)",
+      "C": "Chapter 10 (Judiciary)",
+      "D": "Chapter 24 (The Public Services)"
+    },
+    "answer": "B",
+    "explanation": "Article 38(2) in Chapter 6 (Directive Principles of State Policy) obligates the state to provide FCUBE."
+  },
+  {
+    "id": 16,
+    "question": "The mandate for regulating the professional practice of teaching in Ghana, including registration and licensing, rests with the:",
+    "options": {
+      "A": "Ghana Education Service (GES).",
+      "B": "National Teaching Council (NTC).",
+      "C": "Ministry of Education (MoE).",
+      "D": "Ghana National Association of Teachers (GNAT)."
+    },
+    "answer": "B",
+    "explanation": "This is the core function of the National Teaching Council (NTC) as per the NTC Act, 2020 (Act 1021)."
+  },
+  {
+    "id": 17,
+    "question": "True or False: The Public Procurement Act requires that all public contracts, regardless of value, must be advertised publicly through international competitive tendering.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The Act specifies different procurement methods (e.g., sole sourcing, restrictive tendering, national/international competitive tendering) based on the value and nature of the contract."
+  },
+  {
+    "id": 18,
+    "question": "What is the legal implication of a person practising as a teacher in a public school without a professional licence, as per the NTC Act?",
+    "options": {
+      "A": "No implication, as long as they have a relevant degree.",
+      "B": "They are in breach of the law and liable to a fine or imprisonment.",
+      "C": "They can only teach subjects not included in the curriculum.",
+      "D": "They must sign a special indemnity form with the GES."
+    },
+    "answer": "B",
+    "explanation": "The NTC Act criminalizes the practice of teaching without a valid licence or registration."
+  },
+  {
+    "id": 19,
+    "question": "Which of the following rights is NOT explicitly protected for children under the Children's Act, 1998 (Act 560)?",
+    "options": {
+      "A": "The right to education.",
+      "B": "The right to private jet ownership.",
+      "C": "The right to a name and nationality.",
+      "D": "The right to protection from harmful work."
+    },
+    "answer": "B",
+    "explanation": "The Act focuses on fundamental rights like education, name, nationality, protection, health, and development, not luxury items."
+  },
+  {
+    "id": 20,
+    "question": "True or False: The Ghana Education Service (GES) is an agency under the Ministry of Finance.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The GES is an agency under the Ministry of Education (MoE)."
+  },
+  {
+    "id": 21,
+    "question": "The law that governs the relationship between the employer (GES) and the employee (Teacher), covering contracts, termination, and working conditions, is primarily the:",
+    "options": {
+      "A": "Public Financial Management Act, 2016 (Act 921)",
+      "B": "Labour Act, 2003 (Act 651)",
+      "C": "Companies Act, 2019 (Act 992)",
+      "D": "Education Regulatory Bodies Act, 2020 (Act 1023)"
+    },
+    "answer": "B",
+    "explanation": "The Labour Act, 2003 (Act 651) is the overarching legislation governing employer-employee relationships in Ghana."
+  },
+  {
+    "id": 22,
+    "question": "True or False: The National Council for Curriculum and Assessment (NaCCA) is responsible for the final examination and certification of students at the Basic Education Certificate Examination (BECE) level.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "WAEC is responsible for the conduct of public examinations like BECE and WASSCE, while NaCCA is responsible for the curriculum content."
+  },
+  {
+    "id": 23,
+    "question": "In the context of the GES, what is the 'Instrument' that details the internal organization, regional structure, and functions of the Service?",
+    "options": {
+      "A": "A Legislative Instrument (L.I.).",
+      "B": "A Constitutional Instrument (C.I.).",
+      "C": "A Public Financial Management Regulation.",
+      "D": "A Procurement Manual."
+    },
+    "answer": "A",
+    "explanation": "The GES establishment and functions are further detailed in a Legislative Instrument (L.I.), such as the Ghana Education Service Instrument, 1999 (CI 45) [Note: CI 45, though named C.I., functions as an L.I. under its establishing Act]."
+  },
+  {
+    "id": 24,
+    "question": "The Public Financial Management Act (PFMA) requires that every public institution, including a Senior High School, must prepare and submit its financial statements to the:",
+    "options": {
+      "A": "The Head of State.",
+      "B": "The Attorney-General.",
+      "C": "The Auditor-General.",
+      "D": "The Speaker of Parliament."
+    },
+    "answer": "C",
+    "explanation": "The Auditor-General is constitutionally and legally mandated by the PFMA to audit the accounts of all public sector organizations."
+  },
+  {
+    "id": 25,
+    "question": "True or False: Data concerning students' health records and academic performance are NOT considered 'personal data' under the Data Protection Act, 2012 (Act 843).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Any information relating to an identified or identifiable individual is considered 'personal data,' including health and performance records, and is protected by the Act."
+  },
+  {
+    "id": 26,
+    "question": "Which of the following is a legal ground for the termination of a teacher's appointment under the GES regulations?",
+    "options": {
+      "A": "Failure to attend a single PTA meeting.",
+      "B": "Habitual or serious professional misconduct.",
+      "C": "Failure to mark homework on a single occasion.",
+      "D": "Being late to school once in a semester."
+    },
+    "answer": "B",
+    "explanation": "Habitual neglect of duty, fraud, or serious professional misconduct are grounds for dismissal, as detailed in the GES Code of Conduct."
+  },
+  {
+    "id": 27,
+    "question": "The National Schools Inspectorate Authority (NaSIA) is legally required to conduct inspection and monitoring of which schools?",
+    "options": {
+      "A": "Only Public Basic Schools.",
+      "B": "Only Public Senior High Schools.",
+      "C": "All pre-tertiary educational institutions, both public and private.",
+      "D": "Only Tertiary institutions."
+    },
+    "answer": "C",
+    "explanation": "NaSIA’s mandate covers quality assurance and inspection across the entire pre-tertiary education landscape, regardless of ownership."
+  },
+  {
+    "id": 28,
+    "question": "True or False: The GES is legally obligated to provide a written statement of the reasons for any disciplinary action taken against a staff member.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The right to a fair hearing and administrative justice (Article 23 of the Constitution) implies that reasons must be given for administrative decisions, including disciplinary ones."
+  },
+  {
+    "id": 29,
+    "question": "Which Act established the National Teaching Council (NTC) to regulate the teaching profession?",
+    "options": {
+      "A": "Education Regulatory Bodies Act, 2020 (Act 1023)",
+      "B": "GES Act, 1995 (Act 506)",
+      "C": "National Teaching Council Act, 2020 (Act 1021)",
+      "D": "Children's Act, 1998 (Act 560)"
+    },
+    "answer": "C",
+    "explanation": "The NTC was established by the National Teaching Council Act, 2020 (Act 1021)."
+  },
+  {
+    "id": 30,
+    "question": "The Public Procurement Act, 2003 (Act 663) gives preference to which type of supplier in public tenders?",
+    "options": {
+      "A": "Foreign companies with the lowest price.",
+      "B": "Suppliers registered with the World Trade Organization.",
+      "C": "Goods, works, and services produced in Ghana, subject to certain criteria (local content).",
+      "D": "Companies owned by political figures."
+    },
+    "answer": "C",
+    "explanation": "The Act has provisions to promote local content and local industry by giving preference to goods/services produced in Ghana, provided they meet the quality standards."
+  },
+  {
+    "id": 31,
+    "question": "True or False: Corporal punishment is legally permissible in basic schools under the Education Act, provided it is administered lightly by the Headmaster only.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Corporal punishment is banned in all Ghanaian schools by a GES directive, which is in line with the Children's Act (protection from violence) and international conventions ratified by Ghana."
+  },
+  {
+    "id": 32,
+    "question": "Which institution is responsible for establishing the fees and charges for professional licensing and registration of teachers?",
+    "options": {
+      "A": "The Ministry of Finance.",
+      "B": "The Controller and Accountant General's Department.",
+      "C": "The National Teaching Council (NTC).",
+      "D": "The Public Services Commission."
+    },
+    "answer": "C",
+    "explanation": "The NTC, as the regulator, determines the professional fees, subject to Ministry of Education approval."
+  },
+  {
+    "id": 33,
+    "question": "Under the Labour Act, 2003 (Act 651), what is the minimum statutory annual leave entitlement for an employee who has worked for one continuous year?",
+    "options": {
+      "A": "15 working days.",
+      "B": "30 calendar days.",
+      "C": "10 working days.",
+      "D": "25 working days."
+    },
+    "answer": "A",
+    "explanation": "Section 20 of the Labour Act, 2003 (Act 651) provides for a minimum of fifteen working days annual leave for an employee after twelve continuous months of service."
+  },
+  {
+    "id": 34,
+    "question": "True or False: The National Council for Curriculum and Assessment (NaCCA) has the authority to approve textbooks and instructional materials for use in pre-tertiary schools.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "As the curriculum body, NaCCA is responsible for reviewing and approving all materials to ensure alignment with the national curriculum."
+  },
+  {
+    "id": 35,
+    "question": "The GES Code of Conduct stipulates that public school teachers must avoid engaging in political activities during official working hours. This requirement is in line with which broader legal/administrative principle?",
+    "options": {
+      "A": "Separation of Powers.",
+      "B": "Civil Service neutrality and non-partisanship.",
+      "C": "Freedom of Speech.",
+      "D": "Local Governance Act provisions."
+    },
+    "answer": "B",
+    "explanation": "Public servants, including teachers, are generally bound by rules requiring political neutrality during work hours to ensure the public service remains non-partisan."
+  },
+  {
+    "id": 36,
+    "question": "The maximum age for an individual to be considered a 'child' under the Children's Act, 1998 (Act 560) is:",
+    "options": {
+      "A": "16 years.",
+      "B": "18 years.",
+      "C": "21 years.",
+      "D": "12 years."
+    },
+    "answer": "B",
+    "explanation": "The Act defines a child as a person below the age of 18 years."
+  },
+  {
+    "id": 37,
+    "question": "True or False: A contract of employment with the GES is automatically terminated if a teacher fails the Professional Teaching Examination once.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Failure may lead to further professional development or re-sitting the exam, but typically not immediate automatic termination without due process."
+  },
+  {
+    "id": 38,
+    "question": "Which of the following describes the key role of the Ghana Tertiary Education Commission (GTEC)?",
+    "options": {
+      "A": "Management of Senior High Schools.",
+      "B": "Regulation and governance of tertiary education institutions and programmes.",
+      "C": "Curriculum development for Basic Schools.",
+      "D": "Conducting terminal examinations for pre-tertiary students."
+    },
+    "answer": "B",
+    "explanation": "GTEC is the regulatory body for all tertiary education, including accreditation, planning, and funding advice."
+  },
+  {
+    "id": 39,
+    "question": "Which Act requires public entities, like the GES, to proactively publish information regarding their functions, decisions, and operations?",
+    "options": {
+      "A": "The Labour Act, 2003 (Act 651)",
+      "B": "The Education Act, 2008 (Act 778)",
+      "C": "The Right to Information Act, 2019 (Act 989)",
+      "D": "The Public Financial Management Act, 2016 (Act 921)"
+    },
+    "answer": "C",
+    "explanation": "The Right to Information Act (RTI) promotes transparency by requiring public institutions to make certain information readily available and accessible to the public."
+  },
+  {
+    "id": 40,
+    "question": "True or False: The head of a public school has the authority to grant a disciplinary measure of 'Interdiction' without consultation with the District/Regional Director.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Interdiction is a serious administrative measure, and its application must typically follow specific procedural rules and requires authorization from the relevant appointing/controlling authority (e.g., Regional/National Director of GES)."
+  },
+  {
+    "id": 41,
+    "question": "The legal instrument that sets out the administrative framework and functions of the GES is:",
+    "options": {
+      "A": "A Statutory Declaration.",
+      "B": "A Legislative Instrument (L.I.).",
+      "C": "A Ministerial Directive only.",
+      "D": "A Policy Brief."
+    },
+    "answer": "B",
+    "explanation": "The detailed operational framework of a public service like GES is typically established through a Legislative Instrument (L.I.) passed by Parliament."
+  },
+  {
+    "id": 42,
+    "question": "If a procurement officer at a school splits a contract into smaller amounts to avoid the mandatory competitive tendering process, this is legally referred to as:",
+    "options": {
+      "A": "Local Content Promotion.",
+      "B": "Contract Consolidation.",
+      "C": "Contract Splitting or Padded Vouchers.",
+      "D": "Restricted Tendering."
+    },
+    "answer": "C",
+    "explanation": "Contract splitting (or sometimes described as dividing a contract) is a serious offense under the Public Procurement Act, done to circumvent the appropriate approval thresholds."
+  },
+  {
+    "id": 43,
+    "question": "True or False: The minimum school-going age for a child to start basic school, as enshrined in the Education Act, 2008 (Act 778), is 3 years.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The Act defines basic education as starting with KG (which generally starts at age 4) and continuing up to Junior High School (JHS)."
+  },
+  {
+    "id": 44,
+    "question": "Which body ensures that all educational institutions (public and private) comply with legal standards concerning health, safety, and infrastructure?",
+    "options": {
+      "A": "National Teaching Council (NTC)",
+      "B": "NaCCA",
+      "C": "National Schools Inspectorate Authority (NaSIA)",
+      "D": "Audit Service"
+    },
+    "answer": "C",
+    "explanation": "NaSIA is responsible for setting and enforcing quality standards in educational institutions, which includes physical infrastructure and environment."
+  },
+  {
+    "id": 45,
+    "question": "According to the Labour Act, what is the required period of notice for termination of an employment contract for an indefinite period, where the employee has been in continuous service for 3 years or more?",
+    "options": {
+      "A": "Two weeks' notice.",
+      "B": "One month's notice.",
+      "C": "Three months' notice.",
+      "D": "Six months' notice."
+    },
+    "answer": "B",
+    "explanation": "The Labour Act generally stipulates a minimum of one month's notice for an employee who has been in continuous service for three years or more."
+  },
+  {
+    "id": 46,
+    "question": "True or False: It is a breach of the GES Code of Conduct for a teacher to publicly criticize the policies of the Ministry of Education on social media.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "While freedom of expression is constitutional, public servants are generally required to uphold the integrity and image of the Service and avoid public criticism of official policy unless specifically authorized."
+  },
+  {
+    "id": 47,
+    "question": "The legal mechanism by which a teacher can challenge a decision made by the GES regarding promotion or disciplinary action is known as:",
+    "options": {
+      "A": "Judicial Review/Appeal (to court or higher administrative body).",
+      "B": "A Public Announcement.",
+      "C": "A Vote of No Confidence.",
+      "D": "A Procurement Tender."
+    },
+    "answer": "A",
+    "explanation": "Administrative decisions can be appealed through the internal hierarchy of the GES or challenged externally through judicial review in the courts, upholding the rule of law."
+  },
+  {
+    "id": 48,
+    "question": "Under the NTC Act, Continuous Professional Development (CPD) is primarily intended to:",
+    "options": {
+      "A": "Increase the NTC's revenue.",
+      "B": "Ensure teachers' continuous growth in knowledge, skills, and ethics.",
+      "C": "Fund school infrastructure projects.",
+      "D": "Replace the national curriculum."
+    },
+    "answer": "B",
+    "explanation": "CPD is central to the NTC's mandate of ensuring high professional standards among teachers."
+  },
+  {
+    "id": 49,
+    "question": "True or False: The Education Act, 2008 (Act 778) permits discrimination against students based on their religious affiliation in public schools.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The Act, in line with the Constitution, prohibits discrimination on various grounds, including religion, in the provision of education."
+  },
+  {
+    "id": 50,
+    "question": "Which of the following is considered a 'prohibited transaction' under the Public Procurement Act, 2003 (Act 663)?",
+    "options": {
+      "A": "Sole-sourcing with the approval of the Public Procurement Authority (PPA).",
+      "B": "Competitive tendering for a major construction project.",
+      "C": "Accepting gifts from a potential supplier in exchange for awarding a contract.",
+      "D": "Emergency procurement for urgent supplies."
+    },
+    "answer": "C",
+    "explanation": "Corruption, including accepting bribes or gifts (kickbacks), is strictly prohibited and constitutes a criminal offense under the Act."
+  },
+  {
+    "id": 51,
+    "question": "The legal authority to conduct the Basic Education Certificate Examination (BECE) and the West African Senior School Certificate Examination (WASSCE) is primarily held by:",
+    "options": {
+      "A": "The Ghana Education Service (GES).",
+      "B": "The Ministry of Education (MoE).",
+      "C": "The West African Examinations Council (WAEC).",
+      "D": "The National Schools Inspectorate Authority (NaSIA)."
+    },
+    "answer": "C",
+    "explanation": "WAEC is the statutory body responsible for external examinations in West Africa, including Ghana."
+  },
+  {
+    "id": 52,
+    "question": "True or False: Under the Public Financial Management Act (PFMA), the Head of a public school is considered the 'Spending Officer' and is personally accountable for the proper use of allocated funds.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Heads of institutions are designated as Spending Officers (or analogous roles) and bear primary responsibility and accountability for the financial affairs of their institutions."
+  },
+  {
+    "id": 53,
+    "question": "The purpose of the NTC Teacher Professional Development Portfolio is to:",
+    "options": {
+      "A": "Serve as a bank account for professional dues.",
+      "B": "Document a teacher's professional growth, CPD activities, and reflection.",
+      "C": "Replace the school's log book.",
+      "D": "Store lesson notes for 10 years."
+    },
+    "answer": "B",
+    "explanation": "The portfolio is a record-keeping mechanism to demonstrate compliance with CPD requirements and continuous professional growth."
+  },
+  {
+    "id": 54,
+    "question": "Which of the following describes the legal standing of the GES Code of Professional Conduct?",
+    "options": {
+      "A": "It is merely a set of suggestions.",
+      "B": "It is a legally binding internal regulation for all GES staff.",
+      "C": "It only applies to teachers, not to non-teaching staff.",
+      "D": "It is replaced annually by a new policy."
+    },
+    "answer": "B",
+    "explanation": "The Code is an official regulation issued under the authority of the GES and is binding on all its employees."
+  },
+  {
+    "id": 55,
+    "question": "True or False: The use of school facilities (e.g., assembly hall) by external groups for commercial purposes requires permission and should generally involve formal documentation and payment, in line with public financial management principles.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Public assets must be managed responsibly, and any use for revenue generation must be documented and accounted for under the PFMA and school regulations."
+  },
+  {
+    "id": 56,
+    "question": "The legal principle of *Audi alteram partem* (hear the other side) is most relevant to which part of the GES disciplinary process?",
+    "options": {
+      "A": "The initial investigation.",
+      "B": "The submission of annual reports.",
+      "C": "The right of the accused staff member to be heard and present a defence.",
+      "D": "The renewal of the professional licence."
+    },
+    "answer": "C",
+    "explanation": "This is a fundamental rule of natural justice, guaranteeing the accused a fair chance to respond to allegations during a disciplinary hearing."
+  },
+  {
+    "id": 57,
+    "question": "Which body is primarily responsible for policy formulation and overall direction of the education sector in Ghana?",
+    "options": {
+      "A": "The Public Services Commission.",
+      "B": "The Ministry of Education (MoE).",
+      "C": "The Ghana Education Service (GES).",
+      "D": "The Parliament of Ghana."
+    },
+    "answer": "B",
+    "explanation": "The MoE is the key government ministry responsible for high-level policy setting and coordination."
+  },
+  {
+    "id": 58,
+    "question": "True or False: The Public Procurement Authority (PPA) must approve all contracts, regardless of value, entered into by a public Senior High School.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The PPA sets threshold values; contracts below certain thresholds can be approved internally by the Head of Entity Tender Committee (which a school falls under), while major contracts require PPA approval."
+  },
+  {
+    "id": 59,
+    "question": "A teacher accessing and sharing confidential student information without proper authorization violates which Act?",
+    "options": {
+      "A": "The Children's Act, 1998 (Act 560)",
+      "B": "The Data Protection Act, 2012 (Act 843)",
+      "C": "The Education Act, 2008 (Act 778)",
+      "D": "All of the above."
+    },
+    "answer": "D",
+    "explanation": "The Data Protection Act explicitly covers this. The Children's Act protects the child's right to privacy, and the Education Act/GES Code mandates professional conduct regarding confidentiality. Therefore, it violates all relevant frameworks."
+  },
+  {
+    "id": 60,
+    "question": "The 'Fit and Proper Person' requirement for teacher licensing under the NTC Act refers to which aspect of the applicant?",
+    "options": {
+      "A": "Their height and weight.",
+      "B": "Their moral character, integrity, and lack of criminal record related to children.",
+      "C": "Their financial stability.",
+      "D": "Their ability to speak a foreign language."
+    },
+    "answer": "B",
+    "explanation": "The 'Fit and Proper Person' test focuses on the ethical and moral suitability of the teacher for the profession, especially concerning child safety."
+  },
+  {
+    "id": 61,
+    "question": "True or False: All funds received by a public school (including PTA levies and school fees) are considered public funds and must be managed according to the Public Financial Management Act (PFMA).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Any funds handled by a public institution for public purposes, even self-generated revenue, fall under the scope of the PFMA and must be accounted for."
+  },
+  {
+    "id": 62,
+    "question": "Which institution is responsible for establishing the curriculum for Colleges of Education (CoE) to ensure trainee teachers are trained to the national standard?",
+    "options": {
+      "A": "The Ghana Education Service (GES).",
+      "B": "The National Teaching Council (NTC).",
+      "C": "The Ministry of Education (MoE).",
+      "D": "The University of Cape Coast Institute of Education."
+    },
+    "answer": "B",
+    "explanation": "The NTC is responsible for developing the teacher education curriculum and accrediting the programmes offered by the Colleges of Education."
+  },
+  {
+    "id": 63,
+    "question": "If a teacher accepts a contract to teach at a private school, their employment relationship is primarily governed by:",
+    "options": {
+      "A": "GES Service Regulations.",
+      "B": "The private contract and the Labour Act, 2003 (Act 651).",
+      "C": "The Public Financial Management Act.",
+      "D": "The Local Governance Act."
+    },
+    "answer": "B",
+    "explanation": "Employment in a private institution is based on the specific contract between the employer and employee, within the general framework of the Labour Act."
+  },
+  {
+    "id": 64,
+    "question": "True or False: A staff member under interdiction is entitled to their full salary and all allowances during the period of interdiction.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Interdicted staff usually receive a portion of their basic salary (e.g., two-thirds) but may lose some allowances, pending the outcome of the investigation."
+  },
+  {
+    "id": 65,
+    "question": "The primary mechanism used by the National Schools Inspectorate Authority (NaSIA) to ensure quality in schools is the:",
+    "options": {
+      "A": "Annual Financial Audit.",
+      "B": "Regular school inspection and monitoring.",
+      "C": "Curriculum Vetting process.",
+      "D": "Teacher Licensing renewal."
+    },
+    "answer": "B",
+    "explanation": "NaSIA's core mandate is executed through inspection, monitoring, and evaluation of pre-tertiary schools."
+  },
+  {
+    "id": 66,
+    "question": "The constitutional requirement that basic education must be 'universal' implies that:",
+    "options": {
+      "A": "It must be taught in every language.",
+      "B": "Every child in Ghana must have access to it.",
+      "C": "It must include university-level subjects.",
+      "D": "It must be taught by foreign teachers."
+    },
+    "answer": "B",
+    "explanation": "'Universal' means accessible to all children, without exception or discrimination."
+  },
+  {
+    "id": 67,
+    "question": "True or False: The Education Act, 2008 (Act 778) empowers parents to choose the school their child attends, regardless of GES placement or catchment area rules.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While parental choice is considered, the placement system (especially at the SHS level) is centrally managed by the GES, often overriding absolute parental choice to ensure equitable distribution of students."
+  },
+  {
+    "id": 68,
+    "question": "In the event of a national emergency, which law allows the government to utilize school infrastructure for non-educational purposes (e.g., as a shelter or isolation centre)?",
+    "options": {
+      "A": "The Education Act, 2008 (Act 778).",
+      "B": "The Public Health Act, 2012 (Act 851) and National Disaster Management Organization (NADMO) Act.",
+      "C": "The GES Act, 1995 (Act 506).",
+      "D": "The Public Procurement Act."
+    },
+    "answer": "B",
+    "explanation": "Public health and disaster management laws provide the necessary powers for government agencies to commandeer or use public facilities during crises."
+  },
+  {
+    "id": 69,
+    "question": "Which entity is responsible for setting the professional standards and ethical code that guide the conduct of all registered teachers?",
+    "options": {
+      "A": "The Ghana National Association of Teachers (GNAT).",
+      "B": "The National Teaching Council (NTC).",
+      "C": "The Headmasters' Conference.",
+      "D": "The Parent-Teacher Association (PTA)."
+    },
+    "answer": "B",
+    "explanation": "Setting and enforcing the standards of professional conduct is a core function of the NTC."
+  },
+  {
+    "id": 70,
+    "question": "True or False: If a public school generates its own revenue (Internally Generated Funds - IGF) from farming or rentals, these funds are exempt from audit by the Auditor-General.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "IGFs of public institutions are still considered public funds and are subject to mandatory audit by the Auditor-General as per the PFMA."
+  },
+  {
+    "id": 71,
+    "question": "The legal requirement for all public basic schools to have a School Management Committee (SMC) is derived from:",
+    "options": {
+      "A": "A Presidential Decree.",
+      "B": "The Education Act, 2008 (Act 778) and its regulations.",
+      "C": "A GNAT Collective Bargaining Agreement.",
+      "D": "The Ghana Standards Authority Act."
+    },
+    "answer": "B",
+    "explanation": "The Education Act mandates the establishment and functioning of SMCs to promote community participation and local supervision."
+  },
+  {
+    "id": 72,
+    "question": "What is the consequence for a teacher who fails to renew their professional licence after the expiry date?",
+    "options": {
+      "A": "They automatically receive a promotion.",
+      "B": "They cease to be a teacher in law and are barred from professional practice.",
+      "C": "They are required to pay double the renewal fee.",
+      "D": "They must attend a mandatory 6-month training course."
+    },
+    "answer": "B",
+    "explanation": "Practising without a valid licence is a breach of the NTC Act and legally bars the individual from the profession until the licence is renewed."
+  },
+  {
+    "id": 73,
+    "question": "True or False: Under the Data Protection Act, a school can sell its alumni list, including contact numbers, to a marketing company without the explicit consent of the alumni.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Selling or processing personal data for commercial purposes requires the explicit consent of the data subjects, a key principle of the Data Protection Act."
+  },
+  {
+    "id": 74,
+    "question": "The legal concept that requires the GES to consider the 'best interest of the child' in all its decisions, especially regarding admission, exclusion, or discipline, is rooted in the:",
+    "options": {
+      "A": "Ghanaian Constitution and the Children's Act, 1998 (Act 560).",
+      "B": "Public Financial Management Act.",
+      "C": "Public Procurement Act.",
+      "D": "Internal Audit Agency Act."
+    },
+    "answer": "A",
+    "explanation": "The 'best interest of the child' is a fundamental principle in the Children's Act and the UN Convention on the Rights of the Child (which Ghana has ratified)."
+  },
+  {
+    "id": 75,
+    "question": "Which of the following bodies is responsible for ensuring that pre-tertiary schools are physically safe and conducive for learning, according to the Education Regulatory Bodies Act?",
+    "options": {
+      "A": "The Ghana National Fire Service.",
+      "B": "The Ghana Tertiary Education Commission (GTEC).",
+      "C": "The National Schools Inspectorate Authority (NaSIA).",
+      "D": "The National Teaching Council (NTC)."
+    },
+    "answer": "C",
+    "explanation": "NaSIA's inspection mandate includes assessing the physical environment, health, and safety standards of schools."
+  }
+]

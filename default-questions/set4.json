@@ -1,0 +1,872 @@
+[
+  {
+    "id": 1,
+    "question": "The GES rank of **Director-General** is equivalent to which level in the wider Public Services of Ghana?",
+    "options": {
+      "A": "Chief Director",
+      "B": "Head of Civil Service",
+      "C": "Chief Executive Officer of a major public institution",
+      "D": "Minister of State"
+    },
+    "answer": "C",
+    "explanation": "The Director-General is the Chief Executive Officer and Head of Entity for the GES, a status equivalent to the CEO of a major public body."
+  },
+  {
+    "id": 2,
+    "question": "Which specific instrument or policy primarily details the steps required for a staff member to appeal a disciplinary decision?",
+    "options": {
+      "A": "GES Service Scheme.",
+      "B": "The Ghana Constitution.",
+      "C": "GES Disciplinary Procedures and HR Policy Manual.",
+      "D": "The Public Financial Management Act."
+    },
+    "answer": "C",
+    "explanation": "Detailed disciplinary and appeal procedures are outlined in the GES Disciplinary Procedures and HR Policy Manuals."
+  },
+  {
+    "id": 3,
+    "question": "The **Minister of Finance** is legally required to submit the Government's budget estimates for the coming financial year to Parliament by what date?",
+    "options": {
+      "A": "September 30th.",
+      "B": "November 15th.",
+      "C": "December 31st.",
+      "D": "January 1st."
+    },
+    "answer": "B",
+    "explanation": "The budget estimates must be laid before Parliament at least 15 days before the end of the financial year, usually around November 15th."
+  },
+  {
+    "id": 4,
+    "question": "The Standards-Based Curriculum (SBC) emphasizes the use of **Perennial Issues** as cross-cutting themes. Which of the following is an example of a Perennial Issue?",
+    "options": {
+      "A": "The history of the GES.",
+      "B": "Water, Sanitation, and Hygiene (WASH).",
+      "C": "The annual school sports calendar.",
+      "D": "The list of approved textbooks."
+    },
+    "answer": "B",
+    "explanation": "Perennial Issues (or cross-cutting themes) are ongoing national and global concerns integrated across subjects, such as WASH, patriotism, or entrepreneurship."
+  },
+  {
+    "id": 5,
+    "question": "The promotion criteria for the rank of **Deputy Director** mandates that the officer must have previously served satisfactorily as:",
+    "options": {
+      "A": "Chief Superintendent.",
+      "B": "Principal Superintendent.",
+      "C": "Assistant Director I.",
+      "D": "Assistant Director II."
+    },
+    "answer": "C",
+    "explanation": "AD I is the direct feeder rank for Deputy Director (DD)."
+  },
+  {
+    "id": 6,
+    "question": "The **Principal Spending Officer (PSO)** of the GES is the:",
+    "options": {
+      "A": "Minister of Education.",
+      "B": "Director-General.",
+      "C": "Director of Finance.",
+      "D": "Chairman of the GES Council."
+    },
+    "answer": "B",
+    "explanation": "The Director-General, as the Head of Entity, is the designated Principal Spending Officer responsible for the prudent use of resources."
+  },
+  {
+    "id": 7,
+    "question": "The **NTC Act** requires every licensed teacher to renew their professional licence every:",
+    "options": {
+      "A": "One year.",
+      "B": "Two years.",
+      "C": "Three years.",
+      "D": "Five years."
+    },
+    "answer": "C",
+    "explanation": "The NTC licence is typically valid for three years, requiring renewal based on accumulated Continuous Professional Development (CPD) points."
+  },
+  {
+    "id": 8,
+    "question": "In the context of the PFM Act, **Virement** refers to the mechanism that allows for:",
+    "options": {
+    "A": "The immediate dismissal of a staff member.",
+    "B": "The transfer of funds from one approved budget line item to another, subject to approval.",
+    "C": "The external audit of financial statements.",
+    "D": "The promotion of staff without interview."
+    },
+    "answer": "B",
+    "explanation": "Virement is the process of reallocating funds between approved line items within the same budget, typically needed when operational needs shift."
+  },
+  {
+    "id": 9,
+    "question": "The **GES HR Policy** defines the duration of **Annual Leave** entitlement for a staff member as a minimum of how many working days per year?",
+    "options": {
+      "A": "15 working days.",
+      "B": "20 working days.",
+      "C": "25 working days.",
+      "D": "30 working days."
+    },
+    "answer": "B",
+    "explanation": "The minimum standard annual leave entitlement for GES staff is 20 working days, taken during vacation periods."
+  },
+  {
+    "id": 10,
+    "question": "The primary purpose of the **National Inspectorate Board (NIB)** in the education ecosystem is to ensure:",
+    "options": {
+      "A": "Financial accountability of District Education Offices.",
+      "B": "Compliance with national standards and quality in pre-tertiary education delivery.",
+      "C": "The recruitment of all teachers.",
+      "D": "The determination of the national salary scale."
+    },
+    "answer": "B",
+    "explanation": "The NIB is the independent body responsible for school inspections and assessing the quality of education delivery."
+  },
+  {
+    "id": 11,
+    "question": "A procurement entity can use **Sole Source** procurement if the estimated value of the goods or works is below a certain threshold and if:",
+    "options": {
+      "A": "The tender committee recommends it.",
+      "B": "There is only one supplier capable of supplying the goods or services.",
+      "C": "It is funded by a foreign donor.",
+      "D": "The District Assembly approves it."
+    },
+    "answer": "B",
+    "explanation": "Sole Source is typically justified when there is zero competition, such as for unique intellectual property, standardization, or extreme urgency."
+  },
+  {
+    "id": 12,
+    "question": "In the Standards-Based Curriculum, the **Indicators** define:",
+    "options": {
+      "A": "The final grade for the student.",
+      "B": "The acceptable evidence of knowledge, skills, and values the student must demonstrate.",
+      "C": "The maximum number of periods per subject.",
+      "D": "The duration of the school day."
+    },
+    "answer": "B",
+    "explanation": "Indicators are specific, measurable behaviors or actions that demonstrate mastery of the Content Standard."
+  },
+  {
+    "id": 13,
+    "question": "In the event of a staff member's death, who is immediately responsible for securing the staff member's official documents and properties?",
+    "options": {
+      "A": "The next-of-kin.",
+      "B": "The Head of Institution or the DDE.",
+      "C": "The local Police Service.",
+      "D": "The Public Services Commission."
+    },
+    "answer": "B",
+    "explanation": "The Head of Institution or the DDE is required to secure public assets and official files left behind by the deceased staff member."
+  },
+  {
+    "id": 14,
+    "question": "The **Audit Committee** of the GES is required to prepare and submit an Annual Report detailing its activities to the Minister of Education and the:",
+    "options": {
+      "A": "Controller and Accountant-General (CAG).",
+      "B": "Public Services Commission (PSC).",
+      "C": "Internal Audit Agency (IAA).",
+      "D": "Director-General."
+    },
+    "answer": "C",
+    "explanation": "The Audit Committee, established under the PFM Act, reports annually to its oversight bodies, which include the Minister and the IAA."
+  },
+  {
+    "id": 15,
+    "question": "Which GES rank is the entry point for a newly recruited non-professional graduate teacher?",
+    "options": {
+      "A": "Assistant Director II",
+      "B": "Principal Superintendent",
+      "C": "Senior Superintendent II",
+      "D": "Teacher"
+    },
+    "answer": "C",
+    "explanation": "Senior Superintendent II is typically the entry rank for non-professional graduates, while professional graduates start at Senior Superintendent I or Principal Superintendent depending on the specific policy and service type."
+  },
+  {
+    "id": 16,
+    "question": "The **GIFMIS** platform integrates which two primary functions to ensure comprehensive financial control?",
+    "options": {
+      "A": "HR Management and School Feeding.",
+      "B": "Budgeting and Expenditure Management.",
+      "C": "Curriculum Development and Teacher Training.",
+      "D": "Infrastructure and WASH."
+    },
+    "answer": "B",
+    "explanation": "GIFMIS is designed to link the approved budget to all spending activities, providing real-time expenditure management and control."
+  },
+  {
+    "id": 17,
+    "question": "What is the maximum duration for which a staff member can be granted **Leave Without Pay (LWOP)** for private reasons?",
+    "options": {
+      "A": "6 months.",
+      "B": "1 year.",
+      "C": "3 years.",
+      "D": "The GES does not grant LWOP."
+    },
+    "answer": "B",
+    "explanation": "Leave Without Pay for private reasons is usually limited to one (1) year, subject to the discretion of the appointing authority and service needs."
+  },
+  {
+    "id": 18,
+    "question": "The GES policy on **Conflict of Interest** strictly prohibits staff from:",
+    "options": {
+      "A": "Attending Parent-Teacher Association (PTA) meetings.",
+      "B": "Using public time or property for personal gain.",
+      "C": "Teaching extra classes after school hours.",
+      "D": "Having a bank account."
+    },
+    "answer": "B",
+    "explanation": "Using official resources (time, property, information) for personal, unauthorized benefit is a direct violation of the conflict of interest rules."
+  },
+  {
+    "id": 19,
+    "question": "Which of the following is NOT one of the 'Core Skills' emphasized in the Standards-Based Curriculum?",
+    "options": {
+      "A": "Critical Thinking and Problem Solving.",
+      "B": "Communication and Collaboration.",
+      "C": "Advanced Rote Memorization.",
+      "D": "Creativity and Innovation."
+    },
+    "answer": "C",
+    "explanation": "The SBC moves away from rote memorization towards practical application and 21st-century skills like creativity and critical thinking."
+  },
+  {
+    "id": 20,
+    "question": "The **National Apprenticeship Policy** is closely linked to the development of which educational sector?",
+    "options": {
+      "A": "University Education.",
+      "B": "Technical and Vocational Education and Training (TVET).",
+      "C": "Kindergarten Education.",
+      "D": "The Non-Formal Education Division."
+    },
+    "answer": "B",
+    "explanation": "Apprenticeships are a key mechanism for skills development within the TVET sector."
+  },
+  {
+    "id": 21,
+    "question": "In public procurement, the term **'Tender Security'** refers to:",
+    "options": {
+      "A": "The physical protection of the procurement office.",
+      "B": "A guarantee submitted by bidders to ensure they do not withdraw their bid after opening.",
+      "C": "The insurance for the procured goods.",
+      "D": "The salary of the procurement officer."
+    },
+    "answer": "B",
+    "explanation": "Tender Security (or Bid Security) is a guarantee that protects the procurement entity from a bidder failing to sign the contract if their bid is accepted."
+  },
+  {
+    "id": 22,
+    "question": "The **District Director of Education (DDE)** holds disciplinary authority over which category of staff?",
+    "options": {
+      "A": "Senior High School Heads.",
+      "B": "Directors and above.",
+      "C": "Teachers, Head Teachers, and non-teaching staff up to Principal Superintendent rank.",
+      "D": "GES Council members."
+    },
+    "answer": "C",
+    "explanation": "DDEs have authority over basic school heads and all teaching/non-teaching staff below the rank of Deputy Director within their jurisdiction."
+  },
+  {
+    "id": 23,
+    "question": "What is the maximum penalty for a breach of the **Public Procurement Act (Act 663)** by an official?",
+    "options": {
+      "A": "A verbal warning.",
+      "B": "A fine, imprisonment, or both.",
+      "C": "Mandatory transfer to another region.",
+      "D": "One week of forced leave."
+    },
+    "answer": "B",
+    "explanation": "Breaches of the PPA are criminal offenses that can lead to severe sanctions, including fines and imprisonment."
+  },
+  {
+    "id": 24,
+    "question": "A staff member is promoted on **probation** for a period of:",
+    "options": {
+      "A": "Three months.",
+      "B": "Six months.",
+      "C": "One year.",
+      "D": "Two years."
+    },
+    "answer": "C",
+    "explanation": "New appointments or promotions are typically subject to a probationary period of one (1) year to assess the officer's suitability for the new role."
+  },
+  {
+    "id": 25,
+    "question": "The **GES Code of Conduct** requires staff to dress:",
+    "options": {
+      "A": "In cultural attire only.",
+      "B": "In business suits always.",
+      "C": "In a manner that maintains dignity and professionalism and is appropriate for the workplace.",
+      "D": "In school uniforms."
+    },
+    "answer": "C",
+    "explanation": "Dress code policies emphasize decency, professionalism, and suitability for the teaching or administrative environment."
+  },
+  {
+    "id": 26,
+    "question": "Which rank in the GES is generally considered the highest administrative/managerial position at the District level?",
+    "options": {
+      "A": "Assistant Director I",
+      "B": "Deputy Director",
+      "C": "Director II",
+      "D": "Director I"
+    },
+    "answer": "C",
+    "explanation": "Director II is the rank typically assigned to the District Director of Education (DDE)."
+  },
+  {
+    "id": 27,
+    "question": "The **Procurement Entity Tender Committee (PETC)** is responsible for:",
+    "options": {
+      "A": "Paying all suppliers.",
+      "B": "Reviewing and approving procurement requests and methods.",
+      "C": "Conducting the external audit.",
+      "D": "Setting the national education policy."
+    },
+    "answer": "B",
+    "explanation": "The PETC is the internal body that reviews, approves, and oversees the procurement processes and awards within the entity's threshold."
+  },
+  {
+    "id": 28,
+    "question": "The **Public Financial Management Act (PFM Act)** requires all covered entities to prepare and submit an **Annual Work Plan and Budget** to whom?",
+    "options": {
+      "A": "The Public Services Commission and the Auditor-General.",
+      "B": "The Minister of Finance and the Minister of Education.",
+      "C": "The GES Council and the District Assembly.",
+      "D": "The President and the Speaker of Parliament."
+    },
+    "answer": "B",
+    "explanation": "Entities submit their budget to the sector Minister (MoE) and the Minister responsible for Finance (MoF) for consolidation and approval."
+  },
+  {
+    "id": 29,
+    "question": "The **Ghana Education Trust Fund (GETFund)** is primarily intended to finance:",
+    "options": {
+      "A": "Teachers' salaries and allowances.",
+      "B": "Educational infrastructure and resource development.",
+      "C": "The Minister's official travel.",
+      "D": "The cost of uniforms for all students."
+    },
+    "answer": "B",
+    "explanation": "GETFund's core mandate is to supplement government efforts in providing educational infrastructure and resources across all levels."
+  },
+  {
+    "id": 30,
+    "question": "The **NTC**'s role in the licensing process involves ensuring that teachers meet minimum standards in terms of:",
+    "options": {
+      "A": "Financial wealth and investment portfolio.",
+      "B": "Academic qualifications, ethical conduct, and professional development.",
+      "C": "Political affiliation.",
+      "D": "Car ownership."
+    },
+    "answer": "B",
+    "explanation": "Licensing confirms the teacher's competence, qualification, and adherence to professional ethics."
+  },
+  {
+    "id": 31,
+    "question": "A staff member on interdiction, if subsequently **removed from the Service** (dismissed), is entitled to what portion of their withheld basic salary?",
+    "options": {
+      "A": "100%",
+      "B": "50%",
+      "C": "25%",
+      "D": "None."
+    },
+    "answer": "D",
+    "explanation": "If the officer is dismissed, the withheld portion of the basic salary (the other 50%) is forfeited."
+  },
+  {
+    "id": 32,
+    "question": "Which of the following documents is the most authoritative source for defining the duties and responsibilities of an AD II?",
+    "options": {
+      "A": "The GES News Letter.",
+      "B": "The GES Conditions of Service and Scheme of Service.",
+      "C": "The latest school calendar.",
+      "D": "The minutes of the last PTA meeting."
+    },
+    "answer": "B",
+    "explanation": "The Scheme of Service details the entry requirements, duties, and promotion pathways for specific ranks like AD II."
+  },
+  {
+    "id": 33,
+    "question": "The **IPSAS Accrual Basis** requires financial statements to recognize revenues and expenses when?",
+    "options": {
+      "A": "When the cash is received or paid.",
+      "B": "When the transaction occurs, regardless of when cash is received or paid.",
+      "C": "Only at the beginning of the financial year.",
+      "D": "Only at the time of the external audit."
+    },
+    "answer": "B",
+    "explanation": "Accrual accounting recognizes transactions when they occur (e.g., when a service is used or a right to revenue is established), ensuring a complete picture of economic activities."
+  },
+  {
+    "id": 34,
+    "question": "The **National Reading Action Plan (G-RAP)** promotes teaching methods that utilize phonics and phonological awareness, which falls under the broad category of:",
+    "options": {
+      "A": "Whole Language Approach.",
+      "B": "Balanced Literacy Approach.",
+      "C": "Structured Phonics Approach.",
+      "D": "Rote Memorization Approach."
+    },
+    "answer": "C",
+    "explanation": "G-RAP emphasizes a structured approach to phonics (synthetic phonics) to build foundational reading skills."
+  },
+  {
+    "id": 35,
+    "question": "The **National Council for Curriculum and Assessment (NaCCA)** is responsible for the development of curriculum for which level of education?",
+    "options": {
+      "A": "Only Tertiary (University) Education.",
+      "B": "Pre-tertiary (Kindergarten to Senior High School).",
+      "C": "Only Basic School Education.",
+      "D": "Only Technical and Vocational Education."
+    },
+    "answer": "B",
+    "explanation": "NaCCA's mandate covers all pre-tertiary levels, from KG to SHS/TVET."
+  },
+  {
+    "id": 36,
+    "question": "The disciplinary measure of **'Surcharge'** is typically imposed when a staff member has caused a financial loss to the Service due to:",
+    "options": {
+      "A": "Lateness to school.",
+      "B": "Negligence, misconduct, or willful damage to public property.",
+      "C": "Refusal to take annual leave.",
+      "D": "Achieving excellent results."
+    },
+    "answer": "B",
+    "explanation": "A Surcharge requires the staff member to personally reimburse the public funds lost due to their improper actions or negligence."
+  },
+  {
+    "id": 37,
+    "question": "Which of the following is an example of an offense categorized as **Gross Misconduct** in GES disciplinary procedures?",
+    "options": {
+      "A": "Being five minutes late for a meeting.",
+      "B": "Failure to complete a lesson plan once.",
+      "C": "Embezzlement or Fraud.",
+      "D": "Wearing unpolished shoes."
+    },
+    "answer": "C",
+    "explanation": "Embezzlement and fraud are severe offenses typically classified as Gross Misconduct, warranting dismissal."
+  },
+  {
+    "id": 38,
+    "question": "The implementation of the **WASH in Schools** programme requires a functional system for:",
+    "options": {
+      "A": "Daily teacher punctuality checks.",
+      "B": "Handwashing with soap at critical times.",
+      "C": "Collecting student school fees.",
+      "D": "Issuing promotion letters."
+    },
+    "answer": "B",
+    "explanation": "Handwashing at critical times (e.g., after using the toilet, before eating) is a foundational behavioral component of WASH."
+  },
+  {
+    "id": 39,
+    "question": "The **GES Council** exercises its administrative functions through the:",
+    "options": {
+      "A": "Minister of Finance.",
+      "B": "Director-General.",
+      "C": "Parliamentary Select Committee on Education.",
+      "D": "Traditional Authorities."
+    },
+    "answer": "B",
+    "explanation": "The Director-General is the Chief Executive responsible for the day-to-day administration and implementation of policies decided by the Council."
+  },
+  {
+    "id": 40,
+    "question": "A staff member on **Study Leave Without Pay (SLWOP)** accrues which of the following benefits during the leave period?",
+    "options": {
+      "A": "Annual Leave entitlement.",
+      "B": "Salary and allowances.",
+      "C": "Seniority, but not pay.",
+      "D": "Pension only."
+    },
+    "answer": "C",
+    "explanation": "While pay and allowances are suspended, the officer typically retains their seniority position and is credited with the service period for future promotion purposes."
+  },
+  {
+    "id": 41,
+    "question": "The principle of **'Non-discrimination'** in the GES Code of Conduct mandates that staff must ensure fairness to all students regardless of:",
+    "options": {
+      "A": "Their academic grades only.",
+      "B": "Their age only.",
+      "C": "Tribe, religion, gender, or social background.",
+      "D": "Their attendance at the last school assembly."
+    },
+    "answer": "C",
+    "explanation": "The principle requires impartial treatment and equitable access to education and resources for all students."
+  },
+  {
+    "id": 42,
+    "question": "Which body is responsible for granting the final approval for the GES Annual Budget before it is laid before Parliament?",
+    "options": {
+      "A": "The GES Council.",
+      "B": "The Public Services Commission.",
+      "C": "The Minister of Finance and Cabinet.",
+      "D": "The Auditor-General."
+    },
+    "answer": "C",
+    "explanation": "The Minister of Finance submits the budget to Cabinet for approval before presenting it to Parliament for appropriation."
+  },
+  {
+    "id": 43,
+    "question": "In the new curriculum, the emphasis on **'Connecting Learning'** encourages teachers to link classroom instruction to:",
+    "options": {
+      "A": "Events happening on other continents.",
+      "B": "Real-life, national, and community issues.",
+      "C": "Only historical facts.",
+      "D": "Only abstract mathematical concepts."
+    },
+    "answer": "B",
+    "explanation": "Connecting Learning ensures relevance by relating content to the local environment, culture, and national challenges."
+  },
+  {
+    "id": 44,
+    "question": "The official document that outlines the roles and responsibilities of various staff within a school or unit is known as the:",
+    "options": {
+      "A": "Transfer Form.",
+      "B": "Organogram and Job Description.",
+      "C": "School Feeding Menu.",
+      "D": "Procurement Plan."
+    },
+    "answer": "B",
+    "explanation": "The Organogram shows the hierarchical structure, and Job Descriptions specify the duties and reporting lines for each position."
+  },
+  {
+    "id": 45,
+    "question": "The rank of **Director I** in GES is typically the required rank for which senior post?",
+    "options": {
+      "A": "Head of Primary School.",
+      "B": "District Director of Education.",
+      "C": "Deputy Director-General or Regional Director of Education.",
+      "D": "Chief Superintendent."
+    },
+    "answer": "C",
+    "explanation": "Director I is a very senior rank, typically held by Deputy Directors-General and Regional Directors of Education."
+  },
+  {
+    "id": 46,
+    "question": "In public procurement, the use of **'International Competitive Tendering (ICT)'** is mainly aimed at ensuring:",
+    "options": {
+      "A": "Only local suppliers participate.",
+      "B": "Maximum competition and best value for money for high-value contracts.",
+      "C": "Minimum possible documentation.",
+      "D": "The use of foreign currency only."
+    },
+    "answer": "B",
+    "explanation": "ICT is used for high-value, complex procurements where international competition is necessary to achieve optimal VFM."
+  },
+  {
+    "id": 47,
+    "question": "The AD II, in their supervisory role, must ensure the proper documentation of disciplinary cases, including which critical record?",
+    "options": {
+      "A": "The staff member's family photo album.",
+      "B": "The minutes of the Disciplinary Committee/Board of Enquiry.",
+      "C": "The school's electricity bill.",
+      "D": "The history textbook list."
+    },
+    "answer": "B",
+    "explanation": "The minutes and findings of the investigating committee are essential for due process and subsequent administrative action."
+  },
+  {
+    "id": 48,
+    "question": "The **Auditor-General** has the power to **disallow** any expenditure that is contrary to law. This action is ultimately intended to enforce:",
+    "options": {
+      "A": "Teacher punctuality.",
+      "B": "Fiscal prudence and adherence to PFM laws.",
+      "C": "The provision of free textbooks.",
+      "D": "The length of the school vacation."
+    },
+    "answer": "B",
+    "explanation": "Disallowance is a powerful tool to enforce compliance with financial regulations and recover unlawfully spent public funds."
+  },
+  {
+    "id": 49,
+    "question": "The term **'In-service Training'** or **'CPD'** refers to:",
+    "options": {
+      "A": "Pre-service training at a College of Education.",
+      "B": "Mandatory professional development undertaken by serving staff.",
+      "C": "Training for new recruits only.",
+      "D": "Military training for staff."
+    },
+    "answer": "B",
+    "explanation": "In-service training (now largely CPD) refers to the continuous professional learning required of all serving teachers and staff."
+  },
+  {
+    "id": 50,
+    "question": "The GES policy requires all staff to receive a copy of their **Annual Performance Appraisal Report (APAR)** within how many days of its completion?",
+    "options": {
+      "A": "5 days.",
+      "B": "7 days.",
+      "C": "14 days.",
+      "D": "30 days."
+    },
+    "answer": "C",
+    "explanation": "Staff should receive their APAR promptly (usually within 14 days) to ensure they are aware of their performance rating and can appeal if necessary."
+  },
+  {
+    "id": 51,
+    "question": "The **Decentralization Policy** in education places the ultimate responsibility for the provision of basic school infrastructure on the:",
+    "options": {
+      "A": "Ministry of Education.",
+      "B": "GES Headquarters.",
+      "C": "District Assemblies (DAs).",
+      "D": "Parent-Teacher Associations (PTAs)."
+    },
+    "answer": "C",
+    "explanation": "Under decentralization, District Assemblies are responsible for the planning, provision, and maintenance of Basic School infrastructure."
+  },
+  {
+    "id": 52,
+    "question": "The **Public Procurement Act (Act 663)** is enforced by which regulatory body?",
+    "options": {
+      "A": "The Bank of Ghana.",
+      "B": "The Public Services Commission (PSC).",
+      "C": "The Public Procurement Authority (PPA).",
+      "D": "The National Teaching Council (NTC)."
+    },
+    "answer": "C",
+    "explanation": "The PPA is the statutory regulator responsible for ensuring compliance with procurement laws."
+  },
+  {
+    "id": 53,
+    "question": "In the GES promotion process, the **Written Aptitude Test** is designed primarily to assess the candidate's:",
+    "options": {
+      "A": "Physical fitness.",
+      "B": "Knowledge of educational policies, finance, and human resource management.",
+      "C": "Ability to operate heavy machinery.",
+      "D": "Skill in public speaking."
+    },
+    "answer": "B",
+    "explanation": "The test measures the candidate's technical knowledge required for managerial and administrative roles."
+  },
+  {
+    "id": 54,
+    "question": "The **Teacher Professional Standards (TPS)** guide teachers on which three key domains?",
+    "options": {
+      "A": "Appearance, Diet, and Travel.",
+      "B": "Professional Knowledge, Professional Practice, and Professional Engagement.",
+      "C": "Finance, Procurement, and Auditing.",
+      "D": "Teaching, Research, and Community Service."
+    },
+    "answer": "B",
+    "explanation": "The TPS is structured around these three domains, defining what a teacher should know, be able to do, and how they should interact professionally."
+  },
+  {
+    "id": 55,
+    "question": "In financial reporting, the term **'Appropriation'** refers to:",
+    "options": {
+      "A": "The process of recruiting new staff.",
+      "B": "The legal authorization granted by Parliament to spend public funds.",
+      "C": "The disciplinary process for staff misconduct.",
+      "D": "The setting of the national curriculum."
+    },
+    "answer": "B",
+    "explanation": "The Appropriation Act legally permits the government (and its entities) to spend public money up to a specified limit."
+  },
+  {
+    "id": 56,
+    "question": "Which level of education is the focus of the **Free Senior High School (FSHS)** policy?",
+    "options": {
+      "A": "Primary Education.",
+      "B": "Junior High School Education.",
+      "C": "Second Cycle (SHS and TVET) Education.",
+      "D": "Tertiary Education."
+    },
+    "answer": "C",
+    "explanation": "The FSHS policy provides free access to all students entering Senior High Schools and selected TVET institutions."
+  },
+  {
+    "id": 57,
+    "question": "A staff member on **Secondment** to another public institution remains subject to the disciplinary authority of the:",
+    "options": {
+      "A": "Receiving institution only.",
+      "B": "GES (the parent institution).",
+      "C": "Public Services Commission only.",
+      "D": "The Minister of Finance."
+    },
+    "answer": "B",
+    "explanation": "A seconded officer retains their substantive post and is primarily subject to the HR regulations and disciplinary authority of the GES, even while working elsewhere."
+  },
+  {
+    "id": 58,
+    "question": "The **Internal Audit Agency (IAA)**, when reviewing GES operations, focuses mainly on the adequacy and effectiveness of:",
+    "options": {
+      "A": "The school football team.",
+      "B": "Risk Management, Control, and Governance processes.",
+      "C": "The annual school harvest.",
+      "D": "The colour of the school building."
+    },
+    "answer": "B",
+    "explanation": "Internal audit provides assurance on the management systems and controls for risk and governance."
+  },
+  {
+    "id": 59,
+    "question": "The **Public Procurement Act** requires that procurement decisions be made with a high degree of transparency and:",
+    "options": {
+      "A": "Secrecy.",
+      "B": "Confidentiality regarding bid prices only.",
+      "C": "Accountability.",
+      "D": "Speed, regardless of procedure."
+    },
+    "answer": "C",
+    "explanation": "Accountability and transparency are fundamental principles, ensuring that decisions can be reviewed and those responsible are identifiable."
+  },
+  {
+    "id": 60,
+    "question": "The primary role of the **Deputy Director-General (DDG)** position in GES is to:",
+    "options": {
+      "A": "Head a large Senior High School.",
+      "B": "Assist the Director-General in the daily management and oversight of specific divisions.",
+      "C": "Manage the school feeding program only.",
+      "D": "Be the Head of the District Education Office."
+    },
+    "answer": "B",
+    "explanation": "DDGs are executive officers who assist the D-G in high-level management and oversight, often heading specific technical divisions (e.g., Quality & Access, Management & Services)."
+  },
+  {
+    "id": 61,
+    "question": "The **Audit Committee** of the GES is responsible for implementing all recommendations made by the Auditor-General.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. The Audit Committee only monitors and advises; implementation is the responsibility of management (the Head of Entity/PSO)."
+  },
+  {
+    "id": 62,
+    "question": "In the GES, promotion to the rank of **Assistant Director I (AD I)** is achieved solely by passing an interview.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. Promotion to AD I requires both passing an Aptitude Test/Interview AND meeting minimum service and qualification requirements."
+  },
+  {
+    "id": 63,
+    "question": "The **National Inspectorate Board (NIB)** sets the content standards for the pre-tertiary curriculum.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. NaCCA (National Council for Curriculum and Assessment) sets the curriculum standards. NIB inspects the implementation and quality."
+  },
+  {
+    "id": 64,
+    "question": "The **Public Financial Management Act** permits public funds to be used for activities not included in the approved budget, provided the expenditure is minor.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. Spending public funds on unauthorized activities is a breach of the PFM Act, regardless of the amount."
+  },
+  {
+    "id": 65,
+    "question": "The GES policy generally allows staff to accumulate and carry forward all unused Annual Leave days into the following year.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. Annual Leave is intended to be taken in the year it is earned; carrying forward is usually limited or disallowed entirely."
+  },
+  {
+    "id": 66,
+    "question": "In the Standards-Based Curriculum, **'Assessment of Learning'** is primarily used for diagnostic (formative) purposes during instruction.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. 'Assessment of Learning' is typically summative (e.g., end-of-term exams) to determine mastery. 'Assessment for Learning' is formative/diagnostic."
+  },
+  {
+    "id": 67,
+    "question": "The District Director of Education (DDE) must seek permission from the Regional Director of Education (RDE) before conducting an interdiction of a Head Teacher.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. While the DDE has authority to recommend or initiate action, interdiction authority for senior staff often requires consultation or confirmation from the RDE."
+  },
+  {
+    "id": 68,
+    "question": "Under the PFM Act, a Principal Spending Officer (PSO) can delegate their accountability for public funds to the Head of Finance.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. While functions can be delegated, legal accountability remains solely with the PSO (Head of Entity)."
+  },
+  {
+    "id": 69,
+    "question": "The rank of **Chief Superintendent** is part of the teaching/pedagogical track, not the administrative/managerial track.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. The rank of Chief Superintendent is not a part of the professional teaching/pedagogical track within the Ghana Education Service (GES) hierarchy."
+  },
+  {
+    "id": 70,
+    "question": "The **National Teaching Council (NTC)** is responsible for the payment of teachers' salaries and emoluments.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. GES (via the Controller and Accountant-General) handles salaries; NTC is the regulatory body."
+  },
+  {
+    "id": 71,
+    "question": "The procurement method **'Request for Quotation'** is appropriate for low-value, non-complex goods where price is the main factor.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. RFQ is a simplified method used for readily available, standard items where value for money is determined mainly by price."
+  },
+  {
+    "id": 72,
+    "question": "The **Ghana Reading Action Plan (G-RAP)** only covers the English Language curriculum.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. G-RAP focuses on literacy in both English and local Ghanaian Languages at the foundational level."
+  },
+  {
+    "id": 73,
+    "question": "A staff member who is aggrieved by a promotion decision must submit their appeal directly to the Public Services Commission (PSC).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. Appeals are usually submitted through the established internal GES HR channels (e.g., the appointing authority) before potentially moving to the PSC."
+  },
+  {
+    "id": 74,
+    "question": "All GES staff, regardless of their rank, are required to sign a performance agreement with their immediate supervisor annually.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. Annual performance appraisal/agreements are a mandatory HR requirement for all staff members to ensure accountability and professional development."
+  },
+  {
+    "id": 75,
+    "question": "The **Programme Based Budget (PBB)** structure encourages public entities to focus their spending on inputs rather than outputs and outcomes.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. PBB shifts the focus from inputs (what is bought) to measurable outputs and outcomes (what is achieved), promoting effectiveness and efficiency."
+  }
+]

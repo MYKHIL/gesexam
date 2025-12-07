@@ -1,0 +1,752 @@
+[
+  {
+    "id": 1,
+    "question": "The Public Financial Management Act (Act 921) permits a Principal Spending Officer to authorize expenditures outside of the approved budget without seeking prior approval from the Minister of Finance.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. The Act requires strict adherence to approved budgetary allocations, and any deviation or unauthorized spending is a serious offense."
+  },
+  {
+    "id": 2,
+    "question": "According to the Labour Act, 2003 (Act 651), the minimum annual leave entitlement for an employee who has completed 12 months of service is 15 working days.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. The Labour Act mandates a minimum of 15 working days of leave for an employee in any calendar year of service."
+  },
+  {
+    "id": 3,
+    "question": "The National Teaching Council (NTC) Act requires all professional teachers to renew their teaching license every three years.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. Professional teachers must renew their license periodically (usually every three years) by acquiring Continuous Professional Development (CPD) points."
+  },
+  {
+    "id": 4,
+    "question": "The Local Governance Act, 2016 (Act 936) makes District Assemblies responsible for basic education planning and development within their jurisdiction.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. District Assemblies play a key role in the provision and management of decentralized public services, including basic education infrastructure and planning."
+  },
+  {
+    "id": 5,
+    "question": "The Right to Information (RTI) Act, 2019 (Act 989) allows public institutions to indefinitely delay the release of information if the request is deemed 'complex'.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. The RTI Act specifies clear timelines for responding to requests, even complex ones, and delays must be justified and communicated within a set period."
+  },
+  {
+    "id": 6,
+    "question": "The Public Procurement Act, 2003 (Act 663) only applies to contracts worth above a specified monetary threshold.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. The Act governs all public procurement activities, regardless of the monetary value, though the procedures may differ based on the threshold."
+  },
+  {
+    "id": 7,
+    "question": "A public officer is allowed to accept gifts that are solely intended to influence their official decisions, provided the gift value is minimal.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. The Code of Conduct for Public Officers strictly prohibits accepting gifts intended to influence official conduct, regardless of the value, as it constitutes a conflict of interest or bribery."
+  },
+  {
+    "id": 8,
+    "question": "Under the Labour Act, maternity leave for a female employee is a minimum of 8 weeks and can be taken only after childbirth.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. Maternity leave is a minimum of 12 weeks, and a portion can be taken before childbirth."
+  },
+  {
+    "id": 9,
+    "question": "The Constitution of Ghana guarantees the right to education as a fundamental human right for all citizens.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. Article 25 of the 1992 Constitution guarantees the right to education, making basic education free, compulsory, and available to all."
+  },
+  {
+    "id": 10,
+    "question": "The Ghana Education Service (GES) Code of Conduct permits teachers to engage in private tuition for their own pupils for a fee during school hours.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. The Code of Conduct generally prohibits or restricts private tuition for remuneration, especially for one's own students, to prevent conflicts of interest and neglect of official duties."
+  },
+  {
+    "id": 11,
+    "question": "The Controller and Accountant-General’s Department (CAGD) is responsible for the overall management of the government payroll system.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. CAGD manages the mechanism for the disbursement of public funds, including the government payroll."
+  },
+  {
+    "id": 12,
+    "question": "The Auditing Service Act, 2000 (Act 584) states that the Auditor-General reports directly to the President and not to Parliament.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. The Auditor-General is generally accountable to Parliament, and their reports are submitted to Parliament for scrutiny."
+  },
+  {
+    "id": 13,
+    "question": "An employee can be summarily dismissed without prior written warning for gross misconduct, as per the Labour Act.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. The Labour Act allows for summary dismissal in cases of proven gross misconduct, without the need for previous warnings."
+  },
+  {
+    "id": 14,
+    "question": "The Data Protection Act, 2012 (Act 843) applies only to private institutions and not to government organizations.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. The Data Protection Act applies to all data controllers and processors, including government organizations, ensuring the protection of personal data."
+  },
+  {
+    "id": 15,
+    "question": "The mandatory retirement age for public sector workers is uniformly 65 years across all institutions.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. The mandatory retirement age for most public sector workers is 60 years."
+  },
+  {
+    "id": 16,
+    "question": "The Criminal Offences Act, 1960 (Act 29) classifies the willful causing of damage to public property as a crime.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. Damage to property, especially public property, is a punishable offence under criminal law."
+  },
+  {
+    "id": 17,
+    "question": "The Civil Service Act, 1993 (Act 327) governs the conditions of service for all teaching and non-teaching staff under the Ghana Education Service (GES).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. The GES is a separate body under the Ministry of Education, and its staff are governed by the Education Act and the GES conditions of service, not the Civil Service Act."
+  },
+  {
+    "id": 18,
+    "question": "The Value Added Tax (VAT) Act requires all commercial entities, including small-scale enterprises, to register for and charge VAT.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. VAT registration is only mandatory for businesses whose turnover exceeds a specified threshold."
+  },
+  {
+    "id": 19,
+    "question": "Under the Children’s Act, 1998 (Act 560), corporal punishment in schools is explicitly permitted for minor infractions.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. While historically practiced, government directives and policies stemming from the Children's Act and child rights laws have banned corporal punishment in schools."
+  },
+  {
+    "id": 20,
+    "question": "The Whistleblower Act, 2006 (Act 720) protects an employee who reports corrupt or illegal conduct from victimization by their employer.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. The Act is designed to encourage the reporting of wrongdoing by providing legal protection to the whistleblower."
+  },
+  {
+    "id": 21,
+    "question": "The process of impeachment for a public office holder is solely governed by the Public Services Commission.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. Impeachment and removal processes for high-ranking public office holders are typically governed by the Constitution and Parliament."
+  },
+  {
+    "id": 22,
+    "question": "The Income Tax Act, 2015 (Act 896) requires all persons earning income to file annual tax returns, unless they fall under specific exemptions.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. Taxpayers, including employees and self-employed individuals, are generally required to file annual tax returns."
+  },
+  {
+    "id": 23,
+    "question": "In the public service, a promotion is considered a right after a public officer serves continuously for 5 years.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. Promotions are based on performance, vacancy, and successful interviews/assessments, not merely the length of service."
+  },
+  {
+    "id": 24,
+    "question": "The Public Financial Management Act (Act 921) makes it compulsory for all public institutions to use a centralized government bank account for all transactions.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. The Act promotes the use of a Treasury Single Account (TSA) or similar centralized system for effective cash management and financial oversight."
+  },
+  {
+    "id": 25,
+    "question": "The Ghana Education Service (GES) is mandated to provide equal opportunities for access to education for all students, irrespective of their socio-economic background.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. This aligns with the constitutional provision for the right to education and the goal of inclusive education."
+  },
+  {
+    "id": 26,
+    "question": "The National Teaching Council (NTC) can revoke a teacher's license only if the teacher commits a criminal offense.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. A license can be revoked for various reasons, including professional misconduct, incompetence, or violation of the Code of Ethics, not just criminal offenses."
+  },
+  {
+    "id": 27,
+    "question": "The use of an official vehicle for private errands without proper authorization constitutes a breach of the public service regulations.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. Public service regulations strictly govern the use of government assets, including vehicles, which are intended for official duties only."
+  },
+  {
+    "id": 28,
+    "question": "A public sector employee can contest a disciplinary decision only through a court of law.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. Disciplinary decisions are first contested through internal appeals/grievance procedures within the service (e.g., GES, Civil Service) or commission before resorting to the courts."
+  },
+  {
+    "id": 29,
+    "question": "The Labour Act allows for the formation of trade unions in any workplace to represent the interests of the employees.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. Freedom of association, including the right to form or join a trade union, is protected by the Labour Act and the Constitution."
+  },
+  {
+    "id": 30,
+    "question": "All public records are automatically exempted from disclosure under the Right to Information (RTI) Act.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. The RTI Act is intended to promote transparency, and public records are only exempted if they fall under specific categories like national security or privacy."
+  },
+  {
+    "id": 31,
+    "question": "The Public Procurement Act primarily aims to ensure value for money in the expenditure of public funds.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. The core objective of the Act is to ensure economy, efficiency, and value for money in all public purchasing."
+  },
+  {
+    "id": 32,
+    "question": "A public officer is prohibited from participating in partisan political activities, even outside of working hours.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. While certain high-ranking officers have severe restrictions, most public servants can engage in political activities outside of work, but their conduct must not compromise their political neutrality in the performance of their duties."
+  },
+  {
+    "id": 33,
+    "question": "The Bank of Ghana Act empowers the Bank of Ghana to print currency and be the sole custodian of the country's gold reserves.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. The Bank of Ghana is the central bank and is responsible for the issuance of currency and management of national reserves."
+  },
+  {
+    "id": 34,
+    "question": "The payment of mandatory social security contributions (SSNIT) is the sole responsibility of the employer.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. Both the employer and the employee contribute to the mandatory social security scheme (SSNIT), with the employer remitting both parts."
+  },
+  {
+    "id": 35,
+    "question": "All District Education Offices are required to be established and operate under the provisions of the Education Act and the GES regulations.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. District Education Offices (DEOs) are integral parts of the GES structure and are governed by its foundational legal instruments."
+  },
+  {
+    "id": 36,
+    "question": "A temporary employee under the Labour Act is entitled to the same benefits as a permanent employee, including paid annual leave.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. The Labour Act ensures that temporary or fixed-term contract workers are entitled to the same benefits, calculated pro-rata, as their permanent counterparts."
+  },
+  {
+    "id": 37,
+    "question": "The Constitution of Ghana allows the Executive arm of government to abolish the independence of the Judiciary.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. The Constitution is founded on the principle of separation of powers, guaranteeing the independence of the Judiciary from the Executive and Legislature."
+  },
+  {
+    "id": 38,
+    "question": "The Public Financial Management Act, 2016 (Act 921) requires all public sector institutions to prepare and publish annual financial reports.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. The Act mandates transparency and accountability through the preparation and timely publication of financial statements."
+  },
+  {
+    "id": 39,
+    "question": "The National Labour Commission (NLC) has the authority to settle industrial disputes only when a court order is issued.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. The NLC is empowered by the Labour Act to mediate, conciliate, and arbitrate industrial disputes without necessarily requiring a prior court order."
+  },
+  {
+    "id": 40,
+    "question": "Under GES regulations, the transfer of a staff member from one station to another requires a minimum of 6 months' written notice.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. While notice is given, there is no fixed 6-month minimum; the required notice period is determined by operational needs and standard administrative procedures."
+  },
+  {
+    "id": 41,
+    "question": "The Energy Commission Act empowers the Commission to regulate and manage the utilization of energy resources in the country.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. The Energy Commission is the body responsible for regulating and managing the development and utilization of energy resources."
+  },
+  {
+    "id": 42,
+    "question": "The GES Code of Conduct allows a teacher to mark student examinations in exchange for private monetary payment from the students' parents.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. This practice is a clear conflict of interest and a violation of the professional and ethical standards for public servants."
+  },
+  {
+    "id": 43,
+    "question": "The Environmental Protection Agency Act, 1994 (Act 490) requires that all major developmental projects undergo an Environmental Impact Assessment (EIA).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. The EPA Act mandates an EIA for projects likely to have a significant impact on the environment."
+  },
+  {
+    "id": 44,
+    "question": "The maximum period for which a public officer may be interdicted (suspended) is 12 months, after which they must be reinstated.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. While interdiction should be brief, regulations often allow it to continue until disciplinary proceedings are completed, which can sometimes exceed 12 months, though this is often contested."
+  },
+  {
+    "id": 45,
+    "question": "Under the Companies Act, 2019 (Act 992), every registered company must have at least one director who is ordinarily resident in Ghana.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. Act 992 mandates that at least one director must be a resident of Ghana."
+  },
+  {
+    "id": 46,
+    "question": "A public officer is expected to comply with the lawful instructions of their supervisor, even if they disagree with the instruction.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. Obedience to lawful instructions is a fundamental duty of a public servant, and internal disagreement must be raised through appropriate channels."
+  },
+  {
+    "id": 47,
+    "question": "The National Health Insurance Act, 2012 (Act 852) establishes the National Health Insurance Scheme (NHIS) to provide accessible health care for all residents.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. The Act governs the establishment and operation of the NHIS."
+  },
+  {
+    "id": 48,
+    "question": "The Public Financial Management Act allows the unauthorized use of public funds, provided the funds are eventually repaid to the state.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. Unauthorized use of public funds, regardless of repayment, constitutes a financial malfeasance and is subject to severe penalties."
+  },
+  {
+    "id": 49,
+    "question": "A public officer is required to declare their assets and liabilities to the Auditor-General every four years.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Under Article 286 of Ghana’s 1992 Constitution, a public officer must declare their assets and liabilities to the Auditor-General at the end of every four years. Also, the Public Office Holders (Declaration of Assets and Disqualification) Act, 1998 (Act 550) requires the declaration **at the end of every four years.**"
+  },
+  {
+    "id": 50,
+    "question": "The Education Act provides the Ghana Education Service (GES) with the authority to formulate and enforce all curricula for Pre-Tertiary education.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. The GES implements the curriculum, but the curriculum development and finalization is the responsibility of the National Council for Curriculum and Assessment (NaCCA)."
+  },
+  {
+    "id": 51,
+    "question": "Under the Labour Act, an employer must provide a written statement detailing the reasons for the termination of an employee's appointment.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. The Act mandates that the reasons for termination must be communicated in writing to the employee."
+  },
+  {
+    "id": 52,
+    "question": "The Commission on Human Rights and Administrative Justice (CHRAJ) can investigate and address cases of unfair treatment or abuse of power by public officers.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. CHRAJ acts as an Ombudsman to investigate complaints of maladministration and human rights violations by public servants."
+  },
+  {
+    "id": 53,
+    "question": "The Public Financial Management Act (Act 921) encourages public officers to use personal funds for official business and seek reimbursement later.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. The Act emphasizes proper financial controls, meaning official expenses should generally be paid through the appropriate institutional channels and mechanisms."
+  },
+  {
+    "id": 54,
+    "question": "The use of electronic devices to store and process personal data is exempt from the Data Protection Act, provided the devices are government-owned.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. The Data Protection Act applies regardless of whether the devices are government or privately owned, as long as personal data is being processed."
+  },
+  {
+    "id": 55,
+    "question": "The National Teaching Council (NTC) Act establishes the criteria and procedures for Continuous Professional Development (CPD) for teachers.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. The NTC oversees professional standards and development, which includes the CPD framework."
+  },
+  {
+    "id": 56,
+    "question": "A public officer is permitted to publicly criticize an established government policy or program without consequence, as it is protected by freedom of speech.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. While freedom of speech is guaranteed, public service regulations often impose constraints on public criticism of government policy by serving officers, particularly if it undermines the service's reputation or efficiency."
+  },
+  {
+    "id": 57,
+    "question": "The Public Procurement Act strictly limits procurement methods to only Open Competitive Tendering.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. While Open Competitive Tendering is the preferred method, the Act allows for other methods like Restricted Tendering, Single-Source, or Request for Quotations under specific, justifiable conditions."
+  },
+  {
+    "id": 58,
+    "question": "The Constitution mandates that all appointments to the public services be made based strictly on merit and ability.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. The Constitution and Public Service Commission principles advocate for appointments based on qualifications and merit to ensure efficiency and impartiality."
+  },
+  {
+    "id": 59,
+    "question": "The payment of pension and gratuity benefits is regulated by the Social Security and National Insurance Trust (SSNIT) only.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. While SSNIT manages the basic social security scheme, pensions for certain public workers may also be covered by parallel schemes or the Pensions Act."
+  },
+  {
+    "id": 60,
+    "question": "The GES Code of Conduct encourages the use of social media to discuss and comment on confidential institutional matters.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. Public servants are generally prohibited from disclosing confidential information or commenting inappropriately on institutional matters on social media."
+  },
+  {
+    "id": 61,
+    "question": "The Right to Information Act allows a public institution to charge a fee for searching for and compiling the requested information.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. While the application to access is often free, the Act generally allows for a fee to cover the actual cost of reproducing, transcribing, or compiling the information."
+  },
+  {
+    "id": 62,
+    "question": "The Labour Act prohibits discrimination against an employee based on their gender, race, or religion.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. Non-discrimination in employment is a key principle enshrined in the Labour Act and the Constitution."
+  },
+  {
+    "id": 63,
+    "question": "The Ghana Revenue Authority (GRA) is the sole statutory body responsible for the collection of all central government taxes.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. The GRA, established by the Ghana Revenue Authority Act, is responsible for the collection of central government taxes and other revenues."
+  },
+  {
+    "id": 64,
+    "question": "Under GES regulations, professional development training must always be fully paid for by the individual staff member.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. While staff may undertake self-sponsored training, mandatory or core professional development is often funded or subsidized by the employer (GES) or the NTC."
+  },
+  {
+    "id": 65,
+    "question": "The Attorney-General is the principal legal advisor to the government and must be a practicing lawyer of at least 15 years standing.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. The Constitution outlines the role and minimum legal qualifications for the Attorney-General."
+  },
+  {
+    "id": 66,
+    "question": "The National Disaster Management Organisation (NADMO) Act mandates that every public institution must have a functional disaster preparedness plan.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. NADMO's mandate includes ensuring preparedness in all sectors, including public institutions and schools."
+  },
+  {
+    "id": 67,
+    "question": "Under the Labour Act, an employer must seek the written consent of an employee before deducting any amount from their salary for reasons other than statutory deductions.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. Deductions for things like loans, union dues, or voluntary savings require the employee's explicit written consent."
+  },
+  {
+    "id": 68,
+    "question": "The Public Financial Management Act allows the Head of an institution to use public funds for their personal travel expenses without providing receipts.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. All expenditure of public funds requires proper documentation, including receipts and supporting vouchers, for audit purposes."
+  },
+  {
+    "id": 69,
+    "question": "The Constitution grants the President immunity from civil and criminal proceedings while in office.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. Article 57(5) grants the President immunity from legal proceedings during their tenure."
+  },
+  {
+    "id": 70,
+    "question": "The National Teaching Council (NTC) is responsible for the payment of teachers' salaries and allowances.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. The GES and Controller and Accountant-General's Department are primarily responsible for salary and allowance administration."
+  },
+  {
+    "id": 71,
+    "question": "The Security and Intelligence Agencies Act, 1996 (Act 526) empowers the National Security Coordinator to investigate all allegations of financial impropriety in the public sector.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. Financial impropriety is primarily investigated by bodies like the Audit Service, CHRAJ, and the police/anti-corruption agencies, not the National Security Coordinator."
+  },
+  {
+    "id": 72,
+    "question": "The Public Procurement Authority (PPA) is only authorized to oversee procurement processes in central government ministries.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. The PPA's mandate covers all public entities, including Ministries, Departments, and Agencies (MDAs), and Metropolitan, Municipal, and District Assemblies (MMDAs)."
+  },
+  {
+    "id": 73,
+    "question": "Under the Children's Act, a child is legally defined as a person under the age of 16 years.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. The Children's Act defines a child as a person under the age of 18 years."
+  },
+  {
+    "id": 74,
+    "question": "The Ghana Education Service (GES) is statutorily required to ensure that all basic schools are supervised by professional teachers with the requisite qualifications.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "True. The GES is responsible for ensuring quality education, which includes deploying qualified and professional staff."
+  },
+  {
+    "id": 75,
+    "question": "The Public Financial Management Act strictly prohibits the retention and use of internally generated funds (IGFs) by public institutions without transfer to the Consolidated Fund.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "False. While the Act generally promotes central accounting, specific provisions or regulations may permit certain institutions to retain a portion or all of their IGFs, provided there is proper authorization."
+  }
+]

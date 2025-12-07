@@ -1,0 +1,146 @@
+const SHEET_NAME = 'Sheet1'; // *** IMPORTANT: Update this if your sheet tab is named differently ***
+const SS = SpreadsheetApp.getActiveSpreadsheet();
+const SHEET = SS.getSheetByName(SHEET_NAME);
+
+/**
+ * Main entry point for all web app POST requests.
+ * Routes the request to the correct handler ('register' or 'submitScore').
+ * @param {Object} e The event object passed by the script environment, containing request parameters.
+ */
+function doPost(e) {
+  // Ensure the script executes only if we have parameters
+  if (!e || !e.parameter) {
+    return createResponse(false, 'No parameters provided.');
+  }
+
+  try {
+    const params = e.parameter;
+    const action = params.action; // The client must send 'action=register' or 'action=submitScore'
+
+    if (action === 'register') {
+      return handleRegistration(params);
+    } else if (action === 'submitScore') {
+      return handleSubmitScore(params);
+    }
+
+    return createResponse(false, 'Invalid action specified.');
+
+  } catch (error) {
+    // Log any unexpected error
+    Logger.log('Error in doPost: ' + error.toString());
+    return createResponse(false, 'An unexpected server error occurred: ' + error.toString());
+  }
+}
+
+/**
+ * Standard utility to format and return a JSON response to the client.
+ */
+function createResponse(success, message, data = {}) {
+  const output = {
+    success: success,
+    message: message,
+    data: data
+  };
+  return ContentService.createTextOutput(JSON.stringify(output))
+                       .setMimeType(ContentService.MimeType.JSON);
+}
+
+/**
+ * Handles initial user registration. Checks if the user exists and adds a new row.
+ * Uses 0-based indexing for array reading.
+ */
+function handleRegistration(params) {
+  const email = params.email;
+  const name = params.name || 'Anonymous User'; 
+  const phoneNumber = params.phoneNumber || ''; // Expecting phoneNumber
+
+  if (!email) {
+    return createResponse(false, 'Email is required for registration.');
+  }
+
+  // Check for existing user by Email (Column C is index 2)
+  const data = SHEET.getDataRange().getValues();
+  for (let i = 1; i < data.length; i++) {
+    if (data[i][2] === email) { 
+      return createResponse(false, 'User already registered. Please submit score.');
+    }
+  }
+
+  // Create the new row array
+  const newRow = [
+    new Date(),        // A: Timestamp (0)
+    name,              // B: Name (1)
+    email,             // C: Email (2)
+    phoneNumber,       // D: Phone Number (3)
+    0,                 // E: Log-in Count (4) - Initial count is 0
+    '',                // F: Device IDs (5) - Initial list is empty
+    0,                 // G: Latest Score (6) - Initial score is 0
+    ''                 // H: Score History (7) - Initial history is empty
+  ];
+
+  SHEET.appendRow(newRow);
+  return createResponse(true, 'Registration successful! You can now submit scores.', { email: email });
+}
+
+/**
+ * Handles score submission, device tracking, and session counting.
+ * Uses 0-based indexing for array reading and 1-based indexing for getRange() writing.
+ */
+function handleSubmitScore(params) {
+  const email = params.email;
+  const newScore = parseInt(params.score); // Ensure score is treated as an integer
+  const deviceID = params.deviceID;
+
+  if (!email || isNaN(newScore) || !deviceID) {
+    return createResponse(false, 'Missing required data (email, score, or deviceID).');
+  }
+
+  const data = SHEET.getDataRange().getValues();
+  
+  // 1. Find the User Row by Email (Column C is index 2)
+  let userRowIndex = -1;
+  for (let i = 1; i < data.length; i++) {
+    if (data[i][2] === email) { 
+      userRowIndex = i;
+      break;
+    }
+  }
+
+  if (userRowIndex === -1) {
+    return createResponse(false, 'User not found. Please register first.');
+  }
+
+  const row = data[userRowIndex];
+  const rowNumber = userRowIndex + 1; // 1-based index for getRange(row, col)
+
+  // 2. Update Log-in Count (Column E is 5, index 4)
+  let currentCount = parseInt(row[4]) || 0;
+  currentCount++;
+  SHEET.getRange(rowNumber, 5).setValue(currentCount); // Column E
+
+  // 3. Track Unique Device ID (Column F is 6, index 5)
+  let currentDevices = row[5] || '';
+  const deviceArray = currentDevices.split(',').map(d => d.trim()).filter(d => d);
+  let newDevice = false;
+
+  if (!deviceArray.includes(deviceID)) {
+    deviceArray.push(deviceID);
+    SHEET.getRange(rowNumber, 6).setValue(deviceArray.join(', ')); // Column F
+    newDevice = true;
+  }
+  
+  // 4. Update Latest Score (Column G is 7, index 6)
+  SHEET.getRange(rowNumber, 7).setValue(newScore); // Column G
+  
+  // 5. Update Score History (Column H is 8, index 7)
+  let history = row[7] || '';
+  history += (history ? ' | ' : '') + `${new Date().toLocaleDateString()} (${newScore})`;
+  SHEET.getRange(rowNumber, 8).setValue(history); // Column H
+
+
+  return createResponse(true, 'Score submitted successfully!', {
+    sessionCount: currentCount,
+    latestScore: newScore,
+    newDevice: newDevice
+  });
+}

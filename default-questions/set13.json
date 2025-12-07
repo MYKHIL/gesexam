@@ -1,0 +1,829 @@
+[
+  {
+    "id": 1,
+    "question": "The three-tier management structure of the GES includes Headquarters, Regional Offices, and which third level?",
+    "options": {
+      "A": "Zonal Offices",
+      "B": "Ministerial Oversight Committee",
+      "C": "District Education Offices",
+      "D": "School Boards"
+    },
+    "answer": "C",
+    "explanation": "The administrative structure is Headquarters, Regional Education Offices, and District Education Offices."
+  },
+  {
+    "id": 2,
+    "question": "True or False: The Head of School is automatically relieved of their duties if the school records a 0% pass rate in the Basic Education Certificate Examination (BECE).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While poor performance triggers investigation and performance review, automatic relief is not the standard procedure; disciplinary or performance management processes must be followed."
+  },
+  {
+    "id": 3,
+    "question": "Which of these is the primary statutory document defining a teacher's ethical obligations and professional deportment?",
+    "options": {
+      "A": "The National Education Strategic Plan (NESP)",
+      "B": "The Conditions of Service",
+      "C": "The GES Code of Professional Conduct",
+      "D": "The Public Financial Management Act"
+    },
+    "answer": "C",
+    "explanation": "The Code of Professional Conduct specifically sets out the expected ethical behavior and duties for GES staff."
+  },
+  {
+    "id": 4,
+    "question": "True or False: Teachers are allowed to mark students' scripts during instructional time in class, provided the students are working on a quiet assignment.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Instructional time must be fully dedicated to teaching, interaction, and supervision. Marking scripts should be done outside of contact hours."
+  },
+  {
+    "id": 5,
+    "question": "Continuous Professional Development (CPD) activities, required for license renewal, are primarily tracked and recorded in the:",
+    "options": {
+      "A": "School Log Book",
+      "B": "Teacher's Personal Portfolio/CPD Log",
+      "C": "District Director's Diary",
+      "D": "National Treasury Register"
+    },
+    "answer": "B",
+    "explanation": "Teachers must maintain a personal portfolio or log to document all CPD activities and accrued points for the NTC."
+  },
+  {
+    "id": 6,
+    "question": "True or False: A teacher who successfully completes a master's degree program is guaranteed an automatic promotion to the next rank.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Promotion is based on meeting the minimum qualification, vacancy availability, satisfactory performance (APAR), and success in the required promotion interview/exam, not solely on acquiring a higher degree."
+  },
+  {
+    "id": 7,
+    "question": "The concept of 'Child-Centered Pedagogy' primarily emphasizes which of the following?",
+    "options": {
+      "A": "Teacher lecturing and note-taking.",
+      "B": "Rote memorization of facts.",
+      "C": "Active participation, hands-on learning, and the student's needs.",
+      "D": "Strict adherence to standardized testing."
+    },
+    "answer": "C",
+    "explanation": "Child-Centered Pedagogy focuses on the learner's needs, interests, and active involvement in the construction of knowledge."
+  },
+  {
+    "id": 8,
+    "question": "True or False: The official working hours for GES teaching staff are strictly 8:00 AM to 5:00 PM, Monday to Friday.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "explanation": "B",
+    "answer": "B",
+    "explanation": "While there are minimum working hours, teachers are required to work the hours necessary to complete all assigned duties, including extracurricular activities, meetings, and prep work, which often extend beyond standard office hours."
+  },
+  {
+    "id": 9,
+    "question": "In financial management, 'Internal Generated Funds' (IGF) typically refer to money collected from which source?",
+    "options": {
+      "A": "The Ministry of Finance directly.",
+      "B": "School levies, rent from school properties, and specific authorized fees.",
+      "C": "Salaries of teaching staff.",
+      "D": "GETFund disbursements."
+    },
+    "answer": "B",
+    "explanation": "IGF is revenue generated internally by the school through authorized activities and charges, supplementing government subventions."
+  },
+  {
+    "id": 10,
+    "question": "True or False: The use of mobile phones by students is officially banned in all Senior High Schools (SHS) during instructional hours.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While restrictions exist, recent policies have allowed controlled usage of mobile phones, particularly in boarding houses or for educational purposes, depending on the school's internal rules."
+  },
+  {
+    "id": 11,
+    "question": "Which officer is responsible for ensuring that all teachers submit their Scheme of Work and Lesson Notes on time?",
+    "options": {
+      "A": "The District Transport Officer",
+      "B": "The Head of School or their designated Assistant/HOD",
+      "C": "The PTA Secretary",
+      "D": "The Ministry of Health Liaison"
+    },
+    "answer": "B",
+    "explanation": "Supervision of planning documents (Scheme of Work and Lesson Notes) is a core duty of the school leadership."
+  },
+  {
+    "id": 12,
+    "question": "True or False: A staff member applying for 'No Pay Leave' is automatically entitled to receive it, regardless of the Service's needs.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "'No Pay Leave' (Leave Without Pay) is granted at the discretion of the Service, considering the impact on instructional delivery and school operations."
+  },
+  {
+    "id": 13,
+    "question": "The process of 'Vetting' Lesson Notes primarily aims to assess the teacher's:",
+    "options": {
+      "A": "Personal handwriting style.",
+      "B": "Adherence to the curriculum, appropriate methodology, and logical sequencing.",
+      "C": "Knowledge of the school's kitchen menu.",
+      "D": "Ability to operate the school bus."
+    },
+    "answer": "B",
+    "explanation": "Vetting is a quality assurance mechanism focusing on curriculum fidelity and pedagogical quality."
+  },
+  {
+    "id": 14,
+    "question": "True or False: A teacher on interdiction (suspension) is forbidden from entering the school premises for any reason, including collecting personal belongings.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Interdiction typically includes a ban on entering the workplace without the express written permission of the appointing authority, as the staff member is officially removed from all duties and premises."
+  },
+  {
+    "id": 15,
+    "question": "Which institution is responsible for examining and certifying candidates at the end of the Senior High School (SHS) level?",
+    "options": {
+      "A": "GES",
+      "B": "National Council for Curriculum and Assessment (NaCCA)",
+      "C": "West African Examinations Council (WAEC)",
+      "D": "National Teaching Council (NTC)"
+    },
+    "answer": "C",
+    "explanation": "WAEC conducts the West African Senior School Certificate Examination (WASSCE)."
+  },
+  {
+    "id": 16,
+    "question": "True or False: A teacher must secure the Head of School's permission before posting confidential information about a student's academic performance online.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Confidential information about students, especially their academic performance, should never be posted online, with or without permission. This violates privacy and professional ethics."
+  },
+  {
+    "id": 17,
+    "question": "The GES policy on 'Inclusion' mandates the mainstreaming of students with Special Educational Needs (SEN) into regular classrooms, supported by:",
+    "options": {
+      "A": "No specific resources.",
+      "B": "Specialized teaching methods and appropriate resource support.",
+      "C": "A fee payment from the parents.",
+      "D": "Weekly transfers to special schools."
+    },
+    "answer": "B",
+    "explanation": "Inclusion requires providing necessary resources, infrastructure, and specialized pedagogical support (differentiated instruction) to enable effective learning for SEN students."
+  },
+  {
+    "id": 18,
+    "question": "True or False: A GES staff member can be legally married to another GES staff member in the same school or office.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "They can be married, but they must avoid situations where one spouse is in a direct supervisory role over the other to prevent conflicts of interest."
+  },
+  {
+    "id": 19,
+    "question": "What is the name of the official register maintained by the school, documenting daily administrative decisions, inspection visits, and major incidents?",
+    "options": {
+      "A": "The Scheme of Work",
+      "B": "The School Log Book",
+      "C": "The Cumulative Record Card",
+      "D": "The Class Attendance Register"
+    },
+    "answer": "B",
+    "explanation": "The School Log Book is the official record of the daily life and administrative actions of the school."
+  },
+  {
+    "id": 20,
+    "question": "True or False: The process of applying for a promotion is initiated by the GES Headquarters without the need for the individual staff member to apply.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Promotions are generally applied for by the eligible staff member upon meeting the requirements and when vacancies are declared/advertised."
+  },
+  {
+    "id": 21,
+    "question": "The primary goal of the school's Guidance and Counselling unit regarding student indiscipline is:",
+    "options": {
+      "A": "To impose severe fines.",
+      "B": "To expel all errant students immediately.",
+      "C": "To correct behaviour through counseling, mediation, and behaviour modification strategies.",
+      "D": "To publicly shame students."
+    },
+    "answer": "C",
+    "explanation": "Counselling focuses on corrective, rehabilitative, and supportive strategies rather than punitive measures."
+  },
+  {
+    "id": 22,
+    "question": "True or False: All teacher transfers are centrally managed by the GES Headquarters; District Directors have no authority to approve transfers.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While inter-regional transfers are usually handled centrally/regionally, intra-district transfers are often managed and approved by the District Director, subject to staffing norms."
+  },
+  {
+    "id": 23,
+    "question": "Which of these is NOT a core component of the Standard-Based Curriculum structure in Ghana?",
+    "options": {
+      "A": "Content Standards",
+      "B": "Indicators",
+      "C": "The Curriculum Framework",
+      "D": "Private Tuition Modules"
+    },
+    "answer": "D",
+    "explanation": "Private tuition modules are not an official component of the National Curriculum structure developed by NaCCA."
+  },
+  {
+    "id": 24,
+    "question": "True or False: Upon retirement, a GES staff member is allowed to keep all government property (laptop, furniture, etc.) that was issued to them for official use.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "All government property must be formally handed over to the Head of School or the relevant authority upon separation from the Service."
+  },
+  {
+    "id": 25,
+    "question": "The financial instrument used by schools to record and account for all money received from various sources is the:",
+    "options": {
+      "A": "Annual Performance Appraisal Report (APAR)",
+      "B": "Official Receipt Book/Payment Voucher",
+      "C": "The Scheme of Service",
+      "D": "The School Canteen Rota"
+    },
+    "answer": "B",
+    "explanation": "Official Receipt Books are mandatory for acknowledging and recording all financial receipts, a key part of financial accountability."
+  },
+  {
+    "id": 26,
+    "question": "True or False: Teachers are required to attend and actively participate in all Parent-Teacher Association (PTA) meetings.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Attendance and participation in PTA meetings are professional duties, fostering collaboration between the school and parents."
+  },
+  {
+    "id": 27,
+    "question": "If a teacher needs to be absent from duty due to a sudden emergency, the correct procedure is to:",
+    "options": {
+      "A": "Simply not turn up and wait for the Head to call.",
+      "B": "Inform the Head of School immediately and seek retroactive approval for the absence.",
+      "C": "Send a notice to the District Director directly.",
+      "D": "Tell a student to inform a colleague."
+    },
+    "answer": "B",
+    "explanation": "Immediate notification and subsequent formal approval by the Head of School (or HOD) is required for unexpected absences."
+  },
+  {
+    "id": 28,
+    "question": "True or False: The maximum amount of paid 'Casual Leave' (short-term, unplanned) that can be granted in a year is 28 working days.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Casual leave is usually very restricted, often limited to 5-10 working days maximum per year for urgent personal business."
+  },
+  {
+    "id": 29,
+    "question": "The use of the Mother Tongue (Indigenous Ghanaian Language) as the medium of instruction is mandatory up to which grade level?",
+    "options": {
+      "A": "JHS 3",
+      "B": "Primary 1",
+      "C": "Primary 3",
+      "D": "SHS 1"
+    },
+    "answer": "C",
+    "explanation": "From KG to Primary 3, the mother tongue is the mandatory language of instruction (L1); English takes over from Primary 4."
+  },
+  {
+    "id": 30,
+    "question": "True or False: Teachers are strictly forbidden from receiving or handling money from students for any reason, including approved school fees or levies.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While Headteachers/Accountants are the primary financial custodians, teachers often collect authorized monies (like textbook fees or school levies) from students, which must be immediately accounted for and handed over to the Bursar/Accountant."
+  },
+  {
+    "id": 31,
+    "question": "Which term describes the systematic monitoring of a teacher's classroom performance by a supervisor (e.g., Head or Circuit Supervisor)?",
+    "options": {
+      "A": "Curriculum Design",
+      "B": "Instructional Supervision/Inspection",
+      "C": "Financial Auditing",
+      "D": "Student Enrollment"
+    },
+    "answer": "B",
+    "explanation": "Instructional Supervision is the process of observing and assessing the quality of teaching and learning in the classroom."
+  },
+  {
+    "id": 32,
+    "question": "True or False: The GES is responsible for ensuring that all public school buildings meet minimum safety and structural standards.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "GES, in collaboration with the District Assemblies and MoE, is responsible for the provision and maintenance of safe school infrastructure."
+  },
+  {
+    "id": 33,
+    "question": "If a student fails to meet the expected learning standards (Indicators) during an assessment, the teacher must implement:",
+    "options": {
+      "A": "Immediate expulsion.",
+      "B": "Punishment without academic support.",
+      "C": "Remedial teaching/Intervention strategies.",
+      "D": "A call to the Regional Minister."
+    },
+    "answer": "C",
+    "explanation": "The standard pedagogical response to learning deficits is targeted intervention or remedial teaching to address specific gaps."
+  },
+  {
+    "id": 34,
+    "question": "True or False: The *minimum* age for compulsory basic education in Ghana is set at 4 years (starting KG 1).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Compulsory basic education officially begins at Kindergarten 1, typically for children aged 4."
+  },
+  {
+    "id": 35,
+    "question": "The 'School Performance Appraisal Meeting' (SPAM) requires participation from which key stakeholders?",
+    "options": {
+      "A": "Only the Headteacher and the DDE.",
+      "B": "The School Board/SMC, PTA, community representatives, and staff.",
+      "C": "Only the students.",
+      "D": "The Minister of Finance."
+    },
+    "answer": "B",
+    "explanation": "SPAM is designed as a broad accountability forum involving all relevant stakeholders for review and planning."
+  },
+  {
+    "id": 36,
+    "question": "True or False: In a disciplinary hearing, the staff member accused of misconduct has the right to be heard and to present evidence in their defense.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Due process (the right to be heard - *audi alteram partem*) is a fundamental principle in all GES disciplinary procedures."
+  },
+  {
+    "id": 37,
+    "question": "Which of these is considered a serious breach of the professional Code of Conduct related to financial matters?",
+    "options": {
+      "A": "Buying a soft drink during lunch.",
+      "B": "Misappropriation of school funds/property.",
+      "C": "Wearing a non-standard colour shoe.",
+      "D": "Leaving school exactly at 4:00 PM."
+    },
+    "answer": "B",
+    "explanation": "Financial misconduct, such as embezzlement or misappropriation, is a high-level offense leading to dismissal and prosecution."
+  },
+  {
+    "id": 38,
+    "question": "True or False: Teachers are allowed to use official school headed paper and stamps for personal correspondence or private business transactions.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The use of official seals, letterheads, and stamps for personal or unauthorized purposes is strictly forbidden as it constitutes misuse of public property and potentially fraud."
+  },
+  {
+    "id": 39,
+    "question": "The 'Scheme of Work' is a planning tool that outlines the curriculum content to be covered over what period?",
+    "options": {
+      "A": "Daily",
+      "B": "Weekly",
+      "C": "Termly/Annually",
+      "D": "The next five years"
+    },
+    "answer": "C",
+    "explanation": "The Scheme of Work is the medium- to long-term plan (termly or annually) detailing the topics and timing of instruction."
+  },
+  {
+    "id": 40,
+    "question": "True or False: A staff member who is found guilty of misconduct after an interdiction period is required to refund the two-thirds salary paid during that period.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The two-thirds salary is usually treated as an advance or subsistence payment during the suspension and is not typically refundable even upon conviction, although the ultimate sanction may be dismissal."
+  },
+  {
+    "id": 41,
+    "question": "Which of the following is an expected professional behavior when dealing with colleagues?",
+    "options": {
+      "A": "Spreading malicious rumours.",
+      "B": "Showing mutual respect, collaboration, and professional courtesy.",
+      "C": "Refusing to share instructional materials.",
+      "D": "Constantly undermining authority."
+    },
+    "answer": "B",
+    "explanation": "Professionalism requires constructive and respectful interaction with all colleagues."
+  },
+  {
+    "id": 42,
+    "question": "True or False: The Head of School must personally sign every single official document (e.g., student reports, transfer requests) issued by the school.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While the Head is ultimately responsible, they often delegate signing authority for routine documents to Assistant Heads or Heads of Department."
+  },
+  {
+    "id": 43,
+    "question": "The key principle guiding the selection of teaching methodologies in the classroom is:",
+    "options": {
+      "A": "Using only the method the teacher prefers.",
+      "B": "The method must align with the learning objectives (Indicators) and student needs.",
+      "C": "The cheapest method available.",
+      "D": "A method that requires no student effort."
+    },
+    "answer": "B",
+    "explanation": "Pedagogical choices must be deliberate and aligned with the intended learning outcomes and the developmental stage of the learners."
+  },
+  {
+    "id": 44,
+    "question": "True or False: If a staff member fails to report to a new post after a mandatory transfer, they are immediately eligible for another transfer request back to their old station.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Failure to report to a mandatory transfer is grounds for disciplinary action (Refusal to obey lawful instructions), not eligibility for another transfer."
+  },
+  {
+    "id": 45,
+    "question": "The primary objective of providing 'Teaching and Learning Materials' (TLMs) to schools is to:",
+    "options": {
+      "A": "Decorate the classroom.",
+      "B": "Facilitate and enhance the teaching and learning process.",
+      "C": "Increase the school's property inventory value.",
+      "D": "Provide gifts to the Circuit Supervisor."
+    },
+    "answer": "B",
+    "explanation": "TLMs are crucial instructional aids designed to make abstract concepts concrete and support various learning styles."
+  },
+  {
+    "id": 46,
+    "question": "True or False: The use of unauthorized textbooks or materials, especially those containing political propaganda, is permitted if the teacher deems them useful.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Only NaCCA-approved curriculum materials and textbooks should be used. Unauthorized content, especially political or religious propaganda, is strictly forbidden."
+  },
+  {
+    "id": 47,
+    "question": "A staff member who requires time off for mandatory jury service is typically granted which type of leave?",
+    "options": {
+      "A": "Annual Leave",
+      "B": "Casual Leave",
+      "C": "Special/Official Duty Leave (often with pay)",
+      "D": "Study Leave"
+    },
+    "answer": "C",
+    "explanation": "Mandatory civic duties are usually covered under special leave provisions."
+  },
+  {
+    "id": 48,
+    "question": "True or False: The Parent-Teacher Association (PTA) has the authority to directly manage and administer government-subvented funds (Capitation Grant).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Government funds (like the Capitation Grant) are managed by the Head of School/GES and are subject to public financial regulations, not direct PTA administration."
+  },
+  {
+    "id": 49,
+    "question": "The most effective method for a teacher to ensure all students grasp a complex concept is to use:",
+    "options": {
+      "A": "A single, rapid lecture.",
+      "B": "Differentiated Instruction (varying methods and pace for different needs).",
+      "C": "Threats of severe punishment.",
+      "D": "Only independent research assignments."
+    },
+    "answer": "B",
+    "explanation": "Differentiated instruction caters to the diverse learning styles and readiness levels present in the classroom."
+  },
+  {
+    "id": 50,
+    "question": "True or False: When resigning from the GES, a staff member must give exactly three (3) months' written notice.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The standard public service regulation typically requires three months' notice for resignation, or payment in lieu of notice."
+  },
+  {
+    "id": 51,
+    "question": "Which GES officer is the liaison between the schools in a circuit and the District Education Directorate?",
+    "options": {
+      "A": "The Accountant General",
+      "B": "The Circuit Supervisor (CS)",
+      "C": "The Regional Minister",
+      "D": "The Head of SHS"
+    },
+    "answer": "B",
+    "explanation": "The CS is the direct supervisory link between the cluster of schools and the District Director."
+  },
+  {
+    "id": 52,
+    "question": "True or False: It is a breach of conduct for a teacher to engage in private tuition (extra classes) for their own students for monetary gain.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Teaching the same students privately for pay is highly discouraged or prohibited, as it can lead to conflicts of interest, neglecting in-class duties, and exploiting students."
+  },
+  {
+    "id": 53,
+    "question": "What is the primary role of the National Council for Curriculum and Assessment (NaCCA)?",
+    "options": {
+      "A": "Paying teachers' salaries.",
+      "B": "Developing and assessing the national pre-tertiary curriculum.",
+      "C": "Managing school infrastructure.",
+      "D": "Issuing teacher licenses."
+    },
+    "answer": "B",
+    "explanation": "NaCCA's mandate is centered on curriculum development, review, and assessment alignment."
+  },
+  {
+    "id": 54,
+    "question": "True or False: Teachers are required to seek parental permission before taking students on a short, official school excursion within the local community.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Parental consent is mandatory for all off-site school activities to cover liability and inform parents of the location and risk."
+  },
+  {
+    "id": 55,
+    "question": "The 'Cumulative Record Card' for a student should follow them to which subsequent educational level?",
+    "options": {
+      "A": "Only the next class grade.",
+      "B": "Only JHS, then it is destroyed.",
+      "C": "SHS and possibly Tertiary Education (as a confidential record).",
+      "D": "Nowhere, it is purely for internal use."
+    },
+    "answer": "C",
+    "explanation": "The Cumulative Record Card is designed to be a continuous, confidential record that follows the student through their entire pre-tertiary education."
+  },
+  {
+    "id": 56,
+    "question": "True or False: A teacher on Study Leave with Pay continues to accrue annual leave during their study period.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Staff on Study Leave are usually considered non-operational and do not accrue annual leave entitlement for the duration of the leave."
+  },
+  {
+    "id": 57,
+    "question": "The GES policy on 'Performance Contracting' is primarily targeted at which level of management?",
+    "options": {
+      "A": "Only Primary 1 teachers.",
+      "B": "High-level management (e.g., Regional Directors, District Directors).",
+      "C": "All students.",
+      "D": "PTA executives."
+    },
+    "answer": "B",
+    "explanation": "Performance contracts are a management tool used to set clear, measurable targets for senior administrative and operational leaders."
+  },
+  {
+    "id": 58,
+    "question": "True or False: Misconduct related to drug or alcohol abuse on school premises is considered a minor offense, subject only to a verbal warning.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Drug/alcohol abuse on public premises, especially a school, is a serious offense that warrants severe disciplinary action, including potential dismissal."
+  },
+  {
+    "id": 59,
+    "question": "What is the term for the financial loss suffered by the Service due to the negligence of a staff member that the staff member is required to repay?",
+    "options": {
+      "A": "Bonus",
+      "B": "Salary Advance",
+      "C": "Surcharge",
+      "D": "Pension"
+    },
+    "answer": "C",
+    "explanation": "A surcharge is a formal demand for restitution of public funds/property lost due to the officer's negligence or carelessness."
+  },
+  {
+    "id": 60,
+    "question": "True or False: A teacher has the right to refuse to teach a subject assigned to them if they believe it is outside their area of specialization.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Teachers are public servants and must carry out all lawful instructions and assigned duties, including teaching subjects where there is a staffing need, as long as it is within reasonable professional expectation."
+  },
+  {
+    "id": 61,
+    "question": "The primary role of the Assistant Headmaster/Headmistress (Administration) in an SHS is to oversee:",
+    "options": {
+      "A": "Student feeding and academic results.",
+      "B": "Staff welfare, school logistics, and general administrative matters.",
+      "C": "The development of the national curriculum.",
+      "D": "The appointment of the School Board."
+    },
+    "answer": "B",
+    "explanation": "This role focuses on non-academic administrative support, staff issues, and managing school logistics."
+  },
+  {
+    "id": 62,
+    "question": "True or False: The Head of School must obtain a police report before initiating any internal disciplinary action against a staff member accused of misconduct.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Internal administrative and disciplinary action can and often must proceed independently of a police investigation, although severe cases require notification to law enforcement."
+  },
+  {
+    "id": 63,
+    "question": "The concept of 'Learning Outcomes' in the curriculum specifies:",
+    "options": {
+      "A": "The exact time a lesson should end.",
+      "B": "What the students are expected to know, understand, and be able to do after a learning period.",
+      "C": "The annual school budget.",
+      "D": "The salary scale for teachers."
+    },
+    "answer": "B",
+    "explanation": "Learning outcomes define the measurable skills and knowledge acquired by the student."
+  },
+  {
+    "id": 64,
+    "question": "True or False: All GES staff are entitled to fully paid paternity leave of five working days upon the birth of a child.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Paternity leave of 5 working days is an official entitlement for male public servants upon the birth of a child."
+  },
+  {
+    "id": 65,
+    "question": "The primary purpose of the 'Staff Attendance Register' is for the Head of School to document and verify:",
+    "options": {
+      "A": "The teacher's bank balance.",
+      "B": "The teacher's daily presence and working hours.",
+      "C": "The student's homework completion.",
+      "D": "The weather conditions."
+    },
+    "answer": "B",
+    "explanation": "The register is an official record of accountability regarding staff attendance and punctuality."
+  },
+  {
+    "id": 66,
+    "question": "True or False: Teachers are allowed to accept payment from students' parents for providing supplementary resources (like worksheets or printouts) needed for instruction.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Any additional levies or charges for instructional materials must be officially sanctioned by the GES authority and the School Board/SMC; teachers cannot impose charges unilaterally."
+  },
+  {
+    "id": 67,
+    "question": "The principle of 'Whole School Development' emphasizes that improvement efforts must focus on:",
+    "options": {
+      "A": "Only the Headteacher.",
+      "B": "All aspects of the school, including academic, infrastructure, and community relations.",
+      "C": "Only the sports team.",
+      "D": "The district office budget."
+    },
+    "answer": "B",
+    "explanation": "WSD views the school holistically, requiring simultaneous improvement across all operational and instructional domains."
+  },
+  {
+    "id": 68,
+    "question": "True or False: A staff member on sick leave is required to submit a medical certificate only if the leave exceeds two consecutive working days.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The standard requirement is a medical certificate for sick leave exceeding 48 hours (two working days)."
+  },
+  {
+    "id": 69,
+    "question": "In the GES structure, who is directly responsible for the implementation of the Free Senior High School (FSHS) policy at the school level?",
+    "options": {
+      "A": "The Minister of Education",
+      "B": "The Head of School",
+      "C": "The PTA Chairman",
+      "D": "The President of the Republic"
+    },
+    "answer": "B",
+    "explanation": "The Head of School is the chief executive officer responsible for the day-to-day implementation of all national policies, including FSHS."
+  },
+  {
+    "id": 70,
+    "question": "True or False: Teachers must wear professional attire and maintain a tidy appearance at all times while on duty.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Maintaining a professional and appropriate appearance is a mandatory requirement under the Code of Conduct."
+  },
+  {
+    "id": 71,
+    "question": "Which of these is the appropriate channel for a teacher to lodge a formal grievance (complaint) against their Head of School?",
+    "options": {
+      "A": "Post it on social media.",
+      "B": "Write to the District Director of Education (DDE).",
+      "C": "Tell the students to strike.",
+      "D": "Inform the media."
+    },
+    "answer": "B",
+    "explanation": "Formal grievances should be lodged with the immediate superior of the Head of School, which is typically the District Director."
+  },
+  {
+    "id": 72,
+    "question": "True or False: The duration of 'Maternity Leave' is deducted from the teacher's annual leave entitlement.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Maternity leave is a separate statutory entitlement and cannot be deducted from annual leave."
+  },
+  {
+    "id": 73,
+    "question": "The primary focus of a 'Summative Assessment' is to:",
+    "options": {
+      "A": "Give immediate feedback for improvement.",
+      "B": "Diagnose prior knowledge.",
+      "C": "Evaluate student learning against standards at the end of an instructional period.",
+      "D": "Encourage group work."
+    },
+    "answer": "C",
+    "explanation": "Summative assessment is 'assessment of learning' used to certify mastery or achievement."
+  },
+  {
+    "id": 74,
+    "question": "True or False: Any teaching staff member who intends to further their education must first obtain a 'Release Letter' from the GES before starting their program.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Official permission or release (e.g., Study Leave or Release Letter) is mandatory to ensure the Service is aware and has approved the staff member's temporary absence from post."
+  },
+  {
+    "id": 75,
+    "question": "The official document that outlines the required qualification criteria for promotion to various grades (e.g., Principal Superintendent) is the:",
+    "options": {
+      "A": "School Log Book",
+      "B": "GES Scheme of Service",
+      "C": "Students' Hand Book",
+      "D": "WAEC Syllabus"
+    },
+    "answer": "B",
+    "explanation": "The Scheme of Service defines the necessary experience, qualifications, and duties for career progression."
+  }
+]

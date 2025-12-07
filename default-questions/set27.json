@@ -1,0 +1,862 @@
+[
+  {
+    "id": 1,
+    "question": "The Education Regulatory Bodies Act, 2020 (Act 1023) is an Act that ",
+    "options": {
+      "A": "Establishes the Commission for Technical and Vocational Education and Training",
+      "B": "Establishes the National Accreditation Board",
+      "C": "Merges the Ghana Tertiary Education Commission",
+      "D": "Merges the National Teaching Council and the National Inspectorate Board"
+    },
+    "answer": "A",
+    "explanation": "Act 1023 establishes the Commission for Technical and Vocational Education and Training (CTVET) to regulate TVET institutions and programs in Ghana."
+  },
+  {
+    "id": 2,
+    "question": "Which of the following is NOT a function of the National Teaching Council (NTC)?",
+    "options": {
+      "A": "Accredit institutions offering teacher education and development programmes",
+      "B": "Issue license and accreditation to pre-tertiary institutions in Ghana",
+      "C": "Issue temporary certification to unqualified persons who desire to teach",
+      "D": "Provide the framework for the development of teacher education curriculum"
+    },
+    "answer": "B",
+    "explanation": "NTC licenses individual teachers, not institutions. Institutional accreditation is the responsibility of the Ghana Tertiary Education Commission (GTEC) and CTVET."
+  },
+  {
+    "id": 3,
+    "question": "The National Teaching Council Board may suspend the registration of a teacher ",
+    "options": {
+      "A": "When an allegation of misconduct in relation to the teacher is reported",
+      "B": "When the teacher has applied for a transfer to another school district",
+      "C": "When the teacher has been appointed as a school head",
+      "D": "When the teacher has made a false declaration in an application for registration"
+    },
+    "answer": "A",
+    "explanation": "NTC can suspend registration pending investigation when a serious allegation of professional misconduct is reported to protect learners and maintain standards."
+  },
+  {
+    "id": 4,
+    "question": "Which of the following is true about the focus of the inspection panels of the National Schools Inspectorate Authority (NaSIA)? I. The quality of teaching and learning provided in pre-tertiary institutions II. The qualification of teachers in pre-tertiary institutions III. The facilities available in pre-tertiary institutions IV. The system of internal and external examinations",
+    "options": {
+      "A": "I and II only",
+      "B": "II and III only",
+      "C": "I, II and III only",
+      "D": "I, III, and IV only"
+    },
+    "answer": "D",
+    "explanation": "NaSIA focuses on quality of teaching/learning, infrastructure/facilities, and assessment systems. Teacher qualifications are NTC's responsibility."
+  },
+  {
+    "id": 5,
+    "question": "Which statement best describes the primary activity undertaken by the Ghana Education Service (GES)?",
+    "options": {
+      "A": "Develop national curriculum for the pre-tertiary level",
+      "B": "Formulate approved policies and programmes for the pre-tertiary level",
+      "C": "Implement approved national policies and programmes for the pre-tertiary level",
+      "D": "Prepare approved salary structure for teachers at the pre-tertiary level"
+    },
+    "answer": "C",
+    "explanation": "GES is primarily an implementation agency, executing policies formulated by the Ministry of Education and regulatory bodies."
+  },
+  {
+    "id": 6,
+    "question": "Teachers facilitate learning in the classroom when ",
+    "options": {
+      "A": "Students help in establishing classroom guidelines",
+      "B": "A student's destructive behaviour is addressed at the end of the class",
+      "C": "Verbal communication serves as the only means of communication",
+      "D": "Scheme of work replaces lesson plan"
+    },
+    "answer": "A",
+    "explanation": "Student participation in establishing rules creates ownership, responsibility, and a positive learning environment that facilitates engagement."
+  },
+  {
+    "id": 7,
+    "question": "Peer teaching as a classroom management strategy is adopted in situations where ",
+    "options": {
+      "A": "Top performers can help educate and engage struggling students",
+      "B": "Colleague teachers can teach the same topic",
+      "C": "The class teacher has to attend a staff meeting",
+      "D": "The class teacher is making assignments"
+    },
+    "answer": "A",
+    "explanation": "Peer teaching leverages high-achieving students to support struggling peers, reinforcing learning for both while managing diverse needs."
+  },
+  {
+    "id": 8,
+    "question": "A mentor teacher uses a strategy shifting responsibility from teacher to students through focused instruction, guided instruction, collaborative learning, and independent learning. The observed teaching strategy moves through sequential stages of ",
+    "options": {
+      "A": "Focused instruction; guided instruction; collaborative learning; independent learning",
+      "B": "Guided instruction; focused instruction; collaborative learning; independent learning",
+      "C": "Focused instruction; collaborative learning; guided instruction; independent learning",
+      "D": "Guided instruction; independent learning; focused instruction; collaborative learning"
+    },
+    "answer": "A",
+    "explanation": "The Gradual Release of Responsibility Model follows this sequence: 'I do, we do together, you do together, you do alone.'"
+  },
+  {
+    "id": 9,
+    "question": "What is the intended outcome of the gradual release teaching strategy?",
+    "options": {
+      "A": "To strengthen efficacy to transfer understanding",
+      "B": "To promote independent studies",
+      "C": "To allow teachers time to prepare schemes of learning",
+      "D": "To allow interaction time between teachers and students"
+    },
+    "answer": "B",
+    "explanation": "The ultimate goal is developing self-directed, independent learners who can apply skills without teacher scaffolding."
+  },
+  {
+    "id": 10,
+    "question": "Which is NOT a benefit of the gradual release teaching strategy?",
+    "options": {
+      "A": "Improvement of academic performance",
+      "B": "Increased student motivation and confidence",
+      "C": "Increased student dependency on teachers",
+      "D": "Increased student chances to be creative"
+    },
+    "answer": "C",
+    "explanation": "The strategy intentionally reduces dependency; increased dependency would indicate implementation failure."
+  },
+  {
+    "id": 11,
+    "question": "A mentor teacher uses a strategy shifting responsibility from teacher to students through focused instruction, guided instruction, collaborative learning, and independent learning. Which teaching strategy was adopted by the mentor teacher?",
+    "options": {
+      "A": "Differentiated instruction",
+      "B": "Gradual responsibility release",
+      "C": "Team teaching",
+      "D": "Cooperative learning"
+    },
+    "answer": "B",
+    "explanation": "The described sequence is the Gradual Release of Responsibility (GRR) framework, also called 'scaffolded instruction.'"
+  },
+  {
+    "id": 12,
+    "question": "The gradual release strategy enables students to learn: I. Social skills by interacting II. To be independent from the teacher III. To think for themselves IV. Focus only on knowledge acquisition",
+    "options": {
+      "A": "I and II only",
+      "B": "I, II and III only",
+      "C": "I, II, III and IV",
+      "D": "IV only"
+    },
+    "answer": "B",
+    "explanation": "The strategy develops social interaction, independence, and critical thinking. It does NOT limit students to knowledge acquisition only."
+  },
+  {
+    "id": 13,
+    "question": "Which is NOT a principle in managing classrooms?",
+    "options": {
+      "A": "Preparing lesson notes",
+      "B": "Focusing on building relationships",
+      "C": "Setting boundaries and expectations",
+      "D": "Taking a strength-based approach"
+    },
+    "answer": "A",
+    "explanation": "Preparing lesson notes is instructional planning, not a classroom management principle. Management principles focus on relationships, expectations, and positive approaches."
+  },
+  {
+    "id": 14,
+    "question": "Which is NOT an approach to teacher assertive strategy in managing the classroom?",
+    "options": {
+      "A": "Students suggest rules around guidelines",
+      "B": "Teachers' expectations are explicitly stated",
+      "C": "There are positive and negative consequences depending on behaviour",
+      "D": "Teachers implement clear structure"
+    },
+    "answer": "A",
+    "explanation": "Assertive strategy is teacher-led. Student suggestion of rules is a democratic approach, not assertive."
+  },
+  {
+    "id": 15,
+    "question": "A teacher adopting student self-discipline approach believes that ",
+    "options": {
+      "A": "Students can be trusted to evaluate and change their actions",
+      "B": "Students can be trusted to mete out punishment",
+      "C": "Teachers resume full responsibility for regulating the classroom",
+      "D": "Teacher will design well-planned lesson instruction"
+    },
+    "answer": "A",
+    "explanation": "Self-discipline approaches develop student autonomy and self-regulation through trust and gradual responsibility."
+  },
+  {
+    "id": 16,
+    "question": "Which statement about discipline and punishment is correct?",
+    "options": {
+      "A": "Discipline is responsibility of district director, punishment is school",
+      "B": "Discipline is responsibility of school head, punishment is district",
+      "C": "Discipline focuses on promoting positive behaviour, punishment focuses on imposing controls",
+      "D": "Discipline focuses on imposing controls, punishment focuses on promoting positive behaviour"
+    },
+    "answer": "C",
+    "explanation": "Discipline is proactive and educational; punishment is reactive and controlling. Modern education emphasizes discipline over punishment."
+  },
+  {
+    "id": 17,
+    "question": "What right do students have in matters of disciplinary decisions?",
+    "options": {
+      "A": "Have no recourse to appeal",
+      "B": "Have a fair and impartial hearing",
+      "C": "Present only the class teacher as witness",
+      "D": "Present only parents or guardians"
+    },
+    "answer": "B",
+    "explanation": "Ghana's Education Act and child rights principles guarantee students due process, including fair hearing and right to present witnesses."
+  },
+  {
+    "id": 18,
+    "question": "Data-driven decision making refers to decisions based on: I. Implicit knowledge II. Empirical evidence III. Reactive feelings IV. Professional judgement",
+    "options": {
+      "A": "I only",
+      "B": "I and II only",
+      "C": "II and IV only",
+      "D": "II, III and IV only"
+    },
+    "answer": "C",
+    "explanation": "Data-driven decisions combine empirical evidence with professional judgement. Implicit knowledge and reactive feelings are not data sources."
+  },
+  {
+    "id": 19,
+    "question": "The apex disciplinary authority with power to endorse recommendation to summarily dismiss GES personnel is the ",
+    "options": {
+      "A": "Board of Governors",
+      "B": "Director-General of GES",
+      "C": "GES Council",
+      "D": "Ministry of Education"
+    },
+    "answer": "C",
+    "explanation": "The GES Council is the highest disciplinary body with authority to approve dismissal of teaching and non-teaching staff."
+  },
+  {
+    "id": 20,
+    "question": "Consensus as a decision-making strategy refers to ",
+    "options": {
+      "A": "Determining which faction's position will prevail",
+      "B": "Reaching a decision everyone can accept",
+      "C": "The process of reaching an ideal decision",
+      "D": "Voting for the best decision"
+    },
+    "answer": "B",
+    "explanation": "Consensus seeks agreement that all parties can support, even if not their first choice, ensuring commitment to implementation."
+  },
+  {
+    "id": 21,
+    "question": "Why are decisions about school improvement strategies said to entail higher levels of uncertainty?",
+    "options": {
+      "A": "The school head may be autocratic",
+      "B": "A lot of time is spent on improvement efforts",
+      "C": "Future conditions cannot be predicted accurately",
+      "D": "Teachers are not interested in participating"
+    },
+    "answer": "C",
+    "explanation": "Strategic decisions involve long-term planning where outcomes are unpredictable due to changing policies, resources, and social contexts."
+  },
+  {
+    "id": 22,
+    "question": "A teacher has students working outside the classroom on waste management, examining the school's disposal system. The strategy enables students to ",
+    "options": {
+      "A": "Apply knowledge to solve real-world problems",
+      "B": "Illustrate how to use a taught concept",
+      "C": "Familiarize with the school compound",
+      "D": "Focus only on classroom learning"
+    },
+    "answer": "A",
+    "explanation": "Real-world problem-solving connects classroom knowledge to authentic community issues, developing practical application skills."
+  },
+  {
+    "id": 23,
+    "question": "Which learning strategy is the teacher promoting through the waste management project?",
+    "options": {
+      "A": "Standard-based learning",
+      "B": "Problem-based learning",
+      "C": "Student-based learning",
+      "D": "Group-based learning"
+    },
+    "answer": "B",
+    "explanation": "Problem-based learning uses real-world problems as the context for students to apply knowledge and develop solutions collaboratively."
+  },
+  {
+    "id": 24,
+    "question": "The waste management teaching strategy aims at developing: I. Critical thinking skills II. Communication skills III. Analytic thinking skills IV. Innovative thinking skills",
+    "options": {
+      "A": "I and II only",
+      "B": "I, II and III only",
+      "C": "II, III and IV only",
+      "D": "I, II, III and IV"
+    },
+    "answer": "D",
+    "explanation": "Project-based learning develops all these skills: critical analysis of problems, communication in groups, analytical evaluation, and innovative solution design."
+  },
+  {
+    "id": 25,
+    "question": "Which statement is true about problem-based learning?",
+    "options": {
+      "A": "Students approach a challenge through different routes",
+      "B": "Students compete to investigate a challenge",
+      "C": "Students depend solely on teacher assistance",
+      "D": "Students apply only known solutions"
+    },
+    "answer": "A",
+    "explanation": "PBL encourages multiple pathways and solutions, fostering creativity and diverse problem-solving approaches rather than single 'correct' answers."
+  },
+  {
+    "id": 26,
+    "question": "The core element of cooperative learning is to ",
+    "options": {
+      "A": "Encourage contracts between teachers and parents",
+      "B": "Foster competition rather than support",
+      "C": "Promote ability groupings",
+      "D": "Showcase positive effects of interdependence"
+    },
+    "answer": "D",
+    "explanation": "Cooperative learning's essence is positive interdependence—students working together where each member's success depends on group success."
+  },
+  {
+    "id": 27,
+    "question": "The teaching strategy responding to variance among learners in the classroom is called ",
+    "options": {
+      "A": "Team instruction",
+      "B": "Focused instruction",
+      "C": "Differentiated instruction",
+      "D": "Cooperative instruction"
+    },
+    "answer": "C",
+    "explanation": "Differentiated instruction tailors content, process, and product to meet diverse student readiness levels, interests, and learning profiles."
+  },
+  {
+    "id": 28,
+    "question": "When adopting differentiated instruction, the teacher: I. Recognizes diversity as normal II. Sees every student's potential III. Accepts responsibility for maximizing progress IV. Tailors instruction to assessment-indicated needs",
+    "options": {
+      "A": "II only",
+      "B": "II and III only",
+      "C": "I, II and III only",
+      "D": "I, II, III and IV"
+    },
+    "answer": "D",
+    "explanation": "All four statements capture the philosophy and practice of differentiation: embracing diversity, believing in potential, taking responsibility, and responsive teaching."
+  },
+  {
+    "id": 29,
+    "question": "What is the difference between content and process in teaching?",
+    "options": {
+      "A": "Content is how students make sense; process is what they learn",
+      "B": "Content is how students make sense; process is what teacher teaches",
+      "C": "Content is what teacher teaches; process is how students make sense of it",
+      "D": "Content is what teacher teaches; process is what students are asked to learn"
+    },
+    "answer": "C",
+    "explanation": "Content = curriculum/subject matter; Process = instructional methods and cognitive activities students use to understand content."
+  },
+  {
+    "id": 30,
+    "question": "A headteacher in a learner-centered school undertakes all to enhance teaching and learning except ",
+    "options": {
+      "A": "Empowering teachers to involve each learner",
+      "B": "Encouraging teachers to avoid tests and assessments",
+      "C": "Encouraging teachers to develop lesson plans using existing knowledge",
+      "D": "Motivating and sustaining teachers' interest"
+    },
+    "answer": "B",
+    "explanation": "Assessment is essential in learner-centered contexts to monitor progress and guide instruction. Avoiding tests entirely would be counterproductive."
+  },
+  {
+    "id": 31,
+    "question": "The teaching strategy utilizing both online and in-person learning experiences is called ",
+    "options": {
+      "A": "Zoom learning",
+      "B": "Virtual learning",
+      "C": "Blended learning",
+      "D": "Distance learning"
+    },
+    "answer": "C",
+    "explanation": "Blended learning combines face-to-face instruction with online/digital components in a structured, integrated approach."
+  },
+  {
+    "id": 32,
+    "question": "End-of-term examinations conducted in schools are largely ",
+    "options": {
+      "A": "Achievement test",
+      "B": "Aptitude test",
+      "C": "Intelligence test",
+      "D": "Standardized achievement test"
+    },
+    "answer": "A",
+    "explanation": "Classroom exams measure what students have achieved (learned) from instruction, not innate aptitude or intelligence, and are typically teacher-made, not standardized."
+  },
+  {
+    "id": 33,
+    "question": "The pedagogy actively engaging students through integration of reading, writing, discussion and practical activities is known as ",
+    "options": {
+      "A": "Activity-based",
+      "B": "Student-based",
+      "C": "Brainstorming",
+      "D": "Mainstreaming"
+    },
+    "answer": "A",
+    "explanation": "Activity-based learning uses diverse, hands-on activities to engage students actively in the learning process rather than passive reception."
+  },
+  {
+    "id": 34,
+    "question": "Evaluation of students is intended to make  about their performance.",
+    "options": {
+      "A": "Decision",
+      "B": "Judgement",
+      "C": "Suggestion",
+      "D": "Prediction"
+    },
+    "answer": "B",
+    "explanation": "Evaluation involves making qualitative judgements about quality, value, and merit of student performance against established criteria."
+  },
+  {
+    "id": 35,
+    "question": "A formal and systematic procedure for getting information about how much students have learned is ",
+    "options": {
+      "A": "Assessment",
+      "B": "Evaluation",
+      "C": "Measurement",
+      "D": "Test"
+    },
+    "answer": "D",
+    "explanation": "A test is the most specific, formal, systematic procedure for measuring learning. Assessment is broader; evaluation involves judgement."
+  },
+  {
+    "id": 36,
+    "question": "The re-appointment of a teacher who was on interdiction but cleared of all charges is referred to as ",
+    "options": {
+      "A": "Re-instatement",
+      "B": "Reactivation",
+      "C": "Recruitment",
+      "D": "Replacement"
+    },
+    "answer": "A",
+    "explanation": "Re-instatement is the formal restoration of a teacher to their position after being cleared of disciplinary charges."
+  },
+  {
+    "id": 37,
+    "question": "What is the name of the contract regulating the relationship between GES and teachers?",
+    "options": {
+      "A": "Scheme of service",
+      "B": "Scheme of work",
+      "C": "Terms and conditions of service",
+      "D": "Workman's compensation"
+    },
+    "answer": "C",
+    "explanation": "The Terms and Conditions of Service is the legal contract governing employment relationship, rights, and obligations between GES and teachers."
+  },
+  {
+    "id": 38,
+    "question": "A double-barrelled question is ",
+    "options": {
+      "A": "Convergent and seeks a single answer tied to a specific learning target",
+      "B": "More open and used to direct exploration of a concept",
+      "C": "Often used at the start of a lesson to grab interest",
+      "D": "Made up of two questions requiring only one response"
+    },
+    "answer": "D",
+    "explanation": "Double-barrelled questions confuse respondents by asking two things at once (e.g., 'Do you find math interesting and easy?'), making answers invalid."
+  },
+  {
+    "id": 39,
+    "question": "In an open school climate ",
+    "options": {
+      "A": "All decisions are made by PTA",
+      "B": "Interactions among stakeholders are promoted",
+      "C": "Parents do not participate in decision making",
+      "D": "School heads interact only with teachers"
+    },
+    "answer": "B",
+    "explanation": "Open climates foster transparent communication and collaborative decision-making among all stakeholders (teachers, parents, students, community)."
+  },
+  {
+    "id": 40,
+    "question": "Which statement about school climate and school culture is true?",
+    "options": {
+      "A": "School climate is another word for school culture",
+      "B": "School climate is part of school culture",
+      "C": "School culture is part of school climate",
+      "D": "School culture is used in JHS and school climate in SHS"
+    },
+    "answer": "B",
+    "explanation": "Climate (perceptions, feelings about environment) is a component of the broader culture (shared values, beliefs, norms, practices)."
+  },
+  {
+    "id": 41,
+    "question": "A school culture requires teachers to examine beliefs about teaching and align with classroom practice. This culture enables teachers to ",
+    "options": {
+      "A": "Conduct self-assessments of instructional techniques",
+      "B": "Stay with instructional pedagogy they are used to",
+      "C": "Work independently in the classroom",
+      "D": "Set ground rules in the classroom"
+    },
+    "answer": "A",
+    "explanation": "Reflective practice culture encourages continuous self-assessment and improvement of teaching methods based on beliefs and outcomes."
+  },
+  {
+    "id": 42,
+    "question": "Which is true about the reflective practice culture? I. Creates practice-based learning settings II. Utilizes knowledge transfer from formal acquisition III. Adoption of observation checklist IV. Peer classroom observation",
+    "options": {
+      "A": "I, II and III",
+      "B": "I, III and IV",
+      "C": "I, II and IV",
+      "D": "II, III and IV"
+    },
+    "answer": "C",
+    "explanation": "Reflective practice involves experiential learning, applying formal knowledge, and peer observation. Observation checklists are tools, not a cultural element."
+  },
+  {
+    "id": 43,
+    "question": "Which of the following best describes *school culture*?",
+    "options": {
+      "A": "The formal rules and regulations written in the school's handbook",
+      "B": "The shared beliefs, values, attitudes, and behaviours that shape how people interact within the school",
+      "C": "The academic performance of students in core subjects",
+      "D": "The physical appearance and infrastructure of the school"
+    },
+    "answer": "B",
+    "explanation": "School culture refers to the shared norms, values, traditions, and behaviours that influence how teachers, students, and administrators relate and work together. It is more about ‘how things are done’ in the school community than about rules, buildings, or academic outcomes."
+  },
+  {
+    "id": 44,
+    "question": "What distinguishes criterion-referenced from norm-referenced tests?",
+    "options": {
+      "A": "Criterion measures performance against standards; norm compares individuals",
+      "B": "Criterion compares individuals; norm measures against standards",
+      "C": "Criterion sorts students; norm compares individuals",
+      "D": "Criterion compares individuals; norm reports relative to groups"
+    },
+    "answer": "A",
+    "explanation": "Criterion-referenced: mastery against fixed standards. Norm-referenced: relative performance compared to peer group distribution."
+  },
+  {
+    "id": 45,
+    "question": "Achievement tests are developed to ",
+    "options": {
+      "A": "Measure a learner's acquisition of skills and knowledge in a grade level",
+      "B": "Determine a learner's cognitive ability in a grade level",
+      "C": "Evaluate a learner's preexisting knowledge",
+      "D": "Identify a learner's strengths and weaknesses"
+    },
+    "answer": "A",
+    "explanation": "Achievement tests measure what has been learned (acquired) from instruction at a particular grade or course level."
+  },
+  {
+    "id": 46,
+    "question": "Which statement about year-round school calendar is NOT correct? It increases ",
+    "options": {
+      "A": "Student retention rates",
+      "B": "Functional capacity of a school",
+      "C": "Access to remediation opportunities",
+      "D": "Need to re-teach skills after long vacations"
+    },
+    "answer": "D",
+    "explanation": "Year-round calendars REDUCE learning loss and need for re-teaching by eliminating long summer breaks through balanced scheduling."
+  },
+  {
+    "id": 47,
+    "question": "The National Teachers' Standards expects teachers to demonstrate: I. Good subject knowledge II. Understanding of learning styles III. Reflection as only source of knowledge IV. Understanding different ways of organizing learning",
+    "options": {
+      "A": "I, III and IV",
+      "B": "I and II only",
+      "C": "I, II and IV only",
+      "D": "II, III and IV only"
+    },
+    "answer": "C",
+    "explanation": "Standards require subject mastery, pedagogical content knowledge (including learning styles), and organizational skills. Reflection complements, not replaces, other knowledge sources."
+  },
+  {
+    "id": 48,
+    "question": "The National Teachers' Standards is divided into three main domains: ",
+    "options": {
+      "A": "Professional practice, professional associations, professional license",
+      "B": "Professional practice, professional knowledge, professional license",
+      "C": "Professional values and attitudes, professional associations, professional practice",
+      "D": "Professional values and attitudes, professional knowledge, professional practice"
+    },
+    "answer": "D",
+    "explanation": "The three domains are: Professional Values and Attitudes, Professional Knowledge, and Professional Practice."
+  },
+  {
+    "id": 49,
+    "question": "What best describes the primary purpose of teacher summative appraisal?",
+    "options": {
+      "A": "Determine if contract should be renewed",
+      "B": "Force teachers to develop lesson plans",
+      "C": "Improve the teacher's performance",
+      "D": "Remind teachers they are being watched"
+    },
+    "answer": "C",
+    "explanation": "While summative appraisal has accountability functions, its primary purpose is performance improvement through feedback and professional development planning."
+  },
+  {
+    "id": 50,
+    "question": "Multiple causation is a defining characteristic of ",
+    "options": {
+      "A": "Classical theory of management",
+      "B": "Systems theory of management",
+      "C": "School theory of management",
+      "D": "Needs theory of management"
+    },
+    "answer": "B",
+    "explanation": "Systems theory recognizes that organizational outcomes have multiple, interrelated causes rather than single linear causation."
+  },
+  {
+    "id": 51,
+    "question": "Teachers work together planning lessons, selecting materials, conducting evaluations, and developing tests. Successful implementation requires: I. Time commitment II. Listening skills III. Careful planning IV. Self-reflection",
+    "options": {
+      "A": "I and II only",
+      "B": "II and III only",
+      "C": "I, II and III only",
+      "D": "I, II, III and IV"
+    },
+    "answer": "D",
+    "explanation": "Team teaching demands all four: dedicated time, effective communication, thorough planning, and reflective practice for continuous improvement."
+  },
+  {
+    "id": 52,
+    "question": "Team teaching improves quality because ",
+    "options": {
+      "A": "Various experts approach the same topic from different angles",
+      "B": "Teachers can take periodic breaks",
+      "C": "Students meet all teachers in class",
+      "D": "Students take the same examinations"
+    },
+    "answer": "A",
+    "explanation": "Multiple expertise perspectives enrich instruction, provide diverse explanations, and model collaborative problem-solving for students."
+  },
+  {
+    "id": 53,
+    "question": "Which statement is NOT true about team teaching?",
+    "options": {
+      "A": "Facilitates competition among teachers",
+      "B": "Facilitates collaboration among teachers",
+      "C": "Enables teacher strengths to be combined",
+      "D": "Enables poor teachers to be observed, critiqued and supported"
+    },
+    "answer": "A",
+    "explanation": "Team teaching is inherently collaborative, not competitive. Its purpose is cooperation, knowledge sharing, and mutual support."
+  },
+  {
+    "id": 54,
+    "question": "Which teaching strategy are the teachers promoting?",
+    "options": {
+      "A": "Team teaching",
+      "B": "Inquiry-based teaching",
+      "C": "Teacher-centered teaching",
+      "D": "Technology-based teaching"
+    },
+    "answer": "A",
+    "explanation": "Collaborative planning, shared instruction, and joint evaluation are defining features of team teaching."
+  },
+  {
+    "id": 55,
+    "question": "The observed team teaching strategy shows that teachers ",
+    "options": {
+      "A": "Are open to diverse ways of thinking",
+      "B": "Practice absolutism",
+      "C": "Admit they don't know everything",
+      "D": "Are hesitant to take risks"
+    },
+    "answer": "A",
+    "explanation": "Team teaching involves two or more teachers planning, instructing, and assessing together. This strategy shows that teachers: \nValue collaboration\nAre willing \nAre open to learning from each other \nBlend their strengths to improve learning"
+  },
+  {
+    "id": 56,
+    "question": "Making unprogrammed decisions in schools demands extensive analysis because existing policies do not prescribe action.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Unprogrammed decisions for novel situations require thorough analysis since standard operating procedures don't apply."
+  },
+  {
+    "id": 57,
+    "question": "Teacher group decision-making produces shared leadership in the school.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Participatory decision-making distributes leadership, builds collective ownership, and leverages diverse expertise for better outcomes."
+  },
+  {
+    "id": 58,
+    "question": "A teacher's response to meeting learner needs when teaching is project-based instruction.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Meeting learner needs can involve various strategies (differentiation, scaffolding, etc.), not exclusively project-based instruction."
+  },
+  {
+    "id": 59,
+    "question": "In the Standards-Based Curriculum, an indicator is a clear outcome learners must exhibit to meet content standard expectations.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Indicators specify observable, measurable behaviors demonstrating achievement of content standards at each grade level."
+  },
+  {
+    "id": 60,
+    "question": "A learning strategy where students learn through addressing open-ended issues is curriculum-based learning.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "This describes problem-based or inquiry-based learning, not curriculum-based (which follows predetermined content scope and sequence)."
+  },
+  {
+    "id": 61,
+    "question": "Lifelong learning is driven by the goal of achieving education sustainability.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Lifelong learning promotes continuous skill development, adaptability, and knowledge updating—essential for sustainable education systems and economies."
+  },
+  {
+    "id": 62,
+    "question": "The School Management Committee (SMC) was established to ensure greater stakeholder participation in governance at the basic level.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "SMCs were created by Education Act 2008 to involve parents, community members, and teachers in school governance and accountability."
+  },
+  {
+    "id": 63,
+    "question": "The District Education Oversight Committee oversees implementation of the decentralized education system at District and Sub-district levels.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "DEOC monitors and supports decentralized education functions, ensuring alignment with national policies at local levels."
+  },
+  {
+    "id": 64,
+    "question": "Re-appointment after interdiction and clearance is called re-instatement.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Re-instatement is the correct term for restoring employment after being cleared of charges that led to interdiction."
+  },
+  {
+    "id": 65,
+    "question": "NaSIA is responsible for registration and licensing of teachers in pre-tertiary institutions.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The National Teaching Council (NTC) registers and licenses teachers. NaSIA inspects schools and quality of teaching, not individual credentials."
+  },
+  {
+    "id": 66,
+    "question": "Sustainable Development Goal (SDG) 4 directly pertains to education.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "SDG 4 is 'Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all.'"
+  },
+  {
+    "id": 67,
+    "question": "The key focus of Education 2030 Agenda underlines the importance of citizenship education.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Education 2030 Framework for Action emphasizes global citizenship education for sustainable development and peaceful societies."
+  },
+  {
+    "id": 68,
+    "question": "Learning for active citizenship as a pillar promotes commitment to sustainable human and social development.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Active citizenship education develops skills, values and attitudes for participation in democratic life and sustainable development."
+  },
+  {
+    "id": 69,
+    "question": "Analytical thinking is the mental process of carefully evaluating information to make sound judgement.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Analytical thinking involves breaking down complex information, examining components, and evaluating evidence to reach reasoned conclusions."
+  },
+  {
+    "id": 70,
+    "question": "The object of the National Teaching Council is to regulate the teaching profession in Ghana.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The NTC Act 2018 mandates NTC to regulate teacher training, licensing, professional development, and ethical standards for the profession."
+  },
+  {
+    "id": 71,
+    "question": "National Schools Inspectorate Authority is headed by the Director-General of Ghana Education Service.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "NaSIA is an autonomous body with its own Director-General appointed under Act 1023, separate from GES leadership."
+  },
+  {
+    "id": 72,
+    "question": "Offering praise to students encourages them to repeat positive behaviors.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Positive reinforcement through specific, timely praise strengthens desired behaviors by acknowledging and rewarding them."
+  },
+  {
+    "id": 73,
+    "question": "Teachers are encouraged to address isolated behavior issues when managing the classroom.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Addressing issues promptly and specifically prevents escalation and maintains classroom climate without disrupting overall flow."
+  },
+  {
+    "id": 74,
+    "question": "Authoritarian approach to classroom management has student compliance as its main goal.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Authoritarian management prioritizes obedience, control, and compliance through strict rules and consequences, often without student input."
+  },
+  {
+    "id": 75,
+    "question": "Students' compliance is the main goal in authoritarian approach to classroom management.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Authoritarian classroom management prioritizes obedience and compliance through strict rules and consequences, often without student input or autonomy."
+  }
+]

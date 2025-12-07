@@ -1,0 +1,830 @@
+[
+  {
+    "id": 76,
+    "question": "Which of the following bodies is legally mandated to prescribe the professional standards and competencies for the teaching profession in Ghana?",
+    "options": {
+      "A": "The Ministry of Finance.",
+      "B": "The National Teaching Council (NTC).",
+      "C": "The Ghana National Association of Teachers (GNAT).",
+      "D": "The Public Services Commission (PSC)."
+    },
+    "answer": "B",
+    "explanation": "The NTC Act, 2020 (Act 1021), vests the NTC with the authority to set and monitor professional teaching standards."
+  },
+  {
+    "id": 77,
+    "question": "True or False: The promotion of GES staff is governed exclusively by the GES Council, independent of the Public Services Commission (PSC).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "GES promotions are subject to the oversight and general direction of the PSC, as GES is part of the public service."
+  },
+  {
+    "id": 78,
+    "question": "According to the Education Act, 2008 (Act 778), the compulsory age range for basic education in Ghana is generally recognized as:",
+    "options": {
+      "A": "10 to 18 years.",
+      "B": "4 to 15 years.",
+      "C": "6 to 12 years.",
+      "D": "15 to 21 years."
+    },
+    "answer": "B",
+    "explanation": "The Free Compulsory Universal Basic Education (FCUBE) policy targets children from 4 years (Kindergarten) up to 15 years (Junior High School completion)."
+  },
+  {
+    "id": 79,
+    "question": "Which specific document outlines the procedures for staff interdictions, disciplinary hearings, and appeals within the GES?",
+    "options": {
+      "A": "The School Safety Manual.",
+      "B": "The GES Code of Professional Conduct and Disciplinary Procedures.",
+      "C": "The National Curriculum Framework.",
+      "D": "The Staff Canteen Menu."
+    },
+    "answer": "B",
+    "explanation": "This administrative instrument details the legal and administrative framework for handling staff misconduct."
+  },
+  {
+    "id": 80,
+    "question": "True or False: A GES staff member must obtain written permission from the Director-General before accepting a second job (outside employment).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Public service rules generally require prior written approval for holding a second job to prevent conflict of interest and ensure the primary duties are not compromised."
+  },
+  {
+    "id": 81,
+    "question": "The legal act of permanently removing a teaching staff member's name from the NTC's professional register due to grave misconduct is known as:",
+    "options": {
+      "A": "Suspension.",
+      "B": "Interdiction.",
+      "C": "Revocation of License/Striking off the Register.",
+      "D": "Transfer."
+    },
+    "answer": "C",
+    "explanation": "Revocation is the NTC's most severe professional sanction, typically following a Disciplinary Committee hearing."
+  },
+  {
+    "id": 82,
+    "question": "Which piece of legislation primarily mandates the GES to ensure school environments are safe and free from all forms of violence, abuse, and neglect?",
+    "options": {
+      "A": "The Labour Act.",
+      "B": "The Children's Act, 1998 (Act 560).",
+      "C": "The Fisheries Act.",
+      "D": "The Public Order Act."
+    },
+    "answer": "B",
+    "explanation": "The Children's Act places a legal obligation on all institutions dealing with children to protect their welfare and safety."
+  },
+  {
+    "id": 83,
+    "question": "True or False: Headteachers in public schools are legally considered the Account Holders for government funds (e.g., Capitation Grant, FSHS funds) received by the school.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Headteachers are the officially designated spending officers and primary custodians of public funds at the school level, making them financially accountable."
+  },
+  {
+    "id": 84,
+    "question": "The Public Financial Management Act (PFMA) requires that schools submit annual financial reports to which body for scrutiny?",
+    "options": {
+      "A": "The School Choir Leader.",
+      "B": "The Auditor-General.",
+      "C": "The Local Football Association.",
+      "D": "The School Library Committee."
+    },
+    "answer": "B",
+    "explanation": "The Auditor-General reviews the accounts of all public institutions, including GES schools, to ensure compliance with the PFMA."
+  },
+  {
+    "id": 85,
+    "question": "True or False: The Education Act specifies that only Ghanaian citizens are allowed to establish and manage private schools in the country.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Foreign individuals or entities can establish and manage private schools, provided they comply with Ghana's laws, including registration and accreditation requirements."
+  },
+  {
+    "id": 86,
+    "question": "The legal basis for the establishment and operation of the National Council for Curriculum and Assessment (NaCCA) is derived from:",
+    "options": {
+      "A": "The Education Act (Act 778).",
+      "B": "The Water Act.",
+      "C": "The Tax Act.",
+      "D": "The Roads Act."
+    },
+    "answer": "A",
+    "explanation": "Act 778 established NaCCA to ensure quality curriculum development and assessment for pre-tertiary education."
+  },
+  {
+    "id": 87,
+    "question": "True or False: Under GES regulations, a staff member on interdiction is legally entitled to their full monthly salary and allowances.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Staff on interdiction usually receive a portion of their basic salary (often two-thirds or a similar fraction) and are generally denied allowances until the disciplinary process is concluded."
+  },
+  {
+    "id": 88,
+    "question": "The legal concept that allows the Director-General to give binding instructions to all GES staff, even those in distant regions, is known as:",
+    "options": {
+      "A": "Hierarchy of Command.",
+      "B": "Horizontal Authority.",
+      "C": "Local Autonomy.",
+      "D": "Informal Negotiation."
+    },
+    "answer": "A",
+    "explanation": "As the Chief Executive Officer of the GES, the Director-General exercises authority through the hierarchical structure of the Service (HQ to Region to District to School)."
+  },
+  {
+    "id": 89,
+    "question": "True or False: The GES is prohibited from collecting data on student performance, attendance, or demographic information, as this violates privacy laws.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The GES has a legal mandate to collect educational statistics and monitor performance, provided the data collection complies with the Data Protection Act and is used for official educational purposes."
+  },
+  {
+    "id": 90,
+    "question": "The statutory framework for the governance of Colleges of Education and their affiliation with university partners is primarily regulated by the:",
+    "options": {
+      "A": "Universities Act.",
+      "B": "Education Regulatory Bodies Act, 2020 (Act 1021).",
+      "C": "The Local Government Act.",
+      "D": "The Forestry Commission Act."
+    },
+    "answer": "B",
+    "explanation": "Act 1021 created the regulatory environment for tertiary education institutions involved in teacher training."
+  },
+  {
+    "id": 91,
+    "question": "Which of these is a serious misconduct leading to potential dismissal under GES regulations?",
+    "options": {
+      "A": "Consistent use of red ink for marking.",
+      "B": "Chronic lateness to school.",
+      "C": "Failing to greet the Head of School.",
+      "D": "Failing to return library books on time."
+    },
+    "answer": "B",
+    "explanation": "Chronic lateness, especially after repeated warnings, can be categorized as 'Negligence of Duty' or 'Absenteeism,' which are serious offenses."
+  },
+  {
+    "id": 92,
+    "question": "True or False: The GES must ensure that all staff members retire at the mandatory public service retirement age, unless specific legal exceptions apply.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Retirement is governed by national pension laws and public service schemes, requiring mandatory exit at the prescribed age."
+  },
+  {
+    "id": 93,
+    "question": "The policy that ensures gender balance and promotes the inclusion of girls in Science, Technology, Engineering, and Mathematics (STEM) is mandated by which legal principle?",
+    "options": {
+      "A": "The principle of equity and non-discrimination (Article 17 of the Constitution).",
+      "B": "The School Bus Policy.",
+      "C": "The National Anthem Regulations.",
+      "D": "The Currency Act."
+    },
+    "answer": "A",
+    "explanation": "The constitutional guarantees of non-discrimination form the basis for affirmative action policies like STEM inclusion."
+  },
+  {
+    "id": 94,
+    "question": "True or False: The Head of School requires the prior authorization of the District Director of Education before suspending a student for gross misconduct.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Suspension or expulsion decisions usually require approval from the next administrative level (District/Regional) to ensure due process and consistency."
+  },
+  {
+    "id": 95,
+    "question": "The legal mechanism used to create or revoke a specific public sector appointment (e.g., Director-General, Regional Director) is often done through a notice published in the:",
+    "options": {
+      "A": "Local School Magazine.",
+      "B": "Ghana Gazette.",
+      "C": "Daily Horoscope.",
+      "D": "School Report Card."
+    },
+    "answer": "B",
+    "explanation": "The Ghana Gazette is the official publication for all major government appointments, instruments, and legal notices."
+  },
+  {
+    "id": 96,
+    "question": "True or False: The NTC has the power to compel a licensed teacher to undergo mandatory retraining if their professional competence is found to be deficient.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The NTC's regulatory mandate includes ensuring continuous competence, allowing it to require remedial professional development."
+  },
+  {
+    "id": 97,
+    "question": "The administrative regulation that governs the allocation of teacher housing and accommodation allowances for GES staff is contained in the:",
+    "options": {
+      "A": "The Housing Policy for Public Servants/GES Conditions of Service.",
+      "B": "The School Time-Table.",
+      "C": "The School Farm Policy.",
+      "D": "The Athletics Regulations."
+    },
+    "answer": "A",
+    "explanation": "Specific regulations cover housing provision and the payment of related allowances."
+  },
+  {
+    "id": 98,
+    "question": "True or False: Any change in the official school uniform or instructional hours must be approved by the District Director of Education, based on GES policy.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Uniforms and instructional hours are part of the standardized school operation procedures, requiring administrative approval to ensure uniformity and compliance."
+  },
+  {
+    "id": 99,
+    "question": "Which legal principle prohibits the GES from using public funds to benefit a private entity or individual without legal justification?",
+    "options": {
+      "A": "Fiscal Responsibility and Accountability.",
+      "B": "The Principle of Proximity.",
+      "C": "The Principle of Friendship.",
+      "D": "The Principle of Simplicity."
+    },
+    "answer": "A",
+    "explanation": "Public funds must be used strictly for mandated public purposes, adhering to the PFMA."
+  },
+  {
+    "id": 100,
+    "question": "True or False: The GES is legally obligated to consult with teacher unions (e.g., GNAT, NAGRAT) on matters relating to staff conditions of service before implementing changes.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Consultation and collective bargaining with recognized unions are mandatory under the Labour Act for changes affecting terms of employment."
+  },
+  {
+    "id": 101,
+    "question": "Under GES Scheme of Service, promotion of a staff member is generally based on which criteria?",
+    "options": {
+      "A": "Years of service, qualifications, and performance appraisal.",
+      "B": "The size of the school's library.",
+      "C": "The distance of the school from the regional capital.",
+      "D": "The color of the school's gate."
+    },
+    "answer": "A",
+    "explanation": "The Scheme of Service emphasizes meritocracy, linking progression to seniority, certified qualifications, and satisfactory performance reports (appraisal)."
+  },
+  {
+    "id": 102,
+    "question": "True or False: The Minister of Education is legally responsible for appointing the members of the GES Council.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "GES Council members are appointed by the President, often in consultation with the Council of State and other relevant bodies, though some members serve ex-officio or are nominated by the Minister."
+  },
+  {
+    "id": 103,
+    "question": "The GES is mandated by the Education Act to ensure which of these is provided in all basic schools?",
+    "options": {
+      "A": "A fully equipped football stadium.",
+      "B": "Access to clean water and sanitation facilities.",
+      "C": "A private jet for the Headteacher.",
+      "D": "Daily televised instruction."
+    },
+    "answer": "B",
+    "explanation": "The Act and related health and safety regulations mandate the provision of basic, essential services like water and sanitation for students and staff."
+  },
+  {
+    "id": 104,
+    "question": "True or False: A teacher's Continuous Professional Development (CPD) activities, required by the NTC Act, must be documented and submitted to the NTC for license renewal.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The CPD framework requires verifiable evidence of professional learning to qualify for license renewal."
+  },
+  {
+    "id": 105,
+    "question": "Which Act sets the legal requirements for the procurement of books, vehicles, and other supplies by the GES?",
+    "options": {
+      "A": "The Public Procurement Act, 2003 (Act 663) as amended.",
+      "B": "The Bookseller Act.",
+      "C": "The Vehicle Licensing Act.",
+      "D": "The Local Markets Act."
+    },
+    "answer": "A",
+    "explanation": "All public sector purchases are governed by the Public Procurement Act to ensure transparency and competition."
+  },
+  {
+    "id": 106,
+    "question": "True or False: The GES disciplinary committee can impose the sanction of 'reduction in rank' on a staff member found guilty of a minor offense.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Reduction in rank is a severe sanction reserved for major offenses. Minor offenses usually attract warnings, reprimands, or financial surcharges."
+  },
+  {
+    "id": 107,
+    "question": "The administrative decision to transfer a teacher from one school to another is typically initiated and approved by the:",
+    "options": {
+      "A": "The Parent-Teacher Association (PTA).",
+      "B": "The District/Regional Director of Education.",
+      "C": "The Chief of the local community.",
+      "D": "The School Prefect."
+    },
+    "answer": "B",
+    "explanation": "Transfers are administrative movements authorized by the appointing/delegated authority at the District or Regional level."
+  },
+  {
+    "id": 108,
+    "question": "True or False: Under the Education Act, a child who is pregnant is legally entitled to continue their basic or senior high school education.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Policy and legal mandates promote re-entry and continuation of education for pregnant girls/young mothers to ensure access and equity."
+  },
+  {
+    "id": 109,
+    "question": "The GES is mandated to prepare and submit its annual budget estimates to the Ministry of Education for approval, as per the:",
+    "options": {
+      "A": "Public Financial Management Act (PFMA).",
+      "B": "The Sports Act.",
+      "C": "The Music Act.",
+      "D": "The Climate Act."
+    },
+    "answer": "A",
+    "explanation": "The PFMA regulates the entire public sector budget cycle, from preparation to execution and reporting."
+  },
+  {
+    "id": 110,
+    "question": "True or False: The National Teaching Council (NTC) can sanction private schools for employing unlicensed teachers.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The NTC's mandate covers all pre-tertiary schools, and employing unlicensed personnel is a violation of Act 1021."
+  },
+  {
+    "id": 111,
+    "question": "The legal protection given to a GES staff member who reports corruption or malpractice within the Service is primarily guaranteed by the:",
+    "options": {
+      "A": "The Whistleblower Act, 2006 (Act 720).",
+      "B": "The Public Transport Act.",
+      "C": "The Gardening Act.",
+      "D": "The School Time-Table."
+    },
+    "answer": "A",
+    "explanation": "The Whistleblower Act protects individuals who disclose information about unlawful or corrupt practices from victimization."
+  },
+  {
+    "id": 112,
+    "question": "True or False: The District Assembly is financially responsible for paying the salaries of teachers in public basic schools within its jurisdiction.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Teacher salaries are paid centrally by the Controller and Accountant General's Department (CAGD) from the Consolidated Fund, not by the District Assembly."
+  },
+  {
+    "id": 113,
+    "question": "The GES Act, 1995, makes the GES responsible for which of these functions?",
+    "options": {
+      "A": "Regulating the price of fuel in Ghana.",
+      "B": "Managing and maintaining all public educational institutions.",
+      "C": "Controlling the national electricity grid.",
+      "D": "Issuing passports."
+    },
+    "answer": "B",
+    "explanation": "The management and maintenance of schools (infrastructure and resources) is a core responsibility of the GES."
+  },
+  {
+    "id": 114,
+    "question": "True or False: A staff member can be dismissed from the GES without being given the opportunity to appear before a disciplinary body.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Dismissal without a fair hearing violates the principle of Natural Justice and the established GES disciplinary procedures."
+  },
+  {
+    "id": 115,
+    "question": "The policy decision to implement the shift from the old pre-tertiary curriculum to the Standards-Based Curriculum was legally supported by the mandate of:",
+    "options": {
+      "A": "The National Council for Curriculum and Assessment (NaCCA) under the Education Act.",
+      "B": "The School Bus Drivers' Union.",
+      "C": "The Local Hairdresser's Association.",
+      "D": "The Annual School Sports Day Committee."
+    },
+    "answer": "A",
+    "explanation": "Curriculum review and change are the explicit legal responsibility of NaCCA."
+  },
+  {
+    "id": 116,
+    "question": "True or False: The GES is legally obliged to provide annual medical screening for all its staff members.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While occupational safety laws apply, mandatory annual medical screening for all staff is not a universal legal requirement in the GES Conditions of Service, though it is encouraged."
+  },
+  {
+    "id": 117,
+    "question": "The Education Act mandates that the language of instruction at the basic level should be:",
+    "options": {
+      "A": "Only French.",
+      "B": "English from Primary 1.",
+      "C": "A Ghanaian language (Mother Tongue) at the early stages, transitioning to English.",
+      "D": "Only sign language."
+    },
+    "answer": "C",
+    "explanation": "The policy promotes the use of mother tongue in Kindergarten and the lower primary grades for better cognitive development, in line with UNESCO recommendations and national policy."
+  },
+  {
+    "id": 118,
+    "question": "True or False: The Head of School is not authorized to grant study leave with pay to a staff member; this power rests with the GES Headquarters or Regional Director.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Study leave with pay involves significant budgetary commitment and is therefore approved at the central administrative level (Headquarters or Regional Office)."
+  },
+  {
+    "id": 119,
+    "question": "The legal maximum period a student can be suspended from school for a serious disciplinary infraction, as per GES guidelines, is typically:",
+    "options": {
+      "A": "One Academic Year.",
+      "B": "The duration until the next election.",
+      "C": "Two weeks.",
+      "D": "Indefinitely."
+    },
+    "answer": "C",
+    "explanation": "While policies may vary slightly, temporary suspension is usually limited (e.g., 2 weeks) to allow for investigation or resolution, after which the student must be recalled or expelled/transferred with higher administrative approval."
+  },
+  {
+    "id": 120,
+    "question": "True or False: The GES is a non-profit organization, and all its revenue from school fees or grants must be used solely for educational purposes, as per the PFMA.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "As a public service agency, all funds received must be applied to the mandated functions of the Service."
+  },
+  {
+    "id": 121,
+    "question": "The National Teaching Council (NTC) Act requires teachers to acquire which of the following to maintain their professional status?",
+    "options": {
+      "A": "A new car every year.",
+      "B": "Continuous Professional Development (CPD) points.",
+      "C": "A membership in a foreign club.",
+      "D": "A license to drive a bus."
+    },
+    "answer": "B",
+    "explanation": "CPD points are mandatory evidence of ongoing professional learning and are required for license renewal."
+  },
+  {
+    "id": 122,
+    "question": "True or False: The GES is prohibited from publishing the results of internal school assessments (like end-of-term exams) for public scrutiny.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The GES is encouraged to use performance data for monitoring and improvement, and aggregate data is often published for stakeholders."
+  },
+  {
+    "id": 123,
+    "question": "Which legal provision ensures that GES staff, upon retirement, receive a lump sum payment in addition to their monthly pension?",
+    "options": {
+      "A": "The National Pensions Act, 2008 (Act 766).",
+      "B": "The Income Tax Act.",
+      "C": "The VAT Act.",
+      "D": "The Rent Control Act."
+    },
+    "answer": "A",
+    "explanation": "Act 766 established the three-tier pension scheme, ensuring a lump sum (Tier 2/3) upon retirement, separate from the basic pension (Tier 1/SSNIT)."
+  },
+  {
+    "id": 124,
+    "question": "True or False: The Head of School must involve the School Management Committee (SMC) or Board of Governors (BoG) in major financial and administrative decisions.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "SMCs/BoGs are legally constituted bodies mandated to provide participatory oversight and advise the Head on major decisions."
+  },
+  {
+    "id": 125,
+    "question": "The legal term for a situation where a public servant's private interests influence the performance of their official duties is:",
+    "options": {
+      "A": "Conflict of Interest.",
+      "B": "Discretionary Spending.",
+      "C": "Performance Appraisal.",
+      "D": "Public Relations."
+    },
+    "answer": "A",
+    "explanation": "Conflict of Interest is a serious breach of the Public Services Code of Conduct and can lead to disciplinary action."
+  },
+  {
+    "id": 126,
+    "question": "True or False: The Education Act specifies that parents have the right to visit their children during instructional time without prior notice to the school authorities.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While parents have rights, school safety and instructional integrity require visitors to report to the administration first and generally avoid interrupting class time."
+  },
+  {
+    "id": 127,
+    "question": "The GES is mandated to provide necessary resources and support for which of these vulnerable groups under the Education Act?",
+    "options": {
+      "A": "School administrators only.",
+      "B": "Children with special educational needs (SEN).",
+      "C": "Sports team coaches only.",
+      "D": "Gardeners only."
+    },
+    "answer": "B",
+    "explanation": "The provision of quality education for SEN children is a legal requirement for inclusion and equity."
+  },
+  {
+    "id": 128,
+    "question": "True or False: The GES can use land acquired for educational purposes for commercial activities (e.g., building rental shops) without approval from the Ministry of Lands and Natural Resources.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Land use must comply with the terms of allocation and national land laws; changing the purpose requires official approval."
+  },
+  {
+    "id": 129,
+    "question": "The legal basis for the establishment of the District Education Oversight Committee (DEOC) is found in the:",
+    "options": {
+      "A": "The Education Act (Act 778).",
+      "B": "The Police Service Act.",
+      "C": "The Fisheries Commission Act.",
+      "D": "The Energy Act."
+    },
+    "answer": "A",
+    "explanation": "The DEOC is established to supervise educational activities at the district level, as mandated by the Education Act."
+  },
+  {
+    "id": 130,
+    "question": "True or False: The GES has the legal right to request a staff member to undergo a medical examination if there are genuine concerns about their fitness for duty.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Employment laws and public service rules allow for medical examinations to ensure staff are medically fit to perform their essential job functions."
+  },
+  {
+    "id": 131,
+    "question": "Which type of leave is a GES staff member legally entitled to take if they suffer an injury or illness directly resulting from their work duties?",
+    "options": {
+      "A": "Study Leave.",
+      "B": "Maternity Leave.",
+      "C": "Sick Leave/Occupational Hazard Leave.",
+      "D": "Political Leave."
+    },
+    "answer": "C",
+    "explanation": "Staff are protected by occupational health and safety laws and are entitled to appropriate paid sick leave, potentially covered by workers' compensation if the injury is work-related."
+  },
+  {
+    "id": 132,
+    "question": "True or False: The GES is legally obligated to ensure all classrooms have air conditioning units.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While the GES must ensure suitable teaching environments, air conditioning is not a legally mandated requirement; suitable ventilation is the standard."
+  },
+  {
+    "id": 133,
+    "question": "The legal document that determines the curriculum content and teaching hours for SHS subjects is approved by:",
+    "options": {
+      "A": "The National Council for Curriculum and Assessment (NaCCA).",
+      "B": "The School Cook.",
+      "C": "The Local Barber.",
+      "D": "The Students' Representative Council (SRC)."
+    },
+    "answer": "A",
+    "explanation": "NaCCA regulates all aspects of the curriculum for pre-tertiary levels, including SHS."
+  },
+  {
+    "id": 134,
+    "question": "True or False: A staff member who receives an official query must respond within a specified time frame, as failure to do so constitutes insubordination.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Administrative procedures require timely responses to queries, and non-compliance can escalate the disciplinary process."
+  },
+  {
+    "id": 135,
+    "question": "The legal principle that holds a public officer accountable for their actions and decisions is termed:",
+    "options": {
+      "A": "Ministerial Responsibility.",
+      "B": "Personal Immunity.",
+      "C": "Collective Leadership.",
+      "D": "Accountability."
+    },
+    "answer": "D",
+    "explanation": "Public officers are legally accountable for the proper discharge of their duties and the use of public resources."
+  },
+  {
+    "id": 136,
+    "question": "True or False: The Ghana Education Service is authorized to operate bank accounts for the receipt of government grants and fees, provided they comply with PFMA regulations.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "GES units/schools operate official bank accounts for financial transactions, under the regulatory oversight of the PFMA and CAGD."
+  },
+  {
+    "id": 137,
+    "question": "The process of a staff member reporting a serious criminal offense, such as fraud or assault, to the police falls under their legal duty as a:",
+    "options": {
+      "A": "Public Relations Officer.",
+      "B": "Citizen and Public Servant.",
+      "C": "Sports Coach.",
+      "D": "School Gardener."
+    },
+    "answer": "B",
+    "explanation": "Serious crimes must be reported to law enforcement; public servants have an elevated duty to report such acts within their domain."
+  },
+  {
+    "id": 138,
+    "question": "True or False: The GES must ensure that all staff members are provided with comprehensive written terms and conditions of their employment upon appointment.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The Labour Act mandates that employers provide employees with clear, written terms of employment."
+  },
+  {
+    "id": 139,
+    "question": "The legal concept that allows a teacher to exercise reasonable force to prevent immediate harm to a student or self is known as:",
+    "options": {
+      "A": "Self-Correction.",
+      "B": "Use of Reasonable Restraint/Self-Defense.",
+      "C": "Aggressive Teaching.",
+      "D": "Classroom Management."
+    },
+    "answer": "B",
+    "explanation": "While corporal punishment is banned, the use of reasonable, non-harmful physical intervention to stop imminent danger is legally permissible under the duty of care."
+  },
+  {
+    "id": 140,
+    "question": "True or False: The District Director of Education has the delegated authority to retire a staff member on grounds of ill-health without reference to the GES Headquarters.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Retirement on medical grounds requires thorough administrative and medical documentation and typically approval from the central HR/appointing authority (GES Headquarters or PSC)."
+  },
+  {
+    "id": 141,
+    "question": "The specific legislative instrument that details the functions and management structure of the GES, operationalizing Act 506, is the:",
+    "options": {
+      "A": "GES Service Regulations.",
+      "B": "GES Football Team By-laws.",
+      "C": "The Curriculum Document.",
+      "D": "The Local Traffic Rules."
+    },
+    "answer": "A",
+    "explanation": "Service Regulations provide the detailed operational framework for the management of the GES."
+  },
+  {
+    "id": 142,
+    "question": "True or False: The Education Act encourages private schools to collaborate with public schools on educational programs and resource sharing.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Collaboration is encouraged to optimize the use of educational resources across the system."
+  },
+  {
+    "id": 143,
+    "question": "The legal maximum period for maternity leave for a female GES staff member, as stipulated by the Labour Act, is:",
+    "options": {
+      "A": "1 month.",
+      "B": "3 months.",
+      "C": "5 months.",
+      "D": "6 months."
+    },
+    "answer": "B",
+    "explanation": "The Labour Act (Act 651) provides for at least twelve weeks (three months) of paid maternity leave, which can be extended in certain cases."
+  },
+  {
+    "id": 144,
+    "question": "True or False: The GES is prohibited from publishing any information about a school's BECE or WASSCE results, even if aggregated and anonymized.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Performance data (e.g., examination results) is considered public information for accountability and policy purposes."
+  },
+  {
+    "id": 145,
+    "question": "The legal minimum number of days a teacher is entitled to annual leave is stipulated in the:",
+    "options": {
+      "A": "The Labour Act.",
+      "B": "The School Choir Rules.",
+      "C": "The Daily Newspaper.",
+      "D": "The Staff Meeting Minutes."
+    },
+    "answer": "A",
+    "explanation": "The Labour Act specifies the minimum annual leave entitlement for all employees."
+  },
+  {
+    "id": 146,
+    "question": "True or False: The NTC must consult with the Ghana Standards Authority (GSA) before accrediting a teacher training program.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While the GSA sets general national standards, the NTC is the dedicated body for setting educational and professional standards for teaching programs."
+  },
+  {
+    "id": 147,
+    "question": "The legal mechanism that allows the GES to transfer property (e.g., old school buses) to other public institutions is known as:",
+    "options": {
+      "A": "Donation.",
+      "B": "Vesting and Disposal of Public Assets.",
+      "C": "Selling at the local market.",
+      "D": "Auction to staff."
+    },
+    "answer": "B",
+    "explanation": "The disposal of public assets must follow strict regulatory procedures under the PFMA and relevant disposal guidelines."
+  },
+  {
+    "id": 148,
+    "question": "True or False: The Education Act allows the Minister of Education to delegate any of their legal functions to the Director-General of the GES.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Delegation of administrative and functional powers is necessary for efficient governance, provided the Act allows for it."
+  },
+  {
+    "id": 149,
+    "question": "The primary role of the Public Services Commission (PSC) in relation to GES staff is to:",
+    "options": {
+      "A": "Write the national curriculum.",
+      "B": "Oversee and ensure compliance with employment laws and administrative fairness.",
+      "C": "Manage the school farm.",
+      "D": "Design school uniforms."
+    },
+    "answer": "B",
+    "explanation": "The PSC ensures adherence to public service standards regarding appointment, promotion, and disciplinary fairness."
+  },
+  {
+    "id": 150,
+    "question": "True or False: A GES staff member is legally entitled to attend work while seriously ill, provided they do not miss any lesson notes.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Staff should take sick leave when seriously ill to protect their health and prevent the spread of illness, aligning with occupational health and safety laws."
+  }
+]

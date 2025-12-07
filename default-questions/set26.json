@@ -1,0 +1,852 @@
+[
+  {
+    "id": 1,
+    "question": "Education stakeholders are considered more important to a school when they ",
+    "options": {
+      "A": "Use of their power in support of the school",
+      "B": "Raise legitimate issues about teaching",
+      "C": "Express themselves eloquently",
+      "D": "Emphasise the urgency of their issues"
+    },
+    "answer": "A",
+    "explanation": "Stakeholders who actively use their influence, resources, and authority to support institutional goals provide the most tangible value to school development and sustainability."
+  },
+  {
+    "id": 2,
+    "question": "Which of the following are the main priorities of the Ghana Education Reform Agenda? I. Improve learning outcomes II. Enhanced accountability III. Equality IV. Equity",
+    "options": {
+      "A": "I, II, and III",
+      "B": "I, II, and IV",
+      "C": "I, III, and IV",
+      "D": "II, III, and IV"
+    },
+    "answer": "B",
+    "explanation": "As of 2024, Ghana's Education Strategic Plan (2018-2030) prioritizes improved learning outcomes, enhanced accountability, and equity (not equality) in resource distribution and access."
+  },
+  {
+    "id": 3,
+    "question": "What is the purpose of conducting research?",
+    "options": {
+      "A": "To provide solutions to problems",
+      "B": "To identify a problem needing solution",
+      "C": "To add to or contribute to knowledge",
+      "D": "All of the above"
+    },
+    "answer": "D",
+    "explanation": "Research serves multiple functions: solving practical problems, identifying gaps requiring solutions, and generating new knowledge to advance academic disciplines."
+  },
+  {
+    "id": 4,
+    "question": "In which year was the Pre-Tertiary Education Act (1049) enacted?",
+    "options": {
+      "A": "2017",
+      "B": "2018",
+      "C": "2019",
+      "D": "2020"
+    },
+    "answer": "D",
+    "explanation": "The Pre-Tertiary Education Act, 2020 (Act 1049) was enacted by the Parliament of Ghana in 2020 to regulate pre-tertiary education."
+  },
+  {
+    "id": 5,
+    "question": "Which of the following key qualities are required of a public officer? I. Leadership Skills II. Communication Skills III. Patience and resilience",
+    "options": {
+      "A": "I and II only",
+      "B": "I and III only",
+      "C": "II and III only",
+      "D": "I, II, and III"
+    },
+    "answer": "D",
+    "explanation": "Ghana's Public Services Commission framework requires public officers to demonstrate leadership, effective communication, and personal resilience to serve diverse public needs."
+  },
+  {
+    "id": 6,
+    "question": "The degree to which a person identifies with his or her job, actively participates in it, and considers his or her performance as being important to self-worth is referred to as job ",
+    "options": {
+      "A": "Stability",
+      "B": "Satisfaction",
+      "C": "Involvement",
+      "D": "Commitment"
+    },
+    "answer": "C",
+    "explanation": "Job involvement is a psychological state where an individual's self-concept is closely connected to their job performance and participation."
+  },
+  {
+    "id": 7,
+    "question": "Ama works as a receptionist at an educational institution. Her boss just came through the door and yelled at her, telling her that the front office was a mess and that she needed to get up and clean it immediately. After her boss left the room, Ama grabbed some papers and violently slammed them into the dustbin. Which best describes Ama's action?",
+    "options": {
+      "A": "An emotion",
+      "B": "An effect",
+      "C": "A thought",
+      "D": "Mood"
+    },
+    "answer": "A",
+    "explanation": "Ama's violent slamming of papers is a behavioral expression of her emotional response (likely anger or frustration) to her boss's yelling."
+  },
+  {
+    "id": 8,
+    "question": "Which best describes the behavior of Ama's boss in the scenario?",
+    "options": {
+      "A": "Rude",
+      "B": "Impolite",
+      "C": "Disrespectful",
+      "D": "Authoritarian"
+    },
+    "answer": "B",
+    "explanation": "Publicly yelling at an employee about a cleanliness issue violates professional courtesy norms, making 'impolite' the most universally applicable descriptor."
+  },
+  {
+    "id": 9,
+    "question": "When decision making is delegated as far down the chain of command as possible in an education system, the system is to be ",
+    "options": {
+      "A": "Flexible",
+      "B": "Decentralised",
+      "C": "Creative",
+      "D": "Centralised"
+    },
+    "answer": "B",
+    "explanation": "Decentralization transfers decision-making authority from central administration to lower levels (schools, districts) for greater responsiveness to local needs."
+  },
+  {
+    "id": 10,
+    "question": "Which is NOT a characteristic of well-constructed goals of educational organisations? They ",
+    "options": {
+      "A": "are the results of a group decision process",
+      "B": "are precise and measurable",
+      "C": "are challenging but realistic",
+      "D": "address critical issues"
+    },
+    "answer": "A",
+    "explanation": "While group input is valuable, effective goals are defined by being SMART (precise, measurable) and addressing key challenges, not by the decision-making process used."
+  },
+  {
+    "id": 11,
+    "question": "The District Director of Education's Office phone bill in 2020 was GHC 4,200.00. It increased by 10% in 2021 and a further 20% increase in the first six months of 2022. What will be the bill amount at the end of June 2022?",
+    "options": {
+      "A": "GHC 5,744.00",
+      "B": "GHC 5,544.00",
+      "C": "GHC 4,620.00",
+      "D": "GHC 4,400.00"
+    },
+    "answer": "B",
+    "explanation": "Calculation: 2020: 4,200; 2021: 4,200 × 1.10 = 4,620; 2022: 4,620 × 1.20 = 5,544. The phrasing 'first six months' refers to the timing of the increase, not a pro-rated amount."
+  },
+  {
+    "id": 12,
+    "question": "Which Act established the Complementary Education Agency (CEA)?",
+    "options": {
+      "A": "2020 (Act 1058)",
+      "B": "2020 (Act 1055)",
+      "C": "2020 (Act 1023)",
+      "D": "2020 (Act 1049)"
+    },
+    "answer": "B",
+    "explanation": "The Complementary Education Agency Act, 2020 (Act 1055) established CEA to coordinate non-formal education programs in Ghana."
+  },
+  {
+    "id": 13,
+    "question": "Which is NOT a key education reform area of the Ministry of Education?",
+    "options": {
+      "A": "Pre-Tertiary Curriculum Reform through NaCCA",
+      "B": "Policy on Teachers Education Reforms led by the GTEC through T-TEL",
+      "C": "Global Citizenship Education Reform",
+      "D": "GES institutional and Human Resource Reform"
+    },
+    "answer": "C",
+    "explanation": "Global Citizenship Education is a component but not a standalone priority reform area compared to curriculum, teacher education, and GES restructuring."
+  },
+  {
+    "id": 14,
+    "question": "What is the following fallacy called? 'All ducks love water. Kofi loves water. Therefore, Kofi is a duck.'",
+    "options": {
+      "A": "Modus tollens",
+      "B": "Modus ponens",
+      "C": "Denying the antecedent",
+      "D": "Affirming the consequent"
+    },
+    "answer": "D",
+    "explanation": "This is affirming the consequent: If P then Q; Q is true; therefore P is true. The truth of the consequent doesn't guarantee the truth of the antecedent."
+  },
+  {
+    "id": 15,
+    "question": "The 'best' approach for transformational change in a school is to have the school leader create an atmosphere for change ",
+    "options": {
+      "A": "but let others decide how to initiate a change",
+      "B": "but carefully set limits for the program",
+      "C": "and establish a reward system",
+      "D": "and begin establishing a vision"
+    },
+    "answer": "D",
+    "explanation": "Transformational change begins with a clear, compelling vision that articulates the desired future state and mobilizes collective effort toward it."
+  },
+  {
+    "id": 16,
+    "question": "Which best describes the focus of inclusive education? To increase ",
+    "options": {
+      "A": "Participation of all students in schools including those with disabilities",
+      "B": "Participation of all staff in decision making including non-teaching staff",
+      "C": "Integration of various subject disciplines such as arts, science and business",
+      "D": "Integration of basic, secondary and tertiary systems of education"
+    },
+    "answer": "A",
+    "explanation": "Inclusive education focuses on removing barriers to learning and participation for ALL students, particularly those with disabilities, special needs, or marginalization."
+  },
+  {
+    "id": 17,
+    "question": "The principal strategy adopted for Universal Design for Learning (UDL) is ",
+    "options": {
+      "A": "Inviting parents to attend meetings and open days",
+      "B": "Giving learners quizzes at the end of every lesson",
+      "C": "Asking parents to sign the completed assignments of learners",
+      "D": "Adopting multiple ways of representing content to learners"
+    },
+    "answer": "D",
+    "explanation": "UDL's core principle is providing multiple means of representation (content), expression (assessment), and engagement (motivation) to accommodate all learners."
+  },
+  {
+    "id": 18,
+    "question": "Which is NOT one of the four pillars of secondary education reform in Ghana?",
+    "options": {
+      "A": "Promote skill development and equity",
+      "B": "Improve equality",
+      "C": "Expand physical infrastructure",
+      "D": "Absorb all fees paid"
+    },
+    "answer": "B",
+    "explanation": "The four pillars are: expanded infrastructure, improved quality and relevance, enhanced equity and access, and strengthened management. 'Equality' is less precise than 'equity'."
+  },
+  {
+    "id": 19,
+    "question": "Who is the Director-General of the Ghana TVET Service?",
+    "options": {
+      "A": "Mr. David Prah",
+      "B": "Madam Mawusi Nudekor Awity",
+      "C": "Madam Gifty Twum Boafo",
+      "D": "Dr. Fred Kyei Asamoah"
+    },
+    "answer": "B",
+    "explanation": "As of early 2023, Madam Mawusi Nudekor Awity served as Director-General. Note: This position may have changed; verify with current Ghana TVET Service records."
+  },
+  {
+    "id": 20,
+    "question": "The plans of school management are often expressed formally in which documents?",
+    "options": {
+      "A": "Performance reports",
+      "B": "Ledgers",
+      "C": "Financial Statements",
+      "D": "Budgets"
+    },
+    "answer": "D",
+    "explanation": "Budgets quantitatively express management plans by allocating resources to priorities, making them formal expressions of strategic intent."
+  },
+  {
+    "id": 21,
+    "question": "In an educational institution, the idolization of a charismatic leader by followers can lead to ",
+    "options": {
+      "A": "Nurtures a competitive work environment",
+      "B": "Limiting suggestions for fixes and improvements",
+      "C": "Greater understanding of the organisation mission",
+      "D": "Difficulty in developing a successor"
+    },
+    "answer": "D",
+    "explanation": "Charismatic leadership often centralizes authority and creates dependency, making succession planning difficult when the leader departs."
+  },
+  {
+    "id": 22,
+    "question": "In educational settings, since practical considerations make job tryouts for all candidates impracticable, it is necessary to  the relative level of job performance for each candidate on the basis of available information.",
+    "options": {
+      "A": "Predict",
+      "B": "Assign",
+      "C": "Accept",
+      "D": "Abandon"
+    },
+    "answer": "A",
+    "explanation": "Selection processes rely on predictive validity—using interviews, credentials, and assessments to forecast candidates' future job performance."
+  },
+  {
+    "id": 23,
+    "question": "Which bias refers to educational decision makers who have strong prior beliefs tending to make decisions based on these beliefs, even when presented with evidence that their beliefs are wrong?",
+    "options": {
+      "A": "Reasoning by analogy bias",
+      "B": "Prior hypothesis bias",
+      "C": "Illusion of control bias",
+      "D": "Escalating commitment bias"
+    },
+    "answer": "B",
+    "explanation": "Prior hypothesis bias is the tendency to maintain initial beliefs despite contradictory evidence, causing confirmation bias in decision-making."
+  },
+  {
+    "id": 24,
+    "question": "An important first step in the process of formulating an education institution's mission is to ",
+    "options": {
+      "A": "Identify the client segment served by the institution",
+      "B": "Evaluate the institution's most recent performance",
+      "C": "Decide what the institution will be like 10 years from now",
+      "D": "Answer the question, 'What is our business?'"
+    },
+    "answer": "D",
+    "explanation": "Classic strategic management defines mission by first clarifying the organization's fundamental purpose and core business activities."
+  },
+  {
+    "id": 25,
+    "question": "A headmistress wanted her school to keep costs low. Therefore, as an example to others, she drove her own car to school and furnished her office with plain steel furniture. In this case the headmistress was displaying her ",
+    "options": {
+      "A": "Vision for success",
+      "B": "Emotional intelligence",
+      "C": "Commitment to her cause",
+      "D": "Astute use of power"
+    },
+    "answer": "C",
+    "explanation": "Leading by example through personal sacrifice and role modeling demonstrates deep commitment to the organization's cost-saving values."
+  },
+  {
+    "id": 26,
+    "question": "An argument is sure to be a sound argument if it is a/an ",
+    "options": {
+      "A": "Guarantee of truth of its conclusion",
+      "B": "Argument with true premises",
+      "C": "Argument with a true conclusion",
+      "D": "Argument which is completely valid"
+    },
+    "answer": "A",
+    "explanation": "A sound argument is both valid (proper structure) and has true premises, which together guarantee the conclusion's truth."
+  },
+  {
+    "id": 27,
+    "question": "Teachers could be made more accountable when they are given the ",
+    "options": {
+      "A": "Training in teaching and examining",
+      "B": "Option to transfer to places where they want to serve",
+      "C": "Opportunity for professional growth",
+      "D": "Freedom to select content and methods of teaching"
+    },
+    "answer": "C",
+    "explanation": "Professional development opportunities, when tied to clear performance standards and feedback mechanisms, enhance teacher accountability."
+  },
+  {
+    "id": 28,
+    "question": "The administration of a senior high school wants to know what proportion of their students are satisfied with library facilities. Eighteen library staff select 200 students in the library during the first week of exams and ask them to fill a satisfaction questionnaire. What is the population that the sample was selected from?",
+    "options": {
+      "A": "The 200 students who completed the questionnaire",
+      "B": "All the students and library staff",
+      "C": "All the senior high students",
+      "D": "All students in the library during the first week of exam period"
+    },
+    "answer": "D",
+    "explanation": "The sampling frame consists of students physically present in the library during the data collection period—the accessible population."
+  },
+  {
+    "id": 29,
+    "question": "In the same survey, what is the population that the school administration is interested in?",
+    "options": {
+      "A": "The 200 students who completed the questionnaire",
+      "B": "All the students and library staff",
+      "C": "All students in the library during exam period",
+      "D": "All students enrolled at the senior high school"
+    },
+    "answer": "D",
+    "explanation": "The target population is the entire student body whose satisfaction the administration wants to understand, not just library users."
+  },
+  {
+    "id": 30,
+    "question": "What is the sample size for the survey?",
+    "options": {
+      "A": "200",
+      "B": "218",
+      "C": "205",
+      "D": "220"
+    },
+    "answer": "A",
+    "explanation": "The sample size is simply the number of respondents selected and surveyed—200 students."
+  },
+  {
+    "id": 31,
+    "question": "Who won the Best Teacher (Leadership and Administration) in the 2022 Ghana Teacher Prize?",
+    "options": {
+      "A": "Lean Owusu Boateng",
+      "B": "Mr. Joseph Kwaku Agbevanu",
+      "C": "Madam Stella Gyimaah Larbi",
+      "D": "Ivy Asantewa Owusu"
+    },
+    "answer": "D",
+    "explanation": "Ivy Asantewa Owusu received the 2022 Ghana Teacher Prize for Leadership and Administration. Note: Verify with National Teaching Council for latest recipients."
+  },
+  {
+    "id": 32,
+    "question": "In a teacher-centered school, the headteacher undertakes all the following to enhance teaching and learning except ",
+    "options": {
+      "A": "Motivating and sustaining teachers' interest in teaching",
+      "B": "Encouraging teachers to develop lesson plans that build on existing knowledge",
+      "C": "Encouraging teachers to avoid tests because they demoralize students",
+      "D": "Empowering teachers to involve each learner in the teaching/learning process"
+    },
+    "answer": "C",
+    "explanation": "Even in teacher-centered contexts, assessment is essential for measuring learning progress. Avoiding tests entirely would be counterproductive to quality education."
+  },
+  {
+    "id": 33,
+    "question": "The general competence intended by Ghana's pre-tertiary education curriculum framework to promote entrepreneurial skills in learners is ",
+    "options": {
+      "A": "Personal development and leadership",
+      "B": "Critical thinking and problem solving",
+      "C": "Creativity and innovation",
+      "D": "Communication and collaboration"
+    },
+    "answer": "C",
+    "explanation": "The National Pre-Tertiary Curriculum Framework (2019) identifies 'Creativity and Innovation' as the core competence fostering entrepreneurial mindsets."
+  },
+  {
+    "id": 34,
+    "question": "The type of test that measures the performance of learners against the standards covered in the curriculum is called a/an ",
+    "options": {
+      "A": "Norm-referenced test",
+      "B": "Diagnostic test",
+      "C": "Criterion-referenced test",
+      "D": "Aptitude test"
+    },
+    "answer": "C",
+    "explanation": "Criterion-referenced tests assess mastery of specific curriculum standards or learning objectives, not comparison to other students."
+  },
+  {
+    "id": 35,
+    "question": "Which is NOT one of the core domains of the National Teachers Standards?",
+    "options": {
+      "A": "Values and attitudes",
+      "B": "Practice",
+      "C": "Knowledge",
+      "D": "Ethics"
+    },
+    "answer": "D",
+    "explanation": "The three core domains are Professional Values and Attitudes, Professional Knowledge, and Professional Practice. Ethics is integrated within Values and Attitudes, not a separate domain."
+  },
+  {
+    "id": 36,
+    "question": "Which is NOT a tool for formative assessment in the school system?",
+    "options": {
+      "A": "Project",
+      "B": "Oral questions",
+      "C": "Multiple choice question",
+      "D": "Inventory"
+    },
+    "answer": "D",
+    "explanation": "An inventory is a resource audit tool, not an assessment method designed to provide ongoing feedback for learning improvement."
+  },
+  {
+    "id": 37,
+    "question": "Which relates to the affective domain of students' behavior?",
+    "options": {
+      "A": "Stereotypes",
+      "B": "Feelings",
+      "C": "Attitudes",
+      "D": "All of the above"
+    },
+    "answer": "D",
+    "explanation": "The affective domain encompasses feelings, attitudes, values, and resulting behaviors including stereotypes that reflect emotional and attitudinal development."
+  },
+  {
+    "id": 38,
+    "question": "The topmost responsibility of a headteacher is to ",
+    "options": {
+      "A": "Provide leadership for learning",
+      "B": "Maintain school records",
+      "C": "Handle discipline problems",
+      "D": "Administer the guidance programme"
+    },
+    "answer": "A",
+    "explanation": "Instructional leadership—creating conditions for effective teaching and student learning—is the primary function of school heads per GES guidelines."
+  },
+  {
+    "id": 39,
+    "question": "The first important step in teaching is ",
+    "options": {
+      "A": "Writing questions and diagnostic assessment",
+      "B": "Planning beforehand",
+      "C": "Organizing material to be taught",
+      "D": "Knowing the background of the students"
+    },
+    "answer": "D",
+    "explanation": "Understanding students' prior knowledge, experiences, and needs is foundational for designing relevant instruction, though planning follows closely."
+  },
+  {
+    "id": 40,
+    "question": "In what year did GES replace promotion interviews with promotion examinations?",
+    "options": {
+      "A": "2020",
+      "B": "2019",
+      "C": "2018",
+      "D": "2017"
+    },
+    "answer": "A",
+    "explanation": "GES implemented the promotion examination system in 2020 to standardize and ensure merit-based advancement."
+  },
+  {
+    "id": 41,
+    "question": "The main objective of classroom assessment is to ",
+    "options": {
+      "A": "Report on learners' performance to parents",
+      "B": "Measure teachers' effectiveness",
+      "C": "Improve teaching and learning",
+      "D": "Compare learners' performance"
+    },
+    "answer": "C",
+    "explanation": "Formative and summative assessments primarily inform instructional adjustments and support strategies to enhance learning outcomes."
+  },
+  {
+    "id": 42,
+    "question": "A teacher in a remote school where newspapers are delivered irregularly wants to keep students abreast with current affairs. What is the best way?",
+    "options": {
+      "A": "Urge pupils to listen to stories circulating in the community",
+      "B": "Try all means to get newspapers delivered to the school",
+      "C": "Gather back issues of newspapers and let pupils compile them",
+      "D": "Encourage pupils to listen to daily broadcasts from a radio"
+    },
+    "answer": "D",
+    "explanation": "Radio broadcasts provide timely, regular, and accessible current affairs information in remote areas with unreliable print media distribution."
+  },
+  {
+    "id": 43,
+    "question": "Learners are most likely to be intrinsically motivated to learn when they ",
+    "options": {
+      "A": "Perceive their performance will compare favorably with peers",
+      "B": "Know they will receive positive reinforcement for achieving objectives",
+      "C": "Know they will be tested on content in the near future",
+      "D": "Believe the work is interesting and relates to their own lives"
+    },
+    "answer": "D",
+    "explanation": "Intrinsic motivation stems from internal interest, relevance, and personal connection to the learning material, not external rewards or comparisons."
+  },
+  {
+    "id": 44,
+    "question": "The fundamental aim of supervision is to help ",
+    "options": {
+      "A": "Teachers to understand pupils",
+      "B": "Teachers in improving methods",
+      "C": "Teachers dealing with pupils",
+      "D": "Children learn more effectively"
+    },
+    "answer": "D",
+    "explanation": "All supervisory activities ultimately serve the primary purpose of improving instructional quality to enhance student learning outcomes."
+  },
+  {
+    "id": 45,
+    "question": "To make learning effective, an instructional goal must be meaningful in terms of ",
+    "options": {
+      "A": "Students' needs and purposes",
+      "B": "Standards of others",
+      "C": "Objectives of the curriculum",
+      "D": "Intellectual ideas"
+    },
+    "answer": "A",
+    "explanation": "Goals aligned with students' developmental needs, interests, and life purposes generate greater engagement and meaningful learning."
+  },
+  {
+    "id": 46,
+    "question": "Procedures used to determine a learner's abilities are referred to as ",
+    "options": {
+      "A": "Typical performance test",
+      "B": "Norm referenced test",
+      "C": "Maximum performance test",
+      "D": "Criterion-referenced test"
+    },
+    "answer": "C",
+    "explanation": "Ability tests (achievement, aptitude) measure maximum performance—what learners can do at their best—versus typical performance tests measuring everyday behavior."
+  },
+  {
+    "id": 47,
+    "question": "What are the three components of an educational process?",
+    "options": {
+      "A": "Teaching, learning and practice",
+      "B": "Teacher, students and education",
+      "C": "Education, teacher and books",
+      "D": "Direction, instruction and skill"
+    },
+    "answer": "A",
+    "explanation": "The core educational processes are teaching (instruction), learning (knowledge acquisition), and practice (application/assessment)."
+  },
+  {
+    "id": 48,
+    "question": "Which does NOT characterize a well-planned lesson?",
+    "options": {
+      "A": "Varied teaching and learning resources are utilized",
+      "B": "Varied procedures and activities are undertaken by pupils",
+      "C": "Lesson objectives are specific, measurable and achievable",
+      "D": "Lesson notes are vetted by school heads"
+    },
+    "answer": "D",
+    "explanation": "While vetting is administrative practice, it doesn't characterize the intrinsic quality of lesson planning. Well-planned lessons focus on clear objectives, active student engagement, and appropriate resources."
+  },
+  {
+    "id": 49,
+    "question": "The capitation grant provided to a school can be used for the ",
+    "options": {
+      "A": "Procure stationery",
+      "B": "Organise extra classes for pupils",
+      "C": "Attend to sanitation and minor repairs",
+      "D": "Acquire teaching and learning resources"
+    },
+    "answer": "B",
+    "explanation": "Capitation grants are strictly for operational costs (materials, minor maintenance, sanitation). Organizing extra classes is not an approved expenditure."
+  },
+  {
+    "id": 50,
+    "question": "What is the most important factor a teacher should consider in selecting and utilizing instructional materials?",
+    "options": {
+      "A": "Objectives of the lesson",
+      "B": "Degree of interest on the part of students",
+      "C": "Availability of instructional materials",
+      "D": "Attractiveness of instructional material"
+    },
+    "answer": "A",
+    "explanation": "Materials must align with and support the achievement of specific learning objectives. All other factors are secondary considerations."
+  },
+  {
+    "id": 51,
+    "question": "In any school situation, performance tasks are hands-on activities that require students to demonstrate their ability to perform certain actions.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Performance-based assessment requires students to actively demonstrate skills through real-world tasks rather than just recalling information."
+  },
+  {
+    "id": 52,
+    "question": "The final outcome of successful strategic competitiveness is above average returns.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Strategic competitiveness creates unique value that yields superior outcomes (student achievement, resource acquisition) compared to average performers."
+  },
+  {
+    "id": 53,
+    "question": "Teachers who are respected and liked are associated with greater student satisfaction and higher achievement.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Positive teacher-student relationships built on respect and rapport create supportive learning climates that enhance engagement and outcomes."
+  },
+  {
+    "id": 54,
+    "question": "Monitoring involves the development of a forecast of what might happen at a future point in time.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Monitoring tracks current performance against standards. Forecasting is a separate planning activity that predicts future conditions, though monitoring data informs forecasts."
+  },
+  {
+    "id": 55,
+    "question": "A teacher cannot exhibit referent power from the first day in class by giving students a sense of belonging and acceptance.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Teachers CAN establish referent power (likability, trust) immediately through warmth, respect, and inclusive behaviors that foster belonging."
+  },
+  {
+    "id": 56,
+    "question": "Since the health of a nation's economy affects the performance of individual firms and industries, organisations study the economic environment to identify changes, trends and their strategic implications.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Environmental scanning of economic indicators (inflation, funding, employment) helps educational institutions anticipate impacts on budgets, enrollments, and policy."
+  },
+  {
+    "id": 57,
+    "question": "Licensure and exit test are the best predictors of classroom performance of teachers.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While licensure tests assess content knowledge, actual classroom performance is better predicted by a combination of practicum evaluations, mentorship, and ongoing professional assessments."
+  },
+  {
+    "id": 58,
+    "question": "External environment analysis should be conducted annually.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Annual SWOT analysis and environmental scanning enable schools to adapt strategies to changing policy, community, and economic conditions."
+  },
+  {
+    "id": 59,
+    "question": "If a person teaches with a high degree of clarity, he/she will spend less time going over material.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Clear instruction reduces student confusion and need for reteaching, making initial learning more efficient and effective."
+  },
+  {
+    "id": 60,
+    "question": "Students' performance is higher in classes where the teacher devotes large amounts of time to the materials needed rather than teaching content.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Time spent on materials management should be minimal. Student achievement depends on quality content instruction, not material preparation."
+  },
+  {
+    "id": 61,
+    "question": "In Ghana, the National Teachers' Standards set out the minimum levels of practice that all trained teachers must reach by the end of their pre-service teacher education course in order to play such a critical role.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The standards explicitly define minimum competencies expected of newly qualified teachers, serving as benchmarks for teacher preparation programs."
+  },
+  {
+    "id": 62,
+    "question": "The purpose of evaluating is to make a judgement about the quality of education provided.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Evaluation involves systematically judging program, process, or product quality against established criteria to inform improvement decisions."
+  },
+  {
+    "id": 63,
+    "question": "Measurement is the qualitative assessment of performance of learners.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Measurement is QUANTITATIVE—assigning numerical values to performance. Qualitative assessment involves descriptive judgments."
+  },
+  {
+    "id": 64,
+    "question": "What a teacher does not say is as important as what a teacher does say.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Non-verbal communication (facial expressions, body language, silence) conveys powerful messages that significantly impact classroom climate and student interpretation."
+  },
+  {
+    "id": 65,
+    "question": "Competitive activities have little value in establishing or maintaining an effective classroom climate and should thus be avoided.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Well-designed competitive activities can motivate students, build resilience, and make learning engaging when balanced with collaborative tasks."
+  },
+  {
+    "id": 66,
+    "question": "Students feel important and are encouraged to participate in class when a teacher uses their ideas in moving a class lecture or activity forward.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Incorporating student ideas validates their thinking, builds confidence, and creates an interactive, student-centered learning environment."
+  },
+  {
+    "id": 67,
+    "question": "The advancement in literacy, numeracy as well as Science, Technology, Engineering and Mathematics (STEM) fields is central to the Ministry of Education's vision of producing learners with strong experiential learning capabilities and backgrounds in career-focused programmes.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The MOE's strategic plan prioritizes STEM education and competency-based learning to prepare students for 21st-century careers."
+  },
+  {
+    "id": 68,
+    "question": "Strategies such as writing detailed test questions or prompts, including clear directions, and establishing and communicating clear grading criteria increase test reliability.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "These practices ensure consistent, objective scoring across different raters and student groups, which is the definition of reliability."
+  },
+  {
+    "id": 69,
+    "question": "The standards-based curriculum was rolled out for primary schools in Ghana in academic year 2017/2018.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The Standards-Based Curriculum (SBC) was piloted in 2018 and fully rolled out in 2019/2020, not 2017/2018."
+  },
+  {
+    "id": 70,
+    "question": "Written assessments are activities in which the student selects or composes a response to a prompt.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Written assessments include selected-response (multiple choice) and constructed-response (essay) formats where students generate answers to questions."
+  },
+  {
+    "id": 71,
+    "question": "The teacher cannot alter the classroom climate but should work for student success regardless of the climate.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Teachers fundamentally shape classroom climate through their pedagogy, relationships, and management practices, which directly impacts student success."
+  },
+  {
+    "id": 72,
+    "question": "The overall goal of the Ministry of Education is to provide relevant and quality education for disadvantaged Ghanaians.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The MOE's mandate is to provide quality education for ALL Ghanaians, not exclusively for disadvantaged groups, though equity for disadvantaged learners is a priority."
+  },
+  {
+    "id": 73,
+    "question": "The National Teaching Council is not the mandated body that oversees the posting of newly trained teachers in Ghana.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The Ghana Education Service (GES) handles teacher postings and deployment; the National Teaching Council (NTC) focuses on licensing, registration, and professional standards."
+  },
+  {
+    "id": 74,
+    "question": "The skill that must be demonstrated in performance task cannot vary considerably.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Performance tasks can assess a wide range of skills from basic application to complex synthesis, allowing considerable variation in demonstrated competencies."
+  },
+  {
+    "id": 75,
+    "question": "In a school, teachers have many different types of assessment available to them.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Teachers can utilize formative assessments (quizzes, observations, exit tickets), summative tests (exams), diagnostic tools, portfolios, and performance tasks."
+  }
+]

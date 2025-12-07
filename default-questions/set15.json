@@ -1,0 +1,828 @@
+[
+  {
+    "id": 1,
+    "question": "The GES headquarters is primarily responsible for:",
+    "options": {
+      "A": "Daily classroom attendance checks.",
+      "B": "Formulating national education policies and strategic oversight.",
+      "C": "Implementing national educational policies and standards across all regions.",
+      "D": "Organizing district sports competitions."
+    },
+    "answer": "B",
+    "explanation": "The Headquarters, led by the Director-General, focuses on strategic planning, policy formulation, and national coordination."
+  },
+  {
+    "id": 2,
+    "question": "True or False: Teachers are allowed to charge students for extra tuition (lessons) provided after the official closing time of the school.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "GES regulations often restrict or ban charging for extra tuition to prevent exploitation and ensure all students receive required instruction during normal hours."
+  },
+  {
+    "id": 3,
+    "question": "Which category of staff is responsible for maintaining the general cleanliness and sanitation of the school compound?",
+    "options": {
+      "A": "The Accountant and Bursar.",
+      "B": "Security personnel only.",
+      "C": "All staff, assisted by non-teaching staff (Cleaners) and students.",
+      "D": "Only the Head of School."
+    },
+    "answer": "C",
+    "explanation": "Sanitation is a collective responsibility, though designated cleaners and students performing duties under supervision play a major role."
+  },
+  {
+    "id": 4,
+    "question": "True or False: A staff member who is pursuing a further degree (e.g., Master's) through sandwich or weekend programs must notify the GES.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Formal notification to the Head of School and the District/Regional Office is required to ensure the course does not conflict with official duties."
+  },
+  {
+    "id": 5,
+    "question": "The official document that outlines the criteria for a staff member to progress from one rank to the next (e.g., Senior Superintendent to Principal Superintendent) is the:",
+    "options": {
+      "A": "The school's canteen menu.",
+      "B": "The Scheme of Service and Conditions of Service.",
+      "C": "The annual school inventory list.",
+      "D": "The student prefect list."
+    },
+    "answer": "B",
+    "explanation": "The Scheme of Service details the qualifications, experience, and procedure for career progression and promotion."
+  },
+  {
+    "id": 6,
+    "question": "True or False: In a crisis (e.g., fire, earthquake), the Head of School must prioritize the safety and evacuation of students over saving school records and property.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The Duty of Care mandates that the preservation of human life (students and staff) is the absolute priority in any emergency."
+  },
+  {
+    "id": 7,
+    "question": "What is the acceptable frequency for a teacher to submit their Class Attendance Register to the Head of School or their delegated supervisor?",
+    "options": {
+      "A": "Once a year.",
+      "B": "Daily or at the beginning of every session.",
+      "C": "Only when requested by the District Director.",
+      "D": "Once a term."
+    },
+    "answer": "B",
+    "explanation": "Attendance must be taken and submitted daily to enable immediate follow-up on absent students and for record-keeping."
+  },
+  {
+    "id": 8,
+    "question": "True or False: The Regional Director of Education (RDE) reports directly to the District Director of Education (DDE).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The RDE is the superior officer to the DDE. The DDE reports to the RDE, and the RDE reports to the Director-General/Headquarters."
+  },
+  {
+    "id": 9,
+    "question": "The financial document that summarizes the total income, expenditure, and financial status of the school over a specific period is the:",
+    "options": {
+      "A": "Cash Book.",
+      "B": "The Class Timetable.",
+      "C": "The Statement of Accounts/Financial Report.",
+      "D": "The Scheme of Work."
+    },
+    "answer": "C",
+    "explanation": "The Statement of Accounts provides a comprehensive overview of the school's financial performance and position."
+  },
+  {
+    "id": 10,
+    "question": "True or False: A teacher can use their professional knowledge to write and sell educational textbooks to their own students without GES authorization.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "This is a conflict of interest, as it exploits the teacher-student relationship for personal profit. Such activities require official authorization and must not be mandatory purchases."
+  },
+  {
+    "id": 11,
+    "question": "Which type of assessment is conducted at the end of a major instructional period (e.g., end of term, end of academic year) to certify student competence?",
+    "options": {
+      "A": "Diagnostic Assessment.",
+      "B": "Formative Assessment.",
+      "C": "Summative Assessment.",
+      "D": "Self-Assessment."
+    },
+    "answer": "C",
+    "explanation": "Summative assessments (like BECE, WASSCE, or end-of-term exams) determine mastery and assign grades/certification."
+  },
+  {
+    "id": 12,
+    "question": "True or False: In a co-educational school, all teachers (male and female) are mandated to assist in the counseling and guidance of students of both genders.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Guidance and Counselling is a collective duty, although specific issues may be referred to G&C coordinators or staff of the appropriate gender."
+  },
+  {
+    "id": 13,
+    "question": "The professional duty that requires the teacher to create and utilize appropriate instructional materials (charts, models, videos) is known as:",
+    "options": {
+      "A": "Assessment.",
+      "B": "Financial Management.",
+      "C": "Preparation of Teaching and Learning Materials (TLMs).",
+      "D": "Staff Welfare."
+    },
+    "answer": "C",
+    "explanation": "TLM preparation and usage are crucial for effective lesson delivery and meeting diverse learning styles."
+  },
+  {
+    "id": 14,
+    "question": "True or False: A staff member who accepts a traditional title (e.g., chief, queen mother) is required to inform the GES administration.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "As public servants, staff must declare any external appointment or traditional role that might influence or conflict with their professional duties or time allocation."
+  },
+  {
+    "id": 15,
+    "question": "When a staff member is reported for a serious offense, the disciplinary procedure typically begins with the issuance of a:",
+    "options": {
+      "A": "Promotion Letter.",
+      "B": "Official Query.",
+      "C": "Retirement Letter.",
+      "D": "Transfer Letter."
+    },
+    "answer": "B",
+    "explanation": "The Official Query is the first formal step, requiring the staff member to defend or explain the alleged misconduct."
+  },
+  {
+    "id": 16,
+    "question": "True or False: A staff member can legally refuse to participate in an official investigation ordered by the Head of School or the District Director.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Cooperating with official investigations is a mandatory professional duty. Refusal is an act of insubordination."
+  },
+  {
+    "id": 17,
+    "question": "The concept of 'Inclusion' in the GES refers to the policy of ensuring that:",
+    "options": {
+      "A": "Only brilliant students are admitted.",
+      "B": "All students, regardless of physical, intellectual, social, emotional, or linguistic barriers, can learn together in the same environment.",
+      "C": "Teachers are included in all staff meetings.",
+      "D": "The school gate is always locked."
+    },
+    "answer": "B",
+    "explanation": "Inclusion is a fundamental GES policy focused on providing equitable and accessible education for students with diverse needs, particularly Special Educational Needs (SEN)."
+  },
+  {
+    "id": 18,
+    "question": "True or False: A staff member who falls ill and is unable to report for duty must obtain a formal medical certificate for any absence exceeding three (3) working days.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Absences beyond a short period (usually 3 days) require official medical documentation to be covered by Sick Leave regulations."
+  },
+  {
+    "id": 19,
+    "question": "The person officially responsible for managing the daily enrollment, documentation, and class allocation of new students is the:",
+    "options": {
+      "A": "The school gardener.",
+      "B": "The Head of School or their delegated Enrollment Officer.",
+      "C": "The security guard.",
+      "D": "The local assemblyman."
+    },
+    "answer": "B",
+    "explanation": "Student enrollment is a key administrative task under the Head's direct supervision."
+  },
+  {
+    "id": 20,
+    "question": "True or False: GES staff can use their official position or influence to facilitate a loan or financial benefit for themselves or a relative from the school's funds.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "This constitutes a severe conflict of interest and potential misappropriation of public funds, which is strictly prohibited."
+  },
+  {
+    "id": 21,
+    "question": "The primary purpose of conducting a 'Needs Assessment' before planning a professional development workshop is to:",
+    "options": {
+      "A": "Determine the best caterer for the event.",
+      "B": "Identify the specific skills and knowledge gaps that the training should address.",
+      "C": "Choose the location for the workshop.",
+      "D": "Select the color of the workshop T-shirt."
+    },
+    "answer": "B",
+    "explanation": "Needs assessment ensures that CPD is relevant, targeted, and addresses the actual shortcomings of the staff."
+  },
+  {
+    "id": 22,
+    "question": "True or False: The use of mobile phones by students is generally prohibited during instructional time in all GES pre-tertiary schools.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Mobile phones are typically banned or severely restricted during contact hours to minimize distraction and maintain focus."
+  },
+  {
+    "id": 23,
+    "question": "The 'School Improvement Plan' (SIP) is a key document that requires input and buy-in from which of these groups?",
+    "options": {
+      "A": "Only the Head of School.",
+      "B": "Teachers, SMC/Board, Parents, and Students.",
+      "C": "Only the District Accountant.",
+      "D": "Only the national weather service."
+    },
+    "answer": "B",
+    "explanation": "The SIP is a collaborative strategic plan; its success relies on the commitment and collaboration of all stakeholders."
+  },
+  {
+    "id": 24,
+    "question": "True or False: Upon retirement, the GES is directly responsible for paying the staff member's lump-sum pension benefit.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The payment of pension and gratuity is the responsibility of the relevant National Pension Scheme (e.g., SSNIT), not the GES itself, although GES facilitates the process."
+  },
+  {
+    "id": 25,
+    "question": "The term 'Conflict of Interest' in the GES context primarily arises when a staff member's official duty is compromised by:",
+    "options": {
+      "A": "Their personal leisure activities.",
+      "B": "A competing private or personal interest.",
+      "C": "The weather forecast.",
+      "D": "The school's choice of colors."
+    },
+    "answer": "B",
+    "explanation": "Conflict of Interest occurs when personal gain interferes with or influences objective professional decision-making."
+  },
+  {
+    "id": 26,
+    "question": "True or False: The Head of School must delegate the duty of signing cheques and authorizing major school expenditures to the Bursar for financial independence.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Financial regulations require dual authorization. While the Bursar may prepare documents, the Head of School (or their designated assistant) must be a mandatory co-signatory for official financial instruments."
+  },
+  {
+    "id": 27,
+    "question": "The official record where a teacher documents the specific content covered, exercises assigned, and homework given in a class session is the:",
+    "options": {
+      "A": "Staff Meeting Minutes.",
+      "B": "The Teacher's Log Book/Record of Work.",
+      "C": "The School Inventory List.",
+      "D": "The PTA Register."
+    },
+    "answer": "B",
+    "explanation": "The Log Book/Record of Work provides proof of syllabus coverage and is inspected during supervision."
+  },
+  {
+    "id": 28,
+    "question": "True or False: Female staff members are generally entitled to three (3) months of paid maternity leave under GES regulations.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Staff are entitled to 12 weeks (3 months) of paid maternity leave, provided they meet the statutory requirements."
+  },
+  {
+    "id": 29,
+    "question": "The primary policy shift introduced by the new curriculum framework (Standard-Based Curriculum) is a focus on:",
+    "options": {
+      "A": "Memorization and rote learning.",
+      "B": "The acquisition of foundational competencies and skills (4Rs, etc.).",
+      "C": "Teaching only one subject per day.",
+      "D": "Banning all textbooks."
+    },
+    "answer": "B",
+    "explanation": "The Standard-Based Curriculum emphasizes Competency-Based Training (CBT), shifting focus from content knowledge to practical skills and the 4Rs (Reading, wRiting, aRithmetic, cReativity)."
+  },
+  {
+    "id": 30,
+    "question": "True or False: When applying for a transfer, the staff member must secure a replacement before their request can be processed.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While having a replacement is often *preferred* for administrative convenience, it is usually not a mandatory *requirement* for the processing of a transfer request. However, approval is contingent on the school having adequate staffing."
+  },
+  {
+    "id": 31,
+    "question": "In the GES hierarchy, the person who provides direct supervision and assessment to the Circuit Supervisor (CS) is typically the:",
+    "options": {
+      "A": "Head of School.",
+      "B": "The District Director of Education (DDE).",
+      "C": "The Minister of Education.",
+      "D": "The student prefect."
+    },
+    "answer": "B",
+    "explanation": "The CS reports directly to the DDE as they head the supervision and quality assurance unit at the district level."
+  },
+  {
+    "id": 32,
+    "question": "True or False: All minutes of staff meetings must be formally documented, signed by the Head of School, and kept on file for official inspection.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Staff meeting minutes are official records of decisions, policies, and instructional discussions and must be formally documented and archived."
+  },
+  {
+    "id": 33,
+    "question": "The primary role of the District Education Office is to:",
+    "options": {
+      "A": "Set national examination questions.",
+      "B": "Implement GES policies and supervise schools within the district jurisdiction.",
+      "C": "Manage the national currency.",
+      "D": "Construct new universities."
+    },
+    "answer": "B",
+    "explanation": "The District Office is the operational hub for implementing policy, managing staff, and ensuring quality assurance at the local level."
+  },
+  {
+    "id": 34,
+    "question": "True or False: A staff member who is found guilty of gross insubordination (e.g., openly defying the Head of School's lawful instruction) can face immediate dismissal.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Gross insubordination is a serious disciplinary offense that can lead to termination of appointment after a formal inquiry."
+  },
+  {
+    "id": 35,
+    "question": "The tool used by the teacher to plan and track the daily and weekly progression of a subject, ensuring the syllabus is covered on time, is the:",
+    "options": {
+      "A": "The school farm report.",
+      "B": "The Teacher's Timetable and Scheme of Work.",
+      "C": "The annual procurement plan.",
+      "D": "The student feeding roster."
+    },
+    "answer": "B",
+    "explanation": "The Timetable manages time allocation, and the Scheme of Work manages content coverage over the term/year."
+  },
+  {
+    "id": 36,
+    "question": "True or False: A teacher must inform the Head of School if they plan to engage in any secondary occupation or part-time job outside the school.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Notification is required to ensure the secondary job does not conflict with, or impair, the teacher's primary professional duties and time commitment."
+  },
+  {
+    "id": 37,
+    "question": "What is the primary objective of the 'School Improvement Plan' (SIP)?",
+    "options": {
+      "A": "To list all school equipment.",
+      "B": "To define the school's mission, set clear annual goals, and outline strategies for academic and institutional improvement.",
+      "C": "To plan the annual sports day.",
+      "D": "To calculate teacher salaries."
+    },
+    "answer": "B",
+    "explanation": "The SIP is the strategic roadmap for the school's self-improvement effort."
+  },
+  {
+    "id": 38,
+    "question": "True or False: In financial management, the Head of School can unilaterally decide to spend the entire Capitation Grant on constructing a new Head's bungalow.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Expenditure of the Capitation Grant must adhere strictly to the approved budget lines (non-tuition recurrent expenditure) and requires approval from the School Board/SMC."
+  },
+  {
+    "id": 39,
+    "question": "The professional expectation that teachers maintain a respectful distance and do not engage in inappropriate personal or intimate relationships with students is covered under:",
+    "options": {
+      "A": "The Curricular Code.",
+      "B": "The Ethical Code/Professional Conduct.",
+      "C": "The School Feeding Rota.",
+      "D": "The Janitorial Schedule."
+    },
+    "answer": "B",
+    "explanation": "Maintaining professional boundaries and avoiding any form of sexual misconduct is a core tenet of the Ethical Code."
+  },
+  {
+    "id": 40,
+    "question": "True or False: A teacher who fails to submit their examination grades or scheme of work on the stipulated date is only liable to a verbal warning.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Failure to meet mandatory administrative deadlines can result in an official query, docking of pay, or other formal disciplinary action for neglect of duty."
+  },
+  {
+    "id": 41,
+    "question": "Which of these is the primary function of the 'Public Relations Unit' of the GES?",
+    "options": {
+      "A": "Managing staff accommodation.",
+      "B": "Handling official communications, media relations, and managing the public image of the Service.",
+      "C": "Teaching Mathematics in schools.",
+      "D": "Collecting taxes."
+    },
+    "answer": "B",
+    "explanation": "The PR Unit acts as the official liaison between the GES and the public/media."
+  },
+  {
+    "id": 42,
+    "question": "True or False: The 'School Board of Governors' (SHS) has the authority to hire and fire teaching staff without consultation with the Regional GES office.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While the Board appoints and manages non-teaching staff in some cases, the hiring and firing of *teaching* staff is the mandate of the GES appointing authority at the Regional or Headquarters level."
+  },
+  {
+    "id": 43,
+    "question": "The GES policy on 'Gender Equity' is aimed at:",
+    "options": {
+      "A": "Ensuring only female students are admitted.",
+      "B": "Promoting equal opportunities and outcomes for both boys and girls in access, participation, and achievement in education.",
+      "C": "Banning all co-educational schools.",
+      "D": "Only hiring male teachers."
+    },
+    "answer": "B",
+    "explanation": "Gender Equity policy is designed to eliminate bias and ensure fairness and access regardless of gender."
+  },
+  {
+    "id": 44,
+    "question": "True or False: Teachers are allowed to use personal social media accounts to criticize or insult the school administration and post confidential school information.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Staff must exercise caution and professionalism on social media, avoiding libel, slander, disclosure of confidential information, and bringing the Service into disrepute."
+  },
+  {
+    "id": 45,
+    "question": "The administrative process that ensures a retiring staff member has accounted for all government property (keys, textbooks, files) before their final clearance is known as:",
+    "options": {
+      "A": "Promotion Interview.",
+      "B": "Handing-Over and Taking-Over.",
+      "C": "Staff Appraisal.",
+      "D": "End-of-Year Party."
+    },
+    "answer": "B",
+    "explanation": "The Handing-Over process is mandatory to ensure accountability for public assets."
+  },
+  {
+    "id": 46,
+    "question": "True or False: Teachers are professionally obligated to attend and actively participate in all scheduled staff meetings and professional development sessions.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Attendance at such official professional duties is mandatory unless leave is formally granted."
+  },
+  {
+    "id": 47,
+    "question": "If a teacher suspects a student is being physically abused at home, their first professional duty is to:",
+    "options": {
+      "A": "Ignore it.",
+      "B": "Immediately report the suspicion to the Head of School and the Guidance and Counselling coordinator for official action and intervention.",
+      "C": "Go to the student's home to investigate privately.",
+      "D": "Send the student home immediately."
+    },
+    "answer": "B",
+    "explanation": "Teachers are mandated reporters; they must report child protection concerns through the appropriate internal channels."
+  },
+  {
+    "id": 48,
+    "question": "True or False: The GES allows teachers to solicit and receive financial contributions from students for class activities (e.g., class parties, excursions) without prior approval from the Head.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "All levies, contributions, or collections must be authorized by the Head of School to prevent unauthorized charges and ensure financial accountability."
+  },
+  {
+    "id": 49,
+    "question": "The primary role of the Assistant Headmaster/Headmistress (Administration) in an SHS is to oversee:",
+    "options": {
+      "A": "Curriculum development.",
+      "B": "Staff welfare, disciplinary matters, facilities management, and general school logistics.",
+      "C": "Teaching the core subjects.",
+      "D": "Writing national examination questions."
+    },
+    "answer": "B",
+    "explanation": "This role supports the Head by focusing on the non-academic aspects of school management and discipline."
+  },
+  {
+    "id": 50,
+    "question": "True or False: A teacher on 'Study Leave With Pay' is generally required to complete their course within the stipulated time and pass the exams without fail.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The grant of Study Leave is an investment; failure to perform academically can lead to withdrawal of the leave or requiring the officer to refund the money paid."
+  },
+  {
+    "id": 51,
+    "question": "Which of these is the most effective approach for a teacher to manage a diverse classroom containing students with different learning paces and abilities?",
+    "options": {
+      "A": "Teaching to the middle and ignoring the extremes.",
+      "B": "Differentiated instruction, flexible grouping, and varied assessment methods.",
+      "C": "Asking all students to repeat the class.",
+      "D": "Using only one textbook for all students."
+    },
+    "answer": "B",
+    "explanation": "Differentiated instruction is the hallmark of effective, inclusive teaching in a diverse classroom."
+  },
+  {
+    "id": 52,
+    "question": "True or False: All GES staff members are entitled to receive a 'Responsibility Allowance' regardless of their rank or specific duties.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Responsibility Allowance is only paid to staff members who hold specific, delegated responsibilities (e.g., Head of Department, Head of School, Form Master/Mistress)."
+  },
+  {
+    "id": 53,
+    "question": "The GES policy on 'Child Protection' mandates that every school must have a designated staff member or committee responsible for handling child abuse and neglect cases. This is known as the:",
+    "options": {
+      "A": "The disciplinary committee.",
+      "B": "The Child Protection Committee (CPC).",
+      "C": "The school choir.",
+      "D": "The kitchen staff."
+    },
+    "answer": "B",
+    "explanation": "The CPC ensures that child protection guidelines are followed and appropriate action is taken on reported cases."
+  },
+  {
+    "id": 54,
+    "question": "True or False: In financial management, the school's accounts must be audited externally by a certified auditor at the end of every financial year.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Public funds require mandatory external auditing (e.g., by the Auditor-General's Department or its agents) to ensure accountability and compliance."
+  },
+  {
+    "id": 55,
+    "question": "The term 'Professional Negligence' refers to a staff member's failure to exercise the degree of care and diligence expected of a reasonably competent professional, leading to harm or loss. Which of these is an example?",
+    "options": {
+      "A": "Being punctual every day.",
+      "B": "Consistently failing to supervise high-risk practical activities, leading to student injury.",
+      "C": "Writing clear lesson notes.",
+      "D": "Attending a staff meeting."
+    },
+    "answer": "B",
+    "explanation": "Negligence often involves failure in the duty of care, such as inadequate supervision, which leads to foreseeable injury or loss."
+  },
+  {
+    "id": 56,
+    "question": "True or False: The GES policy requires that teachers who teach subjects like Visual Arts, Technical Skills, or ICT must be provided with basic materials and tools by the school to deliver their lessons effectively.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Schools are obligated to provide necessary teaching and learning resources for practical subjects to be implemented according to the curriculum."
+  },
+  {
+    "id": 57,
+    "question": "What is the appropriate administrative procedure for a teacher who has lost their official appointment letter or staff ID card?",
+    "options": {
+      "A": "Do nothing, and hope for the best.",
+      "B": "Report the loss immediately to the Head of School and the HR unit for official replacement/documentation.",
+      "C": "Announce it on the radio.",
+      "D": "Ask the students to help them find it."
+    },
+    "answer": "B",
+    "explanation": "Loss of official documents must be reported immediately to the appropriate administrative channels for record and replacement purposes."
+  },
+  {
+    "id": 58,
+    "question": "True or False: The GES Code of Professional Conduct explicitly forbids staff members from consuming alcohol or illegal drugs on school premises.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Consumption of alcohol or illegal substances on campus or while on duty is strictly forbidden and constitutes gross misconduct."
+  },
+  {
+    "id": 59,
+    "question": "The practice of reviewing a student's prior knowledge and skills *before* commencing a new unit of instruction is known as:",
+    "options": {
+      "A": "Summative Assessment.",
+      "B": "Diagnostic Assessment.",
+      "C": "Portfolio Assessment.",
+      "D": "Peer Assessment."
+    },
+    "answer": "B",
+    "explanation": "Diagnostic assessment identifies students' strengths, weaknesses, and readiness levels to tailor subsequent instruction."
+  },
+  {
+    "id": 60,
+    "question": "True or False: The Head of School is generally required to live in an official school-provided accommodation (where available) as a condition of service.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "For administrative and security reasons, Heads of School (especially in boarding schools) are usually required to reside on campus or in official bungalows if provided."
+  },
+  {
+    "id": 61,
+    "question": "The primary role of the Regional Education Office is to:",
+    "options": {
+      "A": "Manage basic school enrollment nationwide.",
+      "B": "Coordinate, supervise, and implement GES policies across all districts within the region.",
+      "C": "Build school buildings in the capital city.",
+      "D": "Issue professional licenses to teachers."
+    },
+    "answer": "B",
+    "explanation": "The Regional Office serves as the link between Headquarters and the Districts, ensuring consistent policy implementation."
+  },
+  {
+    "id": 62,
+    "question": "True or False: A staff member can be issued a 'final warning' for misconduct that, if repeated, could lead to termination of appointment.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "A final warning is a severe disciplinary sanction that puts the staff member on notice that any further offense will result in dismissal."
+  },
+  {
+    "id": 63,
+    "question": "Which document legally binds a staff member who receives 'Study Leave With Pay' to return and serve the GES for a specified period after completing their studies?",
+    "options": {
+      "A": "A Promissory Note.",
+      "B": "The Bond Agreement.",
+      "C": "The Retirement Letter.",
+      "D": "The Annual Leave Form."
+    },
+    "answer": "B",
+    "explanation": "The Bond is the legal contract that secures the government's investment in the staff member's training."
+  },
+  {
+    "id": 64,
+    "question": "True or False: A teacher who assists a student in cheating during an examination is liable to disciplinary action, including potential dismissal.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Facilitating examination malpractice is a gross professional misconduct offense with zero tolerance."
+  },
+  {
+    "id": 65,
+    "question": "The professional expectation for all staff to act with honesty, integrity, and uprightness in all official dealings is defined as:",
+    "options": {
+      "A": "Aesthetics.",
+      "B": "Probity and Accountability.",
+      "C": "Emotional Intelligence.",
+      "D": "Laissez-faire."
+    },
+    "answer": "B",
+    "explanation": "Probity and accountability are core values in public service, demanding honesty and responsible resource management."
+  },
+  {
+    "id": 66,
+    "question": "True or False: The Head of School can refuse to sign a staff member's Annual Performance Appraisal Report (APAR) if they deem the staff member's performance unsatisfactory.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The Head must sign the APAR to certify that the review process was completed, but their signature does not imply *agreement* with the self-appraisal. They must attach their counter-comments/rating."
+  },
+  {
+    "id": 67,
+    "question": "The official mechanism used to communicate mandatory policy changes, directives, or critical information to all staff and schools is the:",
+    "options": {
+      "A": "Rumor mill.",
+      "B": "Circular or official correspondence (e.g., Service Letter).",
+      "C": "Student newsletter.",
+      "D": "Private social media group."
+    },
+    "answer": "B",
+    "explanation": "Circulars are the formal administrative vehicle for issuing instructions and policy updates across the Service."
+  },
+  {
+    "id": 68,
+    "question": "True or False: The GES policy permits teachers to be absent from their duty post for any duration, provided they are covering the shift of another teacher.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Any absence from the duty post requires the Head's prior permission, regardless of whether a colleague is covering the work."
+  },
+  {
+    "id": 69,
+    "question": "The primary objective of the 'Welfare Unit' of the GES is to:",
+    "options": {
+      "A": "Organize sports festivals.",
+      "B": "Address staff grievances, provide support for staff well-being, and manage benefits/insurance issues.",
+      "C": "Control the school gates.",
+      "D": "Manage the school library."
+    },
+    "answer": "B",
+    "explanation": "The Welfare Unit is crucial for maintaining staff morale, addressing non-disciplinary complaints, and supporting staff needs."
+  },
+  {
+    "id": 70,
+    "question": "True or False: The Head of School must physically examine and approve every teacher's Lesson Notes before the beginning of the instructional week.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Vetting Lesson Notes (ensuring quality, completeness, and alignment with the syllabus) is a mandatory supervisory duty of the Head or their delegate (e.g., HOD/Senior Teacher)."
+  },
+  {
+    "id": 71,
+    "question": "In the GES disciplinary process, what is the administrative term for the temporary removal of a staff member from duty pending the outcome of a formal investigation?",
+    "options": {
+      "A": "Promotion.",
+      "B": "Annual Leave.",
+      "C": "Interdiction (Suspension).",
+      "D": "Transfer."
+    },
+    "answer": "C",
+    "explanation": "Interdiction is a temporary suspension to facilitate an impartial investigation and prevent interference."
+  },
+  {
+    "id": 72,
+    "question": "True or False: The GES allows school management to charge fees for the use of the school's library or ICT lab.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Fees for core educational services or facilities (like libraries and labs) are generally prohibited under the fee-free basic and SHS policies, unless explicitly approved by the GES Council."
+  },
+  {
+    "id": 73,
+    "question": "The primary educational objective of encouraging co-curricular activities (clubs, societies, sports) in schools is to:",
+    "options": {
+      "A": "Reduce instructional time.",
+      "B": "Promote holistic student development, social skills, leadership, and talent discovery.",
+      "C": "Keep the school gate open later.",
+      "D": "Increase the school's electricity bill."
+    },
+    "answer": "B",
+    "explanation": "Co-curricular activities are essential for developing non-academic skills and character."
+  },
+  {
+    "id": 74,
+    "question": "True or False: The GES policy mandates that teachers must treat students with respect, dignity, and avoid any form of verbal abuse or demeaning language.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Respect for the student's dignity and well-being is a core ethical and professional requirement."
+  },
+  {
+    "id": 75,
+    "question": "The official mechanism used to gather feedback from students, parents, and community members regarding the school's performance is often part of the:",
+    "options": {
+      "A": "Staff recruitment process.",
+      "B": "School Performance Appraisal Meeting (SPAM) and SIP review.",
+      "C": "Teacher salary payment.",
+      "D": "Annual tree planting day."
+    },
+    "answer": "B",
+    "explanation": "Stakeholder feedback is critical for comprehensive performance evaluation and the formulation of the School Improvement Plan (SIP)."
+  }
+]

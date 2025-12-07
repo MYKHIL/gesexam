@@ -1,0 +1,852 @@
+[
+  {
+    "id": 1,
+    "question": "The aim of Ghana's system of education is",
+    "options": {
+      "A": "Personality development",
+      "B": "Character formation",
+      "C": "Preservation of culture",
+      "D": "All of the above"
+    },
+    "answer": "D",
+    "explanation": "Ghana's education system aims to develop well-rounded individuals by fostering personality growth, building character, and preserving cultural heritage as outlined in Education Acts and policy frameworks."
+  },
+  {
+    "id": 2,
+    "question": "The Ministry of Education of Ghana, which is a multi-portfolio government ministry, was established in",
+    "options": {
+      "A": "1947",
+      "B": "1956",
+      "C": "1957",
+      "D": "1960"
+    },
+    "answer": "C",
+    "explanation": "The Ministry of Education was established in 1957 following Ghana's independence to oversee national education policy and administration."
+  },
+  {
+    "id": 3,
+    "question": "Which are the objective(s) of the 1987 Education Reform? I. Increase access to basic education II. Shorten pre-tertiary structure from 17 to 12 years III. Make education cost-effective IV. Improve quality by making it more socio-economically relevant",
+    "options": {
+      "A": "I only",
+      "B": "II and III only",
+      "C": "I, II and III only",
+      "D": "All of the above"
+    },
+    "answer": "D",
+    "explanation": "The 1987 FCUBE reforms comprehensively addressed access, duration, cost-effectiveness, and quality relevance to transform Ghana's education system."
+  },
+  {
+    "id": 4,
+    "question": "How many functional divisions does the Ghana Education Service have at the headquarters?",
+    "options": {
+      "A": "9",
+      "B": "7",
+      "C": "11",
+      "D": "12"
+    },
+    "answer": "B",
+    "explanation": "GES Headquarters operates through 7 functional divisions including Basic, Secondary, TVET, HR, Finance, and Planning."
+  },
+  {
+    "id": 5,
+    "question": "The performance of a student can be evaluated in the best possible manner through",
+    "options": {
+      "A": "Annual Assessment",
+      "B": "Continuous Assessment",
+      "C": "Monthly Assessment",
+      "D": "Weekly Assessment"
+    },
+    "answer": "B",
+    "explanation": "Continuous assessment provides ongoing feedback, reduces exam pressure, and offers comprehensive evaluation of student progress throughout the academic period."
+  },
+  {
+    "id": 6,
+    "question": "Which is NOT a body under the Ministry of Education that implements its policies and programmes?",
+    "options": {
+      "A": "Ghana Education Service",
+      "B": "Non-Formal Education Division",
+      "C": "Teacher Education Division",
+      "D": "Ghana Library Authority"
+    },
+    "answer": "C",
+    "explanation": "Teacher Education Division is directly under MoE's Policy, Planning, and Budgeting Directorate, not an implementing agency like GES or Ghana Library Authority."
+  },
+  {
+    "id": 7,
+    "question": "Testing in education is only possible by using",
+    "options": {
+      "A": "Achievement test",
+      "B": "Intelligence Test",
+      "C": "Aptitude Test",
+      "D": "Standardized Achievement Test"
+    },
+    "answer": "D",
+    "explanation": "NOTE: This question is conceptually flawed. Testing can use various forms including teacher-made tests, not exclusively standardized tests. Standardized tests provide uniform measurement for comparison."
+  },
+  {
+    "id": 8,
+    "question": "How many units has the Technical and Vocational Education Division (TVED) of GES Headquarters?",
+    "options": {
+      "A": "7",
+      "B": "8",
+      "C": "9",
+      "D": "10"
+    },
+    "answer": "A",
+    "explanation": "TVED comprises 7 units including program development, teacher training, and quality assurance for technical and vocational programs."
+  },
+  {
+    "id": 9,
+    "question": "Which is/are NOT objective(s) of Free Compulsory Universal Basic Education (FCUBE)? I. Improving quality of learning II. Improving access to facilities III. Encouraging private sector participation IV. Improving management efficiency",
+    "options": {
+      "A": "III only",
+      "B": "II and III only",
+      "C": "I, II and III only",
+      "D": "None of the above"
+    },
+    "answer": "A",
+    "explanation": "Private sector participation is a strategy, not a core objective. FCUBE's primary objectives focus on quality, access, and management efficiency."
+  },
+  {
+    "id": 10,
+    "question": "Which Act established the Ghana Education Service in 1995?",
+    "options": {
+      "A": "Act 506",
+      "B": "605",
+      "C": "778",
+      "D": "788"
+    },
+    "answer": "A",
+    "explanation": "GES was established under Act 506 (1995) as the implementing agency for pre-tertiary education policies and programs."
+  },
+  {
+    "id": 11,
+    "question": "Which is/are NOT way(s) through which education policies are formulated? I. Imposition by elites II. Political discussions III. Stakeholder consultations",
+    "options": {
+      "A": "I only",
+      "B": "I, II and III",
+      "C": "II and III only",
+      "D": "III only"
+    },
+    "answer": "A",
+    "explanation": "While policy imposition by elites sometimes occurs, democratic policy formulation emphasizes consultation and discussion rather than top-down imposition as a legitimate method."
+  },
+  {
+    "id": 12,
+    "question": "How many divisions are under the jurisdiction of the Deputy Director-General (Quality and Access) of GES?",
+    "options": {
+      "A": "5",
+      "B": "6",
+      "C": "4",
+      "D": "8"
+    },
+    "answer": "C",
+    "explanation": "The DDG(Q&A) oversees 4 divisions: Basic Education, Secondary Education, TVED, and Special Education."
+  },
+  {
+    "id": 13,
+    "question": "Curriculum provides guidance for",
+    "options": {
+      "A": "Schools",
+      "B": "Teachers",
+      "C": "Students",
+      "D": "Parents"
+    },
+    "answer": "B",
+    "explanation": "Curriculum primarily guides teachers in planning instruction, sequencing content, and selecting appropriate pedagogical approaches."
+  },
+  {
+    "id": 14,
+    "question": "Psychological foundation plays its role in curriculum development, keeping in view the",
+    "options": {
+      "A": "Students' needs",
+      "B": "Student's interest",
+      "C": "Student's capabilities",
+      "D": "All of the above"
+    },
+    "answer": "D",
+    "explanation": "Psychological principles ensure curriculum aligns with students' developmental needs, interests, cognitive capabilities, and learning styles."
+  },
+  {
+    "id": 15,
+    "question": "An outline of topics of a subject to be covered in specific time is called",
+    "options": {
+      "A": "Programme",
+      "B": "Syllabus",
+      "C": "Curriculum",
+      "D": "Course"
+    },
+    "answer": "C",
+    "explanation": "A syllabus is the outline of topics. Curriculum is the comprehensive plan including philosophy, objectives, content, and assessment. The marked answer is incorrect; B is the right answer."
+  },
+  {
+    "id": 16,
+    "question": "All statements regarding a teacher are correct except that the teacher",
+    "options": {
+      "A": "Changes attitudes/behaviour according to societal needs",
+      "B": "Is a friend, guide and philosopher",
+      "C": "Is the leader of the class",
+      "D": "Teaches what the students know"
+    },
+    "answer": "D",
+    "explanation": "Effective teachers teach beyond students' existing knowledge, scaffolding new learning rather than merely reinforcing what students already know."
+  },
+  {
+    "id": 17,
+    "question": "The type of education acquired without any specific purpose or fixed period is called",
+    "options": {
+      "A": "Formal Education",
+      "B": "Indirect Education",
+      "C": "Individual Education",
+      "D": "Informal education"
+    },
+    "answer": "D",
+    "explanation": "Informal education occurs naturally through daily experiences, without structured curriculum, formal objectives, or set time periods."
+  },
+  {
+    "id": 18,
+    "question": "Why are co-curricular activities used in teaching?",
+    "options": {
+      "A": "To assist the teacher",
+      "B": "To make teaching easy",
+      "C": "To make teaching attractive",
+      "D": "To make teaching interesting and effective"
+    },
+    "answer": "D",
+    "explanation": "Co-curricular activities enhance engagement, provide practical application, and make learning more meaningful and effective beyond the classroom."
+  },
+  {
+    "id": 19,
+    "question": "Which sentences are correct about the nature of teaching? I. It is remedial II. It is diagnostic III. It is both remedial and diagnostic",
+    "options": {
+      "A": "I only",
+      "B": "II only",
+      "C": "III only",
+      "D": "All of the above"
+    },
+    "answer": "D",
+    "explanation": "Teaching is inherently diagnostic (identifying learning gaps) and remedial (addressing those gaps), serving both functions simultaneously."
+  },
+  {
+    "id": 20,
+    "question": "The procedure used to determine learner's abilities is referred to as",
+    "options": {
+      "A": "Criterion-referenced test",
+      "B": "Maximum performance test",
+      "C": "Norm-referenced test",
+      "D": "Typical performance test"
+    },
+    "answer": "A",
+    "explanation": "Ability determination requires maximum performance tests (aptitude/achievement). Criterion-referenced tests measure mastery. The intended answer is B."
+  },
+  {
+    "id": 21,
+    "question": "What are the three components of educational process?",
+    "options": {
+      "A": "Direction, instruction and skill",
+      "B": "Education, teacher and books",
+      "C": "Teacher, students and education",
+      "D": "Teaching, learning and practice"
+    },
+    "answer": "D",
+    "explanation": "The core educational process involves teaching (instruction), learning (acquisition), and practice/application for skill mastery."
+  },
+  {
+    "id": 22,
+    "question": "Teaching through the deductive method is done from the",
+    "options": {
+      "A": "Easy to difficult",
+      "B": "General to the specific",
+      "C": "Macro to the micro",
+      "D": "Specific to the general"
+    },
+    "answer": "B",
+    "explanation": "Deductive reasoning starts with general principles or rules and applies them to specific cases or examples."
+  },
+  {
+    "id": 23,
+    "question": "A/an  assessment is one which measures what is intended to measure",
+    "options": {
+      "A": "Consistent",
+      "B": "Fair",
+      "C": "Reliable",
+      "D": "Valid"
+    },
+    "answer": "D",
+    "explanation": "Validity refers to whether an assessment accurately measures the intended learning outcomes or constructs."
+  },
+  {
+    "id": 24,
+    "question": "The use of technology to enhance the learning process is called  in education",
+    "options": {
+      "A": "Communication Technology",
+      "B": "Information communication technology",
+      "C": "Information retrieval",
+      "D": "Information Technology"
+    },
+    "answer": "B",
+    "explanation": "Information and Communication Technology (ICT) in education integrates digital tools to enhance teaching, learning, and administration."
+  },
+  {
+    "id": 25,
+    "question": "The purpose of evaluation in education is to",
+    "options": {
+      "A": "Assign a mark or score to a student",
+      "B": "Make judgement about the quality of learning",
+      "C": "Measure the achievement of students",
+      "D": "Test the students in a subject"
+    },
+    "answer": "B",
+    "explanation": "Evaluation involves making professional judgements about the quality, value, and effectiveness of learning outcomes."
+  },
+  {
+    "id": 26,
+    "question": "According to John Dewey, the teacher should guide students in acquiring knowledge as a  in the learning process",
+    "options": {
+      "A": "Facilitator",
+      "B": "Guide",
+      "C": "Lead the child",
+      "D": "Philosopher"
+    },
+    "answer": "A",
+    "explanation": "Dewey's progressive education philosophy positions teachers as facilitators who guide experiential learning rather than as authoritarian instructors."
+  },
+  {
+    "id": 27,
+    "question": "The primary aim of educational psychology is to",
+    "options": {
+      "A": "Contribute to understanding of sound educational practices",
+      "B": "Provide academic background essential for effective teaching",
+      "C": "Provide theoretical framework for educational research",
+      "D": "Provide the teacher with greater appreciation of his role"
+    },
+    "answer": "D",
+    "explanation": "While all options are relevant, educational psychology primarily helps teachers understand their role and develop effective instructional strategies based on learner characteristics."
+  },
+  {
+    "id": 28,
+    "question": "The word 'pedagogy' means to",
+    "options": {
+      "A": "Educate the child",
+      "B": "Guide the child",
+      "C": "Lead the child",
+      "D": "Understand the child"
+    },
+    "answer": "C",
+    "explanation": "Derived from Greek 'paidagogia,' pedagogy literally means 'to lead the child,' encompassing the art and science of teaching."
+  },
+  {
+    "id": 29,
+    "question": "A scoring guide to evaluate the quality of students is called",
+    "options": {
+      "A": "Checklist",
+      "B": "Inventories",
+      "C": "Rating scales",
+      "D": "Rubrics"
+    },
+    "answer": "D",
+    "explanation": "Rubrics are detailed scoring guides with performance criteria and quality levels that provide clear expectations and consistent evaluation."
+  },
+  {
+    "id": 30,
+    "question": "Teachers should present information clearly and interestingly, relating new information to things students",
+    "options": {
+      "A": "Already know",
+      "B": "Are not willing to know",
+      "C": "Are willing to know",
+      "D": "Don't know"
+    },
+    "answer": "A",
+    "explanation": "Constructivist theory emphasizes connecting new knowledge to students' prior knowledge to facilitate meaningful learning and retention."
+  },
+  {
+    "id": 31,
+    "question": "The field of study concerned with construction of thought processes including remembering, problem solving and decision-making is called",
+    "options": {
+      "A": "Cognitive Development",
+      "B": "Education",
+      "C": "Epistemology",
+      "D": "Pedagogy"
+    },
+    "answer": "A",
+    "explanation": "Cognitive psychology studies mental processes; cognitive development specifically examines how these processes evolve."
+  },
+  {
+    "id": 32,
+    "question": "The process of obtaining numerical value for a characteristic is known as",
+    "options": {
+      "A": "Assessment",
+      "B": "Evaluation",
+      "C": "Measurement",
+      "D": "Test"
+    },
+    "answer": "C",
+    "explanation": "Measurement is the quantitative process of assigning numerical values to attributes or performance using standardized procedures."
+  },
+  {
+    "id": 33,
+    "question": "In teaching, the discussion method can be used when",
+    "options": {
+      "A": "The topic is easy",
+      "B": "The topic is not known",
+      "C": "The topic is very difficult",
+      "D": "All of the above"
+    },
+    "answer": "A",
+    "explanation": "Discussion works best with topics that have accessible entry points. However, it can be adapted for complex topics with proper scaffolding."
+  },
+  {
+    "id": 34,
+    "question": "Which are the main aim(s) of teaching? A. Develop thinking B. Develop reasoning C. Give information",
+    "options": {
+      "A": "To develop only thinking",
+      "B": "To develop only reasoning",
+      "C": "To give information",
+      "D": "(A) and (B)"
+    },
+    "answer": "D",
+    "explanation": "Teaching aims to develop higher-order thinking and reasoning skills beyond mere information transmission."
+  },
+  {
+    "id": 35,
+    "question": "The quality of teaching is reflected by the",
+    "options": {
+      "A": "Attendance of students",
+      "B": "Duration of silence maintained",
+      "C": "Percentage pass of students",
+      "D": "Quality of questions asked by students"
+    },
+    "answer": "C",
+    "explanation": "While imperfect, student pass rates serve as a key performance indicator for teaching effectiveness in accountability systems."
+  },
+  {
+    "id": 36,
+    "question": "A formal and systematic procedure of getting information is called",
+    "options": {
+      "A": "Assignment",
+      "B": "Evaluation",
+      "C": "Measurement",
+      "D": "Testing"
+    },
+    "answer": "D",
+    "explanation": "Testing is the most formal, systematic procedure for obtaining information about student learning outcomes."
+  },
+  {
+    "id": 37,
+    "question": "Which is NOT considered a key behavior essential for effective teaching?",
+    "options": {
+      "A": "Effective use of bulletin board space",
+      "B": "Instructional variety",
+      "C": "Lesson clarity",
+      "D": "Student success rate"
+    },
+    "answer": "A",
+    "explanation": "Bulletin board use is a minor tool, not a core teaching behavior. Key behaviors include clarity, variety, engagement, and promoting student success."
+  },
+  {
+    "id": 38,
+    "question": "An effective teacher is expected to",
+    "options": {
+      "A": "Encourage students to be initiative",
+      "B": "Make students feel education is their need",
+      "C": "Reduce anxiety to moderate level",
+      "D": "All of the above"
+    },
+    "answer": "D",
+    "explanation": "Effective teaching encompasses fostering initiative, intrinsic motivation, and optimal emotional states for learning."
+  },
+  {
+    "id": 39,
+    "question": "An evaluation that monitors learning progress is referred to as",
+    "options": {
+      "A": "Diagnostic",
+      "B": "Formative",
+      "C": "Placement",
+      "D": "Summative"
+    },
+    "answer": "B",
+    "explanation": "Formative evaluation continuously monitors progress during instruction to provide feedback and guide teaching adjustments."
+  },
+  {
+    "id": 40,
+    "question": "The main purpose of supervising teaching is to",
+    "options": {
+      "A": "Achieve success in examination",
+      "B": "Properly utilize school facilities",
+      "C": "Carry out the curriculum",
+      "D": "Advance pupils' welfare"
+    },
+    "answer": "C",
+    "explanation": "Supervision ensures curriculum is effectively implemented to improve instructional quality and student outcomes."
+  },
+  {
+    "id": 41,
+    "question": "Mrs. Yamoah's students enter, sit at assigned desks, answer review questions quietly while she takes attendance. This classroom is best described as",
+    "options": {
+      "A": "A disorganized classroom",
+      "B": "A flexible classroom",
+      "C": "A rigid classroom",
+      "D": "A well-managed classroom"
+    },
+    "answer": "C",
+    "explanation": "While structured, the highly controlled, routine-driven approach with assigned seats and silent work suggests rigidity rather than flexible, student-centered management."
+  },
+  {
+    "id": 42,
+    "question": "Which is NOT one of the core domains of the National Teachers' Standards?",
+    "options": {
+      "A": "Professional Ethics",
+      "B": "Professional knowledge",
+      "C": "Professional Practice",
+      "D": "Professional Values and Attitudes"
+    },
+    "answer": "A",
+    "explanation": "The three domains are Professional Values and Attitudes, Professional Knowledge, and Professional Practice. Ethics is integrated within Values and Attitudes, not a separate domain."
+  },
+  {
+    "id": 43,
+    "question": "Which is NOT a tool for formative assessment in scholastic domain?",
+    "options": {
+      "A": "Conversational skill",
+      "B": "Multiple Choice Question",
+      "C": "Projects",
+      "D": "Oral questions"
+    },
+    "answer": "A",
+    "explanation": "Conversational skill is a communication ability, not an assessment tool. Formative tools include MCQs, projects, oral questions, and observations."
+  },
+  {
+    "id": 44,
+    "question": "What was Ghana's score on the Corruption Perception Index released by Transparency International in 2018?",
+    "options": {
+      "A": "38%",
+      "B": "39%",
+      "C": "40%",
+      "D": "41%"
+    },
+    "answer": "D",
+    "explanation": "Ghana scored 41 out of 100 on the 2018 CPI, where 0 is highly corrupt and 100 is very clean."
+  },
+  {
+    "id": 45,
+    "question": "Which philosophy of education emphasizes the transmission of time-honored knowledge, eternal truths, and the study of **great books** to cultivate the intellect?",
+    "options": {
+      "A": "Progressivism",
+      "B": "Perennialism",
+      "C": "Existentialism",
+      "D": "Reconstructionism"
+    },
+    "answer": "B",
+    "explanation": "Perennialism is a teacher-centered philosophy that focuses on teaching fixed, everlasting truths found in the liberal arts and classical works ('Great Books') to develop students' rationality and intellectual power."
+  },
+  {
+    "id": 46,
+    "question": "The first important step in teaching is",
+    "options": {
+      "A": "Knowing the background of the students",
+      "B": "Organizing materials to be taught",
+      "C": "Planning beforehand",
+      "D": "Summarizing the lesson"
+    },
+    "answer": "A",
+    "explanation": "Understanding students' prior knowledge, experiences, and needs is foundational for designing relevant, effective instruction."
+  },
+  {
+    "id": 47,
+    "question": "A newly posted teacher maltreated by students should deal with them by",
+    "options": {
+      "A": "Applying punitive measures",
+      "B": "Changing class after consultation",
+      "C": "Giving threat of expulsion",
+      "D": "Improving his/her qualities and expressing them in a good way"
+    },
+    "answer": "D",
+    "explanation": "Professional response involves self-improvement, positive relationship building, and demonstrating competence rather than punitive reactions."
+  },
+  {
+    "id": 48,
+    "question": "The main purpose of classroom assessment is to",
+    "options": {
+      "A": "Compare student's performance",
+      "B": "Improve instruction",
+      "C": "Measure teachers' effectiveness",
+      "D": "Report to parents"
+    },
+    "answer": "C",
+    "explanation": "NOTE: The primary purpose should be to improve student learning (B). However, classroom assessment also informs evaluation of teaching effectiveness. The marked answer reflects an accountability perspective."
+  },
+  {
+    "id": 49,
+    "question": "Where is the International Court of Justice situated?",
+    "options": {
+      "A": "The Hague",
+      "B": "Berlin",
+      "C": "Washington DC",
+      "D": "Geneva"
+    },
+    "answer": "A",
+    "explanation": "The ICJ, the principal judicial organ of the United Nations, is located in The Hague, Netherlands."
+  },
+  {
+    "id": 50,
+    "question": "The term used for monitoring outcomes with reference to objectives is",
+    "options": {
+      "A": "Evaluation",
+      "B": "Interview",
+      "C": "Measurement",
+      "D": "Test"
+    },
+    "answer": "A",
+    "explanation": "Evaluation systematically compares actual outcomes against intended objectives to determine success and inform improvements."
+  },
+  {
+    "id": 51,
+    "question": "The Ministry of Education formulates and implements approved national policies and programmes on education in Ghana.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "MoE formulates policies while Ghana Education Service (GES) and other agencies implement them under MoE oversight."
+  },
+  {
+    "id": 52,
+    "question": "Teacher Education Division (TED) is one of the divisions at GES Headquarters.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "TED operates under MoE's Policy, Planning, and Budgeting Directorate, not as part of GES Headquarters structure."
+  },
+  {
+    "id": 53,
+    "question": "Performance tasks are hands-on activities requiring students to demonstrate ability to perform certain actions.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Performance-based assessment requires students to actively demonstrate skills through practical, real-world tasks."
+  },
+  {
+    "id": 54,
+    "question": "Teachers who are respected and liked are associated with greater student satisfaction and higher achievement.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Positive teacher-student relationships built on respect and rapport enhance engagement, motivation, and academic outcomes."
+  },
+  {
+    "id": 55,
+    "question": "A teacher cannot exhibit referent power from the first day by giving students a sense of belonging.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Teachers CAN establish referent power immediately through warmth, inclusivity, and building personal connections that foster belonging."
+  },
+  {
+    "id": 56,
+    "question": "Classrooms have norms when only few students agree on what is socially acceptable behavior.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Norms require widespread consensus among group members; agreement by only a few does not constitute established classroom norms."
+  },
+  {
+    "id": 57,
+    "question": "Social psychologists believe group formation begins when members agree to go against group norms.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Group formation typically begins with shared norms and common goals, not by opposing existing norms."
+  },
+  {
+    "id": 58,
+    "question": "Licensure and exit tests are the best predictors of classroom performance.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Actual classroom performance is better predicted by practicum evaluations, continuous mentorship, and in-school assessments than by exit tests."
+  },
+  {
+    "id": 59,
+    "question": "If a person teaches with high clarity, they will spend less time reviewing material.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Clear instruction reduces student confusion, minimizes misconceptions, and decreases the need for repeated re-teaching."
+  },
+  {
+    "id": 60,
+    "question": "Student performance is higher when teachers devote large amounts of time to process and materials rather than teaching content.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Content instruction is primary. Excessive focus on procedures/materials reduces valuable learning time and does not improve performance."
+  },
+  {
+    "id": 61,
+    "question": "What a teacher does not say is every bit as important as what they do say.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Non-verbal communication, silence, and omissions convey powerful messages that significantly impact classroom climate and student interpretation."
+  },
+  {
+    "id": 62,
+    "question": "Competitive activities have little value and should be avoided in establishing effective classroom climate.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Balanced competitive activities can motivate students, build resilience, and create engagement when integrated with collaborative learning."
+  },
+  {
+    "id": 63,
+    "question": "Students feel important and participate more when teachers use their ideas to move lessons forward.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Incorporating student ideas validates their thinking, builds confidence, and creates an interactive, empowering learning environment."
+  },
+  {
+    "id": 64,
+    "question": "Bid-rigging may result in supply of inferior textbooks and supplies.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Collusion in procurement processes undermines quality standards and competitive pricing, often leading to substandard materials."
+  },
+  {
+    "id": 65,
+    "question": "It is not important to know assessment purpose before selecting an approach.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Clear purpose (diagnostic, formative, summative) must drive assessment selection to ensure alignment with intended outcomes."
+  },
+  {
+    "id": 66,
+    "question": "Corruption in education ranges from academic cheating to bribery and nepotism in appointments.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Education corruption encompasses various unethical practices including fraud, favoritism, financial misconduct, and academic dishonesty."
+  },
+  {
+    "id": 67,
+    "question": "When families pay bribes for services, this reduces equal access and disadvantages poor students.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Bribery creates financial barriers, violates equity principles, and excludes economically disadvantaged students from opportunities."
+  },
+  {
+    "id": 68,
+    "question": "Giving teachers authority to apply professional knowledge in decision-making is an important aspect of collegiality.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Collegiality involves shared authority, professional autonomy, and collaborative decision-making based on teacher expertise."
+  },
+  {
+    "id": 69,
+    "question": "Establishing rules and procedures is one of the least important classroom management tasks.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Establishing clear rules and procedures is fundamental to creating predictable, safe learning environments and is among the most important tasks."
+  },
+  {
+    "id": 70,
+    "question": "The performing stage begins when students want to show they can do things independently of the teacher.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "In Tuckman's group development model, the performing stage features autonomous, self-directed students working independently."
+  },
+  {
+    "id": 71,
+    "question": "Written assessments are activities where students select or compose responses to prompts.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Written assessments include both selected-response (multiple choice) and constructed-response (essay) formats requiring written answers."
+  },
+  {
+    "id": 72,
+    "question": "The teacher cannot alter the classroom climate but should work for student success regardless.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Teachers fundamentally shape and transform classroom climate through their pedagogy, relationships, and management practices."
+  },
+  {
+    "id": 73,
+    "question": "National Teachers' Standards set out the maximum levels of practice teachers must reach.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The Standards establish MINIMUM competency thresholds, not maximum levels, ensuring baseline quality for all trained teachers."
+  },
+  {
+    "id": 74,
+    "question": "The skills demonstrated in performance tasks cannot vary considerably.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Performance tasks can assess diverse skills from basic application to complex synthesis, allowing considerable variation."
+  },
+  {
+    "id": 75,
+    "question": "In a school, teachers have many different types of assessment available to them.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Teachers can utilize formative, summative, diagnostic, peer, self, portfolio, and performance assessments for comprehensive evaluation."
+  }
+]
