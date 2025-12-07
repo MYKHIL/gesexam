@@ -157,8 +157,23 @@ class GitDeployment:
         self.log("✓ Changes committed")
         return True
     
-    def push_to_github(self, branch="main", force=False):
+    def get_current_branch(self):
+        """Detect the current Git branch"""
+        result = self.run_command(["git", "rev-parse", "--abbrev-ref", "HEAD"], check=False)
+        if result and result.returncode == 0:
+            return result.stdout.strip()
+        return None
+    
+    def push_to_github(self, branch=None, force=False):
         """Push commits to GitHub"""
+        # Auto-detect branch if not specified
+        if not branch:
+            branch = self.get_current_branch()
+            if not branch:
+                self.log("Could not detect current branch, using 'master'", "WARNING")
+                branch = "master"
+            self.log(f"Auto-detected branch: {branch}")
+        
         self.log(f"Pushing to GitHub branch '{branch}'...")
         
         cmd = ["git", "push", "-u", "origin", branch]
@@ -190,7 +205,7 @@ class GitDeployment:
         self.log(f"   https://{GITHUB_USERNAME}.github.io/{GITHUB_REPO}/")
         self.log("="*60 + "\n")
     
-    def deploy(self, branch="main", force=False, message=None):
+    def deploy(self, branch=None, force=False, message=None):
         """Execute the complete deployment process"""
         try:
             self.log("Starting GitHub deployment process...\n")
@@ -220,7 +235,7 @@ class GitDeployment:
             if not self.commit_changes(message):
                 return False
             
-            # Push to GitHub
+            # Push to GitHub (auto-detect branch if not specified)
             if not self.push_to_github(branch, force):
                 return False
             
@@ -266,8 +281,8 @@ Examples:
     )
     parser.add_argument(
         "--branch",
-        default="main",
-        help="GitHub branch to push to (default: main)"
+        default=None,
+        help="GitHub branch to push to (default: auto-detect from current branch, usually 'master' or 'main')"
     )
     parser.add_argument(
         "--force",
