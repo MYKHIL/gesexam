@@ -2381,14 +2381,51 @@
         }
 
         async function renderRankingsView() {
-            contentArea.innerHTML = `<div class="p-6 bg-white rounded-xl shadow-lg">Loading rankings...</div>`;
+            // Render the table shell immediately (with Tailwind design)
+            contentArea.innerHTML = `
+                <div class="p-6 bg-white rounded-xl shadow-lg">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-2xl font-bold">Global Rankings</h2>
+                        <div class="flex gap-2">
+                            <button onclick="setView('leaderboard')" class="px-3 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition duration-150">Back</button>
+                        </div>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse">
+                            <thead class="bg-blue-600 text-white">
+                                <tr>
+                                    <th class="px-4 py-2 text-left rounded-tl-lg">Rank</th>
+                                    <th class="px-4 py-2 text-left">Name</th>
+                                    <th class="px-4 py-2 text-center">Score</th>
+                                    <th class="px-4 py-2 text-center">Percentage</th>
+                                    <th class="px-4 py-2 text-right rounded-tr-lg">Date Obtained</th>
+                                </tr>
+                            </thead>
+                            <tbody id="rankings-table-body">
+                                <tr>
+                                    <td colspan="5" class="p-8 text-center text-gray-500">
+                                        <div class="flex flex-col items-center justify-center">
+                                            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mb-2"></div>
+                                            <p>Loading rankings...</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            `;
+
             try {
                 // Prefer Firebase for fetching users; fallback to JSONBin
                 let usersRaw = [];
                 try {
                     if (!firebaseInitialized) await initFirebase();
+                    // Double check initialization succeeded
                     if (firebaseInitialized && firestoreDb && window._fb && window._fb.getDocs) {
-                        const qs = await window._fb.getDocs(window._fb.collection(firestoreDb, 'users'));
+                        const usersRef = window._fb.collection(firestoreDb, 'users');
+                        // Optional optimization: order by latestScore if index exists, but client-side sort is fine for now
+                        const qs = await window._fb.getDocs(usersRef);
                         qs.forEach(d => {
                             // STRICT FILTER: Only include docs with "migrated" structure (name_deviceId)
                             // Heuristic: must have underscore AND have both name/deviceId fields
@@ -2398,6 +2435,7 @@
                             if (!u.name || !u.deviceId) return; // double check data integrity
 
                             usersRaw.push(u);
+
                             // Populate global cache for realtime updates (with merge)
                             if (u && u.deviceId) {
                                 globalUsersCache[u.deviceId] = mergeUserStats(globalUsersCache[u.deviceId], u);
@@ -2408,79 +2446,26 @@
                     console.debug('Could not fetch users from Firestore for online count (fallback to jsonbin):', e);
                     try { if (FIREBASE_NOTIFICATION_ENABLED) showMessage('Could not load leaderboard from Firebase; falling back to jsonbin.io', 'info'); } catch (err) { }
                 }
+
                 if (!usersRaw || usersRaw.length === 0) {
                     const fetched = await fetchJsonBinData();
                     usersRaw = Array.isArray(fetched) ? fetched : (fetched && Array.isArray(fetched.users) ? fetched.users : []);
                 }
 
-                // Use global filtering function to ensure consistent 5-day TTL
-                const ranked = filterUsersForRankings(usersRaw);
-
-                if (!ranked || ranked.length === 0) {
-                    contentArea.innerHTML = `<div class="p-6 bg-white rounded-xl shadow-lg text-center">No registered users found.</div>`;
+                if (!usersRaw || usersRaw.length === 0) {
+                    document.getElementById('rankings-table-body').innerHTML = '<tr><td colspan="5" class="p-8 text-center text-gray-500 italic">No registered users found. Be the first to join!</td></tr>';
                     return;
                 }
 
-                // Assign competition-style ranks (ties share same rank; next rank = position index+1)
-                let rowsArr = [];
-                let prevScore = null;
-                let prevTotal = null;
-                let itemsBefore = 0;
-                let currentRank = 1;
-                for (let i = 0; i < ranked.length; i++) {
-                    const u = ranked[i];
-                    let rank;
-                    if (prevScore === u.latestScore && prevTotal === u.latestTotal) {
-                        // same group as previous -> same rank
-                        rank = currentRank;
-                    } else {
-                        rank = itemsBefore + 1;
-                        currentRank = rank;
-                        prevScore = u.latestScore;
-                        prevTotal = u.latestTotal;
-                    }
-                    itemsBefore++;
-                    rowsArr.push(`
-                    <tr class="border-b hover:bg-gray-50">
-                        <td class="px-4 py-3 font-semibold">#${rank}</td>
-                        <td class="px-4 py-3">${u.name}</td>
-                        <td class="px-4 py-3 text-green-600 font-semibold">${u.latestCorrect}/${u.latestTotal}</td>
-                        <td class="px-4 py-3 text-blue-600 font-bold">${u.latestScore}%</td>
-                        <td class="px-4 py-3 text-sm text-gray-600">${u.timestamp ? new Date(u.timestamp).toLocaleString() : '—'}</td>
-                    </tr>
-                `);
-                }
-                const rows = rowsArr.join('');
+                // Use the separate update function to render the rows with the consistent (medals) design
+                updateRankingsTable(usersRaw);
 
-                contentArea.innerHTML = `
-                    <div class="p-6 bg-white rounded-xl shadow-lg">
-                        <div class="flex justify-between items-center mb-4">
-                            <h2 class="text-2xl font-bold">Global Rankings</h2>
-                            <div class="flex gap-2">
-                                <button onclick="setView('leaderboard')" class="px-3 py-2 bg-gray-600 text-white rounded-lg">Back</button>
-                            </div>
-                        </div>
-                        <div class="overflow-x-auto">
-                            <table class="w-full border-collapse">
-                                <thead class="bg-blue-600 text-white">
-                                    <tr>
-                                        <th class="px-4 py-2 text-left">Rank</th>
-                                        <th class="px-4 py-2 text-left">Name</th>
-                                        <th class="px-4 py-2 text-left">Score</th>
-                                        <th class="px-4 py-2 text-left">Percentage</th>
-                                        <th class="px-4 py-2 text-left">Date Obtained</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="rankings-table-body">
-                                    ${rows}
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                `;
             } catch (e) {
                 console.error('Failed to render rankings:', e);
-                contentArea.innerHTML = `<div class="p-6 bg-white rounded-xl shadow-lg text-red-600">Could not load rankings. See console for details.</div>`;
+                const tbody = document.getElementById('rankings-table-body');
+                if (tbody) {
+                    tbody.innerHTML = `<tr><td colspan="5" class="p-8 text-center text-red-600">Could not load rankings. Please check your connection.<br><span class="text-xs text-gray-400 mt-2">${e.message || ''}</span></td></tr>`;
+                }
             }
         }
 
