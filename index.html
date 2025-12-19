@@ -1607,6 +1607,115 @@
             return el;
         }
 
+        /**
+         * Generic custom confirmation modal.
+         * @returns {Promise<boolean>} Resolves true if confirmed, false otherwise.
+         */
+        function showCustomConfirm(title, message, confirmText = "OK", cancelText = "Cancel", confirmColorClass = "bg-blue-600 hover:bg-blue-700") {
+            return new Promise((resolve) => {
+                const modal = _createModalContainer('custom-confirm-modal');
+                // Use a backdrop blur and generic styling
+                modal.innerHTML = `
+                    <div class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm transition-opacity duration-300">
+                        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full mx-4 overflow-hidden transform transition-all scale-100">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">${title}</h3>
+                                <div class="text-gray-600 text-base leading-relaxed mb-6">
+                                    ${formatText(message)}
+                                </div>
+                                <div class="flex justify-end space-x-3">
+                                    <button id="modal-cancel-btn" class="px-5 py-2.5 rounded-xl text-gray-700 font-semibold bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 transition-colors">
+                                        ${cancelText}
+                                    </button>
+                                    <button id="modal-confirm-btn" class="px-5 py-2.5 rounded-xl text-white font-bold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-blue-500 transition-colors ${confirmColorClass}">
+                                        ${confirmText}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                const confirmBtn = document.getElementById('modal-confirm-btn');
+                const cancelBtn = document.getElementById('modal-cancel-btn');
+
+                const cleanup = () => {
+                    modal.innerHTML = '';
+                };
+
+                confirmBtn.onclick = () => {
+                    cleanup();
+                    resolve(true);
+                };
+
+                cancelBtn.onclick = () => {
+                    cleanup();
+                    resolve(false);
+                };
+            });
+        }
+
+        /**
+         * Generic custom prompt modal.
+         * @returns {Promise<string|null>} Resolves with input value or null if cancelled.
+         */
+        function showCustomPrompt(title, message, placeholder = "", confirmText = "OK", cancelText = "Cancel") {
+            return new Promise((resolve) => {
+                const modal = _createModalContainer('custom-prompt-modal');
+                modal.innerHTML = `
+                    <div class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm transition-opacity duration-300">
+                        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full mx-4 overflow-hidden transform transition-all scale-100">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">${title}</h3>
+                                <div class="text-gray-600 text-base leading-relaxed mb-4">
+                                    ${formatText(message)}
+                                </div>
+                                <input id="modal-prompt-input" type="password" placeholder="${placeholder}" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-shadow mb-6 text-lg" autofocus />
+                                <div class="flex justify-end space-x-3">
+                                    <button id="modal-prompt-cancel-btn" class="px-5 py-2.5 rounded-xl text-gray-700 font-semibold bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 transition-colors">
+                                        ${cancelText}
+                                    </button>
+                                    <button id="modal-prompt-confirm-btn" class="px-5 py-2.5 rounded-xl text-white font-bold shadow-md bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-blue-500 transition-colors">
+                                        ${confirmText}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                const input = document.getElementById('modal-prompt-input');
+                const confirmBtn = document.getElementById('modal-prompt-confirm-btn');
+                const cancelBtn = document.getElementById('modal-prompt-cancel-btn');
+
+                // Auto-focus input
+                setTimeout(() => input.focus(), 50);
+
+                const cleanup = () => {
+                    modal.innerHTML = '';
+                };
+
+                const confirm = () => {
+                    const val = input.value;
+                    cleanup();
+                    resolve(val);
+                };
+
+                confirmBtn.onclick = confirm;
+
+                // Allow Enter key to submit
+                input.onkeydown = (e) => {
+                    if (e.key === 'Enter') confirm();
+                    if (e.key === 'Escape') { cleanup(); resolve(null); }
+                };
+
+                cancelBtn.onclick = () => {
+                    cleanup();
+                    resolve(null);
+                };
+            });
+        }
+
         function openReportDialog() {
             const q = sessionQuestions[currentQuestionIndex];
             if (!q) { showMessage('No question available to report.', 'error'); return; }
@@ -2926,6 +3035,19 @@
             }
         }
 
+        async function confirmQuitQuiz() {
+            const confirmed = await showCustomConfirm(
+                "Quit Session?",
+                "Are you sure you want to quit?<br><br>Your current progress will be <strong>lost</strong> and cannot be recovered.",
+                "Yes, Quit",
+                "No, Keep Playing",
+                "bg-red-600 hover:bg-red-700"
+            );
+
+            if (confirmed) {
+                resetAndStartNewSession();
+            }
+        }
         function isValidQuiz(data) {
             if (!Array.isArray(data) || data.length === 0) {
                 return false;
@@ -3062,11 +3184,21 @@
         /**
          * Resets local storage and restores the default question set.
          */
-        function confirmReset() {
-            localStorage.removeItem(LOCAL_STORAGE_KEY);
-            userAnswers = {};
-            loadState(); // This will reload from questions.json
-            showMessage(`Quiz data has been reset from 'questions.json'.`, 'success');
+        async function confirmReset() {
+            const confirmed = await showCustomConfirm(
+                "Reset Quiz Data?",
+                "Are you sure you want to <strong>restore defaults</strong>?<br><br>This will <span class='text-red-500 font-bold'>delete</span> all your uploaded files and clear your current progress.",
+                "Yes, Delete Everything",
+                "No, Go Back",
+                "bg-red-600 hover:bg-red-700"
+            );
+
+            if (confirmed) {
+                localStorage.removeItem(LOCAL_STORAGE_KEY);
+                userAnswers = {};
+                loadState(); // This will reload from questions.json
+                showMessage(`Quiz data has been reset from 'questions.json'.`, 'success');
+            }
         }
 
         // --- Quiz Session Logic ---
@@ -3360,7 +3492,7 @@
             renderActionButtons(document.getElementById('action-buttons'));
         }
 
-        function confirmFinish() {
+        async function confirmFinish() {
             // Check for unanswered questions
             const unanswered = [];
             for (let i = 0; i < sessionQuestions.length; i++) {
@@ -3373,7 +3505,17 @@
                 const count = unanswered.length;
                 // Interaction: User wants to know if they missed questions.
                 // OK -> Go to question. Cancel -> Proceed to finish.
-                if (confirm(`You have ${count} unanswered question${count > 1 ? 's' : ''}.\n\nClick OK to go to the first unanswered question.\nClick Cancel to submit your score now.`)) {
+
+                // Use custom generic modal
+                const shouldGoToQuestion = await showCustomConfirm(
+                    "Unanswered Questions",
+                    `You have <strong class="text-red-600">${count}</strong> unanswered question${count > 1 ? 's' : ''}.<br><br>For the best score, you should answer all questions.`,
+                    "Review Unanswered",
+                    "Submit Anyway",
+                    "bg-blue-600 hover:bg-blue-700"
+                );
+
+                if (shouldGoToQuestion) {
                     goToQuestion(unanswered[0]);
                     return;
                 }
@@ -3949,15 +4091,7 @@
             setView('home');
         }
 
-        function confirmQuitQuiz() {
-            const answeredCount = Object.keys(userAnswers).length;
-            if (answeredCount > 0) {
-                const proceed = confirm(`You have answered ${answeredCount} question(s). Are you sure you want to quit without completing the quiz?`);
-                if (!proceed) return;
-            }
-            stopTimer();
-            resetAndStartNewSession();
-        }
+
 
         function renderProgressBar(progressContainer) {
             const answeredCount = Object.keys(userAnswers).length;
@@ -4006,8 +4140,18 @@
                 // Clear the "Verifying..." message by showing a new status or just proceeding
                 // (prompt blocks execution, so message might persist until prompt is closed)
 
-                const input = prompt("Enter Admin Password:");
-                if (input === null) return; // cancelled
+                const input = await showCustomPrompt(
+                    "Admin Access Required",
+                    "Please enter the administrative password to view reported questions.",
+                    "Password",
+                    "Access Reports",
+                    "Cancel"
+                );
+
+                if (input === null) {
+                    showMessage("Admin access cancelled.", "info");
+                    return;
+                }
 
                 if (input !== realPassword) {
                     showMessage("Incorrect password.", "error");
