@@ -2550,18 +2550,33 @@
             const fiveMinsAgo = new Date(Date.now() - 5 * 60 * 1000).toISOString();
             const onlineCount = users.filter(u => u.lastTimestamp > fiveMinsAgo).length;
 
-            const badge = document.getElementById('online-counter');
-            if (badge) {
-                badge.innerHTML = `<span id="online-badge" class="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-bold shadow-sm cursor-pointer animate-pulse hover:bg-green-200 transaction">
+            const badgeHtml = `<span id="online-badge" class="inline-flex items-center px-3 py-1 rounded-full text-lg font-extrabold text-gray-600 bg-gray-100 hover:bg-gray-200 cursor-pointer shadow-sm transition-all">
+                    <svg class="w-4 h-4 mr-2 text-green-500 animate-pulse" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="4" cy="4" r="3" fill="currentColor" />
+                    </svg>
+                    ${onlineCount} online
+                </span>`;
+
+            // 1. Update the GLOBAL header badge (persistent)
+            const headerBadgeContainer = document.getElementById('online-status-badge');
+            if (headerBadgeContainer) {
+                headerBadgeContainer.innerHTML = badgeHtml;
+                // Re-attach listener
+                const newBadge = document.getElementById('online-badge');
+                if (newBadge) {
+                    newBadge.addEventListener('click', showOnlineUsersPopup);
+                    newBadge.addEventListener('touchstart', showOnlineUsersPopup);
+                    newBadge._onlineClickAttached = true;
+                }
+            }
+
+            // 2. Update the Home view badge (if visible)
+            const homeCounter = document.getElementById('online-counter');
+            if (homeCounter) {
+                homeCounter.innerHTML = `<span class="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-bold shadow-sm animate-pulse cursor-pointer" onclick="showOnlineUsersPopup()">
                     <span class="w-2 h-2 inline-block bg-green-500 rounded-full mr-2"></span>
                     ${onlineCount} users online
                 </span>`;
-                // Re-attach listener if element was recreated
-                const badgeEl = document.getElementById('online-badge');
-                if (badgeEl) {
-                    badgeEl.addEventListener('click', showOnlineUsersPopup);
-                    badgeEl._onlineClickAttached = true;
-                }
             }
         }
 
@@ -2862,6 +2877,78 @@
             return array;
         }
 
+        // Identify if a question is True/False (has exactly 2 options)
+        function isTrueFalse(question) {
+            if (!question || !question.options) return false;
+            return Object.keys(question.options).length === 2;
+        }
+
+        // Get a sequential subset starting from a random index (with wraparound)
+        function getSequentialRandomSubset(pool, count) {
+            if (pool.length === 0) return [];
+            if (pool.length <= count) return pool; // Not enough items, return all
+
+            const startIndex = Math.floor(Math.random() * pool.length);
+            const result = [];
+            for (let i = 0; i < count; i++) {
+                result.push(pool[(startIndex + i) % pool.length]);
+            }
+            return result;
+        }
+
+        function generateSessionQuestions() {
+            // Segregate questions
+            const tfQuestions = [];
+            const mcQuestions = []; // Multiple choice (more than 2 options)
+
+            allQuestions.forEach(q => {
+                if (isTrueFalse(q)) {
+                    tfQuestions.push(q);
+                } else {
+                    mcQuestions.push(q);
+                }
+            });
+
+            // Calculate quotas
+            // 20% (1/5) should be True/False
+            const totalNeeded = quizSettings.numQuestions;
+            let tfCount = Math.floor(totalNeeded / 5);
+
+            // If we don't have enough TF questions, take what we have
+            if (tfCount > tfQuestions.length) {
+                tfCount = tfQuestions.length;
+            }
+
+            let mcCount = totalNeeded - tfCount;
+            // If we don't have enough MC questions, try to fill with TF if available
+            if (mcCount > mcQuestions.length) {
+                const shortfall = mcCount - mcQuestions.length;
+                mcCount = mcQuestions.length;
+                if (tfQuestions.length > tfCount) {
+                    const extraTf = Math.min(shortfall, tfQuestions.length - tfCount);
+                    tfCount += extraTf;
+                }
+            }
+
+            let selectedMC = [];
+            let selectedTF = [];
+
+            if (quizSettings.randomize) {
+                // Case 1: Fully Random
+                const shuffledMC = shuffle([...mcQuestions]);
+                const shuffledTF = shuffle([...tfQuestions]);
+                selectedMC = shuffledMC.slice(0, mcCount);
+                selectedTF = shuffledTF.slice(0, tfCount);
+            } else {
+                // Case 2: Sequential Random Start
+                selectedMC = getSequentialRandomSubset(mcQuestions, mcCount);
+                selectedTF = getSequentialRandomSubset(tfQuestions, tfCount);
+            }
+
+            // Combine: MC first, then TF at the end
+            return [...selectedMC, ...selectedTF];
+        }
+
         function startSession() {
             if (allQuestions.length === 0) {
                 showMessage("Cannot start session. No questions loaded.", 'error');
@@ -2870,12 +2957,15 @@
 
             window.speechSynthesis.cancel();
 
-            let pool = [...allQuestions];
-            if (quizSettings.randomize) {
-                pool = shuffle(pool);
+            // Use refined generation logic to pick session questions
+            sessionQuestions = generateSessionQuestions();
+
+            // Fallback/Safety: If generation failed to yield enough questions (e.g. strict filtering issue), 
+            // utilize standard slice but this shouldn't happen with the logic above
+            if (sessionQuestions.length === 0 && allQuestions.length > 0) {
+                sessionQuestions = allQuestions.slice(0, quizSettings.numQuestions);
             }
 
-            sessionQuestions = pool.slice(0, quizSettings.numQuestions);
             currentQuestionIndex = 0;
             userAnswers = {};
             currentSelection = null;
