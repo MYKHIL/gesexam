@@ -2764,7 +2764,7 @@
             // Calculate quotas
             // 33% (1/3) should be True/False
             const totalNeeded = quizSettings.numQuestions;
-            let tfCount = Math.floor(totalNeeded / 3);
+            let tfCount = Math.ceil(totalNeeded / 3);
 
             // If we don't have enough TF questions, take what we have
             if (tfCount > tfQuestions.length) {
