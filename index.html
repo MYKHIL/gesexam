@@ -2299,20 +2299,23 @@
             if (!users || users.length === 0) return;
 
             const tbody = document.getElementById('rankings-table-body');
-            if (!tbody) return;
+            const cardsContainer = document.getElementById('rankings-cards-container');
+            if (!tbody && !cardsContainer) return;
 
             // Use global filtering function to ensure consistent 5-day TTL
             const ranked = filterUsersForRankings(users);
 
             // Build rows with competition-style ranking
             let rowsArr = [];
+            let cardsArr = [];
             let prevScore = null;
             let prevTotal = null;
             let itemsBefore = 0;
             let currentRank = 1;
 
             if (ranked.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="5" class="p-8 text-center text-gray-500 italic">No rankings available for the last 5 days. Be the first!</td></tr>';
+                if (tbody) tbody.innerHTML = '<tr><td colspan="5" class="p-8 text-center text-gray-500 italic">No rankings available for the last 5 days. Be the first!</td></tr>';
+                if (cardsContainer) cardsContainer.innerHTML = '<div class="p-8 text-center text-gray-500 italic">No rankings available for the last 5 days. Be the first!</div>';
                 return;
             }
 
@@ -2333,18 +2336,22 @@
                 let rankDisplay = `<span class="text-gray-500 font-mono font-bold">#${rank}</span>`;
                 let rowClass = "border-b hover:bg-gray-50 transition-colors";
                 let scoreClass = "text-blue-600 font-bold";
+                let cardClass = "bg-white border border-gray-200";
 
                 if (rank === 1) {
                     rankDisplay = `<span class="text-2xl" title="1st Place">🥇</span>`;
                     rowClass = "border-b bg-yellow-50 hover:bg-yellow-100 transition-colors border-yellow-200";
                     scoreClass = "text-yellow-700 font-bold text-lg";
+                    cardClass = "bg-yellow-50 border-2 border-yellow-300";
                 } else if (rank === 2) {
                     rankDisplay = `<span class="text-2xl" title="2nd Place">🥈</span>`;
                     rowClass = "border-b bg-gray-50 hover:bg-gray-100 transition-colors";
+                    cardClass = "bg-gray-50 border-2 border-gray-300";
                 } else if (rank === 3) {
                     rankDisplay = `<span class="text-2xl" title="3rd Place">🥉</span>`;
                     rowClass = "border-b bg-orange-50 hover:bg-orange-100 transition-colors border-orange-100";
                     scoreClass = "text-orange-700 font-bold";
+                    cardClass = "bg-orange-50 border-2 border-orange-300";
                 }
 
                 // Location - City/Country or generic
@@ -2353,6 +2360,16 @@
                     locationText = [u.city, u.country].filter(Boolean).join(', ');
                 }
 
+                // Format date and time
+                let dateTimeText = '—';
+                if (u.timestamp) {
+                    const dt = new Date(u.timestamp);
+                    const dateStr = dt.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                    const timeStr = dt.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+                    dateTimeText = `${dateStr} at ${timeStr}`;
+                }
+
+                // Build table row
                 rowsArr.push(`
                 <tr class="${rowClass}">
                     <td class="px-4 py-4 text-center w-16">${rankDisplay}</td>
@@ -2370,14 +2387,48 @@
                         ${u.latestScore}%
                     </td>
                     <td class="px-4 py-4 text-right text-sm text-gray-500 font-mono">
-                        ${u.timestamp ? new Date(u.timestamp).toLocaleDateString() : '—'}
+                        <div>${u.timestamp ? new Date(u.timestamp).toLocaleDateString() : '—'}</div>
+                        <div class="text-xs">${u.timestamp ? new Date(u.timestamp).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true }) : ''}</div>
                     </td>
                 </tr>
                 `);
+
+                // Build mobile card
+                cardsArr.push(`
+                <div class="${cardClass} rounded-lg shadow-md p-4 transition-all hover:shadow-lg">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center gap-3">
+                            <div class="flex-shrink-0">${rankDisplay}</div>
+                            <div>
+                                <div class="font-bold text-gray-800 text-lg">${escapeHtml(u.name)}</div>
+                                <div class="text-xs text-gray-500 flex items-center gap-1 mt-1">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                    ${escapeHtml(locationText)}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3 mt-3 pt-3 border-t border-gray-200">
+                        <div>
+                            <div class="text-xs text-gray-500 uppercase">Score</div>
+                            <div class="text-sm font-semibold text-gray-700">${u.latestCorrect} / ${u.latestTotal}</div>
+                        </div>
+                        <div>
+                            <div class="text-xs text-gray-500 uppercase">Percentage</div>
+                            <div class="${scoreClass}">${u.latestScore}%</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 pt-3 border-t border-gray-200">
+                        <div class="text-xs text-gray-500 uppercase mb-1">Date Obtained</div>
+                        <div class="text-sm text-gray-700">${dateTimeText}</div>
+                    </div>
+                </div>
+                `);
             }
 
-            // Update without flash by setting innerHTML of tbody only
-            tbody.innerHTML = rowsArr.join('');
+            // Update without flash by setting innerHTML
+            if (tbody) tbody.innerHTML = rowsArr.join('');
+            if (cardsContainer) cardsContainer.innerHTML = cardsArr.join('');
         }
 
         async function renderRankingsView() {
@@ -2390,7 +2441,9 @@
                             <button onclick="setView('leaderboard')" class="px-3 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition duration-150">Back</button>
                         </div>
                     </div>
-                    <div class="overflow-x-auto">
+                    
+                    <!-- Desktop Table View -->
+                    <div class="hidden md:block overflow-x-auto">
                         <table class="w-full border-collapse">
                             <thead class="bg-blue-600 text-white">
                                 <tr>
@@ -2412,6 +2465,16 @@
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                    
+                    <!-- Mobile Card View -->
+                    <div class="md:hidden space-y-3" id="rankings-cards-container">
+                        <div class="p-8 text-center text-gray-500">
+                            <div class="flex flex-col items-center justify-center">
+                                <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mb-2"></div>
+                                <p>Loading rankings...</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             `;
@@ -3823,29 +3886,32 @@
         }
 
         function renderLeaderboardView() {
+            // Sort by Date Ascending (Oldest First) instead of by percentage
+            const sortedHistory = sessionHistory.length === 0 ? [] :
+                [...sessionHistory].sort((a, b) => {
+                    const timeA = new Date(a.timestamp).getTime();
+                    const timeB = new Date(b.timestamp).getTime();
+                    return timeA - timeB; // Ascending order (oldest first)
+                });
+
             const historyTableBody = sessionHistory.length === 0 ?
                 '<tr><td colspan="5" class="px-6 py-4 text-center text-gray-500">No sessions yet. Complete a quiz to start tracking history.</td></tr>' :
-                // Sort by Percentage Descending (Best Scores First)
-                [...sessionHistory].sort((a, b) => b.percentage - a.percentage).map((session, index) => {
+                sortedHistory.map((session, index) => {
                     const date = new Date(session.timestamp);
                     const formattedDate = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
                     const formattedTime = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
 
+                    // No rank icons for local leaderboard, just simple numbering
                     let rankIcon = `<span class="inline-block w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-xs font-bold text-gray-500">#${index + 1}</span>`;
                     let rowClass = "border-b hover:bg-gray-50 transition-colors";
                     let scoreClass = "text-blue-600 font-bold";
 
-                    if (index === 0) {
+                    // Highlight best percentage even though not sorted by it
+                    const bestPercentage = Math.max(...sessionHistory.map(s => s.percentage));
+                    if (session.percentage === bestPercentage) {
                         rankIcon = `<span class="text-2xl" title="Best Score">🥇</span>`;
                         rowClass = "border-b bg-yellow-50 hover:bg-yellow-100 transition-colors border-yellow-200";
                         scoreClass = "text-yellow-700 font-bold text-lg";
-                    } else if (index === 1) {
-                        rankIcon = `<span class="text-2xl" title="2nd Best">🥈</span>`;
-                        rowClass = "border-b bg-gray-50 hover:bg-gray-100 transition-colors";
-                    } else if (index === 2) {
-                        rankIcon = `<span class="text-2xl" title="3rd Best">🥉</span>`;
-                        rowClass = "border-b bg-orange-50 hover:bg-orange-100 transition-colors border-orange-100";
-                        scoreClass = "text-orange-700 font-bold";
                     }
 
                     return `
@@ -3857,7 +3923,7 @@
                                 <span class="px-2 py-1 bg-gray-100 rounded text-gray-700 text-sm font-medium">${session.totalQuestions} Qs</span>
                             </td>
                             <td class="px-4 py-4 text-center">
-                                <span class="text-green-600 font-bold">${session.correctAnswers}</span>
+                                <span class="text-gray-700 font-bold">${session.correctAnswers}/${session.totalQuestions}</span>
                             </td>
                             <td class="px-4 py-4 text-center">
                                 <div class="text-lg font-bold ${scoreClass}">${session.percentage}%</div>
@@ -3867,6 +3933,56 @@
                                 <div class="text-xs text-gray-500">${formattedTime}</div>
                             </td>
                         </tr>
+                    `;
+                }).join('');
+
+            // Build mobile cards
+            const historyCards = sessionHistory.length === 0 ?
+                '<div class="p-8 text-center text-gray-500">No sessions yet. Complete a quiz to start tracking history.</div>' :
+                sortedHistory.map((session, index) => {
+                    const date = new Date(session.timestamp);
+                    const formattedDate = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                    const formattedTime = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+                    const dateTimeText = `${formattedDate} at ${formattedTime}`;
+
+                    let cardClass = "bg-white border border-gray-200";
+                    let scoreClass = "text-blue-600 font-bold";
+                    let rankBadge = `<span class="inline-block w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-xs font-bold text-gray-500">#${index + 1}</span>`;
+
+                    // Highlight best percentage
+                    const bestPercentage = Math.max(...sessionHistory.map(s => s.percentage));
+                    if (session.percentage === bestPercentage) {
+                        cardClass = "bg-yellow-50 border-2 border-yellow-300";
+                        scoreClass = "text-yellow-700 font-bold text-lg";
+                        rankBadge = `<span class="text-2xl" title="Best Score">🥇</span>`;
+                    }
+
+                    return `
+                        <div class="${cardClass} rounded-lg shadow-md p-4 transition-all hover:shadow-lg">
+                            <div class="flex items-center justify-between mb-3">
+                                <div class="flex items-center gap-3">
+                                    <div class="flex-shrink-0">${rankBadge}</div>
+                                    <div>
+                                        <div class="font-bold text-gray-800">Session ${index + 1}</div>
+                                        <div class="text-xs text-gray-500">${session.totalQuestions} Questions</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 mt-3 pt-3 border-t border-gray-200">
+                                <div>
+                                    <div class="text-xs text-gray-500 uppercase">Score</div>
+                                    <div class="text-lg font-semibold text-gray-700">${session.correctAnswers}/${session.totalQuestions}</div>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-gray-500 uppercase">Percentage</div>
+                                    <div class="${scoreClass}">${session.percentage}%</div>
+                                </div>
+                            </div>
+                            <div class="mt-3 pt-3 border-t border-gray-200">
+                                <div class="text-xs text-gray-500 uppercase mb-1">Date Obtained</div>
+                                <div class="text-sm text-gray-700">${dateTimeText}</div>
+                            </div>
+                        </div>
                     `;
                 }).join('');
 
@@ -3911,7 +4027,8 @@
                         </div>
                     </div>
 
-                    <div class="mb-8 overflow-x-auto">
+                    <!-- Desktop Table View -->
+                    <div class="mb-8 overflow-x-auto hidden md:block">
                         ${sessionHistory.length === 0 ?
                     `<div class="text-center py-8 text-gray-500">No sessions recorded yet. Complete a quiz to get started!</div>` :
                     `<table class="w-full border-collapse border border-gray-300 rounded-lg">
@@ -3919,9 +4036,9 @@
                                 <tr>
                                     <th class="px-2 sm:px-4 py-2 sm:py-3 text-left">Session</th>
                                     <th class="px-2 sm:px-4 py-2 sm:py-3 text-left hidden sm:table-cell">Questions</th>
-                                    <th class="px-2 sm:px-4 py-2 sm:py-3 text-left">Correct</th>
                                     <th class="px-2 sm:px-4 py-2 sm:py-3 text-left">Score</th>
-                                    <th class="px-2 sm:px-4 py-2 sm:py-3 text-left hidden md:table-cell">Date & Time</th>
+                                    <th class="px-2 sm:px-4 py-2 sm:py-3 text-left">Percentage</th>
+                                    <th class="px-2 sm:px-4 py-2 sm:py-3 text-left">Date & Time</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -3929,6 +4046,11 @@
                             </tbody>
                         </table>`
                 }
+                    </div>
+
+                    <!-- Mobile Card View -->
+                    <div class="mb-8 md:hidden space-y-3">
+                        ${historyCards}
                     </div>
 
                     ${sessionHistory.length > 0 ? `
