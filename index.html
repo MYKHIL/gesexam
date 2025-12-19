@@ -3360,13 +3360,40 @@
             renderActionButtons(document.getElementById('action-buttons'));
         }
 
+        function confirmFinish() {
+            // Check for unanswered questions
+            const unanswered = [];
+            for (let i = 0; i < sessionQuestions.length; i++) {
+                if (!userAnswers[sessionQuestions[i].id]) {
+                    unanswered.push(i);
+                }
+            }
+
+            if (unanswered.length > 0) {
+                const count = unanswered.length;
+                // Interaction: User wants to know if they missed questions.
+                // OK -> Go to question. Cancel -> Proceed to finish.
+                if (confirm(`You have ${count} unanswered question${count > 1 ? 's' : ''}.\n\nClick OK to go to the first unanswered question.\nClick Cancel to submit your score now.`)) {
+                    goToQuestion(unanswered[0]);
+                    return;
+                }
+            }
+            renderResults();
+        }
+
         function renderActionButtons(actionButtons) {
             actionButtons.innerHTML = '';
+            const isLastQuestion = currentQuestionIndex === sessionQuestions.length - 1;
             const prevBtn = `<button onclick="navigate('prev')" ${currentQuestionIndex === 0 ? 'disabled' : ''} class="w-full sm:w-auto px-4 py-2 bg-gray-200 text-gray-700 font-bold rounded-lg hover:bg-gray-300 disabled:opacity-50">Previous</button>`;
             actionButtons.innerHTML += prevBtn;
 
+            // Skip button (only if not answered yet)
+            if (!feedbackShown) {
+                const skipAction = isLastQuestion ? "confirmFinish()" : "navigate('next')";
+                actionButtons.innerHTML += `<button onclick="${skipAction}" class="w-full sm:w-auto px-4 py-2 bg-yellow-100 text-yellow-800 font-bold rounded-lg hover:bg-yellow-200 border border-yellow-300 transition duration-150">Skip</button>`;
+            }
+
             if (feedbackShown) {
-                const isLastQuestion = currentQuestionIndex === sessionQuestions.length - 1;
                 actionButtons.innerHTML += `<button onclick="navigate('next')" ${isLastQuestion ? 'disabled' : ''} class="w-full sm:w-auto px-4 py-2 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 disabled:opacity-50">${isLastQuestion ? 'Review Complete' : 'Next'}</button>`;
             } else if (currentSelection) {
                 actionButtons.innerHTML += `<button onclick="checkAnswer()" class="w-full sm:w-auto px-6 py-3 bg-green-600 text-white font-bold rounded-xl">Check Answer</button>`;
@@ -3374,8 +3401,8 @@
                 actionButtons.innerHTML += `<button disabled class="w-full sm:w-auto px-6 py-3 bg-gray-400 text-white font-bold rounded-xl">Select an Option</button>`;
             }
 
-            if (currentQuestionIndex === sessionQuestions.length - 1 && feedbackShown) {
-                actionButtons.innerHTML = `${prevBtn} <button onclick="renderResults()" class="w-full sm:w-auto px-6 py-3 bg-purple-600 text-white font-bold rounded-xl">View Score</button>`;
+            if (isLastQuestion && feedbackShown) {
+                actionButtons.innerHTML = `${prevBtn} <button onclick="confirmFinish()" class="w-full sm:w-auto px-6 py-3 bg-purple-600 text-white font-bold rounded-xl">View Score</button>`;
             }
         }
 
