@@ -1799,6 +1799,110 @@
             }
         }
 
+        // Silent update function for rankings table (prevents flash)
+        function updateRankingsTable(users) {
+            if (!users || users.length === 0) return;
+
+            const tbody = document.getElementById('rankings-table-body');
+            if (!tbody) return;
+
+            // Use the same ranking logic as renderRankingsView
+            const RANKING_TTL_DAYS = 30;
+            const cutoff = Date.now() - (RANKING_TTL_DAYS * 24 * 60 * 60 * 1000);
+
+            function getBestScoreWithinWindow(u, cutoffTs) {
+                if (!u) return null;
+                const candidates = [];
+                if (u.latestTotal != null && Number(u.latestTotal) > 0) {
+                    let ts = u.lastTimestamp || null;
+                    candidates.push({
+                        percentage: (u.latestScore != null ? parseFloat(u.latestScore) : 0),
+                        correct: (u.latestCorrect != null ? u.latestCorrect : 0),
+                        total: Number(u.latestTotal),
+                        timestamp: ts
+                    });
+                }
+                if (Array.isArray(u.scores) && u.scores.length) {
+                    for (const s of u.scores) {
+                        const total = (s && (s.totalQuestions != null ? s.totalQuestions : (s.total != null ? s.total : 0)));
+                        if (!total || Number(total) <= 0) continue;
+                        const ts = s.timestamp || s.time || s.t || null;
+                        if (!ts) continue;
+                        candidates.push({
+                            percentage: (s.percentage != null ? parseFloat(s.percentage) : 0),
+                            correct: (s.correctAnswers != null ? s.correctAnswers : (s.correct != null ? s.correct : 0)),
+                            total: Number(total),
+                            timestamp: ts
+                        });
+                    }
+                }
+                const valid = candidates.map(c => {
+                    const t = Date.parse(c.timestamp);
+                    return isNaN(t) ? null : Object.assign({}, c, { _ts: t });
+                }).filter(Boolean).filter(c => c._ts >= cutoffTs);
+                if (!valid || valid.length === 0) return null;
+                valid.sort((a, b) => {
+                    if (b.percentage !== a.percentage) return b.percentage - a.percentage;
+                    if (b.total !== a.total) return b.total - a.total;
+                    return b._ts - a._ts;
+                });
+                const best = valid[0];
+                return { percentage: best.percentage, correct: best.correct, total: best.total, timestamp: new Date(best._ts).toISOString() };
+            }
+
+            const filtered = (users || []).filter(u => {
+                if (!u || !u.deviceId || !u.name || String(u.name).trim() === '') return false;
+                const best = getBestScoreWithinWindow(u, cutoff);
+                return best !== null;
+            });
+
+            const ranked = filtered.map(u => {
+                const best = getBestScoreWithinWindow(u, cutoff) || { percentage: 0, correct: 0, total: 0, timestamp: null };
+                return {
+                    name: u.name || 'Unknown',
+                    latestScore: best.percentage,
+                    latestCorrect: best.correct,
+                    latestTotal: best.total,
+                    timestamp: best.timestamp
+                };
+            }).sort((a, b) => {
+                if (b.latestScore !== a.latestScore) return b.latestScore - a.latestScore;
+                return b.latestTotal - a.latestTotal;
+            });
+
+            // Build new rows
+            let rowsArr = [];
+            let prevScore = null;
+            let prevTotal = null;
+            let itemsBefore = 0;
+            let currentRank = 1;
+            for (let i = 0; i < ranked.length; i++) {
+                const u = ranked[i];
+                let rank;
+                if (prevScore === u.latestScore && prevTotal === u.latestTotal) {
+                    rank = currentRank;
+                } else {
+                    rank = itemsBefore + 1;
+                    currentRank = rank;
+                    prevScore = u.latestScore;
+                    prevTotal = u.latestTotal;
+                }
+                itemsBefore++;
+                rowsArr.push(`
+                <tr class="border-b hover:bg-gray-50">
+                    <td class="px-4 py-3 font-semibold">#${rank}</td>
+                    <td class="px-4 py-3">${u.name}</td>
+                    <td class="px-4 py-3 text-green-600 font-semibold">${u.latestCorrect}/${u.latestTotal}</td>
+                    <td class="px-4 py-3 text-blue-600 font-bold">${u.latestScore}%</td>
+                    <td class="px-4 py-3 text-sm text-gray-600">${u.timestamp ? new Date(u.timestamp).toLocaleString() : '—'}</td>
+                </tr>
+                `);
+            }
+
+            // Update without flash by setting innerHTML of tbody only
+            tbody.innerHTML = rowsArr.join('');
+        }
+
         async function renderRankingsView() {
             contentArea.innerHTML = `<div class="p-6 bg-white rounded-xl shadow-lg">Loading rankings...</div>`;
             try {
@@ -2010,7 +2114,7 @@
                                         <th class="px-4 py-2 text-left">Date Obtained</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="rankings-table-body">
                                     ${rows}
                                 </tbody>
                             </table>
@@ -2405,9 +2509,18 @@
                     // 1. Update the "X users online" badge
                     updateOnlineCountUI(users);
 
+
                     // 2. If we are on the Rankings/Leaderboard view, update it live
                     if (currentView === 'rankings') {
-                        renderRankingsView(true); // true = use cache
+                        // Check if rankings table already exists to avoid flash
+                        const existingTable = document.querySelector('#rankings-table-body');
+                        if (!existingTable) {
+                            // First time rendering, do full render
+                            renderRankingsView(true);
+                        } else {
+                            // Silent update - just refresh the table rows without full page re-render
+                            updateRankingsTable(users);
+                        }
                     }
                 }, (error) => {
                     console.debug("Realtime listener error:", error);
