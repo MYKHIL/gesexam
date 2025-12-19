@@ -604,7 +604,9 @@
                     latestTotal: best.total,
                     timestamp: best.timestamp,
                     phone: u.phone || '',
-                    email: u.email || ''
+                    email: u.email || '',
+                    city: u.city || '',
+                    country: u.country || ''
                 };
             });
 
@@ -2308,6 +2310,12 @@
             let prevTotal = null;
             let itemsBefore = 0;
             let currentRank = 1;
+
+            if (ranked.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" class="p-8 text-center text-gray-500 italic">No rankings available for the last 5 days. Be the first!</td></tr>';
+                return;
+            }
+
             for (let i = 0; i < ranked.length; i++) {
                 const u = ranked[i];
                 let rank;
@@ -2320,13 +2328,50 @@
                     prevTotal = u.latestTotal;
                 }
                 itemsBefore++;
+
+                // Medal/Rank Display
+                let rankDisplay = `<span class="text-gray-500 font-mono font-bold">#${rank}</span>`;
+                let rowClass = "border-b hover:bg-gray-50 transition-colors";
+                let scoreClass = "text-blue-600 font-bold";
+
+                if (rank === 1) {
+                    rankDisplay = `<span class="text-2xl" title="1st Place">🥇</span>`;
+                    rowClass = "border-b bg-yellow-50 hover:bg-yellow-100 transition-colors border-yellow-200";
+                    scoreClass = "text-yellow-700 font-bold text-lg";
+                } else if (rank === 2) {
+                    rankDisplay = `<span class="text-2xl" title="2nd Place">🥈</span>`;
+                    rowClass = "border-b bg-gray-50 hover:bg-gray-100 transition-colors";
+                } else if (rank === 3) {
+                    rankDisplay = `<span class="text-2xl" title="3rd Place">🥉</span>`;
+                    rowClass = "border-b bg-orange-50 hover:bg-orange-100 transition-colors border-orange-100";
+                    scoreClass = "text-orange-700 font-bold";
+                }
+
+                // Location - City/Country or generic
+                let locationText = '—';
+                if (u.city || u.country) {
+                    locationText = [u.city, u.country].filter(Boolean).join(', ');
+                }
+
                 rowsArr.push(`
-                <tr class="border-b hover:bg-gray-50">
-                    <td class="px-4 py-3 font-semibold">#${rank}</td>
-                    <td class="px-4 py-3">${u.name}</td>
-                    <td class="px-4 py-3 text-green-600 font-semibold">${u.latestCorrect}/${u.latestTotal}</td>
-                    <td class="px-4 py-3 text-blue-600 font-bold">${u.latestScore}%</td>
-                    <td class="px-4 py-3 text-sm text-gray-600">${u.timestamp ? new Date(u.timestamp).toLocaleString() : '—'}</td>
+                <tr class="${rowClass}">
+                    <td class="px-4 py-4 text-center w-16">${rankDisplay}</td>
+                    <td class="px-4 py-4">
+                        <div class="font-bold text-gray-800">${escapeHtml(u.name)}</div>
+                        <div class="text-xs text-gray-500 flex items-center gap-1">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            ${escapeHtml(locationText)}
+                        </div>
+                    </td>
+                    <td class="px-4 py-4 text-center">
+                        <div class="text-sm font-semibold text-gray-700">${u.latestCorrect} / ${u.latestTotal}</div>
+                    </td>
+                    <td class="px-4 py-4 text-center ${scoreClass}">
+                        ${u.latestScore}%
+                    </td>
+                    <td class="px-4 py-4 text-right text-sm text-gray-500 font-mono">
+                        ${u.timestamp ? new Date(u.timestamp).toLocaleDateString() : '—'}
+                    </td>
                 </tr>
                 `);
             }
@@ -3769,8 +3814,15 @@
             }
         }
 
-        function clearLeaderboard() {
-            const confirmed = confirm("Are you sure you want to clear all session history? This action cannot be undone.");
+        async function clearLeaderboard() {
+            const confirmed = await showCustomConfirm(
+                "Clear History?",
+                "Are you sure you want to <strong>delete all</strong> session history?<br><br>This action cannot be undone.",
+                "Yes, Clear All",
+                "Cancel",
+                "bg-red-600 hover:bg-red-700"
+            );
+
             if (confirmed) {
                 sessionHistory = [];
                 try {
@@ -3788,18 +3840,47 @@
         function renderLeaderboardView() {
             const historyTableBody = sessionHistory.length === 0 ?
                 '<tr><td colspan="5" class="px-6 py-4 text-center text-gray-500">No sessions yet. Complete a quiz to start tracking history.</td></tr>' :
-                // Sort ascending by timestamp (oldest first)
-                [...sessionHistory].sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp)).map((session, index) => {
+                // Sort by Percentage Descending (Best Scores First)
+                [...sessionHistory].sort((a, b) => b.percentage - a.percentage).map((session, index) => {
                     const date = new Date(session.timestamp);
                     const formattedDate = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
                     const formattedTime = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+
+                    let rankIcon = `<span class="inline-block w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-xs font-bold text-gray-500">#${index + 1}</span>`;
+                    let rowClass = "border-b hover:bg-gray-50 transition-colors";
+                    let scoreClass = "text-blue-600 font-bold";
+
+                    if (index === 0) {
+                        rankIcon = `<span class="text-2xl" title="Best Score">🥇</span>`;
+                        rowClass = "border-b bg-yellow-50 hover:bg-yellow-100 transition-colors border-yellow-200";
+                        scoreClass = "text-yellow-700 font-bold text-lg";
+                    } else if (index === 1) {
+                        rankIcon = `<span class="text-2xl" title="2nd Best">🥈</span>`;
+                        rowClass = "border-b bg-gray-50 hover:bg-gray-100 transition-colors";
+                    } else if (index === 2) {
+                        rankIcon = `<span class="text-2xl" title="3rd Best">🥉</span>`;
+                        rowClass = "border-b bg-orange-50 hover:bg-orange-100 transition-colors border-orange-100";
+                        scoreClass = "text-orange-700 font-bold";
+                    }
+
                     return `
-                        <tr class="border-b hover:bg-gray-100 transition text-sm sm:text-base">
-                            <td class="px-2 sm:px-4 py-2 sm:py-4 font-semibold text-gray-700">#${index + 1}</td>
-                            <td class="px-2 sm:px-4 py-2 sm:py-4 text-gray-600 hidden sm:table-cell">${session.totalQuestions}</td>
-                            <td class="px-2 sm:px-4 py-2 sm:py-4 text-green-600 font-semibold">${session.correctAnswers}</td>
-                            <td class="px-2 sm:px-4 py-2 sm:py-4 text-blue-600 font-bold">${session.percentage}%</td>
-                            <td class="px-2 sm:px-4 py-2 sm:py-4 text-gray-500 text-xs sm:text-sm hidden md:table-cell">${formattedDate} at ${formattedTime}</td>
+                        <tr class="${rowClass}">
+                            <td class="px-4 py-4 text-center w-16">
+                                ${rankIcon}
+                            </td>
+                            <td class="px-4 py-4 hidden sm:table-cell text-center">
+                                <span class="px-2 py-1 bg-gray-100 rounded text-gray-700 text-sm font-medium">${session.totalQuestions} Qs</span>
+                            </td>
+                            <td class="px-4 py-4 text-center">
+                                <span class="text-green-600 font-bold">${session.correctAnswers}</span>
+                            </td>
+                            <td class="px-4 py-4 text-center">
+                                <div class="text-lg font-bold ${scoreClass}">${session.percentage}%</div>
+                            </td>
+                            <td class="px-4 py-4 text-right">
+                                <div class="text-sm font-medium text-gray-900">${formattedDate}</div>
+                                <div class="text-xs text-gray-500">${formattedTime}</div>
+                            </td>
                         </tr>
                     `;
                 }).join('');
