@@ -400,6 +400,166 @@
                 .replace(/'/g, '&#039;');
         }
 
+        // Normalize various timestamp formats (number ms, number seconds, Firestore Timestamp, ISO string)
+        function parseTimestampToMs(ts) {
+            try {
+                if (!ts && ts !== 0) return NaN;
+                // Firestore Timestamp object (has seconds & nanoseconds)
+                if (typeof ts === 'object' && ts !== null) {
+                    if (typeof ts.toDate === 'function') {
+                        return ts.toDate().getTime();
+                    }
+                    if (typeof ts.seconds === 'number') {
+                        // seconds -> ms
+                        return (ts.seconds * 1000) + (ts.nanoseconds ? Math.floor(ts.nanoseconds / 1000000) : 0);
+                    }
+                }
+                // number: could be seconds or milliseconds
+                if (typeof ts === 'number') {
+                    // If it's in seconds (reasonable cutoff), convert to ms
+                    if (ts < 1e12) return ts * 1000;
+                    return ts;
+                }
+                // string: numeric-only strings are likely seconds or ms
+                if (typeof ts === 'string') {
+                    const trimmed = ts.trim();
+                    if (!trimmed) return NaN;
+                    // ISO-like strings parse correctly
+                    const isoParse = Date.parse(trimmed);
+                    if (!isNaN(isoParse)) return isoParse;
+                    // numeric string fallback
+                    if (/^\d+$/.test(trimmed)) {
+                        const n = Number(trimmed);
+                        if (n < 1e12) return n * 1000;
+                        return n;
+                    }
+                    // last-resort: attempt Date constructor
+                    const d = new Date(trimmed);
+                    return isNaN(d.getTime()) ? NaN : d.getTime();
+                }
+                return NaN;
+            } catch (e) {
+                return NaN;
+            }
+        }
+
+        function normalizeTimestampToISO(ts) {
+            const ms = parseTimestampToMs(ts);
+            if (isNaN(ms)) return null;
+            return new Date(ms).toISOString();
+        }
+
+        // Sanitize a user name to a safe Firestore document id (lowercase, alnum and underscores)
+        function sanitizeForDocId(name) {
+            if (!name) return null;
+            return String(name)
+                .toLowerCase()
+                .normalize('NFKD')
+                .replace(/[^a-z0-9]+/g, '_')
+                .replace(/^_+|_+$/g, '')
+                .replace(/_+/g, '_') || null;
+        }
+
+        // Resolve the correct Firestore user document for a deviceId.
+        // Tries: sanitized current user name doc -> legacy deviceId doc -> query by deviceId/deviceIds.
+        // If a legacy doc is found and a sanitized name exists, attempts to migrate the doc to the new id.
+        async function resolveUserDocRef(deviceId) {
+            try {
+                if (!firebaseInitialized) await initFirebase();
+                if (!firebaseInitialized || !firestoreDb || !window._fb || !window._fb.getDoc) return null;
+
+                const usersCol = window._fb.collection(firestoreDb, 'users');
+
+                // Try current local user name first (if set)
+                let currentUser = null;
+                try { currentUser = JSON.parse(localStorage.getItem('gesCurrentUser') || 'null'); } catch (e) { currentUser = null; }
+                if (currentUser && currentUser.name) {
+                    const sanitizedName = sanitizeForDocId(currentUser.name);
+                    const preferredWithDevice = (sanitizedName && deviceId) ? `${sanitizedName}_${deviceId}` : null;
+                    if (preferredWithDevice) {
+                        const byPrefRef = window._fb.doc(firestoreDb, 'users', preferredWithDevice);
+                        const snapPref = await window._fb.getDoc(byPrefRef).catch(() => null);
+                        const existsPref = snapPref && (typeof snapPref.exists === 'function' ? snapPref.exists() : snapPref.exists);
+                        if (existsPref) return { ref: byPrefRef, id: preferredWithDevice, data: snapPref.data ? snapPref.data() : snapPref };
+                    }
+                    // Fallback: try sanitizedName alone (for compatibility)
+                    if (sanitizedName) {
+                        const byNameRef = window._fb.doc(firestoreDb, 'users', sanitizedName);
+                        const snapName = await window._fb.getDoc(byNameRef).catch(() => null);
+                        const existsName = snapName && (typeof snapName.exists === 'function' ? snapName.exists() : snapName.exists);
+                        if (existsName) return { ref: byNameRef, id: sanitizedName, data: snapName.data ? snapName.data() : snapName };
+                    }
+                }
+
+                // Try legacy deviceId-as-doc-id
+                if (deviceId) {
+                    const byDeviceRef = window._fb.doc(firestoreDb, 'users', deviceId);
+                    const snapDevice = await window._fb.getDoc(byDeviceRef).catch(() => null);
+                    const existsDevice = snapDevice && (typeof snapDevice.exists === 'function' ? snapDevice.exists() : snapDevice.exists);
+                        if (existsDevice) {
+                        const data = snapDevice.data ? snapDevice.data() : snapDevice;
+                        // If we have a currentUser name, attempt migration to sanitized_name_deviceId
+                        if (currentUser && currentUser.name) {
+                            const sanitized = sanitizeForDocId(currentUser.name);
+                            const preferredId = (sanitized && deviceId) ? `${sanitized}_${deviceId}` : null;
+                            if (preferredId && preferredId !== deviceId) {
+                                const newRef = window._fb.doc(firestoreDb, 'users', preferredId);
+                                const snapNew = await window._fb.getDoc(newRef).catch(() => null);
+                                const existsNew = snapNew && (typeof snapNew.exists === 'function' ? snapNew.exists() : snapNew.exists);
+                                if (existsNew) {
+                                    // merge into existing new doc
+                                    const target = snapNew.data ? snapNew.data() : snapNew;
+                                    target.deviceIds = Array.from(new Set([...(target.deviceIds || []), deviceId]));
+                                    target.scores = Array.isArray(target.scores) ? target.scores.concat(data.scores || []) : (data.scores || []);
+                                    target.latestScore = (target.latestScore != null) ? target.latestScore : data.latestScore;
+                                    target.lastTimestamp = normalizeTimestampToISO(target.lastTimestamp || data.lastTimestamp);
+                                    await window._fb.setDoc(newRef, target).catch(() => null);
+                                    await window._fb.deleteDoc(byDeviceRef).catch(() => null);
+                                    return { ref: newRef, id: preferredId, data: target };
+                                } else {
+                                    // create new doc at sanitized_name_deviceId
+                                    data.deviceIds = Array.isArray(data.deviceIds) ? Array.from(new Set(data.deviceIds.concat([deviceId]))) : [deviceId];
+                                    data.name = data.name || currentUser.name;
+                                    data.lastTimestamp = normalizeTimestampToISO(data.lastTimestamp);
+                                    await window._fb.setDoc(newRef, data).catch(() => null);
+                                    await window._fb.deleteDoc(byDeviceRef).catch(() => null);
+                                    return { ref: newRef, id: preferredId, data: data };
+                                }
+                            }
+                        }
+                        return { ref: byDeviceRef, id: deviceId, data: data };
+                    }
+                }
+
+                // Query by explicit deviceId field
+                try {
+                    const q1 = window._fb.query(usersCol, window._fb.where('deviceId', '==', deviceId), window._fb.limit(1));
+                    const qs1 = await window._fb.getDocs(q1).catch(() => null);
+                    let found = null;
+                    if (qs1 && typeof qs1.forEach === 'function') {
+                        qs1.forEach(d => { found = { ref: window._fb.doc(firestoreDb, 'users', d.id), id: d.id, data: d.data() }; });
+                        if (found) return found;
+                    }
+                } catch (e) { /* ignore query errors */ }
+
+                // Query by deviceIds array
+                try {
+                    const q2 = window._fb.query(usersCol, window._fb.where('deviceIds', 'array-contains', deviceId), window._fb.limit(1));
+                    const qs2 = await window._fb.getDocs(q2).catch(() => null);
+                    let found2 = null;
+                    if (qs2 && typeof qs2.forEach === 'function') {
+                        qs2.forEach(d => { found2 = { ref: window._fb.doc(firestoreDb, 'users', d.id), id: d.id, data: d.data() }; });
+                        if (found2) return found2;
+                    }
+                } catch (e) { /* ignore query errors */ }
+
+                return null;
+            } catch (e) {
+                console.debug('resolveUserDocRef error:', e);
+                return null;
+            }
+        }
+
         function isValidQuestion(item) {
             return item &&
                 typeof item.question === 'string' &&
@@ -1555,14 +1715,22 @@
                 for (const u of usersArr) {
                     try {
                         if (!u || !u.deviceId) continue;
-                        const docRef = window._fb.doc(firestoreDb, 'users', u.deviceId);
-                        const snap = await window._fb.getDoc(docRef);
+                        // Prefer sanitized name id for new documents to allow human-readable ids
+                        const sanitizedName = sanitizeForDocId(u && u.name);
+                        const preferredId = (sanitizedName && u.deviceId) ? `${sanitizedName}_${u.deviceId}` : (sanitizedName || u.deviceId);
+                        const docRef = window._fb.doc(firestoreDb, 'users', preferredId);
+                        const snap = await window._fb.getDoc(docRef).catch(() => null);
                         const exists = snap && (typeof snap.exists === 'function' ? snap.exists() : snap.exists);
                         if (!exists) {
                             // Prepare user object to write (avoid storing large arrays of questions)
                             const writeObj = Object.assign({}, u);
-                            await window._fb.setDoc(docRef, writeObj);
+                            writeObj.deviceIds = Array.isArray(writeObj.deviceIds) ? Array.from(new Set(writeObj.deviceIds.concat([u.deviceId]))) : [u.deviceId];
+                            // Normalize any timestamps
+                            writeObj.lastTimestamp = normalizeTimestampToISO(writeObj.lastTimestamp);
+                            await window._fb.setDoc(docRef, writeObj).catch(() => null);
                             migrated++;
+                        } else {
+                            // If a legacy doc exists under deviceId but preferredId is different, avoid overwriting
                         }
                     } catch (e) {
                         console.debug('Failed migrating user', u && u.deviceId, e);
@@ -1589,15 +1757,10 @@
                 // Try Firestore first (if initialized)
                 if (window._fb && window._fb.getDoc && window._fb.doc) {
                     try {
-                        const docRef = window._fb.doc(firestoreDb, 'users', deviceId);
-                        const snap = await window._fb.getDoc(docRef).catch(() => null);
-                        const exists = snap && (typeof snap.exists === 'function' ? snap.exists() : snap.exists);
-                        if (exists) {
-                            const fbUser = snap.data ? snap.data() : (snap && snap.data) || null;
-                            if (fbUser) {
-                                try { localStorage.setItem('gesCurrentUser', JSON.stringify(fbUser)); } catch (e) { }
-                                return; // already registered in Firestore
-                            }
+                        const resolved = await resolveUserDocRef(deviceId);
+                        if (resolved && resolved.data) {
+                            try { localStorage.setItem('gesCurrentUser', JSON.stringify(resolved.data)); } catch (e) { }
+                            return; // already registered in Firestore (or migrated)
                         }
                     } catch (e) {
                         console.warn('Firestore check failed during registration:', e);
@@ -1698,8 +1861,19 @@
             // Prefer Firebase: write single user document to 'users' collection
             try {
                 if (!firebaseInitialized) await initFirebase();
-                if (firebaseInitialized && firestoreDb && window._fb && window._fb.setDoc) {
-                    await window._fb.setDoc(window._fb.doc(firestoreDb, 'users', userObj.deviceId), userObj);
+                    if (firebaseInitialized && firestoreDb && window._fb && window._fb.setDoc) {
+                    try {
+                        // Prefer sanitized_name_deviceId id when available
+                        const sanitizedName = sanitizeForDocId(userObj.name);
+                        const preferredId = (sanitizedName && userObj.deviceId) ? `${sanitizedName}_${userObj.deviceId}` : (sanitizedName || userObj.deviceId);
+                        const docRef = window._fb.doc(firestoreDb, 'users', preferredId);
+                        // ensure deviceIds array exists for future lookups
+                        userObj.deviceIds = Array.isArray(userObj.deviceIds) ? Array.from(new Set(userObj.deviceIds.concat([userObj.deviceId]))) : [userObj.deviceId];
+                        await window._fb.setDoc(docRef, userObj);
+                    } catch (e) {
+                        console.debug('Registration write (sanitized) failed, falling back to deviceId write:', e);
+                        await window._fb.setDoc(window._fb.doc(firestoreDb, 'users', userObj.deviceId), userObj).catch(() => null);
+                    }
                     try { setNavDisabled(false); } catch (e) { }
                     return;
                 }
@@ -1738,25 +1912,39 @@
             try {
                 if (!firebaseInitialized) await initFirebase();
                 if (firebaseInitialized && firestoreDb && window._fb && window._fb.getDoc && window._fb.setDoc) {
-                    const docRef = window._fb.doc(firestoreDb, 'users', deviceId);
-                    const snap = await window._fb.getDoc(docRef).catch(() => null);
-                    let user = snap && snap.exists ? snap.data() : null;
+                    // Resolve the appropriate user doc (handles migrated/sanitized ids)
+                    const resolved = await resolveUserDocRef(deviceId);
+                    let docRef = null;
+                    let user = null;
+                    if (resolved && resolved.ref) {
+                        docRef = resolved.ref;
+                        user = resolved.data || null;
+                    }
+                    // If no doc found, create a new one using current local user name if available
+                    if (!docRef) {
+                        let currentUser = null;
+                        try { currentUser = JSON.parse(localStorage.getItem('gesCurrentUser') || 'null'); } catch (e) { currentUser = null; }
+                        const preferredId = (currentUser && currentUser.name) ? sanitizeForDocId(currentUser.name) : deviceId;
+                        docRef = window._fb.doc(firestoreDb, 'users', preferredId);
+                    }
+
+                    const score = { percentage: parseFloat(percentage), timestamp, correctAnswers: correctAnswers, totalQuestions: totalQuestions };
                     if (user) {
-                        const score = { percentage: parseFloat(percentage), timestamp, correctAnswers: correctAnswers, totalQuestions: totalQuestions };
                         user.scores = Array.isArray(user.scores) ? user.scores : [];
                         user.scores.push(score);
                         user.latestScore = parseFloat(percentage);
-                        user.lastTimestamp = timestamp;
+                        user.lastTimestamp = normalizeTimestampToISO(timestamp) || timestamp;
                         if (correctAnswers != null) user.latestCorrect = correctAnswers;
                         if (totalQuestions != null) user.latestTotal = totalQuestions;
+                        user.deviceIds = Array.isArray(user.deviceIds) ? Array.from(new Set(user.deviceIds.concat([deviceId]))) : [deviceId];
                     } else {
                         let _loc = null;
                         try { _loc = JSON.parse(localStorage.getItem('gesDeviceLocation') || 'null'); } catch (e) { _loc = null; }
                         const city = _loc && _loc.city ? _loc.city : null;
                         const country = _loc && _loc.country ? _loc.country : null;
-                        user = { deviceId, latestScore: parseFloat(percentage), lastTimestamp: timestamp, latestCorrect: correctAnswers, latestTotal: totalQuestions, city: city, country: country, scores: [{ percentage: parseFloat(percentage), timestamp, correctAnswers: correctAnswers, totalQuestions: totalQuestions }] };
+                        user = { deviceId, latestScore: parseFloat(percentage), lastTimestamp: normalizeTimestampToISO(timestamp) || timestamp, latestCorrect: correctAnswers, latestTotal: totalQuestions, city: city, country: country, scores: [{ percentage: parseFloat(percentage), timestamp, correctAnswers: correctAnswers, totalQuestions: totalQuestions }], deviceIds: [deviceId] };
                     }
-                    await window._fb.setDoc(docRef, user);
+                    await window._fb.setDoc(docRef, user).catch(() => null);
                     return;
                 }
             } catch (e) {
@@ -1837,7 +2025,7 @@
                     }
                 }
                 const valid = candidates.map(c => {
-                    const t = Date.parse(c.timestamp);
+                    const t = parseTimestampToMs(c.timestamp);
                     return isNaN(t) ? null : Object.assign({}, c, { _ts: t });
                 }).filter(Boolean).filter(c => c._ts >= cutoffTs);
                 if (!valid || valid.length === 0) return null;
@@ -2019,7 +2207,7 @@
 
                     // filter by cutoff
                     const valid = candidates.map(c => {
-                        const t = Date.parse(c.timestamp);
+                        const t = parseTimestampToMs(c.timestamp);
                         return isNaN(t) ? null : Object.assign({}, c, { _ts: t });
                     }).filter(Boolean).filter(c => c._ts >= cutoffTs);
 
@@ -2144,12 +2332,13 @@
                 try {
                     if (!firebaseInitialized) await initFirebase();
                     if (firebaseInitialized && firestoreDb && window._fb && window._fb.getDoc && window._fb.setDoc) {
-                        const docRef = window._fb.doc(firestoreDb, 'users', deviceId);
-                        const snap = await window._fb.getDoc(docRef).catch(() => null);
-                        let user = snap && (snap.exists ? snap.exists() : (typeof snap.exists === 'function' ? snap.exists() : snap.exists)) ? snap.data() : null;
-                        if (user) {
-                            user.lastTimestamp = now;
-                            // sync location if available
+                        const resolved = await resolveUserDocRef(deviceId);
+                        let docRef = null;
+                        let user = null;
+                        if (resolved && resolved.ref) { docRef = resolved.ref; user = resolved.data || null; }
+                        // If we found an existing user record, update lastTimestamp and optionally location
+                        if (user && docRef) {
+                            user.lastTimestamp = new Date().toISOString();
                             try {
                                 const locStored = JSON.parse(localStorage.getItem('gesDeviceLocation') || 'null');
                                 if (locStored && (locStored.city || locStored.country)) {
@@ -2159,10 +2348,7 @@
                                     }
                                 }
                             } catch (e) { /* silent */ }
-                        }
-                        // Only write back if the record exists; do not create new user documents here
-                        if (user) {
-                            await window._fb.setDoc(docRef, user);
+                            await window._fb.setDoc(docRef, user).catch(() => null);
                         }
                         return;
                     }
@@ -2231,7 +2417,7 @@
                 const threshold = Date.now() - ONLINE_WINDOW_MS;
                 const count = users.reduce((acc, u) => {
                     if (!u || !u.lastTimestamp) return acc;
-                    const t = Date.parse(u.lastTimestamp);
+                    const t = parseTimestampToMs(u.lastTimestamp);
                     if (!isNaN(t) && t >= threshold) return acc + 1;
                     return acc;
                 }, 0);
@@ -2285,7 +2471,7 @@
                 const threshold = Date.now() - ONLINE_WINDOW_MS;
                 const onlineUsers = users.filter(u => {
                     if (!u || !u.lastTimestamp) return false;
-                    const t = Date.parse(u.lastTimestamp);
+                    const t = parseTimestampToMs(u.lastTimestamp);
                     return !isNaN(t) && t >= threshold;
                 }).filter(u => u && u.name).map(u => ({ name: u.name }));
 

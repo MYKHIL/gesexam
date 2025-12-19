@@ -776,6 +776,22 @@
             });
         }
 
+        // Timer control function
+        function updateTimerFromInput() {
+            const inputEl = document.getElementById('timer-input-pre');
+            if (inputEl) {
+                let value = parseInt(inputEl.value) || 0;
+                // Clamp value between 0 and 180
+                value = Math.max(0, Math.min(180, value));
+                quizSettings.timeLimit = value;
+                inputEl.value = value; // Update input to clamped value
+                saveSettings();
+                renderHomeView(); // Re-render to update the info display
+                const msg = value > 0 ? `Timer set to ${value} minutes` : 'Timer disabled';
+                showMessage(msg, 'info');
+            }
+        }
+
 
         // --- View Management ---
 
@@ -885,6 +901,12 @@
                          <button id="tts-toggle-btn-pre" onclick="toggleTts()" class="flex items-center justify-center px-6 py-3 font-bold rounded-xl transition duration-150 shadow-md">
                             <!-- Button content will be updated by updateTtsButton -->
                         </button>
+                        <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-xl shadow-md border border-gray-200">
+                            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <label for="timer-input-pre" class="text-sm font-semibold text-gray-700">Timer:</label>
+                            <input type="number" id="timer-input-pre" min="0" max="180" value="${quizSettings.timeLimit || 0}" onchange="updateTimerFromInput()" class="w-20 p-2 border border-gray-300 rounded-lg text-center focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="0">
+                            <span class="text-sm text-gray-600 font-medium">min</span>
+                        </div>
                         <button onclick="startSession()" class="w-full sm:w-auto px-10 py-4 bg-green-600 text-white font-extrabold text-xl rounded-xl hover:bg-green-700 transition duration-150 shadow-lg transform hover:scale-105">
                             Start Session (${quizSettings.numQuestions} Qs)
                         </button>
@@ -897,10 +919,15 @@
                 </div>
                 
                 <div id="quiz-container" class="hidden">
-                    <div id="timer-bar" class="hidden bg-red-100 border-l-4 border-red-500 text-red-700 p-2 mb-4 rounded flex justify-between items-center sticky top-0 z-10 shadow-sm">
-                        <span class="font-bold text-lg flex items-center">
+                    <div id="timer-bar" class="hidden bg-gray-100 border-b-2 border-gray-300 text-gray-800 p-3 mb-4 rounded-t-lg flex justify-between items-center sticky top-0 z-30 shadow-md">
+                        <div class="flex items-center space-x-4">
+                            <span id="score-display" class="font-bold text-lg text-green-700 bg-green-100 px-3 py-1 rounded-full border border-green-200 shadow-sm">
+                                Score: 0
+                            </span>
+                        </div>
+                        <span id="timer-container" class="font-bold text-lg flex items-center text-red-700 bg-red-100 px-3 py-1 rounded-full border border-red-200 shadow-sm">
                             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            Time Remaining: <span id="timer-display" class="ml-2 font-mono text-xl">00:00</span>
+                            <span id="timer-display" class="font-mono text-xl">00:00</span>
                         </span>
                     </div>
                     <div class="flex justify-end gap-2 mb-4">
@@ -1549,161 +1576,7 @@
         }
 
         // Admin: prompt for password then display reported questions
-        async function promptAdminAndShowReports() {
-            // Fetch admin password from Firebase if available (best-effort)
-            let expectedPw = JSONBIN_ADMIN_PASSWORD;
-            try {
-                const fetched = await fetchAdminPasswordFromFirebase();
-                if (fetched) expectedPw = fetched;
-            } catch (e) {
-                console.debug('Could not read admin password from Firebase, using fallback.', e);
-            }
-
-            const pw = prompt('Enter admin password to view reported questions:');
-            if (!pw) return;
-            if (pw !== expectedPw) { showMessage('Invalid admin password.', 'error'); return; }
-
-            // Try Firebase first, then jsonbin fallback for the reports
-            try {
-                const fbReports = await fetchReportsFromFirebase();
-                if (Array.isArray(fbReports) && fbReports.length > 0) {
-                    renderReportsList(fbReports);
-                    return;
-                }
-            } catch (e) {
-                console.debug('Could not fetch reports from Firebase (fallback to jsonbin):', e);
-            }
-            try {
-                const data = await fetchJsonBinData(JSONBIN_REVIEWS_BIN_ID);
-                const reports = (data && Array.isArray(data.reports)) ? data.reports : [];
-                renderReportsList(reports);
-            } catch (e) {
-                console.error('Could not fetch reports from jsonbin:', e);
-                showMessage('Failed to load reports.', 'error');
-            }
-        }
-
-        function renderReportsList(reports) {
-            const modal = _createModalContainer('reports-modal');
-            // Build an interactive admin UI: filters + actionable list
-            const safeReports = Array.isArray(reports) ? reports.slice().reverse() : [];
-            const modalHtml = `
-                <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-60">
-                    <div class="bg-white rounded-lg p-4 max-w-[92vw] sm:max-w-3xl md:max-w-5xl w-full shadow-2xl max-h-[85vh] overflow-auto mx-2">
-                        <div class="flex items-start justify-between mb-4">
-                            <h3 class="text-xl font-bold">Reported Questions (${safeReports.length})</h3>
-                            <div class="space-x-2">
-                                <button onclick="closeReportsModal()" class="px-3 py-1 bg-gray-200 rounded">Close</button>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 mb-4">
-                            <div>
-                                <label class="text-sm font-semibold">Status</label>
-                                <select id="report-filter-status" class="w-full p-2 border rounded">
-                                    <option value="all">All</option>
-                                    <option value="open">Open</option>
-                                    <option value="resolved">Resolved</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="text-sm font-semibold">Tag</label>
-                                <input id="report-filter-tag" class="w-full p-2 border rounded" placeholder="tag filter (e.g. typo)" />
-                            </div>
-                            <div>
-                                <label class="text-sm font-semibold">Set #</label>
-                                <input id="report-filter-set" class="w-full p-2 border rounded" placeholder="e.g. 3" />
-                            </div>
-                            <div>
-                                <label class="text-sm font-semibold">Search</label>
-                                <input id="report-filter-search" class="w-full p-2 border rounded" placeholder="search question or comment" />
-                            </div>
-                        </div>
-                        <div id="reports-list-container" class="space-y-2">
-                        </div>
-                    </div>
-                </div>
-            `;
-            modal.innerHTML = modalHtml;
-
-            // Render list with filters applied
-            function renderList() {
-                const status = (document.getElementById('report-filter-status') && document.getElementById('report-filter-status').value) || 'all';
-                const tag = (document.getElementById('report-filter-tag') && document.getElementById('report-filter-tag').value.trim().toLowerCase()) || '';
-                const setNum = (document.getElementById('report-filter-set') && document.getElementById('report-filter-set').value.trim()) || '';
-                const search = (document.getElementById('report-filter-search') && document.getElementById('report-filter-search').value.trim().toLowerCase()) || '';
-
-                const container = document.getElementById('reports-list-container');
-                if (!container) return;
-
-                const filtered = safeReports.filter(r => {
-                    if (status !== 'all' && ((r.status || 'open') !== status)) return false;
-                    if (tag) {
-                        const tags = Array.isArray(r.tags) ? r.tags.map(t => t.toLowerCase()) : [];
-                        if (!tags.includes(tag)) return false;
-                    }
-                    if (setNum) {
-                        const setMatch = r.sourceFile ? (r.sourceFile.match(/set(\d+)\.json/) || []) : [];
-                        const s = setMatch[1] || '';
-                        if (s !== setNum) return false;
-                    }
-                    if (search) {
-                        const hay = ((r.question || '') + ' ' + (r.comment || '')).toLowerCase();
-                        if (!hay.includes(search)) return false;
-                    }
-                    return true;
-                });
-
-                if (filtered.length === 0) {
-                    container.innerHTML = `<div class="p-4 text-sm text-gray-600">No reports match the current filters.</div>`;
-                    return;
-                }
-
-                container.innerHTML = filtered.map(r => {
-                    const setMatch = r.sourceFile ? (r.sourceFile.match(/set(\d+)\.json/) || []) : [];
-                    const setNum = setMatch[1] || 'N/A';
-                    const reporter = r.reporterName ? `${r.reporterName}${r.reporterLocation && (r.reporterLocation.city || r.reporterLocation.country) ? ' — ' + (r.reporterLocation.city ? r.reporterLocation.city + ', ' : '') + (r.reporterLocation.country || '') : ''}` : (r.deviceId || 'Anonymous');
-                    const statusLabel = (r.status || 'open') === 'resolved' ? '<span class="text-green-700 font-semibold">Resolved</span>' : '<span class="text-yellow-700 font-semibold">Open</span>';
-                    return `
-                        <div class="border rounded p-3 bg-white">
-                            <div class="flex justify-between items-start">
-                                <div class="flex-1">
-                                    <div class="text-sm text-gray-500">Set: ${setNum} • ${r.sourceFile || 'unknown'}${r.sourceLine ? ' (line ' + r.sourceLine + ')' : ''}</div>
-                                    <div class="font-semibold mt-1">${(r.question || '').substring(0, 200)}</div>
-                                    <div class="text-sm text-gray-700 mt-2">Comment: ${r.comment || '<i>none</i>'}</div>
-                                    <div class="text-sm text-gray-600 mt-2">Tags: ${Array.isArray(r.tags) ? r.tags.join(', ') : ''}</div>
-                                </div>
-                                <div class="ml-4 text-right">
-                                    <div>${statusLabel}</div>
-                                    <div class="text-xs text-gray-500 mt-2">${new Date(r.createdAt).toLocaleString()}</div>
-                                    <div class="mt-3 flex flex-col items-end gap-2">
-                                        ${(r.status || 'open') !== 'resolved' ? `<button onclick="(async()=>{ if(confirm('Mark this report as resolved?')){ try{ await updateReportStatus('${r.id}','resolved'); const freshObj = await loadReportsObject(); renderReportsList(freshObj && Array.isArray(freshObj.reports) ? freshObj.reports : []); showMessage('Marked resolved','success'); }catch(e){ showMessage('Failed to update report','error'); } } })()" class="px-3 py-1 bg-green-600 text-white rounded text-sm">Mark Resolved</button>` : `<div class="flex gap-2"><button onclick="(async()=>{ if(confirm('Reopen this report?')){ try{ await updateReportStatus('${r.id}','open'); const freshObj = await loadReportsObject(); renderReportsList(freshObj && Array.isArray(freshObj.reports) ? freshObj.reports : []); showMessage('Reopened report','info'); }catch(e){ showMessage('Failed to update report','error'); } } })()" class="px-3 py-1 bg-gray-200 rounded text-sm">Reopen</button>` +
-                            ` <button onclick="(async()=>{ if(confirm('Delete this report permanently?')){ try{ await deleteReport('${r.id}'); const freshObj = await loadReportsObject(); renderReportsList(freshObj && Array.isArray(freshObj.reports) ? freshObj.reports : []); showMessage('Deleted report','success'); }catch(e){ console.error(e); showMessage('Failed to delete report','error'); } } })()" class="px-3 py-1 bg-red-600 text-white rounded text-sm">Delete</button></div>`}
-                                    </div>
-                                    <div class="mt-2 text-xs text-gray-500">Reporter: ${escapeHtml(reporter)}</div>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                }).join('');
-            }
-
-            // Attach filter listeners
-            ['report-filter-status', 'report-filter-tag', 'report-filter-set', 'report-filter-search'].forEach(id => {
-                const el = document.getElementById(id);
-                if (!el) return;
-                el.oninput = () => renderList();
-                el.onchange = () => renderList();
-            });
-
-            // Initial render
-            renderList();
-            return;
-        }
-
-        function closeReportsModal() {
-            const modal = document.getElementById('reports-modal');
-            if (modal) modal.innerHTML = '';
-        }
+        // [MIGRATED] promptAdminAndShowReports, renderReportsList, etc. moved to reported_questions.js
 
         // registration promise control so ensureRegistered can wait until user registers
         let _registrationResolver = null;
@@ -1926,6 +1799,110 @@
             }
         }
 
+        // Silent update function for rankings table (prevents flash)
+        function updateRankingsTable(users) {
+            if (!users || users.length === 0) return;
+
+            const tbody = document.getElementById('rankings-table-body');
+            if (!tbody) return;
+
+            // Use the same ranking logic as renderRankingsView
+            const RANKING_TTL_DAYS = 30;
+            const cutoff = Date.now() - (RANKING_TTL_DAYS * 24 * 60 * 60 * 1000);
+
+            function getBestScoreWithinWindow(u, cutoffTs) {
+                if (!u) return null;
+                const candidates = [];
+                if (u.latestTotal != null && Number(u.latestTotal) > 0) {
+                    let ts = u.lastTimestamp || null;
+                    candidates.push({
+                        percentage: (u.latestScore != null ? parseFloat(u.latestScore) : 0),
+                        correct: (u.latestCorrect != null ? u.latestCorrect : 0),
+                        total: Number(u.latestTotal),
+                        timestamp: ts
+                    });
+                }
+                if (Array.isArray(u.scores) && u.scores.length) {
+                    for (const s of u.scores) {
+                        const total = (s && (s.totalQuestions != null ? s.totalQuestions : (s.total != null ? s.total : 0)));
+                        if (!total || Number(total) <= 0) continue;
+                        const ts = s.timestamp || s.time || s.t || null;
+                        if (!ts) continue;
+                        candidates.push({
+                            percentage: (s.percentage != null ? parseFloat(s.percentage) : 0),
+                            correct: (s.correctAnswers != null ? s.correctAnswers : (s.correct != null ? s.correct : 0)),
+                            total: Number(total),
+                            timestamp: ts
+                        });
+                    }
+                }
+                const valid = candidates.map(c => {
+                    const t = Date.parse(c.timestamp);
+                    return isNaN(t) ? null : Object.assign({}, c, { _ts: t });
+                }).filter(Boolean).filter(c => c._ts >= cutoffTs);
+                if (!valid || valid.length === 0) return null;
+                valid.sort((a, b) => {
+                    if (b.percentage !== a.percentage) return b.percentage - a.percentage;
+                    if (b.total !== a.total) return b.total - a.total;
+                    return b._ts - a._ts;
+                });
+                const best = valid[0];
+                return { percentage: best.percentage, correct: best.correct, total: best.total, timestamp: new Date(best._ts).toISOString() };
+            }
+
+            const filtered = (users || []).filter(u => {
+                if (!u || !u.deviceId || !u.name || String(u.name).trim() === '') return false;
+                const best = getBestScoreWithinWindow(u, cutoff);
+                return best !== null;
+            });
+
+            const ranked = filtered.map(u => {
+                const best = getBestScoreWithinWindow(u, cutoff) || { percentage: 0, correct: 0, total: 0, timestamp: null };
+                return {
+                    name: u.name || 'Unknown',
+                    latestScore: best.percentage,
+                    latestCorrect: best.correct,
+                    latestTotal: best.total,
+                    timestamp: best.timestamp
+                };
+            }).sort((a, b) => {
+                if (b.latestScore !== a.latestScore) return b.latestScore - a.latestScore;
+                return b.latestTotal - a.latestTotal;
+            });
+
+            // Build new rows
+            let rowsArr = [];
+            let prevScore = null;
+            let prevTotal = null;
+            let itemsBefore = 0;
+            let currentRank = 1;
+            for (let i = 0; i < ranked.length; i++) {
+                const u = ranked[i];
+                let rank;
+                if (prevScore === u.latestScore && prevTotal === u.latestTotal) {
+                    rank = currentRank;
+                } else {
+                    rank = itemsBefore + 1;
+                    currentRank = rank;
+                    prevScore = u.latestScore;
+                    prevTotal = u.latestTotal;
+                }
+                itemsBefore++;
+                rowsArr.push(`
+                <tr class="border-b hover:bg-gray-50">
+                    <td class="px-4 py-3 font-semibold">#${rank}</td>
+                    <td class="px-4 py-3">${u.name}</td>
+                    <td class="px-4 py-3 text-green-600 font-semibold">${u.latestCorrect}/${u.latestTotal}</td>
+                    <td class="px-4 py-3 text-blue-600 font-bold">${u.latestScore}%</td>
+                    <td class="px-4 py-3 text-sm text-gray-600">${u.timestamp ? new Date(u.timestamp).toLocaleString() : '—'}</td>
+                </tr>
+                `);
+            }
+
+            // Update without flash by setting innerHTML of tbody only
+            tbody.innerHTML = rowsArr.join('');
+        }
+
         async function renderRankingsView() {
             contentArea.innerHTML = `<div class="p-6 bg-white rounded-xl shadow-lg">Loading rankings...</div>`;
             try {
@@ -1938,7 +1915,7 @@
                         qs.forEach(d => usersRaw.push(d.data()));
                     }
                 } catch (e) {
-                    console.debug('Could not fetch users from Firestore (fallback to jsonbin):', e);
+                    console.debug('Could not fetch users from Firestore for online count (fallback to jsonbin):', e);
                     try { if (FIREBASE_NOTIFICATION_ENABLED) showMessage('Could not load leaderboard from Firebase; falling back to jsonbin.io', 'info'); } catch (err) { }
                 }
                 if (!usersRaw || usersRaw.length === 0) {
@@ -2004,7 +1981,8 @@
                                             if (perc !== null && u.latestScore != null) {
                                                 if (Math.abs(perc - parseFloat(u.latestScore)) < 0.0001) { ts = s.timestamp || s.time || s.t || null; break; }
                                             } else {
-                                                ts = s.timestamp || s.time || s.t || null; break;
+                                                ts = s.timestamp || s.time || s.t || null;
+                                                break;
                                             }
                                         }
                                     }
@@ -2132,11 +2110,11 @@
                                         <th class="px-4 py-2 text-left">Rank</th>
                                         <th class="px-4 py-2 text-left">Name</th>
                                         <th class="px-4 py-2 text-left">Score</th>
-                                        <th class="px-4 py-2 text-left">Correct / Questions</th>
+                                        <th class="px-4 py-2 text-left">Percentage</th>
                                         <th class="px-4 py-2 text-left">Date Obtained</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="rankings-table-body">
                                     ${rows}
                                 </tbody>
                             </table>
@@ -2531,9 +2509,18 @@
                     // 1. Update the "X users online" badge
                     updateOnlineCountUI(users);
 
+
                     // 2. If we are on the Rankings/Leaderboard view, update it live
                     if (currentView === 'rankings') {
-                        renderRankingsView(true); // true = use cache
+                        // Check if rankings table already exists to avoid flash
+                        const existingTable = document.querySelector('#rankings-table-body');
+                        if (!existingTable) {
+                            // First time rendering, do full render
+                            renderRankingsView(true);
+                        } else {
+                            // Silent update - just refresh the table rows without full page re-render
+                            updateRankingsTable(users);
+                        }
                     }
                 }, (error) => {
                     console.debug("Realtime listener error:", error);
@@ -2912,7 +2899,7 @@
             // Calculate quotas
             // 33% (1/3) should be True/False
             const totalNeeded = quizSettings.numQuestions;
-            let tfCount = Math.floor(totalNeeded / 3);
+            let tfCount = Math.round(totalNeeded / 3);
 
             // If we don't have enough TF questions, take what we have
             if (tfCount > tfQuestions.length) {
@@ -2980,8 +2967,10 @@
             // Start timer if configured
             if (quizSettings.timeLimit > 0) {
                 startTimer(quizSettings.timeLimit);
+                document.getElementById('timer-container').classList.remove('hidden');
             } else {
-                document.getElementById('timer-bar').classList.add('hidden');
+                document.getElementById('timer-container').classList.add('hidden');
+                document.getElementById('timer-bar').classList.remove('hidden'); // Show bar for score even if no timer
             }
         }
 
@@ -3013,7 +3002,8 @@
                         timerDisplay.textContent = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
                         // Visual urgency warning
                         if (remaining < 60000) { // last minute
-                            timerBar.classList.add('animate-pulse', 'bg-red-200');
+                            const timerContainer = document.getElementById('timer-container');
+                            if (timerContainer) timerContainer.classList.add('animate-pulse', 'bg-red-200');
                         }
                     }
                 }
@@ -3026,8 +3016,9 @@
                 quizTimerInterval = null;
             }
             const timerBar = document.getElementById('timer-bar');
-            if (timerBar) {
-                timerBar.classList.remove('animate-pulse', 'bg-red-200'); // remove urgency styles
+            const timerContainer = document.getElementById('timer-container');
+            if (timerContainer) {
+                timerContainer.classList.remove('animate-pulse', 'bg-red-200'); // remove urgency styles
             }
         }
 
@@ -3076,11 +3067,11 @@
 
             // Calculate current live score
             const currentScoreData = calculateScore();
-            // Only show score if at least one question answered? 
-            // User requested: "update the question number area with the number of correctly answered questions"
-            const scoreHtml = `<span class="inline-flex items-center ml-2 px-2 py-0.5 rounded text-sm bg-green-100 text-green-800 border border-green-300 shadow-sm">
-                Score: ${currentScoreData.correct}
-            </span>`;
+            // Update Score in Timer Bar
+            const scoreDisplay = document.getElementById('score-display');
+            if (scoreDisplay) {
+                scoreDisplay.textContent = `Score: ${currentScoreData.correct}/${totalQuestions}`;
+            }
 
             let optionsHtml = '';
             for (const key in q.options) {
@@ -3100,7 +3091,6 @@
                         <div class="flex-1 text-xl font-semibold p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500 shadow-inner">
                             <div class="mb-2 flex items-center flex-wrap">
                                 <span class="text-blue-700 mr-2">Question ${currentQuestionIndex + 1} of ${totalQuestions}:</span>
-                                ${scoreHtml}
                             </div>
                             <div class="prose">${formatText(q.question)}</div>
                         </div>        </div>
@@ -3627,7 +3617,7 @@
             stopTimer();
             renderResultsCalled = true;
             window.speechSynthesis.cancel();
-            const result = calculateScore();
+            const result = calculateScore(); 
             const percentage = ((result.correct / result.total) * 100).toFixed(1);
 
             // Generate performance appraisal
@@ -3738,12 +3728,18 @@
                 <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full" style="width: ${progressPercentage}%"></div></div>`;
         }
 
-        // Initialize the quiz on load
+    </script>
+    <!-- Import separated Reported Questions Logic -->
+    <script src="reported_questions.js"></script>
+
+    <script>
+        // Start app
         window.onload = function () {
             loadState();
         };
-
     </script>
 </body>
+
+</html>
 
 </html>
