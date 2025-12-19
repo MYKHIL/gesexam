@@ -776,6 +776,22 @@
             });
         }
 
+        // Timer control function
+        function updateTimerFromInput() {
+            const inputEl = document.getElementById('timer-input-pre');
+            if (inputEl) {
+                let value = parseInt(inputEl.value) || 0;
+                // Clamp value between 0 and 180
+                value = Math.max(0, Math.min(180, value));
+                quizSettings.timeLimit = value;
+                inputEl.value = value; // Update input to clamped value
+                saveSettings();
+                renderHomeView(); // Re-render to update the info display
+                const msg = value > 0 ? `Timer set to ${value} minutes` : 'Timer disabled';
+                showMessage(msg, 'info');
+            }
+        }
+
 
         // --- View Management ---
 
@@ -885,6 +901,12 @@
                          <button id="tts-toggle-btn-pre" onclick="toggleTts()" class="flex items-center justify-center px-6 py-3 font-bold rounded-xl transition duration-150 shadow-md">
                             <!-- Button content will be updated by updateTtsButton -->
                         </button>
+                        <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-xl shadow-md border border-gray-200">
+                            <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <label for="timer-input-pre" class="text-sm font-semibold text-gray-700">Timer:</label>
+                            <input type="number" id="timer-input-pre" min="0" max="180" value="${quizSettings.timeLimit || 0}" onchange="updateTimerFromInput()" class="w-20 p-2 border border-gray-300 rounded-lg text-center focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="0">
+                            <span class="text-sm text-gray-600 font-medium">min</span>
+                        </div>
                         <button onclick="startSession()" class="w-full sm:w-auto px-10 py-4 bg-green-600 text-white font-extrabold text-xl rounded-xl hover:bg-green-700 transition duration-150 shadow-lg transform hover:scale-105">
                             Start Session (${quizSettings.numQuestions} Qs)
                         </button>
