@@ -1995,7 +1995,7 @@
             if (!tbody) return;
 
             // Use the same ranking logic as renderRankingsView
-            const RANKING_TTL_DAYS = 30;
+            // Use the global RANKING_TTL_DAYS constant to keep behavior consistent (default: 5 days)
             const cutoff = Date.now() - (RANKING_TTL_DAYS * 24 * 60 * 60 * 1000);
 
             function getBestScoreWithinWindow(u, cutoffTs) {
@@ -2720,8 +2720,12 @@
 
         function updateOnlineCountUI(users) {
             // Count how many are "online" (active in last 5 mins)
-            const fiveMinsAgo = new Date(Date.now() - 5 * 60 * 1000).toISOString();
-            const onlineCount = users.filter(u => u.lastTimestamp > fiveMinsAgo).length;
+            const thresholdMs = Date.now() - (5 * 60 * 1000);
+            const onlineCount = users.reduce((acc, u) => {
+                if (!u || !u.lastTimestamp) return acc;
+                const t = parseTimestampToMs(u.lastTimestamp);
+                return (!isNaN(t) && t >= thresholdMs) ? acc + 1 : acc;
+            }, 0);
 
             const badgeHtml = `<span id="online-badge" class="inline-flex items-center px-3 py-1 rounded-full text-lg font-extrabold text-gray-600 bg-gray-100 hover:bg-gray-200 cursor-pointer shadow-sm transition-all">
                     <svg class="w-4 h-4 mr-2 text-green-500 animate-pulse" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
