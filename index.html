@@ -335,6 +335,7 @@
         }
 
         let renderResultsCalled = false;
+        let globalUsersCache = {}; // Cache for all users (deviceId -> user object)
         let allQuestions = []; // Master list of all questions (static or uploaded)
         let sessionQuestions = []; // Subset of questions for the current session (based on settings)
         let currentView = 'home';
@@ -460,6 +461,155 @@
                 .replace(/_+/g, '_') || null;
         }
 
+        // --- Global Rankings Filtering Functions ---
+        // These centralized functions ensure all parts of the app use the same 5-day filtering rules
+
+        /**
+         * Get the cutoff timestamp for global rankings (5 days ago)
+         * @returns {number} - Timestamp in milliseconds
+         */
+        function getGlobalRankingsCutoff() {
+            return Date.now() - (RANKING_TTL_DAYS * 24 * 60 * 60 * 1000);
+        }
+
+        /**
+         * Get the best score for a user within the ranking window (5 days)
+         * Checks both latestScore/latestTotal fields and scores array
+         * @param {Object} user - User object with scores
+         * @param {number} cutoffTs - Cutoff timestamp in milliseconds
+         * @returns {Object|null} - Best score object or null if no valid scores
+         */
+        function getBestScoreWithinWindow(user, cutoffTs) {
+            if (!user) return null;
+            const candidates = [];
+
+            // Include explicit latest fields if available
+            try {
+                if (user.latestTotal != null && Number(user.latestTotal) > 0) {
+                    // Try to find timestamp for latest score
+                    let ts = null;
+                    const preferNames = ['latestScoreTimestamp', 'latestTimestamp', 'latestAt', 'latest_time', 'latest_time_ms'];
+                    for (const p of preferNames) {
+                        if (user[p]) { ts = user[p]; break; }
+                    }
+                    // If not found, try to correlate with scores array
+                    try {
+                        if (!ts && Array.isArray(user.scores) && user.scores.length) {
+                            for (let i = user.scores.length - 1; i >= 0; i--) {
+                                const s = user.scores[i];
+                                const total = (s && (s.totalQuestions != null ? s.totalQuestions : (s.total != null ? s.total : 0)));
+                                const perc = (s && s.percentage != null) ? parseFloat(s.percentage) : null;
+                                if (total && Number(total) > 0 && Number(total) === Number(user.latestTotal)) {
+                                    if (perc !== null && user.latestScore != null) {
+                                        if (Math.abs(perc - parseFloat(user.latestScore)) < 0.0001) {
+                                            ts = s.timestamp || s.time || s.t || null;
+                                            break;
+                                        }
+                                    } else {
+                                        ts = s.timestamp || s.time || s.t || null;
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    } catch (e) { /* ignore correlation errors */ }
+                    // Fallback to lastTimestamp if still unknown
+                    if (!ts) ts = user.lastTimestamp || null;
+                    candidates.push({
+                        percentage: (user.latestScore != null ? parseFloat(user.latestScore) : 0),
+                        correct: (user.latestCorrect != null ? user.latestCorrect : 0),
+                        total: Number(user.latestTotal),
+                        timestamp: ts
+                    });
+                }
+            } catch (e) { /* ignore malformed */ }
+
+            // Include entries from scores array
+            if (Array.isArray(user.scores) && user.scores.length) {
+                for (const s of user.scores) {
+                    try {
+                        const total = (s && (s.totalQuestions != null ? s.totalQuestions : (s.total != null ? s.total : 0)));
+                        if (!total || Number(total) <= 0) continue;
+                        const ts = s.timestamp || s.time || s.t || null;
+                        if (!ts) continue;
+                        candidates.push({
+                            percentage: (s.percentage != null ? parseFloat(s.percentage) : 0),
+                            correct: (s.correctAnswers != null ? s.correctAnswers : (s.correct != null ? s.correct : 0)),
+                            total: Number(total),
+                            timestamp: ts
+                        });
+                    } catch (e) { /* skip malformed entries */ }
+                }
+            }
+
+            // Filter by cutoff
+            const valid = candidates.map(c => {
+                const t = parseTimestampToMs(c.timestamp);
+                return isNaN(t) ? null : Object.assign({}, c, { _ts: t });
+            }).filter(Boolean).filter(c => c._ts >= cutoffTs);
+
+            if (!valid || valid.length === 0) return null;
+
+            // Pick best by percentage, then total, then newest timestamp
+            valid.sort((a, b) => {
+                if (b.percentage !== a.percentage) return b.percentage - a.percentage;
+                if (b.total !== a.total) return b.total - a.total;
+                return b._ts - a._ts;
+            });
+
+            const best = valid[0];
+            return {
+                percentage: best.percentage,
+                correct: best.correct,
+                total: best.total,
+                timestamp: new Date(best._ts).toISOString()
+            };
+        }
+
+        /**
+         * Filter and rank users for global rankings
+         * Only includes users with valid scores within the TTL window (5 days)
+         * @param {Array} users - Array of user objects
+         * @returns {Array} - Ranked array of users with their best scores
+         */
+        function filterUsersForRankings(users) {
+            const cutoff = getGlobalRankingsCutoff();
+
+            // Filter: only include users with valid name and at least one score within window
+            const filtered = (users || []).filter(u => {
+                if (!u || !u.deviceId || !u.name || String(u.name).trim() === '') return false;
+                const best = getBestScoreWithinWindow(u, cutoff);
+                return best !== null;
+            });
+
+            // Map to ranked format with best score
+            const ranked = filtered.map(u => {
+                const best = getBestScoreWithinWindow(u, cutoff) || {
+                    percentage: 0,
+                    correct: 0,
+                    total: 0,
+                    timestamp: null
+                };
+                return {
+                    name: u.name || 'Unknown',
+                    latestScore: best.percentage,
+                    latestCorrect: best.correct,
+                    latestTotal: best.total,
+                    timestamp: best.timestamp,
+                    phone: u.phone || '',
+                    email: u.email || ''
+                };
+            });
+
+            // Sort by percentage (desc), then total (desc)
+            ranked.sort((a, b) => {
+                if (b.latestScore !== a.latestScore) return b.latestScore - a.latestScore;
+                return b.latestTotal - a.latestTotal;
+            });
+
+            return ranked;
+        }
+
         // Resolve the correct Firestore user document for a deviceId.
         // Tries: sanitized current user name doc -> legacy deviceId doc -> query by deviceId/deviceIds.
         // If a legacy doc is found and a sanitized name exists, attempts to migrate the doc to the new id.
@@ -496,7 +646,7 @@
                     const byDeviceRef = window._fb.doc(firestoreDb, 'users', deviceId);
                     const snapDevice = await window._fb.getDoc(byDeviceRef).catch(() => null);
                     const existsDevice = snapDevice && (typeof snapDevice.exists === 'function' ? snapDevice.exists() : snapDevice.exists);
-                        if (existsDevice) {
+                    if (existsDevice) {
                         const data = snapDevice.data ? snapDevice.data() : snapDevice;
                         // If we have a currentUser name, attempt migration to sanitized_name_deviceId
                         if (currentUser && currentUser.name) {
@@ -1861,7 +2011,7 @@
             // Prefer Firebase: write single user document to 'users' collection
             try {
                 if (!firebaseInitialized) await initFirebase();
-                    if (firebaseInitialized && firestoreDb && window._fb && window._fb.setDoc) {
+                if (firebaseInitialized && firestoreDb && window._fb && window._fb.setDoc) {
                     try {
                         // Prefer sanitized_name_deviceId id when available
                         const sanitizedName = sanitizeForDocId(userObj.name);
@@ -1994,76 +2144,16 @@
             const tbody = document.getElementById('rankings-table-body');
             if (!tbody) return;
 
-            // Use the same ranking logic as renderRankingsView
-            // Use the global RANKING_TTL_DAYS constant to keep behavior consistent (default: 5 days)
-            const cutoff = Date.now() - (RANKING_TTL_DAYS * 24 * 60 * 60 * 1000);
+            // Use global filtering function to ensure consistent 5-day TTL
+            const ranked = filterUsersForRankings(users);
 
-            function getBestScoreWithinWindow(u, cutoffTs) {
-                if (!u) return null;
-                const candidates = [];
-                if (u.latestTotal != null && Number(u.latestTotal) > 0) {
-                    let ts = u.lastTimestamp || null;
-                    candidates.push({
-                        percentage: (u.latestScore != null ? parseFloat(u.latestScore) : 0),
-                        correct: (u.latestCorrect != null ? u.latestCorrect : 0),
-                        total: Number(u.latestTotal),
-                        timestamp: ts
-                    });
-                }
-                if (Array.isArray(u.scores) && u.scores.length) {
-                    for (const s of u.scores) {
-                        const total = (s && (s.totalQuestions != null ? s.totalQuestions : (s.total != null ? s.total : 0)));
-                        if (!total || Number(total) <= 0) continue;
-                        const ts = s.timestamp || s.time || s.t || null;
-                        if (!ts) continue;
-                        candidates.push({
-                            percentage: (s.percentage != null ? parseFloat(s.percentage) : 0),
-                            correct: (s.correctAnswers != null ? s.correctAnswers : (s.correct != null ? s.correct : 0)),
-                            total: Number(total),
-                            timestamp: ts
-                        });
-                    }
-                }
-                const valid = candidates.map(c => {
-                    const t = parseTimestampToMs(c.timestamp);
-                    return isNaN(t) ? null : Object.assign({}, c, { _ts: t });
-                }).filter(Boolean).filter(c => c._ts >= cutoffTs);
-                if (!valid || valid.length === 0) return null;
-                valid.sort((a, b) => {
-                    if (b.percentage !== a.percentage) return b.percentage - a.percentage;
-                    if (b.total !== a.total) return b.total - a.total;
-                    return b._ts - a._ts;
-                });
-                const best = valid[0];
-                return { percentage: best.percentage, correct: best.correct, total: best.total, timestamp: new Date(best._ts).toISOString() };
-            }
-
-            const filtered = (users || []).filter(u => {
-                if (!u || !u.deviceId || !u.name || String(u.name).trim() === '') return false;
-                const best = getBestScoreWithinWindow(u, cutoff);
-                return best !== null;
-            });
-
-            const ranked = filtered.map(u => {
-                const best = getBestScoreWithinWindow(u, cutoff) || { percentage: 0, correct: 0, total: 0, timestamp: null };
-                return {
-                    name: u.name || 'Unknown',
-                    latestScore: best.percentage,
-                    latestCorrect: best.correct,
-                    latestTotal: best.total,
-                    timestamp: best.timestamp
-                };
-            }).sort((a, b) => {
-                if (b.latestScore !== a.latestScore) return b.latestScore - a.latestScore;
-                return b.latestTotal - a.latestTotal;
-            });
-
-            // Build new rows
+            // Build rows with competition-style ranking
             let rowsArr = [];
             let prevScore = null;
             let prevTotal = null;
             let itemsBefore = 0;
             let currentRank = 1;
+
             for (let i = 0; i < ranked.length; i++) {
                 const u = ranked[i];
                 let rank;
@@ -2100,7 +2190,12 @@
                     if (!firebaseInitialized) await initFirebase();
                     if (firebaseInitialized && firestoreDb && window._fb && window._fb.getDocs) {
                         const qs = await window._fb.getDocs(window._fb.collection(firestoreDb, 'users'));
-                        qs.forEach(d => usersRaw.push(d.data()));
+                        qs.forEach(d => {
+                            const u = d.data();
+                            usersRaw.push(u);
+                            // Populate global cache for realtime updates
+                            if (u && u.deviceId) globalUsersCache[u.deviceId] = u;
+                        });
                     }
                 } catch (e) {
                     console.debug('Could not fetch users from Firestore for online count (fallback to jsonbin):', e);
@@ -2111,146 +2206,13 @@
                     usersRaw = Array.isArray(fetched) ? fetched : (fetched && Array.isArray(fetched.users) ? fetched.users : []);
                 }
 
-                // Helper: pick the most recent non-zero score entry for a user
-                function getLatestNonZeroScore(u) {
-                    if (!u) return null;
-                    // Prefer explicit latestTotal/latestScore if it represents a completed run
-                    if (u.latestTotal != null && Number(u.latestTotal) > 0) {
-                        return {
-                            percentage: (u.latestScore != null ? parseFloat(u.latestScore) : 0),
-                            correct: (u.latestCorrect != null ? u.latestCorrect : 0),
-                            total: Number(u.latestTotal),
-                            timestamp: u.lastTimestamp || null
-                        };
-                    }
-                    // Otherwise scan the scores array from newest to oldest for a non-zero total
-                    if (Array.isArray(u.scores) && u.scores.length) {
-                        for (let i = u.scores.length - 1; i >= 0; i--) {
-                            const s = u.scores[i];
-                            const total = (s && (s.totalQuestions != null ? s.totalQuestions : (s.total != null ? s.total : 0)));
-                            if (total && Number(total) > 0) {
-                                return {
-                                    percentage: (s.percentage != null ? parseFloat(s.percentage) : 0),
-                                    correct: (s.correctAnswers != null ? s.correctAnswers : (s.correct != null ? s.correct : 0)),
-                                    total: Number(total),
-                                    timestamp: s.timestamp || null
-                                };
-                            }
-                        }
-                    }
-                    return null;
-                }
+                // Use global filtering function to ensure consistent 5-day TTL
+                const ranked = filterUsersForRankings(usersRaw);
 
-                // Helper: pick the best score for a user within the cutoff (highest percentage,
-                // tie-breaker: higher total, then newest timestamp)
-                function getBestScoreWithinWindow(u, cutoffTs) {
-                    if (!u) return null;
-                    const candidates = [];
-
-                    // include explicit latest fields if available
-                    try {
-                        if (u.latestTotal != null && Number(u.latestTotal) > 0) {
-                            // Prefer an explicit timestamp for the latest score if available.
-                            // Look for common property names or try to find a matching entry in u.scores.
-                            let ts = null;
-                            const preferNames = ['latestScoreTimestamp', 'latestTimestamp', 'latestAt', 'latest_time', 'latest_time_ms'];
-                            for (const p of preferNames) {
-                                if (u[p]) { ts = u[p]; break; }
-                            }
-                            // If not found, try to correlate with an entry in scores[]
-                            try {
-                                if (!ts && Array.isArray(u.scores) && u.scores.length) {
-                                    for (let i = u.scores.length - 1; i >= 0; i--) {
-                                        const s = u.scores[i];
-                                        const total = (s && (s.totalQuestions != null ? s.totalQuestions : (s.total != null ? s.total : 0)));
-                                        const perc = (s && s.percentage != null) ? parseFloat(s.percentage) : null;
-                                        if (total && Number(total) > 0 && Number(total) === Number(u.latestTotal)) {
-                                            // If percentage matches or no explicit latestScore, accept this
-                                            if (perc !== null && u.latestScore != null) {
-                                                if (Math.abs(perc - parseFloat(u.latestScore)) < 0.0001) { ts = s.timestamp || s.time || s.t || null; break; }
-                                            } else {
-                                                ts = s.timestamp || s.time || s.t || null;
-                                                break;
-                                            }
-                                        }
-                                    }
-                                }
-                            } catch (e) { /* ignore correlation errors */ }
-                            // Fallback to lastTimestamp if still unknown
-                            if (!ts) ts = u.lastTimestamp || null;
-                            candidates.push({
-                                percentage: (u.latestScore != null ? parseFloat(u.latestScore) : 0),
-                                correct: (u.latestCorrect != null ? u.latestCorrect : 0),
-                                total: Number(u.latestTotal),
-                                timestamp: ts
-                            });
-                        }
-                    } catch (e) { /* ignore malformed */ }
-
-                    // include entries from scores array
-                    if (Array.isArray(u.scores) && u.scores.length) {
-                        for (const s of u.scores) {
-                            try {
-                                const total = (s && (s.totalQuestions != null ? s.totalQuestions : (s.total != null ? s.total : 0)));
-                                if (!total || Number(total) <= 0) continue;
-                                const ts = s.timestamp || s.time || s.t || null;
-                                if (!ts) continue;
-                                candidates.push({
-                                    percentage: (s.percentage != null ? parseFloat(s.percentage) : 0),
-                                    correct: (s.correctAnswers != null ? s.correctAnswers : (s.correct != null ? s.correct : 0)),
-                                    total: Number(total),
-                                    timestamp: ts
-                                });
-                            } catch (e) { /* skip malformed entries */ }
-                        }
-                    }
-
-                    // filter by cutoff
-                    const valid = candidates.map(c => {
-                        const t = parseTimestampToMs(c.timestamp);
-                        return isNaN(t) ? null : Object.assign({}, c, { _ts: t });
-                    }).filter(Boolean).filter(c => c._ts >= cutoffTs);
-
-                    if (!valid || valid.length === 0) return null;
-
-                    // pick best by percentage, then total, then newest timestamp
-                    valid.sort((a, b) => {
-                        if (b.percentage !== a.percentage) return b.percentage - a.percentage;
-                        if (b.total !== a.total) return b.total - a.total;
-                        return b._ts - a._ts;
-                    });
-
-                    const best = valid[0];
-                    return { percentage: best.percentage, correct: best.correct, total: best.total, timestamp: new Date(best._ts).toISOString() };
-                }
-
-                // Filter and only include users that have at least one completed run within the TTL window
-                const cutoff = Date.now() - (RANKING_TTL_DAYS * 24 * 60 * 60 * 1000);
-                const users = (usersRaw || []).filter(u => {
-                    if (!u || !u.deviceId || !u.name || String(u.name).trim() === '') return false;
-                    const best = getBestScoreWithinWindow(u, cutoff);
-                    return best !== null;
-                });
-                if (!users || users.length === 0) {
+                if (!ranked || ranked.length === 0) {
                     contentArea.innerHTML = `<div class="p-6 bg-white rounded-xl shadow-lg text-center">No registered users found.</div>`;
                     return;
                 }
-                const ranked = users.map(u => {
-                    const best = getBestScoreWithinWindow(u, cutoff) || { percentage: 0, correct: 0, total: 0, timestamp: null };
-                    return {
-                        name: u.name || 'Unknown',
-                        latestScore: best.percentage,
-                        latestCorrect: best.correct,
-                        latestTotal: best.total,
-                        phone: u.phone || '',
-                        email: u.email || '',
-                        timestamp: best.timestamp
-                    };
-                }).sort((a, b) => {
-                    // Primary: percentage desc, Secondary: total questions desc
-                    if (b.latestScore !== a.latestScore) return b.latestScore - a.latestScore;
-                    return b.latestTotal - a.latestTotal;
-                });
 
                 // Assign competition-style ranks (ties share same rank; next rank = position index+1)
                 let rowsArr = [];
@@ -2688,24 +2650,26 @@
                 _realtimeUnsub = window._fb.onSnapshot(q, (snapshot) => {
                     const users = [];
                     snapshot.forEach(doc => {
-                        users.push(doc.data());
+                        const u = doc.data();
+                        users.push(u);
+                        // Update global cache with latest data
+                        if (u && u.deviceId) globalUsersCache[u.deviceId] = u;
                     });
                     _cachedOnlineUsers = users;
 
                     // 1. Update the "X users online" badge
                     updateOnlineCountUI(users);
 
-
-                    // 2. If we are on the Rankings/Leaderboard view, update it live
+                    // 2. Update Rankings Table using merged data
+                    // We use the global cache which contains ALL users (from initial load) + latest updates
+                    // This prevents the truncated list (50 users) from wiping out the full leaderboard
                     if (currentView === 'rankings') {
-                        // Check if rankings table already exists to avoid flash
                         const existingTable = document.querySelector('#rankings-table-body');
                         if (!existingTable) {
-                            // First time rendering, do full render
                             renderRankingsView(true);
                         } else {
-                            // Silent update - just refresh the table rows without full page re-render
-                            updateRankingsTable(users);
+                            // Pass the full merged list to the update function
+                            updateRankingsTable(Object.values(globalUsersCache));
                         }
                     }
                 }, (error) => {
@@ -2720,12 +2684,8 @@
 
         function updateOnlineCountUI(users) {
             // Count how many are "online" (active in last 5 mins)
-            const thresholdMs = Date.now() - (5 * 60 * 1000);
-            const onlineCount = users.reduce((acc, u) => {
-                if (!u || !u.lastTimestamp) return acc;
-                const t = parseTimestampToMs(u.lastTimestamp);
-                return (!isNaN(t) && t >= thresholdMs) ? acc + 1 : acc;
-            }, 0);
+            const fiveMinsAgo = new Date(Date.now() - 5 * 60 * 1000).toISOString();
+            const onlineCount = users.filter(u => u.lastTimestamp > fiveMinsAgo).length;
 
             const badgeHtml = `<span id="online-badge" class="inline-flex items-center px-3 py-1 rounded-full text-lg font-extrabold text-gray-600 bg-gray-100 hover:bg-gray-200 cursor-pointer shadow-sm transition-all">
                     <svg class="w-4 h-4 mr-2 text-green-500 animate-pulse" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
@@ -3807,7 +3767,7 @@
             stopTimer();
             renderResultsCalled = true;
             window.speechSynthesis.cancel();
-            const result = calculateScore(); 
+            const result = calculateScore();
             const percentage = ((result.correct / result.total) * 100).toFixed(1);
 
             // Generate performance appraisal
