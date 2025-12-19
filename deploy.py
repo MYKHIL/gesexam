@@ -163,6 +163,19 @@ class GitDeployment:
         if result and result.returncode == 0:
             return result.stdout.strip()
         return None
+
+    def pull_latest_changes(self, branch="main"):
+        """Pull latest changes from remote to avoid push conflicts"""
+        self.log(f"Pulling latest changes from origin/{branch}...")
+        try:
+            # Try rebase first to keep history clean
+            self.run_command(["git", "pull", "--rebase", "origin", branch], check=False)
+            self.log(f"✓ Pulled latest changes")
+            return True
+        except Exception as e:
+            self.log(f"⚠ Pull warning: {e}", "WARNING")
+            return False
+
     
     def push_to_github(self, branch=None, force=False):
         """Push commits to GitHub"""
@@ -238,6 +251,11 @@ class GitDeployment:
             if not self.commit_changes(message):
                 return False
             
+            # Pull latest changes before pushing (to avoid non-fast-forward errors)
+            # Use detected branch or default
+            current_branch = branch or self.get_current_branch() or "master"
+            self.pull_latest_changes(current_branch)
+
             # Push to GitHub (auto-detect branch if not specified)
             if not self.push_to_github(branch, force):
                 return False
