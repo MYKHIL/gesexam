@@ -1,0 +1,1102 @@
+[
+  {
+    "id": 1,
+    "question": "Which of the following functions is exclusively retained by the Ministry of Education (MoE) and NOT delegated to the Ghana Education Service (GES)?",
+    "options": {
+      "A": "Monitoring of curriculum implementation standards",
+      "B": "Allocation of resource envelopes to educational agencies",
+      "C": "Recruitment of non-teaching staff for basic schools",
+      "D": "In-service training and Continuous Professional Development (CPD)"
+    },
+    "answer": "B",
+    "explanation": "The Ministry of Education, specifically its Planning, Budgeting, Monitoring and Evaluation Directorate (PBMED), retains the mandate for determining and allocating the broad resource envelopes and budgets across the entire education sector (GES, NaCCA, NTC, etc.). GES is primarily the user and implementer of these allocated resources."
+  },
+  {
+    "id": 2,
+    "question": "The primary role of the Ghana Education Service (GES) concerning national educational policies formulated by the MoE is:",
+    "options": {
+      "A": "To review and provide feedback on strategic objectives.",
+      "B": "To monitor and evaluate the overall sector performance indicators.",
+      "C": "To operationalize and implement the policies through institutional management and staffing.",
+      "D": "To audit the financial utilization of capitation grants."
+    },
+    "answer": "C",
+    "explanation": "GES acts as the implementation arm of the MoE. Once policies (like the Standard-Based Curriculum or Free SHS) are formulated by the MoE, GES is tasked with operationalizing them, which involves teacher deployment, curriculum dissemination, and institutional management."
+  },
+  {
+    "id": 3,
+    "question": "In the context of Human Resource Management within GES, what is the prerequisite requirement for a newly trained teacher to be placed on the government payroll (mechanization)?",
+    "options": {
+      "A": "Completion of National Service and submission of a medical fitness report.",
+      "B": "GES appointment letter and clearance obtained from the Ministry of Finance (MoF).",
+      "C": "Passing the licensure examination conducted by the National Teaching Council (NTC).",
+      "D": "Verification of academic records by the West African Examinations Council (WAEC)."
+    },
+    "answer": "B",
+    "explanation": "While passing the NTC licensure exam is mandatory for professional recognition, placement on the IPPD/Controller and Accountant General's Department payroll system requires a GES appointment letter and crucial financial clearance from the Ministry of Finance to ensure the establishment is budgeted for."
+  },
+  {
+    "id": 4,
+    "question": "The preparation and submission of the Medium-Term Expenditure Framework (MTEF) for the education sector is a core financial management responsibility coordinated by which MoE directorate?",
+    "options": {
+      "A": "Directorate of Schools and Education Management",
+      "B": "National Council for Curriculum and Assessment (NaCCA)",
+      "C": "Planning, Budgeting, Monitoring and Evaluation Directorate (PBMED)",
+      "D": "Inspectorate Division of GES"
+    },
+    "answer": "C",
+    "explanation": "PBMED (Planning, Budgeting, Monitoring and Evaluation Directorate) within the MoE is responsible for coordinating the preparation of the Education Sector Plan and its associated budgeting framework, including the MTEF, which links policy goals to resource requirements over three-year rolling cycles."
+  },
+  {
+    "id": 5,
+    "question": "If a District Education Office (DEO) requires funds to undertake approved repair works in schools, the operational document authorizing the expenditure and defining the spending limits for that fiscal activity is typically the:",
+    "options": {
+      "A": "Annual Financial Statement",
+      "B": "Entity Tender Committee (ETC) approval document",
+      "C": "Authority to Incur Expenditure (AIE) or Warrant",
+      "D": "District Assembly Common Fund (DACF) allocation letter"
+    },
+    "answer": "C",
+    "explanation": "The Authority to Incur Expenditure (AIE) or Warrant is the instrument of budgetary control used in Ghana's decentralized financial management system. It authorizes the head of the decentralized unit (like the DDE) to commit and spend funds up to a specified limit for approved budget items."
+  },
+  {
+    "id": 6,
+    "question": "The primary objective of the Continuous Professional Development (CPD) framework implemented by GES is to achieve:",
+    "options": {
+      "A": "Mass recruitment of non-teaching personnel.",
+      "B": "The professionalization and competency enhancement of the teaching workforce.",
+      "C": "Decentralization of payroll processing to the district level.",
+      "D": "Reduction in the pupil-to-teacher ratio (PTR) in rural areas."
+    },
+    "answer": "B",
+    "explanation": "CPD is a core strategy under the current education reforms aimed at professionalizing teaching. It ensures that teachers maintain relevance, update their skills, and meet the professional standards set by the National Teaching Council (NTC)."
+  },
+  {
+    "id": 7,
+    "question": "Monitoring and Evaluation (M&E) conducted by the MoE focuses mainly on strategic oversight, whereas GES M&E focuses on:",
+    "options": {
+      "A": "International donor compliance requirements.",
+      "B": "Operational efficiency and classroom performance.",
+      "C": "Inter-ministerial collaboration on policy outcomes.",
+      "D": "Negotiation of collective bargaining agreements."
+    },
+    "answer": "B",
+    "explanation": "MoE monitors sector-wide strategic goals and policy outcomes. GES, being the operational arm, monitors implementation at the school and district level, focusing on educational quality, teacher attendance, scheme of work coverage, and overall operational efficiency."
+  },
+  {
+    "id": 8,
+    "question": "Which MoE policy instrument provides the foundation and regulatory framework for licensing private schools and ensuring their adherence to the Ghanaian curriculum standards?",
+    "options": {
+      "A": "GES Service Scheme",
+      "B": "NaCCA operational guidelines",
+      "C": "Public Financial Management Act",
+      "D": "Audit Service Act"
+    },
+    "answer": "B",
+    "explanation": "The National Council for Curriculum and Assessment (NaCCA) has the mandate to approve curricula, textbooks, and related materials. Private schools must adhere to NaCCA guidelines to gain and maintain their operational licenses."
+  },
+  {
+    "id": 9,
+    "question": "In financial management, the key mechanism used by the MoE/GES to ensure transparency and accountability in the disbursement of Free SHS non-salary funds to secondary schools is the:",
+    "options": {
+      "A": "Direct cheque issuance system.",
+      "B": "E-Wallet disbursement system.",
+      "C": "District Assembly Common Fund (DACF) transfer.",
+      "D": "Monthly cash advance system."
+    },
+    "answer": "B",
+    "explanation": "The E-Wallet system was instituted to ensure that funds (like recurrent expenditure grants for utilities, teaching materials, etc.) are electronically transferred directly to designated school accounts, tracking utilization and reducing delays associated with manual processes."
+  },
+  {
+    "id": 10,
+    "question": "Which entity is statutorily responsible for the final approval of teacher promotions in the basic and secondary public school system, based on recommendations from the relevant committees?",
+    "options": {
+      "A": "District Director of Education (DDE)",
+      "B": "Chief Director of the Ministry of Education",
+      "C": "The Director-General of the Ghana Education Service (GES)",
+      "D": "The Public Services Commission (PSC)"
+    },
+    "answer": "C",
+    "explanation": "While PSC has oversight of public sector appointments, the Director-General of GES is the appointing and disciplinary authority for educational staff, including granting final approval for promotions based on assessment reports and interviews."
+  },
+  {
+    "id": 11,
+    "question": "A fundamental difference in the HR function between the MoE Headquarters and GES Headquarters is that MoE handles HR functions for civil service staff, while GES handles HR functions for:",
+    "options": {
+      "A": "Only Directors of Education.",
+      "B": "Educational workers (Teaching and Non-Teaching Staff).",
+      "C": "Only staff hired through international aid projects.",
+      "D": "Staff seconded from other Ministries."
+    },
+    "answer": "B",
+    "explanation": "GES is specifically mandated to manage the human resources for all educational workers (teachers and GES support staff) under the Education Service, distinct from the MoE's internal civil service staff management."
+  },
+  {
+    "id": 12,
+    "question": "When GES undertakes mass recruitment drives, which GES division is primarily responsible for coordinating the initial verification of teacher qualification (academic and NTC license) before regional posting?",
+    "options": {
+      "A": "Guidance and Counselling Division",
+      "B": "Human Resource Management Development Division (HRMDD)",
+      "C": "Schools and Education Management Division (SEMD)",
+      "D": "Supply and Logistics Division"
+    },
+    "answer": "B",
+    "explanation": "The HRMDD at the GES Headquarters is the central division managing the teacher establishment, recruitment, verification of documents, postings, promotions, and transfers."
+  },
+  {
+    "id": 13,
+    "question": "Under MoE's oversight function, the Minister requires performance contracts from heads of key agencies. These contracts primarily focus on achieving goals outlined in the:",
+    "options": {
+      "A": "National Teacher Service Scheme.",
+      "B": "Education Strategic Plan (ESP).",
+      "C": "Annual Audit Report.",
+      "D": "United Nations Global Compact."
+    },
+    "answer": "B",
+    "explanation": "The Education Strategic Plan (ESP) is the MoE's core policy document defining sectoral goals (e.g., quality, access, equity). Performance contracts are MoE's oversight mechanism to ensure agency heads (like the DG of GES) commit to achieving milestones defined in the ESP."
+  },
+  {
+    "id": 14,
+    "question": "In financial accountability, the final submission of the Annual Statement of Accounts for a secondary school must eventually pass through the District Director of Education (DDE) and be submitted to the GES Headquarters for consolidation before being subjected to scrutiny by the:",
+    "options": {
+      "A": "Minister of Education",
+      "B": "National Inspectorate Board (NIB)",
+      "C": "Auditor General (via the Audit Service)",
+      "D": "Chief of Staff"
+    },
+    "answer": "C",
+    "explanation": "As public funds are involved, all financial statements and accounts must comply with the Public Financial Management Act and are ultimately subject to mandatory independent audit by the Auditor General's office."
+  },
+  {
+    "id": 15,
+    "question": "A District Education Director proposes a budget reallocation for Capitation Grant funds from teaching materials to school infrastructure refurbishment. Who must approve this deviation from the originally approved annual budget estimate?",
+    "options": {
+      "A": "The District Assembly",
+      "B": "The Director-General of GES",
+      "C": "The Head of the School Management Committee (SMC)",
+      "D": "The Regional Director of Education"
+    },
+    "answer": "B",
+    "explanation": "Budget virements (reallocations) generally require approval from the highest spending authority within the implementation agency, which is the Director-General of GES, following the advice of the relevant financial directorate."
+  },
+  {
+    "id": 16,
+    "question": "The GES implementation mandate includes ensuring curriculum alignment. Which GES division works most closely with NaCCA to develop and disseminate instructional materials for teacher use?",
+    "options": {
+      "A": "Special Education Division (SPED)",
+      "B": "Guidance and Counselling Division (GCD)",
+      "C": "Teacher Education Division (TED)",
+      "D": "Supply and Logistics Division (SLD)"
+    },
+    "answer": "C",
+    "explanation": "The Teacher Education Division (TED) focuses on the preparation, professional development, and in-service training of teachers. They translate curriculum changes from NaCCA into training modules and instructional materials for effective classroom delivery."
+  },
+  {
+    "id": 17,
+    "question": "Which financial management principle requires all Heads of Institutions to maintain detailed records of resource utilization to justify expenditures against the approved budget classification?",
+    "options": {
+      "A": "Fiscal Neutrality",
+      "B": "Value for Money",
+      "C": "Budgetary Compliance and Transparency",
+      "D": "Inter-sectoral Reciprocity"
+    },
+    "answer": "C",
+    "explanation": "Budgetary Compliance and Transparency are fundamental to public sector financial management. Heads must show that expenditures match the approved budget line items and classification, providing accountability for public funds."
+  },
+  {
+    "id": 18,
+    "question": "When GES implements a policy requiring all teachers to update their details on the Integrated Personnel and Payroll Database (IPPD), this is an exercise in:",
+    "options": {
+      "A": "Financial Allocation oversight.",
+      "B": "Human Resource establishment control and sanitization.",
+      "C": "Curriculum standardization.",
+      "D": "Ministerial policy formulation."
+    },
+    "answer": "B",
+    "explanation": "The IPPD system is critical for HR management. Updating data is essential for 'establishment control,' ensuring that ghost names are removed, staff locations are accurate, and that payroll reflects the actual workforce."
+  },
+  {
+    "id": 19,
+    "question": "The oversight function of the MoE differs from the monitoring function of the GES in that MoE focuses on sector governance, while GES is concerned with:",
+    "options": {
+      "A": "Compliance with the Public Procurement Act at the HQ level.",
+      "B": "Implementation efficiency and adherence to local operational guidelines.",
+      "C": "Approving international grants and loans for education.",
+      "D": "Negotiating salaries with teacher unions."
+    },
+    "answer": "B",
+    "explanation": "GES focuses on ensuring that operations run smoothly and effectively at the decentralized level (district and school). This includes compliance with operational manuals and local management standards."
+  },
+  {
+    "id": 20,
+    "question": "In Human Resource disciplinary procedures within GES, the decision to interdict a senior high school headmaster for alleged serious misconduct must be ratified by which authority before the action is finalized?",
+    "options": {
+      "A": "The District Chief Executive",
+      "B": "The Regional Director of Education (RDE)",
+      "C": "GES Headquarters (Director-General's Office)",
+      "D": "The Board of Governors of the school"
+    },
+    "answer": "C",
+    "explanation": "While regional bodies initiate disciplinary inquiries, serious sanctions like interdiction, dismissal, or demotion for senior staff (like headmasters) typically require final ratification and approval from the Director-General of GES, as the substantive appointing authority."
+  },
+  {
+    "id": 21,
+    "question": "The MoE is tasked with resource allocation. When prioritizing educational infrastructure spending, which overarching strategic principle usually guides the allocation process?",
+    "options": {
+      "A": "Political Party Manifesto Promises",
+      "B": "The Equity principle (focusing on deprived areas)",
+      "C": "Revenue generated from specific school fees",
+      "D": "International travel budget requirements"
+    },
+    "answer": "B",
+    "explanation": "A core mandate of the MoE and GES, guided by SDG 4 and national policy, is to ensure equitable access to quality education. Resource allocation, especially for infrastructure, is often skewed towards addressing historical imbalances and deprived/rural areas."
+  },
+  {
+    "id": 22,
+    "question": "The successful implementation of the shift from the objective-based curriculum to the standard-based curriculum heavily relies on the GES's capacity for:",
+    "options": {
+      "A": "International diplomacy.",
+      "B": "Effective large-scale in-service training (CPD).",
+      "C": "Decentralization of payroll management.",
+      "D": "Direct negotiation with textbook publishers."
+    },
+    "answer": "B",
+    "explanation": "Curriculum reform requires systemic retraining. The GES's ability to roll out and sustain effective Continuous Professional Development (CPD) for all teachers is crucial for the successful implementation of new curriculum standards in the classroom."
+  },
+  {
+    "id": 23,
+    "question": "For procurement within GES that exceeds the decentralized ceiling but is below the National Competitive Tendering (NCT) threshold, the decision is typically approved by the:",
+    "options": {
+      "A": "Minister of Education's cabinet",
+      "B": "Entity Tender Committee (ETC) of GES",
+      "C": "Public Procurement Authority (PPA) Board",
+      "D": "Regional Director of Education"
+    },
+    "answer": "B",
+    "explanation": "In line with the Public Procurement Act, government entities (like GES) have an Entity Tender Committee (ETC) responsible for approving procurement packages that fall within their mandated threshold but exceed the procurement staff's internal spending limits."
+  },
+  {
+    "id": 24,
+    "question": "Which of the following bodies operates independently but is overseen by the MoE and plays a critical role in GES's HR management through teacher professionalization and certification?",
+    "options": {
+      "A": "Ghana National Association of Teachers (GNAT)",
+      "B": "National Inspectorate Board (NIB)",
+      "C": "National Teaching Council (NTC)",
+      "D": "Council for Technical and Vocational Education and Training (COTVET)"
+    },
+    "answer": "C",
+    "explanation": "The National Teaching Council (NTC) is key to the professionalization agenda. It licenses teachers and manages the CPD framework, directly impacting who GES can recruit and promote, thereby strongly influencing GES's HR processes."
+  },
+  {
+    "id": 25,
+    "question": "In the process of policy oversight, the MoE relies heavily on data gathered through the Education Management Information System (EMIS). EMIS primarily enables MoE to:",
+    "options": {
+      "A": "Determine individual teacher disciplinary actions.",
+      "B": "Track sector-wide indicators such as Gross Enrolment Ratio and completion rates.",
+      "C": "Calculate the monthly salaries of all GES staff.",
+      "D": "Approve construction contracts for educational facilities."
+    },
+    "answer": "B",
+    "explanation": "EMIS is the central repository for educational statistics. MoE uses this system for high-level monitoring and evaluation of strategic outcomes, tracking key metrics like enrolment, gender equity, infrastructure availability, and progress towards national and international goals (e.g., SDG 4)."
+  },
+  {
+    "id": 26,
+    "question": "The Ministry of Education (MoE) decides to review the duration of pre-tertiary education from 11 years to 12 years. Which core mandate of the MoE is being exercised in this scenario?",
+    "options": {
+      "A": "Recruitment and Posting of Personnel",
+      "B": "Implementation of Instructional Programs",
+      "C": "Policy Formulation and Strategic Planning",
+      "D": "In-service Training and Capacity Building"
+    },
+    "answer": "C",
+    "explanation": "Policy Formulation is the primary mandate of the MoE. Changes to the structure or duration of the education system, such as pre-tertiary education length, fall under high-level policy setting."
+  },
+  {
+    "id": 27,
+    "question": "A Headteacher in the Volta Region needs to procure new desks using the Capitation Grant. According to the financial regulations governing public schools, which management principle must guide the procurement process?",
+    "options": {
+      "A": "Efficiency, Accountability, and Transparency",
+      "B": "Centralization of Authority",
+      "C": "Staff Welfare Exclusivity",
+      "D": "Political Affiliation Preference"
+    },
+    "answer": "A",
+    "explanation": "Financial management in the public sector, including schools, emphasizes accountability to the state and transparency in expenditure. Headteachers must adhere to procurement rules to ensure efficiency and probity."
+  },
+  {
+    "id": 28,
+    "question": "The Ghana Education Service (GES) announces the official placement of newly trained teachers from Colleges of Education across the country. This action directly relates to which mandate of the GES?",
+    "options": {
+      "A": "Monitoring and Evaluation of MoE policies",
+      "B": "Oversight of Tertiary Institutions",
+      "C": "Human Resource Management (Recruitment and Posting)",
+      "D": "Formulation of National Curricula"
+    },
+    "answer": "C",
+    "explanation": "Recruitment, posting, and placement of professional teaching and non-teaching staff are core Human Resource Management (HRM) functions, explicitly mandated to the GES."
+  },
+  {
+    "id": 29,
+    "question": "Following a national policy directive on educational quality, the MoE establishes a specific budget ceiling for the Capitation Grant for the upcoming academic year. Which MoE mandate is being fulfilled?",
+    "options": {
+      "A": "In-service training coordination",
+      "B": "Curriculum standardization",
+      "C": "Allocation of Resources",
+      "D": "Disciplinary enforcement"
+    },
+    "answer": "C",
+    "explanation": "Determining the budget, setting grant ceilings, and distributing funds across the education sector are key aspects of the MoE's mandate concerning resource allocation."
+  },
+  {
+    "id": 30,
+    "question": "A Circuit Supervisor conducts an unannounced visit to a cluster of schools to assess lesson delivery methods and infrastructure maintenance. This task primarily supports which core function?",
+    "options": {
+      "A": "GES Implementation Mandate",
+      "B": "MoE Policy Formulation Mandate",
+      "C": "NaCCA Content Creation Mandate",
+      "D": "GES Human Resource Recruitment Mandate"
+    },
+    "answer": "A",
+    "explanation": "The Circuit Supervisor, operating under GES, ensures that policies (like curriculum delivery standards and maintenance regulations) are being implemented effectively at the school level."
+  },
+  {
+    "id": 31,
+    "question": "The GES organizes Continuous Professional Development (CPD) workshops for JHS Mathematics teachers focused on the new Standards-Based Curriculum pedagogical requirements. What key GES mandate does this action fulfill?",
+    "options": {
+      "A": "Policy Oversight",
+      "B": "In-service Training and Capacity Building",
+      "C": "Financial Budgeting and Control",
+      "D": "National Examination Conduct"
+    },
+    "answer": "B",
+    "explanation": "The provision of in-service training and CPD is essential for updating teachers' skills and knowledge, ensuring effective curriculum implementation, and is a specific mandate of the GES."
+  },
+  {
+    "id": 32,
+    "question": "A Regional Education Director submits a detailed report to the MoE outlining challenges in resource disbursement to schools in remote districts. This report aids the MoE in performing which critical function?",
+    "options": {
+      "A": "Monitoring and Evaluation (M&E)",
+      "B": "Statutory Recruitment",
+      "C": "Curriculum Vetting",
+      "D": "School Feeding Management"
+    },
+    "answer": "A",
+    "explanation": "M&E is the function by which the MoE tracks how well policies and resource allocations are working on the ground, using reports from regional and district offices to inform future policy adjustments."
+  },
+  {
+    "id": 33,
+    "question": "A Headteacher is preparing the school’s budget for the next quarter. The budget must align strictly with the approved MoE sector expenditure guidelines. This requirement exemplifies which principle of financial management in the Ghanaian education system?",
+    "options": {
+      "A": "Autonomy of School Boards",
+      "B": "Compliance with Policy and Regulation",
+      "C": "Decentralized Resource Allocation",
+      "D": "Prioritization of Sporting Activities"
+    },
+    "answer": "B",
+    "explanation": "All government institutions, including public schools, must comply with established policies, budget directives, and financial regulations set by the parent ministry (MoE) and relevant financial bodies."
+  },
+  {
+    "id": 34,
+    "question": "A teacher decides to abandon their post without due process. Which GES responsibility will address this situation immediately?",
+    "options": {
+      "A": "Curriculum Review",
+      "B": "Disciplinary Action under HRM",
+      "C": "Resource Allocation Review",
+      "D": "Policy Formulation"
+    },
+    "answer": "B",
+    "explanation": "Handling staff misconduct, absenteeism, and desertion falls directly under the Human Resource Management (HRM) function of the GES, specifically disciplinary enforcement."
+  },
+  {
+    "id": 35,
+    "question": "The government decides to implement a new initiative requiring all primary schools to have functional ICT labs within two years. Which entity bears the primary responsibility for drawing up the technical specifications and execution timeline for the project across all districts?",
+    "options": {
+      "A": "Ministry of Finance",
+      "B": "GES (Implementation Mandate)",
+      "C": "National Media Commission",
+      "D": "NaCCA (Curriculum Mandate)"
+    },
+    "answer": "B",
+    "explanation": "While the MoE sets the policy, the GES is responsible for the practical execution, implementation planning, and operational rollout of major government educational projects at the ground level."
+  },
+  {
+    "id": 36,
+    "question": "The MoE is investigating reports that several District Education Offices are not adhering to standards regarding teacher promotion interviews. Which MoE function is activated to ensure compliance?",
+    "options": {
+      "A": "Statutory Curriculum Development",
+      "B": "In-service Training",
+      "C": "Oversight and Accountability",
+      "D": "Direct Financial Management"
+    },
+    "answer": "C",
+    "explanation": "Oversight involves monitoring the performance of agencies (like GES) and ensuring that they adhere to established procedures, regulations, and quality standards set by the Ministry."
+  },
+  {
+    "id": 37,
+    "question": "A Headteacher approves the use of Internally Generated Funds (IGF) for fencing the school compound. To maintain strong financial controls, who must countersign the expenditure voucher alongside the Headteacher?",
+    "options": {
+      "A": "The local market Queen",
+      "B": "The District Assembly Chairman",
+      "C": "The School Management Committee (SMC) Chairman",
+      "D": "The Minister of Education"
+    },
+    "answer": "C",
+    "explanation": "In Ghana, the SMC or the School Board (for secondary schools) plays a vital oversight role in financial management, ensuring transparency and providing necessary internal checks, especially regarding IGF utilization."
+  },
+  {
+    "id": 38,
+    "question": "During recruitment drives, the GES uses a standardized aptitude test and interview panel for teacher selection. This strategy ensures adherence to which HRM principle?",
+    "options": {
+      "A": "Nepotism",
+      "B": "Meritocracy and Fairness",
+      "C": "Decentralization of Budgeting",
+      "D": "Exclusionary Hiring"
+    },
+    "answer": "B",
+    "explanation": "The use of standardized processes (tests, interviews) in HRM aims to ensure that recruitment is based on qualifications and competence, upholding the principle of meritocracy and fairness."
+  },
+  {
+    "id": 39,
+    "question": "The MoE commissioned an independent audit of the Free Senior High School (FSHS) feeding component expenditure across all regions. This exercise is an implementation of which MoE function?",
+    "options": {
+      "A": "Teacher Recruitment",
+      "B": "Allocation of Resources",
+      "C": "Policy Formulation",
+      "D": "Monitoring and Evaluation (M&E) for Accountability"
+    },
+    "answer": "D",
+    "explanation": "Audits are a key tool in M&E, used to verify the efficient and proper utilization of government funds, ensuring accountability for major policy expenditures like FSHS."
+  },
+  {
+    "id": 40,
+    "question": "A teacher submits a request for a 3-year study leave with pay to pursue a Master’s degree. Which institution’s Human Resource department is responsible for evaluating and approving this request?",
+    "options": {
+      "A": "Ministry of Finance",
+      "B": "Ghana Education Service (GES)",
+      "C": "National Council for Curriculum and Assessment (NaCCA)",
+      "D": "National Teaching Council (NTC)"
+    },
+    "answer": "B",
+    "explanation": "Personnel management, including requests for leave (study, maternity, sick leave), is handled directly by the Human Resource units within the GES directorates."
+  },
+  {
+    "id": 41,
+    "question": "A GES District Director observes that many schools in their district lack clean water sources, impacting attendance. The Director writes a memo requesting special infrastructure funds. This demonstrates the GES’s role in:",
+    "options": {
+      "A": "Identifying implementation gaps for MoE policy improvement",
+      "B": "Formulating new national environmental policy",
+      "C": "Directly funding infrastructure projects",
+      "D": "Conducting teacher disciplinary hearings"
+    },
+    "answer": "A",
+    "explanation": "The GES, being on the ground, identifies practical operational and resource gaps. Reporting these gaps informs the MoE's M&E function, potentially leading to policy or resource allocation adjustments."
+  },
+  {
+    "id": 42,
+    "question": "To curb unauthorized fees, the MoE issued a directive stating all schools must publish their approved fee schedule on their notice boards. This action is an exercise of the MoE’s:",
+    "options": {
+      "A": "Recruitment Mandate",
+      "B": "Oversight Mandate",
+      "C": "Curriculum Design Mandate",
+      "D": "Teacher Licensing Mandate"
+    },
+    "answer": "B",
+    "explanation": "The MoE exercises oversight to ensure that policies (like fee-free education or regulated fees) are adhered to by all institutions under its control, promoting transparency and discouraging illegal practices."
+  },
+  {
+    "id": 43,
+    "question": "A teacher is utilizing obsolete teaching materials because the school budget was exhausted on emergency roof repairs. What financial management challenge is the school facing?",
+    "options": {
+      "A": "Lack of Policy Formulation",
+      "B": "Budget Rigidity and Unforeseen Expenditure",
+      "C": "Improper Teacher Recruitment",
+      "D": "Excessive Policy Oversight"
+    },
+    "answer": "B",
+    "explanation": "Budgeting often faces challenges due to unexpected expenses (like emergency repairs), leading to financial strain and the inability to fund planned educational inputs (like teaching materials). This is a common issue in school financial management."
+  },
+  {
+    "id": 44,
+    "question": "Which specific GES mandate ensures that all newly recruited teachers are oriented on classroom management techniques aligned with the Standards-Based Curriculum?",
+    "options": {
+      "A": "In-service training",
+      "B": "Resource Allocation",
+      "C": "Policy Formulation",
+      "D": "MoE Liaison"
+    },
+    "answer": "A",
+    "explanation": "Orientation and specialized training for new or existing staff on pedagogical methods fall under the umbrella of in-service training and Continuous Professional Development (CPD), a key role of the GES."
+  },
+  {
+    "id": 45,
+    "question": "The National Council for Curriculum and Assessment (NaCCA) successfully vetted and approved new textbooks for basic schools. Who is responsible for providing the bulk procurement funds necessary to distribute these books nationally?",
+    "options": {
+      "A": "GES (Implementation)",
+      "B": "MoE (Resource Allocation)",
+      "C": "The publishers directly",
+      "D": "District Assemblies"
+    },
+    "answer": "B",
+    "explanation": "While GES handles the distribution (implementation), the MoE holds the mandate for high-level resource allocation, including approving and releasing funds for mass procurement of essential learning materials like textbooks."
+  },
+  {
+    "id": 46,
+    "question": "A Headteacher institutes a mandatory monthly fee for Saturday extra classes. This contradicts the national education policy. Which GES mandate requires the District Director to enforce the cessation of the illegal fee?",
+    "options": {
+      "A": "Implementation of Educational Policies",
+      "B": "Financial Management of Tertiary Institutions",
+      "C": "Policy Formulation",
+      "D": "Strategic Planning"
+    },
+    "answer": "A",
+    "explanation": "The GES is the implementation arm of the MoE. Enforcing adherence to policies, such as eliminating illegal charges in public schools, is a crucial part of its implementation mandate."
+  },
+  {
+    "id": 47,
+    "question": "A public basic school requires major infrastructural maintenance funded by government allocation. The request must be formally submitted through the GES District Office to ensure proper documentation. This process emphasizes the importance of:",
+    "options": {
+      "A": "Centralized HRM",
+      "B": "Accountability and Hierarchical Reporting",
+      "C": "Policy Formulation",
+      "D": "Decentralized Recruitment"
+    },
+    "answer": "B",
+    "explanation": "Financial requests for capital projects must follow strict hierarchical reporting lines (school to district, district to region, region to headquarters/MoE) to ensure accountability and proper resource flow."
+  },
+  {
+    "id": 48,
+    "question": "In the context of Human Resource Management, which performance tool is routinely used by Headteachers in Ghana to evaluate the effectiveness of teaching staff and identify areas for CPD?",
+    "options": {
+      "A": "Monthly Payroll Statements",
+      "B": "Annual Performance Appraisal Forms",
+      "C": "Political Party Membership Cards",
+      "D": "WASSCE Pass Lists"
+    },
+    "answer": "B",
+    "explanation": "The GES mandates the use of annual performance appraisal systems to monitor teacher performance, ensuring continuous improvement and forming the basis for promotion and CPD identification."
+  },
+  {
+    "id": 49,
+    "question": "If the MoE identifies that the structure for managing TVET institutions needs radical change to improve standards, this decision would emanate from the MoE's function of:",
+    "options": {
+      "A": "Oversight and Coordination",
+      "B": "Staff Recruitment",
+      "C": "Curriculum Assessment",
+      "D": "Direct Classroom Teaching"
+    },
+    "answer": "A",
+    "explanation": "Oversight involves the MoE assessing the functional efficiency of educational sub-sectors (like TVET) and initiating structural or managerial changes to ensure national standards are met."
+  },
+  {
+    "id": 50,
+    "question": "A newly recruited teacher notices that their name has not appeared on the GES payroll after three months of working. Which specific element of Human Resource Management is failing in this scenario?",
+    "options": {
+      "A": "In-service Training",
+      "B": "Remuneration and Welfare Administration",
+      "C": "Policy Formulation",
+      "D": "Monitoring and Evaluation"
+    },
+    "answer": "B",
+    "explanation": "Payroll processing and ensuring timely payment of salaries constitute the core function of Remuneration and Welfare Administration within the GES HRM unit. Delays in payment are a failure of this administrative process."
+  },
+  {
+    "id": 51,
+    "question": "The primary mandate of the Ministry of Education (MoE) is to implement educational policies formulated by the Ghana Education Service (GES).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The MoE is responsible for policy formulation and oversight, while the GES is responsible for the implementation and execution of those policies on the ground."
+  },
+  {
+    "id": 52,
+    "question": "Recruitment, posting, promotion, and disciplinary actions concerning teaching and non-teaching staff in pre-tertiary public schools fall under the Human Resource Management (HRM) function of the Ghana Education Service (GES).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The GES is the direct employer and manager of pre-tertiary public sector staff, handling all HRM functions including recruitment and disciplinary procedures, subject to MoE oversight."
+  },
+  {
+    "id": 53,
+    "question": "Allocation of the national education sector budget to various educational sub-sectors (e.g., Basic, SHS, TVET) is a direct responsibility executed by the Ghana Education Service (GES).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Resource mobilization, strategic allocation, and overall financial planning across the sector are core functions of the Ministry of Education (MoE) and its Financial Management Unit."
+  },
+  {
+    "id": 54,
+    "question": "The MoE is responsible for exercising strategic oversight over all educational agencies, including NaCCA, NTC, and the Ghana TVET Service.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "As the central Ministerial body, the MoE provides policy direction, financial control, and overall strategic oversight to all affiliated agencies operating within the education sector."
+  },
+  {
+    "id": 55,
+    "question": "In-service training (INSET) for professional development of existing teachers is primarily a mandate carried out by the Ghana Education Service.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The GES, often in collaboration with the National Teaching Council (NTC), manages and delivers in-service professional development programs to ensure continuous improvement of its personnel."
+  },
+  {
+    "id": 56,
+    "question": "Monitoring and Evaluation (M&E) activities within the education sector are limited to tracking infrastructural development and do not include the assessment of student learning outcomes.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The M&E mandate of the MoE and GES covers both inputs (resources, infrastructure) and outputs/outcomes, including student learning assessments (like the National Standardized Test)."
+  },
+  {
+    "id": 57,
+    "question": "The National Council for Curriculum and Assessment (NaCCA) was established in 2017 primarily to handle teacher licensing and certification, not curriculum development.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "NaCCA's mandate centers on curriculum development, assessment standards, and approving educational materials. Teacher licensing falls under the National Teaching Council (NTC)."
+  },
+  {
+    "id": 58,
+    "question": "The MoE must secure financial clearance and approval from the Ministry of Finance (MoF) before the GES can execute large-scale teacher recruitment, due to budgetary implications.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Given that teacher salaries constitute a significant portion of public expenditure, recruitment planning requires inter-ministerial coordination and clearance from the Ministry of Finance."
+  },
+  {
+    "id": 59,
+    "question": "Formulation of educational policies must involve input and technical advice from the implementing body, GES, before the MoE finalizes the policy document.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "While MoE formulates policy, effective policy formulation is consultative, requiring critical technical advice and feasibility assessments from the operational agency, GES."
+  },
+  {
+    "id": 60,
+    "question": "The Education Act 2008 (Act 778) is the primary legislation that outlines the distinct functions of the Ministry of Education and the Ghana Education Service.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Act 778 (2008) provides the legal framework for the decentralized management of pre-tertiary education, clarifying the roles of the Ministry, the GES, and other agencies."
+  },
+  {
+    "id": 61,
+    "question": "The day-to-day management and operationalization of public schools, including syllabus coverage and timetable management, are core implementation duties of the GES.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "GES oversees the administration of all pre-tertiary schools, ensuring policy and curriculum implementation are carried out effectively at the local level."
+  },
+  {
+    "id": 62,
+    "question": "Financial management protocols dictate that internal audit units within the GES report exclusively to the Director-General of GES, entirely independent of the MoE's oversight.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Internal audit units, while located within GES, often maintain a functional reporting relationship with the central audit coordinating unit of the MoE, ensuring unified financial oversight across the sector."
+  },
+  {
+    "id": 63,
+    "question": "The MoE is responsible for negotiating and mobilizing external resources, such as international development grants, to support educational programs and infrastructure.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Resource mobilization and high-level negotiation with development partners are key strategic functions undertaken by the Ministry of Education."
+  },
+  {
+    "id": 64,
+    "question": "The 1987 Educational Reforms introduced the Junior Secondary School (JSS) system, which had a duration of four years.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The 1987 reforms established the Junior Secondary School (JSS) system which was designed to last for three years (3 years)."
+  },
+  {
+    "id": 65,
+    "question": "All teacher transfers, regardless of distance or complexity, are managed centrally by the GES Headquarters in Accra and cannot be initiated by Regional or District Education Offices.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While inter-regional transfers are centralized, many routine and intra-district transfers are delegated to the Regional and District Education Offices as part of decentralized HRM."
+  },
+  {
+    "id": 66,
+    "question": "The disbursement and tracking of the Capitation Grant to public basic schools is handled through the MoE directly, bypassing the GES structure.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While MoE sets the policy and releases the funds, the actual disbursement, monitoring, and accountability for the Capitation Grant are managed through the GES structure (DEOs/REOs)."
+  },
+  {
+    "id": 67,
+    "question": "The oversight mandate of the MoE includes supervising agencies responsible for Technical and Vocational Education and Training (TVET).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The MoE is the apex governmental body responsible for all forms of pre-tertiary education, including academic, technical, and vocational streams."
+  },
+  {
+    "id": 68,
+    "question": "The Director-General of GES has the authority to issue ministerial directives regarding Free Senior High School (FSHS) policy modifications without consulting the Minister of Education.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Policy directives, especially those involving major governmental programs like FSHS, must originate from the Ministry of Education (the Minister) under its policy formulation mandate."
+  },
+  {
+    "id": 69,
+    "question": "One of the key mandates of the GES is the provision of necessary infrastructure, such as school buildings and sanitation facilities, through direct execution contracts.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While GES manages the facilities, the actual construction and capital infrastructure development are typically managed by the MoE in collaboration with other state entities (e.g., GETFund, local assemblies)."
+  },
+  {
+    "id": 70,
+    "question": "Monitoring compliance with the established curriculum, as developed by NaCCA, is a key responsibility carried out by the GES inspectorate division.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "GES ensures that implementation aligns with policy; therefore, its internal monitoring and inspection structures check curriculum delivery in schools."
+  },
+  {
+    "id": 71,
+    "question": "The financial management structure allows the MoE to perform a value-for-money audit on resources allocated to teaching and learning materials procured by the GES.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The MoE’s oversight mandate includes financial tracking and M&E activities to ensure efficient resource utilization (value for money) across all agencies."
+  },
+  {
+    "id": 72,
+    "question": "The mandate for implementing the Continuous Professional Development (CPD) policy and mandatory licensing requirements for teachers rests solely with the Ghana Education Service (GES).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While GES facilitates training, the regulatory framework, policy, licensing, and management of CPD points are primarily mandated to the National Teaching Council (NTC) under Act 964."
+  },
+  {
+    "id": 73,
+    "question": "The MoE's Policy Planning, Monitoring and Evaluation (PPME) Directorate is responsible for assessing the overall performance of the sector against national targets and Sustainable Development Goals (SDGs).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "PPME is the specialized unit within the MoE tasked with comprehensive sector planning, policy review, and performance tracking against both local and international benchmarks."
+  },
+  {
+    "id": 74,
+    "question": "Induction training for newly recruited graduates into the public teaching service is a mandatory element of the GES’s in-service training mandate.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Induction training is crucial for integrating new recruits into the service, making it a routine part of the GES's professional development and Human Resource implementation mandate."
+  },
+  {
+    "id": 75,
+    "question": "The Ministry of Education handles the monthly processing and payment of salaries for all public school teachers across Ghana.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While MoF releases the budgetary clearance, the GES processes the payroll (usually through the Controller and Accountant General's Department) for its employees, not the MoE directly."
+  },
+  {
+    "id": 76,
+    "question": "The Ministry of Education (MoE) is the primary body responsible for formulating broad national educational policies and setting strategic objectives for the sector.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The core function of the MoE is policy formulation, strategic direction, and overall oversight of the Ghanaian educational system."
+  },
+  {
+    "id": 77,
+    "question": "The Ghana Education Service (GES) is directly responsible for the allocation of statutory funds, such as the GETFund, for major educational infrastructure projects.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While GES benefits from the funds, the allocation and approval of resources for large infrastructure projects are primarily managed by the Ministry of Education (MoE) in collaboration with GETFund administration."
+  },
+  {
+    "id": 78,
+    "question": "Recruitment, posting, and day-to-day human resource management (HRM) of public school teachers fall under the mandate of the Ghana Education Service (GES).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "GES is the implementing body responsible for managing the personnel (both teaching and non-teaching staff) within the pre-tertiary public education system."
+  },
+  {
+    "id": 79,
+    "question": "The National Council for Curriculum and Assessment (NaCCA) is the body responsible for issuing professional teaching licenses to qualified teachers in Ghana.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The mandate for licensing and registration of teachers belongs to the National Teaching Council (NTC), not NaCCA. NaCCA focuses on curriculum and assessment standards."
+  },
+  {
+    "id": 80,
+    "question": "The Ministry of Education (MoE) performs monitoring and evaluation (M&E) only through specialized agencies like NaSIA and does not conduct its own sector-wide M&E activities.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While agencies like NaSIA assist, the MoE retains the overarching responsibility for strategic monitoring and evaluation of the entire educational sector's performance against national goals."
+  },
+  {
+    "id": 81,
+    "question": "The National Teaching Council (NTC) is responsible for developing the national curriculum framework for basic and secondary schools.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The development of the national curriculum falls under the specific mandate of NaCCA, not the NTC, which handles teacher professionalism."
+  },
+  {
+    "id": 82,
+    "question": "The Ghana Education Service (GES) is mandated to provide in-service training and continuous professional development (CPD) programs for its staff.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "In-service training is a crucial implementation and HRM function of the GES to ensure staff remain competent and updated on educational reforms."
+  },
+  {
+    "id": 83,
+    "question": "The National Schools Inspectorate Authority (NaSIA) is responsible for the financial auditing of educational materials procured by the Ministry of Education.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "NaSIA's role focuses on inspection, regulation, and quality assurance of standards in schools, not specialized financial auditing, which is handled by internal audit units or the Audit Service."
+  },
+  {
+    "id": 84,
+    "question": "All policies formulated by the Ministry of Education must be implemented by the Ghana Education Service at the pre-tertiary level.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "GES is the key implementing agency for MoE policies concerning basic and secondary education."
+  },
+  {
+    "id": 85,
+    "question": "Oversight of all agencies and institutions under the educational sector is a primary responsibility of the Ministry of Education (MoE).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The MoE is the overall policy and governing body, providing ministerial oversight to all sub-agencies like GES, NaCCA, NTC, etc."
+  },
+  {
+    "id": 86,
+    "question": "The National Teaching Council (NTC) manages the processing of monthly salaries and allowances for teachers employed by the GES.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While NTC handles licensing, the operational management of the teacher payroll (salary processing) is handled by the Controller and Accountant General's Department, coordinated with GES HR data."
+  },
+  {
+    "id": 87,
+    "question": "NaCCA's mandate includes setting standards for both curriculum content and learning assessment across pre-tertiary education.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "NaCCA (National Council for Curriculum and Assessment) is mandated to regulate standards in curriculum design and student evaluation."
+  },
+  {
+    "id": 88,
+    "question": "The Ministry of Education (MoE) handles the direct financial management of the Capitation Grant disbursed to every public basic school.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The MoE facilitates the allocation, but the implementation and local management of the Capitation Grant are handled at the school and district levels, overseen by GES."
+  },
+  {
+    "id": 89,
+    "question": "The Ghana Education Service (GES) is responsible for the development of teacher qualification criteria necessary for obtaining a professional license.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The establishment and enforcement of qualification criteria and professional standards for licensing are managed by the NTC, in line with MoE policy."
+  },
+  {
+    "id": 90,
+    "question": "The National Schools Inspectorate Authority (NaSIA) is solely responsible for inspecting private schools and has no jurisdiction over public schools.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "NaSIA is mandated to inspect and ensure quality standards in ALL pre-tertiary educational institutions, whether public or private."
+  },
+  {
+    "id": 91,
+    "question": "Policy formulation regarding teachers' conditions of service and negotiations are centrally coordinated by the Ministry of Education (MoE).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "While GES is involved in implementation, high-level policy formulation and negotiations regarding conditions of service involve the MoE, the Ministry of Finance, and relevant labor unions."
+  },
+  {
+    "id": 92,
+    "question": "GES is responsible for the disciplinary control over all teaching and non-teaching staff within the public basic and secondary school system.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Disciplinary action, postings, and promotions are fundamental human resource management responsibilities of the Ghana Education Service."
+  },
+  {
+    "id": 93,
+    "question": "The National Teaching Council (NTC) enforces mandatory continuous professional development (CPD) requirements for teachers to maintain their licensed status.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The NTC is responsible for professionalizing teaching, which includes monitoring and enforcing CPD standards required for license renewal."
+  },
+  {
+    "id": 94,
+    "question": "NaCCA has a direct oversight role in the financial management of textbook procurement and distribution to schools.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "NaCCA approves the content of textbooks; procurement and financial oversight are handled by the MoE and GES structures."
+  },
+  {
+    "id": 95,
+    "question": "The core mandate of the MoE includes the effective allocation of resources from the national budget to all educational agencies under its control.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Resource allocation and budget management are central strategic functions of the MoE."
+  },
+  {
+    "id": 96,
+    "question": "The National Schools Inspectorate Authority (NaSIA) is responsible for the licensing and registration of private pre-tertiary educational institutions in Ghana.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "NaSIA, following the amendment of the Education Act, is responsible for regulating, registering, and inspecting private schools to ensure minimum standards are met."
+  },
+  {
+    "id": 97,
+    "question": "NaSIA is responsible for setting the assessment policy guidelines that govern the conduct of national examinations like the BECE and WASSCE.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Assessment policy and standards fall under NaCCA's mandate, while the actual examination administration is handled by WAEC (West African Examinations Council)."
+  },
+  {
+    "id": 98,
+    "question": "The Ghana Education Service (GES) is tasked with managing teacher transfers and postings to optimize human resource distribution across the country.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Managing the internal deployment (posting, transfers) of teaching personnel is a critical HRM function executed by the GES."
+  },
+  {
+    "id": 99,
+    "question": "The Ministry of Education (MoE) is responsible for ensuring that all policies related to financial management adhere strictly to the Public Financial Management Act (PFMA).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "As the highest policy body, MoE must ensure all financial policies and operations of its agencies comply with national regulations, including the PFMA."
+  },
+  {
+    "id": 100,
+    "question": "The NaSIA report on school quality serves as a key input for the MoE in its overall monitoring and evaluation of institutional performance.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "NaSIA provides the necessary regulatory and inspection reports, which are vital data points used by the MoE for sector-wide M&E and policy adjustments."
+  }
+]

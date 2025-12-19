@@ -1,0 +1,1102 @@
+[
+  {
+    "id": 1,
+    "question": "Which major pre-tertiary education review committee recommended the basic structure of 6 years primary, 3 years Junior Secondary School (JSS), and 3 years Senior Secondary School (SSS), which was implemented in the 1987 educational reforms?",
+    "options": {
+      "A": "The Kwapong Review Committee (1967)",
+      "B": "The Dzobo Review Committee (1974)",
+      "C": "The Anamuah-Mensah Committee (2002)",
+      "D": "The Ayensu Education Reform Committee (1995)"
+    },
+    "answer": "B",
+    "explanation": "The Dzobo Review Committee, established in 1974, is credited with formulating the major proposals that underpinned the radical 1987 educational reforms, which introduced the 6-3-3-4 structure (6 primary, 3 JSS, 3 SSS, 4 University) aimed at making education more vocational and accessible."
+  },
+  {
+    "id": 2,
+    "question": "Under the current NaCCA Standard-Based Curriculum, what is the required weighting distribution between Classroom-Based Assessment (CBA) and End-of-Term Examination for Basic Schools (B1-B6)?",
+    "options": {
+      "A": "30% CBA and 70% End-of-Term Examination",
+      "B": "60% CBA and 40% End-of-Term Examination",
+      "C": "40% CBA and 60% End-of-Term Examination",
+      "D": "50% CBA and 50% End-of-Term Examination"
+    },
+    "answer": "C",
+    "explanation": "The current NaCCA curriculum policy stipulates that continuous assessment (CBA/PA) constitutes 40% of the learner's grade, while the end-of-term examination accounts for 60%. This shift emphasizes ongoing measurement of learning outcomes rather than reliance solely on summative exams."
+  },
+  {
+    "id": 3,
+    "question": "The National Teaching Council (NTC) Act, 2020 (Act 1021) mandates teacher licensing and continuous professional development. What specific activity is now mandatory for teachers to renew their license and progress professionally within the GES?",
+    "options": {
+      "A": "Annual publication in a peer-reviewed academic journal",
+      "B": "Successful completion and implementation of an Action Research project",
+      "C": "Serving a minimum of two years in a rural school",
+      "D": "Passing the annual GES promotional interview examination"
+    },
+    "answer": "B",
+    "explanation": "Action Research has been institutionalized by the NTC and GES as a mandatory requirement for teacher professional progression. Teachers must successfully conduct and submit reports on Action Research to address specific challenges in their classrooms, contributing to their CPD points for license renewal and promotion."
+  },
+  {
+    "id": 4,
+    "question": "Which of the following is the primary legal instrument establishing the Ghana Education Service (GES) and outlining its functions, including the management of pre-tertiary education?",
+    "options": {
+      "A": "The National Council for Curriculum and Assessment Act, 2019 (Act 1020)",
+      "B": "The Education Act, 2008 (Act 778)",
+      "C": "The Children’s Act, 1998 (Act 560)",
+      "D": "The Public Financial Management Act, 2016 (Act 921)"
+    },
+    "answer": "B",
+    "explanation": "The Education Act, 2008 (Act 778), is the foundational legislation for modern Ghanaian education, providing the legal framework for the structure of basic and secondary education and detailing the functions of the Minister of Education and the Ghana Education Service."
+  },
+  {
+    "id": 5,
+    "question": "The term 'double track system' (DTS), introduced in 2018 under the Free SHS policy, was primarily designed to address which critical educational management challenge?",
+    "options": {
+      "A": "Lack of qualified teachers in core subjects",
+      "B": "High teacher attrition rates in rural areas",
+      "C": "Infrastructure deficit and overcrowding due to high intake",
+      "D": "Inadequate curriculum materials for new subjects"
+    },
+    "answer": "C",
+    "explanation": "The Double Track System was a stop-gap measure implemented specifically to accommodate the massive increase in student enrollment occasioned by the Free SHS policy, addressing the acute shortage of classrooms and dormitory facilities."
+  },
+  {
+    "id": 6,
+    "question": "According to the GES Inclusive Education Policy (2015), which structure within the Ghana Education Service is specifically responsible for coordinating the identification, assessment, and placement of learners with Special Educational Needs (SEN)?",
+    "options": {
+      "A": "The Curriculum Research and Development Division (CRDD)",
+      "B": "The Guidance and Counselling Unit (G&C)",
+      "C": "The Special Education Division (SPED)",
+      "D": "The Inspectorate Division (ID)"
+    },
+    "answer": "C",
+    "explanation": "The Special Education Division (SPED) of the GES is the dedicated body tasked with managing the implementation of inclusive education, including training resource teachers, managing special schools, and ensuring the placement of students with SEN."
+  },
+  {
+    "id": 7,
+    "question": "Effective citizenship education under the new curriculum emphasizes the acquisition of competencies. Which pedagogical approach aligns best with fostering critical thinking and participatory skills required for active citizenship in Ghanaian schools?",
+    "options": {
+      "A": "Rote learning and memorization of civic duties",
+      "B": "Teacher-centered lectures focusing on historical dates",
+      "C": "Inquiry-based learning and project work on community issues",
+      "D": "Strict adherence to standardized assessment methods"
+    },
+    "answer": "C",
+    "explanation": "The NaCCA curriculum promotes the use of inquiry-based learning and project work, particularly in subjects like Social Studies and RME, to encourage learners to investigate real-world problems and develop practical competencies for active citizenship and problem-solving."
+  },
+  {
+    "id": 8,
+    "question": "Which of the following describes the key function of NaCCA (National Council for Curriculum and Assessment)?",
+    "options": {
+      "A": "Recruiting and posting teachers nationwide to basic schools.",
+      "B": "Setting educational standards, approving curricula, and monitoring implementation.",
+      "C": "Conducting terminal examinations and issuing certificates (e.g., BECE, WASSCE).",
+      "D": "Managing the procurement and distribution of school infrastructure and furniture."
+    },
+    "answer": "B",
+    "explanation": "NaCCA's core mandate is to define the standards for learning, develop and approve curricula for basic and secondary education, and oversee their effective implementation and assessment framework."
+  },
+  {
+    "id": 9,
+    "question": "In the context of educational psychology and classroom management, a Ghanaian teacher applying Vygotsky’s socio-cultural theory would primarily focus on:",
+    "options": {
+      "A": "Using punitive measures to discourage disruptive behaviour.",
+      "B": "Identifying the learner's Zone of Proximal Development (ZPD) and providing scaffolding.",
+      "C": "Creating a reward system based solely on individual competitive achievement.",
+      "D": "Relying on standardized intelligence tests to stream students."
+    },
+    "answer": "B",
+    "explanation": "Vygotsky's theory emphasizes that learning occurs through social interaction. The concept of ZPD refers to what a learner can achieve with guidance (scaffolding), making assisted discovery and collaborative learning central to the teacher's role."
+  },
+  {
+    "id": 10,
+    "question": "The ongoing policy transition in Teacher Education requires all basic school teachers to hold a minimum qualification of a Bachelor of Education (B.Ed). This shift aims primarily to:",
+    "options": {
+      "A": "Reduce the total number of teachers in the system.",
+      "B": "Elevate the professional status and pedagogical capacity of teachers.",
+      "C": "Allow teachers to specialize exclusively in academic research.",
+      "D": "Eliminate the need for continuous professional development (CPD)."
+    },
+    "answer": "B",
+    "explanation": "The move from Diploma to B.Ed as the minimum qualification is a major reform aimed at professionalizing the teaching career, deepening pedagogical content knowledge, and raising the quality of instruction delivered in schools."
+  },
+  {
+    "id": 11,
+    "question": "Which specific division within the GES is mandated to provide technical assistance, training, and supervision to headteachers and teachers on school organization, curriculum delivery, and the maintenance of standards?",
+    "options": {
+      "A": "The Human Resource Management Division (HRMD)",
+      "B": "The Schools and Instructions Division (S&ID)",
+      "C": "The Pre-Tertiary Education Management Board (PTEMB)",
+      "D": "The Management Information Systems Unit (MIS)"
+    },
+    "answer": "B",
+    "explanation": "The Schools and Instructions Division (S&ID) is central to ensuring effective teaching and learning in schools. It deals directly with pedagogical issues, supervision, instructional standards, and school-level administration support."
+  },
+  {
+    "id": 12,
+    "question": "A key challenge associated with the implementation of the Free SHS policy regarding equity in education is the persistent gap in learning outcomes. This sociological phenomenon is often attributed to:",
+    "options": {
+      "A": "Uniform allocation of resources across all schools, disregarding regional needs.",
+      "B": "Differences in parental socio-economic status and the quality of foundational basic education.",
+      "C": "The shift from the trimester to the semester system in SHS.",
+      "D": "The elimination of private schools from the policy framework."
+    },
+    "answer": "B",
+    "explanation": "While FSHS increased access, the inherited differences in parental background (cultural capital, financial ability to support extras) and the quality of feeder Basic Schools mean students arrive at SHS with highly varied foundational knowledge, perpetuating inequality in final outcomes."
+  },
+  {
+    "id": 13,
+    "question": "Effective educational communication requires clarity and precision. In the context of the Ghanaian classroom, the pedagogical concept of 'communication economy' refers to:",
+    "options": {
+      "A": "Using the lowest cost technology for instruction.",
+      "B": "Minimizing speech time allocated to learners during lessons.",
+      "C": "Using the fewest words possible to convey meaning accurately.",
+      "D": "Teaching basic financial literacy to students."
+    },
+    "answer": "C",
+    "explanation": "Communication economy, in this context, refers to the ability of the teacher to communicate complex ideas using precise, clear, and concise language, ensuring maximum clarity with minimum ambiguity or unnecessary jargon."
+  },
+  {
+    "id": 14,
+    "question": "The concept of 'Universal Design for Learning' (UDL) is fundamental to Ghana's Inclusive Education Policy. UDL primarily focuses on:",
+    "options": {
+      "A": "Creating separate specialized classrooms for learners with disabilities.",
+      "B": "Designing curriculum and instruction that is accessible to all learners from the outset.",
+      "C": "Mandating a specific teacher-to-student ratio in every classroom.",
+      "D": "Providing only physical ramps and accessible restrooms in new school buildings."
+    },
+    "answer": "B",
+    "explanation": "UDL is a framework for developing flexible learning environments and instruction that accommodate individual learning differences, ensuring accessibility in presentation, engagement, and expression for all students, not just those with identified disabilities."
+  },
+  {
+    "id": 15,
+    "question": "Guidance and Counselling (G&C) services in GES are structured to assist students in three main areas: academic, career, and personal/social development. Which role is explicitly discouraged for school G&C coordinators?",
+    "options": {
+      "A": "Providing group counselling sessions for behavioral issues.",
+      "B": "Acting as disciplinary officers to enforce immediate punishment.",
+      "C": "Assisting students with tertiary institution applications.",
+      "D": "Referring severe clinical cases to professional agencies."
+    },
+    "answer": "B",
+    "explanation": "G&C coordinators are strictly required to maintain a therapeutic and supportive relationship with students. Assuming the role of a disciplinary officer undermines trust and effectiveness, hindering their primary function of helping students resolve issues."
+  },
+  {
+    "id": 16,
+    "question": "The current structure for pre-tertiary education in Ghana, following the 2017/2018 reforms and subsequent modifications, is generally recognized as:",
+    "options": {
+      "A": "6 years Primary, 3 years JHS, 4 years SHS.",
+      "B": "9 years Basic Education, 3 years Senior High School.",
+      "C": "2 years Kindergarten, 6 years Primary, 3 years JHS, 3 years SHS.",
+      "D": "1 year Kindergarten, 6 years Primary, 3 years JHS, 3 years SHS."
+    },
+    "answer": "C",
+    "explanation": "The current structure includes 2 years of Kindergarten (KG), 6 years of Primary (P1-P6), 3 years of Junior High School (JHS 1-3), and 3 years of Senior High School (SHS 1-3). The mandatory 11 years (P1 to SHS 3) are preceded by KG."
+  },
+  {
+    "id": 17,
+    "question": "The Ghana Education Trust Fund (GETFund) plays a crucial role in infrastructural development. What is the primary source of revenue for GETFund?",
+    "options": {
+      "A": "Direct allocation from the national budget's Consolidated Fund.",
+      "B": "Internally Generated Funds (IGF) from educational institutions.",
+      "C": "A designated percentage of the Value Added Tax (VAT) collected.",
+      "D": "Grants and loans specifically obtained from international donors."
+    },
+    "answer": "C",
+    "explanation": "GETFund is primarily financed by a percentage levied on the total Value Added Tax (VAT) collected, making it a dedicated fund intended to supplement public spending on education infrastructure and resources."
+  },
+  {
+    "id": 18,
+    "question": "In the context of Education Management, delegation of authority in the GES structure is vital for efficiency. Which level is responsible for the direct supervision and professional development support of all basic school teachers within a defined geographical area?",
+    "options": {
+      "A": "The Ministry of Education Headquarters (MoE)",
+      "B": "The Regional Education Directorate (RED)",
+      "C": "The District/Municipal/Metropolitan Education Directorate (D/M/MED)",
+      "D": "The Office of the Director-General, GES"
+    },
+    "answer": "C",
+    "explanation": "The District Education Directorates are the operational units of the GES, responsible for decentralized functions including supervision, resource distribution, management of personnel, and direct quality assurance for schools within their jurisdiction."
+  },
+  {
+    "id": 19,
+    "question": "The Common Core Programme (CCP) introduced for JHS and SHS 1 is characterized by a shift from content mastery to competency development. A major implementation challenge facing the CCP is:",
+    "options": {
+      "A": "Lack of internet connectivity in urban schools.",
+      "B": "The complexity of integrating career technology and design thinking across subjects.",
+      "C": "Insufficient training of SHS teachers to handle vocational subjects.",
+      "D": "The elimination of mathematics as a compulsory subject."
+    },
+    "answer": "B",
+    "explanation": "The CCP aims for deep integration of essential skills (like critical thinking, communication, creativity, and digital literacy). Integrating these '21st Century Skills' and cross-cutting themes like career technology requires a significant shift in teacher mindset and substantial retooling, posing a key challenge."
+  },
+  {
+    "id": 20,
+    "question": "Leadership research in Ghanaian schools suggests that headteachers exhibiting 'transformational leadership' behaviors are most likely to achieve:",
+    "options": {
+      "A": "Strict adherence to rules and efficient administrative paperwork.",
+      "B": "Inspiring teachers towards higher performance and cultivating a shared vision.",
+      "C": "Relying on rewards and punishments to control teacher behaviour.",
+      "D": "Maintaining the status quo with minimal change over time."
+    },
+    "answer": "B",
+    "explanation": "Transformational leadership focuses on inspiring followers, intellectual stimulation, and individualized consideration, leading to enhanced commitment and performance beyond mere transactional compliance."
+  },
+  {
+    "id": 21,
+    "question": "Which of the following is NOT a defined function of the National Teaching Council (NTC) under its current mandate?",
+    "options": {
+      "A": "Registering and licensing teachers.",
+      "B": "Accrediting pre-service teacher training programs.",
+      "C": "Developing Teacher Professional Standards and Code of Ethics.",
+      "D": "Determining the entry requirements for colleges of education."
+    },
+    "answer": "B",
+    "explanation": "While the NTC establishes professional standards, the accreditation of tertiary institutions and their programs (including Colleges of Education) falls under the mandate of the Ghana Tertiary Education Commission (GTEC), formerly the National Accreditation Board (NAB)."
+  },
+  {
+    "id": 22,
+    "question": "The concept of 'compulsory basic education' in Ghana, as enshrined in Act 778, mandates free and compulsory schooling up to which level?",
+    "options": {
+      "A": "Junior High School (JHS) level.",
+      "B": "Senior High School (SHS) level.",
+      "C": "Primary 6 (P6) level.",
+      "D": "Kindergarten 2 (KG2) level."
+    },
+    "answer": "A",
+    "explanation": "Basic education in Ghana covers two years of Kindergarten, six years of Primary School, and three years of Junior High School, totaling 11 years (KG2 to JHS3), all of which are constitutionally mandated to be free and compulsory."
+  },
+  {
+    "id": 23,
+    "question": "Before the establishment of the GES in 1974, which body exercised primary administrative control over the public education system in Ghana?",
+    "options": {
+      "A": "The West African Examinations Council (WAEC)",
+      "B": "The Ministry of Education (MoE) only",
+      "C": "The Central Education Unit (CEU) of the MoE",
+      "D": "The various religious missions (Churches) exclusively"
+    },
+    "answer": "C",
+    "explanation": "Prior to 1974, the Ministry of Education managed administrative control through a specialized administrative arm known as the Central Education Unit (CEU), which was then reformed and elevated to become the Ghana Education Service (GES) via NRC Decree 247."
+  },
+  {
+    "id": 24,
+    "question": "In communication skills, what is the most appropriate action for a teacher to take when addressing a student whose first language (L1) is different from the language of instruction (L2)?",
+    "options": {
+      "A": "Insist strictly on L2 use and penalize L1 usage.",
+      "B": "Use L1 judiciously as a bridge language (code-switching) to aid comprehension.",
+      "C": "Send the student to a remedial class focusing solely on L2 grammar.",
+      "D": "Ignore the language barrier and rely on visual aids only."
+    },
+    "answer": "B",
+    "explanation": "Effective pedagogy acknowledges the linguistic background of learners. Using the learner's L1 as a supportive tool (scaffolding or code-switching) helps clarify complex concepts in L2, promoting understanding rather than rigid enforcement which can hinder cognitive development."
+  },
+  {
+    "id": 25,
+    "question": "Which educational policy document explicitly stated the commitment of the Government of Ghana to provide educational services that integrate vocational, technical, and pre-technical skills starting from the basic education level?",
+    "options": {
+      "A": "The White Paper on the Education Reform of 2007",
+      "B": "The 1951 Accelerated Development Plan for Education",
+      "C": "The Education Review Committee Report (Dzobo) of 1974",
+      "D": "The Guggisberg Education Committee Report of 1920"
+    },
+    "answer": "C",
+    "explanation": "The Dzobo Report (1974), which led to the 1987 reforms, strongly emphasized making education relevant to work and life. It was foundational in promoting pre-technical and vocational training as a core component of the Junior Secondary School (JSS) structure."
+  },
+  {
+    "id": 26,
+    "question": "Madam Afua, a Primary 4 teacher, is implementing the Standards-Based Curriculum (SBC). During a Mathematics lesson, she observes that several students are struggling to understand fractions. What is the most appropriate action research step she should take immediately after recognizing this gap?",
+    "options": {
+      "A": "Analyze the existing assessment data to identify the specific knowledge deficits.",
+      "B": "Design and implement a new, differentiated teaching strategy.",
+      "C": "Review the relevant national curriculum subject material.",
+      "D": "Formulate a clear research question based on the observed problem."
+    },
+    "answer": "D",
+    "explanation": "The first systematic step in the Action Research cycle (Plan-Act-Observe-Reflect) after identifying a problem is formulating a clear research question that guides the investigation and intervention. This defines the scope of the immediate action needed in the classroom."
+  },
+  {
+    "id": 27,
+    "question": "A Head Teacher receives a mandate from the Ghana Education Service (GES) requiring all teachers to integrate local Ghanaian cultural norms into their Social Studies lessons. This aligns primarily with which educational objective?",
+    "options": {
+      "A": "Promoting globalization and international best practices.",
+      "B": "Fulfilling the requirements of the Capitation Grant usage.",
+      "C": "Fostering citizenship education and national identity.",
+      "D": "Enhancing ICT integration in classroom delivery."
+    },
+    "answer": "C",
+    "explanation": "Integrating local cultural norms is a core component of Citizenship Education, aiming to foster national identity, civic responsibility, and appreciation for Ghana's heritage, a key focus within the current Standards-Based Curriculum framework."
+  },
+  {
+    "id": 28,
+    "question": "Under the current educational structure in Ghana, what is the total number of years a student is expected to spend in Basic Education?",
+    "options": {
+      "A": "9 years (P1-JHS3)",
+      "B": "10 years (KG1-JHS3)",
+      "C": "11 years (KG1-JHS3)",
+      "D": "12 years (KG1-SHS1)"
+    },
+    "answer": "C",
+    "explanation": "Basic Education in Ghana currently comprises two years of Kindergarten (KG1 and KG2), six years of Primary School (P1 to P6), and three years of Junior High School (JHS1 to JHS3), totaling 11 years."
+  },
+  {
+    "id": 29,
+    "question": "Mr. Kwame teaches JHS 2 and notices a student displaying severe withdrawal and isolation, signs that may indicate underlying psychosocial issues. As a teacher, what is the most appropriate initial step according to GES guidance and counseling policy?",
+    "options": {
+      "A": "Inform the parents immediately and demand they seek psychiatric help.",
+      "B": "Apply classroom disciplinary measures to curb the negative behavior.",
+      "C": "Have a private, non-judgmental discussion with the student and document observations, then refer to the school guidance coordinator.",
+      "D": "Ignore the behavior, assuming the student will eventually adjust."
+    },
+    "answer": "C",
+    "explanation": "Teachers act as frontline observers. The appropriate first step in guidance and counseling is always confidential observation and preliminary discussion, followed by documentation and referral to the specialized School Guidance and Counseling Coordinator or Unit within the GES framework, if the issue persists or is serious."
+  },
+  {
+    "id": 30,
+    "question": "The National Council for Curriculum and Assessment (NaCCA) mandates that curriculum delivery focuses on the '4Rs' (Reading, wRiting, aRithmetic, and cReativity). Which educational policy shift does this emphasis reflect?",
+    "options": {
+      "A": "A move towards vocational skill training over academic performance.",
+      "B": "A focus on foundational literacy and numeracy as prerequisites for holistic development.",
+      "C": "The shift from the 1987 reform to the pre-university system.",
+      "D": "The decentralization of curriculum development to the district level."
+    },
+    "answer": "B",
+    "explanation": "NaCCA's mandate and the Standards-Based Curriculum strongly emphasize foundational literacy and numeracy (the 4Rs) in the early grades (KG to Primary 3) to ensure students acquire the necessary base skills for subsequent critical thinking and higher learning."
+  },
+  {
+    "id": 31,
+    "question": "A Primary 6 teacher needs to evaluate students' ability to work collaboratively on a science project. Which type of Classroom Based Assessment (CBA) tool is most effective for systematically recording observations of teamwork and communication skills?",
+    "options": {
+      "A": "End-of-unit essay examination.",
+      "B": "Structured interview.",
+      "C": "Rating scale or checklist.",
+      "D": "Multiple-choice quiz."
+    },
+    "answer": "C",
+    "explanation": "For assessing complex skills like collaboration and communication in a group setting, rating scales or checklists are highly effective CBA tools. They allow the teacher to objectively score or mark specific indicators of behavior against predetermined standards during the activity."
+  },
+  {
+    "id": 32,
+    "question": "In a JHS 3 classroom, a student with low vision struggles to read the textbook from their desk. The classroom teacher decides to restructure the learning environment. According to the principles of inclusive education in Ghana, what is the best immediate structural adjustment?",
+    "options": {
+      "A": "Exempt the student from reading assignments.",
+      "B": "Refer the student to a specialized school outside the community.",
+      "C": "Seat the student in the front row and provide large-print materials or an auditory alternative.",
+      "D": "Ask a fellow student to read all passages aloud for them."
+    },
+    "answer": "C",
+    "explanation": "Inclusive education requires reasonable accommodation within the mainstream classroom. Seating adjustments (closer to the board/teacher) and material modifications (large print or alternative formats) are key strategies for supporting students with visual impairment as per GES guidelines on inclusion."
+  },
+  {
+    "id": 33,
+    "question": "Mr. Owusu, a newly appointed Head Teacher, wants to improve instructional quality across the school. What leadership style, common in Ghanaian school management, focuses primarily on establishing and enforcing clear school rules, routines, and policies to maintain order and predictability?",
+    "options": {
+      "A": "Laissez-faire leadership.",
+      "B": "Instructional leadership.",
+      "C": "Transformational leadership.",
+      "D": "Transactional leadership."
+    },
+    "answer": "D",
+    "explanation": "Transactional leadership focuses on supervision, organization, and group performance through rewards and punishments (clear rules and adherence to policy). While instructional leadership is ideal, transactional elements are often necessary for basic management and order, especially regarding GES operational procedures."
+  },
+  {
+    "id": 34,
+    "question": "Which major reform introduced the 6-3-3-4 structure (six years Primary, three years JHS, three years SHS, four years Tertiary) to the Ghanaian education system, significantly expanding access to secondary education?",
+    "options": {
+      "A": "The Education Act of 1961.",
+      "B": "The Dzobo Committee Report (1974).",
+      "C": "The 1987 Education Reform.",
+      "D": "The Free SHS Policy (2017)."
+    },
+    "answer": "C",
+    "explanation": "The 1987 Education Reform, implemented under PNDC Law 207, fundamentally restructured the system, reducing the duration of pre-university education and establishing the 6-3-3 structure, aimed at making education more practical and accessible."
+  },
+  {
+    "id": 35,
+    "question": "Madam Adiza uses the school's WhatsApp platform to share weekly learning objectives, assign digital homework links, and receive parental feedback. This practice best reflects an application of which educational domain?",
+    "options": {
+      "A": "Educational Psychology.",
+      "B": "ICT in Education.",
+      "C": "Education Law compliance.",
+      "D": "Curriculum Assessment."
+    },
+    "answer": "B",
+    "explanation": "Utilizing digital platforms like WhatsApp for pedagogical and administrative tasks, including communication with parents, is a direct application of Information and Communication Technology (ICT) in enhancing teaching and learning management."
+  },
+  {
+    "id": 36,
+    "question": "A JHS teacher is struggling to manage noise levels and disruptive talking during group activities. Applying principles of Educational Psychology, which strategy is most effective for promoting self-regulation and positive behavior?",
+    "options": {
+      "A": "Shouting loudly to regain immediate control and enforcing silence.",
+      "B": "Publicly shaming the most disruptive student to set an example.",
+      "C": "Collaboratively setting clear classroom rules and visual cues for noise levels, and implementing a positive reinforcement system (token economy).",
+      "D": "Referring all disruptive students to the Head Teacher for severe punishment."
+    },
+    "answer": "C",
+    "explanation": "Educational psychology favors proactive, preventative strategies (setting clear expectations) and positive reinforcement systems (token economy) over punitive or shaming methods, promoting intrinsic motivation and self-regulation among learners."
+  },
+  {
+    "id": 37,
+    "question": "The Capitation Grant is provided by the government to basic schools in Ghana. What is the primary intended use of this fund according to MoE/GES directives?",
+    "options": {
+      "A": "Paying teacher salaries and allowances.",
+      "B": "Funding capital projects like building new classrooms.",
+      "C": "Buying instructional materials, carrying out minor repairs, and covering school operational costs.",
+      "D": "Providing free school uniforms for all students."
+    },
+    "answer": "C",
+    "explanation": "The Capitation Grant is intended to remove financial barriers to basic education. Its funds are specifically earmarked for essential operational expenses such as purchasing teaching and learning materials (TLMs), basic utility costs, and minor maintenance, not salaries or large capital expenditure."
+  },
+  {
+    "id": 38,
+    "question": "A teacher prepares a lesson on the local traditional authority structure (chieftaincy) in Ghana. The teacher invites the local chief to speak to the students about their roles and responsibilities. This approach strongly aligns with which teaching methodology?",
+    "options": {
+      "A": "Didactic instruction.",
+      "B": "Community-based or sociological methodology.",
+      "C": "Abstract learning theory.",
+      "D": "Psychomotor skills training."
+    },
+    "answer": "B",
+    "explanation": "Inviting community members and linking classroom content directly to local cultural and social structures is a community-based or sociological approach to education, making learning relevant and applying sociological context to the subject matter."
+  },
+  {
+    "id": 39,
+    "question": "What is the primary function of the Computerized School Selection and Placement System (CSSPS) within the context of Ghana's Senior High School system?",
+    "options": {
+      "A": "To select teachers for placement in various schools.",
+      "B": "To automatically place qualified JHS graduates into SHS/TVET schools based on merit and choice.",
+      "C": "To manage the salaries and professional development of basic school staff.",
+      "D": "To audit the utilization of the Free SHS funds."
+    },
+    "answer": "B",
+    "explanation": "The CSSPS is the centralized mechanism managed by GES to transparently and automatically place eligible JHS graduates into Senior High Schools and Technical/Vocational Education and Training (TVET) institutions, integral to the implementation of the Free SHS Policy."
+  },
+  {
+    "id": 40,
+    "question": "Under current educational law, which disciplinary action is strictly prohibited in all Ghanaian basic and secondary schools, requiring teachers to adopt non-violent disciplinary methods?",
+    "options": {
+      "A": "Detention after school hours.",
+      "B": "Assigning additional academic work.",
+      "C": "Corporal punishment (canning or hitting).",
+      "D": "Suspension from attending classes."
+    },
+    "answer": "C",
+    "explanation": "The Ghana Education Service (GES) officially banned corporal punishment (any physical harm or hitting) in all schools in 2017, aligning with international conventions and promoting positive disciplinary methods and guidance and counseling services."
+  },
+  {
+    "id": 41,
+    "question": "A teacher is introducing the concept of money management (saving and expenditure) to a Primary 5 class. To ensure effective subject content methodology relevant to Ghana, the teacher should primarily use:",
+    "options": {
+      "A": "Hypothetical examples involving foreign currencies.",
+      "B": "Real-life TLMs such as Ghanaian coins, banknotes (Cedis and Pesewas), and market transaction scenarios.",
+      "C": "Complex statistical models of the Bank of Ghana.",
+      "D": "A purely theoretical lecture on macroeconomics."
+    },
+    "answer": "B",
+    "explanation": "Effective subject content methodology, especially in primary grades, demands the use of concrete, locally relevant Teaching and Learning Materials (TLMs) like actual Ghanaian currency and relatable scenarios (market, savings box) to bridge theory and application."
+  },
+  {
+    "id": 42,
+    "question": "Mr. Mensah, a JHS teacher, observes that his students demonstrate excellent rote memorization but struggle with critical thinking tasks required by the SBC. Which educational theory suggests that he needs to transition from teacher-centered instruction to activities requiring higher-order thinking and problem-solving?",
+    "options": {
+      "A": "Behaviorism (Skinner).",
+      "B": "Constructivism (Vygotsky/Piaget).",
+      "C": "Psychoanalysis (Freud).",
+      "D": "Sociology of Education."
+    },
+    "answer": "B",
+    "explanation": "Constructivism emphasizes that learners build knowledge through active experience and reflection. The Standards-Based Curriculum promotes constructive methods, moving away from rote learning towards critical thinking, problem-solving, and collaboration."
+  },
+  {
+    "id": 43,
+    "question": "In a school management meeting, the Head Teacher discusses the need for better communication between the school and the Parents Teacher Association (PTA). What strategy demonstrates effective communication skills and transparency?",
+    "options": {
+      "A": "Using only formal written memos that parents must sign.",
+      "B": "Delegating all communication responsibility solely to the School Prefect.",
+      "C": "Holding regular, scheduled forums where critical decisions and the utilization of PTA funds are openly discussed.",
+      "D": "Restricting communication only to urgent matters of discipline."
+    },
+    "answer": "C",
+    "explanation": "Effective school management and communication with stakeholders require transparency and regular interaction. Open discussion of key decisions and financial accountability (like PTA funds) builds trust and promotes positive community engagement."
+  },
+  {
+    "id": 44,
+    "question": "A teacher is implementing a blended learning model, utilizing both face-to-face instruction and online resources. What is the primary requirement for successful ICT integration in a typical rural Ghanaian school setting?",
+    "options": {
+      "A": "Mandatory purchase of personal laptops for every student.",
+      "B": "Reliable access to power and stable internet connectivity.",
+      "C": "Eliminating all traditional textbooks immediately.",
+      "D": "Replacing all teachers with digital tutors."
+    },
+    "answer": "B",
+    "explanation": "The fundamental barrier and requirement for successful ICT integration in Ghana, especially in rural areas, remains reliable infrastructure, primarily access to electricity and stable internet/data connectivity to utilize digital resources."
+  },
+  {
+    "id": 45,
+    "question": "Madam Betty teaches Primary 2. She recognizes that effective classroom management involves structuring the learning environment. Which action best creates a predictable and secure learning environment based on current educational psychology standards?",
+    "options": {
+      "A": "Randomly changing seating arrangements daily.",
+      "B": "Allowing students to manage conflicts without intervention.",
+      "C": "Establishing clear, visual daily schedules and routine procedures for transitions.",
+      "D": "Implementing punitive measures for minor infractions."
+    },
+    "answer": "C",
+    "explanation": "Psychological research emphasizes that young children thrive in predictable environments. Clear routines, visual schedules, and established procedures reduce anxiety, minimize disruptions, and free up time for teaching and learning."
+  },
+  {
+    "id": 46,
+    "question": "What is the primary role of the National Teaching Council (NTC) in Teacher Education and professionalism in Ghana?",
+    "options": {
+      "A": "Setting the entry requirements for all universities and colleges.",
+      "B": "Paying the salaries and emoluments of all public sector teachers.",
+      "C": "Licensing, registering, and professionalizing teachers through Continuing Professional Development (CPD) frameworks.",
+      "D": "Designing the curriculum for Basic and Secondary schools."
+    },
+    "answer": "C",
+    "explanation": "The NTC is the regulatory body responsible for raising the status of the teaching profession. Its key functions include teacher registration, licensing, setting professional standards, and managing the CPD system to ensure quality teaching delivery."
+  },
+  {
+    "id": 47,
+    "question": "Mr. Dan, a JHS 1 teacher, uses continuous assessment tasks such as quizzes, projects, and fieldwork rather than a single termly examination to determine student achievement. This practice aligns directly with the shift towards:",
+    "options": {
+      "A": "The requirements of the 1961 Education Act.",
+      "B": "The mandatory implementation of Classroom Based Assessment (CBA) under the SBC.",
+      "C": "Eliminating all forms of standardized testing.",
+      "D": "Focusing solely on psychomotor skills."
+    },
+    "answer": "B",
+    "explanation": "The current Standards-Based Curriculum heavily mandates the use of Classroom Based Assessment (CBA), which involves continuous, formative, and summative assessment tools (quizzes, projects, portfolios) to measure student progress comprehensively, rather than relying only on high-stakes terminal exams."
+  },
+  {
+    "id": 48,
+    "question": "The concept of 'Education for All' heavily influences Ghana's current policy on Inclusive Education. This means the system must strive to accommodate which group primarily?",
+    "options": {
+      "A": "Only academically gifted students.",
+      "B": "Students with economic barriers only.",
+      "C": "All learners, regardless of their physical, intellectual, social, emotional, linguistic, or other conditions.",
+      "D": "Students attending only private international schools."
+    },
+    "answer": "C",
+    "explanation": "Inclusive Education, based on the 'Education for All' principle, mandates that the education system must be flexible and responsive to the diverse needs of all learners, ensuring equal opportunity regardless of any physical or cognitive challenge."
+  },
+  {
+    "id": 49,
+    "question": "A Head Teacher observes that teacher morale is low due to poor maintenance of staff facilities. According to educational management principles, addressing this concern falls under which key administrative area?",
+    "options": {
+      "A": "Financial management and auditing.",
+      "B": "Curriculum supervision and monitoring.",
+      "C": "Human resource management and physical plant maintenance.",
+      "D": "Guidance and counseling services."
+    },
+    "answer": "C",
+    "explanation": "Teacher welfare (morale) is part of Human Resource Management, while maintaining facilities falls under Physical Plant Maintenance. Both are critical administrative functions necessary for effective school management and staff productivity."
+  },
+  {
+    "id": 50,
+    "question": "Current affairs knowledge dictates that the Free Senior High School (Free SHS) policy in Ghana primarily aims to address which historical barrier to secondary education?",
+    "options": {
+      "A": "Lack of qualified teachers.",
+      "B": "Financial costs (fees, tuition, and lodging) preventing access for poorer families.",
+      "C": "Insufficient curriculum standards.",
+      "D": "Poor ICT infrastructure."
+    },
+    "answer": "B",
+    "explanation": "The Free SHS policy, implemented since 2017, is fundamentally an equity measure designed to remove financial constraints (tuition, boarding, and textbook fees) that historically prevented many qualified JHS graduates, particularly from low-income families, from accessing secondary education."
+  },
+  {
+    "id": 51,
+    "question": "The Free Compulsory Universal Basic Education (FCUBE) program was officially launched in 1995 following the implementation of the 1992 Constitution.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "FCUBE was introduced as a major educational policy reform in 1995, stemming from Article 38 (2) of the 1992 Constitution, aiming to ensure basic education is accessible and free for all school-age children in Ghana."
+  },
+  {
+    "id": 52,
+    "question": "The Education Act 778 (2008) is the primary legislation that governs the operations and structure of the Ghana Education Service (GES).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The Education Act, 2008 (Act 778) consolidates laws relating to education and defines the functions and structures of key educational bodies, including the Ghana Education Service (GES) and the National Teaching Council (NTC)."
+  },
+  {
+    "id": 53,
+    "question": "The Standards-Based Curriculum (SBC) fully replaced the Objective-Based Curriculum (OBC) at the Basic School level starting in 2019, emphasizing critical thinking over rote memorization.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The Standards-Based Curriculum (SBC), developed by NaCCA, was rolled out nationwide in September 2019 for Kindergarten and Primary schools (and subsequently JHS), marking a shift towards learner-centered pedagogy and the development of the 4Cs (Critical thinking, Creativity, Communication, and Collaboration)."
+  },
+  {
+    "id": 54,
+    "question": "The current model for teacher education in Ghana requires all trainees from Colleges of Education to obtain a 4-year Bachelor of Education (B.Ed) degree.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Since 2018, the Diploma in Basic Education program has been phased out, and all Colleges of Education have been upgraded to degree-awarding institutions affiliated with major public universities, offering the 4-year B.Ed degree."
+  },
+  {
+    "id": 55,
+    "question": "Ghana's Inclusive Education Policy dictates that learners with Special Educational Needs (SEN) must only be placed in specialized resource schools.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The policy stresses that the first preference should be placing learners with SEN in mainstream schools, ensuring accessibility and necessary support, promoting inclusion rather than segregation."
+  },
+  {
+    "id": 56,
+    "question": "Classroom Based Assessment (CBA) is primarily designed to be summative and solely determines the student's final classification at the end of the academic term.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "CBA is designed to be both formative and summative, providing continuous feedback to improve teaching and learning. Under the new curriculum, CBA is meant to carry significant weight but its primary function is continuous monitoring, not just final classification."
+  },
+  {
+    "id": 57,
+    "question": "The Ministry of Education (MoE) is the executing agency responsible for the direct deployment, posting, and disciplinary action concerning teachers in public basic schools.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While the MoE is the supervisory body, the Ghana Education Service (GES) is the implementing agency responsible for the management, deployment, transfer, and disciplinary control of teaching and non-teaching staff."
+  },
+  {
+    "id": 58,
+    "question": "The Junior High School (JHS) system in Ghana has maintained a consistent three-year duration (JHS 1, 2, and 3) since its introduction in 1987.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "JHS has consistently remained a three-year cycle (Basic 7-9) since it replaced the Middle School structure in the 1987 Educational Reforms, culminating in the BECE."
+  },
+  {
+    "id": 59,
+    "question": "Guidance and Counseling units in Ghanaian schools are primarily focused on providing remedial instruction in core subjects to failing students.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Guidance and Counseling units are established to provide psychosocial support, career advice, and behavioral modification services, not primarily remedial academic instruction, which is handled by subject teachers."
+  },
+  {
+    "id": 60,
+    "question": "For Kindergarten and lower Primary (P1-P3) education, the official medium of instruction in Ghana is mandated to be a Ghanaian language (mother tongue) where practicable.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Policy and curriculum guidelines mandate the use of the local Ghanaian language as the medium of instruction for KG and lower Primary grades to ensure better conceptual understanding before transitioning to English."
+  },
+  {
+    "id": 61,
+    "question": "The National Council for Curriculum and Assessment (NaCCA) is responsible for regulating the teaching profession, including teacher licensing and professional development standards.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "This responsibility falls under the mandate of the National Teaching Council (NTC). NaCCA is specifically focused on curriculum design, development, assessment criteria, and textbook approval."
+  },
+  {
+    "id": 62,
+    "question": "Action Research is a systematic process where teachers study their own teaching methods and classroom environments to solve localized, immediate instructional problems.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Action research emphasizes reflective practice and self-improvement, allowing teachers to become researchers of their own practice, directly aligning with current continuous professional development requirements."
+  },
+  {
+    "id": 63,
+    "question": "Educational Psychology primarily investigates the large-scale social factors, such as economic inequality and class structure, that influence educational outcomes.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "This area of study is primarily the domain of the Sociology of Education. Educational Psychology focuses more on individual learning processes, motivation, development, and instructional design."
+  },
+  {
+    "id": 64,
+    "question": "ICT integration in Ghanaian schools requires teachers to use complex coding languages to create custom educational software for their students.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While ICT proficiency is required, the emphasis is generally on utilizing existing digital tools (like educational software, multimedia, and basic productivity suites) to enhance teaching and learning, not mandatory complex software development."
+  },
+  {
+    "id": 65,
+    "question": "The implementation of the Free Senior High School (FSHS) policy, including the Double-Track system to manage student population, began in the 2017/2018 academic year.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The FSHS policy officially started in September 2017. The Double-Track system was subsequently introduced in 2018 to accommodate the huge increase in enrollment numbers."
+  },
+  {
+    "id": 66,
+    "question": "Under the new curriculum, the BECE (Basic Education Certificate Examination) is intended to be completely replaced by standardized national assessments administered primarily in JHS 2.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While significant reforms are underway, including a new high-stakes assessment at JHS 3 and potentially standardized assessments at other grades, the BECE structure has not been definitively phased out by current legislation, but is being modified under the new structure (e.g., National Standardized Test introduced at P4)."
+  },
+  {
+    "id": 67,
+    "question": "In the context of Education Management, instructional leadership refers to the principal's role in focusing and facilitating pedagogy, curriculum supervision, and student academic success.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Instructional leadership is a key management concept where the head teacher acts as the primary resource and supervisor for teaching and learning activities, shifting focus from purely administrative tasks."
+  },
+  {
+    "id": 68,
+    "question": "The National Teaching Council (NTC) requires all practicing teachers to renew their professional license every two years through mandatory Continuous Professional Development (CPD).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "NTC licenses are generally valid for a period of three years, not two years, after which they must be renewed based on CPD points accumulated."
+  },
+  {
+    "id": 69,
+    "question": "The concept of 'hidden curriculum' refers to the formal, documented syllabus that teachers must strictly follow throughout the academic year.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The 'hidden curriculum' encompasses the unspoken lessons, values, attitudes, and norms that students learn through the school environment, organization, and teacher behavior, distinct from the formal curriculum."
+  },
+  {
+    "id": 70,
+    "question": "Effective communication skills in the classroom involve only the teacher lecturing clearly to the students to ensure information transfer.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Effective classroom communication is multi-faceted, requiring active listening, encouraging student feedback, utilizing non-verbal cues, and facilitating dialogue, not just one-way lecturing."
+  },
+  {
+    "id": 71,
+    "question": "One key pillar of the Standards-Based Curriculum is the emphasis on developing the 4Cs: Critical thinking, Creativity, Communication, and Collaboration.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The 4Cs are central to NaCCA's vision for transforming education in Ghana, moving beyond knowledge recall to competence-based skills development."
+  },
+  {
+    "id": 72,
+    "question": "The 2020 Pre-Tertiary Education Act (Act 1049) grants District Assemblies sole authority over the appointment and transfer of all teachers within their jurisdiction.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While Act 1049 promotes decentralization, the ultimate authority for teacher appointments, transfers, and conditions of service remains primarily with the Ghana Education Service (GES) headquarters and its regional/district directors, not the District Assemblies themselves."
+  },
+  {
+    "id": 73,
+    "question": "In Ghanaian public schools, Citizenship Education is exclusively taught as a standalone subject in Senior High School (SHS).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Citizenship Education principles are integrated across the basic school curriculum, particularly through subjects like Social Studies and Our World Our People (OWOP), long before the dedicated elective course potentially offered at SHS."
+  },
+  {
+    "id": 74,
+    "question": "The introduction of four different subjects at the basic level (e.g., RME, ICT, Ghanaian Language) requires teachers to employ subject content methodology, focusing solely on the specific subject's facts.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Subject content methodology requires not only deep knowledge of the facts but also the pedagogical skills (Pedagogical Content Knowledge - PCK) necessary to teach that content effectively and interdisciplinarily, especially within the integrated curriculum structure."
+  },
+  {
+    "id": 75,
+    "question": "One major goal of the recent teacher education reforms (4-year B.Ed) was to ensure that all newly trained teachers possess a minimum Level 1 proficiency in integrating ICT into their instructional delivery.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The B.Ed curriculum redesign significantly upgraded the ICT component, making digital literacy and the ability to integrate technology (often mapped against UNESCO ICT-CFT standards) a mandatory core competency for all graduate teachers."
+  },
+  {
+    "id": 76,
+    "question": "The National Council for Curriculum and Assessment (NaCCA) is the body mandated to approve all textbooks and instructional materials used in Ghanaian pre-tertiary schools.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "NaCCA's core role is curriculum development, syllabus writing, and ensuring the quality and relevance of learning materials, including the approval of textbooks before they can be used in the classroom."
+  },
+  {
+    "id": 77,
+    "question": "The Ghana Education Service (GES) is the legal authority responsible for issuing professional teaching licenses and maintaining the register of certified teachers in Ghana.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "This responsibility belongs to the National Teaching Council (NTC). The NTC Act (Act 1021) establishes the NTC as the regulatory body for the teaching profession, handling licensing, registration, and professional standards."
+  },
+  {
+    "id": 78,
+    "question": "Guidance and Counseling services in all public basic and second cycle schools are structurally managed and implemented through the hierarchical structure of the GES.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The Guidance and Counseling Unit falls directly under the management and implementation structure of the Ghana Education Service, ensuring these support services reach students at the school level."
+  },
+  {
+    "id": 79,
+    "question": "The National Schools Inspectorate Authority (NaSIA) is primarily concerned with curriculum content assessment rather than the physical standards, safety, and managerial oversight of schools.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "NaSIA's core mandate is quality assurance regarding school infrastructure, safety, management, and regulatory compliance. Curriculum content assessment is the domain of NaCCA."
+  },
+  {
+    "id": 80,
+    "question": "The implementation of Classroom Based Assessment (CBA) guidelines, including scoring rubrics and format, is dictated by the National Council for Curriculum and Assessment (NaCCA).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "NaCCA provides the national framework for assessment, ensuring that CBA aligns with the new standards-based curriculum structure. GES manages the logistical implementation."
+  },
+  {
+    "id": 81,
+    "question": "The Ghana Education Service (GES) is responsible for the appointment, transfer, promotion, and discipline of teaching and non-teaching staff in pre-tertiary public schools.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "As the main implementer and manager of public pre-tertiary education, GES handles all Human Resource functions, including staffing and disciplinary procedures."
+  },
+  {
+    "id": 82,
+    "question": "The NTC mandates Continuous Professional Development (CPD) points for teachers, but engagement in Action Research is generally excluded from activities that yield CPD points.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Action Research is highly encouraged and recognized by the NTC as a valuable professional development activity that contributes significantly toward a teacher's required CPD points."
+  },
+  {
+    "id": 83,
+    "question": "The National Teaching Council (NTC) sets the professional standards that require teachers to demonstrate knowledge of Educational Psychology and its application in the classroom.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Professional standards established by the NTC cover foundational pedagogical knowledge, including educational psychology, learning theories, and child development, necessary for effective teaching."
+  },
+  {
+    "id": 84,
+    "question": "The structure of basic education in Ghana, currently based on a 6-3-3 model, is a policy framework that originated entirely within the Ministry of Education (MoE), not the GES or NaCCA.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The overall policy and structure of the education system (e.g., duration of JHS/SHS, basic structure) are determined at the Ministry of Education level through national educational reviews and reforms."
+  },
+  {
+    "id": 85,
+    "question": "Inclusive Education implementation, including the establishment of resource centers and training of itinerant teachers, is a joint responsibility shared between GES and NaCCA.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While NaCCA integrates inclusive principles into the curriculum, the implementation, operational management of units, and deployment of specialized staff are the responsibility of the GES Special Education Division."
+  },
+  {
+    "id": 86,
+    "question": "All teacher training institutions (Colleges of Education) must have their programs accredited and recognized by the National Teaching Council (NTC) for graduates to qualify for licensing.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The NTC plays a vital role in ensuring that teacher education programs meet professional standards, although final institutional accreditation also involves the Ghana Tertiary Education Commission (GTEC)."
+  },
+  {
+    "id": 87,
+    "question": "NaCCA determines the final score requirements for students seeking placement into Senior High Schools after they take the Basic Education Certificate Examination (BECE).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "WAEC conducts the BECE, and the placement and corresponding cut-off scores are managed by the Computerized School Selection and Placement System (CSSPS) under the Ministry of Education/GES."
+  },
+  {
+    "id": 88,
+    "question": "NaSIA is the official institution responsible for registering and granting operational permits to both public and private pre-tertiary schools across Ghana.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "NaSIA (formerly the National Inspectorate Board/NASBA) has the regulatory authority to register and monitor compliance for all non-tertiary educational institutions."
+  },
+  {
+    "id": 89,
+    "question": "Sociology of Education, which examines the impact of societal factors on learning, is a required knowledge domain for teachers under NTC's professional standards framework.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The NTC standards emphasize understanding the broader context of teaching, including cultural, social, and economic factors (Sociology of Education) that affect student outcomes."
+  },
+  {
+    "id": 90,
+    "question": "The specific methodology and pedagogy for teaching subjects like Science and Mathematics are regulated primarily by the Ghana Education Service (GES) during in-service training.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "While GES delivers the training, the professional standards for methodology are set by the NTC, and the curriculum content itself is designed by NaCCA."
+  },
+  {
+    "id": 91,
+    "question": "Citizenship Education and its place within the broader curriculum falls within the jurisdiction of NaCCA's curriculum design mandate.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Since Citizenship Education is a core component of the standards-based curriculum, its structure and content are determined by NaCCA."
+  },
+  {
+    "id": 92,
+    "question": "When implementing major educational policies like the Free SHS program, the GES handles the logistics, staffing, and day-to-day management, while the MoE provides the overarching political direction and funding release.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "This accurately reflects the relationship: MoE is the policy originator and financial overseer; GES is the technical implementer on the ground."
+  },
+  {
+    "id": 93,
+    "question": "The National Teaching Council (NTC) is legally tasked with the development and provision of ICT infrastructure and digital learning resources for all public basic schools.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Infrastructure development and resource provision are management functions handled by the Ministry of Education and GES, often involving agencies like GETFund, not the NTC (which focuses on teacher professionalism)."
+  },
+  {
+    "id": 94,
+    "question": "The GES District Directors are responsible for providing direct professional leadership training and educational management supervision to Headteachers within their districts.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "GES structure delegates educational management and leadership supervision down to the District Director level, ensuring accountability and continuous development for school heads."
+  },
+  {
+    "id": 95,
+    "question": "If a teacher fails to renew their professional license, the National Teaching Council (NTC) requires the GES to cease their employment until compliance is met.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "The NTC Act gives the Council the authority to regulate teaching practice. If a teacher fails to meet licensing requirements, they cannot legally practice, meaning the GES must comply with the NTC directive."
+  },
+  {
+    "id": 96,
+    "question": "All educational reforms in Ghana, including changes to the curriculum and structure, are historically initiated and led by the Ghana Education Service (GES).",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "Major reforms are typically initiated by the Ministry of Education (MoE) or specific government committees (like the Dzobo or Anamuah-Mensah Committees), with GES focusing on implementation."
+  },
+  {
+    "id": 97,
+    "question": "Communication skills, especially in delivery and interaction, are assessed as part of the professional competence indicators required for teacher certification by the NTC.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "Effective communication is a foundational professional skill, and the NTC standards include domains related to pedagogy and engagement where communication skills are critical."
+  },
+  {
+    "id": 98,
+    "question": "NaSIA is empowered to recommend the closure of a private school if repeated inspections reveal persistent failure to meet national health, safety, and operational standards.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "As the quality assurance and regulatory body, NaSIA possesses enforcement powers, including the authority to enforce closure recommendations for non-compliant schools."
+  },
+  {
+    "id": 99,
+    "question": "The provision of standardized teacher guides and instructional materials detailing how to implement the national curriculum in the classroom is an implementation mandate of the GES.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "A",
+    "explanation": "While NaCCA writes the syllabus, GES focuses on providing practical classroom support, including teacher guides and logistical support for curriculum delivery."
+  },
+  {
+    "id": 100,
+    "question": "The primary role of the Ministry of Education (MoE) is to manage the daily operations and staffing of all public schools, leaving policy formulation to the GES.",
+    "options": {
+      "A": "True",
+      "B": "False"
+    },
+    "answer": "B",
+    "explanation": "The MoE is responsible for policy formulation and supervision. The GES is the operational arm responsible for daily management, staffing, and implementation."
+  }
+]

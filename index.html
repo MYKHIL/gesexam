@@ -2332,26 +2332,34 @@
                 }
                 itemsBefore++;
 
-                // Medal/Rank Display
+                // Medal/Rank Display with glassmorphism styling
                 let rankDisplay = `<span class="text-gray-500 font-mono font-bold">#${rank}</span>`;
                 let rowClass = "border-b hover:bg-gray-50 transition-colors";
                 let scoreClass = "text-blue-600 font-bold";
-                let cardClass = "bg-white border border-gray-200";
+                let cardClass = "";
+                let cardStyle = "";
 
                 if (rank === 1) {
-                    rankDisplay = `<span class="text-2xl" title="1st Place">🥇</span>`;
+                    rankDisplay = `<span class="text-3xl" title="1st Place">🥇</span>`;
                     rowClass = "border-b bg-yellow-50 hover:bg-yellow-100 transition-colors border-yellow-200";
-                    scoreClass = "text-yellow-700 font-bold text-lg";
-                    cardClass = "bg-yellow-50 border-2 border-yellow-300";
+                    scoreClass = "text-yellow-800 font-bold text-lg";
+                    cardClass = "relative overflow-hidden";
+                    cardStyle = "background: linear-gradient(135deg, rgba(255, 235, 59, 0.3) 0%, rgba(255, 193, 7, 0.4) 100%); backdrop-filter: blur(10px); border: 2px solid rgba(255, 215, 0, 0.5); box-shadow: 0 8px 32px 0 rgba(255, 215, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.5);";
                 } else if (rank === 2) {
-                    rankDisplay = `<span class="text-2xl" title="2nd Place">🥈</span>`;
+                    rankDisplay = `<span class="text-3xl" title="2nd Place">🥈</span>`;
                     rowClass = "border-b bg-gray-50 hover:bg-gray-100 transition-colors";
-                    cardClass = "bg-gray-50 border-2 border-gray-300";
+                    scoreClass = "text-gray-700 font-bold text-lg";
+                    cardClass = "relative overflow-hidden";
+                    cardStyle = "background: linear-gradient(135deg, rgba(192, 192, 192, 0.3) 0%, rgba(169, 169, 169, 0.4) 100%); backdrop-filter: blur(10px); border: 2px solid rgba(192, 192, 192, 0.5); box-shadow: 0 8px 32px 0 rgba(169, 169, 169, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.5);";
                 } else if (rank === 3) {
-                    rankDisplay = `<span class="text-2xl" title="3rd Place">🥉</span>`;
+                    rankDisplay = `<span class="text-3xl" title="3rd Place">🥉</span>`;
                     rowClass = "border-b bg-orange-50 hover:bg-orange-100 transition-colors border-orange-100";
-                    scoreClass = "text-orange-700 font-bold";
-                    cardClass = "bg-orange-50 border-2 border-orange-300";
+                    scoreClass = "text-orange-800 font-bold";
+                    cardClass = "relative overflow-hidden";
+                    cardStyle = "background: linear-gradient(135deg, rgba(255, 152, 0, 0.3) 0%, rgba(230, 126, 34, 0.4) 100%); backdrop-filter: blur(10px); border: 2px solid rgba(205, 127, 50, 0.5); box-shadow: 0 8px 32px 0 rgba(205, 127, 50, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.5);";
+                } else {
+                    cardClass = "relative overflow-hidden";
+                    cardStyle = "background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.2) 100%); backdrop-filter: blur(10px); border: 1px solid rgba(139, 92, 246, 0.3); box-shadow: 0 4px 16px 0 rgba(99, 102, 241, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 0.3);";
                 }
 
                 // Location - City/Country or generic
@@ -2393,34 +2401,37 @@
                 </tr>
                 `);
 
-                // Build mobile card
+                // Build mobile card with glassmorphism
                 cardsArr.push(`
-                <div class="${cardClass} rounded-lg shadow-md p-4 transition-all hover:shadow-lg">
-                    <div class="flex items-center justify-between mb-3">
-                        <div class="flex items-center gap-3">
-                            <div class="flex-shrink-0">${rankDisplay}</div>
-                            <div>
-                                <div class="font-bold text-gray-800 text-lg">${escapeHtml(u.name)}</div>
-                                <div class="text-xs text-gray-500 flex items-center gap-1 mt-1">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                    ${escapeHtml(locationText)}
+                <div class="${cardClass} rounded-2xl p-5 transition-all duration-300 hover:scale-[1.02]" style="${cardStyle}">
+                    ${rank <= 3 ? '<div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>' : ''}
+                    <div class="relative z-10">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="flex-shrink-0 transform transition-transform hover:scale-110">${rankDisplay}</div>
+                                <div>
+                                    <div class="font-bold text-gray-900 text-lg">${escapeHtml(u.name)}</div>
+                                    <div class="text-xs text-gray-600 flex items-center gap-1 mt-1">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                        ${escapeHtml(locationText)}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="grid grid-cols-2 gap-3 mt-3 pt-3 border-t border-gray-200">
-                        <div>
-                            <div class="text-xs text-gray-500 uppercase">Score</div>
-                            <div class="text-sm font-semibold text-gray-700">${u.latestCorrect} / ${u.latestTotal}</div>
+                        <div class="grid grid-cols-2 gap-4 mt-4 pt-4" style="border-top: 1px solid rgba(255, 255, 255, 0.2);">
+                            <div class="bg-white/20 rounded-lg p-3 backdrop-blur-sm">
+                                <div class="text-xs font-semibold text-gray-600 uppercase tracking-wide">Score</div>
+                                <div class="text-base font-bold text-gray-900 mt-1">${u.latestCorrect} / ${u.latestTotal}</div>
+                            </div>
+                            <div class="bg-white/20 rounded-lg p-3 backdrop-blur-sm">
+                                <div class="text-xs font-semibold text-gray-600 uppercase tracking-wide">Percentage</div>
+                                <div class="text-xl font-extrabold ${scoreClass} mt-1">${u.latestScore}%</div>
+                            </div>
                         </div>
-                        <div>
-                            <div class="text-xs text-gray-500 uppercase">Percentage</div>
-                            <div class="${scoreClass}">${u.latestScore}%</div>
+                        <div class="mt-4 pt-4 bg-white/10 rounded-lg p-3 backdrop-blur-sm" style="border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                            <div class="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-1">Date Obtained</div>
+                            <div class="text-sm font-medium text-gray-800">${dateTimeText}</div>
                         </div>
-                    </div>
-                    <div class="mt-3 pt-3 border-t border-gray-200">
-                        <div class="text-xs text-gray-500 uppercase mb-1">Date Obtained</div>
-                        <div class="text-sm text-gray-700">${dateTimeText}</div>
                     </div>
                 </div>
                 `);
@@ -2632,12 +2643,13 @@
                     users = Array.isArray(fetched) ? fetched : (fetched && Array.isArray(fetched.users) ? fetched.users : []);
                 }
                 const threshold = Date.now() - ONLINE_WINDOW_MS;
-                const count = users.reduce((acc, u) => {
-                    if (!u || !u.lastTimestamp) return acc;
+                // Apply the same filtering logic as showOnlineUsersPopup: count only users with valid names
+                const count = users.filter(u => {
+                    if (!u || !u.lastTimestamp) return false;
                     const t = parseTimestampToMs(u.lastTimestamp);
-                    if (!isNaN(t) && t >= threshold) return acc + 1;
-                    return acc;
-                }, 0);
+                    return !isNaN(t) && t >= threshold;
+                }).filter(u => u && u.name).length; // Only count users with names
+
                 const el = document.getElementById('online-counter');
                 if (el) el.textContent = `${count} user${count === 1 ? '' : 's'} online`;
                 // Update persistent header badge
@@ -3945,42 +3957,47 @@
                     const formattedTime = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
                     const dateTimeText = `${formattedDate} at ${formattedTime}`;
 
-                    let cardClass = "bg-white border border-gray-200";
-                    let scoreClass = "text-blue-600 font-bold";
-                    let rankBadge = `<span class="inline-block w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-xs font-bold text-gray-500">#${index + 1}</span>`;
+                    let cardClass = "relative overflow-hidden";
+                    let cardStyle = "background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.2) 100%); backdrop-filter: blur(10px); border: 1px solid rgba(139, 92, 246, 0.3); box-shadow: 0 4px 16px 0 rgba(99, 102, 241, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 0.3);";
+                    let scoreClass = "text-indigo-600 font-bold";
+                    let rankBadge = `<span class="inline-block w-10 h-10 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center text-xs font-bold text-gray-700 border border-white/50">#${index + 1}</span>`;
 
-                    // Highlight best percentage
+                    // Highlight best percentage with gold glassmorphism
                     const bestPercentage = Math.max(...sessionHistory.map(s => s.percentage));
                     if (session.percentage === bestPercentage) {
-                        cardClass = "bg-yellow-50 border-2 border-yellow-300";
-                        scoreClass = "text-yellow-700 font-bold text-lg";
-                        rankBadge = `<span class="text-2xl" title="Best Score">🥇</span>`;
+                        cardClass = "relative overflow-hidden";
+                        cardStyle = "background: linear-gradient(135deg, rgba(255, 235, 59, 0.3) 0%, rgba(255, 193, 7, 0.4) 100%); backdrop-filter: blur(10px); border: 2px solid rgba(255, 215, 0, 0.5); box-shadow: 0 8px 32px 0 rgba(255, 215, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.5);";
+                        scoreClass = "text-yellow-800 font-bold text-xl";
+                        rankBadge = `<span class="text-3xl transform transition-transform hover:scale-110" title="Best Score">🥇</span>`;
                     }
 
                     return `
-                        <div class="${cardClass} rounded-lg shadow-md p-4 transition-all hover:shadow-lg">
-                            <div class="flex items-center justify-between mb-3">
-                                <div class="flex items-center gap-3">
-                                    <div class="flex-shrink-0">${rankBadge}</div>
-                                    <div>
-                                        <div class="font-bold text-gray-800">Session ${index + 1}</div>
-                                        <div class="text-xs text-gray-500">${session.totalQuestions} Questions</div>
+                        <div class="${cardClass} rounded-2xl p-5 transition-all duration-300 hover:scale-[1.02]" style="${cardStyle}">
+                            ${session.percentage === bestPercentage ? '<div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>' : ''}
+                            <div class="relative z-10">
+                                <div class="flex items-center justify-between mb-4">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex-shrink-0">${rankBadge}</div>
+                                        <div>
+                                            <div class="font-bold text-gray-900 text-lg">Session ${index + 1}</div>
+                                            <div class="text-xs text-gray-600">${session.totalQuestions} Questions</div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="grid grid-cols-2 gap-3 mt-3 pt-3 border-t border-gray-200">
-                                <div>
-                                    <div class="text-xs text-gray-500 uppercase">Score</div>
-                                    <div class="text-lg font-semibold text-gray-700">${session.correctAnswers}/${session.totalQuestions}</div>
+                                <div class="grid grid-cols-2 gap-4 mt-4 pt-4" style="border-top: 1px solid rgba(255, 255, 255, 0.2);">
+                                    <div class="bg-white/20 rounded-lg p-3 backdrop-blur-sm">
+                                        <div class="text-xs font-semibold text-gray-600 uppercase tracking-wide">Score</div>
+                                        <div class="text-xl font-bold text-gray-900 mt-1">${session.correctAnswers}/${session.totalQuestions}</div>
+                                    </div>
+                                    <div class="bg-white/20 rounded-lg p-3 backdrop-blur-sm">
+                                        <div class="text-xs font-semibold text-gray-600 uppercase tracking-wide">Percentage</div>
+                                        <div class="text-2xl font-extrabold ${scoreClass} mt-1">${session.percentage}%</div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <div class="text-xs text-gray-500 uppercase">Percentage</div>
-                                    <div class="${scoreClass}">${session.percentage}%</div>
+                                <div class="mt-4 pt-4 bg-white/10 rounded-lg p-3 backdrop-blur-sm" style="border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                                    <div class="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-1">Date Obtained</div>
+                                    <div class="text-sm font-medium text-gray-800">${dateTimeText}</div>
                                 </div>
-                            </div>
-                            <div class="mt-3 pt-3 border-t border-gray-200">
-                                <div class="text-xs text-gray-500 uppercase mb-1">Date Obtained</div>
-                                <div class="text-sm text-gray-700">${dateTimeText}</div>
                             </div>
                         </div>
                     `;
