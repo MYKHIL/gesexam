@@ -1,0 +1,602 @@
+[
+    {
+        "id": 1,
+        "question": "In 2025, Ghana’s government announced that all persons with special needs attending integrated or special-needs schools will benefit from:",
+        "options": {
+            "A": "Partial subsidies only",
+            "B": "Free education and increased feeding allocation",
+            "C": "Loans for school fees",
+            "D": "Community-based support only"
+        },
+        "answer": "B",
+        "explanation": "To support inclusive education and alleviate financial burdens, the government mandated free education and enhanced feeding grants for special needs students in both integrated and special schools."
+    },
+    {
+        "id": 2,
+        "question": "Which organization approved a USD 2.23 million grant in 2025 to support Ghana’s education sector capacity and reforms?",
+        "options": {
+            "A": "UNICEF only",
+            "B": "Global Partnership for Education (GPE)",
+            "C": "The World Bank only",
+            "D": "UNESCO only"
+        },
+        "answer": "B",
+        "explanation": "The Global Partnership for Education (GPE) approved this grant to strengthen the capacity of the education sector and support ongoing reforms."
+    },
+    {
+        "id": 3,
+        "question": "In late 2025, the national policy for language of instruction in Ghana’s basic schools was changed to require:",
+        "options": {
+            "A": "Exclusive use of English only",
+            "B": "Use of local/native languages as medium of instruction at basic level",
+            "C": "Use of French and English interchangeably",
+            "D": "Total use of mother tongue for all levels"
+        },
+        "answer": "B",
+        "explanation": "The policy shift mandates the use of local languages as the medium of instruction at the basic level to enhance foundational literacy and cultural engagement."
+    },
+    {
+        "id": 4,
+        "question": "The rollout of new AI-powered apps for SHS students and teachers in Ghana in 2025 aims to:",
+        "options": {
+            "A": "Replace teachers altogether",
+            "B": "Support teaching, learning and the new SHS curriculum (both online and offline)",
+            "C": "Remove exams",
+            "D": "Limit studies to urban schools"
+        },
+        "answer": "B",
+        "explanation": "These AI tools are designed as assistive technologies to bolster the new SHS curriculum, providing offline and online resources for both teachers and students."
+    },
+    {
+        "id": 5,
+        "question": "Which of the following statements reflects a major concern raised after the release of the 2025 SHS exam results (WASSCE)?",
+        "options": {
+            "A": "Enrollment increased significantly",
+            "B": "Results showed a catastrophic decline in core subject performance, prompting calls for systemic reforms",
+            "C": "All students passed with high grades",
+            "D": "There was no change compared to previous years"
+        },
+        "answer": "B",
+        "explanation": "The 2025 WASSCE results sparked national debate due to a significant drop in performance in core subjects, highlighting the need for systemic educational interventions."
+    },
+    {
+        "id": 6,
+        "question": "Which recent Ghanaian policy aims to transform foundational learning by integrating technology, curriculum review, and teacher/leadership development?",
+        "options": {
+            "A": "Old Basic Education Policy",
+            "B": "Foundational Learning Transformation Initiative (2025)",
+            "C": "Private School Expansion Policy",
+            "D": "Secondary School Privatization Plan"
+        },
+        "answer": "B",
+        "explanation": "The Foundational Learning Transformation Initiative (2025) is a comprehensive strategy focused on improving early grade learning through tech integration and capacity building."
+    },
+    {
+        "id": 7,
+        "question": "Which system was phased out by the education authorities in 2025, restoring a more stable academic calendar for SHS?",
+        "options": {
+            "A": "Single-track system",
+            "B": "Double-track system",
+            "C": "Triple-track system",
+            "D": "Modular-track system"
+        },
+        "answer": "B",
+        "explanation": "The double-track system, originally introduced to manage high enrollment, was phased out in 2025 to return Senior High Schools to a unified, stable academic calendar."
+    },
+    {
+        "id": 8,
+        "question": "Under the 2025 reforms, what additional support was announced for schoolgirls to help reduce absenteeism?",
+        "options": {
+            "A": "Free textbooks",
+            "B": "Free sanitary pads for girls",
+            "C": "Extra homework support",
+            "D": "Uniform subsidies"
+        },
+        "answer": "B",
+        "explanation": "To combat period poverty and reduce absenteeism among female students, the government announced the provision of free sanitary pads as part of the 2025 reforms."
+    },
+    {
+        "id": 9,
+        "question": "Which major curricular/educational tool did the University of Education, Winneba (UEW) and UNESCO recently collaborate to introduce in teacher training in Ghana (2025)?",
+        "options": {
+            "A": "Media and Information Literacy (MIL) curriculum",
+            "B": "Agricultural curriculum",
+            "C": "Foreign language mandate",
+            "D": "Sports-only curriculum"
+        },
+        "answer": "A",
+        "explanation": "The collaboration aimed to integrate a Media and Information Literacy (MIL) curriculum into teacher training to prepare educators for the digital information age."
+    },
+    {
+        "id": 10,
+        "question": "Which priority is central in Ghana’s 2026 education reforms as announced in the 2025 budget statements?",
+        "options": {
+            "A": "Reduced number of schools",
+            "B": "Revamping the basic school curriculum to include practical skills — electronics, robotics, coding, AI, etc.",
+            "C": "Privatizing all schools",
+            "D": "Eliminating teacher training"
+        },
+        "answer": "B",
+        "explanation": "The reforms prioritize modernization by embedding practical STEM skills like robotics, coding, and AI into the basic school curriculum."
+    },
+    {
+        "id": 11,
+        "question": "What justification was offered by Ghana’s government for making local languages compulsory medium of instruction at basic school level?",
+        "options": {
+            "A": "To align with international standards",
+            "B": "To improve learning outcomes and protect Ghana’s cultural identity",
+            "C": "To promote English fluency",
+            "D": "To reduce textbook costs"
+        },
+        "answer": "B",
+        "explanation": "The policy is driven by research suggesting that early learning in a native tongue improves cognitive development, alongside a goal to preserve cultural heritage."
+    },
+    {
+        "id": 12,
+        "question": "According to a 2025 report by UNESCO and the African Centre for School Leadership, a key challenge across Africa’s education systems remains:",
+        "options": {
+            "A": "Lack of school buildings only",
+            "B": "Low learning proficiency among many pupils, with only about one in ten children completing primary education achieving minimum learning standards",
+            "C": "No qualified teachers anywhere",
+            "D": "Over-qualified teachers"
+        },
+        "answer": "B",
+        "explanation": "The report highlighted a 'learning crisis' where high enrollment has not matched learning outcomes, with very few students meeting minimum proficiency standards."
+    },
+    {
+        "id": 13,
+        "question": "Which global trend highlighted in 2025 is shaping the future of education, including in Ghana and other African countries?",
+        "options": {
+            "A": "Complete rejection of technology",
+            "B": "Integration of AI, virtual reality, and new technologies into teaching and learning (EdTech)",
+            "C": "Return to rote-learning only",
+            "D": "Uniform curriculum worldwide"
+        },
+        "answer": "B",
+        "explanation": "The global surge in EdTech, specifically AI and VR, is heavily influencing educational strategies to make learning more interactive and personalized in Ghana."
+    },
+    {
+        "id": 14,
+        "question": "Which NGO movement in Ghana alerted the public in 2025 that the poor WASSCE results reflect deeper structural issues?",
+        "options": {
+            "A": "Youth Education Forum",
+            "B": "Mother of All Nations Foundation (MoANF)",
+            "C": "National PTA",
+            "D": "Local church committees"
+        },
+        "answer": "B",
+        "explanation": "The Mother of All Nations Foundation (MoANF) was vocal in linking the poor exam results to systemic failures like infrastructure and teacher welfare."
+    },
+    {
+        "id": 15,
+        "question": "Which measure is part of the 2025 reforms to support special-needs education in Ghana?",
+        "options": {
+            "A": "Charging high fees",
+            "B": "Free education and increased daily feeding funds for special-needs schools",
+            "C": "Segregating learners",
+            "D": "Eliminating special-needs schools"
+        },
+        "answer": "B",
+        "explanation": "Similar to Question 1, this confirms the commitment to free education and better nutritional support (feeding funds) for special needs institutions."
+    },
+    {
+        "id": 16,
+        "question": "The primary function of educational administration is to:",
+        "options": {
+            "A": "Supervise only teachers",
+            "B": "Achieve educational goals efficiently",
+            "C": "Discipline students",
+            "D": "Prepare textbooks"
+        },
+        "answer": "B",
+        "explanation": "Educational administration is fundamentally about organizing resources and processes to attain the set goals of the educational system effectively and efficiently."
+    },
+    {
+        "id": 17,
+        "question": "Which of the following is a continuous assessment tool?",
+        "options": {
+            "A": "Terminal exams",
+            "B": "Project work",
+            "C": "Placement test",
+            "D": "Aptitude test"
+        },
+        "answer": "B",
+        "explanation": "Project work allows for ongoing evaluation of a student's skills and understanding over time, unlike one-off exams or placement tests."
+    },
+    {
+        "id": 18,
+        "question": "A major role of the Assistant Director is:",
+        "options": {
+            "A": "Teaching a full timetable",
+            "B": "Providing supervisory support",
+            "C": "Conducting PTA meetings",
+            "D": "Student record keeping"
+        },
+        "answer": "B",
+        "explanation": "Assistant Directors in the GES structure are primarily tasked with supervision and management support to ensure policy implementation, rather than full-time teaching."
+    },
+    {
+        "id": 19,
+        "question": "Curriculum is best defined as:",
+        "options": {
+            "A": "A list of textbooks",
+            "B": "All planned learning experiences",
+            "C": "Classroom rules",
+            "D": "Teacher’s lesson notes"
+        },
+        "answer": "B",
+        "explanation": "Curriculum encompasses the totality of student experiences that occur in the educational process, not just the materials or syllabus."
+    },
+    {
+        "id": 20,
+        "question": "The Education Act is important because it:",
+        "options": {
+            "A": "Trains teachers",
+            "B": "Regulates student conduct",
+            "C": "Provides legal backing for school systems",
+            "D": "Determines exam questions"
+        },
+        "answer": "C",
+        "explanation": "The Education Act serves as the statutory framework that legalizes and governs the structure, administration, and operation of the school system."
+    },
+    {
+        "id": 21,
+        "question": "Monitoring and supervision aim to:",
+        "options": {
+            "A": "Punish teachers",
+            "B": "Improve teaching and learning",
+            "C": "Dismiss non-performing staff",
+            "D": "Promote only high-performing students"
+        },
+        "answer": "B",
+        "explanation": "The ultimate goal of monitoring and supervision is quality assurance—enhancing the instructional process and student learning outcomes."
+    },
+    {
+        "id": 22,
+        "question": "Leadership that focuses on participation is:",
+        "options": {
+            "A": "Autocratic",
+            "B": "Laissez-faire",
+            "C": "Democratic",
+            "D": "Bureaucratic"
+        },
+        "answer": "C",
+        "explanation": "Democratic leadership is characterized by shared decision-making, collaboration, and active participation of team members."
+    },
+    {
+        "id": 23,
+        "question": "An anecdotal record is:",
+        "options": {
+            "A": "A test script",
+            "B": "A narrative observation",
+            "C": "A terminal report",
+            "D": "A lesson plan"
+        },
+        "answer": "B",
+        "explanation": "Anecdotal records are brief, narrative accounts of specific incidents or behaviors observed by the teacher, used for qualitative assessment."
+    },
+    {
+        "id": 24,
+        "question": "Staff appraisal is carried out to:",
+        "options": {
+            "A": "Sack workers",
+            "B": "Improve performance",
+            "C": "Increase workload",
+            "D": "Reduce teachers"
+        },
+        "answer": "B",
+        "explanation": "Performance appraisal is a developmental process intended to identify strengths and weaknesses to guide professional growth and improve job performance."
+    },
+    {
+        "id": 25,
+        "question": "The hidden curriculum refers to:",
+        "options": {
+            "A": "Exam content",
+            "B": "Unstated learning outcomes",
+            "C": "Timetabled lessons",
+            "D": "Teacher notes"
+        },
+        "answer": "B",
+        "explanation": "The hidden curriculum consists of the unwritten, unofficial, and often unintended lessons, values, and perspectives that students learn in school."
+    },
+    {
+        "id": 26,
+        "question": "The most important characteristic of a good leader is:",
+        "options": {
+            "A": "Harshness",
+            "B": "Vision",
+            "C": "Speed",
+            "D": "Anger"
+        },
+        "answer": "B",
+        "explanation": "Vision is fundamental to leadership; it provides direction, inspiration, and a clear goal for the organization to strive towards."
+    },
+    {
+        "id": 27,
+        "question": "A cumulative record card shows:",
+        "options": {
+            "A": "Only exam results",
+            "B": "Only attendance",
+            "C": "A learner’s full history",
+            "D": "Discipline records only"
+        },
+        "answer": "C",
+        "explanation": "A cumulative record is a comprehensive history of a student's educational progress, including academic, physical, social, and attendance data over time."
+    },
+    {
+        "id": 28,
+        "question": "Which of these is not a type of research?",
+        "options": {
+            "A": "Descriptive",
+            "B": "Experimental",
+            "C": "Historical",
+            "D": "Rhetorical"
+        },
+        "answer": "D",
+        "explanation": "Descriptive, Experimental, and Historical are standard research methodologies. 'Rhetorical' refers to the art of persuasion, not a scientific research type."
+    },
+    {
+        "id": 29,
+        "question": "The head of the Ghana Education Service is:",
+        "options": {
+            "A": "District Director",
+            "B": "Regional Director",
+            "C": "Director-General",
+            "D": "Deputy Director"
+        },
+        "answer": "C",
+        "explanation": "The Director-General is the chief executive responsible for the overall management and administration of the Ghana Education Service."
+    },
+    {
+        "id": 30,
+        "question": "A scheme of work is derived from the:",
+        "options": {
+            "A": "Record book",
+            "B": "Syllabus",
+            "C": "Assessment plan",
+            "D": "Class register"
+        },
+        "answer": "B",
+        "explanation": "The scheme of work is a breakdown of the syllabus into manageable teaching units for the academic term or year."
+    },
+    {
+        "id": 31,
+        "question": "The Education Strategic Plan covers:",
+        "options": {
+            "A": "5 years",
+            "B": "6 years",
+            "C": "15 years",
+            "D": "20 years"
+        },
+        "answer": "C",
+        "explanation": "The current Education Strategic Plan (ESP 2018-2030) is a long-term framework allowing for 12-15 years of strategic implementation."
+    },
+    {
+        "id": 32,
+        "question": "The best way to manage conflict is:",
+        "options": {
+            "A": "Avoid it",
+            "B": "Use negotiation",
+            "C": "Use punishment",
+            "D": "Ignore it"
+        },
+        "answer": "B",
+        "explanation": "Negotiation addresses the root causes and seeks a mutually acceptable solution, making it the most constructive conflict management strategy."
+    },
+    {
+        "id": 33,
+        "question": "Pedagogy refers to:",
+        "options": {
+            "A": "School laws",
+            "B": "Record keeping",
+            "C": "Art of teaching",
+            "D": "Student counseling"
+        },
+        "answer": "C",
+        "explanation": "Pedagogy is the method and practice of teaching, encompassing teaching styles, feedback, and assessment."
+    },
+    {
+        "id": 34,
+        "question": "A test that predicts future performance is:",
+        "options": {
+            "A": "Diagnostic",
+            "B": "Aptitude",
+            "C": "Formative",
+            "D": "Summative"
+        },
+        "answer": "B",
+        "explanation": "Aptitude tests are designed to assess a candidate's potential to succeed in a future task or field of study."
+    },
+    {
+        "id": 35,
+        "question": "The basic unit of school organization is:",
+        "options": {
+            "A": "Staff common room",
+            "B": "Classroom",
+            "C": "Head teacher’s office",
+            "D": "Resource center"
+        },
+        "answer": "B",
+        "explanation": "The classroom is the fundamental unit where the primary activity of the school—teaching and learning—takes place."
+    },
+    {
+        "id": 36,
+        "question": "Accountability in education means:",
+        "options": {
+            "A": "Blaming teachers",
+            "B": "Being responsible for outcomes",
+            "C": "Punishing learners",
+            "D": "Posting teachers"
+        },
+        "answer": "B",
+        "explanation": "Accountability entails accepting responsibility for the performance and results of the education system by its stakeholders."
+    },
+    {
+        "id": 37,
+        "question": "The primary purpose of in-service training is:",
+        "options": {
+            "A": "Punishment",
+            "B": "Retirement",
+            "C": "Professional development",
+            "D": "Promotion"
+        },
+        "answer": "C",
+        "explanation": "In-service training (INSET) is conducted to upgrade the skills, knowledge, and competencies of serving teachers (Professional Development)."
+    },
+    {
+        "id": 38,
+        "question": "A curriculum is dynamic because:",
+        "options": {
+            "A": "Teachers change",
+            "B": "Society changes",
+            "C": "Schools reopen yearly",
+            "D": "Exams are repeated"
+        },
+        "answer": "B",
+        "explanation": "Curriculum must evolve to remain relevant to the changing needs, values, and technological advancements of society."
+    },
+    {
+        "id": 39,
+        "question": "Educational supervision is mainly:",
+        "options": {
+            "A": "Fault finding",
+            "B": "Supportive and developmental",
+            "C": "Punitive",
+            "D": "Administrative only"
+        },
+        "answer": "B",
+        "explanation": "Modern supervision is designed to be a collaborative process that supports teachers in improving their instructional practice."
+    },
+    {
+        "id": 40,
+        "question": "The classroom register is updated:",
+        "options": {
+            "A": "Monthly",
+            "B": "Daily",
+            "C": "Termly",
+            "D": "Weekly"
+        },
+        "answer": "B",
+        "explanation": "Attendance registers MUST be marked and updated daily to maintain accurate records of student presence."
+    },
+    {
+        "id": 41,
+        "question": "Which assessment is done during instruction?",
+        "options": {
+            "A": "Summative",
+            "B": "Placement",
+            "C": "Formative",
+            "D": "Aptitude"
+        },
+        "answer": "C",
+        "explanation": "Formative assessment occurs during the learning process to provide feedback and adjust teaching strategies."
+    },
+    {
+        "id": 42,
+        "question": "A good school climate is:",
+        "options": {
+            "A": "Fear-based",
+            "B": "Safe and welcoming",
+            "C": "Strict and rigid",
+            "D": "Teacher-centered"
+        },
+        "answer": "B",
+        "explanation": "A positive school climate creates an environment where students feel safe, valued, and accepted, which nurtures learning."
+    },
+    {
+        "id": 43,
+        "question": "The GES Code of Conduct is mainly for:",
+        "options": {
+            "A": "Students",
+            "B": "Staff",
+            "C": "Parents",
+            "D": "Suppliers"
+        },
+        "answer": "B",
+        "explanation": "The Code of Conduct prescribes the professional and ethical standards expected of Ghana Education Service staff."
+    },
+    {
+        "id": 44,
+        "question": "The best leadership style in schools is:",
+        "options": {
+            "A": "Autocratic",
+            "B": "Laissez-faire",
+            "C": "Democratic",
+            "D": "Hostile"
+        },
+        "answer": "C",
+        "explanation": "Democratic leadership fosters a collaborative culture, encourages buy-in, and generally leads to higher morale and better outcomes in educational settings."
+    },
+    {
+        "id": 45,
+        "question": "School records must be:",
+        "options": {
+            "A": "Kept by students",
+            "B": "Accurate and updated",
+            "C": "Hidden from authorities",
+            "D": "Based on memory"
+        },
+        "answer": "B",
+        "explanation": "Reliable data is essential for planning; therefore, records must be factually accurate and kept current."
+    },
+    {
+        "id": 46,
+        "question": "The most important school resource is:",
+        "options": {
+            "A": "Buildings",
+            "B": "Furniture",
+            "C": "Human resources",
+            "D": "Textbooks"
+        },
+        "answer": "C",
+        "explanation": "Teachers and staff (Human Resources) are the most critical asset; without them, other resources cannot be effectively utilized for learning."
+    },
+    {
+        "id": 47,
+        "question": "Educational policy is:",
+        "options": {
+            "A": "Classroom rule",
+            "B": "Government direction for education",
+            "C": "Private opinion",
+            "D": "Teaching notes"
+        },
+        "answer": "B",
+        "explanation": "Educational policy refers to the principles and government policy-making sphere in the educational sector."
+    },
+    {
+        "id": 48,
+        "question": "Continuous professional development ensures:",
+        "options": {
+            "A": "Job loss prevention",
+            "B": "Updated skills",
+            "C": "Salary increase",
+            "D": "School expansion"
+        },
+        "answer": "B",
+        "explanation": "CPD ensures that teachers keep their professional knowledge and skills up to date with new standards and practices."
+    },
+    {
+        "id": 49,
+        "question": "Instructional leadership focuses on:",
+        "options": {
+            "A": "Assemblies",
+            "B": "Teaching and learning",
+            "C": "PTA meetings",
+            "D": "Sports only"
+        },
+        "answer": "B",
+        "explanation": "Instructional leadership is primarily concerned with the quality of instruction and the improvement of student learning."
+    },
+    {
+        "id": 50,
+        "question": "The term “learner-centered” means:",
+        "options": {
+            "A": "Teacher dictates",
+            "B": "Learner participates actively",
+            "C": "Learner keeps quiet",
+            "D": "Teacher controls everything"
+        },
+        "answer": "B",
+        "explanation": "Learner-centered education places the student at the heart of the learning process, encouraging active participation and autonomy."
+    }
+]

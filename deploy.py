@@ -228,6 +228,9 @@ class GitDeployment:
                 self.check_github_pages_setup()
                 return True
             
+            # Create .gitignore to filter files
+            self.create_gitignore()
+
             # Stage and commit
             if not self.add_all_files():
                 return False
@@ -245,6 +248,32 @@ class GitDeployment:
             
         except Exception as e:
             self.log(f"Deployment failed with error: {e}", "ERROR")
+            return False
+
+    def create_gitignore(self):
+        """Create .gitignore to ignore all except specified files"""
+        self.log("Creating .gitignore...")
+        gitignore_path = self.repo_path / ".gitignore"
+        
+        # Define rules: Ignore all (*), then whitelist specific items
+        # using leading slash for root anchoring
+        content = (
+            "# Auto-generated .gitignore for deployment\n"
+            "*\n"
+            "!/index.html\n"
+            "!/default-questions/\n"
+            "!/default-questions/**\n"
+            "!/.gitignore\n"  # Keep .gitignore itself
+            "!/deploy.py\n"   # Keep the deployment script too (optional but recommended)
+        )
+        
+        try:
+            with open(gitignore_path, "w", encoding='utf-8') as f:
+                f.write(content)
+            self.log("✓ .gitignore configured (Whitelisting: index.html, default-questions)")
+            return True
+        except Exception as e:
+            self.log(f"Failed to create .gitignore: {e}", "ERROR")
             return False
 
 def main():

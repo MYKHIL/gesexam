@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "Feedback should be:",
+    "options": {
+      "A": "Delayed",
+      "B": "Timely and constructive",
+      "C": "Harsh",
+      "D": "Discouraging"
+    },
+    "answer": "B",
+    "explanation": "Effective feedback is a cornerstone of learning and development, and the characteristics **timely and constructive** are consistently identified as essential for its efficacy.\n\n*   **Timely:** Feedback must be delivered promptly, ideally immediately after a task or observation, so that the recipient can still clearly recall the specific actions or behavior being addressed. Delaying feedback, as suggested in Option A, hinders improvement because the individual may have difficulty connecting the feedback to the original action or may have already repeated the behavior. When feedback is given in real-time, it is more relevant, can be immediately acted upon, and creates stronger mental ties to the learning material.\n\n*   **Constructive:** Constructive feedback is a communication technique focused on guiding, improving, and developing an individual's performance, abilities, or behavior. It is insightful, specific, actionable, and relevant, helping the person develop skills. It should be delivered thoughtfully to serve as a catalyst for positive change.\n\n    *   **Harsh (Option C):** Harsh feedback is critical and aggressive, often focusing on personal failings rather than specific actions, which can provoke defensiveness and emotional distress, shutting down the learning process and being counterproductive.\n    *   **Discouraging (Option D):** Feedback should be motivating and aim to foster growth. Discouraging feedback diminishes confidence and demotivates the recipient, defeating the purpose of development and improvement.\n\nTherefore, **timely and constructive** feedback (Option B) is the only method that maximizes the opportunity for the recipient to understand the message, make necessary changes, and promote continuous learning and positive outcomes."
+  },
+  {
+    "id": 2,
+    "question": "Formative assessment checks learning:",
+    "options": {
+      "A": "At the end only",
+      "B": "Continually during learning",
+      "C": "Through final exams only",
+      "D": "When parents visit"
+    },
+    "answer": "B",
+    "explanation": "Formative assessment is defined as a planned, ongoing process that is used by both students and teachers **during** learning and teaching to gather and use evidence of student understanding to modify instructional and learning activities to improve student attainment. Unlike *summative assessments* (like final exams), which evaluate learning *after* instruction, formative assessment is designed to improve learning in real-time. Key characteristics of formative assessment include continuous monitoring, regular feedback to students, and active engagement, all of which happen throughout the learning process. Therefore, formative assessment checks learning **continually during learning** to provide ongoing feedback that helps both the instructor and the student adjust their approaches."
+  },
+  {
+    "id": 3,
+    "question": "Classroom rules should be:",
+    "options": {
+      "A": "Set by teacher alone",
+      "B": "Clear and agreed on",
+      "C": "Secret",
+      "D": "Too many"
+    },
+    "answer": "B",
+    "explanation": "Classroom rules should be **clear and agreed on** because this approach forms the foundation of effective classroom management and fosters a positive learning environment.\n\n*   **Clarity is Essential:** Rules must be **clear** to create a shared understanding and explicitly state the teacher's expectations for student behavior. Clear expectations are the basis for positive student behavior, helping to maintain order and discipline within the classroom. When rules are ambiguous, students may genuinely misunderstand what is expected, leading to unintentional rule-breaking and inconsistencies in enforcement.\n*   **Agreement Fosters Ownership:** When students are involved in the process of creating or agreeing upon the rules, they develop a sense of ownership and are more likely to internalize and follow them. This collaborative process shifts the dynamic from rules being imposed *on* students to being mutually understood and accepted *by* the class, which encourages self-discipline.\n*   **Why Other Options are Incorrect:**\n    *   **A: Set by teacher alone:** While the teacher is ultimately responsible for classroom management, rules set solely by the teacher can lead to a sense of resentment or detachment from students, who may not feel invested in following them. Encouraging student ownership is a best practice.\n    *   **C: Secret:** Rules must be clearly communicated, explained, and practiced to be effective; they cannot establish expectations if they are secret.\n    *   **D: Too many:** A high number of rules can be overwhelming, difficult to remember, and dilute the importance of the most essential expectations. Best practice often suggests keeping the number of rules small, simple, and positively stated."
+  },
+  {
+    "id": 4,
+    "question": "Inquiry-based learning involves:",
+    "options": {
+      "A": "Listening only",
+      "B": "Asking and exploring questions",
+      "C": "Writing notes silently",
+      "D": "Dictation"
+    },
+    "answer": "B",
+    "explanation": "Inquiry-based learning (IBL) is an active, student-centered teaching method that emphasizes curiosity, exploration, and critical thinking.\n\n*   **Core Principle:** IBL fundamentally starts by posing questions, problems, or scenarios to students, encouraging them to investigate and solve real-world problems.\n*   **Active Engagement:** This approach requires students to be actively engaged in asking questions, conducting research, discussing findings, and exploring concepts rather than passively receiving information (which aligns with options like \"Listening only\" or \"Dictation\").\n*   **Correct Option Rationale:** Option B, **\"Asking and exploring questions,\"** accurately describes the initial and central activities of inquiry-based learning. The process is defined by students' initiation of questions and subsequent investigation and problem-solving to find answers.\n*   **Contrast with Other Options:** Options A (\"Listening only\"), C (\"Writing notes silently\"), and D (\"Dictation\") all represent passive forms of instruction or student reception, which stands in direct contrast to the investigative and active nature of inquiry-based learning."
+  },
+  {
+    "id": 5,
+    "question": "Guided reading is a method in:",
+    "options": {
+      "A": "Numeracy",
+      "B": "Literacy",
+      "C": "PE",
+      "D": "ICT"
+    },
+    "answer": "B",
+    "explanation": "Guided reading is a method of small-group instruction designed to provide differentiated teaching that supports students in developing reading proficiency.\n\n*   **Guided Reading and Literacy:** The method is an essential component of early literacy programs and is primarily used in literacy instruction. Its core purpose is to help students develop a system of strategic actions for processing new texts, which encompasses skills like vocabulary, fluency, and reading comprehension. Therefore, it is fundamentally a strategy within the subject area of **Literacy**.\n*   **Exclusion of Other Options:**\n    *   **Numeracy** refers to the knowledge and skills required to understand and use mathematical concepts.\n    *   **PE (Physical Education)** focuses on physical development, sport, and health.\n    *   **ICT (Information and Communication Technology)** relates to the use of technology.\n*   Since guided reading is explicitly about teaching and developing reading skills and comprehension, it belongs to the domain of Literacy."
+  },
+  {
+    "id": 6,
+    "question": "Professional development helps teachers to:",
+    "options": {
+      "A": "Sign attendance",
+      "B": "Improve teaching",
+      "C": "Avoid workshops",
+      "D": "Retire early"
+    },
+    "answer": "B",
+    "explanation": "Professional development for teachers is defined as ongoing learning opportunities specifically designed to enhance educators' skills, knowledge, and overall effectiveness in the classroom.\n\n*   **Improve Teaching (Option B):** This is the core purpose of professional development. The primary goal is to enhance teaching effectiveness and improve instructional effectiveness. By engaging in professional development, teachers can stay current with best practices, learn new teaching approaches, and update their knowledge on trends and emerging tools for the classroom. This directly leads to an improvement in their teaching abilities and, ultimately, better student outcomes.\n*   **Sign attendance (Option A):** While attendance is a procedural requirement for any professional development event, it is a clerical action, not the purpose or benefit of the learning itself.\n*   **Avoid workshops (Option C):** Workshops are a common *method* of delivering professional development, not an outcome. The goal is to participate in and benefit from these opportunities, not to avoid them.\n*   **Retire early (Option D):** Professional development is related to career growth and job satisfaction within the teaching profession, not an organized path to early retirement."
+  },
+  {
+    "id": 7,
+    "question": "Structured play helps to build:",
+    "options": {
+      "A": "Anger",
+      "B": "Social and cognitive skills",
+      "C": "Laziness",
+      "D": "Isolation"
+    },
+    "answer": "B",
+    "explanation": "Structured play is a powerful method for early childhood development that has a direct, positive impact on both social and cognitive skills, making Option B the correct choice.\n\n*   **Social Skills Development:** Structured play activities, which often involve goal-specific exercises, games, or group projects, require children to interact with others and learn crucial social behaviors. For instance, group games teach children how to cooperate, share, take turns, communicate effectively, and manage their emotions when working with peers. This fosters emotional and social growth.\n*   **Cognitive Skills Development:** Structured play enhances cognitive abilities through exploration and problem-solving. Activities in this setting, such as puzzles, building with specific instructions, or learning games, focus on goal-specific exercises that help children develop critical thinking, logic, focus, and problem-solving skills. It encourages enhanced learning opportunities, including the development of literacy and numeracy skills.\n*   **Contrasting with Other Options:** Structured play actively promotes positive interaction and goal-oriented focus, which is the opposite of developing negative attributes like **Anger (A)**, **Laziness (C)**, or **Isolation (D)**. The environment encourages working well with others and boosting self-esteem, which directly counters isolation and negative emotional states."
+  },
+  {
+    "id": 8,
+    "question": "ICT integration means:",
+    "options": {
+      "A": "Buying laptops only",
+      "B": "Using technology to support learning",
+      "C": "Teaching ICT as a subject only",
+      "D": "Zoom meetings only"
+    },
+    "answer": "B",
+    "explanation": "ICT integration in education is defined as the process of incorporating Information and Communication Technology (ICT) into the teaching and learning scenario.\n\n*   **Option B: Using technology to support learning** accurately captures the core purpose of ICT integration. It involves using digital tools and resources to aid, improve, and broaden student knowledge, and to enhance and support the educational environment. It aligns the use of digital tools with specific learning outcomes.\n\n*   **Option A: Buying laptops only** is incorrect because ICT integration is about the *use* of technology, not just the *acquisition* of hardware. The physical placement of hardware in classrooms is not sufficient for integration.\n\n*   **Option C: Teaching ICT as a subject only** is too narrow. While teaching ICT skills is part of a curriculum, ICT *integration* means applying those digital tools across all subjects and aspects of the teaching and learning process to enhance them, going beyond just teaching students how to use computers.\n\n*   **Option D: Zoom meetings only** is incorrect as it refers to a single, specific tool for communication and remote learning. ICT integration is a much broader concept encompassing a wide variety of tools (like smartboards, educational software, and the internet) used to improve accessibility, engagement, and knowledge retention.\n\nTherefore, the most comprehensive and accurate definition is that ICT integration is the use of technology to support and enhance the teaching and learning process."
+  },
+  {
+    "id": 9,
+    "question": "Scaffolding in teaching means:",
+    "options": {
+      "A": "Building classrooms",
+      "B": "Supporting learners gradually",
+      "C": "Punishing pupils",
+      "D": "Rewriting curriculum"
+    },
+    "answer": "B",
+    "explanation": "**Scaffolding** in teaching is an instructional practice where a teacher provides temporary support, guidance, and assistance to a student to help them master a new concept or skill that they would not be able to achieve on their own.\n\n*   **Option B (Supporting learners gradually)** is correct because it captures the essence of scaffolding. The support is **temporary** and **gradually removed** as the student gains competence and confidence. This gradual withdrawal of assistance is what allows the learner to move toward independent mastery of the task.\n*   The support provided is tailored to the student's needs and can include various techniques like breaking down complex tasks into smaller, more manageable parts; modeling or demonstrating a skill; using prompts, cues, or graphic organizers; or providing checklists and clear instructions.\n*   The term is an analogy to the temporary structures used in construction—just as scaffolding supports builders working on a high structure and is removed once the structure is complete, instructional scaffolding supports the learner and is removed once the learning is complete.\n*   **Option A (Building classrooms)**, **Option C (Punishing pupils)**, and **Option D (Rewriting curriculum)** are incorrect. Scaffolding is a pedagogical strategy for instruction and support, not a physical construction activity, a disciplinary action, or a process for curriculum redesign."
+  },
+  {
+    "id": 10,
+    "question": "A good assessment tool must be:",
+    "options": {
+      "A": "Long",
+      "B": "Valid and reliable",
+      "C": "Difficult",
+      "D": "Confusing"
+    },
+    "answer": "B",
+    "explanation": "A good assessment tool must possess several qualities, but **validity and reliability** are universally recognized as the two most critical characteristics for an effective educational measurement.\n\n*   **Validity** refers to the extent to which an assessment accurately measures what it is intended to measure. For example, a valid math test must measure mathematical ability and not primarily reading comprehension. If an assessment is not valid, the scores and subsequent inferences made about a student's knowledge or skill are inaccurate.\n*   **Reliability** refers to the consistency of the assessment. A reliable test should produce similar results if it is administered repeatedly under the same conditions or scored by different people. An unreliable test means the results are unstable and cannot be trusted.\n*   The two concepts are interconnected: a test **cannot be valid unless it is reliable**, as you cannot accurately measure something (validity) if your measurements are inconsistent (unreliability).\n\nThe other options are incorrect characteristics of a good assessment:\n*   **Long (A)**: An assessment should be comprehensive and practicable (usable), not unnecessarily long. Excessive length can lead to student fatigue and may not be a practical use of instructional time.\n*   **Difficult (C)**: An assessment should be challenging enough to measure the full range of student ability, but if it is excessively difficult, it may simply measure the inability to perform under stress or poorly written questions, rather than actual content mastery.\n*   **Confusing (D)**: An assessment must be clear, objective, and fair, not confusing. Confusing questions introduce bias and measure a student's ability to decipher poor wording rather than their knowledge of the subject."
+  },
+  {
+    "id": 11,
+    "question": "A diagnostic test helps to:",
+    "options": {
+      "A": "Promote pupils",
+      "B": "Identify learning gaps",
+      "C": "Punish slow learners",
+      "D": "End the term"
+    },
+    "answer": "B",
+    "explanation": "A diagnostic test is a type of pre-assessment used in education primarily to evaluate a student's existing knowledge, skills, and understanding *before* instruction begins on a new topic or course.\n\n*   **Option B (Identify learning gaps) is correct** because the central purpose of a diagnostic test is to pinpoint where a student's current learning deviates from what is expected at their grade level or for the upcoming material. These tests specifically help teachers identify \"learning gaps\"—the difference between what a student has learned and what they were expected to learn—which then informs and guides the subsequent instruction, intervention, or remediation.\n\n*   **Option A (Promote pupils)** and **Option D (End the term)** are incorrect because promotion and term completion are typically associated with *summative assessments* (like final exams), which occur *after* instruction to measure overall achievement, not *diagnostic* tests, which occur *before* or *during* instruction to guide it.\n\n*   **Option C (Punish slow learners)** is incorrect and goes against the ethical and instructional purpose of educational assessment. Diagnostic tests are instructional tools designed to *help* all students by identifying their needs, not to punish or judge them."
+  },
+  {
+    "id": 12,
+    "question": "Reinforcement means:",
+    "options": {
+      "A": "Encouraging a behaviour",
+      "B": "Punishing a pupil",
+      "C": "Ignoring a question",
+      "D": "Retesting"
+    },
+    "answer": "A",
+    "explanation": "Reinforcement, in the context of behavioral psychology (specifically operant conditioning developed by B.F. Skinner), is a fundamental concept that refers to any consequence following a behavior that **increases the future likelihood** of that behavior being repeated.\n\n*   **Option A: Encouraging a behaviour (Correct)**: This is the most accurate and concise layperson's definition of reinforcement. The entire purpose of a reinforcer (a reward, a positive consequence, or the removal of an aversive stimulus) is to strengthen, or encourage, the desired behavior so it happens more often.\n*   **Option B: Punishing a pupil**: Punishment is a consequence that is intended to **decrease** the likelihood of a behavior recurring, making it the opposite of reinforcement.\n*   **Option C: Ignoring a question**: This action is related to the technique of **extinction**, which involves withholding a reinforcer that was previously maintaining a behavior (e.g., ignoring a student who is talking out of turn to stop the disruptive behavior). Extinction aims to decrease or stop a behavior, not encourage it.\n*   **Option D: Retesting**: Retesting is an assessment or instructional strategy that may be used to measure learning or provide an opportunity for improvement. It is not a consequence meant to directly influence the frequency of a single, preceding behavior and is therefore unrelated to the psychological concept of reinforcement."
+  },
+  {
+    "id": 13,
+    "question": "A lesson closure helps to:",
+    "options": {
+      "A": "Add confusion",
+      "B": "Summarize learning",
+      "C": "Start the next topic",
+      "D": "Punish pupils"
+    },
+    "answer": "B",
+    "explanation": "The correct option is **Summarize learning** because the primary function of a lesson closure is to bring the learning experience to a meaningful end and reinforce the main ideas.\n\n*   **Summarizing Learning (Option B):** A lesson closure provides a critical opportunity for students to reflect on, synthesize, and communicate what they have learned, which is the essence of summarization. It is an important time to revisit and summarize the key ideas from the lesson, helping students digest and assimilate their learning. This process helps students retain the information they have learned and solidifies the understanding of the main concepts and objectives covered.\n\n*   **Why other options are incorrect:**\n    *   **Add confusion (Option A):** An effective lesson closure is designed to clarify, not confuse. Its purpose is to make students aware of what they have learned and assess their understanding.\n    *   **Start the next topic (Option C):** While a closure may sometimes include a brief transitional thought, its main focus is on the *current* lesson. Starting the next topic is the function of the subsequent lesson's introduction or \"lesson set.\"\n    *   **Punish pupils (Option D):** Punishment is not a recognized function or purpose of any part of instructional planning, including the lesson closure."
+  },
+  {
+    "id": 14,
+    "question": "A seating chart helps to:",
+    "options": {
+      "A": "Punish pupils",
+      "B": "Organize classroom",
+      "C": "Start exams",
+      "D": "Change school rules"
+    },
+    "answer": "B",
+    "explanation": "A seating chart's primary purpose is to enhance classroom organization and management, making Option B the correct choice.\n\n*   **Organizing the Classroom:** A seating chart provides a visual representation of the classroom layout and the assigned location for each student. This instantly organizes the physical space and the students within it.\n*   **Facilitating Classroom Management:** By assigning specific seats, a teacher establishes authority and sets the tone for the classroom, which is a foundational aspect of management. It eases the burden on students to behave appropriately, as strategic seating can address issues like inattention or disruptive behavior.\n*   **Aiding Instruction and Teacher Efficiency:** Knowing where students sit helps teachers quickly learn names, track attendance, and manage student data (such as accommodations or learning needs), all of which streamline daily classroom operations. Teachers can intentionally use the arrangement to promote engagement, collaboration, or focus, aligning the seating with the lesson's goals.\n\nThe other options are incorrect:\n*   **Option A (Punish pupils):** While a seating change can sometimes be a consequence for misbehavior, its fundamental purpose is organization and positive management, not punishment.\n*   **Option C (Start exams):** Seating charts can be used for exams to prevent cheating, but this is a specific application, not the primary, general benefit of having a seating chart.\n*   **Option D (Change school rules):** A seating chart is a classroom tool and has no function in changing school-wide rules."
+  },
+  {
+    "id": 15,
+    "question": "A teacher portfolio includes:",
+    "options": {
+      "A": "Salary slips",
+      "B": "Teaching evidence",
+      "C": "Market lists",
+      "D": "Sports scores"
+    },
+    "answer": "B",
+    "explanation": "A teacher portfolio is a purposeful collection of documents that systematically demonstrates an instructor's teaching accomplishments, growth, and effectiveness over time.\n\n*   **Option B (Teaching evidence)** is the correct answer because the fundamental purpose of a teaching portfolio is to showcase evidence of an instructor's professional activity and classroom performance. This evidence encompasses a variety of artifacts, including:\n    *   **Course Materials:** Sample lesson plans, syllabi, assignment prompts, and descriptions of in-class activities.\n    *   **Student Learning:** Samples of student work, summarized student evaluations, and evidence of student learning outcomes.\n    *   **Reflection and Philosophy:** A teaching philosophy statement and a resume or CV.\n    *   All these components serve as \"teaching evidence\" to document the teacher's skills, dedication, and professional development.\n*   **Option A (Salary slips)**, **Option C (Market lists)**, and **Option D (Sports scores)** are not relevant to a professional teaching portfolio. Salary information is a private personnel matter, market lists are unrelated to teaching, and general sports scores are not standard documentation of instructional effectiveness (unless, in rare cases, they are tied to a physical education curriculum's teaching goals)."
+  },
+  {
+    "id": 16,
+    "question": "Homework helps to:",
+    "options": {
+      "A": "Waste time",
+      "B": "Reinforce learning",
+      "C": "Punish pupils",
+      "D": "Test handwriting"
+    },
+    "answer": "B",
+    "explanation": "Homework is an integral part of the educational process, and its primary academic function is directly related to **reinforcing learning**.\n\n*   **Reinforcement of Classroom Instruction:** One of the main purposes of assigning homework is to reinforce the lessons, concepts, and skills taught in the classroom. By practicing and revising material outside of the regular class time, students solidify their understanding and improve information retention.\n*   **Enhancing Memory and Retention:** Homework provides an opportunity for spaced repetition, which is critical for moving information from short-term to long-term memory. When students work on assignments at home, they strengthen their understanding and build discipline.\n*   **Developing Independent Study Skills:** Beyond content reinforcement, homework also promotes essential skills such as independent learning, developing study habits, and acquiring necessary resources (like dictionaries or reference books).\n*   **Evaluating Other Options:**\n    *   **Waste time (A):** This is the opposite of the intended purpose, which is to be an effective use of time for academic growth.\n    *   **Punish pupils (C):** While homework can sometimes be misused, its purpose is not punitive; it is an instructional tool.\n    *   **Test handwriting (D):** While assignments involve handwriting, this is a minor, incidental aspect, not the main educational purpose of the task itself.\n\nTherefore, **Reinforce learning (B)** is the most accurate and fundamental purpose of homework."
+  },
+  {
+    "id": 17,
+    "question": "A phonics lesson teaches:",
+    "options": {
+      "A": "Sound-letter relationships",
+      "B": "Handwriting",
+      "C": "Colour mixing",
+      "D": "Athletes' names"
+    },
+    "answer": "A",
+    "explanation": "A phonics lesson is a core component of literacy education that focuses on teaching the relationships between the letters of the alphabet (graphemes) and the sounds they represent (phonemes).\n\n*   **Option A (Sound-letter relationships)** is correct because **phonics instruction** is defined as the method of teaching children to read by teaching them the systematic link between the letters they see on a page and the sounds of spoken language. A typical phonics lesson teaches students to look at a letter (or group of letters) and say the sound it represents, which is essential for decoding and blending sounds to read words.\n*   **Option B (Handwriting)** is a related but separate skill, often called *penmanship* or *graphomotor skill*, which focuses on forming letters correctly. It is not the definition of phonics.\n*   **Option C (Colour mixing)** is a topic belonging to art education.\n*   **Option D (Athletes' names)** is a matter of general knowledge and is not a component of reading instruction."
+  },
+  {
+    "id": 18,
+    "question": "A learning target must be:",
+    "options": {
+      "A": "Secret",
+      "B": "Clear and specific",
+      "C": "Too long",
+      "D": "Only for teachers"
+    },
+    "answer": "B",
+    "explanation": "A learning target must be **clear and specific** because its fundamental purpose is to communicate the intended outcome of a lesson or unit to both the teacher and the learner.\n\n*   **Clarity and Specificity:** An effective learning target must be specific, measurable, attainable, relevant, and timely (S.M.A.R.T.) to be useful. This clarity is crucial because it helps improve learning outcomes by focusing on particular, actionable goals. It defines the exact skills, knowledge, or understanding students need to acquire, preventing them from guessing what they are supposed to learn. The specific content and the required level of thinking must be clearly articulated to provide a strong structure for evaluating student performance.\n\n*   **Why other options are incorrect:**\n    *   **Secret (A):** A learning target should be public and shared. If the target is a secret, students cannot direct their effort effectively, which hinders self-assessment and learning.\n    *   **Too long (C):** While a target must be comprehensive, it should also be concise and written in student-friendly language to be easily understood and used as a guide.\n    *   **Only for teachers (D):** Learning targets are essential for both effective teaching *and* learning. They help the teacher plan instruction and assessment, and they empower students to take ownership of their learning by knowing the goal."
+  },
+  {
+    "id": 19,
+    "question": "Teacher reflection means:",
+    "options": {
+      "A": "Looking at the mirror",
+      "B": "Thinking about one’s teaching",
+      "C": "Avoiding mistakes",
+      "D": "Copying notes"
+    },
+    "answer": "B",
+    "explanation": "Teacher reflection is a deliberate and critical process where an educator analyzes their own professional practice.\n\n*   **Option B (Thinking about one’s teaching)** accurately captures the core meaning of teacher reflection. It involves a systematic self-analysis of one's teaching methods, strategies, and the results achieved in the classroom. This process includes regularly examining and evaluating instructional techniques, classroom interactions, and educational outcomes to determine what works, what doesn't, and why. It can be described as looking at what one does in the classroom, thinking about the reasons for those actions, and evaluating the effectiveness of the practice.\n\n*   **Option A (Looking at the mirror)** is a literal action related to physical appearance and has no connection to pedagogical self-assessment.\n\n*   **Option C (Avoiding mistakes)** is a desirable *goal* or *outcome* of teacher reflection (improving practice), but it is not the *process* of reflection itself.\n\n*   **Option D (Copying notes)** is a clerical or student task that is entirely unrelated to the professional self-evaluation and analysis that defines teacher reflection.\n\nTherefore, the most fundamental and accurate description of teacher reflection is the act of thinking critically about one's teaching."
+  },
+  {
+    "id": 20,
+    "question": "A good classroom routine helps:",
+    "options": {
+      "A": "Discipline and learning",
+      "B": "Teachers travel",
+      "C": "Pupils play freely",
+      "D": "Random noise"
+    },
+    "answer": "A",
+    "explanation": "A good classroom routine helps to establish structure and predictability in the learning environment, which is highly beneficial for both discipline and learning.\n\n*   **Discipline:** Classroom routines create order and structure, which contributes to effective classroom management and helps students govern their own behavior in ways that support learning. When students are familiar with how to perform tasks and transition between activities (e.g., how to enter the room, what to do when finished with work, or how to get materials), they can navigate the classroom without constant guidance, minimizing confusion and the opportunities for disruptive behavior. This predictability helps maintain momentum and supports positive classroom discipline.\n\n*   **Learning:** Routines prime the brain for learning by freeing up students' cognitive resources that would otherwise be spent figuring out what to do next. When students know the procedures, they can focus their attention on the academic content, which leads to a more conducive and impactful learning environment. This structure helps students feel more relaxed and secure, allowing them to concentrate on the educational tasks.\n\n*   **Other Options:**\n    *   **Option B (Teachers travel):** While routines may free up a teacher's time, the primary function is not to facilitate \"teachers travel.\"\n    *   **Option C (Pupils play freely):** A good routine provides structure, which is the opposite of playing \"freely\" in an undirected manner, especially during instructional time.\n    *   **Option D (Random noise):** Good routines are designed to minimize random noise and confusion by promoting order and organization.\n\nTherefore, the main and most comprehensive benefit of a good classroom routine is its positive impact on **Discipline and learning**."
+  },
+  {
+    "id": 21,
+    "question": "A story map is used to teach:",
+    "options": {
+      "A": "Numeracy",
+      "B": "Reading comprehension",
+      "C": "ICT skills",
+      "D": "PE"
+    },
+    "answer": "B",
+    "explanation": "A story map is a type of graphic organizer used in literacy education to help students understand the structure and elements of a narrative text.\n\n*   **Reading Comprehension Focus:** The primary goal of using a story map is to improve **reading comprehension**. By visually breaking down a story, it helps students better understand and remember the meaning of the text.\n*   **Key Elements:** A story map prompts students to identify, track, and organize the essential components of a story, which typically include:\n    *   **Characters** (who is in the story)\n    *   **Setting** (where and when the story takes place)\n    *   **Plot** (the sequence of events)\n    *   **Problem/Conflict**\n    *   **Resolution**\n    *   **Theme** (the main idea or moral)\n*   **Mechanism of Support:** By requiring students to analyze and summarize these elements, a story map encourages active reading, promotes critical thinking about the text's structure, and solidifies their understanding of the story's core message. This process directly develops the skills necessary for strong reading comprehension."
+  },
+  {
+    "id": 22,
+    "question": "Pupils learn best when they are:",
+    "options": {
+      "A": "Afraid",
+      "B": "Engaged and supported",
+      "C": "Silent always",
+      "D": "Left alone"
+    },
+    "answer": "B",
+    "explanation": "Pupils learn best when they are **engaged and supported** because these two factors are crucial for effective learning and cognitive development.\n\n*   **Engagement:** Student engagement is fundamental to learning and academic success, transforming pupils into motivated, active participants in the classroom. When pupils are engaged, they are more enthusiastic, invested in their education, and develop a passion for learning that encourages them to become lifelong learners. Engagement is often enhanced when learning is made interesting, such as through integrated learning that connects multiple subjects.\n*   **Support:** A supportive learning environment encompasses a comfortable, well-equipped, and distraction-free space, but also, critically, positive social conditions. Support provides the necessary structure and safety that allows students to focus and retain information better. It also includes providing opportunities for pupils to interact, such as explaining key concepts to each other, which further aids learning.\n\n**Why the other options are incorrect:**\n\n*   **Afraid (Option A):** Fear and chronic anxiety significantly hinder learning and negatively affect the brain architecture responsible for memory and learning. High levels of fear can make it difficult for students to read, understand, and retain academic material, undermining their ability to succeed.\n*   **Silent always (Option C) and Left alone (Option D):** Learning is often a social process that requires interaction, communication, and guidance. Being constantly silent or left alone contradicts the need for active participation, positive social conditions, and opportunities to explain and discuss concepts, all of which are vital for deeper understanding."
+  },
+  {
+    "id": 23,
+    "question": "A teaching method is:",
+    "options": {
+      "A": "A strategy for instruction",
+      "B": "A punishment tool",
+      "C": "School building",
+      "D": "Teacher salary"
+    },
+    "answer": "A",
+    "explanation": "A teaching method is fundamentally defined as a structured approach, set of principles, or collection of techniques and **strategies** used by an educator to facilitate student learning and achieve instructional goals.\n\n*   **Option A: A strategy for instruction** is the correct definition. Teaching methods—such as the flipped classroom, project-based learning, direct instruction, or collaborative learning—are the various pedagogical strategies and management techniques employed in the classroom to deliver knowledge and enable learning. The term \"strategy\" directly aligns with the core function of a teaching method.\n\n*   **Option B (A punishment tool), Option C (School building), and Option D (Teacher salary)** are incorrect. These options refer to disciplinary measures, a physical location, and compensation, respectively, which are all distinct components of the educational system but do not define the specific pedagogical approach or strategy used by a teacher to instruct students."
+  },
+  {
+    "id": 24,
+    "question": "Oral reading helps develop:",
+    "options": {
+      "A": "Sports skills",
+      "B": "Fluency",
+      "C": "Music",
+      "D": "Anger"
+    },
+    "answer": "B",
+    "explanation": "Oral reading is a critical instructional strategy for developing reading skills, with its primary target being **fluency**.\n\n*   **Fluency Defined:** Reading fluency is the ability to read a text accurately, quickly, and with proper expression (prosody), making it sound like spoken language.\n*   **The Mechanism of Development:** When a student reads aloud, they practice all the core components of fluency simultaneously:\n    *   **Accuracy:** Reading the words correctly. Guided oral reading helps students build decoding skills and improve their reading accuracy.\n    *   **Rate (Speed):** Repeated oral practice helps students transition from slow and labored reading to a more automatic and appropriate pace.\n    *   **Prosody (Expression):** Reading aloud requires the reader to pay attention to punctuation and meaning to deliver the text with appropriate rhythm, tone, and intonation, which is a key sub-skill of fluency.\n*   **The Link to Comprehension:** Developing oral reading fluency is essential because it frees up cognitive resources. When a reader is no longer struggling to decode individual words, they can focus their attention on understanding the text's meaning (reading comprehension).\n\nThe other options are incorrect:\n*   **Sports skills** and **Anger** are unrelated to the process of reading a text.\n*   While reading literature (poetry, lyrics) might *relate* to **Music** appreciation, oral reading's direct and primary educational outcome is the mechanical and expressive skill of reading, which is fluency."
+  },
+  {
+    "id": 25,
+    "question": "A competent teacher must know:",
+    "options": {
+      "A": "Content, pedagogy and learners",
+      "B": "Only content",
+      "C": "Only textbooks",
+      "D": "Only exams"
+    },
+    "answer": "A",
+    "explanation": "A competent teacher's knowledge is holistic and is fundamentally based on the interconnected domains of content, pedagogy, and learners.\n\n*   **Content Knowledge (Subject Matter):** A competent teacher must possess a deep and accurate understanding of the subject matter they teach. This is the \"what\" of teaching. Without strong content knowledge, a teacher cannot effectively communicate the material or answer student questions with authority.\n*   **Pedagogy (Teaching Strategies and Methods):** Pedagogy is the science and art of teaching, representing the \"how\" of teaching. A competent teacher has proper training and experience in pedagogical practices, which includes effective instructional methods, classroom management, and using appropriate teaching strategies.\n*   **Learners (Student Knowledge):** This domain, the \"whom\" of teaching, involves understanding student development, learning styles, background knowledge, and the diversity of learners. A teacher must be able to adapt their content and pedagogy to the specific needs of their students to support their academic growth.\n\nThe synergy between these three domains is captured by models of teacher knowledge, such as Pedagogical Content Knowledge (PCK), which emphasizes a teacher's ability to blend subject knowledge with teaching strategies specifically to help students learn.\n\nThe alternative options are incomplete:\n*   **Option B (\"Only content\"):** Knowing the subject alone is insufficient; a person may be an expert but lack the skills to effectively convey that knowledge to others (pedagogy).\n*   **Option C (\"Only textbooks\"):** Textbooks are a tool or resource, not a comprehensive domain of professional knowledge.\n*   **Option D (\"Only exams\"):** Exams are a form of assessment, a component of pedagogy and curriculum, but they do not constitute the necessary breadth of knowledge for competent teaching."
+  },
+  {
+    "id": 26,
+    "question": "The headteacher supervises teachers to:",
+    "options": {
+      "A": "Harass them",
+      "B": "Improve teaching",
+      "C": "Punish latecomers",
+      "D": "Reduce their pay"
+    },
+    "answer": "B",
+    "explanation": "The headteacher's primary responsibility in supervising teachers is to improve the quality of instruction and, by extension, student learning.\n\n*   **Focus on Instructional Improvement:** The core purpose of educational supervision is developmental, aiming to enhance the teaching skills of educators and acquaint them with new pedagogical approaches. The headteacher, as a school leader, is expected to focus on teaching and learning in order to improve teachers' classroom strategies.\n*   **Quality Assurance and Feedback:** Through observation and monitoring, the headteacher assesses the effectiveness of instructional practices, provides valuable feedback, and offers the necessary tools for teachers to maintain and improve teaching standards. This process helps teachers in self-evaluation using the supervisor's input.\n*   **Inappropriate Alternatives:** The other options—\"Harass them,\" \"Punish latecomers,\" and \"Reduce their pay\"—are not the main or intended goals of instructional supervision. While the headteacher does manage discipline (like latecomers) and administrative tasks (like payroll, though generally not arbitrary pay reduction), the function of **supervising teachers** specifically relates to the professional and instructional aspects of their job, which is centered on improving teaching and learning."
+  },
+  {
+    "id": 27,
+    "question": "Visual aids help learners to:",
+    "options": {
+      "A": "Memorize without thinking",
+      "B": "Understand concepts",
+      "C": "Sleep in class",
+      "D": "Copy notes only"
+    },
+    "answer": "B",
+    "explanation": "Visual aids, such as diagrams, charts, pictures, and slides, are fundamental tools in education designed to enhance the learning process.\n\n*   **Option B: Understand concepts** is the correct answer because the primary purpose and benefit of visual aids is to simplify complex ideas, making it easier for learners to grasp and retain information. They work by visually representing key concepts, which helps students to break down and process complicated material, leading to a clearer and deeper understanding.\n*   **Other Options are Incorrect:**\n    *   **Option A (Memorize without thinking):** While visual aids do enhance memory and retention, they are also intended to stimulate cognitive abilities and cultivate critical thinking, directly contradicting the idea of learning \"without thinking\".\n    *   **Option C (Sleep in class):** This is the opposite of their intended effect; visual aids are meant to make lessons more engaging and stimulating to keep learners attentive.\n    *   **Option D (Copy notes only):** Visual aids clarify and support the understanding of the material itself, and they are not merely a tool for the mechanical act of transcribing notes."
+  },
+  {
+    "id": 28,
+    "question": "GES stands for:",
+    "options": {
+      "A": "General Education System",
+      "B": "Ghana Education Service",
+      "C": "Ghana Exam Scheme",
+      "D": "Global Education Society"
+    },
+    "answer": "B",
+    "explanation": "The acronym **GES** primarily stands for **Ghana Education Service**, especially in the context of government agencies and education systems in Africa.\n\n*   **Ghana Education Service (GES)** is a government agency in Ghana, operating under the Ministry of Education.\n*   Its principal responsibility is the implementation of approved national policies on education and the day-to-day administration of pre-tertiary education in the country.\n*   This includes managing teachers, overseeing schools, and implementing educational policies to ensure all Ghanaian children of school-going age receive education.\n*   While GES can stand for other organizations or terms (such as Genius Educational Systems), the context of a general knowledge or education question strongly points to the Ghana Education Service due to its prominence as a major national educational body."
+  },
+  {
+    "id": 29,
+    "question": "A creative arts lesson helps build:",
+    "options": {
+      "A": "Only drawing",
+      "B": "Imagination and expression",
+      "C": "Anger",
+      "D": "Laziness"
+    },
+    "answer": "B",
+    "explanation": "A creative arts lesson is fundamentally designed to foster key developmental skills, making \"Imagination and expression\" the most accurate and comprehensive benefit.\n\n*   **Imagination and Creativity:** Creative arts, which include visual arts, music, dance, and drama, explicitly boost a learner's creativity and imagination. These lessons encourage divergent thinking, allowing students to explore new ideas, concepts, and perspectives, which is the core of imaginative thought.\n*   **Expression and Communication:** The arts serve as a powerful medium for **expression**, enabling students to communicate their feelings, thoughts, and experiences that may be difficult to put into words. This ability to express oneself fosters emotional intelligence and communication skills.\n*   **Why other options are incorrect:**\n    *   **Option A (\"Only drawing\")** is too narrow. Creative arts encompass a broad curriculum, including music, drama, dance, and various visual arts beyond just drawing.\n    *   **Option C (\"Anger\") and D (\"Laziness\")** are not the educational goals of a creative arts lesson. While art can be a healthy outlet for expressing strong emotions like anger, the lesson's aim is positive development, promoting discipline and resilience, not anger or laziness."
+  },
+  {
+    "id": 30,
+    "question": "Peer learning occurs when:",
+    "options": {
+      "A": "Pupils learn from each other",
+      "B": "Teachers talk only",
+      "C": "Books teach themselves",
+      "D": "Pupils sit quietly"
+    },
+    "answer": "A",
+    "explanation": "Peer learning is an educational method where students or pupils learn with and from each other, often by sharing knowledge, teaching, or collaborating on activities.\n\n*   **Option A: \"Pupils learn from each other\"** accurately defines peer learning. This approach can involve one student tutoring another, collaborative knowledge sharing among equals, or a student acting as a peer facilitator. The core characteristic is the reciprocal flow of knowledge and understanding between students, or \"peers\".\n*   **Option B: \"Teachers talk only\"** describes a traditional, teacher-centered, didactic method of instruction, which excludes the essential student-to-student interaction that defines peer learning.\n*   **Option C: \"Books teach themselves\"** is nonsensical. Books are learning resources, but the learning process still requires active engagement from the pupil.\n*   **Option D: \"Pupils sit quietly\"** describes a behavioral state (passive quietness) but does not define an active learning process or educational method. Peer learning, by contrast, often involves active discussion, collaboration, and teaching."
+  },
+  {
+    "id": 31,
+    "question": "Teaching aids must be:",
+    "options": {
+      "A": "Complex",
+      "B": "Suitable and simple",
+      "C": "Expensive",
+      "D": "Rare"
+    },
+    "answer": "B",
+    "explanation": "Teaching aids should be **suitable and simple** to effectively facilitate the learning process.\n\n*   **Suitable (Relevant):** Effective teaching aids must be relevant to the curriculum and the specific teaching objectives. They should be meaningful, useful, up-to-date, and age-appropriate for the students. An aid is suitable if it correlates with the text material and classwork, and helps to either support or explain a learning point.\n*   **Simple:** A good teaching aid should be simple and easy to understand. If a visual or material is too complicated or complex (Option A), it can overwhelm students and distract them from the main lesson rather than aiding their comprehension. Simplicity also ensures that all students in the classroom can access and use the aids effectively.\n\nThe other options are incorrect because:\n*   **Complex (Option A):** Complexity is a characteristic to avoid, as it can confuse students.\n*   **Expensive (Option C):** Effective teaching aids should ideally be cost-effective. While some valuable aids may be expensive, cost is not a defining necessity, and inexpensive or even homemade aids can be highly effective.\n*   **Rare (Option D):** Rarity is not a quality of a good teaching aid. Aids should be readily available or reproducible to ensure they can be used consistently and by multiple teachers and students."
+  },
+  {
+    "id": 32,
+    "question": "Homework must be:",
+    "options": {
+      "A": "Too long",
+      "B": "Purposeful",
+      "C": "Punishment",
+      "D": "Irrelevant"
+    },
+    "answer": "B",
+    "explanation": "The chosen answer, **Option B (Purposeful)**, is correct because the most fundamental characteristic of effective homework is that it must serve a clear educational function.\n\n*   **Purposeful Homework:** Effective homework is defined by its educational goal. It is assigned to:\n    *   **Practice and Reinforce** skills learned in the classroom, aiding in mastery and skill consolidation.\n    *   **Prepare** students for future lessons or activities.\n    *   **Check for Understanding**, allowing students and teachers to identify learning gaps.\n    *   **Encourage Independent Learning** and the development of study habits.\n    When homework is purposeful, it is meaningful, efficient, and clearly connected to the curriculum, thereby maximizing its positive impact on student achievement.\n\n*   **Why other options are incorrect:**\n    *   **A (Too long):** Good homework must be **efficient**. Homework that is too long leads to student stress, burnout, and can disrupt necessary family time and recreation, counteracting its educational value.\n    *   **C (Punishment):** Homework should be a tool for learning and skill development, not a punitive measure. Using homework as punishment undermines its core educational purpose and fosters negative attitudes toward learning.\n    *   **D (Irrelevant):** If homework is \"Purposeful,\" it cannot be \"Irrelevant\". Irrelevant assignments that simply ask for rote memorization or have no clear connection to learning goals are considered ineffective."
+  },
+  {
+    "id": 33,
+    "question": "A learning style refers to:",
+    "options": {
+      "A": "Teacher’s handwriting",
+      "B": "Preferred way a child learns",
+      "C": "Classroom design",
+      "D": "Uniform type"
+    },
+    "answer": "B",
+    "explanation": "A learning style refers to the different ways in which an individual prefers to absorb, process, and retain new information. It is essentially a person's **preferred way a child learns** (Option B).\n\n*   The concept assumes that each person has a unique method or approach to interpreting and engaging with educational input.\n*   Common models of learning styles, such as the VARK model, categorize these preferences into **V**isual (learning by seeing), **A**uditory (learning by hearing), **R**ead/Write (learning through text), and **K**inesthetic (learning by doing or hands-on experience).\n*   Therefore, the term specifically addresses an individual's psychological and cognitive approach to learning, making options A (Teacher's handwriting), C (Classroom design), and D (Uniform type) incorrect, as they refer to external or superficial elements of the educational environment, not the individual's inherent learning preference."
+  },
+  {
+    "id": 34,
+    "question": "Inquiry learning best suits:",
+    "options": {
+      "A": "Passive learners",
+      "B": "Active learners",
+      "C": "Lazy learners",
+      "D": "Absent teachers"
+    },
+    "answer": "B",
+    "explanation": "Inquiry-based learning (IBL) is an educational approach that fundamentally relies on **active student engagement** and exploration, making it best suited for active learners.\n\n*   **Active Exploration and Student-Centered:** Inquiry learning is a student-centered approach that requires students to be actively involved in the process of learning, rather than being passive recipients of information. Active learners thrive in this environment because the method encourages them to ask questions, explore topics, seek out information, and actively participate in problem-solving and decision-making.\n*   **Proactive Learning and Critical Thinking:** IBL emphasizes proactive learning, problem-solving, and the development of critical thinking skills, where students don't simply accept information as is but are encouraged to question, think from different perspectives, and engage in deeper understanding. These activities are hallmarks of an active learner who is self-directed and eager to discover knowledge.\n*   **Shift from Passive:** The very premise of inquiry-based learning is to move students from a traditional \"passive\" role, where the teacher is the only active participant, to an \"active\" one, where the student propels the learning process. Therefore, learners who are already active or are ready to embrace an active role are the best fit for this method."
+  },
+  {
+    "id": 35,
+    "question": "Child protection ensures:",
+    "options": {
+      "A": "High scores",
+      "B": "Safety and welfare",
+      "C": "Homework completion",
+      "D": "Paintings on walls"
+    },
+    "answer": "B",
+    "explanation": "Child protection is a fundamental system of measures and structures established to safeguard children. Its primary and overarching goal is to **ensure that all children are safe and free from harm or danger**. This comprehensive objective encompasses the child's **safety and welfare** by working to prevent and respond to violence, exploitation, abuse, and neglect, which aligns with international standards like the UN Convention on the Rights of the Child.\n\nThe concept of \"safety and welfare\" is inclusive, covering the child's right to grow, learn, and flourish without fear. Therefore, Option B is the correct answer because:\n*   **Safety** directly addresses the core purpose of child protection: protecting children from harm.\n*   **Welfare** is a broader term that encompasses the well-being of the child, ensuring they have the necessary conditions (like freedom from abuse and neglect) to thrive.\n*   Options A (\"High scores\"), C (\"Homework completion\"), and D (\"Paintings on walls\") are irrelevant to the core mission of child protection, which is focused on physical and emotional security rather than academic performance or aesthetic concerns."
+  },
+  {
+    "id": 36,
+    "question": "Class registers record:",
+    "options": {
+      "A": "Promotions",
+      "B": "Attendance",
+      "C": "Salaries",
+      "D": "Homework"
+    },
+    "answer": "B",
+    "explanation": "A **class register**, also frequently called a **student attendance register**, is a fundamental record-keeping document used in educational institutions.\n\n*   **Primary Function:** The primary and most essential function of a class register is to meticulously track and record the daily **attendance** of students enrolled in a specific class. It typically contains the names and roll numbers of the students and is used by the teacher to mark which students are present or absent each school day.\n*   **Importance:** Recording attendance is crucial for administrative purposes, understanding student engagement, and identifying potential issues like truancy, which may require intervention. Accurate attendance records are also important for school funding and accountability.\n*   **Why other options are incorrect:**\n    *   **Promotions** are typically recorded in a student's permanent file or an admission/progress register, not the daily class register.\n    *   **Salaries** are an administrative and financial record for staff, completely separate from a student class register.\n    *   **Homework** assignments and completion are usually tracked in a grade book, student planner, or a separate assignment log, not the official attendance register.\n\nTherefore, **Attendance** is the sole option that accurately describes the main purpose and content of a class register."
+  },
+  {
+    "id": 37,
+    "question": "Phonics teaches children to read by:",
+    "options": {
+      "A": "Looking at pictures",
+      "B": "Linking sounds to symbols",
+      "C": "Guessing words",
+      "D": "Memorizing whole texts"
+    },
+    "answer": "B",
+    "explanation": "Phonics is a method of teaching reading that is based on the **alphabetic principle**, which is the understanding that letters and letter patterns represent the sounds of spoken language.\n\n*   **Option B: Linking sounds to symbols** is the most accurate definition of phonics instruction. Phonics teaches children the fundamental relationship between phonemes (the smallest units of sound in a language) and graphemes (the written symbols, or letters, that represent those sounds). This process is known as teaching **letter-sound correspondences**. By learning these links, a child can decode (sound out) unfamiliar words and blend the sounds together to read the whole word.\n\n*   **Option A (Looking at pictures)** and **Option C (Guessing words)** are strategies often associated with the \"whole language\" approach or an over-reliance on contextual cues, which is a different method than the explicit, systematic decoding taught in phonics. Phonics teaches children to break words down into sounds, not to guess them.\n\n*   **Option D (Memorizing whole texts)** involves sight recognition and is not the central mechanism of phonics instruction, which focuses on providing a strategy for reading *any* word by linking its individual parts (sounds) to its written symbols (letters)."
+  },
+  {
+    "id": 38,
+    "question": "A teacher’s lesson notes must be:",
+    "options": {
+      "A": "Borrowed",
+      "B": "Prepared and approved",
+      "C": "Hidden",
+      "D": "Very short"
+    },
+    "answer": "B",
+    "explanation": "The teacher's lesson notes, often referred to as a lesson plan, are a crucial element of professional teaching practice and are required to be **prepared and approved**.\n\n*   **Prepared:** All professional standards for teachers require thorough planning and implementation of lessons. Lesson notes serve as the detailed blueprint for a lesson, ensuring the teacher has:\n    *   A clear grasp of the lesson's intended learning outcomes and objectives.\n    *   A well-structured sequence of activities that address the curriculum content.\n    *   Considered various teaching methods, resources, and assessment strategies to meet the diverse needs of students.\n    *   A record of what has been taught, which is essential for continuity and future reference, including for summative assessments.\n\n*   **Approved:** In nearly all educational institutions, a teacher's lesson notes must be submitted to and approved by a senior teacher, department head, or school administrator. This administrative approval process is critical for several reasons:\n    *   **Quality Assurance:** It ensures the lessons are aligned with the school's scheme of work, curriculum requirements, and institutional standards for quality instruction.\n    *   **Supervision and Accountability:** It provides evidence that the teacher is adequately preparing for their classes and allows management to supervise the teaching and learning process effectively.\n    *   **Guidance and Support:** It allows administrators to offer feedback, suggest improvements, and ensure the teacher is employing effective teaching strategies.\n\nOptions A (\"Borrowed\"), C (\"Hidden\"), and D (\"Very short\") are incorrect because they contradict professional standards. Lesson notes must be original and comprehensive (not borrowed or very short) to demonstrate a teacher's personal grasp of the material, and they must be accessible to supervisors (not hidden) for accountability and quality control."
+  },
+  {
+    "id": 39,
+    "question": "A good test must be:",
+    "options": {
+      "A": "Too difficult",
+      "B": "Reliable",
+      "C": "Written fast",
+      "D": "With no marking scheme"
+    },
+    "answer": "B",
+    "explanation": "Option B, **Reliable**, is the correct answer because reliability is one of the fundamental and non-negotiable characteristics of a high-quality assessment tool.\n\n*   **Reliability Defined:** Reliability refers to a test's ability to produce **consistent results** under consistent conditions. For a test to be reliable, an individual should receive a similar score if they take the test on different occasions (assuming no change in their knowledge), or if the test is scored by different markers (marker reliability).\n*   **Crucial for Decision-Making:** Along with validity (the test measuring what it is supposed to measure), reliability is considered one of the two most important technical properties of any test. Without reliability, the results of the test would be inconsistent, making any decisions or inferences based on the scores ineffective or even harmful.\n\n---\n\n**Why the other options are incorrect:**\n\n*   **A: Too difficult:** A good test should be designed to be appropriate for the intended purpose and target group, which relates to the characteristic of **usability** or **feasibility**. A test that is \"too difficult\" (where most students fail) does not effectively measure the full range of achievement and is generally considered a poor test because it lacks discriminability among higher-achieving students.\n*   **C: Written fast:** The speed at which a test is written is completely irrelevant to its quality. In fact, developing a reliable and valid test requires a time-consuming and careful process of drafting, reviewing, and piloting.\n*   **D: With no marking scheme:** A good test requires a clear method of assessment and interpretation. A **marking scheme** (or scoring rubric) is essential for ensuring **objectivity**—another key characteristic of a good test—by minimizing the influence of the marker's personal judgment on the score. Therefore, a good test *must* have a clear marking scheme."
+  },
+  {
+    "id": 40,
+    "question": "Pupil-centred learning focuses on:",
+    "options": {
+      "A": "Teacher teaching",
+      "B": "Learner engagement",
+      "C": "Rote learning",
+      "D": "Silent copying"
+    },
+    "answer": "B",
+    "explanation": "Pupil-centred learning (also known as student-centered or learner-centered education) is an educational approach that fundamentally shifts the focus of instruction from the teacher to the student.\n\n*   **Focus on Learner Engagement (Option B is Correct):** The core principle of pupil-centred learning is to prioritize the student's needs, interests, and learning styles. It requires students to be active participants in their own education, which is achieved through **learner engagement**. This approach encourages students to actively engage, think critically, problem-solve, and collaborate, often by involving them in decisions about what and how they learn.\n*   **Contrasting with Incorrect Options:**\n    *   **Teacher teaching (Option A)** represents the traditional, teacher-centered model, which pupil-centred learning is designed to move away from.\n    *   **Rote learning (Option C)** and **Silent copying (Option D)** are passive, non-engaging methods that emphasize memorization or mere reproduction, which contradicts the pupil-centred goals of critical thinking, problem-solving, and active participation."
+  },
+  {
+    "id": 41,
+    "question": "Number bonds teach:",
+    "options": {
+      "A": "Singing",
+      "B": "Basic addition and subtraction",
+      "C": "Drawing",
+      "D": "Spelling"
+    },
+    "answer": "B",
+    "explanation": "Number bonds are a fundamental concept in early mathematics education designed to teach the relationship between a whole number and the parts that make it up. They illustrate how numbers join together (addition) and how they can be broken down (subtraction).\n\n*   **Definition:** A number bond is a pair of numbers that, when added together, always equal a specific whole number. For example, the number bond for 7 could show parts 3 and 4 (3 + 4 = 7).\n*   **Addition:** Number bonds directly teach addition by showing that the two 'parts' combine to form the 'whole.'\n*   **Subtraction:** The same number bond simultaneously teaches the related subtraction facts. If a whole number is known, and one part is subtracted, the remaining part is the answer (e.g., if $3 + 4 = 7$, then $7 - 3 = 4$ and $7 - 4 = 3$).\n*   **Foundation:** This concept forges the number sense necessary for students to grasp early addition and subtraction and helps them understand the inverse relationship between the two operations.\n\nTherefore, number bonds are a critical tool for mastering basic addition and subtraction."
+  },
+  {
+    "id": 42,
+    "question": "Peer assessment helps pupils:",
+    "options": {
+      "A": "Punish each other",
+      "B": "Review each other’s work",
+      "C": "Hide errors",
+      "D": "Avoid responsibility"
+    },
+    "answer": "B",
+    "explanation": "Peer assessment, often called peer review, is a structured educational activity where students evaluate, critique, and provide constructive feedback on a classmate's work against set criteria. The primary function and core of this activity is the **review of each other's work**.\n\n*   **Correct Option (B): Review each other’s work**\n    *   Peer assessment involves students reading, analyzing, and providing feedback on their peers' assignments, papers, presentations, or projects.\n    *   This process gives students multiple perspectives on their work and a richer picture of their performance, which helps them understand and improve their own learning and work.\n    *   By actively engaging in the evaluation process, students also deepen their understanding of the learning objectives and the criteria for quality work.\n\n*   **Incorrect Options:**\n    *   **Punish each other (A):** The purpose of peer assessment is constructive feedback and learning, not disciplinary action or punishment.\n    *   **Hide errors (C):** Peer assessment is designed to achieve the opposite—to help students identify errors and areas for improvement so they can refine their work.\n    *   **Avoid responsibility (D):** Peer assessment encourages students to take on greater responsibility for their own learning and for the evaluation of others' work, which develops critical evaluation skills."
+  },
+  {
+    "id": 43,
+    "question": "GES Code of Conduct guides:",
+    "options": {
+      "A": "Markets",
+      "B": "Teacher behaviour",
+      "C": "Pupil handwriting",
+      "D": "Textbook prices"
+    },
+    "answer": "B",
+    "explanation": "The GES Code of Conduct is issued by the Ghana Education Service (GES) and is primarily designed to regulate the professional standards of its personnel, which includes teachers.\n\n*   **Focus on Personnel Behavior:** The GES Code of Conduct outlines rules of conduct and defines misconduct to uphold high standards of behavior for education staff. It is a foundational document that provides the framework for professional conduct and discipline for all GES personnel, including teachers.\n*   **Specific Guidance for Teachers:** Search results specifically mention the \"GES Code of Conduct for teachers\" and confirm that the document guides teachers on their professional conduct, including adherence to a dressing code and serving as role models.\n*   **Exclusion of Other Options:** While the GES also has a Code of Conduct for students, which might touch upon issues like managing damaged textbooks or maintaining discipline (which indirectly relates to handwriting), the primary function of the **GES Code of Conduct**—especially when contrasted with the broad choices—is to guide the professional **Teacher behaviour**. The Code does not directly guide general \"Markets\" or set \"Textbook prices,\" making **Option B** the most direct and accurate answer."
+  },
+  {
+    "id": 44,
+    "question": "Permanent records include:",
+    "options": {
+      "A": "Test scripts",
+      "B": "Report cards",
+      "C": "Drama scripts",
+      "D": "Sports scores"
+    },
+    "answer": "B",
+    "explanation": "A **permanent record** in an educational setting refers to official documents that chronicle a student's history and progress throughout their time at the institution, and which are retained by the school district for an extended period, often indefinitely or for many decades. These records are crucial for a student's future educational and professional pursuits.\n\n*   **Report Cards (Option B) are a component of the Permanent Record:** Report cards contain a student's official final grades for courses taken, which are a fundamental part of the academic transcript. Academic transcripts, which are summaries of classes taken and **grades earned**, are considered the primary or \"only true permanent record\" of a student's academic history, required by future employers or universities. Therefore, the report card, which documents these official grades, is classified as a permanent record.\n*   **Test scripts (Option A)** are generally temporary documents. In an educational context, these would be the specific answers or details of a single assessment, not the summary of performance kept long-term. In other contexts, \"test scripts\" refer to instructions for software testing.\n*   **Drama scripts (Option C)** are creative or performance documents. They are not official institutional or student performance records.\n*   **Sports scores (Option D)** are records of athletic competition results. While a student's participation in co-curricular activities may be noted, the specific scores of individual games are not part of the mandatory, long-term, academic-focused permanent record."
+  },
+  {
+    "id": 45,
+    "question": "TLRs are:",
+    "options": {
+      "A": "Teachers’ learning rules",
+      "B": "Teaching & Learning Resources",
+      "C": "Textbook loan records",
+      "D": "Term lesson report"
+    },
+    "answer": "B",
+    "explanation": "The correct answer, **Teaching & Learning Resources (TLRs)**, is a widely used and accepted acronym in the field of education.\n\n*   **Definition:** TLRs refer to the essential materials, tools, and technology that educators use to facilitate and support student learning.\n*   **Examples:** These resources can include textbooks, workbooks, visual aids, models, hands-on manipulatives, computer software, multimedia content, laboratory equipment, and even low-cost or free homemade materials.\n*   **Purpose:** The primary function of TLRs is to help students visualize concepts, make learning more concrete, improve comprehension, and enhance the overall effectiveness of teaching.\n\nAlthough the acronym TLR (often used in the singular or plural, TLRs) can also stand for \"Teaching and Learning Responsibility\" in the context of additional payments or allowances for teachers with leadership roles, \"Teaching & Learning Resources\" is a standard and direct interpretation for the multiple-choice option provided."
+  },
+  {
+    "id": 46,
+    "question": "A teacher should evaluate a lesson:",
+    "options": {
+      "A": "After teaching",
+      "B": "Before writing",
+      "C": "After term ends",
+      "D": "During assembly"
+    },
+    "answer": "A",
+    "explanation": "The correct time for a teacher to evaluate a lesson is **after teaching** because the purpose of evaluation is to assess the effectiveness of the instruction and student learning outcomes based on the actual delivery and results.\n\n*   **Necessity of Completion:** A comprehensive lesson evaluation requires a review of the entire teaching-learning process, including the execution of the lesson plan, the methods used, and the students' final performance or demonstration of understanding. This complete picture is only available after the lesson has concluded.\n*   **Reflection and Improvement:** Post-lesson reflection is a critical step in a teacher's professional development. By evaluating immediately after teaching, the teacher can critically and analytically examine what worked well, what challenges arose, and why certain learning objectives were or were not met. This feedback is essential for making specific adjustments and improvements to the lesson for future classes.\n*   **Student Data:** Evaluation involves analyzing student work, classroom participation, and checks for understanding that occurred throughout the session. Only after teaching can the teacher gather all relevant data to form a final judgment on the lesson's success.\n*   **Inappropriate Alternatives:**\n    *   **Before writing** a lesson plan (Option B) is impossible, as the event to be evaluated has not yet taken place.\n    *   **After term ends** (Option C) is too late to make timely pedagogical adjustments to the lesson for immediate future use.\n    *   **During assembly** (Option D) is an inappropriate time and setting for focused professional reflection and data analysis."
+  },
+  {
+    "id": 47,
+    "question": "CPD stands for:",
+    "options": {
+      "A": "Child Protection Department",
+      "B": "Continuous Professional Development",
+      "C": "Classroom Pedagogy Design",
+      "D": "Curriculum Practice Document"
+    },
+    "answer": "B",
+    "explanation": "CPD stands for **Continuous Professional Development**, which is a widely recognized term in the fields of education, healthcare, business, and many other professional industries.\n\n*   **Definition:** Continuous Professional Development (CPD) is a term used to describe the ongoing learning activities that professionals engage in to develop and enhance their abilities, knowledge, and skills. The process is defined as learning experiences that help individuals develop and improve their professional practice, with a focus on what they learn and how they develop.\n*   **Purpose:** The primary goal of CPD is to keep skills, knowledge, and experience up-to-date, which is essential for career progression and maintaining competence in a rapidly evolving professional environment. It involves the intentional and planned maintenance and development of the knowledge and skills needed to perform effectively in a professional role.\n*   **Relevance to Education:** In the context of teaching, CPD is crucial for educators to stay informed about new research in pedagogy, curriculum changes, technological advancements, and best practices in the classroom.\n\nThe acronym CPD may also sometimes be referred to as \"Continual Professional Development\" or \"Continuing Professional Development,\" but \"Continuous Professional Development\" is the common and correct interpretation in this context."
+  },
+  {
+    "id": 48,
+    "question": "Learning outcomes must be:",
+    "options": {
+      "A": "Measurable",
+      "B": "Difficult",
+      "C": "Vague",
+      "D": "Secret"
+    },
+    "answer": "A",
+    "explanation": "The correct answer is **Measurable** because a fundamental purpose of a learning outcome (LO) is to allow educators to determine whether students have successfully acquired the intended knowledge, skills, or attitudes.\n\n### Why Measurable is Correct\n\n*   **Assessment Requirement:** Learning outcomes must be observable and measurable so that assessment tools (like tests, projects, or presentations) can be aligned with them to accurately determine the extent of student achievement.\n*   **SMART Framework:** Measurable is the 'M' in the widely used **S.M.A.R.T.** framework for writing effective objectives (Specific, **Measurable**, Achievable, Relevant, Time-bound).\n*   **Clarity:** A measurable outcome requires the use of strong, action-oriented verbs (e.g., *analyze*, *design*, *evaluate*) rather than vague verbs (e.g., *know*, *understand*), which specify what a learner must **do** to demonstrate mastery.\n\n### Why Other Options Are Incorrect\n\n*   **B) Difficult:** Learning outcomes should be **Achievable** or **Realistic** (the 'A' in SMART). If an outcome is overly difficult or too ambitious, it can discourage students and is not in line with student developmental needs.\n*   **C) Vague:** Effective learning outcomes must be **Clear** and **Specific**. Vague or ambiguous terms make it impossible to properly assess student mastery or for students to know exactly what is expected of them.\n*   **D) Secret:** Learning outcomes must be clearly **communicated** to students. Sharing measurable and achievable outcomes increases the probability of learning and promotes student ownership of their education, making the concept of a \"secret\" outcome counterproductive to the entire educational process."
+  },
+  {
+    "id": 49,
+    "question": "Which is a psychomotor skill?",
+    "options": {
+      "A": "Solving equations",
+      "B": "Running",
+      "C": "Reading aloud",
+      "D": "Reciting alphabets"
+    },
+    "answer": "B",
+    "explanation": "A **psychomotor skill** is an ability that integrates cognitive (mind) functions with physical (motor) movement. These skills are primarily movement-oriented and are demonstrated by physical actions requiring coordination, manipulation, dexterity, strength, and speed.\n\n*   **Option B: Running** is the correct answer because it is a classic example of a **complex psychomotor skill**. Running is an activity that requires the integration of cognitive processing (e.g., balance, spatial awareness, adjusting speed) with gross motor coordination, strength, and physical movement.\n\n*   **Option A: Solving equations** is a **cognitive skill**, as it primarily involves intellectual processes such as reasoning, problem-solving, and critical thinking.\n*   **Option C: Reading aloud** and **Option D: Reciting alphabets** are predominantly **cognitive skills** (memory, recognition, comprehension) with a **verbal/fine motor component** (articulation, speaking), but they are not classified as core psychomotor skills in the same way that large-scale physical movement, like running, is."
+  },
+  {
+    "id": 50,
+    "question": "Pupils in lower primary learn best through:",
+    "options": {
+      "A": "Fear",
+      "B": "Play",
+      "C": "Boredom",
+      "D": "Silence"
+    },
+    "answer": "B",
+    "explanation": "The chosen correct answer, **Option B (Play)**, is consistent with best practices in early childhood and lower primary education.\n\n*   **Developmental Appropriateness:** Pupils in lower primary (typically ages 5-8) are in a critical stage of development where they learn best through active engagement and sensory experiences, making **play-based learning** the most effective pedagogical approach.\n*   **Cognitive and Academic Benefits:** Play is not just recreation; it is fundamental to cognitive development. Through play, children naturally stimulate cognitive development, enhance problem-solving skills, and encourage creativity. Play-based activities and hands-on experiences are crucial for strengthening foundational academic skills such as literacy and mathematics.\n*   **Social and Emotional Learning:** Play provides opportunities for children to practice social skills, develop language abilities, and gain crucial self-regulation and self-education skills. An effective learning environment for this age group should be low-stress, participatory, and encourage active learning.\n*   **Ineffective Alternatives:** The other options are detrimental or ineffective for learning in young children:\n    *   **Fear (A):** Learning under fear creates a high-stress environment, which is counter-productive to memory and cognitive function, especially for young children.\n    *   **Boredom (C):** Boredom indicates a lack of engagement and interest, which directly inhibits effective learning.\n    *   **Silence (D):** While focused time is needed, learning in the primary years is highly dependent on interaction, cooperation, and participation, making absolute silence inappropriate as the primary mode of learning."
+  }
+]

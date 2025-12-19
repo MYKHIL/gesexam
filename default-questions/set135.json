@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "A school improvement plan must be",
+    "options": {
+      "A": "Without timelines",
+      "B": "Evidence-based and developed with stakeholder participation for proper implementation and monitoring",
+      "C": "Hidden",
+      "D": "Unnecessary"
+    },
+    "answer": "B",
+    "explanation": "A School Improvement Plan (SIP) must be grounded in data (evidence-based) to address real needs, and involving all stakeholders (teachers, parents, management) ensures buy-in, relevant input, and shared responsibility for implementation and effective monitoring."
+  },
+  {
+    "id": 2,
+    "question": "The key purpose of appraisal conferences is",
+    "options": {
+      "A": "Gossip",
+      "B": "Discuss appraisal results, set targets and agree on strategies for staff growth and improvement",
+      "C": "Punishment",
+      "D": "Entertainment"
+    },
+    "answer": "B",
+    "explanation": "The appraisal conference is a formal, constructive dialogue focused on the employee's development. Its core purpose is to review past performance results, agree on future performance targets, and determine necessary support or training for continuous staff growth and improvement."
+  },
+  {
+    "id": 3,
+    "question": "A teacher’s portfolio includes",
+    "options": {
+      "A": "Bank details",
+      "B": "Professional documents such as certificates, lesson plans, assessments and CPD records as evidence of growth and performance",
+      "C": "Food timetable",
+      "D": "Student complaints"
+    },
+    "answer": "B",
+    "explanation": "A teacher's professional portfolio is a curated collection of artifacts that demonstrates their competence, professional achievements, and growth over time, typically including planning documents, evidence of assessment, and Continuous Professional Development (CPD) records."
+  },
+  {
+    "id": 4,
+    "question": "Transparency in financial management ensures",
+    "options": {
+      "A": "Mistrust",
+      "B": "Proper utilisation of funds and confidence among stakeholders in school operations and expenditure processes",
+      "C": "Fraud",
+      "D": "Delays"
+    },
+    "answer": "B",
+    "explanation": "Openness in handling finances allows stakeholders to verify that resources are being used appropriately, which builds trust and confidence in the school’s management and financial expenditure processes."
+  },
+  {
+    "id": 5,
+    "question": "The overall purpose of school leadership is",
+    "options": {
+      "A": "Control",
+      "B": "To ensure effective teaching and learning for improved student achievement and holistic development of learners",
+      "C": "Punishment",
+      "D": "Avoiding accountability"
+    },
+    "answer": "B",
+    "explanation": "The central mission of any educational institution is instructional excellence. School leadership is therefore tasked with creating the environment and providing the guidance necessary to ensure effective teaching, leading directly to improved student outcomes and holistic development."
+  },
+  {
+    "id": 6,
+    "question": "The main focus of the Assistant Director I role is to",
+    "options": {
+      "A": "Support school administration",
+      "B": "Strengthen instructional leadership",
+      "C": "Facilitate district-level supervision",
+      "D": "Manage PTA finances"
+    },
+    "answer": "C",
+    "explanation": "The Assistant Director I (ADI) typically operates as a field officer at the district or circuit level, and their main function is to oversee, guide, and assure the quality of education across multiple schools, hence they **Facilitate district-level supervision**."
+  },
+  {
+    "id": 7,
+    "question": "A good leader ensures that decisions are",
+    "options": {
+      "A": "Authoritarian",
+      "B": "Consensus-based where possible",
+      "C": "Made without consultation",
+      "D": "Based on personal preference"
+    },
+    "answer": "B",
+    "explanation": "While leaders must sometimes make final decisions, good practice, especially in educational settings, involves consulting team members and striving for **Consensus-based** decisions where possible to increase acceptance and commitment from those who must implement the decision."
+  },
+  {
+    "id": 8,
+    "question": "Performance management in education ensures",
+    "options": {
+      "A": "Teachers are replaced",
+      "B": "Teaching quality is improved",
+      "C": "Schools receive more funds",
+      "D": "Students write more exams"
+    },
+    "answer": "B",
+    "explanation": "Performance management is a continuous cycle of planning, monitoring, and reviewing staff performance, with the overarching goal of enhancing staff effectiveness and professionalism, directly leading to **Teaching quality is improved**."
+  },
+  {
+    "id": 9,
+    "question": "Delegation is effective when",
+    "options": {
+      "A": "Tasks are unclear",
+      "B": "The supervisor trusts the subordinate",
+      "C": "Responsibilities are avoided",
+      "D": "It is done in emergencies only"
+    },
+    "answer": "B",
+    "explanation": "Trust is foundational to successful delegation. When **The supervisor trusts the subordinate**, they are more likely to grant the necessary authority and autonomy, which empowers the employee and ensures they take ownership of the delegated task."
+  },
+  {
+    "id": 10,
+    "question": "A supervision report must be",
+    "options": {
+      "A": "Emotional",
+      "B": "Evidence-based",
+      "C": "Opinionated",
+      "D": "Strictly oral"
+    },
+    "answer": "B",
+    "explanation": "To be credible and useful for informing subsequent action, a supervision report must be anchored in objective data, verifiable observations, and documentation, ensuring it is **Evidence-based**."
+  },
+  {
+    "id": 11,
+    "question": "The primary purpose of monitoring is to",
+    "options": {
+      "A": "Identify areas for improvement",
+      "B": "Punish staff",
+      "C": "Impress district leaders",
+      "D": "Reduce workload"
+    },
+    "answer": "A",
+    "explanation": "Monitoring is a continuous process designed to track progress and collect real-time data on the implementation of plans or policies. Its main utility is to **Identify areas for improvement** or deviation so corrective action can be taken promptly."
+  },
+  {
+    "id": 12,
+    "question": "Good communication in leadership requires",
+    "options": {
+      "A": "Confusing messages",
+      "B": "Clear and open interaction",
+      "C": "Only written notices",
+      "D": "Top-down directives only"
+    },
+    "answer": "B",
+    "explanation": "For information to be transmitted accurately and effectively throughout the organization, a leader must foster an environment of **Clear and open interaction**, allowing for feedback and two-way dialogue."
+  },
+  {
+    "id": 13,
+    "question": "An ADI contributes to school improvement by",
+    "options": {
+      "A": "Avoiding staff meetings",
+      "B": "Supporting headteachers",
+      "C": "Cancelling instructional time",
+      "D": "Increasing administrative tasks"
+    },
+    "answer": "B",
+    "explanation": "The ADI's role is not only to inspect but also to provide professional guidance, resources, and mentorship to school heads. By **Supporting headteachers**, they empower instructional leadership at the school level, which drives improvement."
+  },
+  {
+    "id": 14,
+    "question": "Effective decision-making requires",
+    "options": {
+      "A": "Gut feeling alone",
+      "B": "Accurate and timely data",
+      "C": "Supervisor’s emotions",
+      "D": "Conflicting instructions"
+    },
+    "answer": "B",
+    "explanation": "Decisions should be rational and informed, particularly in administration. The quality of a decision is directly dependent on the reliability and immediacy of the information used, thus requiring **Accurate and timely data**."
+  },
+  {
+    "id": 15,
+    "question": "A school discipline policy must be",
+    "options": {
+      "A": "Unknown to learners",
+      "B": "Clearly communicated to all",
+      "C": "Verbal only",
+      "D": "Applied selectively"
+    },
+    "answer": "B",
+    "explanation": "For any rule to be followed and for discipline to be fair, all parties—learners, staff, and parents—must be aware of the policy and its consequences. The policy must be **Clearly communicated to all** stakeholders."
+  },
+  {
+    "id": 16,
+    "question": "Professional ethics require educators to",
+    "options": {
+      "A": "Accept gifts from parents",
+      "B": "Act in the best interest of learners",
+      "C": "Share exam papers",
+      "D": "Use abusive language"
+    },
+    "answer": "B",
+    "explanation": "The foundational principle of professional ethics in education is the principle of *in loco parentis* and the responsibility to promote the welfare and success of students. This means all actions must **Act in the best interest of learners**."
+  },
+  {
+    "id": 17,
+    "question": "An organisational structure shows",
+    "options": {
+      "A": "Classroom rules",
+      "B": "Reporting relationships",
+      "C": "PTA dues",
+      "D": "Salary scales only"
+    },
+    "answer": "B",
+    "explanation": "The organizational chart visually depicts the hierarchy and chain of command within an institution. Its primary function is to define the lines of authority and communication, clarifying the **Reporting relationships** among staff."
+  },
+  {
+    "id": 18,
+    "question": "A strategic plan outlines",
+    "options": {
+      "A": "Daily routines",
+      "B": "Long-term goals and actions",
+      "C": "Teacher salaries",
+      "D": "Parent complaints"
+    },
+    "answer": "B",
+    "explanation": "A strategic plan is a document used to specify the organization's overarching vision and mission, and the multi-year strategies, key performance indicators, and resources needed to achieve its **Long-term goals and actions**."
+  },
+  {
+    "id": 19,
+    "question": "Motivation of school staff improves when",
+    "options": {
+      "A": "Achievements are recognised",
+      "B": "Feedback is delayed",
+      "C": "Leaders ignore concerns",
+      "D": "Strict punishments are issued"
+    },
+    "answer": "A",
+    "explanation": "Recognition acts as a powerful motivator. Acknowledging and celebrating staff contributions and **Achievements are recognised** reinforces desired behaviors and makes employees feel valued, boosting morale and effort."
+  },
+  {
+    "id": 20,
+    "question": "Delegation should consider",
+    "options": {
+      "A": "Staff strengths and competencies",
+      "B": "Favourites only",
+      "C": "Random assignment",
+      "D": "Seniority only"
+    },
+    "answer": "A",
+    "explanation": "To maximize the likelihood of a successful outcome and ensure staff development, tasks should be delegated based on an individual's proven abilities, skills, and potential, making **Staff strengths and competencies** the key factor."
+  },
+  {
+    "id": 21,
+    "question": "Conflict resolution in schools requires",
+    "options": {
+      "A": "Bias",
+      "B": "Fairness and neutrality",
+      "C": "Delayed action",
+      "D": "Teacher punishment"
+    },
+    "answer": "B",
+    "explanation": "To resolve conflicts constructively and maintain trust within the school community, the mediating party must approach the situation impartially, ensuring both sides feel heard and the outcome is justified by the evidence, requiring **Fairness and neutrality**."
+  },
+  {
+    "id": 22,
+    "question": "A circular is used to",
+    "options": {
+      "A": "Record student marks",
+      "B": "Communicate official information",
+      "C": "Punish teachers",
+      "D": "Replace meetings"
+    },
+    "answer": "B",
+    "explanation": "A circular is a formal, written document distributed to a wide audience (e.g., all staff or all schools in a district) to announce or disseminate official policy, instructions, or factual updates, making it a tool to **Communicate official information**."
+  },
+  {
+    "id": 23,
+    "question": "A headteacher should",
+    "options": {
+      "A": "Avoid staff supervision",
+      "B": "Promote effective teaching",
+      "C": "Focus only on discipline",
+      "D": "Conduct PTA elections"
+    },
+    "answer": "B",
+    "explanation": "The headteacher is the instructional leader of the school. Their foremost responsibility is to champion pedagogical excellence, providing resources, professional development, and supervision to **Promote effective teaching** and learning."
+  },
+  {
+    "id": 24,
+    "question": "The ADI supports district leadership by",
+    "options": {
+      "A": "Developing school policies alone",
+      "B": "Promoting quality assurance",
+      "C": "Avoiding school visits",
+      "D": "Ignoring data"
+    },
+    "answer": "B",
+    "explanation": "As a supervisory body, the ADI's core contribution to district leadership is to monitor, evaluate, and enforce educational standards across schools, thereby **Promoting quality assurance** in the delivery of the curriculum and administration."
+  },
+  {
+    "id": 25,
+    "question": "Effective time management helps school leaders",
+    "options": {
+      "A": "Reduce planning",
+      "B": "Achieve organisational goals",
+      "C": "Increase conflicts",
+      "D": "Avoid records"
+    },
+    "answer": "B",
+    "explanation": "By prioritizing tasks, setting deadlines, and utilizing time efficiently, school leaders can focus their energy and resources on high-impact activities, which directly helps them **Achieve organisational goals**."
+  },
+  {
+    "id": 26,
+    "question": "A performance appraisal aims to",
+    "options": {
+      "A": "Evaluate staff contributions",
+      "B": "Reduce teacher numbers",
+      "C": "Punish low performers",
+      "D": "Delay supervision"
+    },
+    "answer": "A",
+    "explanation": "The primary goal of a performance appraisal is a systematic, periodic assessment of an employee's job performance and output over a specific period, which is done to formally **Evaluate staff contributions** and inform development decisions."
+  },
+  {
+    "id": 27,
+    "question": "An internal memo is usually",
+    "options": {
+      "A": "For community members",
+      "B": "A communication within the organisation",
+      "C": "For students",
+      "D": "A financial document"
+    },
+    "answer": "B",
+    "explanation": "A memorandum (memo) is a written message used for routine, non-formal communication, primarily designed to facilitate **A communication within the organisation** (e.g., between departments or staff members)."
+  },
+  {
+    "id": 28,
+    "question": "School records must be",
+    "options": {
+      "A": "Ignored",
+      "B": "Accurate and up-to-date",
+      "C": "Kept only by headteachers",
+      "D": "Destroyed yearly"
+    },
+    "answer": "B",
+    "explanation": "The administrative, legal, and operational utility of school records (student files, staff records, financial ledgers) depends entirely on their reliability and current status, mandating that they are **Accurate and up-to-date**."
+  },
+  {
+    "id": 29,
+    "question": "A democratic leader encourages",
+    "options": {
+      "A": "Teacher contribution to decisions",
+      "B": "Fear",
+      "C": "Secrecy",
+      "D": "Autocracy"
+    },
+    "answer": "A",
+    "explanation": "Democratic leadership, or participative leadership, is characterized by involving subordinates in the decision-making process, actively soliciting and valuing **Teacher contribution to decisions** to foster collaboration and commitment."
+  },
+  {
+    "id": 30,
+    "question": "The most effective leadership style in schools is",
+    "options": {
+      "A": "Dictatorial",
+      "B": "Participative",
+      "C": "Hostile",
+      "D": "Passive"
+    },
+    "answer": "B",
+    "explanation": "While situational leadership is often best, the **Participative** style is generally most effective in schools because it empowers teachers as professionals, leverages collective expertise, and builds a sense of shared responsibility for school success."
+  },
+  {
+    "id": 31,
+    "question": "The purpose of a staff durbar is to",
+    "options": {
+      "A": "Punish teachers",
+      "B": "Share information and address issues",
+      "C": "Announce salaries",
+      "D": "Conduct promotion exams"
+    },
+    "answer": "B",
+    "explanation": "A durbar is a large, formal meeting or gathering, often used to create an open platform for leadership to **Share information and address issues** directly with staff, promoting dialogue and resolving collective concerns."
+  },
+  {
+    "id": 32,
+    "question": "The ADI promotes accountability by",
+    "options": {
+      "A": "Monitoring school performance",
+      "B": "Delegating all work",
+      "C": "Avoiding reports",
+      "D": "Reducing supervision"
+    },
+    "answer": "A",
+    "explanation": "Accountability is enforced through oversight. The ADI's role involves routine visits and data collection to ensure schools are meeting targets and following regulations, which is the act of **Monitoring school performance**."
+  },
+  {
+    "id": 33,
+    "question": "Coaching helps staff",
+    "options": {
+      "A": "Feel threatened",
+      "B": "Improve performance",
+      "C": "Avoid tasks",
+      "D": "Reject feedback"
+    },
+    "answer": "B",
+    "explanation": "Coaching is a development process focused on providing targeted, individualized guidance and feedback to help staff members acquire specific skills or overcome challenges, with the direct aim to **Improve performance**."
+  },
+  {
+    "id": 34,
+    "question": "A good leader must be",
+    "options": {
+      "A": "Inflexible",
+      "B": "Honest and transparent",
+      "C": "Secretive",
+      "D": "Unpredictable"
+    },
+    "answer": "B",
+    "explanation": "Integrity is non-negotiable for effective leadership. Staff and stakeholders must trust their leader, which is built by being truthful in communication (**Honest**) and open in operations (**transparent**)."
+  },
+  {
+    "id": 35,
+    "question": "Proper filing systems ensure",
+    "options": {
+      "A": "Missing documents",
+      "B": "Easy access to information",
+      "C": "Unnecessary delays",
+      "D": "Increased conflicts"
+    },
+    "answer": "B",
+    "explanation": "A structured and well-maintained filing system is a crucial administrative tool that dictates how quickly and efficiently staff can locate necessary records or data, ensuring **Easy access to information**."
+  },
+  {
+    "id": 36,
+    "question": "A school budget outlines",
+    "options": {
+      "A": "Teacher promotions",
+      "B": "Allocation of financial resources",
+      "C": "Discipline procedures",
+      "D": "Lesson schedules"
+    },
+    "answer": "B",
+    "explanation": "A budget is a detailed financial plan that projects future income and expenses. Its fundamental purpose is to guide spending by specifying the **Allocation of financial resources** to various school activities and departments."
+  },
+  {
+    "id": 37,
+    "question": "The main role of the district education office is to",
+    "options": {
+      "A": "Fund private schools",
+      "B": "Support teaching and learning",
+      "C": "Enforce PTA dues",
+      "D": "Recruit casual staff"
+    },
+    "answer": "B",
+    "explanation": "District education offices are mandated to implement and manage educational policy within their jurisdiction. Their central function is to provide the necessary resources, supervision, and professional development to **Support teaching and learning** in all schools."
+  },
+  {
+    "id": 38,
+    "question": "Teamwork in schools enhances",
+    "options": {
+      "A": "Isolation",
+      "B": "Organisational effectiveness",
+      "C": "Conflict",
+      "D": "Poor communication"
+    },
+    "answer": "B",
+    "explanation": "When staff collaborate, they pool their diverse skills and knowledge, solve problems more creatively, and distribute workloads, leading to streamlined operations and increased **Organisational effectiveness**."
+  },
+  {
+    "id": 39,
+    "question": "The ADI’s supervision must be",
+    "options": {
+      "A": "Punitive",
+      "B": "Supportive and developmental",
+      "C": "Secretive",
+      "D": "Strictly unannounced"
+    },
+    "answer": "B",
+    "explanation": "Modern educational supervision is moving away from purely inspection-based models to focus on helping teachers and headteachers grow professionally. Thus, supervision must be **Supportive and developmental** in nature."
+  },
+  {
+    "id": 40,
+    "question": "Change management involves",
+    "options": {
+      "A": "Abrupt actions",
+      "B": "Guiding staff through transitions",
+      "C": "Avoiding communication",
+      "D": "Blaming workers"
+    },
+    "answer": "B",
+    "explanation": "Organizational change can cause anxiety and resistance. Change management is a structured approach that involves clear communication, training, and emotional support aimed at **Guiding staff through transitions** to achieve a desired future state."
+  },
+  {
+    "id": 41,
+    "question": "Staff attendance records help leaders",
+    "options": {
+      "A": "Pay higher salaries",
+      "B": "Track punctuality and absenteeism",
+      "C": "Evaluate parents",
+      "D": "Replace teachers"
+    },
+    "answer": "B",
+    "explanation": "Attendance records are a key administrative tool used to monitor staff presence, ensure instructional hours are covered, and provide data for disciplinary or commendation purposes, allowing leaders to **Track punctuality and absenteeism**."
+  },
+  {
+    "id": 42,
+    "question": "Minutes of meetings should be",
+    "options": {
+      "A": "Taken casually",
+      "B": "Accurate and concise",
+      "C": "Verbose",
+      "D": "Destroyed"
+    },
+    "answer": "B",
+    "explanation": "Minutes serve as the legal and functional record of a meeting. They must faithfully represent what was discussed and decided (**Accurate**) while being brief and to the point (**concise**) to be easily referenced."
+  },
+  {
+    "id": 43,
+    "question": "Effective school leadership requires",
+    "options": {
+      "A": "Emotional intelligence",
+      "B": "Harsh decisions",
+      "C": "Avoiding collaboration",
+      "D": "Delayed feedback"
+    },
+    "answer": "A",
+    "explanation": "The ability to manage one’s own emotions and understand the emotions of others (empathy) is critical for building positive working relationships, resolving conflicts, and motivating staff, making **Emotional intelligence** essential for effective leadership."
+  },
+  {
+    "id": 44,
+    "question": "Job descriptions clarify",
+    "options": {
+      "A": "Staff responsibilities",
+      "B": "Student rights",
+      "C": "Parents’ roles",
+      "D": "Salary deductions"
+    },
+    "answer": "A",
+    "explanation": "A job description is a written statement that outlines the purpose, duties, scope, and reporting relationships of a particular job. Its main role is to clearly define **Staff responsibilities** and expectations."
+  },
+  {
+    "id": 45,
+    "question": "Leadership in education must focus on",
+    "options": {
+      "A": "Raising fear",
+      "B": "Improving organisational performance",
+      "C": "Punishing teachers",
+      "D": "Increasing meetings"
+    },
+    "answer": "B",
+    "explanation": "All leadership efforts—instructional, administrative, and strategic—are ultimately evaluated by their contribution to the school’s overall success in meeting its mandate, which means **Improving organisational performance**."
+  },
+  {
+    "id": 46,
+    "question": "Motivation increases when leaders",
+    "options": {
+      "A": "Ignore staff concerns",
+      "B": "Provide recognition and support",
+      "C": "Reduce communication",
+      "D": "Increase workload"
+    },
+    "answer": "B",
+    "explanation": "Positive reinforcement, through commendation (**recognition**), and ensuring staff have the resources and emotional availability they need (**support**), are key factors in boosting job satisfaction and motivation."
+  },
+  {
+    "id": 47,
+    "question": "Decision-making requires",
+    "options": {
+      "A": "Trial and error",
+      "B": "Analysis of alternatives",
+      "C": "Supervisor’s mood",
+      "D": "Rumours"
+    },
+    "answer": "B",
+    "explanation": "The systematic process of rational decision-making involves generating and evaluating multiple potential courses of action against a set of criteria before selecting the best option, which is the **Analysis of alternatives**."
+  },
+  {
+    "id": 48,
+    "question": "A staff performance gap is best addressed through",
+    "options": {
+      "A": "Coaching and mentoring",
+      "B": "Fighting",
+      "C": "Blame",
+      "D": "Ignoring issues"
+    },
+    "answer": "A",
+    "explanation": "A performance gap indicates a need for development, not necessarily punishment. **Coaching and mentoring** are the most constructive methods to close the gap by providing guided practice and experienced advice to build the required competence."
+  },
+  {
+    "id": 49,
+    "question": "Organisational policies guide",
+    "options": {
+      "A": "Staff behaviour and operations",
+      "B": "Student gossip",
+      "C": "PTA contributions",
+      "D": "SMS messaging"
+    },
+    "answer": "A",
+    "explanation": "Organizational policies are documented sets of principles and rules that dictate internal operations, resource use, and acceptable conduct, serving as the official framework for **Staff behaviour and operations**."
+  },
+  {
+    "id": 50,
+    "question": "School inspections improve",
+    "options": {
+      "A": "Teacher fear",
+      "B": "Quality of education",
+      "C": "PTA attendance",
+      "D": "Student punishment"
+    },
+    "answer": "B",
+    "explanation": "The objective of a formal school inspection is to systematically evaluate the standards of teaching, learning, leadership, and management, with the goal of identifying weaknesses and recommending improvements to enhance the overall **Quality of education**."
+  }
+]

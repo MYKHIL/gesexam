@@ -1,0 +1,604 @@
+[
+  {
+    "id": 1,
+    "question": "Professional misconduct includes:",
+    "options": {
+      "A": "Integrity",
+      "B": "Favouritism",
+      "C": "Accountability",
+      "D": "Transparency"
+    },
+    "answer": "B",
+    "explanation": "Professional misconduct refers to any violation of the organization's code of ethics or standard of conduct. Of the options provided, **Favouritism** (B)—the act of giving undue advantage to one person over others—is a clear breach of professional ethics, integrity, and fair practice."
+  },
+  {
+    "id": 2,
+    "question": "Resource optimization means:",
+    "options": {
+      "A": "Wasteful spending",
+      "B": "Using resources efficiently",
+      "C": "Wrong procurement",
+      "D": "Hoarding items"
+    },
+    "answer": "B",
+    "explanation": "Resource optimization is the process of allocating and utilizing available resources (financial, human, material) in such a way as to achieve the maximum output or benefit with the minimum input. This is best defined as **Using resources efficiently** (B)."
+  },
+  {
+    "id": 3,
+    "question": "Stakeholder consultation improves:",
+    "options": {
+      "A": "Conflict",
+      "B": "Decision quality",
+      "C": "Delay",
+      "D": "Bias"
+    },
+    "answer": "B",
+    "explanation": "Consulting stakeholders brings diverse perspectives, knowledge, and expertise into the planning process. This broad input reduces blind spots and increases the relevance and effectiveness of the final choice, leading to improved **Decision quality** (B)."
+  },
+  {
+    "id": 4,
+    "question": "Leadership succession planning ensures:",
+    "options": {
+      "A": "Unprepared leaders",
+      "B": "Smooth transitions",
+      "C": "Confusion",
+      "D": "Vacancies"
+    },
+    "answer": "B",
+    "explanation": "Succession planning is a proactive strategy to identify and develop internal talent. Its goal is to fill key leadership roles promptly when they become vacant, thereby ensuring **Smooth transitions** (B) and organizational continuity. "
+  },
+  {
+    "id": 5,
+    "question": "A Deputy Director ensures compliance by:",
+    "options": {
+      "A": "Monitoring regularly",
+      "B": "Avoiding supervision",
+      "C": "Ignoring policies",
+      "D": "Delaying feedback"
+    },
+    "answer": "A",
+    "explanation": "Compliance—adherence to laws, regulations, and policies—requires constant vigilance. A Deputy Director achieves this by systematically checking activities and records through **Monitoring regularly** (A)."
+  },
+  {
+    "id": 6,
+    "question": "A key purpose of a district education operational plan is to:",
+    "options": {
+      "A": "Provide daily lesson notes",
+      "B": "Guide short-term activities",
+      "C": "Approve teacher promotions",
+      "D": "Replace school policies"
+    },
+    "answer": "B",
+    "explanation": "An operational plan translates the long-term strategic goals into specific, measurable actions for a shorter time frame (e.g., one year). It serves to **Guide short-term activities** (B) at the district level."
+  },
+  {
+    "id": 7,
+    "question": "Which of the following best promotes effective decentralization?",
+    "options": {
+      "A": "Central control of all decisions",
+      "B": "Delegation of authority to lower levels",
+      "C": "Punishing local managers",
+      "D": "Restricting community participation"
+    },
+    "answer": "B",
+    "explanation": "Decentralization is the transfer of power, responsibility, and resources from central government to lower tiers of management. The key mechanism for this is the formal **Delegation of authority to lower levels** (B)."
+  },
+  {
+    "id": 8,
+    "question": "Risk management in educational administration involves:",
+    "options": {
+      "A": "Ignoring potential threats",
+      "B": "Identifying and mitigating possible challenges",
+      "C": "Waiting for problems to occur",
+      "D": "Keeping issues secret"
+    },
+    "answer": "B",
+    "explanation": "Risk management is a proactive process. It involves anticipating and assessing threats (academic, financial, safety, or legal) and developing strategies to minimize their negative impact, which is **Identifying and mitigating possible challenges** (B)."
+  },
+  {
+    "id": 9,
+    "question": "The most reliable data for planning comes from:",
+    "options": {
+      "A": "Verified school records",
+      "B": "Social media reports",
+      "C": "Verbal discussions",
+      "D": "Rumours"
+    },
+    "answer": "A",
+    "explanation": "Reliable data must be accurate, consistent, and traceable. **Verified school records** (A) (e.g., student registers, financial ledgers, performance data) are systematically collected, documented, and officially approved, making them the most reliable source."
+  },
+  {
+    "id": 10,
+    "question": "Stakeholder buy-in is achieved through:",
+    "options": {
+      "A": "Excluding them from decisions",
+      "B": "Effective communication and engagement",
+      "C": "Imposing decisions",
+      "D": "Restricting information"
+    },
+    "answer": "B",
+    "explanation": "Gaining buy-in means securing the acceptance and support of stakeholders. This is done by involving them early in the process and sharing information transparently through **Effective communication and engagement** (B)."
+  },
+  {
+    "id": 11,
+    "question": "Which activity helps improve school leadership capacity?",
+    "options": {
+      "A": "Orientation and training",
+      "B": "Punitive supervision",
+      "C": "Reducing collaboration",
+      "D": "Avoiding professional development"
+    },
+    "answer": "A",
+    "explanation": "Improving leadership capacity requires building specific managerial and instructional skills. Structured programs like **Orientation and training** (A) provide leaders with the necessary knowledge and tools for their roles."
+  },
+  {
+    "id": 12,
+    "question": "The Deputy Director ensures quality assurance by:",
+    "options": {
+      "A": "Enforcing standards",
+      "B": "Reducing inspections",
+      "C": "Ignoring data",
+      "D": "Permitting non-compliance"
+    },
+    "answer": "A",
+    "explanation": "Quality assurance is the systematic process of ensuring that set standards of quality are being met in educational delivery. This is fundamentally accomplished by measuring performance against established norms and **Enforcing standards** (A)."
+  },
+  {
+    "id": 13,
+    "question": "A performance contract helps to:",
+    "options": {
+      "A": "Create fear",
+      "B": "Set measurable expectations",
+      "C": "Punish staff",
+      "D": "Abolish supervision"
+    },
+    "answer": "B",
+    "explanation": "A performance contract is a formal agreement between a manager and their supervisor that outlines specific, quantifiable targets and objectives for a period. Its core function is to clearly **Set measurable expectations** (B)."
+  },
+  {
+    "id": 14,
+    "question": "The main purpose of external supervision is to:",
+    "options": {
+      "A": "Encourage competition",
+      "B": "Provide objective assessment",
+      "C": "Reduce accountability",
+      "D": "Monitor only finances"
+    },
+    "answer": "B",
+    "explanation": "Supervision carried out by an external body (like a District Superintendent) brings an independent, unbiased perspective. This external view is crucial to **Provide objective assessment** (B) of internal school performance."
+  },
+  {
+    "id": 15,
+    "question": "Proper documentation enhances:",
+    "options": {
+      "A": "Transparency and accountability",
+      "B": "Rumours",
+      "C": "Informal reporting",
+      "D": "Personal decision-making"
+    },
+    "answer": "A",
+    "explanation": "When decisions, transactions, and processes are formally recorded, they are traceable and auditable. This system of record-keeping is the backbone of **Transparency and accountability** (A) in public administration."
+  },
+  {
+    "id": 16,
+    "question": "In the public sector, procurement must be:",
+    "options": {
+      "A": "Delayed",
+      "B": "Transparent and competitive",
+      "C": "Secretive",
+      "D": "Based on personal preference"
+    },
+    "answer": "B",
+    "explanation": "Public procurement regulations require that all processes for acquiring goods and services be open to scrutiny (**Transparent**) and offer fair opportunity to all qualified bidders (**Competitive**). Thus, it must be **Transparent and competitive** (B)."
+  },
+  {
+    "id": 17,
+    "question": "A Deputy Director may delegate tasks to:",
+    "options": {
+      "A": "Avoid responsibility",
+      "B": "Improve efficiency",
+      "C": "Reduce monitoring",
+      "D": "Allow mismanagement"
+    },
+    "answer": "B",
+    "explanation": "Delegation is assigning duties to subordinates. It frees up the manager to focus on strategic tasks and allows specialized staff to handle tasks they are best suited for, which helps to **Improve efficiency** (B) of operations."
+  },
+  {
+    "id": 18,
+    "question": "Which tool best tracks school performance trends?",
+    "options": {
+      "A": "Annual statistical reports",
+      "B": "PTA attendance sheets",
+      "C": "Payroll",
+      "D": "Furniture inventory"
+    },
+    "answer": "A",
+    "explanation": "**Annual statistical reports** (A) compile quantitative data on key performance indicators (like enrollment, test scores, teacher-student ratios) over time, making them the most effective tool for observing long-term trends."
+  },
+  {
+    "id": 19,
+    "question": "Motivation theory by Herzberg classified factors into:",
+    "options": {
+      "A": "Hygiene and motivators",
+      "B": "Theory X and Y",
+      "C": "Leadership and management",
+      "D": "Efficiency and control"
+    },
+    "answer": "A",
+    "explanation": "Frederick Herzberg's Two-Factor Theory identifies two distinct sets of factors: **Hygiene** factors (which prevent dissatisfaction but don't motivate, e.g., salary, conditions) and **Motivators** (which lead to satisfaction and high performance, e.g., achievement, recognition). [Image of Herzberg's two-factor theory diagram
+    ]
+"
+  },
+  {
+    "id": 20,
+    "question": "A good performance indicator must be:",
+    "options": {
+      "A": "Vague",
+      "B": "Measurable",
+      "C": "Hidden",
+      "D": "Subjective"
+    },
+    "answer": "B",
+    "explanation": "A Performance Indicator (PI) is a metric used to evaluate success. For effective monitoring and evaluation, a PI must be quantifiable and possible to track, meaning it must be **Measurable** (B)."
+  },
+  {
+    "id": 21,
+    "question": "Good governance in education ensures:",
+    "options": {
+      "A": "Corruption",
+      "B": "Accountability and efficiency",
+      "C": "Poor supervision",
+      "D": "Nepotism"
+    },
+    "answer": "B",
+    "explanation": "Good governance is characterized by processes that are participatory, consensus-oriented, transparent, responsive, and equitable. These characteristics collectively guarantee **Accountability and efficiency** (B) in the education system."
+  },
+  {
+    "id": 22,
+    "question": "When supervising headteachers, the Deputy Director should be:",
+    "options": {
+      "A": "Biased",
+      "B": "Objective",
+      "C": "Emotional",
+      "D": "Harsh"
+    },
+    "answer": "B",
+    "explanation": "To ensure fairness and the credibility of the supervision process, evaluations of headteachers must be based on verifiable facts and performance data, free from personal feelings or bias. The Deputy Director must be **Objective** (B)."
+  },
+  {
+    "id": 23,
+    "question": "The first step in creating a district education plan is:",
+    "options": {
+      "A": "Writing the final report",
+      "B": "Conducting situational analysis",
+      "C": "Publishing the plan",
+      "D": "Evaluating outcomes"
+    },
+    "answer": "B",
+    "explanation": "Planning begins with understanding the current reality, including strengths, weaknesses, opportunities, and threats (SWOT). This initial phase of data collection and assessment is called **Conducting situational analysis** (B)."
+  },
+  {
+    "id": 24,
+    "question": "Sustainable educational leadership requires:",
+    "options": {
+      "A": "Ethical behaviour",
+      "B": "Favouritism",
+      "C": "Isolation",
+      "D": "Impulsiveness"
+    },
+    "answer": "A",
+    "explanation": "Sustainability in leadership means that the institution can continue to thrive long after the current leader leaves. This requires building a culture of integrity and fairness, which is dependent on consistent **Ethical behaviour** (A)."
+  },
+  {
+    "id": 25,
+    "question": "Effective communication requires:",
+    "options": {
+      "A": "Clarity and timeliness",
+      "B": "Ambiguity",
+      "C": "Delay",
+      "D": "Disorganization"
+    },
+    "answer": "A",
+    "explanation": "For a message to be understood and acted upon correctly, it must be precise and easy to interpret (**Clarity**) and delivered at the right moment to be relevant (**timeliness**). Therefore, it requires **Clarity and timeliness** (A)."
+  },
+  {
+    "id": 26,
+    "question": "A Deputy Director must ensure equity by:",
+    "options": {
+      "A": "Allocating resources according to need",
+      "B": "Giving more to urban schools",
+      "C": "Reducing rural support",
+      "D": "Ignoring disadvantaged learners"
+    },
+    "answer": "A",
+    "explanation": "Equity is about fairness, recognizing that not everyone starts from the same position. To achieve equitable outcomes, more support must be given to those with greater disadvantages, which means **Allocating resources according to need** (A)."
+  },
+  {
+    "id": 27,
+    "question": "A major function of policy evaluation is to:",
+    "options": {
+      "A": "Enforce punishment",
+      "B": "Determine effectiveness",
+      "C": "Remove staff",
+      "D": "Increase workload"
+    },
+    "answer": "B",
+    "explanation": "Policy evaluation is the systematic and objective assessment of an ongoing or completed policy to measure its outcomes against the intended objectives. Its primary purpose is to **Determine effectiveness** (B)."
+  },
+  {
+    "id": 28,
+    "question": "Monitoring lesson delivery improves:",
+    "options": {
+      "A": "Learner performance",
+      "B": "Staff conflict",
+      "C": "Corruption",
+      "D": "Resource wastage"
+    },
+    "answer": "A",
+    "explanation": "Monitoring lesson delivery allows supervisors to ensure the quality of instruction, compliance with curriculum, and effective teaching methods, which are the direct drivers of improved **Learner performance** (A)."
+  },
+  {
+    "id": 29,
+    "question": "An effective meeting agenda must be:",
+    "options": {
+      "A": "Clear and structured",
+      "B": "Random",
+      "C": "Secret",
+      "D": "Distracting"
+    },
+    "answer": "A",
+    "explanation": "A meeting agenda provides a roadmap for discussion, ensures that all critical items are covered, and helps manage time efficiently. This requires the agenda to be **Clear and structured** (A)."
+  },
+  {
+    "id": 30,
+    "question": "In education planning, EMIS stands for:",
+    "options": {
+      "A": "Education Management Information System",
+      "B": "Electronic Monitoring Internal System",
+      "C": "Exam Management and Inspection Standards",
+      "D": "Educational Manual for Instructional Supervision"
+    },
+    "answer": "A",
+    "explanation": "EMIS is the commonly used acronym for the **Education Management Information System** (A), which is a crucial system used to collect, process, analyze, and disseminate data for educational planning and administration."
+  },
+  {
+    "id": 31,
+    "question": "Staff discipline should be handled with:",
+    "options": {
+      "A": "Emotion",
+      "B": "Due process",
+      "C": "Bias",
+      "D": "Favouritism"
+    },
+    "    answer": "B",
+    "explanation": "Disciplinary procedures must follow established legal and administrative guidelines, guaranteeing the accused the right to be heard and the right to appeal. This fair and transparent procedure is known as **Due process** (B)."
+  },
+  {
+    "id": 32,
+    "question": "A Deputy Director strengthens community participation by:",
+    "options": {
+      "A": "Reducing PTA activities",
+      "B": "Organizing engagement forums",
+      "C": "Isolating community leaders",
+      "D": "Avoiding dialogue"
+    },
+    "answer": "B",
+    "explanation": "Active community participation requires providing structured opportunities for dialogue, feedback, and involvement. This is best achieved by **Organizing engagement forums** (B) (e.g., town halls, policy review meetings)."
+  },
+  {
+    "id": 33,
+    "question": "The most reliable way to measure teacher performance is:",
+    "options": {
+      "A": "Classroom observation",
+      "B": "Rumours",
+      "C": "Social media comments",
+      "D": "Student gossip"
+    },
+    "answer": "A",
+    "explanation": "The primary function of a teacher is instruction. Therefore, the most direct and reliable evidence of their performance is gathered by observing them in action, making **Classroom observation** (A) the best tool."
+  },
+  {
+    "id": 34,
+    "question": "In resource allocation, priority should be given to:",
+    "options": {
+      "A": "Critical needs",
+      "B": "Personal interests",
+      "C": "Undocumented requests",
+      "D": "Unapproved items"
+    },
+    "answer": "A",
+    "explanation": "Sound management dictates that scarce resources must be channeled where they will have the greatest impact on core mandates (teaching and learning). This means prioritizing **Critical needs** (A) over less urgent wants or preferences."
+  },
+  {
+    "id": 35,
+    "question": "Ethical leadership promotes:",
+    "options": {
+      "A": "Trust",
+      "B": "Corruption",
+      "C": "Fear",
+      "D": "Division"
+    },
+    "answer": "A",
+    "explanation": "Ethical leaders model integrity, fairness, and transparency. These actions build confidence among staff and stakeholders, fostering a workplace culture based on mutual **Trust** (A)."
+  },
+  {
+    "id": 36,
+    "question": "Which of the following is a function of district inspection?",
+    "options": {
+      "A": "Identifying areas for improvement",
+      "B": "Promoting personal interests",
+      "C": "Punishing teachers",
+      "D": "Collecting gifts"
+    },
+    "answer": "A",
+    "explanation": "The core purpose of any inspection or quality assurance activity is formative, meaning it seeks to assess the status quo and provide actionable recommendations for growth. Its key function is **Identifying areas for improvement** (A)."
+  },
+  {
+    "id": 37,
+    "question": "A Deputy Director ensures work discipline through:",
+    "options": {
+      "A": "Clear rules and monitoring",
+      "B": "Threats",
+      "C": "Rumours",
+      "D": "Delays"
+    },
+    "answer": "A",
+    "explanation": "Work discipline is maintained through a combination of setting definite expectations (**Clear rules**) and regularly checking that those expectations are being met (**monitoring**). Therefore, **Clear rules and monitoring** (A) is the most effective approach."
+  },
+  {
+    "id": 38,
+    "question": "Continuous professional development (CPD) enhances:",
+    "options": {
+      "A": "Staff competence",
+      "B": "Laziness",
+      "C": "Stagnation",
+      "D": "Irresponsibility"
+    },
+    "answer": "A",
+    "explanation": "CPD is the ongoing process of learning and refinement of skills and knowledge after initial training. Its direct result is an increase in **Staff competence** (A), which improves service delivery."
+  },
+  {
+    "id": 39,
+    "question": "Effective complaint handling requires:",
+    "options": {
+      "A": "Confidentiality",
+      "B": "Gossip",
+      "C": "Delay",
+      "D": "Bias"
+    },
+    "answer": "A",
+    "explanation": "To encourage staff and stakeholders to report issues without fear of retribution or public exposure, the complaint handling process must guarantee **Confidentiality** (A) where appropriate."
+  },
+  {
+    "id": 40,
+    "question": "The purpose of an audit query response is to:",
+    "options": {
+      "A": "Hide issues",
+      "B": "Explain and correct discrepancies",
+      "C": "Increase errors",
+      "D": "Avoid accountability"
+    },
+    "answer": "B",
+    "explanation": "An audit query raises specific concerns about financial or operational irregularities. The mandatory response must address each concern by providing clear documentation and outlining corrective actions taken to **Explain and correct discrepancies** (B)."
+  },
+  {
+    "id": 41,
+    "question": "Strategic decisions are usually:",
+    "options": {
+      "A": "Long-term",
+      "B": "Daily",
+      "C": "Minor",
+      "D": "Emotional"
+    },
+    "answer": "A",
+    "explanation": "Strategic decisions involve setting goals, prioritizing initiatives, and allocating resources that fundamentally shape the future of the organization. By nature, they have a **Long-term** (A) impact."
+  },
+  {
+    "id": 42,
+    "question": "Effective staff supervision requires:",
+    "options": {
+      "A": "Consistency",
+      "B": "Unpredictability",
+      "C": "Fear",
+      "D": "Secrecy"
+    },
+    "answer": "A",
+    "explanation": "Staff must know what to expect from the supervisory process—that standards are applied equally to everyone and that the process is predictable. This requires **Consistency** (A) in application and feedback."
+  },
+  {
+    "id": 43,
+    "question": "For quality service delivery, leaders must ensure:",
+    "options": {
+      "A": "Standards are met",
+      "B": "Rules are ignored",
+      "C": "Staff are untrained",
+      "D": "Data is not used"
+    },
+    "answer": "A",
+    "explanation": "Quality service is defined by fulfilling predetermined requirements. The leader's role is to establish and enforce the minimum acceptable level of performance, ensuring **Standards are met** (A)."
+  },
+  {
+    "id": 44,
+    "question": "A Deputy Director fosters innovation by:",
+    "options": {
+      "A": "Supporting creative ideas",
+      "B": "Discouraging initiatives",
+      "C": "Rejecting all proposals",
+      "D": "Imposing solutions"
+    },
+    "answer": "A",
+    "explanation": "Innovation requires a culture where new ideas are welcomed and mistakes are seen as learning opportunities. The leader's role is to encourage experimentation and actively **Supporting creative ideas** (A) from staff."
+  },
+  {
+    "id": 45,
+    "question": "School improvement is best achieved through:",
+    "options": {
+      "A": "Evidence-based strategies",
+      "B": "Emotional decisions",
+      "C": "Arbitrary changes",
+      "D": "Guesswork"
+    },
+    "answer": "A",
+    "explanation": "Effective school improvement relies on diagnostic data (e.g., test scores, attendance, inspection reports) to identify problems and select proven interventions. This approach is called **Evidence-based strategies** (A)."
+  },
+  {
+    "id": 46,
+    "question": "In personnel management, induction is for:",
+    "options": {
+      "A": "New staff",
+      "B": "Retired staff",
+      "C": "Visitors",
+      "D": "Suppliers"
+    },
+    "answer": "A",
+    "explanation": "Induction is a structured process of introducing **New staff** (A) to the organization's culture, policies, colleagues, and job responsibilities to help them integrate and become productive quickly."
+  },
+  {
+    "id": 47,
+    "question": "Work planning should be guided by:",
+    "options": {
+      "A": "Organizational goals",
+      "B": "Rumours",
+      "C": "Preferences",
+      "D": "Assumptions"
+    },
+    "answer": "A",
+    "explanation": "All work activities must align with the organization's overarching mission and strategic plan to ensure coherence and impact. Therefore, planning must be guided by **Organizational goals** (A)."
+  },
+  {
+    "id": 48,
+    "question": "Oversight ensures:",
+    "options": {
+      "A": "Accountability",
+      "B": "Bias",
+      "C": "Corruption",
+      "D": "Negligence"
+    },
+    "answer": "A",
+    "explanation": "Oversight is the monitoring of an organization's activities. It serves to guarantee that performance adheres to established rules and expectations, thus enforcing **Accountability** (A)."
+  },
+  {
+    "id": 49,
+    "question": "A Deputy Director promotes teamwork by:",
+    "options": {
+      "A": "Encouraging collaboration",
+      "B": "Creating division",
+      "C": "Ignoring staff",
+      "D": "Miscommunicating tasks"
+    },
+    "answer": "A",
+    "explanation": "Teamwork is built on shared goals and mutual support. A Deputy Director facilitates this by fostering an environment where staff members are rewarded for working together and **Encouraging collaboration** (A)."
+  },
+  {
+    "id": 50,
+    "question": "Which is a key principle of good record-keeping?",
+    "options": {
+      "A": "Accuracy",
+      "B": "Guesswork",
+      "C": "Irregular entries",
+      "D": "Informal documentation"
+    },
+    "answer": "A",
+    "explanation": "Good records must be a true reflection of the event or transaction they document. The principle of **Accuracy** (A) ensures that data is reliable for administrative, legal, and financial purposes."
+  }
+]

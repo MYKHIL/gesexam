@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "Effective instructional planning begins with:",
+    "options": {
+      "A": "Exams",
+      "B": "Learning objectives",
+      "C": "Assessment",
+      "D": "Textbooks"
+    },
+    "answer": "B",
+    "explanation": "Effective planning operates on the 'backward design' principle: you must first know what students should learn and be able to do. Therefore, planning starts by setting clear, measurable **Learning objectives** (B). "
+  },
+  {
+    "id": 2,
+    "question": "The best indicator of effective teaching is:",
+    "options": {
+      "A": "Teacher talk",
+      "B": "Student learning",
+      "C": "Classroom noise",
+      "D": "Long notes"
+    },
+    "answer": "B",
+    "explanation": "All teaching practices, resources, and methods are ultimately measured by their impact on students. The most reliable indicator of effective teaching is observable **Student learning** (B) and achievement."
+  },
+  {
+    "id": 3,
+    "question": "The term \"equity in education\" means:",
+    "options": {
+      "A": "Same treatment for all",
+      "B": "Fair opportunities for all",
+      "C": "Focusing on high achievers",
+      "D": "Reducing standards"
+    },
+    "answer": "B",
+    "explanation": "**Equity** (B) recognizes that students start from different places and may require different levels of support to achieve the same standard. It aims for **Fair opportunities for all**, which differs from 'equality' (same treatment). "
+  },
+  {
+    "id": 4,
+    "question": "Continuous professional development (CPD) aims to:",
+    "options": {
+      "A": "Replace training colleges",
+      "B": "Update teacher skills",
+      "C": "Reduce teacher numbers",
+      "D": "Increase salary quickly"
+    },
+    "answer": "B",
+    "explanation": "CPD is the continuous process of improving professional knowledge and competence after initial certification. Its main objective is to **Update teacher skills** (B) and keep them abreast of new pedagogical and curriculum changes."
+  },
+  {
+    "id": 5,
+    "question": "Which is a barrier to effective supervision?",
+    "options": {
+      "A": "Collaboration",
+      "B": "Teacher fear",
+      "C": "Clear feedback",
+      "D": "Planning"
+    },
+    "answer": "B",
+    "explanation": "If supervision is perceived as punitive, it creates **Teacher fear** (B). This fear leads to non-disclosure of challenges, resistance to change, and reluctance to try new methods, thus erecting a significant barrier to the goal of improvement."
+  },
+  {
+    "id": 6,
+    "question": "Effective school monitoring should be:",
+    "options": {
+      "A": "Occasional",
+      "B": "Continuous and supportive",
+      "C": "Punitive",
+      "D": "Unstructured"
+    },
+    "answer": "B",
+    "explanation": "To identify trends, provide timely intervention, and be a developmental process rather than a policing one, monitoring must be **Continuous and supportive** (B)."
+  },
+  {
+    "id": 7,
+    "question": "The main aim of the appraisal system is to:",
+    "options": {
+      "A": "Punish weak teachers",
+      "B": "Improve performance",
+      "C": "Rank teachers",
+      "D": "Increase workload"
+    },
+    "answer": "B",
+    "explanation": "The core purpose of teacher appraisal is developmental. It is designed to identify strengths and weaknesses and establish targets for professional learning and growth, helping to **Improve performance** (B)."
+  },
+  {
+    "id": 8,
+    "question": "When teachers collaborate, the greatest benefit is:",
+    "options": {
+      "A": "Reduced supervision",
+      "B": "Improved instructional practices",
+      "C": "Faster promotions",
+      "D": "Fewer meetings"
+    },
+    "answer": "B",
+    "explanation": "Collaboration in professional learning communities (PLCs) focuses on refining how teachers teach, leading to the sharing of effective techniques and resources, which results in **Improved instructional practices** (B)."
+  },
+  {
+    "id": 9,
+    "question": "A positive school climate encourages:",
+    "options": {
+      "A": "Stress",
+      "B": "Effective learning",
+      "C": "Conflict",
+      "D": "Teacher absenteeism"
+    },
+    "answer": "B",
+    "explanation": "A positive school climate is characterized by safety, respect, engagement, and high expectations. This environment reduces anxiety and fosters motivation for both staff and students, promoting **Effective learning** (B)."
+  },
+  {
+    "id": 10,
+    "question": "The most appropriate way to handle teacher lateness is to:",
+    "options": {
+      "A": "Issue queries immediately",
+      "B": "Investigate causes and counsel",
+      "C": "Ignore it",
+      "D": "Cut salaries first"
+    },
+    "answer": "B",
+    "explanation": "While lateness must be addressed, the most professional and developmental approach is to first understand the root issue (Investigate causes) and then offer guidance or solutions (**counsel**) to rectify the behavior. This is more sustainable than immediate punishment."
+  },
+  {
+    "id": 11,
+    "question": "The best way to track learner progress is through:",
+    "options": {
+      "A": "Guessing",
+      "B": "Continuous assessment",
+      "C": "End-of-year exams only",
+      "D": "PTA meetings"
+    },
+    "answer": "B",
+    "explanation": "Progress is not a snapshot but a journey. **Continuous assessment** (B) provides ongoing data from multiple points in time, allowing teachers to monitor growth, identify areas of difficulty, and intervene promptly."
+  },
+  {
+    "id": 12,
+    "question": "When a leader uses data to inform decisions, it is called:",
+    "options": {
+      "A": "Intuition",
+      "B": "Evidence-based leadership",
+      "C": "Reactive leadership",
+      "D": "Traditional leadership"
+    },
+    "answer": "B",
+    "explanation": "Making decisions based on objective information, such as student performance data, financial reports, or research findings, is the definition of **Evidence-based leadership** (B). It moves away from assumptions or tradition."
+  },
+  {
+    "id": 13,
+    "question": "The most important quality of an ADII is:",
+    "options": {
+      "A": "Strictness",
+      "B": "Professional competence",
+      "C": "Popularity",
+      "D": "Fearlessness"
+    },
+    "answer": "B",
+    "explanation": "An Assistant Director of Instruction/Education (ADII) is a technical and instructional leader. Their ability to guide teachers and make sound decisions relies fundamentally on their **Professional competence** (B) in education and administration."
+  },
+  {
+    "id": 14,
+    "question": "The best way to encourage innovation among teachers is to:",
+    "options": {
+      "A": "Discourage new ideas",
+      "B": "Provide support and autonomy",
+      "C": "Focus on routine",
+      "D": "Maintain strict control"
+    },
+    "answer": "B",
+    "explanation": "Innovation requires a safe space to try new things, even if they sometimes fail. Leaders foster this by giving teachers the freedom (**autonomy**) to experiment and the resources (**support**) they need. "
+  },
+  {
+    "id": 15,
+    "question": "A school development plan must be reviewed:",
+    "options": {
+      "A": "Every month",
+      "B": "Periodically",
+      "C": "Never",
+      "D": "Only when inspectors visit"
+    },
+    "answer": "B",
+    "explanation": "A School Development Plan (SDP) is a living document whose relevance depends on monitoring its progress and impact. It must be **Periodically** (B) reviewed (e.g., quarterly, semi-annually) to ensure goals are being met and to make necessary adjustments."
+  },
+  {
+    "id": 16,
+    "question": "Effective delegation requires:",
+    "options": {
+      "A": "No supervision",
+      "B": "Clear expectations",
+      "C": "Many assumptions",
+      "D": "Removing accountability"
+    },
+    "answer": "B",
+    "explanation": "To successfully delegate a task, the person receiving it must understand exactly what needs to be done, the timeline, and the expected outcome. This demands **Clear expectations** (B) and defined parameters."
+  },
+  {
+    "id": 17,
+    "question": "Monitoring teacher attendance supports:",
+    "options": {
+      "A": "Learner engagement",
+      "B": "Punishment",
+      "C": "Overwork",
+      "D": "Curriculum reduction"
+    },
+    "answer": "A",
+    "explanation": "Consistent teacher presence ensures consistent instruction and routine. This stability is critical for maximizing instructional time and directly supporting high **Learner engagement** (A)."
+  },
+  {
+    "id": 18,
+    "question": "The best approach to school discipline is:",
+    "options": {
+      "A": "Punitive",
+      "B": "Restorative",
+      "C": "Intimidation",
+      "D": "Irregular punishment"
+    },
+    "answer": "B",
+    "explanation": "A **Restorative** (B) approach focuses on repairing the harm caused by misbehavior, reintegrating the student, and teaching them accountability and empathy, rather than simply applying punishment (A)."
+  },
+  {
+    "id": 19,
+    "question": "To promote professional ethics, an ADII must:",
+    "options": {
+      "A": "Overlook misconduct",
+      "B": "Model good behaviour",
+      "C": "Gossip",
+      "D": "Take sides"
+    },
+    "answer": "B",
+    "explanation": "Leadership by example is the most powerful tool. An ADII promotes professional ethics by consistently demonstrating the integrity, fairness, and responsibility they expect from their staff (**Model good behaviour** (B))."
+  },
+  {
+    "id": 20,
+    "question": "The most effective CPD programmes are:",
+    "options": {
+      "A": "One-off",
+      "B": "Ongoing and practical",
+      "C": "Theoretical only",
+      "D": "Forced"
+    },
+    "answer": "B",
+    "explanation": "Effective professional development is sustained, embedded in practice, and allows teachers to immediately apply and reflect on what they learn. This makes **Ongoing and practical** (B) programmes the most impactful."
+  },
+  {
+    "id": 21,
+    "question": "Instructional supervision focuses on:",
+    "options": {
+      "A": "Pedagogical improvement",
+      "B": "Finance",
+      "C": "Security",
+      "D": "PTA welfare"
+    },
+    "answer": "A",
+    "explanation": "**Instructional supervision** is specifically concerned with enhancing the quality of teaching and learning in the classroom. Its focus is entirely on **Pedagogical improvement** (A)."
+  },
+  {
+    "id": 22,
+    "question": "A functional school timetable must:",
+    "options": {
+      "A": "Overload teachers",
+      "B": "Balance subjects and periods",
+      "C": "Exclude breaks",
+      "D": "Change daily"
+    },
+    "answer": "B",
+    "explanation": "A functional timetable ensures that all curriculum subjects receive the required instructional time, avoiding excessive periods back-to-back and optimizing learning flow. This is achieved by maintaining a **Balance of subjects and periods** (B)."
+  },
+  {
+    "id": 23,
+    "question": "An Assessment for Learning (AfL) strategy includes:",
+    "options": {
+      "A": "Giving marks only",
+      "B": "Providing feedback",
+      "C": "Retesting without guidance",
+      "D": "Ignoring errors"
+    },
+    "answer": "B",
+    "explanation": "AfL is formative and focuses on using assessment results to move learning forward. The critical component is the teacher's response to student work, which involves **Providing feedback** (B) that guides the next step."
+  },
+  {
+    "id": 24,
+    "question": "The most effective way to promote reading culture is to:",
+    "options": {
+      "A": "Lock the library",
+      "B": "Provide access and activities",
+      "C": "Hide books",
+      "D": "Discourage reading at home"
+    },
+    "answer": "B",
+    "explanation": "Reading culture thrives when books are readily available (**Provide access**) and when the community engages in activities (e.g., reading clubs, book fairs) that make reading valued and enjoyable (**activities** (B))."
+  },
+  {
+    "id": 25,
+    "question": "A leader who inspires staff through vision and motivation practices:",
+    "options": {
+      "A": "Autocratic leadership",
+      "B": "Transformational leadership",
+      "C": "Laissez-faire",
+      "D": "Transactional leadership"
+    },
+    "answer": "B",
+    "explanation": "**Transformational leadership** (B) inspires followers by communicating a compelling vision, promoting intellectual stimulation, and attending to individual needs to foster commitment and innovation."
+  },
+  {
+    "id": 26,
+    "question": "The main goal of quality assurance is:",
+    "options": {
+      "A": "Teacher control",
+      "B": "Ensuring educational standards",
+      "C": "Punishing non-performers",
+      "D": "Reducing workload"
+    },
+    "answer": "B",
+    "explanation": "Quality assurance is a systematic process designed to guarantee that the educational provision meets preset specifications or benchmarks, essentially **Ensuring educational standards** (B) and continuous improvement."
+  },
+  {
+    "id": 27,
+    "question": "A school’s mission statement describes its:",
+    "options": {
+      "A": "Long-term dream",
+      "B": "Core purpose",
+      "C": "Physical resources",
+      "D": "Staff numbers"
+    },
+    "answer": "B",
+    "explanation": "The **mission statement** is a declaration of the school’s reason for existence—what it does, for whom, and why it is important—defining its **Core purpose** (B)."
+  },
+  {
+    "id": 28,
+    "question": "During lesson observations, the most important focus is:",
+    "options": {
+      "A": "Teacher dressing",
+      "B": "Learner engagement",
+      "C": "Classroom windows",
+      "D": "Furniture design"
+    },
+    "answer": "B",
+    "explanation": "If students are not actively participating in the learning process, even the best lesson plan fails. The quality of instruction is best gauged by the level and nature of **Learner engagement** (B)."
+  },
+  {
+    "id": 29,
+    "question": "Effective communication with parents requires:",
+    "options": {
+      "A": "Technical language",
+      "B": "Clarity and courtesy",
+      "C": "Demanding tone",
+      "D": "Irregular updates"
+    },
+    "answer": "B",
+    "explanation": "School-parent communication should be professional, respectful, and easy to understand to foster partnership. This requires **Clarity and courtesy** (B)."
+  },
+  {
+    "id": 30,
+    "question": "The most crucial aspect of teacher mentoring is:",
+    "options": {
+      "A": "Criticism",
+      "B": "Support and guidance",
+      "C": "Monitoring faults",
+      "D": "Assigning extra duties"
+    },
+    "answer": "B",
+    "explanation": "Mentoring is fundamentally a developmental relationship. The mentor's role is to ease the mentee's professional journey by offering constructive advice, resources, and encouragement (**Support and guidance** (B))."
+  },
+  {
+    "id": 31,
+    "question": "An ADII ensures fairness in assessment by:",
+    "options": {
+      "A": "Changing scores",
+      "B": "Using clear rubrics",
+      "C": "Allowing bias",
+      "D": "Ignoring guidelines"
+    },
+    "answer": "B",
+    "explanation": "A **rubric** is a scoring guide that sets out the criteria and standards for evaluation. By using **clear rubrics** (B), the ADII ensures that assessment is objective, transparent, and fair across all students."
+  },
+  {
+    "id": 32,
+    "question": "A school budget deficit means:",
+    "options": {
+      "A": "Overspending",
+      "B": "Balanced accounts",
+      "C": "Increased savings",
+      "D": "No financial issues"
+    },
+    "answer": "A",
+    "explanation": "A budget deficit occurs when expenditures exceed revenues over a specific period, resulting in **Overspending** (A) or a shortfall in the financial plan."
+  },
+  {
+    "id": 33,
+    "question": "The main purpose of co-curricular activities is to:",
+    "options": {
+      "A": "Waste time",
+      "B": "Develop holistic learners",
+      "C": "Reduce academic time",
+      "D": "Punish learners"
+    },
+    "answer": "B",
+    "explanation": "Co-curricular activities (like sports, clubs, drama) complement academic learning by developing social skills, leadership, talents, and physical health, thereby helping to **Develop holistic learners** (B)."
+  },
+  {
+    "id": 34,
+    "question": "A safe school environment must be:",
+    "options": {
+      "A": "Unpredictable",
+      "B": "Clean and hazard-free",
+      "C": "Noisy",
+      "D": "Overcrowded"
+    },
+    "answer": "B",
+    "explanation": "Physical safety is non-negotiable. A safe environment requires eliminating risks to students' health and well-being, which means ensuring the premises are **Clean and hazard-free** (B)."
+  },
+  {
+    "id": 35,
+    "question": "A teacher who differentiates instruction is:",
+    "options": {
+      "A": "Teaching the same way to all",
+      "B": "Adjusting to learner needs",
+      "C": "Ignoring slow learners",
+      "D": "Focusing only on fast learners"
+    },
+    "answer": "B",
+    "explanation": "**Differentiated instruction** is a teaching approach that modifies the content, process, or product based on students' readiness, interests, and learning profiles. It is fundamentally about **Adjusting to learner needs** (B)."
+  },
+  {
+    "id": 36,
+    "question": "School-community collaboration primarily improves:",
+    "options": {
+      "A": "Learning resources",
+      "B": "Teacher workload",
+      "C": "Classroom noise",
+      "D": "Student punishment"
+    },
+    "answer": "A",
+    "explanation": "Community support often translates into the provision of facilities, materials, and funds, or the mobilization of volunteers. This directly enhances the availability of **Learning resources** (A) for students."
+  },
+  {
+    "id": 37,
+    "question": "The most effective motivation strategy is:",
+    "options": {
+      "A": "Threats",
+      "B": "Recognition and support",
+      "C": "Increasing workload",
+      "D": "Avoiding supervision"
+    },
+    "answer": "B",
+    "explanation": "Positive reinforcement and a supportive work environment are far more motivating than fear or threats. A leader should actively employ **Recognition and support** (B) to inspire staff commitment and performance."
+  },
+  {
+    "id": 38,
+    "question": "Instructional materials are effective when they:",
+    "options": {
+      "A": "Are attractive only",
+      "B": "Support learning objectives",
+      "C": "Replace the teacher",
+      "D": "Are expensive"
+    },
+    "answer": "B",
+    "explanation": "Materials must be aligned with the teaching goals. Their effectiveness is determined by how well they help the teacher and students achieve the specific **learning objectives** (B) of the lesson."
+  },
+  {
+    "id": 39,
+    "question": "A teacher’s scheme of work is:",
+    "options": {
+      "A": "A daily plan",
+      "B": "A termly plan of topics",
+      "C": "A class register",
+      "D": "A behaviour book"
+    },
+    "answer": "B",
+    "explanation": "The scheme of work is a long-term plan that breaks down the curriculum into manageable units for a specific duration (e.g., a term, semester). It is a **Termly plan of topics** (B) and learning activities."
+  },
+  {
+    "id": 40,
+    "question": "Pedagogical content knowledge refers to:",
+    "options": {
+      "A": "General knowledge",
+      "B": "Knowledge of how to teach a subject",
+      "C": "Student welfare",
+      "D": "Administrative duties"
+    },
+    "answer": "B",
+    "explanation": "**Pedagogical Content Knowledge (PCK)** is a term introduced by Shulman (1987) that describes the unique blend of subject matter knowledge and teaching methods. It is the specialized **Knowledge of how to teach a subject** (B) effectively. "
+  },
+  {
+    "id": 41,
+    "question": "The role of monitoring learner attendance is to:",
+    "options": {
+      "A": "Punish absenteeism",
+      "B": "Track participation and performance",
+      "C": "Reduce class size",
+      "D": "Improve teacher promotion chances"
+    },
+    "answer": "B",
+    "explanation": "Attendance records serve as vital data for school management. They help identify students at risk of failure and are correlated with engagement, making the primary role to **Track participation and performance** (B)."
+  },
+  {
+    "id": 42,
+    "question": "The most effective way to improve student behaviour is:",
+    "options": {
+      "A": "Random punishment",
+      "B": "Consistent rules",
+      "C": "Humiliation",
+      "D": "Isolation"
+    },
+    "answer": "A",
+    "explanation": "Students learn best in a predictable environment. When expectations and consequences are applied fairly and reliably to all, **Consistent rules** (A) provide the necessary structure to guide behaviour."
+  },
+  {
+    "id": 43,
+    "question": "A valid assessment measures:",
+    "options": {
+      "A": "Anything the teacher wants",
+      "B": "What it intends to measure",
+      "C": "Unrelated content",
+      "D": "Students’ handwriting"
+    },
+    "answer": "B",
+    "explanation": "**Validity** is the degree to which a test measures what it claims to measure. A valid assessment is one that accurately assesses the objectives it was designed to evaluate (**What it intends to measure** (B))."
+  },
+  {
+    "id": 44,
+    "question": "School stakeholders include:",
+    "options": {
+      "A": "Teachers only",
+      "B": "Students, parents, community",
+      "C": "Ministry officials only",
+      "D": "Donors only"
+    },
+    "answer": "B",
+    "explanation": "**Stakeholders** are all individuals or groups who have an interest or concern in the school's affairs. This comprehensive group includes **Students, parents, and the community** (B), alongside staff and government officials."
+  },
+  {
+    "id": 45,
+    "question": "Instructional leadership emphasizes:",
+    "options": {
+      "A": "Teaching and learning",
+      "B": "Finances",
+      "C": "Buildings",
+      "D": "Discipline alone"
+    },
+    "answer": "A",
+    "explanation": "Instructional leadership is defined by the focus on pedagogy. The leader’s efforts are geared towards improving classroom processes and curriculum delivery, focusing entirely on **Teaching and learning** (A)."
+  },
+  {
+    "id": 46,
+    "question": "A reflective teacher regularly:",
+    "options": {
+      "A": "Repeats mistakes",
+      "B": "Reviews and improves practice",
+      "C": "Avoids feedback",
+      "D": "Ignores learner outcomes"
+    },
+    "answer": "B",
+    "explanation": "**Reflection** is the process of examining one’s professional experiences and critically analyzing them to inform future actions. A reflective teacher uses this process to **Reviews and improves practice** (B)."
+  },
+  {
+    "id": 47,
+    "question": "The first step in solving a school problem is to:",
+    "options": {
+      "A": "Guess",
+      "B": "Identify the root cause",
+      "C": "Punish someone",
+      "D": "Assume"
+    },
+    "answer": "B",
+    "explanation": "Effective problem-solving is systematic. Before proposing solutions or taking action, one must understand the underlying reason for the issue. The initial step is always to **Identify the root cause** (B)."
+  },
+  {
+    "id": 48,
+    "question": "A continuous record of learner performance is known as:",
+    "options": {
+      "A": "Report form",
+      "B": "Cumulative record",
+      "C": "Lesson plan",
+      "D": "Logbook"
+    },
+    "answer": "B",
+    "explanation": "A **Cumulative record** (B) is a long-term, comprehensive, and continuous record that tracks a student’s academic progress, attendance, and other important data throughout their years at the school."
+  },
+  {
+    "id": 49,
+    "question": "An effective team leader must:",
+    "options": {
+      "A": "Dominate discussions",
+      "B": "Listen actively",
+      "C": "Avoid suggestions",
+      "D": "Make decisions alone"
+    },
+    "answer": "B",
+    "explanation": "Effective leaders foster inclusion and leverage the expertise of their team. This is achieved by engaging with all contributions through the skill of **Listen actively** (B)."
+  },
+  {
+    "id": 50,
+    "question": "Conflict can become constructive when:",
+    "options": {
+      "A": "Ignored",
+      "B": "Managed positively",
+      "C": "Escalated",
+      "D": "Turned into blame"
+    },
+    "answer": "B",
+    "explanation": "Conflict is inevitable but can lead to stronger solutions and better relationships if addressed head-on and focused on issues rather than personalities. It becomes constructive when **Managed positively** (B) and collaboratively."
+  }
+]

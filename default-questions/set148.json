@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "Induction programmes help new teachers to",
+    "options": {
+      "A": "Feel isolated",
+      "B": "Understand the school system",
+      "C": "Become confused",
+      "D": "Fear management"
+    },
+    "answer": "B",
+    "explanation": "An induction program is a formal process to welcome and integrate new staff. Its primary goal is to familiarize them with the school's mission, policies, and culture, helping them **Understand the school system** (B)."
+  },
+  {
+    "id": 2,
+    "question": "Effective delegation requires",
+    "options": {
+      "A": "Dumping tasks",
+      "B": "Clarifying responsibilities",
+      "C": "Threatening staff",
+      "D": "Reducing communication"
+    },
+    "answer": "B",
+    "explanation": "To ensure delegated tasks are completed successfully and avoid confusion, the delegator must clearly define the task, expected outcomes, and the authority granted. This process is about **Clarifying responsibilities** (B)."
+  },
+  {
+    "id": 3,
+    "question": "School community relations strengthen",
+    "options": {
+      "A": "Conflict",
+      "B": "Support for school activities",
+      "C": "Mistrust",
+      "D": "Isolation"
+    },
+    "answer": "B",
+    "explanation": "When a school fosters positive relations with the local community, it builds a network of stakeholders who are willing to contribute resources, time, and goodwill, providing increased **Support for school activities** (B)."
+  },
+  {
+    "id": 4,
+    "question": "Child-friendly schools promote",
+    "options": {
+      "A": "Fear",
+      "B": "Safety and respect",
+      "C": "Harsh punishments",
+      "D": "Exclusion"
+    },
+    "answer": "B",
+    "explanation": "A 'child-friendly' school model is centred on the holistic development and rights of the child, ensuring a protective, inclusive, and nurturing environment characterized by **Safety and respect** (B)."
+  },
+  {
+    "id": 5,
+    "question": "Constructivist teaching encourages learners to",
+    "options": {
+      "A": "Memorise only",
+      "B": "Build their own understanding",
+      "C": "Copy notes",
+      "D": "Stay passive"
+    },
+    "answer": "B",
+    "explanation": "The **constructivist** theory of learning holds that individuals actively construct new knowledge from their experiences and ideas. Therefore, this teaching approach promotes activities that help students **Build their own understanding** (B)."
+  },
+  {
+    "id": 6,
+    "question": "The purpose of a lesson review is",
+    "options": {
+      "A": "To blame pupils",
+      "B": "To check attainment",
+      "C": "To punish teachers",
+      "D": "To reduce learning"
+    },
+    "answer": "B",
+    "explanation": "The review (or closure) segment of a lesson is used to summarize the main points and briefly assess student comprehension, allowing the teacher **To check attainment** (B) of the lesson objectives."
+  },
+  {
+    "id": 7,
+    "question": "A school’s vision statement describes",
+    "options": {
+      "A": "The long-term aspirations",
+      "B": "Sitting arrangement",
+      "C": "Daily routines",
+      "D": "Furniture list"
+    },
+    "answer": "A",
+    "explanation": "A **vision statement** is a future-oriented declaration that articulates the desired ideal state and overarching purpose of the institution. It describes **The long-term aspirations** (A)."
+  },
+  {
+    "id": 8,
+    "question": "The most reliable assessment tool is",
+    "options": {
+      "A": "Guessing",
+      "B": "Standardised tests",
+      "C": "Hearsay",
+      "D": "Rumour"
+    },
+    "answer": "B",
+    "explanation": "**Reliability** in assessment refers to the consistency of results. **Standardised tests** (B) are developed and administered under strict, uniform conditions, making them the most reliable tool for comparative measurement."
+  },
+  {
+    "id": 9,
+    "question": "Decentralisation in education means",
+    "options": {
+      "A": "Concentrating power",
+      "B": "Sharing responsibilities",
+      "C": "Removing teachers",
+      "D": "Ending supervision"
+    },
+    "answer": "B",
+    "explanation": "Decentralisation is the transfer of authority and responsibility from central government (or ministry) to lower levels, such as regions, districts, or schools. This is essentially **Sharing responsibilities** (B)."
+  },
+  {
+    "id": 10,
+    "question": "A teaching resource enhances learning by",
+    "options": {
+      "A": "Confusing learners",
+      "B": "Supporting understanding",
+      "C": "Distracting pupils",
+      "D": "Replacing teachers"
+    },
+    "answer": "B",
+    "explanation": "Teaching resources (or aids) simplify complex ideas and provide visual or tactile examples, making abstract concepts more concrete and directly **Supporting understanding** (B)."
+  },
+  {
+    "id": 11,
+    "question": "Professionalism in teaching demands",
+    "options": {
+      "A": "Irregularity",
+      "B": "Competence and commitment",
+      "C": "Dishonesty",
+      "D": "Bias"
+    },
+    "answer": "B",
+    "explanation": "Professionalism requires high standards of knowledge, skill, ethical practice, and dedication. These qualities are encapsulated by **Competence and commitment** (B)."
+  },
+  {
+    "id": 12,
+    "question": "An effective school leader motivates by",
+    "options": {
+      "A": "Threatening",
+      "B": "Inspiring",
+      "C": "Ignoring",
+      "D": "Blaming"
+    },
+    "answer": "B",
+    "explanation": "Motivational leaders use vision, positive reinforcement, and belief in their staff's abilities to foster intrinsic motivation, which means they lead by **Inspiring** (B)."
+  },
+  {
+    "id": 13,
+    "question": "The role of the PTA is to",
+    "options": {
+      "A": "Promote conflict",
+      "B": "Support school development",
+      "C": "Replace teachers",
+      "D": "Reject policies"
+    },
+    "answer": "B",
+    "explanation": "The Parent-Teacher Association (PTA) is instrumental in bridging the gap between school and home, often participating in fundraising and volunteer efforts to **Support school development** (B) and improvement projects."
+  },
+  {
+    "id": 14,
+    "question": "A good instructional objective must be",
+    "options": {
+      "A": "Vague",
+      "B": "Specific",
+      "C": "Confusing",
+      "D": "Hidden"
+    },
+    "answer": "B",
+    "explanation": "For an objective to be useful for planning and evaluation, it must clearly state what the learner will be able to do. This aligns with the 'S' in the SMART criteria, meaning it must be **Specific** (B)."
+  },
+  {
+    "id": 15,
+    "question": "Peer learning allows learners to",
+    "options": {
+      "A": "Compete harshly",
+      "B": "Learn from each other",
+      "C": "Stay silent",
+      "D": "Avoid collaboration"
+    },
+    "answer": "B",
+    "explanation": "**Peer learning** is a method where students interact to attain educational goals, engaging in mutual teaching, discussion, and support to **Learn from each other** (B)."
+  },
+  {
+    "id": 16,
+    "question": "The purpose of moderation in assessment is",
+    "options": {
+      "A": "Ensure fairness",
+      "B": "Promote bias",
+      "C": "Reduce quality",
+      "D": "Hide results"
+    },
+    "answer": "A",
+    "explanation": "**Moderation** is the process of reviewing assessment tasks and marking decisions to ensure consistency and prevent teacher bias across different classes, thereby helping to **Ensure fairness** (A) and validity."
+  },
+  {
+    "id": 17,
+    "question": "Teacher punctuality promotes",
+    "options": {
+      "A": "Indiscipline",
+      "B": "Good learning culture",
+      "C": "Confusion",
+      "D": "Fear"
+    },
+    "answer": "B",
+    "explanation": "Punctuality is a crucial professional example. When teachers are consistently on time, it sets a standard of respect for time and reinforces a disciplined, **Good learning culture** (B) throughout the school."
+  },
+  {
+    "id": 18,
+    "question": "A major challenge to instructional leadership is",
+    "options": {
+      "A": "Overcrowding",
+      "B": "Collaboration",
+      "C": "Planning",
+      "D": "Motivation"
+    },
+    "answer": "A",
+    "explanation": "Instructional leadership focuses on improving teaching quality. **Overcrowding** (A) severely limits a leader's ability to observe, provide individualized coaching, and for teachers to use effective, hands-on instructional strategies."
+  },
+  {
+    "id": 19,
+    "question": "Quality homework should",
+    "options": {
+      "A": "Be excessive",
+      "B": "Reinforce learning",
+      "C": "Punish learners",
+      "D": "Last for hours"
+    },
+    "answer": "B",
+    "explanation": "Homework is most effective when it is meaningful and purposeful. Its key function is to provide students with practice and consolidation of skills learned in class, which means to **Reinforce learning** (B)."
+  },
+  {
+    "id": 20,
+    "question": "Positive reinforcement works by",
+    "options": {
+      "A": "Rewarding desirable behaviour",
+      "B": "Ignoring pupils",
+      "C": "Using fear",
+      "D": "Insulting learners"
+    },
+    "answer": "A",
+    "explanation": "**Positive reinforcement** is a behavioral strategy that involves presenting a motivating item or event (a reward) after a desired behavior occurs, which makes the behavior more likely to happen again (**Rewarding desirable behaviour**) (A)."
+  },
+  {
+    "id": 21,
+    "question": "Classroom questioning is effective when it",
+    "options": {
+      "A": "Targets few pupils",
+      "B": "Engages all learners",
+      "C": "Confuses learners",
+      "D": "Encourages silence"
+    },
+    "answer": "B",
+    "explanation": "Effective questioning techniques—such as wait time and non-volunteers—are designed to make every student think and participate, ensuring it **Engages all learners** (B) and promotes active processing."
+  },
+  {
+    "id": 22,
+    "question": "A school conflict is best resolved through",
+    "options": {
+      "A": "Fighting",
+      "B": "Dialogue",
+      "C": "Accusations",
+      "D": "Hostility"
+    },
+    "answer": "B",
+    "explanation": "Conflict resolution requires understanding the perspectives of all parties in a safe, structured manner. **Dialogue** (B) (communication) is the essential tool for mediation and finding mutually acceptable solutions."
+  },
+  {
+    "id": 23,
+    "question": "Effective teacher supervision should",
+    "options": {
+      "A": "Intimidate teachers",
+      "B": "Support growth",
+      "C": "Reduce collaboration",
+      "D": "Promote fear"
+    },
+    "answer": "B",
+    "explanation": "Modern supervision is developmental and collegial, aiming to enhance teachers' instructional competence and job satisfaction. Its primary purpose is to **Support growth** (B)."
+  },
+  {
+    "id": 24,
+    "question": "A standard curriculum ensures",
+    "options": {
+      "A": "Uniform learning",
+      "B": "Teacher freedom to ignore objectives",
+      "C": "Isolation",
+      "D": "Reduced accountability"
+    },
+    "answer": "A",
+    "explanation": "A **standard curriculum** defines a common body of knowledge and skills to be taught across all schools in a system, promoting equity and consistency, which aims for **Uniform learning** (A) outcomes."
+  },
+  {
+    "id": 25,
+    "question": "The purpose of a lesson starter is to",
+    "options": {
+      "A": "Punish pupils",
+      "B": "Capture interest",
+      "C": "Waste time",
+      "D": "Create fear"
+    },
+    "answer": "B",
+    "explanation": "A lesson starter (or bell-ringer) is a short activity used at the beginning of a class to transition students to the new subject matter and **Capture interest** (B) for the main topic."
+  },
+  {
+    "id": 26,
+    "question": "Teachers should use teaching aids because they",
+    "options": {
+      "A": "Make lessons dull",
+      "B": "Enhance understanding",
+      "C": "Reduce interaction",
+      "D": "Confuse learners"
+    },
+    "answer": "B",
+    "explanation": "Teaching aids (visuals, models, etc.) provide multiple modes of presentation and sensory input, which deepen retention and make concepts clearer, directly helping to **Enhance understanding** (B)."
+  },
+  {
+    "id": 27,
+    "question": "Effective communication in the classroom includes",
+    "options": {
+      "A": "Clear instructions",
+      "B": "Mumbling",
+      "C": "Shouting",
+      "D": "Ignoring questions"
+    },
+    "answer": "A",
+    "explanation": "Communication is only effective if the message is received and understood as intended. Therefore, the ability to give **Clear instructions** (A) is fundamental to effective classroom communication."
+  },
+  {
+    "id": 28,
+    "question": "Collaborative leadership promotes",
+    "options": {
+      "A": "Isolation",
+      "B": "Shared decision-making",
+      "C": "Confusion",
+      "D": "Autocracy"
+    },
+    "answer": "B",
+    "explanation": "**Collaborative leadership** involves leaders working with staff and stakeholders to set goals and solve problems, replacing top-down control with a system of **Shared decision-making** (B)."
+  },
+  {
+    "id": 29,
+    "question": "School supervision helps to",
+    "options": {
+      "A": "Disorganise teachers",
+      "B": "Improve teaching quality",
+      "C": "Reduce accountability",
+      "D": "Create conflict"
+    },
+    "answer": "B",
+    "explanation": "The primary function of school supervision is the continuous evaluation and guidance of instructional activities to directly **Improve teaching quality** (B) and, consequently, student learning."
+  },
+  {
+    "id": 30,
+    "question": "The best approach to discipline is",
+    "options": {
+      "A": "Reactive",
+      "B": "Preventive",
+      "C": "Harsh",
+      "D": "Emotional"
+    },
+    "answer": "B",
+    "explanation": "**Preventive** (B) discipline is proactive, focusing on establishing clear rules, building relationships, and fostering a positive school climate to stop misbehavior before it starts, making it the most effective long-term approach."
+  },
+  {
+    "id": 31,
+    "question": "Teachers must evaluate lessons to",
+    "options": {
+      "A": "Identify areas for improvement",
+      "B": "Criticise learners",
+      "C": "Waste time",
+      "D": "Avoid planning"
+    },
+    "answer": "A",
+    "explanation": "Lesson evaluation (reflection) is critical for professional growth. It allows the teacher to assess what worked and what didn't in the delivery, enabling them to **Identify areas for improvement** (A) in future lessons."
+  },
+  {
+    "id": 32,
+    "question": "School records must be kept because they",
+    "options": {
+      "A": "Encourage laziness",
+      "B": "Provide accurate information",
+      "C": "Promote secrecy",
+      "D": "Increase errors"
+    },
+    "answer": "B",
+    "explanation": "The main administrative and legal purpose of maintaining school records (student files, financial logs, etc.) is to **Provide accurate information** (B) necessary for accountability, reporting, and decision-making."
+  },
+  {
+    "id": 33,
+    "question": "The main purpose of in-service training is",
+    "options": {
+      "A": "Update skills",
+      "B": "Reduce standards",
+      "C": "Confuse teachers",
+      "D": "Waste resources"
+    },
+    "answer": "A",
+    "explanation": "In-service training (INSET) is designed to ensure current teachers remain effective and knowledgeable in their field by helping them **Update skills** (A) and knowledge with the latest pedagogical research and curriculum changes."
+  },
+  {
+    "id": 34,
+    "question": "Continuous feedback improves",
+    "options": {
+      "A": "Teacher bias",
+      "B": "Student learning",
+      "C": "Indiscipline",
+      "D": "Fear"
+    },
+    "answer": "B",
+    "explanation": "Timely, specific, and actionable feedback is one of the most powerful influences on educational achievement, allowing students to adjust their strategies and directly improving **Student learning** (B)."
+  },
+  {
+    "id": 35,
+    "question": "Teachers use brainstorming to",
+    "options": {
+      "A": "Promote confusion",
+      "B": "Generate ideas",
+      "C": "Silence learners",
+      "D": "Test memory"
+    },
+    "answer": "B",
+    "explanation": "**Brainstorming** is a group technique designed to stimulate creative thinking and participation, where members contribute spontaneous ideas, making its purpose to **Generate ideas** (B)."
+  },
+  {
+    "id": 36,
+    "question": "A democratic teacher encourages",
+    "options": {
+      "A": "One-way communication",
+      "B": "Shared opinions",
+      "C": "Insults",
+      "D": "Fear"
+    },
+    "answer": "B",
+    "explanation": "A democratic classroom encourages participation and freedom of expression. The teacher guides the discussion but values and encourages **Shared opinions** (B) and input from learners."
+  },
+  {
+    "id": 37,
+    "question": "A school policy guides",
+    "options": {
+      "A": "Behaviour",
+      "B": "Gossip",
+      "C": "Rumour spreading",
+      "D": "Irregularity"
+    },
+    "answer": "A",
+    "explanation": "School policies are formal guidelines adopted by the institution to regulate and standardize various aspects of school life, most importantly student and staff **Behaviour** (A)."
+  },
+  {
+    "id": 38,
+    "question": "Classroom routines help to",
+    "options": {
+      "A": "Create order",
+      "B": "Promote chaos",
+      "C": "Confuse learners",
+      "D": "Reduce learning"
+    },
+    "answer": "A",
+    "explanation": "Established classroom routines (e.g., how to hand in homework, enter the room, transition between activities) eliminate wasted time and unpredictability, helping to **Create order** (A) and structure."
+  },
+  {
+    "id": 39,
+    "question": "A teacher’s portfolio contains",
+    "options": {
+      "A": "Teaching evidence",
+      "B": "Food items",
+      "C": "Furniture",
+      "D": "Punishment lists"
+    },
+    "answer": "A",
+    "explanation": "A professional portfolio is a collection of artifacts, reflections, and data (like lesson plans, samples of student work, and observation reports) used to document and evaluate professional growth—it contains **Teaching evidence** (A)."
+  },
+  {
+    "id": 40,
+    "question": "Effective listening requires",
+    "options": {
+      "A": "Interrupting",
+      "B": "Paying attention",
+      "C": "Looking away",
+      "D": "Multitasking"
+    },
+    "answer": "B",
+    "explanation": "Listening is an active communication skill that involves consciously focusing on the speaker's words and non-verbal cues. The foundation of this is simply **Paying attention** (B)."
+  },
+  {
+    "id": 41,
+    "question": "A major barrier to communication is",
+    "options": {
+      "A": "Noise",
+      "B": "Clarity",
+      "C": "Feedback",
+      "D": "Eye contact"
+    },
+    "answer": "A",
+    "explanation": "**Noise** (A) (physical or psychological distractions) interferes with the transmission and reception of a message, making it a classic and significant barrier to communication."
+  },
+  {
+    "id": 42,
+    "question": "Effective motivation comes from",
+    "options": {
+      "A": "Recognition",
+      "B": "Threats",
+      "C": "Shame",
+      "D": "Humiliation"
+    },
+    "answer": "A",
+    "explanation": "Positive motivators, such as praise, awards, and appreciation, are far more effective and sustainable than fear-based tactics. **Recognition** (A) makes employees feel valued and inspires continued effort."
+  },
+  {
+    "id": 43,
+    "question": "An instructional leader must",
+    "options": {
+      "A": "Avoid classrooms",
+      "B": "Support teaching",
+      "C": "Ignore teachers",
+      "D": "Reduce supervision"
+    },
+    "answer": "B",
+    "explanation": "An **instructional leader** focuses their efforts directly on improving instruction and curriculum, which means they must be actively involved in and **Support teaching** (B) activities within the classrooms."
+  },
+  {
+    "id": 44,
+    "question": "Education promotes national development through",
+    "options": {
+      "A": "Illiteracy",
+      "B": "Human resource development",
+      "C": "Conflict",
+      "D": "Corruption"
+    },
+    "answer": "B",
+    "explanation": "Education equips citizens with the knowledge, skills, and values necessary for economic growth, innovation, and civic participation. It is the core mechanism for **Human resource development** (B)."
+  },
+  {
+    "id": 45,
+    "question": "The best method to teach problem-solving is",
+    "options": {
+      "A": "Rote learning",
+      "B": "Inquiry-based learning",
+      "C": "Dictation",
+      "D": "Copying"
+    },
+    "answer": "B",
+    "explanation": "**Inquiry-based learning** (B) involves students investigating questions, exploring ideas, and solving problems independently or collaboratively, making it the most active and effective method for developing problem-solving skills."
+  },
+  {
+    "id": 46,
+    "question": "Classroom climate affects",
+    "options": {
+      "A": "Learning outcomes",
+      "B": "Furniture only",
+      "C": "Timetables",
+      "D": "School fees"
+    },
+    "answer": "A",
+    "explanation": "The social, emotional, and physical atmosphere of a classroom significantly influences student motivation, engagement, and concentration, which directly impacts **Learning outcomes** (A)."
+  },
+  {
+    "id": 47,
+    "question": "The use of praise helps to",
+    "options": {
+      "A": "Create fear",
+      "B": "Encourage good behaviour",
+      "C": "Discourage effort",
+      "D": "Promote bias"
+    },
+    "answer": "B",
+    "explanation": "Praise is a form of positive reinforcement that makes students feel valued and signals which behaviors are desirable, increasing the likelihood that they will be repeated (**Encourage good behaviour**) (B)."
+  },
+  {
+    "id": 48,
+    "question": "Teachers ensure fairness by",
+    "options": {
+      "A": "Using the same criteria for all",
+      "B": "Ignoring differences",
+      "C": "Favouring some",
+      "D": "Changing marks secretly"
+    },
+    "answer": "A",
+    "explanation": "Fairness (or equity) in assessment and discipline means applying the same transparent standards and rules to every student, ensuring objectivity by **Using the same criteria for all** (A)."
+  },
+  {
+    "id": 49,
+    "question": "Effective delegation helps to",
+    "options": {
+      "A": "Reduce workload",
+      "B": "Increase confusion",
+      "C": "Centralise power",
+      "D": "Destroy trust"
+    },
+    "answer": "A",
+    "explanation": "By transferring tasks and authority, delegation frees up the leader's time to focus on strategic issues and reduces their operational burden, which is why it helps to **Reduce workload** (A)."
+  },
+  {
+    "id": 50,
+    "question": "A key feature of effective CPD is",
+    "options": {
+      "A": "Collaboration",
+      "B": "Isolation",
+      "C": "Guesswork",
+      "D": "Fear"
+    },
+    "answer": "A",
+    "explanation": "Effective Continuing Professional Development (CPD) often involves teachers working together, sharing best practices, and learning from peers and mentors. **Collaboration** (A) is crucial for sustained impact and quality."
+  }
+]

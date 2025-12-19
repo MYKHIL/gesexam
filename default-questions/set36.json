@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "A school improvement plan runs for:",
+    "options": {
+      "A": "1–3 years",
+      "B": "10 years",
+      "C": "15 years",
+      "D": "5 months"
+    },
+    "answer": "A",
+    "explanation": "A School Improvement Plan (SIP) works best as a medium-term strategy, typically spanning 1 to 3 years, allowing enough time for implementation and impact while remaining flexible enough to adapt to changes."
+  },
+  {
+    "id": 2,
+    "question": "Which best describes accountability?",
+    "options": {
+      "A": "Reporting for resources used",
+      "B": "Ignoring questions",
+      "C": "Transferring blame",
+      "D": "Keeping silent"
+    },
+    "answer": "A",
+    "explanation": "Accountability is the obligation to answer for one's actions; specifically, reporting on how assigned responsibilities have been carried out and how public resources have been utilized."
+  },
+  {
+    "id": 3,
+    "question": "The term \"instructional leadership\" refers to:",
+    "options": {
+      "A": "Rules only",
+      "B": "Improving teaching and learning",
+      "C": "Facility repairs",
+      "D": "Staff transfer"
+    },
+    "answer": "B",
+    "explanation": "Instructional leadership is a management approach where the school leader focuses primarily on the quality of instruction, actively working to support teachers and improve student learning outcomes."
+  },
+  {
+    "id": 4,
+    "question": "Conflict in schools should be handled:",
+    "options": {
+      "A": "Fairly and promptly",
+      "B": "Violently",
+      "C": "Secretly",
+      "D": "Emotionally"
+    },
+    "answer": "A",
+    "explanation": "Unresolved conflict can disrupt learning. Effective leaders address conflicts immediately (promptly) and without bias (fairly) to restore harmony and focus."
+  },
+  {
+    "id": 5,
+    "question": "Gender parity in education refers to:",
+    "options": {
+      "A": "Only boys’ enrolment",
+      "B": "Equal access for boys & girls",
+      "C": "Free uniforms",
+      "D": "Teacher postings"
+    },
+    "answer": "B",
+    "explanation": "Gender parity is achieved when there is an equal representation of boys and girls in the education system, ensuring that neither sex is disadvantaged in access to schooling."
+  },
+  {
+    "id": 6,
+    "question": "Which file stores teacher information?",
+    "options": {
+      "A": "Salary register",
+      "B": "Personal record file",
+      "C": "Food ration list",
+      "D": "EMIS forms"
+    },
+    "answer": "B",
+    "explanation": "The Personal Record File (often called the 'P-File') is the confidential file that contains all official documents, qualifications, and employment history relevant to an individual teacher."
+  },
+  {
+    "id": 7,
+    "question": "A School-Based Management Committee is known as:",
+    "options": {
+      "A": "SBMC",
+      "B": "STC",
+      "C": "SMPT",
+      "D": "SMTA"
+    },
+    "answer": "A",
+    "explanation": "SBMC is the standard abbreviation for School-Based Management Committee, a body comprising community and school representatives that helps govern basic schools."
+  },
+  {
+    "id": 8,
+    "question": "The main source of school funding is:",
+    "options": {
+      "A": "PTA funds",
+      "B": "Capitation Grant",
+      "C": "Student gifts",
+      "D": "Sports fees"
+    },
+    "answer": "B",
+    "explanation": "For public basic schools in Ghana, the Capitation Grant is the primary government funding mechanism provided per pupil to cover operational costs and remove tuition fees."
+  },
+  {
+    "id": 9,
+    "question": "A DDE must ensure education is:",
+    "options": {
+      "A": "Cheaper",
+      "B": "Accessible, equitable & quality",
+      "C": "For elites",
+      "D": "Suspended monthly"
+    },
+    "answer": "B",
+    "explanation": "The core mandate of the District Director (DDE) aligns with national goals: ensuring that education is available to all (accessible), fair to all (equitable), and of a high standard (quality)."
+  },
+  {
+    "id": 10,
+    "question": "Leadership by example means:",
+    "options": {
+      "A": "Giving speeches only",
+      "B": "Doing what you expect others to do",
+      "C": "Threatening staff",
+      "D": "Hiring friends"
+    },
+    "answer": "B",
+    "explanation": "Leadership by example is when a leader models the behavior, work ethic, and values they wish to see in their followers, inspiring them through action rather than just words."
+  },
+  {
+    "id": 11,
+    "question": "A meeting agenda is prepared:",
+    "options": {
+      "A": "After the meeting",
+      "B": "Before the meeting",
+      "C": "During the meeting",
+      "D": "Never"
+    },
+    "answer": "B",
+    "explanation": "An agenda is the roadmap for a meeting. To ensure the meeting is focused and productive, the agenda must be prepared and shared in advance."
+  },
+  {
+    "id": 12,
+    "question": "A disciplinary committee includes:",
+    "options": {
+      "A": "Only students",
+      "B": "Headteacher, teachers & reps",
+      "C": "Politicians only",
+      "D": "PTA only"
+    },
+    "answer": "B",
+    "explanation": "To ensure a fair hearing, a disciplinary committee is typically constituted of diverse members, including the head, teacher representatives, and sometimes board/SMC members."
+  },
+  {
+    "id": 13,
+    "question": "EMIS data is collected:",
+    "options": {
+      "A": "Weekly",
+      "B": "Annually",
+      "C": "Sometimes",
+      "D": "After exams"
+    },
+    "answer": "B",
+    "explanation": "The Education Management Information System (EMIS) census is a major national exercise conducted annually to gather comprehensive data on the state of education."
+  },
+  {
+    "id": 14,
+    "question": "A leader who respects diversity practices:",
+    "options": {
+      "A": "Discrimination",
+      "B": "Inclusion",
+      "C": "Segregation",
+      "D": "Intimidation"
+    },
+    "answer": "B",
+    "explanation": "Respecting diversity means valuing differences. In practice, this leads to inclusion—creating an environment where everyone, regardless of background, feels welcome and valued."
+  },
+  {
+    "id": 15,
+    "question": "Teacher absenteeism affects:",
+    "options": {
+      "A": "Only parents",
+      "B": "Learning outcomes",
+      "C": "Class paint",
+      "D": "Furniture"
+    },
+    "answer": "B",
+    "explanation": "When teachers are absent, instructional time is lost. This direct reduction in learning opportunity creates gaps in student knowledge and lowers academic achievement."
+  },
+  {
+    "id": 16,
+    "question": "School management involves:",
+    "options": {
+      "A": "Hiring students",
+      "B": "Organizing school resources",
+      "C": "Making noise",
+      "D": "Avoiding parents"
+    },
+    "answer": "B",
+    "explanation": "Management is the process of coordinating and organizing the school's resources—people, time, money, and facilities—to achieve its educational objectives efficiently."
+  },
+  {
+    "id": 17,
+    "question": "Sanctions against teachers follow:",
+    "options": {
+      "A": "Rumours",
+      "B": "GES Code of Conduct",
+      "C": "PTA votes",
+      "D": "Personal dislike"
+    },
+    "answer": "B",
+    "explanation": "Disciplinary action (sanctions) cannot be arbitrary. It must rigorously follow the due process and penalties laid out in the official GES Code of Conduct."
+  },
+  {
+    "id": 18,
+    "question": "An SMC supports:",
+    "options": {
+      "A": "Only catering",
+      "B": "School governance",
+      "C": "Textbook writing",
+      "D": "Teacher transfers"
+    },
+    "answer": "B",
+    "explanation": "The School Management Committee (SMC) is a community-based body that helps in the governance of the school, supporting the headteacher in management and community relations."
+  },
+  {
+    "id": 19,
+    "question": "The District Director must submit reports:",
+    "options": {
+      "A": "Informally",
+      "B": "Periodically",
+      "C": "Only during crises",
+      "D": "Never"
+    },
+    "answer": "B",
+    "explanation": "Regular reporting is a requirement of the office. The District Director must periodically submit reports (e.g., quarterly, annually) to the Regional Director and Headquarters."
+  },
+  {
+    "id": 20,
+    "question": "The first step in solving problems is:",
+    "options": {
+      "A": "Blame",
+      "B": "Identify the problem",
+      "C": "Anger",
+      "D": "Punishment"
+    },
+    "answer": "B",
+    "explanation": "You cannot solve what you do not understand. The first and most critical step in problem-solving is to accurately identify and define the problem."
+  },
+  {
+    "id": 21,
+    "question": "A co-curricular activity is:",
+    "options": {
+      "A": "Exams",
+      "B": "Debate club",
+      "C": "Lesson notes",
+      "D": "Staff meetings"
+    },
+    "answer": "B",
+    "explanation": "Co-curricular activities fall outside the standard academic classroom curriculum but are essential for holistic development; a debate club is a classic example."
+  },
+  {
+    "id": 22,
+    "question": "Teacher motivation includes:",
+    "options": {
+      "A": "Threats",
+      "B": "Recognition",
+      "C": "Punishment",
+      "D": "Rejection"
+    },
+    "answer": "B",
+    "explanation": "Motivation is boosted by positive reinforcement. Recognizing and appreciating a teacher's hard work serves as a powerful intrinsic motivator."
+  },
+  {
+    "id": 23,
+    "question": "Circuit supervisors focus mainly on:",
+    "options": {
+      "A": "Sports",
+      "B": "Instructional support",
+      "C": "Uniforms",
+      "D": "Holiday plans"
+    },
+    "answer": "B",
+    "explanation": "The primary role of the Circuit Supervisor is to improve the quality of education by providing instructional support and supervision to teachers in their circuit."
+  },
+  {
+    "id": 24,
+    "question": "Curriculum review is done:",
+    "options": {
+      "A": "Yearly",
+      "B": "Periodically",
+      "C": "Daily",
+      "D": "Never"
+    },
+    "answer": "B",
+    "explanation": "Curricula are not static. They are reviewed periodically (e.g., every 5 years) to ensure they remain relevant to new knowledge and societal needs."
+  },
+  {
+    "id": 25,
+    "question": "A District Director must avoid:",
+    "options": {
+      "A": "Collaboration",
+      "B": "Nepotism",
+      "C": "Record keeping",
+      "D": "Standards"
+    },
+    "answer": "B",
+    "explanation": "Nepotism (showing favoritism to relatives or friends) corrupts professional judgment and destroys trust. It is a key unethical practice that leaders must strictly avoid."
+  },
+  {
+    "id": 26,
+    "question": "Leadership integrity requires:",
+    "options": {
+      "A": "Fairness",
+      "B": "Misuse of power",
+      "C": "Fear",
+      "D": "Silence"
+    },
+    "answer": "A",
+    "explanation": "Integrity is about moral uprightness. In leadership, this manifests as fairness—treating everyone impartially and justly, without bias or hidden agendas."
+  },
+  {
+    "id": 27,
+    "question": "A teachers’ leave application is approved by:",
+    "options": {
+      "A": "Student",
+      "B": "Headteacher",
+      "C": "Cook",
+      "D": "PTA chair"
+    },
+    "answer": "B",
+    "explanation": "As the immediate supervisor and manager of the school staff, the headteacher is the first authority responsible for reviewing and approving leave applications."
+  },
+  {
+    "id": 28,
+    "question": "School grants are audited for:",
+    "options": {
+      "A": "Proper use",
+      "B": "Decoration",
+      "C": "Harassment",
+      "D": "Campaigns"
+    },
+    "answer": "A",
+    "explanation": "Public funds (grants) must be used for their intended purpose. Audits are conducted to verify proper use, ensuring financial probity and accountability."
+  },
+  {
+    "id": 29,
+    "question": "The teaching profession is governed by:",
+    "options": {
+      "A": "Random rules",
+      "B": "GES policies",
+      "C": "Film industry",
+      "D": "Media houses"
+    },
+    "answer": "B",
+    "explanation": "Teachers in the public sector work within a structured environment governed by the policies, regulations, and conditions of service set by the Ghana Education Service (GES)."
+  },
+  {
+    "id": 30,
+    "question": "A District Director must be a:",
+    "options": {
+      "A": "Manager",
+      "B": "Leader",
+      "C": "Supervisor",
+      "D": "All of the above"
+    },
+    "answer": "D",
+    "explanation": "The role of the District Director is multifaceted, requiring them to be a manager of resources, a leader of people, and a supervisor of educational standards simultaneously."
+  },
+  {
+    "id": 31,
+    "question": "Data-based decision making requires:",
+    "options": {
+      "A": "Guesswork",
+      "B": "Accurate data",
+      "C": "Noise",
+      "D": "Memory"
+    },
+    "answer": "B",
+    "explanation": "You cannot make good decisions based on bad information. Data-based decision-making relies entirely on the availability of accurate, reliable, and up-to-date data."
+  },
+  {
+    "id": 32,
+    "question": "Accountability means:",
+    "options": {
+      "A": "Transparency",
+      "B": "Concealment",
+      "C": "Control",
+      "D": "Punishment"
+    },
+    "answer": "A",
+    "explanation": "At its heart, accountability is about transparency—being open and answerable for one's actions and decisions to those who have entrusted you with responsibility."
+  },
+  {
+    "id": 33,
+    "question": "Poor school performance requires:",
+    "options": {
+      "A": "Closure",
+      "B": "Intervention",
+      "C": "Celebration",
+      "D": "Gossip"
+    },
+    "answer": "B",
+    "explanation": "When a school is underperforming, it doesn't need celebration or closure; it needs targeted intervention—support, resources, and strategies—to address the root causes of failure."
+  },
+  {
+    "id": 34,
+    "question": "The minimum qualification for a DD is usually:",
+    "options": {
+      "A": "Diploma",
+      "B": "Bachelor’s degree",
+      "C": "SHS certificate",
+      "D": "Primary certificate"
+    },
+    "answer": "B",
+    "explanation": "The position of District Director is a senior management role, typically requiring at least a first degree (Bachelor's), and often a Master's degree, plus significant experience."
+  },
+  {
+    "id": 35,
+    "question": "A District Director promotes:",
+    "options": {
+      "A": "Teacher lateness",
+      "B": "Effective teaching",
+      "C": "Holiday trips",
+      "D": "Film watching"
+    },
+    "answer": "B",
+    "explanation": "The Director's overarching goal is to improve education, which means actively promoting and supporting effective teaching practices across all schools in the district."
+  },
+  {
+    "id": 36,
+    "question": "School monitoring is done to:",
+    "options": {
+      "A": "Find faults",
+      "B": "Improve teaching",
+      "C": "Punish students",
+      "D": "Change uniforms"
+    },
+    "answer": "B",
+    "explanation": "The constructive purpose of monitoring is development. It gathers data not to blame, but to identify areas where teaching can be improved and to provide the necessary support."
+  },
+  {
+    "id": 37,
+    "question": "SDGs stand for:",
+    "options": {
+      "A": "Sustainable Development Goals",
+      "B": "Students Daily Guide",
+      "C": "Staff Discipline Guide",
+      "D": "Standard Development Grants"
+    },
+    "answer": "A",
+    "explanation": "SDGs refer to the Sustainable Development Goals, a collection of global goals set by the UN. SDG 4 specifically focuses on ensuring quality education for all."
+  },
+  {
+    "id": 38,
+    "question": "Quality assurance focuses on:",
+    "options": {
+      "A": "Only buildings",
+      "B": "Standards in education",
+      "C": "Uniform choices",
+      "D": "PTA dues"
+    },
+    "answer": "B",
+    "explanation": "Quality assurance is concerned with maintaining high standards in all aspects of education, from curriculum and teaching to infrastructure and management."
+  },
+  {
+    "id": 39,
+    "question": "A District Director must show:",
+    "options": {
+      "A": "Laziness",
+      "B": "Ethical leadership",
+      "C": "Favouritism",
+      "D": "Division"
+    },
+    "answer": "B",
+    "explanation": "As a public servant and leader, a District Director operates under a duty to demonstrate ethical leadership—probit, fairness, and a commitment to the public good."
+  },
+  {
+    "id": 40,
+    "question": "Distributed leadership allows:",
+    "options": {
+      "A": "Power hoarding",
+      "B": "Shared responsibility",
+      "C": "Ignorance",
+      "D": "Fearful staff"
+    },
+    "answer": "B",
+    "explanation": "Distributed leadership breaks the 'hero leader' model by sharing leadership responsibilities across the staff, leveraging the collective expertise of the team."
+  },
+  {
+    "id": 41,
+    "question": "School evaluation measures:",
+    "options": {
+      "A": "Meal quality",
+      "B": "Learning outcomes",
+      "C": "Staff heights",
+      "D": "Paint colour"
+    },
+    "answer": "B",
+    "explanation": "Evaluation determines the worth or success of a school. The most critical metric for this determination is student learning outcomes (achievement, skills, and growth)."
+  },
+  {
+    "id": 42,
+    "question": "Which is a teacher right?",
+    "options": {
+      "A": "Failure to teach",
+      "B": "Fair hearing",
+      "C": "Refusing supervision",
+      "D": "Absenteeism"
+    },
+    "answer": "B",
+    "explanation": "Natural justice and employment law guarantee a teacher the right to a fair hearing—the opportunity to be heard and defend themselves—before any disciplinary action is taken."
+  },
+  {
+    "id": 43,
+    "question": "A District Director is responsible for:",
+    "options": {
+      "A": "Regional exams",
+      "B": "Coordinating educational programs",
+      "C": "Head office salaries",
+      "D": "Private schools only"
+    },
+    "answer": "B",
+    "explanation": "The Director acts as the coordinator-in-chief, ensuring that various educational programs (government policies, NGO projects, curricular changes) are synchronized and implemented in the district."
+  },
+  {
+    "id": 44,
+    "question": "School records must be:",
+    "options": {
+      "A": "Hidden",
+      "B": "Accurate and updated",
+      "C": "Burnt",
+      "D": "Removed monthly"
+    },
+    "answer": "B",
+    "explanation": "Records are legal and administrative documents. To be valid and useful, they must be meticulously accurate and kept up-to-date at all times."
+  },
+  {
+    "id": 45,
+    "question": "A grievance is:",
+    "options": {
+      "A": "Complaint",
+      "B": "Instruction",
+      "C": "Warning",
+      "D": "Promotion"
+    },
+    "answer": "A",
+    "explanation": "In an employment context, a grievance is a formal complaint raised by an employee regarding an issue in the workplace, such as unfair treatment or working conditions."
+  },
+  {
+    "id": 46,
+    "question": "Inclusive education supports:",
+    "options": {
+      "A": "Only brilliant students",
+      "B": "All learners",
+      "C": "Only boys",
+      "D": "Only girls"
+    },
+    "answer": "B",
+    "explanation": "The definition of inclusive education is a system that adapts to support all learners, regardless of ability, background, or disability, in a common learning environment."
+  },
+  {
+    "id": 47,
+    "question": "Which is NOT a leadership role?",
+    "options": {
+      "A": "Visioning",
+      "B": "Inspiring",
+      "C": "Hating staff",
+      "D": "Guiding"
+    },
+    "answer": "C",
+    "explanation": "Leadership is about influence and relationship building. 'Hating staff' is a destructive personal emotion that is the antithesis of the supportive, guiding role of a leader."
+  },
+  {
+    "id": 48,
+    "question": "A CPD activity must be:",
+    "options": {
+      "A": "Job-related",
+      "B": "Always expensive",
+      "C": "Political",
+      "D": "Optional"
+    },
+    "answer": "A",
+    "explanation": "To be valid, Continuous Professional Development (CPD) must be relevant to the profession; it must be job-related, enhancing the skills specifically needed for teaching."
+  },
+  {
+    "id": 49,
+    "question": "The best way to motivate teachers is by:",
+    "options": {
+      "A": "Public humiliation",
+      "B": "Recognition and support",
+      "C": "Salary reduction",
+      "D": "Delayed feedback"
+    },
+    "answer": "B",
+    "explanation": "Psychologically, people respond best to positive reinforcement. Recognizing efforts and effectively supporting teachers needs is a proven way to boost morale and motivation."
+  },
+  {
+    "id": 50,
+    "question": "Resource mobilization is the ability to:",
+    "options": {
+      "A": "Complain",
+      "B": "Gather needed resources",
+      "C": "Punish staff",
+      "D": "Delay work"
+    },
+    "answer": "B",
+    "explanation": "Resource mobilization describes the proactive skill of identifying, soliciting, and gathering the necessary funds, materials, or support required to achieve school goals."
+  }
+]

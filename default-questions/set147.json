@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "A good policy is",
+    "options": {
+      "A": "Implementable",
+      "B": "Ambiguous",
+      "C": "Hidden",
+      "D": "Optional"
+    },
+    "answer": "A",
+    "explanation": "A policy must be practical and clear. If a policy cannot be put into practice effectively due to complexity or resource constraints, it is useless. Thus, a good policy is **Implementable** (A)."
+  },
+  {
+    "id": 2,
+    "question": "The purpose of documentation is",
+    "options": {
+      "A": "Record-keeping",
+      "B": "Confusion",
+      "C": "Loss",
+      "D": "Secrecy"
+    },
+    "answer": "A",
+    "explanation": "Documentation, in an organizational context, refers to the systematic process of gathering and organizing records. Its primary purpose is **Record-keeping** (A) for accountability, transparency, and historical reference."
+  },
+  {
+    "id": 3,
+    "question": "Supervision improves when",
+    "options": {
+      "A": "Expectations are clear",
+      "B": "Rules are hidden",
+      "C": "Staff are intimidated",
+      "D": "Feedback is absent"
+    },
+    "answer": "A",
+    "explanation": "Effective supervision focuses on supporting staff growth towards shared goals. This is only possible if staff understand the standards and targets they are being supervised against, meaning **Expectations are clear** (A)."
+  },
+  {
+    "id": 4,
+    "question": "Time-bound objectives help",
+    "options": {
+      "A": "Tracking progress",
+      "B": "Delaying tasks",
+      "C": "Avoiding monitoring",
+      "D": "Encouraging waste"
+    },
+    "answer": "A",
+    "explanation": "The 'T' in SMART objectives stands for Time-bound. Setting deadlines creates urgency and provides clear markers for **Tracking progress** (A) and evaluation."
+  },
+  {
+    "id": 5,
+    "question": "Good governance promotes",
+    "options": {
+      "A": "Accountability",
+      "B": "Secrecy",
+      "C": "Corruption",
+      "D": "Bias"
+    },
+    "answer": "A",
+    "explanation": "**Good governance** is characterized by responsibility and answerability for actions and decisions. It fundamentally promotes **Accountability** (A) and transparency in leadership."
+  },
+  {
+    "id": 6,
+    "question": "The main purpose of pupil assessment is to",
+    "options": {
+      "A": "Reward high-performing learners",
+      "B": "Diagnose learning needs",
+      "C": "Rank pupils for promotion",
+      "D": "Impress parents"
+    },
+    "answer": "B",
+    "explanation": "While assessment serves many purposes (grading, ranking), its primary instructional value is providing data on what students know and where they struggle, allowing teachers to **Diagnose learning needs** (B) and adjust teaching."
+  },
+  {
+    "id": 7,
+    "question": "A key role of the headteacher in school improvement is",
+    "options": {
+      "A": "Avoiding delegation",
+      "B": "Creating a shared vision",
+      "C": "Reducing staff meetings",
+      "D": "Limiting teacher autonomy"
+    },
+    "answer": "B",
+    "explanation": "A headteacher's primary leadership role is to define the school's future direction. By actively **Creating a shared vision** (B), they align staff, students, and stakeholders toward common improvement goals."
+  },
+  {
+    "id": 8,
+    "question": "The most effective way to promote active learning is",
+    "options": {
+      "A": "Extended teacher lectures",
+      "B": "Group discussions and tasks",
+      "C": "Frequent punishment",
+      "D": "Silent reading only"
+    },
+    "answer": "B",
+    "explanation": "**Active learning** requires students to engage with the material, rather than just passively receiving information. Methods like **Group discussions and tasks** (B) promote critical thinking and participation."
+  },
+  {
+    "id": 9,
+    "question": "A professional code of conduct for teachers emphasizes",
+    "options": {
+      "A": "Personal gain",
+      "B": "Irregular attendance",
+      "C": "Ethical behaviour",
+      "D": "Verbal authority"
+    },
+    "answer": "C",
+    "explanation": "A **code of conduct** sets the standards for integrity, responsibility, and fairness in all interactions with students, parents, and colleagues. It fundamentally emphasizes **Ethical behaviour** (C)."
+  },
+  {
+    "id": 10,
+    "question": "A positive learning environment is best achieved through",
+    "options": {
+      "A": "Fear and intimidation",
+      "B": "Clear rules and consistency",
+      "C": "Frequent corporal punishment",
+      "D": "Unpredictable routines"
+    },
+    "answer": "B",
+    "explanation": "A positive, safe, and orderly environment relies on students knowing what is expected and that rules will be enforced reliably and fairly. This is achieved through **Clear rules and consistency** (B)."
+  },
+  {
+    "id": 11,
+    "question": "The primary purpose of a scheme of work is",
+    "options": {
+      "A": "To discipline pupils",
+      "B": "To outline planned teaching activities",
+      "C": "To replace lesson notes",
+      "D": "To allocate punishments"
+    },
+    "answer": "B",
+    "explanation": "A **scheme of work** is a long-term plan (often termly or yearly) that breaks down the curriculum into manageable units, defining the content, resources, and instructional sequence. Its purpose is **To outline planned teaching activities** (B)."
+  },
+  {
+    "id": 12,
+    "question": "Effective supervision in schools helps to",
+    "options": {
+      "A": "Increase teacher anxiety",
+      "B": "Improve instructional quality",
+      "C": "Reduce collaboration",
+      "D": "Promote conflict"
+    },
+    "answer": "B",
+    "explanation": "Instructional supervision is focused on monitoring, supporting, and guiding teachers' classroom practice, with the explicit goal to **Improve instructional quality** (B) and student outcomes."
+  },
+  {
+    "id": 13,
+    "question": "Continuous Professional Development (CPD) helps teachers to",
+    "options": {
+      "A": "Maintain outdated practices",
+      "B": "Improve teaching skills",
+      "C": "Avoid new ideas",
+      "D": "Reduce academic standards"
+    },
+    "answer": "B",
+    "explanation": "CPD (or In-service training) is essential for updating skills, learning new methodologies, and adapting to curriculum changes. Its main function is to **Improve teaching skills** (B)."
+  },
+  {
+    "id": 14,
+    "question": "The best teaching method for skill acquisition is",
+    "options": {
+      "A": "Teacher monologue",
+      "B": "Demonstration",
+      "C": "Memorisation",
+      "D": "Command teaching"
+    },
+    "answer": "B",
+    "explanation": "For acquiring practical skills (e.g., drawing, conducting an experiment), students must observe the process before practicing it themselves. **Demonstration** (B) provides the model necessary for skill acquisition."
+  },
+  {
+    "id": 15,
+    "question": "Learner-centred teaching promotes",
+    "options": {
+      "A": "Passive note-taking",
+      "B": "Active participation",
+      "C": "Teacher dominance",
+      "D": "Rote learning"
+    },
+    "answer": "B",
+    "explanation": "Learner-centred approaches shift the focus from the teacher to the student, encouraging engagement, discovery, and involvement, which means promoting **Active participation** (B)."
+  },
+  {
+    "id": 16,
+    "question": "A school timetable should",
+    "options": {
+      "A": "Overload teachers",
+      "B": "Balance subjects and resources",
+      "C": "Change daily",
+      "D": "Be created randomly"
+    },
+    "answer": "B",
+    "explanation": "A well-designed timetable ensures efficient allocation of time, teachers, and facilities, while considering the cognitive needs of students by providing a **Balance subjects and resources** (B)."
+  },
+  {
+    "id": 17,
+    "question": "A key feature of performance appraisal is",
+    "options": {
+      "A": "Bias",
+      "B": "Objective evaluation",
+      "C": "Personal attacks",
+      "D": "Favouritism"
+    },
+    "answer": "B",
+    "explanation": "The core goal of a performance appraisal is to assess job performance based on documented standards and metrics, ensuring a fair and reliable **Objective evaluation** (B)."
+  },
+  {
+    "id": 18,
+    "question": "The hidden curriculum consists of",
+    "options": {
+      "A": "Informal learning experiences",
+      "B": "Approved textbooks",
+      "C": "Examination questions",
+      "D": "Official schemes"
+    },
+    "answer": "A",
+    "explanation": "The **hidden curriculum** refers to the unwritten lessons, values, attitudes, and behaviors transmitted through the school's structure, climate, and daily interactions, representing **Informal learning experiences** (A)."
+  },
+  {
+    "id": 19,
+    "question": "Effective communication in school management requires",
+    "options": {
+      "A": "Threats",
+      "B": "Clarity and openness",
+      "C": "Guesswork",
+      "D": "Secrecy"
+    },
+    "answer": "B",
+    "explanation": "To ensure understanding and build trust among staff and stakeholders, messages must be easily understood and the process should be transparent, requiring **Clarity and openness** (B)."
+  },
+  {
+    "id": 20,
+    "question": "The School Performance Improvement Plan (SPIP) focuses on",
+    "options": {
+      "A": "Reducing teaching hours",
+      "B": "Enhancing learning outcomes",
+      "C": "Removing supervision",
+      "D": "Limiting teacher roles"
+    },
+    "answer": "B",
+    "explanation": "An SPIP (or similar plan, like SIP) is a strategic document that sets goals, actions, and evaluation methods specifically designed to improve student achievement, which means **Enhancing learning outcomes** (B)."
+  },
+  {
+    "id": 21,
+    "question": "The main aim of lesson planning is",
+    "options": {
+      "A": "To confuse learners",
+      "B": "To guide teaching systematically",
+      "C": "To reduce teacher work",
+      "D": "To impress inspectors"
+    },
+    "answer": "B",
+    "explanation": "Lesson planning ensures that content is logically sequenced, objectives are met, and activities align with goals, providing a clear framework **To guide teaching systematically** (B)."
+  },
+  {
+    "id": 22,
+    "question": "One characteristic of a good leader is",
+    "options": {
+      "A": "Autocracy",
+      "B": "Emotional intelligence",
+      "C": "Impatience",
+      "D": "Dishonesty"
+    },
+    "answer": "B",
+    "explanation": "**Emotional intelligence** (B) is critical for effective leadership as it involves the ability to manage one's own emotions and understand the emotions of others, leading to better conflict resolution and motivation."
+  },
+  {
+    "id": 23,
+    "question": "An effective classroom rule should be",
+    "options": {
+      "A": "Complex",
+      "B": "Clear and enforceable",
+      "C": "Secret",
+      "D": "Optional"
+    },
+    "answer": "B",
+    "explanation": "For rules to be followed, students must understand them easily, and the teacher must be able to apply them consistently without ambiguity, making them **Clear and enforceable** (B)."
+  },
+  {
+    "id": 24,
+    "question": "A major benefit of continuous assessment is",
+    "options": {
+      "A": "Encouraging cheating",
+      "B": "Tracking pupil progress",
+      "C": "Increasing fear",
+      "D": "Eliminating homework"
+    },
+    "answer": "B",
+    "explanation": "Continuous assessment involves frequent checks, providing ongoing data points that allow both the teacher and the student to monitor learning paths effectively, or **Tracking pupil progress** (B)."
+  },
+  {
+    "id": 25,
+    "question": "The headteacher must ensure that school resources are",
+    "options": {
+      "A": "Hoarded",
+      "B": "Properly managed",
+      "C": "Misused",
+      "D": "Hidden"
+    },
+    "answer": "B",
+    "explanation": "As the accountable officer, the headteacher is responsible for the optimal, efficient, and ethical use of all school assets (financial, human, and physical), ensuring they are **Properly managed** (B)."
+  },
+  {
+    "id": 26,
+    "question": "Pedagogy refers to",
+    "options": {
+      "A": "School feeding",
+      "B": "Teaching methods",
+      "C": "Classroom furniture",
+      "D": "Student transport"
+    },
+    "answer": "B",
+    "explanation": "**Pedagogy** is the study of how best to teach. It encompasses the theory and practice of education, especially the strategies and **Teaching methods** (B) used in the classroom."
+  },
+  {
+    "id": 27,
+    "question": "A good classroom management technique is",
+    "options": {
+      "A": "Shouting",
+      "B": "Establishing routines",
+      "C": "Humiliation",
+      "D": "Unpredictability"
+    },
+    "answer": "B",
+    "explanation": "**Establishing routines** (B) for daily tasks (e.g., distributing papers, sharpening pencils) minimizes disruption, saves time, and helps maintain a smooth flow in the classroom."
+  },
+  {
+    "id": 28,
+    "question": "The school budget should be",
+    "options": {
+      "A": "Spent without records",
+      "B": "Transparent and accountable",
+      "C": "Kept secret",
+      "D": "Used personally"
+    },
+    "answer": "B",
+    "explanation": "In line with good governance principles, financial management must be open to scrutiny and all expenditures must be justifiable, requiring the budget to be **Transparent and accountable** (B)."
+  },
+  {
+    "id": 29,
+    "question": "A teacher’s reflective practice involves",
+    "options": {
+      "A": "Avoiding feedback",
+      "B": "Examining one’s teaching",
+      "C": "Blaming pupils",
+      "D": "Ignoring results"
+    },
+    "answer": "B",
+    "explanation": "**Reflective practice** is the professional process of reviewing one’s experiences and actions to improve professional competence. It means systematically **Examining one’s teaching** (B)."
+  },
+  {
+    "id": 30,
+    "question": "A learner-centred classroom focuses on",
+    "options": {
+      "A": "Teacher talk",
+      "B": "Student engagement",
+      "C": "Harsh punishment",
+      "D": "Silence"
+    },
+    "answer": "B",
+    "explanation": "By prioritizing the student's needs, interests, and participation, a learner-centered environment maximizes learning through high levels of **Student engagement** (B)."
+  },
+  {
+    "id": 31,
+    "question": "The key purpose of mentoring is",
+    "options": {
+      "A": "Controlling new teachers",
+      "B": "Supporting professional growth",
+      "C": "Encouraging fear",
+      "D": "Rejecting collaboration"
+    },
+    "answer": "B",
+    "explanation": "Mentoring is a developmental relationship where an experienced person provides guidance and support to a less experienced one, aiming at **Supporting professional growth** (B)."
+  },
+  {
+    "id": 32,
+    "question": "In education, equity means",
+    "options": {
+      "A": "Equal punishment",
+      "B": "Fair access to learning",
+      "C": "Equal wealth",
+      "D": "Preferential treatment"
+    },
+    "answer": "B",
+    "explanation": "**Equity** in education ensures that every student receives the specific support they need to reach their full potential, which translates to **Fair access to learning** (B), though resources may be distributed unequally to meet diverse needs."
+  },
+  {
+    "id": 33,
+    "question": "The best leadership style for teamwork is",
+    "options": {
+      "A": "Dictatorial",
+      "B": "Democratic",
+      "C": "Aggressive",
+      "D": "Detached"
+    },
+    "answer": "B",
+    "explanation": "A **Democratic** (B) leadership style involves consulting team members and integrating their input into decisions, fostering buy-in, communication, and collaboration essential for effective teamwork."
+  },
+  {
+    "id": 34,
+    "question": "A school’s mission statement describes",
+    "options": {
+      "A": "Classroom seating",
+      "B": "The school’s purpose",
+      "C": "Students’ hobbies",
+      "D": "Examination results"
+    },
+    "answer": "B",
+    "explanation": "A **mission statement** defines the school's core identity, detailing what the school does, for whom it does it, and the values that guide its work. It describes **The school’s purpose** (B)."
+  },
+  {
+    "id": 35,
+    "question": "Record keeping in schools helps in",
+    "options": {
+      "A": "Losing information",
+      "B": "Decision-making",
+      "C": "Increasing conflicts",
+      "D": "Creating confusion"
+    },
+    "answer": "B",
+    "explanation": "Accurate, well-maintained records (academic, attendance, financial, etc.) provide the necessary data and evidence required for informed administrative and instructional **Decision-making** (B)."
+  },
+  {
+    "id": 36,
+    "question": "A positive teacher–pupil relationship enhances",
+    "options": {
+      "A": "Fear",
+      "B": "Discipline and learning",
+      "C": "Isolation",
+      "D": "Hostility"
+    },
+    "answer": "B",
+    "explanation": "When students trust and respect their teacher, they are more willing to adhere to rules and take academic risks, which benefits both **Discipline and learning** (B)."
+  },
+  {
+    "id": 37,
+    "question": "Open-ended questions encourage",
+    "options": {
+      "A": "Guessing",
+      "B": "Critical thinking",
+      "C": "One-word answers",
+      "D": "Silence"
+    },
+    "answer": "B",
+    "explanation": "**Open-ended questions** require students to formulate detailed, original answers, necessitating analysis, evaluation, and synthesis of information, thereby fostering **Critical thinking** (B)."
+  },
+  {
+    "id": 38,
+    "question": "Formative assessment is used to",
+    "options": {
+      "A": "Grade final exams",
+      "B": "Monitor learning progress",
+      "C": "Punish pupils",
+      "D": "Replace teaching"
+    },
+    "answer": "B",
+    "explanation": "**Formative assessment** is conducted *during* the learning process to provide immediate feedback to students and teachers, allowing them to **Monitor learning progress** (B) and adjust instruction."
+  },
+  {
+    "id": 39,
+    "question": "Behaviour modification techniques include",
+    "options": {
+      "A": "Reinforcement",
+      "B": "Insults",
+      "C": "Humiliation",
+      "D": "Ignoring pupils"
+    },
+    "answer": "A",
+    "explanation": "Behaviour modification relies on principles of operant conditioning, such as the use of **Reinforcement** (A) (positive or negative) to increase or decrease the frequency of a behavior."
+  },
+  {
+    "id": 40,
+    "question": "Effective time management in teaching requires",
+    "options": {
+      "A": "Late arrival",
+      "B": "Prioritizing tasks",
+      "C": "Irregular planning",
+      "D": "Wasting periods"
+    },
+    "answer": "B",
+    "explanation": "Time management involves deciding which tasks are most important and allocating resources accordingly. Teachers must be adept at **Prioritizing tasks** (B) like planning, marking, and instruction."
+  },
+  {
+    "id": 41,
+    "question": "Team teaching supports",
+    "options": {
+      "A": "Teacher isolation",
+      "B": "Collaborative instruction",
+      "C": "Conflict",
+      "D": "Silence"
+    },
+    "answer": "B",
+    "explanation": "**Team teaching** is an instructional method where two or more teachers share responsibility for teaching a group of students, which inherently requires and supports **Collaborative instruction** (B)."
+  },
+  {
+    "id": 42,
+    "question": "A school manager must demonstrate",
+    "options": {
+      "A": "Favouritism",
+      "B": "Accountability",
+      "C": "Fear",
+      "D": "Ignorance"
+    },
+    "answer": "B",
+    "explanation": "Management involves responsibility over resources and results. A manager must be answerable for their decisions and the school's performance, thus demonstrating **Accountability** (B)."
+  },
+  {
+    "id": 43,
+    "question": "Inclusive education promotes",
+    "options": {
+      "A": "Exclusion",
+      "B": "Participation of all learners",
+      "C": "Segregation",
+      "D": "Elitism"
+    },
+    "answer": "B",
+    "explanation": "**Inclusive education** is the practice of ensuring all students, regardless of ability or background, are educated together in a way that maximizes their **Participation of all learners** (B) and minimizes barriers."
+  },
+  {
+    "id": 44,
+    "question": "A good classroom assessment tool is",
+    "options": {
+      "A": "Rumours",
+      "B": "Rubrics",
+      "C": "Punishments",
+      "D": "Assumptions"
+    },
+    "answer": "B",
+    "explanation": "A **rubric** (B) is an explicit set of criteria used to grade assignments, defining clear standards of quality for performance and making the assessment objective and fair."
+  },
+  {
+    "id": 45,
+    "question": "Stress management for teachers involves",
+    "options": {
+      "A": "Increased workload",
+      "B": "Relaxation and planning",
+      "C": "Avoiding rest",
+      "D": "Overthinking"
+    },
+    "answer": "B",
+    "explanation": "Effective stress management combines proactive strategies (like good organization and **planning**) with restorative techniques (like **Relaxation**) (B) to cope with professional demands."
+  },
+  {
+    "id": 46,
+    "question": "School discipline aims to",
+    "options": {
+      "A": "Punish severely",
+      "B": "Develop self-control",
+      "C": "Scare students",
+      "D": "Embarrass learners"
+    },
+    "answer": "B",
+    "explanation": "The highest goal of discipline is not punishment but self-regulation. It aims to teach students the skills needed for moral action, responsibility, and ultimately, to **Develop self-control** (B)."
+  },
+  {
+    "id": 47,
+    "question": "The purpose of the teachers’ code of ethics is",
+    "options": {
+      "A": "To enrich teachers",
+      "B": "To guide professional behaviour",
+      "C": "To increase conflict",
+      "D": "To promote bias"
+    },
+    "answer": "B",
+    "explanation": "The code of ethics provides a clear framework of moral principles and standards to **Guide professional behaviour** (B) and maintain public trust in the teaching profession."
+  },
+  {
+    "id": 48,
+    "question": "A democratic school climate encourages",
+    "options": {
+      "A": "Participation",
+      "B": "Fear",
+      "C": "Silence",
+      "D": "Autocracy"
+    },
+    "answer": "A",
+    "explanation": "A democratic climate fosters respect, open dialogue, and shared responsibility among all stakeholders, thereby encouraging broad **Participation** (A) in school life and decision-making."
+  },
+  {
+    "id": 49,
+    "question": "The most effective feedback is",
+    "options": {
+      "A": "Late and harsh",
+      "B": "Timely and constructive",
+      "C": "Insulting",
+      "D": "Irrelevant"
+    },
+    "answer": "B",
+    "explanation": "Effective feedback is given soon after the performance (timely) and provides specific, actionable suggestions for improvement (constructive). Thus, it is **Timely and constructive** (B)."
+  },
+  {
+    "id": 50,
+    "question": "Cooperative learning helps learners to",
+    "options": {
+      "A": "Work alone",
+      "B": "Develop social skills",
+      "C": "Avoid teamwork",
+      "D": "Compete aggressively"
+    },
+    "answer": "B",
+    "explanation": "**Cooperative learning** requires students to work together on tasks, which naturally involves communication, compromise, conflict resolution, and leadership, helping them to **Develop social skills** (B)."
+  }
+]

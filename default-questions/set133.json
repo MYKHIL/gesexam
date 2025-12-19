@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "Continuous Assessment records must be:",
+    "options": {
+      "A": "Destroyed",
+      "B": "Accurate and updated",
+      "C": "Hidden",
+      "D": "Decorated"
+    },
+    "answer": "B",
+    "explanation": "CA records form a crucial part of a student's academic history. For them to be credible for reporting and transfer purposes, they must reflect honest performance (**Accurate**) and be maintained continuously (**updated**)."
+  },
+  {
+    "id": 2,
+    "question": "Differentiation supports:",
+    "options": {
+      "A": "Only fast learners",
+      "B": "All learners based on their needs",
+      "C": "Only slow learners",
+      "D": "Teachers’ convenience"
+    },
+    "answer": "B",
+    "explanation": "Differentiation is a strategy that recognizes the heterogeneity of the classroom and seeks to adjust content, process, and product to meet the unique learning requirements and strengths of **All learners based on their needs**."
+  },
+  {
+    "id": 3,
+    "question": "A good classroom rule should be:",
+    "options": {
+      "A": "Negative",
+      "B": "Positively stated",
+      "C": "Secret",
+      "D": "Funny"
+    },
+    "answer": "B",
+    "explanation": "Rules should guide students toward desired behavior. Stating them **Positively** (e.g., 'Walk quietly' instead of 'Don't run') is more effective because it clearly tells the student what they *should* be doing."
+  },
+  {
+    "id": 4,
+    "question": "A teacher’s Scheme of Work (SOW) is a:",
+    "options": {
+      "A": "Daily plan",
+      "B": "Termly/yearly plan of topics to be covered",
+      "C": "Student document",
+      "D": "Financial record"
+    },
+    "answer": "B",
+    "explanation": "The SOW is a long-range organizational document. It breaks down the curriculum into manageable units and sets the pace for the **Termly/yearly plan of topics to be covered**."
+  },
+  {
+    "id": 5,
+    "question": "The main purpose of a supervision report is to:",
+    "options": {
+      "A": "Punish the teacher",
+      "B": "Provide evidence-based findings and recommendations for improvement",
+      "C": "Ignore observations",
+      "D": "List only faults"
+    },
+    "answer": "B",
+    "explanation": "A quality supervision report should be objective and developmental. It documents observations (**evidence-based findings**) and suggests concrete steps (**recommendations for improvement**) to enhance the supervisee's performance."
+  },
+  {
+    "id": 6,
+    "question": "In financial management, auditing ensures:",
+    "options": {
+      "A": "Secrecy",
+      "B": "Accuracy, compliance, and accountability of financial records",
+      "C": "Fraud",
+      "D": "Mismanagement"
+    },
+    "answer": "B",
+    "explanation": "An audit is an independent examination of financial records. It verifies the truthfulness of records (**Accuracy**), adherence to rules (**compliance**), and proper use of funds (**accountability**)."
+  },
+  {
+    "id": 7,
+    "question": "The most effective way to communicate a disciplinary decision is:",
+    "options": {
+      "A": "Through rumour",
+      "B": "Through formal, written communication to relevant parties",
+      "C": "Publicly shouting",
+      "D": "By ignoring the student"
+    },
+    "answer": "B",
+    "explanation": "Disciplinary decisions have serious consequences and legal implications. They must be conveyed officially, clearly, and documented **Through formal, written communication to relevant parties** (student, parent, file)."
+  },
+  {
+    "id": 8,
+    "question": "Effective school leadership promotes:",
+    "options": {
+      "A": "Isolation",
+      "B": "A culture of shared vision and continuous learning",
+      "C": "Conflict",
+      "D": "Dictatorship"
+    },
+    "answer": "B",
+    "explanation": "Successful leaders motivate all stakeholders to work toward common objectives (**shared vision**) and prioritize professional and organizational growth (**continuous learning**)."
+  },
+  {
+    "id": 9,
+    "question": "The main goal of the GES Performance Management System (PMS) is:",
+    "options": {
+      "A": "Reduction of staff",
+      "B": "Development and professional growth of employees",
+      "C": "Punishment of staff",
+      "D": "Only salary increase"
+    },
+    "answer": "B",
+    "explanation": "PMS is fundamentally a developmental tool. Its continuous cycle of planning, feedback, and review is structured to foster the **Development and professional growth of employees** to maximize their potential."
+  },
+  {
+    "id": 10,
+    "question": "Effective delegation reduces:",
+    "options": {
+      "A": "Staff capacity",
+      "B": "The workload pressure on the headteacher",
+      "C": "Teacher cooperation",
+      "D": "Work quality"
+    },
+    "answer": "B",
+    "explanation": "By distributing tasks appropriately, delegation prevents the leader from becoming overwhelmed by operational tasks, thus relieving **The workload pressure on the headteacher** and freeing them for strategic duties."
+  },
+  {
+    "id": 11,
+    "question": "A teacher’s **Professional Code of Conduct** outlines:",
+    "options": {
+      "A": "Daily gossip",
+      "B": "Ethical standards, duties, and professional boundaries",
+      "C": "Bank details",
+      "D": "Favourite recipes"
+    },
+    "answer": "B",
+    "explanation": "The Code of Conduct is the formal document defining the expected behavior and duties of a professional. It specifies the **Ethical standards, duties, and professional boundaries** for educators in relation to students, colleagues, and parents."
+  },
+  {
+    "id": 12,
+    "question": "The main purpose of a school crisis management plan is to:",
+    "options": {
+      "A": "Increase panic",
+      "B": "Ensure the safety of all persons and maintain order during an emergency",
+      "C": "Avoid accountability",
+      "D": "Delay response"
+    },
+    "answer": "B",
+    "explanation": "The crisis plan is a protocol designed to minimize harm and confusion. Its immediate and most critical objective is to **Ensure the safety of all persons and maintain order during an emergency**."
+  },
+  {
+    "id": 13,
+    "question": "Conflict resolution is best when it is guided by:",
+    "options": {
+      "A": "Personal grudges",
+      "B": "Impartiality and established rules of fairness",
+      "C": "Seniority",
+      "D": "Emotional outbursts"
+    },
+    "answer": "B",
+    "explanation": "To achieve a fair and lasting resolution, the process must be seen as unbiased (**Impartiality**) and adhere to known, objective standards (**established rules of fairness**)."
+  },
+  {
+    "id": 14,
+    "question": "The use of data in decision-making ensures:",
+    "options": {
+      "A": "Guesswork",
+      "B": "Objective, evidence-based choices",
+      "C": "Personal preference",
+      "D": "Delay"
+    },
+    "answer": "B",
+    "explanation": "Relying on facts, statistics, and measurable outcomes (data) removes personal bias from the decision-making process, leading to **Objective, evidence-based choices** that are easier to justify."
+  },
+  {
+    "id": 15,
+    "question": "A Head of Department (HOD) contributes to instructional quality by:",
+    "options": {
+      "A": "Avoiding teacher observation",
+      "B": "Mentoring, supporting, and supervising subject teachers",
+      "C": "Teaching only their own class",
+      "D": "Managing the school gate"
+    },
+    "answer": "B",
+    "explanation": "The HOD's primary function is academic leadership within their department. They directly impact teaching by coaching, guiding, and monitoring the performance of their **subject teachers**."
+  },
+  {
+    "id": 16,
+    "question": "Good financial record-keeping requires:",
+    "options": {
+      "A": "Single entry system",
+      "B": "Double entry, chronological, and verifiable records",
+      "C": "Oral accounts only",
+      "D": "Destroying receipts"
+    },
+    "answer": "B",
+    "explanation": "For accountability and auditing, financial records must follow standardized practices: **Double entry** (for balancing), arranged by date (**chronological**), and supported by source documents (**verifiable records**)."
+  },
+  {
+    "id": 17,
+    "question": "Teamwork is important because it:",
+    "options": {
+      "A": "Increases arguments",
+      "B": "Fosters shared responsibility and collective problem-solving",
+      "C": "Reduces individual accountability",
+      "D": "Promotes isolation"
+    },
+    "answer": "B",
+    "explanation": "Teamwork ensures that the success or failure of the school is a group effort (**shared responsibility**). It leverages the diverse skills of staff to find optimal solutions (**collective problem-solving**)."
+  },
+  {
+    "id": 18,
+    "question": "The concept of **accountability** in leadership means:",
+    "options": {
+      "A": "Blaming staff",
+      "B": "Taking ownership of results and reporting back to stakeholders",
+      "C": "Hiding mistakes",
+      "D": "Making decisions alone"
+    },
+    "answer": "B",
+    "explanation": "Accountability is the obligation to explain and justify one's conduct or decisions. It requires the leader to **Taking ownership of results and reporting back to stakeholders** on performance."
+  },
+  {
+    "id": 19,
+    "question": "A school annual report should be presented to the:",
+    "options": {
+      "A": "Local market women",
+      "B": "School Board/SMC and District Education Office",
+      "C": "Only the headteacher",
+      "D": "Students only"
+    },
+    "answer": "B",
+    "explanation": "The annual report is a critical accountability document. It must be formally presented to the school's immediate governing body (**School Board/SMC**) and the supervising authority (**District Education Office**)."
+  },
+  {
+    "id": 20,
+    "question": "The most effective way to address poor staff morale is:",
+    "options": {
+      "A": "Ignore the problem",
+      "B": "Identify root causes and implement supportive interventions",
+      "C": "Transfer staff",
+      "D": "Punish the grumblers"
+    },
+    "answer": "B",
+    "explanation": "Morale is complex; a quick fix rarely works. The leader must first diagnose the source (e.g., workload, communication) (**Identify root causes**) and then address those issues directly with positive steps (**supportive interventions**)."
+  },
+  {
+    "id": 21,
+    "question": "The administrative function of a headteacher primarily involves:",
+    "options": {
+      "A": "Teaching only",
+      "B": "Organizing, staffing, planning, and resource management",
+      "C": "Avoiding paperwork",
+      "D": "Interfering in PTA elections"
+    },
+    "answer": "B",
+    "explanation": "Administration is the execution of policies. It covers the broad managerial duties of the headteacher: structuring the school (**Organizing**), deploying personnel (**staffing**), future mapping (**planning**), and acquisition/use of materials (**resource management**)."
+  },
+  {
+    "id": 22,
+    "question": "A good school timetable ensures:",
+    "options": {
+      "A": "Teacher convenience only",
+      "B": "Balanced curriculum delivery and optimal use of time",
+      "C": "Long breaks",
+      "D": "No subject rotation"
+    },
+    "answer": "B",
+    "explanation": "The timetable is the engine of the school day. It must ensure all required subjects are taught at appropriate times (**Balanced curriculum delivery**) and that every instructional minute is accounted for (**optimal use of time**)."
+  },
+  {
+    "id": 23,
+    "question": "School-Based Management (SBM) is promoted to enhance:",
+    "options": {
+      "A": "Centralization",
+      "B": "Local autonomy and stakeholder participation",
+      "C": "Federal control",
+      "D": "Exclusion"
+    },
+    "answer": "B",
+    "explanation": "SBM is a decentralized model designed to make the school responsive to local needs. It achieves this by giving the school leadership more decision-making power (**Local autonomy**) and involving local voices (**stakeholder participation**)."
+  },
+  {
+    "id": 24,
+    "question": "The use of **jargon** in communication is a barrier because it:",
+    "options": {
+      "A": "Is too formal",
+      "B": "Confuses those unfamiliar with technical terms",
+      "C": "Is too slow",
+      "D": "Is too personal"
+    },
+    "answer": "B",
+    "explanation": "Jargon is specialized language. While useful among experts, when used with the general public or staff from other fields, it creates confusion and prevents understanding, meaning it **Confuses those unfamiliar with technical terms**."
+  },
+  {
+    "id": 25,
+    "question": "The most important quality of a teacher in the classroom is:",
+    "options": {
+      "A": "Strictness",
+      "B": "Subject matter expertise and pedagogical skill",
+      "C": "Appearance",
+      "D": "Loudness"
+    },
+    "answer": "B",
+    "explanation": "The primary role of a teacher is to facilitate learning. This requires deep knowledge of the content (**Subject matter expertise**) and the ability to effectively deliver that content (**pedagogical skill**)."
+  },
+  {
+    "id": 26,
+    "question": "The purpose of a school prospectus is to:",
+    "options": {
+      "A": "List teacher names",
+      "B": "Provide general information, courses, and school policies to prospective students/parents",
+      "C": "Record student grades",
+      "D": "Document financial transactions"
+    },
+    "answer": "B",
+    "explanation": "A prospectus is a promotional and informational document. It serves to introduce the school's philosophy, offerings, rules, and procedures, acting as a guide **to prospective students/parents**."
+  },
+  {
+    "id": 27,
+    "question": "The ethical responsibility of a school leader includes:",
+    "options": {
+      "A": "Hiding mistakes",
+      "B": "Ensuring decisions are equitable and non-discriminatory",
+      "C": "Favouritism",
+      "D": "Self-enrichment"
+    },
+    "answer": "B",
+    "explanation": "Ethical leaders act as guardians of justice. They must ensure that all staff, student, and resource decisions are **equitable and non-discriminatory** based on any protected characteristic."
+  },
+  {
+    "id": 28,
+    "question": "The principle of **subsidiarity** in management means:",
+    "options": {
+      "A": "All decisions are centralized",
+      "B": "Decisions should be made by the lowest competent authority",
+      "C": "Only senior staff make decisions",
+      "D": "Avoiding responsibility"
+    },
+    "answer": "B",
+    "explanation": "Subsidiarity is a principle of decentralization. It holds that issues should be handled at the most immediate level consistent with their resolution, meaning **Decisions should be made by the lowest competent authority** to ensure efficiency and relevance."
+  },
+  {
+    "id": 29,
+    "question": "The primary goal of professional networking for teachers is to:",
+    "options": {
+      "A": "Gossip",
+      "B": "Share best practices and collaborate on problem-solving",
+      "C": "Find new jobs",
+      "D": "Avoid school duties"
+    },
+    "answer": "B",
+    "explanation": "Professional networks (online or in-person) create a platform for educators to exchange proven teaching methods (**Share best practices**) and jointly address common pedagogical challenges (**collaborate on problem-solving**)."
+  },
+  {
+    "id": 30,
+    "question": "Effective financial control systems prevent:",
+    "options": {
+      "A": "Expenditure",
+      "B": "Fraud, waste, and mismanagement of funds",
+      "C": "Accountability",
+      "D": "Transparency"
+    },
+    "answer": "B",
+    "explanation": "Financial control systems (e.g., reconciliation, authorization steps) are safeguards put in place to protect the school's assets and ensure the proper use of money, guarding against **Fraud, waste, and mismanagement of funds**."
+  },
+  {
+    "id": 31,
+    "question": "When recruiting staff, the principle of meritocracy ensures:",
+    "options": {
+      "A": "Favouritism",
+      "B": "Selection based on competence and qualifications",
+      "C": "Hiring only friends",
+      "D": "Discrimination"
+    },
+    "answer": "B",
+    "explanation": "Meritocracy is the principle that power and advancement should be based on ability and talent. In recruitment, it dictates **Selection based on competence and qualifications** rather than personal connections or bias."
+  },
+  {
+    "id": 32,
+    "question": "The main benefit of a **job description** is to:",
+    "options": {
+      "A": "Limit tasks",
+      "B": "Clarify roles, responsibilities, and performance expectations",
+      "C": "Increase salary",
+      "D": "Avoid work"
+    },
+    "answer": "B",
+    "explanation": "A job description removes ambiguity by defining the scope of the role, what the person is accountable for (**Clarify roles, responsibilities**), and the standard they must meet (**performance expectations**)."
+  },
+  {
+    "id": 33,
+    "question": "The use of an electronic filing system primarily improves:",
+    "options": {
+      "A": "Cost",
+      "B": "Accessibility, search speed, and data security",
+      "C": "Paper use",
+      "D": "Teacher workload"
+    },
+    "answer": "B",
+    "explanation": "Digital records allow staff to quickly locate files (**search speed**), access them from different locations (**Accessibility**), and apply high-level protections (**data security**) better than physical records."
+  },
+  {
+    "id": 34,
+    "question": "The most important record for tracking a student's academic progress over time is the:",
+    "options": {
+      "A": "Attendance book",
+      "B": "Cumulative Record Folder (CRF)",
+      "C": "Textbook list",
+      "D": "Teacher’s Scheme of Work"
+    },
+    "answer": "B",
+    "explanation": "The **Cumulative Record Folder (CRF)** is a permanent, longitudinal record that consolidates all vital data (grades, health, behavior, test scores) from the time a student enters until they leave, providing a comprehensive view of their progress."
+  },
+  {
+    "id": 35,
+    "question": "The goal of *servant leadership* in a school is to:",
+    "options": {
+      "A": "Focus on the leader's needs",
+      "B": "Serve and support the staff and students first",
+      "C": "Demand obedience",
+      "D": "Maintain distance"
+    },
+    "answer": "B",
+    "explanation": "Servant leadership is a philosophy where the leader's main priority is the growth and well-being of the people they lead. Their actions are driven by a desire to **Serve and support the staff and students first**."
+  },
+  {
+    "id": 36,
+    "question": "Effective school marketing focuses on showcasing the school's:",
+    "options": {
+      "A": "Debt",
+      "B": "Unique academic achievements and positive school culture",
+      "C": "Worst buildings",
+      "D": "Staff complaints"
+    },
+    "answer": "B",
+    "explanation": "School marketing aims to attract students and community support. It should highlight verifiable success stories (**Unique academic achievements**) and the positive, supportive atmosphere (**positive school culture**)."
+  },
+  {
+    "id": 37,
+    "question": "The purpose of a school audit is to ensure:",
+    "options": {
+      "A": "Punishment",
+      "B": "Compliance with financial and administrative regulations",
+      "C": "Transfer of staff",
+      "D": "Funding is reduced"
+    },
+    "answer": "B",
+    "explanation": "Audits are formal evaluations designed to confirm that the school's procedures and documentation are operating according to established laws, policies, and internal controls (**Compliance with financial and administrative regulations**)."
+  },
+  {
+    "id": 38,
+    "question": "Delegation fails when the leader:",
+    "options": {
+      "A": "Trusts staff",
+      "B": "Micromanages the delegated task",
+      "C": "Provides clear instructions",
+      "D": "Gives adequate time"
+    },
+    "answer": "B",
+    "explanation": "Micromanagement is the leader interfering constantly, robbing the subordinate of the autonomy necessary to complete the task and demonstrating a lack of trust. It destroys the purpose of delegation and often leads to failure."
+  },
+  {
+    "id": 39,
+    "question": "A staff meeting agenda should be:",
+    "options": {
+      "A": "Secret",
+      "B": "Shared in advance and adhered to during the meeting",
+      "C": "Decided upon arrival",
+      "D": "Very long"
+    },
+    "answer": "B",
+    "explanation": "An agenda ensures focus and preparation. Sharing it **in advance** allows attendees to prepare input, and **adhering to it** keeps the discussion efficient and on track."
+  },
+  {
+    "id": 40,
+    "question": "Effective communication between home and school requires:",
+    "options": {
+      "A": "Blaming parents",
+      "B": "Mutual respect and clear channels for dialogue",
+      "C": "Avoiding contact",
+      "D": "Only negative feedback"
+    },
+    "answer": "B",
+    "explanation": "A strong partnership is built on trust and dignity (**Mutual respect**). This is facilitated by creating formal, accessible means (e.g., newsletters, parent meetings) that provide **clear channels for dialogue**."
+  },
+  {
+    "id": 41,
+    "question": "The key role of the Circuit Supervisor in staff appraisal is to:",
+    "options": {
+      "A": "Avoid the process",
+      "B": "Verify the objectivity and fairness of the appraisal process",
+      "C": "Punish the teacher",
+      "D": "Set the teacher’s salary"
+    },
+    "answer": "B",
+    "explanation": "As the external oversight body, the CS ensures the school's internal appraisal process adheres to GES guidelines and that performance judgments are sound, thereby **Verify the objectivity and fairness of the appraisal process**."
+  },
+  {
+    "id": 42,
+    "question": "A teacher’s attendance record primarily measures:",
+    "options": {
+      "A": "Teaching quality",
+      "B": "Fidelity to work hours and punctuality",
+      "C": "Student performance",
+      "D": "Lesson plan quality"
+    },
+    "answer": "B",
+    "explanation": "The attendance record is an administrative, time-based document. Its purpose is to account for the teacher's presence on duty, measuring their **Fidelity to work hours and punctuality**."
+  },
+  {
+    "id": 43,
+    "question": "The main benefit of a school strategic plan is:",
+    "options": {
+      "A": "Cost saving",
+      "B": "Alignment of all activities toward long-term organizational goals",
+      "C": "Flexibility",
+      "D": "Daily scheduling"
+    },
+    "answer": "B",
+    "explanation": "Strategy is about focus. A strategic plan ensures that daily and annual efforts are not random but are all coherently directed towards achieving the school's overarching **long-term organizational goals**."
+  },
+  {
+    "id": 44,
+    "question": "Professional development for staff should be based on:",
+    "options": {
+      "A": "Random choice",
+      "B": "Identified school needs and performance gaps",
+      "C": "Teacher favourites",
+      "D": "Cost only"
+    },
+    "answer": "B",
+    "explanation": "CPD must be purposeful. Training should be selected based on the specific skills the staff or school needs to acquire, identified through performance reviews or inspection reports (**Identified school needs and performance gaps**)."
+  },
+  {
+    "id": 45,
+    "question": "Effective leadership feedback to staff should lead to:",
+    "options": {
+      "A": "Resignation",
+      "B": "Improved performance and clarity on future expectations",
+      "C": "Confusion",
+      "D": "Conflict"
+    },
+    "answer": "B",
+    "explanation": "The goal of leadership feedback is behavioral and performance change. When done well, it reinforces positive action and clearly sets the standard for success, leading to **Improved performance and clarity on future expectations**."
+  },
+  {
+    "id": 46,
+    "question": "Staff motivation is boosted by:",
+    "options": {
+      "A": "Criticism",
+      "B": "Clear communication and recognition of performance",
+      "C": "Silence",
+      "D": "Increased supervision"
+    },
+    "answer": "B",
+    "explanation": "Staff need to understand the goals and feel valued. **Clear communication** reduces uncertainty, while **recognition of performance** validates their effort, both of which are powerful motivators."
+  },
+  {
+    "id": 47,
+    "question": "The ICT policy in schools promotes",
+    "options": {
+      "A": "Restricting digital literacy",
+      "B": "Enhancing teaching and learning with technology",
+      "C": "Closing computer labs",
+      "D": "Reducing communication"
+    },
+    "answer": "B",
+    "explanation": "An educational ICT policy is designed to guide the effective, safe, and productive use of technology in the school environment, with the ultimate goal of **Enhancing teaching and learning with technology**."
+  },
+  {
+    "id": 48,
+    "question": "The purpose of inclusive education is",
+    "options": {
+      "A": "Selective admission",
+      "B": "Exclusion of learners with difficulties",
+      "C": "Ensuring equal learning opportunities for all learners",
+      "D": "Preventing integration"
+    },
+    "answer": "C",
+    "explanation": "Inclusive education is a fundamental human right approach to learning that welcomes all children, regardless of their challenges, to participate fully, thereby **Ensuring equal learning opportunities for all learners**."
+  },
+  {
+    "id": 49,
+    "question": "Which document outlines teacher duties?",
+    "options": {
+      "A": "Prospectus",
+      "B": "Code of Conduct and Conditions of Service for Teachers",
+      "C": "Textbook",
+      "D": "Staff list"
+    },
+    "answer": "B",
+    "explanation": "The official document that systematically details the responsibilities, ethical requirements, and professional obligations of an educator in the public service is the **Code of Conduct and Conditions of Service for Teachers**."
+  },
+  {
+    "id": 50,
+    "question": "The main purpose of a school budget is to ensure:",
+    "options": {
+      "A": "High expenditure",
+      "B": "Resource allocation aligns with educational priorities",
+      "C": "Random spending",
+      "D": "Debt accumulation"
+    },
+    "answer": "B",
+    "explanation": "The budget is a planning tool. It is used to prioritize spending so that limited financial resources are directed toward the most crucial needs that directly support the core mission, ensuring **Resource allocation aligns with educational priorities**."
+  }
+]

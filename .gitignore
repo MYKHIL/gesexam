@@ -1,0 +1,7 @@
+# Auto-generated .gitignore for deployment
+*
+!/index.html
+!/default-questions/
+!/default-questions/**
+!/.gitignore
+!/deploy.py

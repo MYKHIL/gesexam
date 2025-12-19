@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "An effective teacher mentor must be:",
+    "options": {
+      "A": "Judgmental",
+      "B": "Patient and supportive",
+      "C": "Distant",
+      "D": "Punitive"
+    },
+    "answer": "B",
+    "explanation": "Mentoring is a developmental process aimed at guiding growth. An effective mentor must be **Patient and supportive** (B) to build trust, encourage risk-taking, and sustain the new teacher's motivation through challenges."
+  },
+  {
+    "id": 2,
+    "question": "The best way to prevent school conflicts is:",
+    "options": {
+      "A": "Clear communication",
+      "B": "Threats",
+      "C": "Emotional decisions",
+      "D": "Avoiding meetings"
+    },
+    "answer": "A",
+    "explanation": "Most conflicts stem from misunderstanding, confusion, or lack of information. Proactively establishing **Clear communication** (A) channels and protocols reduces ambiguity, which is the best form of prevention."
+  },
+  {
+    "id": 3,
+    "question": "A reliable assessment is one that:",
+    "options": {
+      "A": "Gives the same result consistently",
+      "B": "Varies randomly",
+      "C": "Changes with mood",
+      "D": "Depends on handwriting"
+    },
+    "answer": "A",
+    "explanation": "In psychometrics, **reliability** is the degree to which an assessment tool produces stable and consistent results. It **Gives the same result consistently** (A) under the same conditions. "
+  },
+  {
+    "id": 4,
+    "question": "Instructional materials are best selected based on:",
+    "options": {
+      "A": "Cost",
+      "B": "Learning objectives",
+      "C": "Colour",
+      "D": "Size"
+    },
+    "answer": "B",
+    "explanation": "The primary role of instructional materials is to facilitate the achievement of educational goals. Their selection must be directly tied to the defined **Learning objectives** (B) of the curriculum."
+  },
+  {
+    "id": 5,
+    "question": "The purpose of teacher self-reflection is to:",
+    "options": {
+      "A": "Punish oneself",
+      "B": "Improve instructional practice",
+      "C": "Avoid supervision",
+      "D": "Please administrators"
+    },
+    "answer": "B",
+    "explanation": "Self-reflection is a critical tool for professional growth, allowing teachers to critically evaluate their own performance and identify areas for adjustment and enhancement, thereby helping to **Improve instructional practice** (B)."
+  },
+  {
+    "id": 6,
+    "question": "The most effective leadership value is:",
+    "options": {
+      "A": "Transparency",
+      "B": "Bias",
+      "C": "Arrogance",
+      "D": "Secrecy"
+    },
+    "answer": "A",
+    "explanation": "**Transparency** (A) builds trust among staff, parents, and the community by being open about decision-making processes and resource allocation, making it a foundational value for effective leadership."
+  },
+  {
+    "id": 7,
+    "question": "The first step in mentoring a teacher is:",
+    "options": {
+      "A": "Criticizing",
+      "B": "Building rapport",
+      "C": "Giving queries",
+      "D": "Reassigning duties"
+    },
+    "answer": "B",
+    "explanation": "Successful mentoring relies on mutual respect and trust. The initial and most crucial step is **Building rapport** (B) to establish a comfortable, non-threatening, and open working relationship."
+  },
+  {
+    "id": 8,
+    "question": "One characteristic of a good supervisor is:",
+    "options": {
+      "A": "Dictatorship",
+      "B": "Good listening",
+      "C": "Harshness",
+      "D": "Emotional instability"
+    },
+    "answer": "B",
+    "explanation": "Effective supervision involves understanding a teacher's challenges and successes. This requires the supervisor to actively seek and comprehend input and concerns, making **Good listening** (B) a key trait."
+  },
+  {
+    "id": 9,
+    "question": "A school’s mission statement guides:",
+    "options": {
+      "A": "Daily operations",
+      "B": "Uniform selection",
+      "C": "Social events",
+      "D": "Sports only"
+    },
+    "answer": "A",
+    "explanation": "The mission statement articulates the school's purpose and values. All actions, including curriculum choices, budgeting, and policies, should align with it, thus guiding **Daily operations** (A)."
+  },
+  {
+    "id": 10,
+    "question": "The purpose of a pre-observation conference is to:",
+    "options": {
+      "A": "Punish teachers",
+      "B": "Clarify expectations",
+      "C": "Delay supervision",
+      "D": "Reduce lesson time"
+    },
+    "answer": "B",
+    "explanation": "Before a classroom observation, the supervisor meets with the teacher to discuss the lesson plan, the specific standards being assessed, and the focus of the observation. This process is used to **Clarify expectations** (B)."
+  },
+  {
+    "id": 11,
+    "question": "Instructional monitoring becomes ineffective when:",
+    "options": {
+      "A": "Support is withdrawn",
+      "B": "Feedback is constructive",
+      "C": "Processes are clear",
+      "D": "Teachers participate"
+    },
+    "answer": "A",
+    "explanation": "Monitoring should lead to improvement. When teachers are observed but then left without the resources, training, or encouragement needed to implement changes, the process fails because **Support is withdrawn** (A)."
+  },
+  {
+    "id": 12,
+    "question": "Financial accountability requires:",
+    "options": {
+      "A": "Proper documentation",
+      "B": "Verbal reporting",
+      "C": "Guessing",
+      "D": "Hidden spending"
+    },
+    "answer": "A",
+    "explanation": "To be accountable for finances, every transaction, expenditure, and budget allocation must be recorded and verifiable. This demands **Proper documentation** (A) and accurate record-keeping."
+  },
+  {
+    "id": 13,
+    "question": "The most effective way to motivate teachers is:",
+    "options": {
+      "A": "Recognizing achievements",
+      "B": "Increasing workload",
+      "C": "Threats",
+      "D": "Criticism"
+    },
+    "answer": "A",
+    "explanation": "Intrinsic motivation is boosted by feeling valued. Public or private acknowledgement of hard work and successful outcomes (**Recognizing achievements** (A)) is a powerful, non-monetary motivator."
+  },
+  {
+    "id": 14,
+    "question": "An inclusive classroom ensures:",
+    "options": {
+      "A": "Equal participation",
+      "B": "Exclusion",
+      "C": "Segregation",
+      "D": "Teacher-centredness"
+    },
+    "answer": "A",
+    "explanation": "An inclusive classroom is designed to meet the needs of all learners, regardless of background or ability, ensuring that every student has opportunities for **Equal participation** (A)."
+  },
+  {
+    "id": 15,
+    "question": "Professional misconduct includes:",
+    "options": {
+      "A": "Bias",
+      "B": "Transparency",
+      "C": "Confidentiality",
+      "D": "Fairness"
+    },
+    "answer": "A",
+    "explanation": "Professional misconduct is behaviour that breaches ethical codes. Actions such as **Bias** (A), discrimination, or unfair treatment violate the fundamental principles of fairness required in a professional setting."
+  },
+  {
+    "id": 16,
+    "question": "A good decision must be:",
+    "options": {
+      "A": "Evidence-based",
+      "B": "Emotional",
+      "C": "Spontaneous",
+      "D": "Forced"
+    },
+    "answer": "A",
+    "explanation": "In management, sound decisions are rational, logical, and supported by concrete data, making them **Evidence-based** (A) rather than reliant on impulse or personal feeling."
+  },
+  {
+    "id": 17,
+    "question": "Effective school communication improves:",
+    "options": {
+      "A": "Cooperation",
+      "B": "Silence",
+      "C": "Confusion",
+      "D": "Punishment"
+    },
+    "answer": "A",
+    "explanation": "When information flows smoothly and clearly across all levels, staff and departments can synchronize their efforts and work harmoniously, leading directly to improved **Cooperation** (A)."
+  },
+  {
+    "id": 18,
+    "question": "Delegation fails when:",
+    "options": {
+      "A": "Roles are unclear",
+      "B": "Authority is given",
+      "C": "Follow-up occurs",
+      "D": "Tasks match skills"
+    },
+    "answer": "A",
+    "explanation": "Delegation requires the transfer of both responsibility and authority. If the employee doesn't know exactly what they are responsible for, or what authority they possess, the task cannot be executed successfully, meaning **Roles are unclear** (A)."
+  },
+  {
+    "id": 19,
+    "question": "Teachers perform better when:",
+    "options": {
+      "A": "Supervision is supportive",
+      "B": "It is threatening",
+      "C": "Rules are secret",
+      "D": "Leaders are silent"
+    },
+    "answer": "A",
+    "explanation": "Supportive supervision provides guidance, resources, and constructive feedback rather than criticism or fear. This approach encourages teacher confidence and professional risk-taking, leading to better performance, thus **Supervision is supportive** (A)."
+  },
+  {
+    "id": 20,
+    "question": "A safe school must have:",
+    "options": {
+      "A": "Emergency procedures",
+      "B": "Unlocked hazards",
+      "C": "No supervision",
+      "D": "Random movement"
+    },
+    "answer": "A",
+    "explanation": "Safety is maintained by planning for contingencies. Every safe school must have well-documented and well-practiced **Emergency procedures** (A) (e.g., fire drills, medical response plans)."
+  },
+  {
+    "id": 21,
+    "question": "The purpose of monitoring teacher punctuality is to:",
+    "options": {
+      "A": "Improve learning time",
+      "B": "Punish teachers",
+      "C": "Impress visitors",
+      "D": "Reduce teaching"
+    },
+    "answer": "A",
+    "explanation": "Punctuality ensures that instructional time is maximized and classes start and end on schedule, directly translating into efforts to **Improve learning time** (A) for students."
+  },
+  {
+    "id": 22,
+    "question": "A transformational leader:",
+    "options": {
+      "A": "Inspires change",
+      "B": "Discourages ideas",
+      "C": "Focuses on control",
+      "D": "Avoids innovation"
+    },
+    "answer": "A",
+    "explanation": "A **transformational leader** motivates followers to achieve outcomes beyond what was expected. Their focus is on vision, inspiration, and intellectual stimulation—they **Inspires change** (A). "
+  },
+  {
+    "id": 23,
+    "question": "The best method for identifying school challenges is:",
+    "options": {
+      "A": "Data review",
+      "B": "Rumours",
+      "C": "Anger",
+      "D": "Emotional reactions"
+    },
+    "answer": "A",
+    "explanation": "Objective problem identification relies on empirical evidence from test scores, attendance records, financial reports, etc. The most reliable method is systematic **Data review** (A)."
+  },
+  {
+    "id": 24,
+    "question": "A school inventory helps track:",
+    "options": {
+      "A": "Physical resources",
+      "B": "Attendance",
+      "C": "Marks",
+      "D": "Assessments"
+    },
+    "answer": "A",
+    "explanation": "An inventory is a detailed list of all movable property owned by the school, such as furniture, equipment, and teaching aids. It is used to track **Physical resources** (A)."
+  },
+  {
+    "id": 25,
+    "question": "The term “stakeholder” refers to:",
+    "options": {
+      "A": "Anyone with interest in the school",
+      "B": "Only teachers",
+      "C": "Only students",
+      "D": "Only parents"
+    },
+    "answer": "A",
+    "explanation": "A **stakeholder** is any person or group that has an interest or concern in the school's success and is affected by its actions, which includes **Anyone with interest in the school** (A) (e.g., staff, students, parents, community, government)."
+  },
+  {
+    "id": 26,
+    "question": "A collaborative leader promotes:",
+    "options": {
+      "A": "Shared decisions",
+      "B": "Isolation",
+      "C": "Silence",
+      "D": "Punishment"
+    },
+    "answer": "A",
+    "explanation": "Collaboration is the practice of multiple individuals or groups working together. In leadership, this means involving others in the process of making choices, promoting **Shared decisions** (A)."
+  },
+  {
+    "id": 27,
+    "question": "Teachers become resistant to change when:",
+    "options": {
+      "A": "Not involved",
+      "B": "Consulted",
+      "C": "Trained",
+      "D": "Supported"
+    },
+    "answer": "A",
+    "explanation": "Resistance often arises from fear of the unknown or feeling imposed upon. Teachers are less likely to accept change if they feel blindsided or if they were **Not involved** (A) in the planning or decision-making process."
+  },
+  {
+    "id": 28,
+    "question": "A summative assessment is used for:",
+    "options": {
+      "A": "End-of-term decisions",
+      "B": "Ongoing monitoring",
+      "C": "Giving feedback only",
+      "D": "Peer review"
+    },
+    "answer": "A",
+    "explanation": "**Summative assessments** evaluate student learning at the end of an instructional unit or period to determine achievement, typically resulting in **End-of-term decisions** (A) like grading and promotion."
+  },
+  {
+    "id": 29,
+    "question": "Lesson notes are important because they:",
+    "options": {
+      "A": "Guide instruction",
+      "B": "Decorate shelves",
+      "C": "Are optional",
+      "D": "Are not needed"
+    },
+    "answer": "A",
+    "explanation": "Lesson notes (or plans) provide a systematic roadmap for teaching, ensuring that learning objectives are addressed logically, thus they **Guide instruction** (A)."
+  },
+  {
+    "id": 30,
+    "question": "Performance contracts help to:",
+    "options": {
+      "A": "Clarify responsibilities",
+      "B": "Confuse staff",
+      "C": "Replace appraisals",
+      "D": "Increase paperwork"
+    },
+    "answer": "A",
+    "explanation": "A performance contract is an agreement that sets clear, measurable objectives, expectations, and reporting standards for the duration of the contract, helping to **Clarify responsibilities** (A) and accountability."
+  },
+  {
+    "id": 31,
+    "question": "The best way to improve weak teacher performance is:",
+    "options": {
+      "A": "Capacity building",
+      "B": "Punishment",
+      "C": "Removal",
+      "D": "Isolation"
+    },
+    "answer": "A",
+    "explanation": "The most sustainable solution for poor performance is remediation through training, mentoring, and professional development, a process called **Capacity building** (A)."
+  },
+  {
+    "id": 32,
+    "question": "A meeting becomes ineffective when:",
+    "options": {
+      "A": "No agenda exists",
+      "B": "Minutes are kept",
+      "C": "Outcomes are recorded",
+      "D": "Roles are assigned"
+    },
+    "answer": "A",
+    "explanation": "Without a structured plan (**No agenda exists** (A)), a meeting will lack focus, waste time on irrelevant topics, and likely fail to achieve its necessary objectives."
+  },
+  {
+    "id": 33,
+    "question": "Financial mismanagement occurs when:",
+    "options": {
+      "A": "Records are missing",
+      "B": "Budgets are clear",
+      "C": "Spending is approved",
+      "D": "Audits are done"
+    },
+    "answer": "A",
+    "explanation": "Financial mismanagement is the failure to properly manage resources, often characterized by lack of transparency and an inability to account for expenditure, such as when **Records are missing** (A)."
+  },
+  {
+    "id": 34,
+    "question": "Professional collaboration promotes:",
+    "options": {
+      "A": "Best practice sharing",
+      "B": "Competition",
+      "C": "Blame",
+      "D": "Distance"
+    },
+    "answer": "A",
+    "explanation": "**Professional collaboration** enables teachers to learn from their colleagues' successes and failures, fostering a culture of continuous improvement through **Best practice sharing** (A)."
+  },
+  {
+    "id": 35,
+    "question": "Instructional supervision must focus on:",
+    "options": {
+      "A": "Teaching quality",
+      "B": "Teacher background",
+      "C": "School age",
+      "D": "Uniform"
+    },
+    "answer": "A",
+    "explanation": "The primary goal of instructional supervision is the improvement of learning outcomes. This is achieved by assessing and improving the core process of education, which is **Teaching quality** (A)."
+  },
+  {
+    "id": 36,
+    "question": "School discipline improves when rules are:",
+    "options": {
+      "A": "Consistent",
+      "B": "Hidden",
+      "C": "Emotional",
+      "D": "Changed daily"
+    },
+    "answer": "A",
+    "explanation": "Fairness and predictability are essential for effective discipline. When rules and their enforcement are **Consistent** (A), students understand the expectations and consequences, leading to greater compliance."
+  },
+  {
+    "id": 37,
+    "question": "The purpose of teacher orientation is to:",
+    "options": {
+      "A": "Familiarize new teachers",
+      "B": "Punish them",
+      "C": "Confuse them",
+      "D": "Reduce workload"
+    },
+    "answer": "A",
+    "explanation": "Orientation is the process of introducing new staff to the school's culture, policies, colleagues, and physical environment to help **Familiarize new teachers** (A) and integrate them successfully."
+  },
+  {
+    "id": 38,
+    "question": "The most important element of monitoring is:",
+    "options": {
+      "A": "Follow-up",
+      "B": "Noise",
+      "C": "Avoidance",
+      "D": "Delay"
+    },
+    "answer": "A",
+    "explanation": "Monitoring identifies gaps; the benefit comes from ensuring that the necessary corrective actions are taken and improvements are sustained. This makes **Follow-up** (A) the most critical step."
+  },
+  {
+    "id": 39,
+    "question": "Teachers appreciate leadership when:",
+    "options": {
+      "A": "They are respected",
+      "B": "They are ignored",
+      "C": "They are blamed",
+      "D": "Rules are unfair"
+    },
+    "answer": "A",
+    "explanation": "A professional work environment built on mutual respect is key to staff morale and job satisfaction. Teachers are committed to leaders who treat them as professionals, meaning **They are respected** (A)."
+  },
+  {
+    "id": 40,
+    "question": "Instructional materials must be:",
+    "options": {
+      "A": "Appropriate",
+      "B": "Excessive",
+      "C": "Irrelevant",
+      "D": "Complicated"
+    },
+    "answer": "A",
+    "explanation": "To be effective, learning resources must be suitable for the age, ability level, and cultural context of the learners, meaning they must be **Appropriate** (A)."
+  },
+  {
+    "id": 41,
+    "question": "A good report is:",
+    "options": {
+      "A": "Clear and factual",
+      "B": "Emotional",
+      "C": "One-sided",
+      "D": "Exaggerated"
+    },
+    "answer": "A",
+    "explanation": "In an administrative context, a report must be objective, based on evidence, and easily understood by the recipient. It must be **Clear and factual** (A)."
+  },
+  {
+    "id": 42,
+    "question": "School leaders should promote:",
+    "options": {
+      "A": "Lifelong learning",
+      "B": "Stagnation",
+      "C": "Isolation",
+      "D": "Fear"
+    },
+    "answer": "A",
+    "explanation": "School leaders must encourage staff to continuously update their skills and knowledge, modeling and fostering a culture of **Lifelong learning** (A) to ensure institutional adaptability and excellence."
+  },
+  {
+    "id": 43,
+    "question": "The purpose of learner assessment records is to:",
+    "options": {
+      "A": "Track progress",
+      "B": "Confuse teachers",
+      "C": "Decorate offices",
+      "D": "Punish learners"
+    },
+    "answer": "A",
+    "explanation": "Assessment records provide longitudinal data on a student’s academic journey, allowing teachers and parents to monitor growth, identify challenges, and adjust instruction to **Track progress** (A)."
+  },
+  {
+    "id": 44,
+    "question": "Inclusive education supports:",
+    "options": {
+      "A": "Diversity",
+      "B": "Discrimination",
+      "C": "Segregation",
+      "D": "Bias"
+    },
+    "answer": "A",
+    "explanation": "**Inclusive education** is fundamentally about valuing and accommodating all differences in the classroom, ensuring that the school environment supports **Diversity** (A) in all its forms."
+  },
+  {
+    "id": 45,
+    "question": "Effective supervision requires:",
+    "options": {
+      "A": "Observation tools",
+      "B": "Assumptions",
+      "C": "Punishment",
+      "D": "Emotion"
+    },
+    "answer": "A",
+    "explanation": "To provide objective and fair feedback, supervision must be systematic and based on predetermined criteria, requiring the use of structured **Observation tools** (A), such as checklists or rubrics."
+  },
+  {
+    "id": 46,
+    "question": "A school’s core values guide:",
+    "options": {
+      "A": "Behaviour",
+      "B": "Decoration",
+      "C": "Uniforms",
+      "D": "Food"
+    },
+    "answer": "A",
+    "explanation": "Core values are the fundamental beliefs and principles that dictate an organization's mission and shape its culture. They serve as the moral compass for all decisions and **Behaviour** (A) within the school community."
+  },
+  {
+    "id": 47,
+    "question": "Effective monitoring is:",
+    "options": {
+      "A": "Systematic",
+      "B": "Occasional",
+      "C": "Random",
+      "D": "Hidden"
+    },
+    "answer": "A",
+    "explanation": "Effective monitoring is planned, structured, and continuous, ensuring that all key areas are regularly checked against standards. It is a **Systematic** (A) process, not an arbitrary one."
+  },
+  {
+    "id": 48,
+    "question": "Teachers are more committed when leadership is:",
+    "options": {
+      "A": "Supportive",
+      "B": "Harsh",
+      "C": "Secretive",
+      "D": "Unfair"
+    },
+    "answer": "A",
+    "explanation": "High commitment and morale are achieved when leaders invest in their staff, listen to their concerns, and provide the necessary resources and encouragement, meaning leadership is **Supportive** (A)."
+  },
+  {
+    "id": 49,
+    "question": "Accountability improves when:",
+    "options": {
+      "A": "Records are kept",
+      "B": "Nothing is documented",
+      "C": "Leaders guess",
+      "D": "Rules are unclear"
+    },
+    "answer": "A",
+    "explanation": "The ability to be held answerable for actions requires an evidence trail. Accountability is dependent on accurate and verifiable documentation, thus improving when **Records are kept** (A)."
+  },
+  {
+    "id": 50,
+    "question": "Classroom management aims to:",
+    "options": {
+      "A": "Maintain conducive learning",
+      "B": "Punish learners",
+      "C": "Reduce participation",
+      "D": "Increase noise"
+    },
+    "answer": "A",
+    "explanation": "The core objective of classroom management is to organize the environment, time, and activities to maximize student engagement and instructional effectiveness, primarily to **Maintain conducive learning** (A)."
+  }
+]

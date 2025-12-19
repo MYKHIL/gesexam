@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "EMIS stands for:",
+    "options": {
+      "A": "Education Management Information System",
+      "B": "Emergency Management",
+      "C": "Exam Monitoring",
+      "D": "Education Manual"
+    },
+    "answer": "A",
+    "explanation": "The acronym **EMIS** universally stands for **Education Management Information System**. This system is a critical component of modern education infrastructure, typically defined as a centralized, integrated system or software designed for the collection, integration, processing, maintenance, and dissemination of educational data and information.\n\nThe primary functions of an EMIS include:\n*   **Data Collection and Storage:** It systematically gathers and stores comprehensive data across various levels of the education system, from individual students and teachers to schools, districts, and the national level.\n*   **Decision Support:** The data collected is processed and analyzed to generate statistics and reports that support evidence-based decision-making, policy development, planning, and resource allocation within the education sector.\n*   **Monitoring and Evaluation:** It is used to monitor and track key performance indicators, such as student performance, teacher deployment, facility utilization, and financial information, to facilitate better education system planning and policy dialogue.\n\nTherefore, Option A, **Education Management Information System**, is the correct and specific meaning of EMIS within the context of education."
+  },
+  {
+    "id": 2,
+    "question": "The ultimate goal of supervision is:",
+    "options": {
+      "A": "Control",
+      "B": "School improvement",
+      "C": "Punishment",
+      "D": "Promotion"
+    },
+    "answer": "B",
+    "explanation": "The ultimate goal of educational supervision is **school improvement** (Option B).\n\n*   **Ultimate Goal: School Improvement:** Supervision is fundamentally a process designed to provide technical assistance and guidance to teachers and other school staff to improve their performance and the overall educational environment. The ultimate objective is to enhance the quality of the learning environment for students, which directly translates to improved student achievement and overall school effectiveness. This goal encompasses achieving the school's curriculum and instructional objectives.\n\n*   **Why the Other Options are Incorrect:**\n    *   **Control (A):** While supervision involves ensuring the institution operates efficiently and within legal requirements (which requires a degree of control), this is a *means* to ensure a functional environment, not the *ultimate goal*. Modern supervision emphasizes a collaborative and developmental approach over a purely authoritative or controlling one.\n    *   **Punishment (C):** Supervision is intended to foster a positive teaching-learning ethos and help staff develop their skills. Punishment is counter-productive to this developmental and cooperative purpose.\n    *   **Promotion (D):** Promotion is an outcome of performance evaluation and a function of human resources management, not the primary educational purpose or ultimate goal of the supervision process itself. The focus of supervision is on enhancing instructional quality, which may *lead* to promotion, but is not the core mission."
+  },
+  {
+    "id": 3,
+    "question": "Constructive feedback is:",
+    "options": {
+      "A": "Rude",
+      "B": "Helpful and positive",
+      "C": "Sarcastic",
+      "D": "Angry"
+    },
+    "answer": "B",
+    "explanation": "Constructive feedback is a form of communication specifically designed to help an individual improve their performance, skills, or behavior in a supportive and actionable manner.\n\n*   **Helpful and Positive:** Constructive feedback is inherently **helpful** because its primary goal is improvement and achieving a positive outcome. It is delivered in a professional and supportive way to ensure the recipient can act on the advice without feeling personally attacked. While it may address an area needing correction, it is \"positive\" in its intent, which is to foster growth and development, and it is often balanced with recognition of what is being done well. It must be perceived as helpful and supportive to be effective.\n\n*   **Why other options are incorrect:**\n    *   **Rude, Sarcastic, or Angry:** These characteristics are the opposite of constructive feedback. Feedback that is rude, sarcastic, angry, or otherwise highly negative is likely to be perceived as an attack and will typically cause the recipient to become defensive, making them resistant to change or improvement. Constructive feedback focuses on specific **behavior** or performance, not on personal attacks or personality flaws, and is delivered with a positive intent to encourage a positive outcome."
+  },
+  {
+    "id": 4,
+    "question": "Student welfare includes:",
+    "options": {
+      "A": "Safety",
+      "B": "Fighting",
+      "C": "Tardiness",
+      "D": "Truancy"
+    },
+    "answer": "A",
+    "explanation": "Student welfare refers to the comprehensive support and services provided by an educational institution to ensure the overall well-being and success of its students. It is a broad concept that encompasses a student's physical, mental, and social health.\n\n*   **Safety (Option A)** is a fundamental and direct component of student welfare. Ensuring a safe everyday life at school, free from harm and risk, is a core objective of any student welfare policy. This includes the physical safety of the school environment as well as the emotional and psychological security of the students, which is crucial for their overall well-being.\n*   **Fighting (Option B)**, **Tardiness (Option C)**, and **Truancy (Option D)** are all examples of disciplinary issues, behavioral problems, or attendance concerns. While these issues must be *addressed* by a school's welfare team (as they often stem from underlying welfare issues), they are problems that *threaten* or *disrupt* student welfare and a safe environment, rather than being a direct *component* of the welfare provision itself.\n\nTherefore, **Safety** is the only option that represents an essential, positive, and proactive element that is a primary part of the definition and goal of student welfare."
+  },
+  {
+    "id": 5,
+    "question": "Delegation improves:",
+    "options": {
+      "A": "Laziness",
+      "B": "Participation",
+      "C": "Delay",
+      "D": "Fear"
+    },
+    "answer": "B",
+    "explanation": "Delegation is a fundamental management practice that involves a manager distributing or entrusting authority and responsibility for specific tasks to another person (typically a subordinate) in the organization. The core improvements driven by this process align with **Option B: Participation**.\n\nHere is a detailed breakdown of how delegation improves participation:\n\n*   **Promotes Employee Involvement:** By assigning tasks and the necessary authority to employees, delegation directly increases their involvement in the work and decision-making processes of the organization. Democratic leaders often delegate because they value employee participation.\n*   **Increases Engagement and Morale:** When employees are entrusted with responsibilities, they feel valued and become more engaged, which, in turn, boosts motivation and builds morale. This sense of ownership encourages active participation rather than passive compliance.\n*   **Fosters Ownership:** Effective delegation helps team members feel that they \"own\" their work and are actively responsible for driving it forward. This personal investment is a direct form of participation.\n*   **Develops Skills and Autonomy:** Delegation allows employees to improve their skills, acquire new knowledge, and learn to make decisions, all of which prepare them for greater participation and autonomy in the future.\n\nIn contrast, the other options are either incorrect or represent negative outcomes that effective delegation aims to prevent:\n\n*   **Laziness (A):** Delegation is about distributing work, which is intended to increase productivity and is the opposite of improving laziness.\n*   **Delay (C):** Delegation helps managers save time and focus on higher-level strategy, which improves overall efficiency and helps to reduce, not improve, delays.\n*   **Fear (D):** Delegation builds a culture of trust and empowers teams, which helps to mitigate, not improve, fear in the workplace."
+  },
+  {
+    "id": 6,
+    "question": "An effective District Director must:",
+    "options": {
+      "A": "Hire only relatives",
+      "B": "Strengthen school leadership",
+      "C": "Ignore weak schools",
+      "D": "Travel always"
+    },
+    "answer": "B",
+    "explanation": "An effective District Director is the chief executive for the school district and their primary role is to ensure that all schools within the district provide a quality education and meet established goals.\n\n*   **Strengthen school leadership (Option B) is the correct answer** because effective district leadership is essential for creating an environment where all schools and students can thrive, and this is achieved by providing vision, support, and resources to the individual schools.\n*   The District Director's success is directly tied to the effectiveness of the principals and other school leaders who manage the day-to-day operations and instructional quality. By focusing on strengthening school leadership—through training, empowerment, and support for principals and other education officers—the Director ensures that the system's core component is robust, allowing effective teaching and learning to flourish across the entire district.\n*   An effective District Director collaborates with school and district leaders to facilitate effective meetings and initiatives, underscoring the importance of building leadership capacity to move district goals forward.\n\nThe other options represent poor, ineffective, or unethical practices:\n\n*   **Hire only relatives (Option A)** is an act of nepotism, is unethical, and does not prioritize competence, which is detrimental to the quality of education and the professional standards of the district.\n*   **Ignore weak schools (Option C)** is the opposite of an effective District Director's duty. A key responsibility is to oversee all operations and address performance gaps to ensure all students receive a quality education, especially in underperforming schools.\n*   **Travel always (Option D)** describes an action without defining a purpose or outcome; while site visits are part of the job, \"travel always\" is not a substantive, effective leadership strategy and would likely lead to a lack of central oversight and stability."
+  },
+  {
+    "id": 7,
+    "question": "The GES motto is:",
+    "options": {
+      "A": "Quality and Discipline",
+      "B": "Power and Control",
+      "C": "Strength and Honour",
+      "D": "Unity and War"
+    },
+    "answer": "A",
+    "explanation": "The correct answer is Option A, **Quality and Discipline**.\n\n*   **Ghana Education Service (GES) Motto/Slogan:** While the official tagline of the Ghana Education Service is often cited as \"Transforming Education for National Development,\" the phrase **\"Quality and Discipline\"** is widely recognized and used as the core motto or guiding principle, reflecting the fundamental pillars of the institution's mandate.\n*   **Quality:** The GES's vision and mission statements consistently emphasize the goal of delivering **quality education** to all Ghanaian children. This part of the motto refers to the high standard of teaching, learning resources, infrastructure, and overall educational output that the service aims to maintain and improve across all pre-tertiary institutions in Ghana.\n*   **Discipline:** The GES is the government agency responsible for implementing and regulating national pre-tertiary educational policies. A key part of its mandate involves fostering a conducive and effective teaching and learning environment, which is achieved through maintaining **discipline** among students, teachers, and staff. Discipline is viewed as essential for promoting academic seriousness, good conduct, and an orderly environment necessary for national development.\n\nTherefore, the two terms encapsulate the primary goals of the Ghana Education Service: to ensure a high standard of education (**Quality**) within a well-regulated and orderly environment (**Discipline**)."
+  },
+  {
+    "id": 8,
+    "question": "Staff appraisal ensures:",
+    "options": {
+      "A": "Promotion only",
+      "B": "Performance improvement",
+      "C": "Failure",
+      "D": "Retrenchment"
+    },
+    "answer": "B",
+    "explanation": "Staff appraisal, also known as performance review or performance evaluation, is a formal process used within organizations to assess an employee's job performance over a specific period. The process is a key element of performance management, and its primary objective is to enhance organizational effectiveness by focusing on employee development.\n\n*   **Correct Answer: Option B (Performance improvement)**\n    *   **Staff appraisal is designed to ensure performance improvement.** The process involves identifying an employee's strengths and weaknesses, giving constructive feedback, and setting developmental goals.\n    *   By highlighting areas for development and identifying training needs, the appraisal directly leads to plans for better future performance, increased productivity, and the overall professional growth of the employee.\n\n*   **Incorrect Options:**\n    *   **Option A (Promotion only):** While an appraisal may inform decisions about promotions and salary increases, this is a secondary, administrative function. The core purpose is broader: to manage and improve performance for all employees, not just those being considered for promotion.\n    *   **Option C (Failure):** The purpose of a staff appraisal is the opposite of ensuring failure; it is a tool intended to identify and correct performance gaps to **prevent** failure.\n    *   **Option D (Retrenchment):** Retrenchment (reduction of staff/layoffs) is a potential negative consequence of consistent, uncorrected poor performance that an appraisal might reveal, but it is not what the appraisal system is designed to **ensure**. The aim of the system is to improve performance so that retrenchment becomes unnecessary."
+  },
+  {
+    "id": 9,
+    "question": "A leader must be:",
+    "options": {
+      "A": "Transparent",
+      "B": "Dishonest",
+      "C": "Moody",
+      "D": "Impatient"
+    },
+    "answer": "A",
+    "explanation": "Transparency is a fundamental and essential characteristic for effective leadership, while the other options represent detrimental traits.\n\n*   **Transparency ($\\text{Option A}$):** Transparency in leadership is the bedrock of trust, accountability, and ethical decision-making within an organization. A transparent leader openly shares plans, goals, and progress, which fosters a workplace culture where employees feel valued and motivated. This practice helps to earn an employee's loyalty and confidence, which is crucial for team cohesion and morale.\n\n*   **Dishonest ($\\text{Option B}$):** Dishonesty is the antithesis of effective leadership. Leaders are expected to have integrity, and dishonest behavior can lead to a complete breakdown of trust, which is necessary for any successful working relationship. Dishonesty can result in serious consequences, such as unethical behavior or fraud, and is widely recognized as a negative personality trait.\n\n*   **Moody ($\\text{Option C}$):** A moody leader, characterized by unpredictable emotional shifts, negatively affects interactions and creates an unstable and uncertain work environment. Consistency and emotional stability are generally required for a leader to be respected and effective.\n\n*   **Impatient ($\\text{Option D}$):** While sometimes confused with a drive for results, extreme impatience is a negative trait that can affect interactions. An impatient leader can rush decisions, fail to listen to team input, and create high-stress environments, which ultimately hinders the development of a resilient and collaborative team."
+  },
+  {
+    "id": 10,
+    "question": "The District Director's office is responsible for:",
+    "options": {
+      "A": "Examination leakages",
+      "B": "Teacher postings",
+      "C": "Curriculum writing",
+      "D": "WAEC decisions"
+    },
+    "answer": "B",
+    "explanation": "The District Director's office, typically the District Education Directorate (DED), is the local administrative unit of the national education service (e.g., Ghana Education Service) and is responsible for managing the day-to-day operations of public schools within a specific geographical district.\n\n*   **Option B: Teacher postings** is correct because the District Director's office is fundamentally responsible for the **administration, supervision, and efficient delivery of educational services** within the district. This mandate includes the deployment and management of teaching staff, which is encompassed by \"teacher postings.\" While the initial, national posting of newly trained teachers may be centralized at the national headquarters, the District Director's office is responsible for:\n    *   Collecting data on teacher vacancies in the district's schools.\n    *   Overseeing the reception, deployment, and localized internal transfers of teachers within the district to ensure every school is adequately staffed.\n\n*   **Option A (Examination leakages)** and **Option D (WAEC decisions)** are incorrect. Examination policy and major decisions, including the overall conduct of examinations and handling of malpractice like leakages, fall primarily under the jurisdiction of the West African Examinations Council (WAEC) and its headquarters.\n\n*   **Option C (Curriculum writing)** is incorrect. The development and writing of the national curriculum are the responsibility of a specialized national body (e.g., the National Council for Curriculum and Assessment in Ghana), not the local District Director's office. The DED's role is to ensure the curriculum is effectively implemented in the schools.\n\nTherefore, among the choices, managing the teaching workforce through postings and deployment is a primary and essential administrative function of the District Director's office."
+  },
+  {
+    "id": 11,
+    "question": "Effective leadership depends on:",
+    "options": {
+      "A": "Charisma alone",
+      "B": "Skills and values",
+      "C": "Fear",
+      "D": "Secrecy"
+    },
+    "answer": "B",
+    "explanation": "Effective leadership is a complex and multi-faceted discipline that fundamentally relies on a combination of innate qualities and learned abilities, making **Option B (Skills and values)** the most comprehensive and accurate answer.\n\n*   **Skills:** Effective leaders must possess a range of practical skills, often referred to as competencies, to execute their vision and manage their teams. These include communication, decision-making, problem-solving, strategic thinking, innovation, and the ability to motivate and build relationships. These are the tools a leader uses to achieve organizational goals.\n*   **Values:** A leader's core values, often referred to as character or qualities, serve as the moral compass for their decisions and actions. Essential values that underpin good leadership include integrity, honesty, self-awareness, respect, and compassion. These values shape a leader's effectiveness and are crucial for building trust, loyalty, and a positive organizational culture.\n\n---\n\n**Why the other options are incorrect:**\n\n*   **A: Charisma alone**\n    While charisma can help a leader inspire and motivate a team, it is not a sufficient foundation for effective leadership. Charisma alone is not a reliable indicator of success and can sometimes blind followers, making it a superficial quality if not paired with strong skills and sound values (character).\n*   **C: Fear**\n    Leadership based on fear relies on coercive power, which can achieve short-term compliance but is ultimately detrimental to long-term organizational health. Fear-based leadership typically drains creativity, kills loyalty, and prevents a team from being fueled by purpose, leading to failure and high turnover.\n*   **D: Secrecy**\n    Excessive secrecy in leadership hinders transparency, which is a key component of building trust. Secrecy often leads to employee distrust, misinformation, and rumors, which can be detrimental to organizational morale and cohesion. While discretion (confidentiality) is a necessary management skill in specific situations, operating primarily under \"secrecy\" is a major red flag for effective, modern leadership."
+  },
+  {
+    "id": 12,
+    "question": "The core business of education is:",
+    "options": {
+      "A": "Games",
+      "B": "Learning",
+      "C": "Food sharing",
+      "D": "Construction"
+    },
+    "answer": "B",
+    "explanation": "The core business of education is universally recognized as the facilitation of **Learning**.\n\n*   **Learning is the Central Goal:** Education's main function is to transmit knowledge, skills, values, and competencies, all of which fall under the umbrella of learning. The purpose is to prepare individuals to lead productive lives, understand their social realities, and develop critical thinking. In fact, research explicitly refers to \"Learning as the Core Business of Schools\".\n*   **The Other Options are Secondary or Irrelevant:**\n    *   **Games** (Option A) can be a method or tool for engagement in education, but they are not the core business itself.\n    *   **Food sharing** (Option C) or providing meals may be a supplementary or supportive function in some educational institutions, but it is not the primary purpose of the system.\n    *   **Construction** (Option D) refers to the building and maintenance of physical school infrastructure, which is a necessary logistical function, not the academic mission of education."
+  },
+  {
+    "id": 13,
+    "question": "A District Director evaluates:",
+    "options": {
+      "A": "School performance",
+      "B": "Tailor shops",
+      "C": "Market prices",
+      "D": "Road networks"
+    },
+    "answer": "A",
+    "explanation": "The correct answer is **Option A: School performance** because the title \"District Director\" is most commonly associated with a high-level administrative position within an **Education District** or school system.\n\n*   **School Performance:** A District Director of Education (or a similar role) is directly responsible for the overall organization, operation, educational leadership, and efficiency of the school district. Their core duties involve ensuring effective local management, monitoring curriculum coverage, and overseeing **assessment and accountability** processes, which directly translate to the evaluation of school performance.\n*   **Other Options:**\n    *   **Tailor shops** and **Market prices** are commercial and economic concerns, typically regulated or evaluated by bodies like a Ministry of Trade, local government economic departments, or business associations, not a District Director, whose role is executive management of an organization within a district.\n    *   **Road networks** are managed by specialized entities such as a Department of Urban Roads, Roads Department, or a Ministry of Roads and Highways, often overseen by a Director of Road Network Development. While a general District Coordinating Director in a municipality might interface with infrastructure, the primary *evaluative* duty of a District Director, especially in the context of a multiple-choice question on administrative roles, is overwhelmingly focused on **School performance**."
+  },
+  {
+    "id": 14,
+    "question": "A key leadership quality is:",
+    "options": {
+      "A": "Humility",
+      "B": "Pride",
+      "C": "Arrogance",
+      "D": "Anger"
+    },
+    "answer": "A",
+    "explanation": "**Humility** is widely recognized as an **essential component of effective leadership** because it creates an environment of trust, collaboration, and continuous improvement.\n\n*   **Key Traits of a Humble Leader:** A humble leader demonstrates the willingness to honestly evaluate their own skills and behaviors. They are characterized by the ability to acknowledge their limitations and mistakes, which is crucial for authentic leadership. This quality allows leaders to invite constructive feedback, which fosters personal and organizational growth.\n*   **Impact on the Team:** Humble leaders prioritize people, support collaboration, and look for ways to promote and uplift others. This fosters a cooperative environment where team members feel encouraged to share ideas and work together, enhancing organizational outcomes.\n\n**Why the Other Options are Incorrect:**\n\n*   **Pride and Arrogance (Options B and C):** While a healthy sense of self-confidence is important, \"bad pride\" or arrogance undermines leadership effectiveness. Arrogant leaders are often rigid, unable to receive constructive criticism, and prone to poor decision-making because they surround themselves with subservient people who do not challenge them. Leader arrogance is known to have a negative effect on subordinates, potentially leading to negative workplace behaviors.\n*   **Anger (Option D):** Anger is a volatile emotion that, when used as a leadership style, destroys morale, breaks down trust, and hinders rational decision-making, making it a highly destructive quality in a leadership role."
+  },
+  {
+    "id": 15,
+    "question": "The main aim of educational leadership is to:",
+    "options": {
+      "A": "Destroy systems",
+      "B": "Improve teaching and learning",
+      "C": "Close schools",
+      "D": "Reduce staff"
+    },
+    "answer": "B",
+    "explanation": "The main aim of educational leadership is universally recognized as improving the quality of education, which directly translates to enhancing teaching and learning outcomes.\n\n*   **Core Purpose:** The primary goal of educational leaders is to enhance learning experiences and improve educational processes. They are responsible for promoting academic excellence across all levels and focusing on student success.\n*   **Focus on the Classroom:** Educational leadership is fundamentally about influencing the school community to work toward the mutual goals of growth. This means creating and maintaining dynamic and optimal learning environments and providing support for quality teaching and development.\n*   **Quality of Education:** The explicit purpose of educational leadership is to improve the overall quality of education being delivered. Therefore, **Option B (Improve teaching and learning)** directly captures the essence and central focus of the role, as better teaching leads to better learning.\n*   **Incorrect Options:** Options A (Destroy systems), C (Close schools), and D (Reduce staff) are antithetical to the goals of educational leadership, which is to build and sustain effective educational systems, promote growth, and efficiently manage resources to support the teaching and learning mission."
+  },
+  {
+    "id": 16,
+    "question": "The main aim of primary education is to:",
+    "options": {
+      "A": "Prepare learners for university",
+      "B": "Build foundational skills and values",
+      "C": "Train learners for employment",
+      "D": "Focus on advanced science"
+    },
+    "answer": "B",
+    "explanation": "The main aim of primary education is to provide the fundamental basis for all future learning and personal development.\n\n*   **Foundational Skills (Cognitive):** Primary education universally focuses on developing essential, fundamental academic skills, often referred to as the \"3 R's\": reading (literacy), writing, and arithmetic (numeracy). These skills are the \"basic tools of active citizenship\" and the foundation for all subsequent academic pursuits. The goal is to build core academic competencies that prepare students for life, work, and further education, though not specifically for university at this stage.\n*   **Values and Attitudes (Socio-Emotional):** Primary education is also crucial for nurturing social, emotional, and ethical development. This includes fostering socialisation, communication skills, creativity, a love for learning, and instilling core values, attitudes, and appreciation for one's own and other cultures.\n*   **Why other options are incorrect:**\n    *   **Option A (Prepare learners for university):** While foundational, the specific preparation for university is the main aim of secondary or higher secondary education, not primary.\n    *   **Option C (Train learners for employment):** This is the primary objective of vocational or professional training, not general primary education.\n    *   **Option D (Focus on advanced science):** This is too narrow and specific; primary education focuses on *basic* science along with literacy, numeracy, and social studies as part of a broad foundational curriculum."
+  },
+  {
+    "id": 17,
+    "question": "Continuous Assessment is used to:",
+    "options": {
+      "A": "Punish slow learners",
+      "B": "Monitor learning progress",
+      "C": "Replace teaching",
+      "D": "Determine admission only"
+    },
+    "answer": "B",
+    "explanation": "Continuous Assessment (CA) is a system of educational evaluation designed to evaluate a student's progress throughout a prescribed course of study, rather than relying solely on a single, final examination.\n\n*   **Correct Option (B): Monitor learning progress**\n    *   The core purpose of Continuous Assessment is to **monitor the learner's progress** and regularly evaluate their learning process over a period of time.\n    *   This ongoing evaluation allows teachers to **track student progress regularly**, identifying specific areas where students are succeeding and areas where they may require additional support or remediation.\n    *   By continuously assessing learning, educators can make informed decisions about the most effective way to facilitate further learning, making the teaching process responsive to student needs.\n\n*   **Incorrect Options**\n    *   **Option A (Punish slow learners):** Assessment, especially continuous assessment, is a supportive and diagnostic tool, not a punitive one. Its aim is to identify struggles so they can be addressed.\n    *   **Option C (Replace teaching):** Assessment is an integral part of the teaching and learning cycle, providing feedback for both students and teachers; it is not a substitute for instruction.\n    *   **Option D (Determine admission only):** While Continuous Assessment results may contribute to a final grade used for admission, its main function is formative—to monitor and guide learning throughout the course—not just a summative tool for a single decision."
+  },
+  {
+    "id": 18,
+    "question": "The new Ghanaian curriculum is called:",
+    "options": {
+      "A": "Common Core Curriculum",
+      "B": "Standard-Based Curriculum",
+      "C": "Competence Curriculum",
+      "D": "Core Learning Curriculum"
+    },
+    "answer": "B",
+    "explanation": "The new Ghanaian curriculum is officially referred to as the **Standards-Based Curriculum (SBC)**.\n\n*   The term \"Standards-Based Curriculum\" is used by official Ghanaian educational bodies, such as the National Council for Curriculum and Assessment (NaCCA) and the Ministry of Education, to describe the reformed educational framework.\n*   This curriculum was introduced to replace the previous objective-based curriculum at various levels of education, including Kindergarten to Primary Six and Senior High Schools (SHS).\n*   The Standards-Based Curriculum aims to address challenges with the former curriculum and ensure that the educational content meets the requirements of 21st-century skills and global standards.\n*   Key features of the SBC often include an emphasis on learner-centered teaching, the acquisition of 21st-century skills, and the instillation of Ghanaian values, culture, and morals."
+  },
+  {
+    "id": 19,
+    "question": "SBC emphasizes:",
+    "options": {
+      "A": "Rote learning",
+      "B": "Learner competencies",
+      "C": "Teacher dominance",
+      "D": "Textbook memorization"
+    },
+    "answer": "B",
+    "explanation": "The acronym **SBC** in an educational context typically refers to the **Standards-Based Curriculum** or sometimes the **School-Based Curriculum**. This curriculum model marks a significant shift toward **competency-based education**.\n\n*   **SBC Emphasizes Learner Competencies:** The core focus of a Standards-Based Curriculum is on clearly defined standards that learners must achieve and demonstrate. This involves a move away from simply covering content to ensuring students have mastered the essential knowledge, skills, and attitudes (competencies) required for success. This approach prioritizes what a learner *can do* rather than what a teacher has *taught*.\n*   **Contrasting Options:** The SBC model is often implemented to address challenges associated with traditional education models, which frequently rely on:\n    *   **Rote learning** and **textbook memorization** (Options A and D), which focus on passive retention of information rather than application or critical thinking.\n    *   **Teacher dominance** (Option C), as competency-based models encourage student-centered learning and active engagement to develop critical thinking and creativity.\n\nTherefore, the SBC's foundational goal of developing essential skills and measurable abilities makes **Learner competencies** the central emphasis."
+  },
+  {
+    "id": 20,
+    "question": "Which subject includes phonics?",
+    "options": {
+      "A": "Natural Science",
+      "B": "Creative Arts",
+      "C": "English Language",
+      "D": "History"
+    },
+    "answer": "C",
+    "explanation": "Phonics is an instructional method used to teach reading and writing to beginners. The core principle of phonics is teaching the relationship between the sounds of a spoken language (phonemes) and the letters or groups of letters (graphemes) that represent those sounds.\n\n*   **English Language:** This subject, often referred to as Language Arts or Literacy, is fundamentally concerned with developing students' reading, writing, speaking, and listening skills. Phonics is a crucial, foundational skill within this subject, as it provides students with the code-breaking ability necessary to decode words and become fluent readers.\n*   **Other Options:** Natural Science, Creative Arts, and History are distinct academic disciplines that do not primarily focus on the mechanics of reading and encoding the English language.\n\nTherefore, the study and application of phonics are an essential component of the **English Language** curriculum."
+  },
+  {
+    "id": 21,
+    "question": "Literacy involves:",
+    "options": {
+      "A": "Only reading",
+      "B": "Reading and writing",
+      "C": "Only drawing",
+      "D": "Only singing"
+    },
+    "answer": "B",
+    "explanation": "Literacy is fundamentally defined as the ability to read and write. It is the foundation for effective communication and for navigating the modern world.\n\n*   **Reading** involves decoding written or printed words, comprehending their meaning, and making sense of the world through text.\n*   **Writing** involves encoding thoughts, ideas, and information into a written form that others can read and understand.\n\nThese two skills, reading and writing, are interdependent and essential to the definition of a literate person. While the concept of literacy has broadened in educational contexts to include skills like speaking, listening, viewing, and using digital media, the classical and most common definition—and therefore the best answer in a multiple-choice setting—centers on the mastery of written language through **reading and writing**. The other options (only reading, only drawing, only singing) are incomplete or entirely incorrect components of core literacy."
+  },
+  {
+    "id": 22,
+    "question": "Numeracy is the ability to:",
+    "options": {
+      "A": "Sing songs",
+      "B": "Read stories",
+      "C": "Use numbers effectively",
+      "D": "Memorize poems"
+    },
+    "answer": "C",
+    "explanation": "Numeracy is defined as the ability to understand and work with numbers, or the quality of being numerate. It is the skill set that allows an individual to understand, reason with, and apply simple numerical concepts, making it the numerical equivalent of literacy.\n\n*   **Option C (\"Use numbers effectively\")** is the most accurate definition, as it captures the practical application aspect of numeracy, which involves using mathematical ideas effectively to participate in daily life and make sense of the world. Numeracy goes beyond just performing basic arithmetic; it involves having the confidence and proficiency to use basic math in work and everyday situations.\n*   The other options—\"Sing songs\" (A), \"Read stories\" (B), and \"Memorize poems\" (D)—are related to literacy, the arts, or memory skills, but are not directly related to the fundamental definition of numeracy."
+  },
+  {
+    "id": 23,
+    "question": "A scheme of learning is:",
+    "options": {
+      "A": "Daily notes",
+      "B": "Annual plan",
+      "C": "Mark sheet",
+      "D": "Attendance register"
+    },
+    "answer": "B",
+    "explanation": "A **scheme of learning** (also often referred to as a scheme of work) is a long-term, strategic planning document used in education.\n\n*   It is an overview or a master plan that outlines the structure, content, and sequence of all the learning, topics, objectives, and teaching methods for a particular subject over an extended period.\n*   The typical duration for a scheme of learning is a term or, most commonly, an entire **academic year**.\n*   Therefore, an \"Annual plan\" is the most accurate synonym among the choices, as it describes a comprehensive plan for what will be taught and learned over the course of a full school year.\n\nThe other options are incorrect because:\n*   **Daily notes** are short-term records, such as lesson plans or brief teaching notes, not the overarching yearly curriculum structure.\n*   A **Mark sheet** is a tool for recording and tracking student assessment results.\n*   An **Attendance register** is a record used to track student presence or absence."
+  },
+  {
+    "id": 24,
+    "question": "The new school year calendar is based on:",
+    "options": {
+      "A": "2 semesters",
+      "B": "3 terms",
+      "C": "4 seasons",
+      "D": "1 block"
+    },
+    "answer": "B",
+    "explanation": "A school year calendar is frequently structured based on **three terms**, often referred to as trimesters.\n\n*   **Structure:** The academic year, which typically runs for nine to ten months, is divided into three equal or nearly equal instructional periods called terms.\n*   **Terminology:** While some institutions use the term \"trimesters\" (meaning three periods), many K-12 school systems simply label them as **Term 1**, **Term 2**, and **Term 3**.\n*   **Comparison to Other Options:**\n    *   **2 semesters (Option A):** This is another very common structure, particularly in higher education, where the school year is divided into two long periods (fall and spring).\n    *   **4 seasons (Option C):** This is not a standard educational calendar model. The academic year does not align with the four natural seasons, which are unequal in length and are not the basis for instructional periods.\n    *   **1 block (Option D):** This is too vague; \"block scheduling\" is a type of daily timetable, not a division of the entire school year.\n*   **Conclusion:** The three-term structure is a globally recognized and common model for dividing the academic year, especially in primary and secondary education, making \"3 terms\" the most accurate and generally accepted answer in the context of a multiple-choice question about the basis of a school year calendar."
+  },
+  {
+    "id": 25,
+    "question": "In primary school teaching, TLM stands for:",
+    "options": {
+      "A": "Total Learning Method",
+      "B": "Teaching and Learning Materials",
+      "C": "Teacher Lesson Manual",
+      "D": "Textbook Learning Method"
+    },
+    "answer": "B",
+    "explanation": "In primary school teaching and the broader field of education, TLM is a widely recognized acronym that stands for **Teaching Learning Materials** or **Teaching and Learning Materials**.\n\n*   **Definition:** Teaching Learning Materials (TLM) refer to all the tools, resources, and instructional aids used by teachers to facilitate and enhance the learning process for students.\n*   **Purpose:** TLMs are crucial in making lessons more interactive, interesting, and understandable, especially for young learners in primary school. They help students grasp abstract concepts, develop skills, and retain information more effectively.\n*   **Examples:** TLMs can range from simple aids like flashcards, charts, and models to more advanced resources like digital media, videos, and workbooks.\n\nTherefore, Option B, \"Teaching and Learning Materials,\" is the correct full form for TLM in this context."
+  },
+  {
+    "id": 26,
+    "question": "Differentiation in class means:",
+    "options": {
+      "A": "Using same method for all",
+      "B": "Adjusting teaching for learner needs",
+      "C": "Group punishment",
+      "D": "Teaching slow learners alone"
+    },
+    "answer": "B",
+    "explanation": "Differentiation in class, also known as differentiated instruction, is an educational approach where teachers adjust their methods, content, and assessment strategies to meet the diverse needs of all students in the classroom.\n\n*   **Option B (Adjusting teaching for learner needs)** is the correct definition because differentiated instruction is centered on tailoring instruction to fit the needs, readiness, and learning styles of individual learners. The core principle is that lessons and learning experiences should adapt to the students, not the other way around. This means providing multiple pathways for students to acquire content and demonstrate their learning.\n*   **Option A (Using same method for all)** describes a traditional, non-differentiated approach. This method fails to acknowledge that students have varied levels of readiness, different learning needs, and learn at different paces, which is what differentiation seeks to address.\n*   **Option C (Group punishment)** is a disciplinary action and has no relation to the pedagogical concept of instructional differentiation.\n*   **Option D (Teaching slow learners alone)** is inaccurate. While differentiation does cater to students needing extra support (often referred to as readiness differentiation), it is fundamentally designed to support *all* learners—including high-ability learners—within the main classroom environment. It promotes inclusive learning and avoids segregating students based solely on their pace or ability level."
+  },
+  {
+    "id": 27,
+    "question": "A good lesson introduction must:",
+    "options": {
+      "A": "Annoy learners",
+      "B": "Create interest",
+      "C": "Confuse pupils",
+      "D": "Be unrelated"
+    },
+    "answer": "B",
+    "explanation": "An effective lesson introduction is crucial for engaging students and setting the stage for learning.\n\n*   **Correct Option (B): Create interest**\n    *   The primary function of a good lesson introduction, often called a \"hook,\" is to grab students' attention and stimulate their interest in the topic to be learned.\n    *   By arousing interest, the introduction provides motivation for the students, making them more receptive to the new concepts and encouraging thinking.\n    *   A compelling opening helps transition students' focus from previous activities and provides a clear context for what is to come.\n\n*   **Incorrect Options (A, C, D):**\n    *   A good introduction should not **Annoy learners** or **Confuse pupils**, as these actions would be counterproductive to learning, creating resistance and frustration rather than engagement.\n    *   A good introduction must relate to the lesson content; therefore, it should not **Be unrelated**. A key component is setting the scene or connecting to what students already know, thus establishing relevance and activating prior knowledge."
+  },
+  {
+    "id": 28,
+    "question": "Assessment for learning is done:",
+    "options": {
+      "A": "Before teaching only",
+      "B": "During the learning process",
+      "C": "At the end of term",
+      "D": "Only on report cards"
+    },
+    "answer": "B",
+    "explanation": "Assessment for Learning (AfL) is fundamentally a **formative** approach to teaching and learning that focuses on creating feedback used to improve a student's performance while instruction is ongoing.\n\n*   **Correct Answer Justification (Option B):** AfL is conducted **during the learning process** (or instruction). Its core purpose is to identify a learner's needs *as they arise* so that the teacher can immediately respond and adjust their instruction, and the student can adjust their learning strategy. It involves activities such as questioning, observations, class discussions, and quick checks for understanding that occur throughout a lesson or unit to monitor comprehension.\n\n*   **Contrast with Other Options:**\n    *   **Option C (\"At the end of term\"):** Assessment done at the end of a period of instruction, such as at the end of a term or course, is typically referred to as **Assessment of Learning (AoL)**, or summative assessment. This type of assessment is used to evaluate overall achievement and assign grades, not to guide ongoing instruction.\n    *   **Option A (\"Before teaching only\"):** An assessment done *before* teaching is generally a **diagnostic** assessment, which is a specific type of formative assessment used to determine students' prior knowledge, common misconceptions, and skill levels *before* a unit begins. While this is *part* of a comprehensive assessment strategy, it is not the primary time for AfL, which is continuous.\n    *   **Option D (\"Only on report cards\"):** Report cards summarize the results of summative assessments (AoL) and are the *output* of the overall evaluation process, not the act of Assessment for Learning itself."
+  },
+  {
+    "id": 29,
+    "question": "A lesson plan helps teachers to:",
+    "options": {
+      "A": "Skip lessons",
+      "B": "Plan instruction and time",
+      "C": "Punish pupils more",
+      "D": "Avoid supervision"
+    },
+    "answer": "B",
+    "explanation": "A lesson plan is a critical framework for teachers that outlines the objectives, activities, and assessment measures for a specific lesson or series of lessons.\n\n*   **Option B: Plan instruction and time** is the correct answer because the primary purpose of a lesson plan is to guide the teacher's actions and ensure efficient use of class time.\n    *   **Planning Instruction:** A lesson plan provides a detailed outline of the content, learning objectives, teaching methods, and materials to be used, ensuring a structured and engaging educational experience. It helps teachers determine what materials are needed and ensures they are prepared for the lesson.\n    *   **Planning Time:** A well-thought-out lesson plan helps with effective time management by allowing teachers to allocate specific time frames to different activities, ensuring the class stays on track to meet the learning objectives within the allotted period. This detailed outlining ensures that every bit of class time is utilized effectively.\n\n*   **Other Options are Incorrect:**\n    *   **Option A (Skip lessons):** A lesson plan is designed to ensure all learning objectives are covered, not to skip lessons.\n    *   **Option C (Punish pupils more):** Classroom management and discipline are separate from instructional planning, and the purpose of a lesson plan is educational, not punitive.\n    *   **Option D (Avoid supervision):** A lesson plan is often a required document used by supervisors to assess a teacher's preparation and instructional quality; therefore, it does not help a teacher avoid supervision."
+  },
+  {
+    "id": 30,
+    "question": "An exercise book is a:",
+    "options": {
+      "A": "Teaching material",
+      "B": "Learner record",
+      "C": "Seating plan",
+      "D": "Lesson plan"
+    },
+    "answer": "B",
+    "explanation": "An **exercise book** is correctly classified as a **Learner record** because its primary and essential function is to document the student's work and progress over time.\n\n*   **Learner Record:** An exercise book is a notebook used by students to copy down notes, complete assignments, record workings, and write out answers for schoolwork. The book, therefore, contains a physical, chronological record of a student's learning, development, and skill levels. Teachers use the book to monitor the student's progress and assess their understanding, making it a tangible and accurate record of the learner's journey.\n*   **Teaching Material (Incorrect):** Teaching materials (or Teaching-Learning Materials/TLMs) are resources used by the *teacher* to aid in instruction and delivery of content, such as textbooks, charts, visual aids, or models. While an exercise book is a tool for learning, its blank pages do not contain the instructional content; the completed work within it is the student's output, not the teacher's input.\n*   **Seating Plan (Incorrect):** A seating plan is an administrative document used by the teacher to show where each student sits in the classroom.\n*   **Lesson Plan (Incorrect):** A lesson plan is an instructional document created by the teacher detailing the objectives, activities, materials, and assessment methods for a specific class session."
+  },
+  {
+    "id": 31,
+    "question": "SBA means:",
+    "options": {
+      "A": "School-Based Assessment",
+      "B": "Standard Basic Assignment",
+      "C": "Student Behaviour Analysis",
+      "D": "System Based Authority"
+    },
+    "answer": "A",
+    "explanation": "The acronym **SBA** in an educational context most commonly stands for **School-Based Assessment**.\n\n*   **School-Based Assessment (SBA)** is a method of evaluating students' knowledge and skills that is integrated directly into the teaching and learning process within a school.\n*   It is typically conducted by the students' own teachers throughout the school term or year, rather than solely through a single, external final examination.\n*   SBA is designed to collect periodic information on a pupil's learning status to facilitate planning for improvement programs and provide timely feedback.\n*   This form of assessment often employs a two-pronged approach, incorporating both formative assessment (assessment for learning) and summative assessment (assessment of learning) at the school level.\n*   While some sources mention \"Standard-Based Assessment\" as a meaning for SBA in specific contexts, such as Ghana's educational system, the more generalized and widely recognized term in educational pedagogy and administration is **School-Based Assessment**.\n\nTherefore, Option A is the correct and most appropriate meaning for SBA in this multiple-choice question."
+  },
+  {
+    "id": 32,
+    "question": "A rubric is used for:",
+    "options": {
+      "A": "Marking subjective tasks",
+      "B": "Cleaning blackboards",
+      "C": "Teaching spelling",
+      "D": "Replacing exams"
+    },
+    "answer": "A",
+    "explanation": "A rubric is a scoring guide or evaluation tool used to communicate expectations and assess the quality of student work based on a set of criteria and defined gradations of quality.\n\n*   **Option A: Marking subjective tasks (Correct)**\n    *   Rubrics are particularly useful for assessing assignments that are inherently **subjective** or **open-ended**, such as essays, presentations, research projects, portfolios, and creative works.\n    *   By outlining specific, measurable criteria for different levels of achievement (e.g., clarity, organization, evidence, creativity), a rubric takes a task that might otherwise be evaluated based on personal opinion and makes the grading process more **consistent, transparent, and objective**.\n    *   The rubric provides students with clear expectations and provides a detailed justification for the grade received.\n\n*   **Other Options (Incorrect)**\n    *   **Cleaning blackboards** is an administrative/maintenance task.\n    *   **Teaching spelling** is a pedagogical activity, not the function of an assessment tool.\n    *   **Replacing exams** is inaccurate; rubrics are a *tool* used to *grade* many types of assessments, including performance-based exams, but they do not replace the need for the assessment itself."
+  },
+  {
+    "id": 33,
+    "question": "A good classroom environment is:",
+    "options": {
+      "A": "Hostile",
+      "B": "Supportive and safe",
+      "C": "Crowded",
+      "D": "Dirty"
+    },
+    "answer": "B",
+    "explanation": "A highly effective or good learning environment is one that is conducive to student success, and its key characteristics include being **safe** and **supportive**.\n\n*   **Supportive and Safe (Option B):** This is the correct choice because a **safe** environment—encompassing physical, social, and emotional conditions—is fundamental for students to feel comfortable and free from harm, allowing them to focus on learning. A **supportive** environment encourages independence, provides opportunities for problem-solving, and increases student engagement, making them more likely to participate, ask questions, and explore their curiosity. The combination of safety and support reduces stress and anxiety, which directly facilitates a positive learning experience.\n*   **Hostile (Option A):** A hostile environment is the opposite of a good classroom, as it increases stress and anxiety, prevents students from feeling secure, and is a major barrier to learning and engagement.\n*   **Crowded (Option C):** While not ideal, a crowded classroom can still be supportive and safe; however, overcrowding generally detracts from a good environment by creating logistical issues and potentially hindering student engagement and organization.\n*   **Dirty (Option D):** A dirty environment compromises the physical well-being and organization of the classroom, making it difficult to maintain effective housekeeping, which is a key trait of an effective classroom.\n\nTherefore, a good classroom must be **Supportive and safe** to establish the trust, comfort, and positive atmosphere necessary for successful teaching and learning."
+  },
+  {
+    "id": 34,
+    "question": "Remedial teaching is for:",
+    "options": {
+      "A": "Only brilliant learners",
+      "B": "Slow learners",
+      "C": "Teachers",
+      "D": "Administrators"
+    },
+    "answer": "B",
+    "explanation": "Remedial teaching is specifically designed to provide additional support to students who are struggling academically or who are having difficulty grasping certain concepts and skills at the same pace as their peers.\n\n*   **Remedial Teaching's Purpose:** The primary goal is to help students overcome learning gaps by reteaching and reinforcing fundamental skills in core areas such as literacy and numeracy. It is a personalized teaching approach aimed at enabling students to catch up and achieve expected competencies.\n*   **Target Population:** Remedial teaching is intended for children who are showing lower-than-average performance, are falling behind, or are classified as **slow learners**. These are the learners who require extra instruction and support to master the material.\n*   **Why Other Options Are Incorrect:**\n    *   **Option A (Only brilliant learners):** Brilliant or gifted learners typically grasp concepts quickly and do not require remedial instruction; they are usually candidates for enrichment programs.\n    *   **Option C (Teachers) and D (Administrators):** Remedial teaching is an instructional method applied *by* teachers, often with the support of administrators, but it is not *for* them; its beneficiary is the student.\n\nTherefore, \"Slow learners\" is the correct target group for remedial teaching."
+  },
+  {
+    "id": 35,
+    "question": "Moral education helps to build:",
+    "options": {
+      "A": "Money skills",
+      "B": "Character",
+      "C": "Singing voice",
+      "D": "Dancing skills"
+    },
+    "answer": "B",
+    "explanation": "Moral education is a process of learning and teaching aimed at helping individuals acquire the knowledge, skills, values, and virtues that will guide their moral behavior and ethical decision-making.\n\n*   **Option B (Character)** is the correct answer because the primary and defining goal of moral education is **character development** (often referred to as character education). This includes fostering moral virtues such as responsibility, empathy, respect, honesty, justice, and self-control. Moral education helps build a person's character by explicitly and implicitly teaching the common attitudes, beliefs, and behaviors necessary to be a responsible citizen.\n*   **Options A, C, and D** (Money skills, Singing voice, and Dancing skills) are outcomes of other, separate educational disciplines: financial literacy, music education, and physical/performing arts education, respectively. While a well-rounded individual may possess all of these, they are not the central or primary objective of *moral* education."
+  },
+  {
+    "id": 36,
+    "question": "The headteacher is responsible for:",
+    "options": {
+      "A": "Classroom lesson delivery",
+      "B": "Managing the school",
+      "C": "Textbook printing",
+      "D": "GES transfers"
+    },
+    "answer": "B",
+    "explanation": "The headteacher is the chief executive and educational leader of a school, and their primary and most encompassing responsibility is the overall **management of the school**.\n\n*   **Option B (Managing the school)** is correct because a headteacher's role involves overseeing all aspects of the institution. This includes setting the school's vision, ethos, and strategic direction, managing the staff, developing and monitoring the quality of teaching, and ensuring all administrative, professional, and educational goals are achieved. The headteacher is the administrative head of the school.\n*   **Option A (Classroom lesson delivery)** is the primary duty of an ordinary classroom teacher, not the headteacher. While the headteacher is responsible for *monitoring* and *developing* the quality of teaching, they are not typically the one delivering daily lessons across all subjects and grades.\n*   **Option C (Textbook printing)** is an administrative function usually handled by a central government body, a ministry of education, or a publishing house, not a single school's headteacher.\n*   **Option D (GES transfers)** refers to the transfer of personnel within the Ghana Education Service (GES) or a similar central education authority. While a headteacher may be involved in recommending or receiving staff, the actual administrative process of approving and executing transfers is a function of the central educational body, not the headteacher's core responsibility."
+  },
+  {
+    "id": 37,
+    "question": "In Piaget’s theory, primary pupils are mostly in:",
+    "options": {
+      "A": "Formal operational stage",
+      "B": "Concrete operational stage",
+      "C": "Sensorimotor stage",
+      "D": "Pre-operational stage"
+    },
+    "answer": "B",
+    "explanation": "Primary school pupils generally fall within the age range of approximately 6 to 11 years old. According to Jean Piaget's theory of cognitive development, this age range corresponds primarily to the **Concrete Operational Stage**.\n\n*   **Age Alignment:** The Concrete Operational Stage is typically associated with children aged 7 to 11 years. Since most of the primary school curriculum targets children from roughly ages 6 to 11, the majority of the time spent in primary education (especially the latter years) aligns with this stage.\n*   **Key Characteristics:** During this stage, a child's thinking becomes more logical and organized when dealing with concrete objects and events. They develop the understanding of:\n    *   **Conservation:** The knowledge that quantity remains the same despite changes in appearance (e.g., pouring water into a different-shaped glass).\n    *   **Reversibility:** The ability to mentally reverse actions (e.g., understanding that $2+4=6$ means that $6-4=2$).\n    *   **Classification and Seriation:** The ability to sort objects into various categories and arrange them in a sequential order (e.g., by height or weight).\n*   **Differentiation from Other Stages:**\n    *   **Sensorimotor Stage (Birth to 2 years):** Involves using senses and motor skills, and is characteristic of infants.\n    *   **Pre-operational Stage (2 to 7 years):** Marked by symbolic thought (language and imaginative play) but is limited by egocentrism and a lack of conservation, which are overcome in the Concrete Operational Stage. Primary pupils may begin at the tail end of this stage.\n    *   **Formal Operational Stage (11 years and up):** Characterized by abstract thought and hypothetical reasoning, which is typical of adolescents and high school students.\n\nBecause the core cognitive advancements of primary-aged children (7–11) include the mastery of conservation, logical thinking, and the ability to perform mental operations on concrete objects, the **Concrete Operational Stage** is the correct classification."
+  },
+  {
+    "id": 38,
+    "question": "In education, CAP stands for:",
+    "options": {
+      "A": "Correct Action Plan",
+      "B": "Capitation Grant",
+      "C": "Common Assessment Paper",
+      "D": "Correct Answer Pattern"
+    },
+    "answer": "B",
+    "explanation": "The chosen option, **Capitation Grant**, is correct as it represents a widely recognized and significant financial and policy term often abbreviated as CAP in the context of educational administration and funding, particularly in developing nations.\n\n*   **Definition of Capitation Grant:** A capitation grant is a financial mechanism used by governments to fund public schools. It is an amount of money provided to a school based on its enrollment, with the grant being calculated on a per-student basis (the term \"capitation\" is derived from the Latin *caput*, meaning \"head\").\n*   **Purpose in Education:** This grant is a critical source of funding intended to cover the non-personnel operating expenses of basic schools, such as the purchase of teaching and learning materials, minor repairs, basic utilities, and essential day-to-day administrative needs.\n*   **Significance:** Policies involving the Capitation Grant are vital educational policies aimed at reducing the cost of education for students, thereby promoting higher enrollment and improving access to education, often by eliminating school fees at the primary level.\n*   **Contextual Abbreviation:** While CAP can stand for other terms in education (such as \"Corrective Action Plan\" or \"Connections, Academics, and Purpose\"), \"Capitation Grant\" is a distinct, high-level financial and policy term that is frequently abbreviated as CAP in discussions, reports, and governmental communication concerning educational funding models."
+  },
+  {
+    "id": 39,
+    "question": "When a child learns through activity, it is:",
+    "options": {
+      "A": "Teacher-centred learning",
+      "B": "Child-centred learning",
+      "C": "Memory-based learning",
+      "D": "Passive learning"
+    },
+    "answer": "B",
+    "explanation": "The correct option is **Child-centred learning** because learning through activity is a defining characteristic of this educational philosophy.\n\n*   **Child-centred learning** is an approach that places the child's interests, pace, and active participation at the heart of the educational process. Key features of this method include active participation and allowing children the freedom to learn naturally.\n*   **Learning through activity** is fundamentally a process of **active participation** and **hands-on experiential learning**. This method encourages students to engage with projects and exercises to stimulate understanding, rather than passively receiving information.\n*   Therefore, when a child is learning through activity, they are actively participating and driving their own learning process, which is the core principle of a **child-centred** approach.\n\nThe other options are incorrect because:\n\n*   **Teacher-centred learning** places the teacher as the main source of knowledge and authority, where the focus is often on teaching facts and imparting information, which typically involves less active, hands-on participation from the student.\n*   **Passive learning** is the opposite of activity-based learning. In passive learning, the student is a silent receiver of information, such as listening to a lecture, which is common in teacher-centred methods. Learning through activity requires the child to be actively engaged, making it an *active* form of learning.\n*   **Memory-based learning** emphasizes rote learning, facts, and acquiring knowledge primarily through memorization, which is a method focused on outcomes (knowledge recall) rather than the active process of learning through experience and activity."
+  },
+  {
+    "id": 40,
+    "question": "Which language is used for lower primary instruction?",
+    "options": {
+      "A": "English only",
+      "B": "Any local language",
+      "C": "French",
+      "D": "Hausa only"
+    },
+    "answer": "B",
+    "explanation": "The correct option is **Option B (Any local language)** due to widely adopted educational policies that prioritize the use of the learner's first language, or mother tongue, for initial instruction in the lower primary years.\n\n*   **Educational Policy Rationale:** Many countries, particularly in Africa, have implemented policies mandating or strongly recommending the use of the mother tongue or a local language as the medium of instruction from Kindergarten up to Primary 3 (lower primary). This approach is often known as \"mother tongue education\" or \"First Language (L1) instruction\".\n*   **Cognitive and Pedagogical Benefits:** Teaching foundational concepts in a language a child already understands helps to boost foundational literacy and numeracy skills. When a child is taught in their home language, they are able to focus on grasping the content of the subject matter rather than struggling simultaneously to understand both the new concept and a foreign language, thus enhancing their cognitive learning.\n*   **Contrasting with Other Options:**\n    *   **\"English only\" (A)** or **\"French\" (C)** are typically introduced as subjects or as a medium of instruction in later primary grades, after the child has established a strong foundational understanding in their mother tongue. Using a second or colonial language exclusively from the start can significantly impede effective teaching and learning in the early years.\n    *   **\"Hausa only\" (D)** is too specific. While Hausa is a significant local language, it is only one of many local languages. The policy requires the use of the *relevant* local language for that specific school and its students, which could be any of the recognized languages in a multilingual country. Therefore, **\"Any local language\"** is the most accurate general answer."
+  },
+  {
+    "id": 41,
+    "question": "Play-based learning is especially suitable for:",
+    "options": {
+      "A": "KG and lower primary",
+      "B": "JHS",
+      "C": "SHS",
+      "D": "University"
+    },
+    "answer": "A",
+    "explanation": "Play-based learning is a pedagogical approach that is **especially suitable** for Kindergarten (KG) and lower primary education because it aligns perfectly with the developmental needs and learning styles of young children (typically ages 3 to 8).\n\n*   **Developmental Appropriateness:** Research consistently highlights that play-based learning is the most effective approach for a child's brain development at the kindergarten level and is a fundamental aspect of early childhood education (ECE). This approach facilitates cognitive growth, the development of creativity skills, critical thinking, and social-emotional skills in young learners.\n*   **Holistic Skill Development:** Through engaging in different types of play—such as cooperative play, imaginative group activities, and sensory play—children naturally develop essential skills, including literacy, numeracy, problem-solving, sensory processing, and language.\n*   **Foundation for Formal Learning:** In the early years, structured and free play helps children explore their environment, experiment with ideas, and build a conceptual understanding that forms a solid foundation for more formal learning in later primary grades. Educational frameworks for early childhood and lower primary, such as those in Ghana's kindergarten education, have explicitly adopted child-centered and play-based curricular approaches.\n*   **Contrast with Other Options:** While elements of playful or activity-based learning may be incorporated into JHS (Junior High School), SHS (Senior High School), and University curricula, the core instructional methods at these levels shift to focus on abstract concepts, specialized subject matter, and discipline-specific analysis, making play-based learning less **especially suitable** than for the KG and lower primary age group.\n\nTherefore, the period of Kindergarten and lower primary represents the optimal window where children learn best by actively engaging with materials and peers in a playful environment, making **Option A** the correct choice."
+  },
+  {
+    "id": 42,
+    "question": "TPACK relates to:",
+    "options": {
+      "A": "Classroom furniture",
+      "B": "Technology in teaching",
+      "C": "Textbook sizes",
+      "D": "Classroom height"
+    },
+    "answer": "B",
+    "explanation": "The TPACK framework stands for **Technological Pedagogical Content Knowledge**.\n\n*   **Definition:** TPACK is an educational model and framework that describes the types of knowledge instructors need to combine for successful integration of technology into teaching. It is fundamentally a technology integration framework.\n*   **Components:** The framework details the complex interaction among three core bodies of knowledge:\n    1.  **Content Knowledge (CK):** Knowledge about the subject matter to be taught.\n    2.  **Pedagogical Knowledge (PK):** Knowledge about teaching and learning methods, practices, and processes.\n    3.  **Technological Knowledge (TK):** Knowledge about technology, tools, and resources.\n*   **Core Focus:** The central idea of TPACK is the intersection of these three areas, particularly how to use technology effectively to teach specific content to students. Therefore, the concept is directly and explicitly related to **Technology in teaching** (Option B), making it the correct answer. The other options (Classroom furniture, Textbook sizes, Classroom height) are irrelevant to this widely accepted educational framework."
+  },
+  {
+    "id": 43,
+    "question": "A pupil is promoted based on:",
+    "options": {
+      "A": "Age only",
+      "B": "Performance and readiness",
+      "C": "Parental status",
+      "D": "Headteacher choice"
+    },
+    "answer": "B",
+    "explanation": "Student promotion in educational systems is fundamentally based on the concept of academic **performance** and developmental **readiness** for the material in the next grade level.\n\n*   **Performance:** This is the most direct criterion and typically refers to a pupil's academic achievement, measured through:\n    *   **Academic Standards:** Students must meet the minimum attainment levels or designated academic standards set by the school or educational authority to be eligible for promotion, which often means passing core subjects.\n    *   **Passing the Grade:** Promotion means the learner has met the minimum requirements and passed the grade.\n*   **Readiness:** This criterion involves a broader evaluation of the pupil's preparedness to succeed in the more challenging environment of the next grade.\n    *   **Multiple Criteria:** Schools often use a process with multiple criteria for assessing a student's readiness to progress.\n    *   **Developmental and Cognitive Preparation:** The promotion process aims to ensure the student has the foundational knowledge and skills necessary to engage with the next level of the curriculum.\n\n**Why other options are incorrect:**\n\n*   **Option A (Age only):** Promoting a student based solely on their age, regardless of their academic achievement, is known as \"social promotion\". While this practice exists in some systems, it is often viewed as a controversial policy contrasted with academic promotion, which is tied to performance. The standard and most educationally sound principle is based on mastery, not just age.\n*   **Option C (Parental status):** Parental status has no formal role in a student's academic promotion criteria.\n*   **Option D (Headteacher choice):** While a school may apply \"discretion\" in exceptional individual cases, especially when a student does not fully meet all requirements, the headteacher's choice is not the primary or universal basis for promotion. The decision is overwhelmingly grounded in the pupil's documented performance and readiness."
+  },
+  {
+    "id": 44,
+    "question": "A good teacher must be:",
+    "options": {
+      "A": "Harsh",
+      "B": "Patient and creative",
+      "C": "Silent always",
+      "D": "Fearful"
+    },
+    "answer": "B",
+    "explanation": "A good teacher must possess a combination of personal and professional qualities that foster an effective and supportive learning environment.\n\n*   **Patience** is an essential quality because students learn at different paces and may struggle to grasp complex concepts immediately. A patient teacher provides emotional control, support, and resilience, allowing students the necessary time for trial and error and encouraging them to push through challenges without feeling disappointed.\n*   **Creativity** is vital for high-impact instructional skills and engagement. A creative teacher can develop adaptable and innovative lessons, keeping students engaged and meeting diverse learning needs. Furthermore, an educator's creativity helps to foster the same essential skill in their students.\n\nThe other options are incorrect:\n*   **Harsh** is counterproductive to effective teaching, as a great teacher should embody empathy and support, not a punitive or overly strict approach.\n*   **Silent always** is an impossible quality for a good teacher, as effective communication skills, listening, and engagement are repeatedly cited as essential attributes.\n*   **Fearful** is a characteristic that undermines a teacher's authority and ability to create a secure, confident, and challenging learning environment for students."
+  },
+  {
+    "id": 45,
+    "question": "A standard-based curriculum focuses on:",
+    "options": {
+      "A": "Learning outcomes",
+      "B": "Teacher personality",
+      "C": "Textbook brands",
+      "D": "Classroom size"
+    },
+    "answer": "A",
+    "explanation": "A standard-based curriculum is an educational framework that explicitly links the content taught in the classroom to specific, predetermined **learning standards**. The primary focus of this type of curriculum is the achievement of clearly defined **learning outcomes** for every student.\n\n*   **Standards as Outcomes:** Learning standards, which are generated by national or state governments, are essentially objective statements detailing the desired understanding, knowledge, and/or skills students are expected to acquire at each grade level or course. These standards directly determine the intended learning outcomes for the educational experience.\n*   **Curriculum Alignment:** The curriculum, instruction, and assessment are all designed and aligned backward from these rigorous standards. Teachers use the standards to guide what they teach and how they evaluate student progress, ensuring that instruction is focused on students mastering the required competencies.\n*   **Focus on Student Mastery:** The goal is to shift the focus away from simply covering material to ensuring that students actually demonstrate mastery of the skills and knowledge outlined in the standards. Therefore, the core focus is student achievement of these specified learning outcomes.\n\nThe alternative options—teacher personality, textbook brands, and classroom size—are important logistical or pedagogical factors, but they do not define the *focus* or *structure* of a standards-based curriculum itself."
+  },
+  {
+    "id": 46,
+    "question": "Active learning means pupils:",
+    "options": {
+      "A": "Sit quietly",
+      "B": "Participate in learning",
+      "C": "Only copy notes",
+      "D": "Sleep in class"
+    },
+    "answer": "B",
+    "explanation": "The core definition of **active learning** is any instructional method that directly engages students in the learning process, moving beyond the traditional model of passive listening and note-taking. Active learning requires students to \"do things and think about what they are doing\" and participate as active agents in their own learning.\n\n*   **Option B: Participate in learning** is the most accurate description. Active learning strategies require pupils to engage in activities such as discussion, problem-solving, reading, writing, investigation, and critical thinking (analysis, synthesis, evaluation), all of which fall under the umbrella of participation. The goal is for students to be actively involved, using and applying what they are learning.\n*   **Option A: Sit quietly** and **Option C: Only copy notes** represent **passive learning**, where pupils are primarily receiving information from the teacher without actively processing, discussing, or applying the material. Active learning is specifically defined as moving *beyond* passive note-taking.\n*   **Option D: Sleep in class** is irrelevant to any instructional method and represents a complete disengagement from the learning process."
+  },
+  {
+    "id": 47,
+    "question": "Literacy skills develop through:",
+    "options": {
+      "A": "Random talking",
+      "B": "Reading, writing and speaking",
+      "C": "Sports only",
+      "D": "Rote memorization"
+    },
+    "answer": "B",
+    "explanation": "The chosen answer, **Option B (Reading, writing and speaking)**, is correct because these three areas encompass the foundational and practical components of literacy development.\n\n*   **Literacy** is traditionally understood as the ability to read and write.\n*   **Reading** involves skills such as phonemic awareness, phonics, fluency, vocabulary, and comprehension, and is a core part of literacy development.\n*   **Writing** is also recognized as an essential component of an effective literacy program and is a fundamental literacy skill.\n*   **Speaking** (which is part of a language-rich environment) is crucial because literacy skills are built upon a foundation of strong oral language. Developing a strong vocabulary through speaking and listening is essential for reading comprehension and effective writing. Early literacy skills are supported by a language-rich environment, exposure to books, and play. Therefore, the combination of these three—reading, writing, and the foundational oral language skill of speaking—provides the most complete answer for how literacy skills develop.\n\nThe other options are incorrect because:\n\n*   **Option A (Random talking)**: While oral language development is vital, \"random talking\" is an incomplete and insufficient description. It lacks the structure and formal engagement with text (reading and writing) necessary for full literacy.\n*   **Option C (Sports only)**: Sports are important for physical development and teamwork, but they have no direct connection to the development of reading and writing skills.\n*   **Option D (Rote memorization)**: Rote memorization may be a small tool for learning facts like the alphabet, but it does not develop the complex skills of comprehension, critical thinking, or effective communication required for true literacy."
+  },
+  {
+    "id": 48,
+    "question": "LTM means:",
+    "options": {
+      "A": "Literacy and Transition Material",
+      "B": "Learning and Teaching Materials",
+      "C": "Logical Thinking Method",
+      "D": "Lesson Time Management"
+    },
+    "answer": "B",
+    "explanation": "The acronym **LTM** in the context of education and teaching most commonly stands for **Learning and Teaching Materials**.\n\n*   This abbreviation is frequently used to refer to the collection of resources, tools, and content—such as textbooks, workbooks, visual aids, models, multimedia, and technology—that educators utilize to facilitate student learning.\n*   The terms \"Learning and Teaching Materials\" and \"Teaching/Learning Materials\" (often abbreviated as TLM) are closely related and share the same core meaning of resources used to achieve learning outcomes.\n*   While LTM can also stand for \"Learning and Teaching Model\" in some academic contexts, the general phrase \"Learning and Teaching Materials\" aligns better with the practical resources described in the options and is a standard term in educational pedagogy.\n*   Other common, non-educational meanings for LTM include \"Long Term Memory\" in psychology or neuroscience, but this is irrelevant to the options provided."
+  },
+  {
+    "id": 49,
+    "question": "Phonemic awareness is:",
+    "options": {
+      "A": "Knowing the alphabet",
+      "B": "Hearing and manipulating sounds",
+      "C": "Writing sentences",
+      "D": "Dictation only"
+    },
+    "answer": "B",
+    "explanation": "Phonemic awareness is a specific and advanced component of **phonological awareness** and is a critical prerequisite for learning to read.\n\n*   **Option B is Correct:** Phonemic awareness is defined as the ability to **hear, identify, and manipulate individual sounds (phonemes) in spoken words**.\n    *   **Hearing and Identifying:** This involves recognizing that spoken words are made up of a sequence of individual sounds. For example, recognizing that the word /cat/ has three distinct sounds: /k/, /a/, and /t/.\n    *   **Manipulating:** This involves active operations on those sounds, such as:\n        *   **Blending:** Combining individual sounds to form a word (e.g., /c/ + /a/ + /t/ = /cat/).\n        *   **Segmenting:** Breaking a word down into its individual sounds (e.g., /dog/ = /d/ + /o/ + /g/).\n        *   **Substituting:** Replacing one sound with another to make a new word (e.g., changing the /k/ in /cat/ to an /m/ makes /mat/).\n        *   **Deleting:** Removing a sound to create a new word (e.g., saying /stop/ without the /s/ makes /top/).\n\n*   **Why Other Options are Incorrect:**\n    *   **Option A (Knowing the alphabet):** This is called **alphabet knowledge** or **letter recognition**. While it is a foundational reading skill, it involves recognizing the *names and shapes* of letters, which are visual and print-based, not purely the auditory manipulation of sounds.\n    *   **Option C (Writing sentences):** This is a complex **composition** or **writing** skill that requires mastering many sub-skills, including phonemic awareness, spelling, grammar, and vocabulary. It is a product of phonemic awareness, not its definition.\n    *   **Option D (Dictation only):** Dictation is an *activity* or *assessment tool* that uses phonemic awareness (and phonics knowledge) but is not the comprehensive definition of the underlying cognitive skill itself."
+  },
+  {
+    "id": 50,
+    "question": "PBS in school stands for:",
+    "options": {
+      "A": "Positive Behaviour Support",
+      "B": "Pupils Back to School",
+      "C": "Public Basic School",
+      "D": "Primary Behaviour System"
+    },
+    "answer": "A",
+    "explanation": "The acronym **PBS** in the context of schools and education stands for **Positive Behaviour Support**.\n\n*   **Positive Behaviour Support (PBS)** is an evidence-based, proactive, and person-centered framework used to establish the social culture and behavioral supports needed for all students to achieve academic and behavioral success.\n*   The goal of PBS is to improve the quality of life and decrease problem behavior by teaching and reinforcing appropriate behavior, rather than focusing primarily on punishing misbehavior.\n*   It is often implemented as **School-Wide Positive Behaviour Support (SWPBS)** or **Positive Behavioral Interventions and Supports (PBIS)**, which involves the entire school community in developing clear, consistent behavioral expectations that are taught directly to students.\n*   This approach aims to create a positive school climate where appropriate behavior becomes the norm.\n*   While other options may be related to education, \"Positive Behaviour Support\" is the widely recognized and official meaning of the acronym PBS when discussing behavioral frameworks in schools."
+  }
+]

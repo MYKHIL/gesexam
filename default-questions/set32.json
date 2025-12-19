@@ -1,0 +1,602 @@
+[
+    {
+        "id": 1,
+        "question": "The best medium of school communication is:",
+        "options": {
+            "A": "Staff meetings",
+            "B": "Rumors",
+            "C": "Student notes",
+            "D": "Memorandums only"
+        },
+        "answer": "A",
+        "explanation": "Staff meetings provide a platform for direct, two-way interaction, clarification, and immediate feedback, making them highly effective for school communication."
+    },
+    {
+        "id": 2,
+        "question": "Record keeping is important because:",
+        "options": {
+            "A": "It fills files",
+            "B": "It satisfies GES",
+            "C": "It supports decision making",
+            "D": "It is done globally"
+        },
+        "answer": "C",
+        "explanation": "Effective decision-making relies on accurate data and history. Records provide the evidence base needed for planning, student tracking, and administrative choices."
+    },
+    {
+        "id": 3,
+        "question": "The most common type of test in schools is:",
+        "options": {
+            "A": "Portfolio",
+            "B": "Written test",
+            "C": "Oral exam",
+            "D": "Rating scale"
+        },
+        "answer": "B",
+        "explanation": "Written tests remain the predominant method of assessment in schools due to their efficiency in administering and grading large numbers of students."
+    },
+    {
+        "id": 4,
+        "question": "Delegation improves:",
+        "options": {
+            "A": "Laziness",
+            "B": "Team efficiency",
+            "C": "Conflict",
+            "D": "Isolation"
+        },
+        "answer": "B",
+        "explanation": "Delegation distributes workload, empowers staff, and ensures that tasks are handled by capable team members, thereby boosting overall organizational efficiency."
+    },
+    {
+        "id": 5,
+        "question": "A research hypothesis is:",
+        "options": {
+            "A": "A conclusion",
+            "B": "A tentative statement",
+            "C": "A summary",
+            "D": "A random guess"
+        },
+        "answer": "B",
+        "explanation": "A hypothesis is a tentative, testable prediction or explanation for a phenomenon that guides the direction of a research study."
+    },
+    {
+        "id": 6,
+        "question": "The main purpose of lesson notes is:",
+        "options": {
+            "A": "To impress supervisors",
+            "B": "To guide teaching",
+            "C": "To punish teachers",
+            "D": "To fill files"
+        },
+        "answer": "B",
+        "explanation": "Lesson notes serve as a roadmap for the teacher, outlining the objectives, activities, and resources needed to deliver an effective lesson."
+    },
+    {
+        "id": 7,
+        "question": "School supervision includes:",
+        "options": {
+            "A": "Auditing only",
+            "B": "Exam setting",
+            "C": "Classroom observation",
+            "D": "Holiday planning"
+        },
+        "answer": "C",
+        "explanation": "Classroom observation is a central component of supervision, allowing supervisors to assess teaching quality and provide constructive feedback."
+    },
+    {
+        "id": 8,
+        "question": "A good school timetable should be:",
+        "options": {
+            "A": "Flexible",
+            "B": "Balanced",
+            "C": "Highly compressed",
+            "D": "Unstructured"
+        },
+        "answer": "B",
+        "explanation": "A balanced timetable ensures equitable distribution of subjects, breaks, and teacher workload, preventing fatigue and optimizing learning."
+    },
+    {
+        "id": 9,
+        "question": "Which is a school record?",
+        "options": {
+            "A": "Market list",
+            "B": "Logbook",
+            "C": "Passport photo",
+            "D": "Teacher license"
+        },
+        "answer": "B",
+        "explanation": "The logbook is a statutory official record where significant school events, visits, and occurrences are chronologically recorded by the head."
+    },
+    {
+        "id": 10,
+        "question": "The term “evaluation” means:",
+        "options": {
+            "A": "To record attendance",
+            "B": "To promote students",
+            "C": "To judge performance",
+            "D": "To set new rules"
+        },
+        "answer": "C",
+        "explanation": "Evaluation involves making value judgments about the quality, worth, or effectiveness of instruction or student performance based on collected data."
+    },
+    {
+        "id": 11,
+        "question": "An effective teacher is:",
+        "options": {
+            "A": "Strict",
+            "B": "Reflective",
+            "C": "Talkative",
+            "D": "Lenient"
+        },
+        "answer": "B",
+        "explanation": "Reflective teachers constantly analyze their own practice, learn from their experiences, and adapt their strategies to improve student learning."
+    },
+    {
+        "id": 12,
+        "question": "The best way to manage large classes is:",
+        "options": {
+            "A": "Shouting",
+            "B": "Group work",
+            "C": "Ignoring individuals",
+            "D": "More punishments"
+        },
+        "answer": "B",
+        "explanation": "Group work breaks the large class into manageable units, fosters peer learning, and keeps students engaged, making management easier."
+    },
+    {
+        "id": 13,
+        "question": "A democratic leader:",
+        "options": {
+            "A": "Forces ideas",
+            "B": "Delegates nothing",
+            "C": "Involves staff",
+            "D": "Avoids decisions"
+        },
+        "answer": "C",
+        "explanation": "Democratic leaders actively involve staff in decision-making processes, valuing their input and fostering a sense of shared ownership."
+    },
+    {
+        "id": 14,
+        "question": "The district director reports to:",
+        "options": {
+            "A": "PTA",
+            "B": "Regional Director",
+            "C": "Circuit supervisor",
+            "D": "School board"
+        },
+        "answer": "B",
+        "explanation": "In the GES hierarchy, the District Director of Education is directly accountable to and reports to the Regional Director of Education."
+    },
+    {
+        "id": 15,
+        "question": "Summative assessment is done:",
+        "options": {
+            "A": "Every week",
+            "B": "At the end of a term or year",
+            "C": "Before teaching",
+            "D": "During revision"
+        },
+        "answer": "B",
+        "explanation": "Summative assessment is designed to evaluate student learning against standards at the conclusion of an instructional period, like a term or year."
+    },
+    {
+        "id": 16,
+        "question": "An educational manager must be:",
+        "options": {
+            "A": "Lazy",
+            "B": "Careless",
+            "C": "Organized",
+            "D": "Harsh"
+        },
+        "answer": "C",
+        "explanation": "Organization is a critical trait for managers to effectively coordinate resources, schedules, and people to achieve educational goals."
+    },
+    {
+        "id": 17,
+        "question": "The classroom environment affects:",
+        "options": {
+            "A": "Furniture only",
+            "B": "Learning outcomes",
+            "C": "Head teacher",
+            "D": "PTA dues"
+        },
+        "answer": "B",
+        "explanation": "The physical and psychological environment of the classroom has a direct and significant impact on student motivation, engagement, and academic achievement."
+    },
+    {
+        "id": 18,
+        "question": "Motivation helps teachers to be:",
+        "options": {
+            "A": "Absent",
+            "B": "Silent",
+            "C": "Productive",
+            "D": "Unhappy"
+        },
+        "answer": "C",
+        "explanation": "Motivated teachers are more engaged, committed, and energetic, leading to higher productivity and better instructional quality."
+    },
+    {
+        "id": 19,
+        "question": "A school’s vision describes:",
+        "options": {
+            "A": "Its future direction",
+            "B": "Daily attendance",
+            "C": "Record keeping",
+            "D": "Salary plans"
+        },
+        "answer": "A",
+        "explanation": "A vision statement articulates the long-term aspirations and desired future state of the school, guiding strategic planning."
+    },
+    {
+        "id": 20,
+        "question": "Staff meetings help to:",
+        "options": {
+            "A": "Punish teachers",
+            "B": "Waste time",
+            "C": "Share information",
+            "D": "Cause conflict"
+        },
+        "answer": "C",
+        "explanation": "The primary function of staff meetings is to disseminate information, discuss policies, and ensure everyone is aligned on school matters."
+    },
+    {
+        "id": 21,
+        "question": "Which is not part of TLM?",
+        "options": {
+            "A": "Charts",
+            "B": "Models",
+            "C": "Punishments",
+            "D": "Flashcards"
+        },
+        "answer": "C",
+        "explanation": "Teaching and Learning Materials (TLM) are educational tools like charts and models. Punishment is a disciplinary action, not an instructional material."
+    },
+    {
+        "id": 22,
+        "question": "A conflict is unhealthy when:",
+        "options": {
+            "A": "It is solved peacefully",
+            "B": "It destroys teamwork",
+            "C": "It produces ideas",
+            "D": "It builds trust"
+        },
+        "answer": "B",
+        "explanation": "While some conflict can be constructive, it becomes unhealthy and dysfunctional when it damages relationships and disrupts the collaborative efforts of the team."
+    },
+    {
+        "id": 23,
+        "question": "Which is a learner record?",
+        "options": {
+            "A": "School calendar",
+            "B": "Report card",
+            "C": "Scheme of work",
+            "D": "Logbook"
+        },
+        "answer": "B",
+        "explanation": "A report card is a specific record detailing an individual learner's academic performance and progress, unlike the other administrative records."
+    },
+    {
+        "id": 24,
+        "question": "Learning outcome must be:",
+        "options": {
+            "A": "General",
+            "B": "Measurable",
+            "C": "Hidden",
+            "D": "Unknown"
+        },
+        "answer": "B",
+        "explanation": "To effectively assess learning, outcomes must be specific and measurable (SMART goals), allowing teachers to verify if students have achieved them."
+    },
+    {
+        "id": 25,
+        "question": "The GES is under:",
+        "options": {
+            "A": "Ministry of Roads",
+            "B": "Ministry of Education",
+            "C": "Ministry of Interior",
+            "D": "Ministry of Finance"
+        },
+        "answer": "B",
+        "explanation": "The Ghana Education Service is an agency operating under the authority and oversight of the Ministry of Education."
+    },
+    {
+        "id": 26,
+        "question": "Instructional materials are used mainly for:",
+        "options": {
+            "A": "Decoration",
+            "B": "Enhancing learning",
+            "C": "Inspectors",
+            "D": "Teachers only"
+        },
+        "answer": "B",
+        "explanation": "Instructional materials are aids designed to make learning concepts clearer, more interesting, and easier to understand for students."
+    },
+    {
+        "id": 27,
+        "question": "A reliable test gives:",
+        "options": {
+            "A": "Low marks",
+            "B": "Consistent results",
+            "C": "Zero failures",
+            "D": "New curriculum"
+        },
+        "answer": "B",
+        "explanation": "Reliability in testing refers to the consistency and stability of the test results; a student should get a similar score if tested again under similar conditions."
+    },
+    {
+        "id": 28,
+        "question": "The circuit supervisor’s role includes:",
+        "options": {
+            "A": "Teaching full-time",
+            "B": "School supervision",
+            "C": "Running PTA",
+            "D": "Student punishment"
+        },
+        "answer": "B",
+        "explanation": "Circuit supervisors (now School Improvement Support Officers) are responsible for monitoring and supervising schools within their circuit to ensure standards."
+    },
+    {
+        "id": 29,
+        "question": "Punishment is best used:",
+        "options": {
+            "A": "Always",
+            "B": "As a last resort",
+            "C": "Never",
+            "D": "To humiliate"
+        },
+        "answer": "B",
+        "explanation": "Punishment should only be used when positive reinforcement and other corrective strategies have failed (last resort), and never to humiliate."
+    },
+    {
+        "id": 30,
+        "question": "MBO means:",
+        "options": {
+            "A": "Managed by Others",
+            "B": "Management by Objectives",
+            "C": "Mean Business Only",
+            "D": "Method Based Organization"
+        },
+        "answer": "B",
+        "explanation": "MBO (Management by Objectives) is a management model that aims to improve performance by clearly defining objectives that are agreed to by both management and employees."
+    },
+    {
+        "id": 31,
+        "question": "Effective communication is:",
+        "options": {
+            "A": "One-way",
+            "B": "Clear and two-way",
+            "C": "Silent",
+            "D": "Avoided"
+        },
+        "answer": "B",
+        "explanation": "For communication to be effective, it must be clearly understood and allow for feedback (two-way), ensuring the message is properly received."
+    },
+    {
+        "id": 32,
+        "question": "Teacher absenteeism affects:",
+        "options": {
+            "A": "School paint",
+            "B": "PTA dues",
+            "C": "Learning achievement",
+            "D": "Timetable printing"
+        },
+        "answer": "C",
+        "explanation": "When teachers are absent, instructional time is lost, which directly creates gaps in student learning and negatively impacts academic achievement."
+    },
+    {
+        "id": 33,
+        "question": "The core purpose of assessment is:",
+        "options": {
+            "A": "Ranking",
+            "B": "Fear",
+            "C": "Feedback",
+            "D": "Promotion"
+        },
+        "answer": "C",
+        "explanation": "The fundamental goal of assessment is to provide feedback to both teachers and students to improve learning and instruction."
+    },
+    {
+        "id": 34,
+        "question": "The head teacher is:",
+        "options": {
+            "A": "A supervisor",
+            "B": "A school leader",
+            "C": "A politician",
+            "D": "A messenger"
+        },
+        "answer": "B",
+        "explanation": "The headteacher is the instructional and administrative leader of the school, responsible for its overall direction and culture."
+    },
+    {
+        "id": 35,
+        "question": "A scheme of learning shows:",
+        "options": {
+            "A": "Student marks",
+            "B": "Content distribution",
+            "C": "Staff roles",
+            "D": "School rules"
+        },
+        "answer": "B",
+        "explanation": "A scheme of learning plans out how the curriculum content will be distributed and taught over a specific period, usually a term or year."
+    },
+    {
+        "id": 36,
+        "question": "A school budget prevents:",
+        "options": {
+            "A": "Discipline",
+            "B": "Financial mismanagement",
+            "C": "New admissions",
+            "D": "Lesson interruptions"
+        },
+        "answer": "B",
+        "explanation": "A budget provides a financial plan that controls spending, ensures resources are allocated to priorities, and prevents reckless or unauthorized expenditures."
+    },
+    {
+        "id": 37,
+        "question": "Which test identifies learning difficulties?",
+        "options": {
+            "A": "Summative",
+            "B": "Diagnostic",
+            "C": "Placement",
+            "D": "Prediction"
+        },
+        "answer": "B",
+        "explanation": "Diagnostic tests are specifically designed to uncover students' strengths and weaknesses, identifying specific learning gaps or difficulties."
+    },
+    {
+        "id": 38,
+        "question": "The best learning is:",
+        "options": {
+            "A": "Forced",
+            "B": "Ignored",
+            "C": "Active",
+            "D": "Silent"
+        },
+        "answer": "C",
+        "explanation": "Active learning, where students engage, participate, and do things, leads to deeper understanding and better retention than passive listening."
+    },
+    {
+        "id": 39,
+        "question": "A teacher’s professional file contains:",
+        "options": {
+            "A": "House rent",
+            "B": "Qualifications",
+            "C": "Student marks",
+            "D": "Market list"
+        },
+        "answer": "B",
+        "explanation": "A professional file documents the teacher's career history, containing copies of certificates, qualifications, appointment letters, and appraisal reports."
+    },
+    {
+        "id": 40,
+        "question": "A PTA supports:",
+        "options": {
+            "A": "Teachers only",
+            "B": "School development",
+            "C": "Regional office",
+            "D": "National exams"
+        },
+        "answer": "B",
+        "explanation": "The Parent-Teacher Association (PTA) is a partner in education primarily aiming to support the school's development, infrastructure, and welfare."
+    },
+    {
+        "id": 41,
+        "question": "ICT integration encourages:",
+        "options": {
+            "A": "Chalk dust",
+            "B": "Digital learning",
+            "C": "Manual registers",
+            "D": "Dictation"
+        },
+        "answer": "B",
+        "explanation": "Integrating ICT brings digital tools into the classroom, fostering digital literacy and enabling modern, interactive, and digital learning methods."
+    },
+    {
+        "id": 42,
+        "question": "Inclusive education supports:",
+        "options": {
+            "A": "Only brilliant learners",
+            "B": "Only disabled learners",
+            "C": "All learners",
+            "D": "Only teachers"
+        },
+        "answer": "C",
+        "explanation": "Inclusive education means that all students, regardless of their background, ability, or challenges, learn together in the same environment."
+    },
+    {
+        "id": 43,
+        "question": "Observational research collects:",
+        "options": {
+            "A": "Exam scores",
+            "B": "Behavioural data",
+            "C": "Age data",
+            "D": "Fee records"
+        },
+        "answer": "B",
+        "explanation": "Observational research involves watching and recording behaviors in real-time, making it the primary method for collecting behavioral data."
+    },
+    {
+        "id": 44,
+        "question": "A timetable must be:",
+        "options": {
+            "A": "Secret",
+            "B": "Random",
+            "C": "Systematic",
+            "D": "Unchanged"
+        },
+        "answer": "C",
+        "explanation": "A timetable is a structured plan; it must be systematic to ensure all subjects and activities are covered logically without conflict."
+    },
+    {
+        "id": 45,
+        "question": "Teaching effectiveness depends on:",
+        "options": {
+            "A": "Class size only",
+            "B": "Method and preparation",
+            "C": "Administrator’s mood",
+            "D": "Furniture style"
+        },
+        "answer": "B",
+        "explanation": "Effective teaching is largely a result of good planning (preparation) and the use of appropriate, engaging teaching strategies (method)."
+    },
+    {
+        "id": 46,
+        "question": "A portfolio assessment contains:",
+        "options": {
+            "A": "Chalk",
+            "B": "Samples of student work",
+            "C": "Staff lists",
+            "D": "Furniture list"
+        },
+        "answer": "B",
+        "explanation": "A portfolio is a purposeful collection of student work that exhibits the student's efforts, progress, and achievements over time."
+    },
+    {
+        "id": 47,
+        "question": "The core feature of decentralization is:",
+        "options": {
+            "A": "Central control",
+            "B": "Local decision-making",
+            "C": "Teacher punishment",
+            "D": "Exam setting"
+        },
+        "answer": "B",
+        "explanation": "Decentralization involves transferring authority and responsibility from the central government to local levels, enabling local decision-making."
+    },
+    {
+        "id": 48,
+        "question": "Ethics in education improves:",
+        "options": {
+            "A": "Classroom noise",
+            "B": "Professional practice",
+            "C": "Mismanagement",
+            "D": "Aggression"
+        },
+        "answer": "B",
+        "explanation": "Adhering to ethical standards ensures integrity, fairness, and respect in interactions, thereby elevating the overall quality of professional practice."
+    },
+    {
+        "id": 49,
+        "question": "Classroom management ensures:",
+        "options": {
+            "A": "Laziness",
+            "B": "Order and learning",
+            "C": "Noise",
+            "D": "Violence"
+        },
+        "answer": "B",
+        "explanation": "The goal of classroom management is to create an organized environment that establishes order and maximizes opportunities for learning."
+    },
+    {
+        "id": 50,
+        "question": "A performance contract is signed between:",
+        "options": {
+            "A": "Students and PTA",
+            "B": "Officer and supervisor",
+            "C": "Parents and teachers",
+            "D": "School and GES"
+        },
+        "answer": "B",
+        "explanation": "Performance contracts are agreements between an employee (officer) and their manager (supervisor) defining expected targets and results."
+    }
+]

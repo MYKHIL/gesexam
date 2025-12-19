@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "question": "A school budget must reflect:",
+    "options": {
+      "A": "Impulse buying",
+      "B": "Identified priorities",
+      "C": "Wasteful spending",
+      "D": "Hidden costs"
+    },
+    "answer": "B",
+    "explanation": "A school budget is a financial roadmap that must align expenditure with the institution's strategic plan. Therefore, it must reflect the identified priorities, ensuring resources are allocated to the most critical educational and operational needs."
+  },
+  {
+    "id": 2,
+    "question": "In teaching, the term “scaffolding” means:",
+    "options": {
+      "A": "Punishing mistakes",
+      "B": "Providing temporary support",
+      "C": "Repeating content",
+      "D": "Ignoring hard tasks"
+    },
+    "answer": "B",
+    "explanation": "Scaffolding is an instructional technique, based on Vygotsky's theory, where a teacher provides temporary, adjustable assistance (support) to help a student master a new skill or concept, gradually withdrawing the help as the student becomes proficient."
+  },
+  {
+    "id": 3,
+    "question": "A headteacher delegates tasks to:",
+    "options": {
+      "A": "Avoid work",
+      "B": "Build capacity",
+      "C": "Create fear",
+      "D": "Punish staff"
+    },
+    "answer": "B",
+    "explanation": "Beyond distributing the workload, effective delegation serves a developmental purpose: to empower staff, cultivate leadership skills, and increase the professional capacity of the school community as a whole."
+  },
+  {
+    "id": 4,
+    "question": "Which type of evaluation is done at the end of a program?",
+    "options": {
+      "A": "Formative",
+      "B": "Diagnostic",
+      "C": "Summative",
+      "D": "Continuous"
+    },
+    "answer": "C",
+    "explanation": "Summative evaluation (or assessment) is conducted after the completion of an instructional phase, course, or program. Its purpose is to evaluate the overall achievement, effectiveness, or worth of the entire effort."
+  },
+  {
+    "id": 5,
+    "question": "A good school timetable ensures:",
+    "options": {
+      "A": "Frequent clashes",
+      "B": "Balanced workload",
+      "C": "Idle periods",
+      "D": "Unorganized teaching"
+    },
+    "answer": "B",
+    "explanation": "A primary function of a good timetable is to efficiently organize and distribute lessons, resources, and teacher assignments throughout the day/week, ensuring a balanced, manageable, and equitable workload for all teaching staff and optimal sequencing for student learning."
+  }
+]

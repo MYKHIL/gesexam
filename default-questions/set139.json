@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "School budget monitoring helps to:",
+    "options": {
+      "A": "Ensure funds are properly used",
+      "B": "Encourage overspending",
+      "C": "Hide expenditures",
+      "D": "Promote mismanagement"
+    },
+    "answer": "A",
+    "explanation": "Financial monitoring is a core administrative function that ensures accountability and transparency. Its primary goal is to verify that all school resources are spent according to the approved plan, which is to **Ensure funds are properly used** (A)."
+  },
+  {
+    "id": 2,
+    "question": "Effective instructional supervision focuses on:",
+    "options": {
+      "A": "Teaching and learning",
+      "B": "Punishment",
+      "C": "Social events",
+      "D": "Staff gossip"
+    },
+    "answer": "A",
+    "explanation": "Instructional supervision is designed to support teachers' professional growth and improve student outcomes. Therefore, the core focus of all supervisory activities must be on **Teaching and learning** (A)."
+  },
+  {
+    "id": 3,
+    "question": "A Deputy Director supports inclusive education by:",
+    "options": {
+      "A": "Providing assistive resources",
+      "B": "Excluding learners",
+      "C": "Limiting enrolment",
+      "D": "Ignoring special needs"
+    },
+    "answer": "A",
+    "explanation": "Inclusive education requires removing barriers to learning. A Deputy Director's role involves allocating resources to support all learners, including **Providing assistive resources** (A) and adaptive materials for those with special educational needs."
+  },
+  {
+    "id": 4,
+    "question": "Feedback to headteachers should be:",
+    "options": {
+      "A": "Constructive and timely",
+      "B": "Harsh",
+      "C": "Delayed",
+      "D": "Withheld"
+    },
+    "answer": "A",
+    "explanation": "For feedback to be effective in improving performance, it must be focused on specific actions for improvement (**Constructive**) and delivered close to the observation (**Timely**). Thus, it must be **Constructive and timely** (A)."
+  },
+  {
+    "id": 5,
+    "question": "Effective leadership succession requires:",
+    "options": {
+      "A": "Identifying and developing potential leaders",
+      "B": "Blocking promotion",
+      "C": "Hoarding opportunities",
+      "D": "Creating confusion"
+    },
+    "answer": "A",
+    "explanation": "Succession planning is a proactive measure to ensure institutional stability. It involves **Identifying and developing potential leaders** (A) by providing them with relevant training and mentorship to prepare them for future roles."
+  },
+  {
+    "id": 6,
+    "question": "The primary role of a Principal Superintendent in education is to:",
+    "options": {
+      "A": "Conduct national examinations",
+      "B": "Supervise and support teaching and learning",
+      "C": "Replace headteachers",
+      "D": "Handle procurement duties"
+    },
+    "answer": "B",
+    "explanation": "The Principal Superintendent (PS) is a key supervisory and quality assurance officer. Their mandate is focused on ensuring pedagogical quality in schools, making their primary role to **Supervise and support teaching and learning** (B)."
+  },
+  {
+    "id": 7,
+    "question": "Effective classroom supervision ensures:",
+    "options": {
+      "A": "Teacher punishment",
+      "B": "Improved instructional delivery",
+      "C": "Increased bureaucracy",
+      "D": "Reduced accountability"
+    },
+    "answer": "B",
+    "explanation": "By observing lessons and providing targeted feedback, classroom supervision identifies strengths and areas for growth, leading directly to **Improved instructional delivery** (B) by the teacher."
+  },
+  {
+    "id": 8,
+    "question": "A key characteristic of professional teaching practice is:",
+    "options": {
+      "A": "Bias",
+      "B": "Reflective practice",
+      "C": "Rumours",
+      "D": "Harsh leadership"
+    },
+    "answer": "B",
+    "explanation": "A professional teacher constantly evaluates their methods and outcomes, asking 'What worked, and how can I improve?' This self-assessment is known as **Reflective practice** (B) and is crucial for continuous improvement."
+  },
+  {
+    "id": 9,
+    "question": "Which of the following best supports learner-centred teaching?",
+    "options": {
+      "A": "Teacher-dominated methods",
+      "B": "Active participation",
+      "C": "Rote memorization",
+      "D": "Corporal punishment"
+    },
+    "answer": "B",
+    "explanation": "Learner-centred teaching places the student at the core of the learning process. This requires the student to be intellectually and physically involved, which is best achieved through **Active participation** (B)."
+  },
+  {
+    "id": 10,
+    "question": "Schemes of learning are used to:",
+    "options": {
+      "A": "Replace lesson plans",
+      "B": "Outline weekly teaching activities",
+      "C": "Determine student discipline",
+      "D": "Grade teachers"
+    },
+    "answer": "B",
+    "explanation": "Schemes of learning (or schemes of work) provide a medium-term plan that breaks the curriculum down into manageable units and specifies the content and activities to **Outline weekly teaching activities** (B)."
+  },
+  {
+    "id": 11,
+    "question": "Which leadership style focuses on shared decision-making?",
+    "options": {
+      "A": "Autocratic",
+      "B": "Democratic",
+      "C": "Laissez-faire",
+      "D": "Charismatic"
+    },
+    "answer": "B",
+    "explanation": "The **Democratic** (B) or participative leadership style involves engaging team members, soliciting their input, and valuing their consensus before making a final decision, thus promoting shared decision-making. "
+  },
+  {
+    "id": 12,
+    "question": "Continuous Assessment helps teachers to:",
+    "options": {
+      "A": "Punish low-performing students",
+      "B": "Track learner progress",
+      "C": "Delay feedback",
+      "D": "Reduce learning time"
+    },
+    "answer": "B",
+    "explanation": "Continuous Assessment (CA) involves systematic, ongoing evaluation of student work throughout a course. This data collection is essential for identifying trends, gaps, and ultimately, to **Track learner progress** (B)."
+  },
+  {
+    "id": 13,
+    "question": "The key purpose of lesson notes is to:",
+    "options": {
+      "A": "Evaluate teachers",
+      "B": "Guide daily instructional delivery",
+      "C": "Replace schemes of work",
+      "D": "Serve as punishment"
+    },
+    "answer": "B",
+    "explanation": "Lesson notes (or lesson plans) are the teacher's detailed, daily roadmap. They organize objectives, content, activities, and assessment to effectively **Guide daily instructional delivery** (B)."
+  },
+  {
+    "id": 14,
+    "question": "Assessment for learning focuses mainly on:",
+    "options": {
+      "A": "Giving grades only",
+      "B": "Improving learning through feedback",
+      "C": "Ranking schools",
+      "D": "Reducing teaching time"
+    },
+    "answer": "B",
+    "explanation": "Assessment for learning (formative assessment) is designed to provide information on where the student is, where they are going, and how to get there. Its core function is **Improving learning through feedback** (B)."
+  },
+  {
+    "id": 15,
+    "question": "School-based in-service training promotes:",
+    "options": {
+      "A": "Teacher absenteeism",
+      "B": "Professional development",
+      "C": "Poor supervision",
+      "D": "Non-compliance"
+    },
+    "answer": "B",
+    "explanation": "In-service training (INSET) is designed to upgrade teachers' knowledge, skills, and competencies while they are on the job, directly supporting their **Professional development** (B)."
+  },
+  {
+    "id": 16,
+    "question": "An effective classroom environment should be:",
+    "options": {
+      "A": "Threatening",
+      "B": "Conducive and supportive",
+      "C": "Overly noisy",
+      "D": "Unpredictable"
+    },
+    "answer": "B",
+    "explanation": "A high-quality learning environment is one that is safe, encourages risk-taking, and provides the necessary resources and emotional support. This is best described as **Conducive and supportive** (B)."
+  },
+  {
+    "id": 17,
+    "question": "Which factor most influences student achievement?",
+    "options": {
+      "A": "Classroom instruction quality",
+      "B": "Size of the school compound",
+      "C": "Number of PTA meetings",
+      "D": "Availability of uniforms"
+    },
+    "answer": "A",
+    "explanation": "Research consistently shows that the single most important in-school factor affecting student achievement is the teacher and the quality of their teaching methods and delivery, which is **Classroom instruction quality** (A)."
+  },
+  {
+    "id": 18,
+    "question": "A Principal Superintendent ensures teacher professionalism by:",
+    "options": {
+      "A": "Ignoring misconduct",
+      "B": "Promoting adherence to codes of ethics",
+      "C": "Encouraging shortcuts",
+      "D": "Delaying discipline cases"
+    },
+    "answer": "B",
+    "explanation": "The PS is tasked with upholding professional standards. This is achieved by communicating, enforcing, and actively **Promoting adherence to codes of ethics** (B) and conduct for all staff."
+  },
+  {
+    "id": 19,
+    "question": "The main purpose of remedial teaching is to:",
+    "options": {
+      "A": "Punish slow learners",
+      "B": "Support learners with learning gaps",
+      "C": "Replace regular lessons",
+      "D": "Reduce syllabus content"
+    },
+    "answer": "B",
+    "explanation": "Remedial teaching is targeted instruction aimed at assisting students who have not yet mastered the foundational knowledge or skills. Its purpose is to **Support learners with learning gaps** (B) to catch up."
+  },
+  {
+    "id": 20,
+    "question": "Inclusive education emphasizes:",
+    "options": {
+      "A": "Access for all learners",
+      "B": "Excluding special-needs learners",
+      "C": "Reducing enrolment",
+      "D": "Isolating disadvantaged groups"
+    },
+    "answer": "A",
+    "explanation": "Inclusive education is a philosophy that mandates that all children, regardless of ability or background, should have equal opportunities to learn and participate in the same school system, guaranteeing **Access for all learners** (A)."
+  },
+  {
+    "id": 21,
+    "question": "To ensure effective supervision, the PS must:",
+    "options": {
+      "A": "Assign duties blindly",
+      "B": "Observe teaching and provide feedback",
+      "C": "Avoid school visits",
+      "D": "Focus only on administration"
+    },
+    "answer": "B",
+    "explanation": "The most fundamental and effective step in instructional supervision is the direct assessment of pedagogy followed by a dialogue. The PS must **Observe teaching and provide feedback** (B)."
+  },
+  {
+    "id": 22,
+    "question": "Learning outcomes are best measured by:",
+    "options": {
+      "A": "Teacher opinions",
+      "B": "Assessments aligned to objectives",
+      "C": "Attendance registers",
+      "D": "Classroom noise levels"
+    },
+    "answer": "B",
+    "explanation": "Learning outcomes state what a student should be able to do. Accurate measurement requires tools that directly test these skills and knowledge, meaning **Assessments aligned to objectives** (B) are necessary to ensure validity."
+  },
+  {
+    "id": 23,
+    "question": "Effective pedagogical leadership requires:",
+    "options": {
+      "A": "Mastery of teaching methods",
+      "B": "Harsh discipline",
+      "C": "Frequent transfers",
+      "D": "Isolation from staff"
+    },
+    "answer": "A",
+    "explanation": "Pedagogical leadership is the ability to guide and improve instruction. This role requires the leader to have deep content knowledge and a strong **Mastery of teaching methods** (A) to be able to mentor and coach teachers effectively."
+  },
+  {
+    "id": 24,
+    "question": "Which of the following promotes child-friendly schools?",
+    "options": {
+      "A": "Corporal punishment",
+      "B": "Safe and supportive environment",
+      "C": "Fear-based leadership",
+      "D": "Ignoring learner welfare"
+    },
+    "answer": "B",
+    "explanation": "A child-friendly school prioritizes the best interests of the child, ensuring they are protected, respected, and actively involved in their learning in a **Safe and supportive environment** (B)."
+  },
+  {
+    "id": 25,
+    "question": "A good school climate is characterized by:",
+    "options": {
+      "A": "Distrust",
+      "B": "Collaboration",
+      "C": "Irresponsibility",
+      "D": "Fear"
+    },
+    "answer": "B",
+    "explanation": "School climate refers to the atmosphere and quality of life in the school. A positive climate is marked by mutual respect, shared purpose, and a culture of working together, all centered on **Collaboration** (B)."
+  },
+  {
+    "id": 26,
+    "question": "A PS ensures curriculum coverage by:",
+    "options": {
+      "A": "Ignoring schemes of work",
+      "B": "Monitoring weekly progress",
+      "C": "Reducing instructional time",
+      "D": "Avoiding classroom observations"
+    },
+    "answer": "B",
+    "explanation": "Ensuring the full curriculum is taught in a timely manner is a key supervisory duty. This is primarily done by checking teachers' schemes of work and actively **Monitoring weekly progress** (B) against the curriculum schedule."
+  },
+  {
+    "id": 27,
+    "question": "One key role of professional development workshops is to:",
+    "options": {
+      "A": "Promote uniform dressing",
+      "B": "Improve teacher competence",
+      "C": "Reduce lesson preparation",
+      "D": "Replace regular teaching"
+    },
+    "answer": "B",
+    "explanation": "The purpose of any professional development activity is to enhance the skills, knowledge, and instructional effectiveness of educators, leading directly to an **Improvement in teacher competence** (B)."
+  },
+  {
+    "id": 28,
+    "question": "Co-curricular activities contribute to:",
+    "options": {
+      "A": "Learner stress",
+      "B": "Holistic development",
+      "C": "Reduced class attendance",
+      "D": "Poor discipline"
+    },
+    "answer": "B",
+    "explanation": "Co-curricular activities (like clubs, sports, and arts) teach skills beyond the academic curriculum, such as teamwork, leadership, and social skills, which are vital for a student's **Holistic development** (B)."
+  },
+  {
+    "id": 29,
+    "question": "The use of TLMs improves learning by:",
+    "options": {
+      "A": "Distracting learners",
+      "B": "Enhancing understanding",
+      "C": "Increasing teacher workload",
+      "D": "Replacing teaching"
+    },
+    "answer": "B",
+    "explanation": "Teaching and Learning Materials (TLMs) provide concrete visual and tactile representations of abstract concepts, making the content more accessible, engaging, and directly **Enhancing understanding** (B)."
+  },
+  {
+    "id": 30,
+    "question": "Effective instructional supervision requires:",
+    "options": {
+      "A": "Objectivity",
+      "B": "Bias",
+      "C": "Intimidation",
+      "D": "Fear"
+    },
+    "answer": "A",
+    "explanation": "To ensure fairness and credibility, supervision must be based on documented evidence of performance rather than personal feelings or opinions. It must be conducted with **Objectivity** (A)."
+  },
+  {
+    "id": 31,
+    "question": "The best assessment tool for practical skills is:",
+    "options": {
+      "A": "Oral questions",
+      "B": "Performance tasks",
+      "C": "Fill-in-the-blanks",
+      "D": "True/false questions"
+    },
+    "answer": "B",
+    "explanation": "Practical skills (e.g., repairing equipment, conducting an experiment) must be assessed by observing the student demonstrating the skill itself. **Performance tasks** (B) require the student to execute the skill directly."
+  },
+  {
+    "id": 32,
+    "question": "A scheme of work interpretation starts with:",
+    "options": {
+      "A": "Assessment",
+      "B": "Curriculum analysis",
+      "C": "Reporting",
+      "D": "Register marking"
+    },
+    "answer": "B",
+    "explanation": "Before planning any activities, the teacher must first understand the curriculum document, including its objectives and scope. The process of planning, therefore, begins with **Curriculum analysis** (B)."
+  },
+  {
+    "id": 33,
+    "question": "A reflective teacher often:",
+    "options": {
+      "A": "Avoids feedback",
+      "B": "Reviews teaching for improvement",
+      "C": "Blames learners",
+      "D": "Fears supervision"
+    },
+    "answer": "B",
+    "explanation": "Reflective practice is the habit of self-assessment, systematically examining one's teaching processes and outcomes to identify areas for professional growth, meaning they **Reviews teaching for improvement** (B)."
+  },
+  {
+    "id": 34,
+    "question": "Classroom management aims to:",
+    "options": {
+      "A": "Promote disorder",
+      "B": "Maintain a productive learning environment",
+      "C": "Reduce student engagement",
+      "D": "Support teacher absenteeism"
+    },
+    "answer": "B",
+    "explanation": "Classroom management encompasses all strategies used to organize students, space, time, and materials. The ultimate purpose is to minimize distractions and **Maintain a productive learning environment** (B)."
+  },
+  {
+    "id": 35,
+    "question": "Differentiated instruction helps to:",
+    "options": {
+      "A": "Increase workload unnecessarily",
+      "B": "Meet diverse learning needs",
+      "C": "Reduce learner involvement",
+      "D": "Create confusion"
+    },
+    "answer": "B",
+    "explanation": "Differentiation is a pedagogical approach that modifies curriculum, instruction, or assessment to align with the varying abilities, interests, and readiness levels of students, helping to **Meet diverse learning needs** (B)."
+  },
+  {
+    "id": 36,
+    "question": "Positive discipline focuses on:",
+    "options": {
+      "A": "Punishment",
+      "B": "Guiding learners respectfully",
+      "C": "Humiliation",
+      "D": "Expulsion"
+    },
+    "answer": "B",
+    "explanation": "Positive discipline is an approach that seeks to teach self-control and responsibility through non-punitive methods, emphasizing understanding expectations and **Guiding learners respectfully** (B)."
+  },
+  {
+    "id": 37,
+    "question": "Effective school supervision starts with:",
+    "options": {
+      "A": "Planning the visit",
+      "B": "Arriving unannounced always",
+      "C": "Avoiding teacher engagement",
+      "D": "Ignoring challenges"
+    },
+    "answer": "A",
+    "explanation": "Effective supervision must be systematic and purpose-driven. This process begins with clearly articulating the goals, scheduling, and logistics, which is **Planning the visit** (A)."
+  },
+  {
+    "id": 38,
+    "question": "A good learning objective should be:",
+    "options": {
+      "A": "Broad",
+      "B": "Specific and measurable",
+      "C": "Ambiguous",
+      "D": "Vague"
+    },
+    "answer": "B",
+    "explanation": "Learning objectives define the desired end-of-lesson outcomes. To allow for accurate assessment and effective planning, objectives must be **Specific and measurable** (B), often following the SMART criteria."
+  },
+  {
+    "id": 39,
+    "question": "Professional ethics require teachers to be:",
+    "options": {
+      "A": "Partial",
+      "B": "Confidential",
+      "C": "Harsh",
+      "D": "Dishonest"
+    },
+    "answer": "B",
+    "explanation": "Teachers and educational leaders are privy to sensitive information about students and colleagues. A core ethical requirement is to protect privacy and treat such information as **Confidential** (B)."
+  },
+  {
+    "id": 40,
+    "question": "A PS ensures data accuracy by:",
+    "options": {
+      "A": "Accepting verbal reports",
+      "B": "Verifying documents",
+      "C": "Ignoring discrepancies",
+      "D": "Using estimates"
+    },
+    "answer": "B",
+    "explanation": "Accurate data is essential for sound decision-making. The PS must implement quality assurance checks, which fundamentally involves cross-referencing and **Verifying documents** (B) and reports."
+  },
+  {
+    "id": 41,
+    "question": "In classroom observation, the PS focuses on:",
+    "options": {
+      "A": "Teacher’s dressing only",
+      "B": "Pedagogy and learner engagement",
+      "C": "Staff gossip",
+      "D": "Punitive measures"
+    },
+    "answer": "B",
+    "explanation": "The instructional focus of the PS requires them to observe the interaction between the teacher's methods (**Pedagogy**) and the students' involvement (**learner engagement**). This is the key focus area (B)."
+  },
+  {
+    "id": 42,
+    "question": "Which activity best supports early grade reading?",
+    "options": {
+      "A": "Frequent drills",
+      "B": "Structured phonics instruction",
+      "C": "Ignoring foundational skills",
+      "D": "Only oral work"
+    },
+    "answer": "B",
+    "explanation": "**Structured phonics instruction** (B) teaches children the relationship between sounds (phonemes) and letters (graphemes) in a systematic way, which is widely recognized as the most effective method for developing foundational reading skills."
+  },
+  {
+    "id": 43,
+    "question": "Constructive feedback should be:",
+    "options": {
+      "A": "Delayed",
+      "B": "Clear and actionable",
+      "C": "Harsh",
+      "D": "Secretive"
+    },
+    "answer": "B",
+    "explanation": "For feedback to be constructive, it must specify exactly what needs to change (**Clear**) and provide concrete steps for how to change it (**actionable**). Therefore, it must be **Clear and actionable** (B)."
+  },
+  {
+    "id": 44,
+    "question": "Competency-based learning emphasizes:",
+    "options": {
+      "A": "Facts memorization",
+      "B": "Skills and application",
+      "C": "Teacher-centred lectures",
+      "D": "Rigid note-taking"
+    },
+    "answer": "B",
+    "explanation": "Competency-based learning (CBL) focuses on what a student can actually do as a result of instruction, placing value on the mastery of specific **Skills and application** (B) of knowledge rather than rote recall."
+  },
+  {
+    "id": 45,
+    "question": "Teacher motivation improves when leaders:",
+    "options": {
+      "A": "Recognize achievements",
+      "B": "Ignore performance",
+      "C": "Use fear",
+      "D": "Reduce support"
+    },
+    "answer": "A",
+    "explanation": "Staff feel valued and are motivated to continue performing well when their efforts and successes are noticed. Leaders boost morale when they actively **Recognize achievements** (A) and contributions."
+  },
+  {
+    "id": 46,
+    "question": "Monitoring teaching time ensures:",
+    "options": {
+      "A": "Curriculum overload",
+      "B": "Efficient coverage",
+      "C": "More absenteeism",
+      "D": "Reduction in supervision"
+    },
+    "answer": "B",
+    "explanation": "By checking that teachers use instructional time fully and effectively without wasting it on non-learning activities, monitoring ensures the **Efficient coverage** (B) of the syllabus."
+  },
+  {
+    "id": 47,
+    "question": "The most essential classroom record is:",
+    "options": {
+      "A": "Staff list",
+      "B": "Lesson plan",
+      "C": "PTA card",
+      "D": "Lunch rota"
+    },
+    "answer": "B",
+    "explanation": "While many records are important, the **Lesson plan** (B) is the most essential as it directly guides and documents the learning process, ensuring instruction is systematic, purposeful, and aligns with the curriculum."
+  },
+  {
+    "id": 48,
+    "question": "Quality education is best achieved through:",
+    "options": {
+      "A": "Random teaching",
+      "B": "Effective instructional delivery",
+      "C": "Irregular supervision",
+      "D": "Poor planning"
+    },
+    "answer": "B",
+    "explanation": "The quality of the education system is fundamentally determined by the quality of the teaching that takes place in the classroom. **Effective instructional delivery** (B) is the direct means to achieve high-quality education."
+  },
+  {
+    "id": 49,
+    "question": "School reports are important because they:",
+    "options": {
+      "A": "Create conflict",
+      "B": "Provide evidence for decisions",
+      "C": "Promote laziness",
+      "D": "Reduce accountability"
+    },
+    "answer": "B",
+    "explanation": "Reports (e.g., student progress, financial status, enrollment) compile raw data into actionable information. They are the objective foundation required to **Provide evidence for decisions** (B) and strategic planning."
+  },
+  {
+    "id": 50,
+    "question": "Which method supports slow learners most?",
+    "options": {
+      "A": "Peer tutoring",
+      "B": "Fast-paced teaching",
+      "C": "Corporal punishment",
+      "D": "Exclusion"
+    },
+    "answer": "A",
+    "explanation": "**Peer tutoring** (A) is highly effective for slow learners because it provides individualized attention, immediate feedback, and explanations from a peer who often understands the struggles of their classmate better than an adult, making the content more accessible."
+  }
+]

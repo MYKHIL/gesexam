@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "Delegation improves efficiency by",
+    "options": {
+      "A": "Increasing supervisor workload",
+      "B": "Sharing responsibilities appropriately",
+      "C": "Reducing communication",
+      "D": "Preventing teamwork"
+    },
+    "answer": "B",
+    "explanation": "Delegation involves assigning duties and corresponding authority to subordinates. This balances the workload, maximizes the specialized skills of the team, and allows the supervisor to focus on strategic tasks, all of which stem from **Sharing responsibilities appropriately** (B)."
+  },
+  {
+    "id": 2,
+    "question": "A circular differs from a memo because it is",
+    "options": {
+      "A": "More formal",
+      "B": "Less structured",
+      "C": "Personal",
+      "D": "Verbal"
+    },
+    "answer": "A",
+    "explanation": "Both are written communications, but a memo is typically used for internal, less formal communication between specific individuals or departments. A circular is usually distributed widely (circulated) to all employees or institutions and deals with official policy or instructions, making it **More formal** (A)."
+  },
+  {
+    "id": 3,
+    "question": "Stakeholder involvement ensures",
+    "options": {
+      "A": "Vandalism",
+      "B": "Shared ownership of decisions",
+      "C": "Delayed tasks",
+      "D": "High conflict"
+    },
+    "answer": "B",
+    "explanation": "When stakeholders (parents, community, staff) are consulted in the decision-making process, they feel their perspectives are valued. This process fosters a feeling of investment and **Shared ownership of decisions** (B), leading to better cooperation during implementation."
+  },
+  {
+    "id": 4,
+    "question": "School rules must be",
+    "options": {
+      "A": "Consistent and fair",
+      "B": "Unknown to learners",
+      "C": "Applied based on favouritism",
+      "D": "Optional"
+    },
+    "answer": "A",
+    "explanation": "For school discipline to be effective and promote a sense of justice, rules must be applied the same way to everyone (**Consistent**) and the consequences must be proportional to the offense (**fair**). The correct answer is **Consistent and fair** (A)."
+  },
+  {
+    "id": 5,
+    "question": "Headteachers must ensure",
+    "options": {
+      "A": "Zero records",
+      "B": "Effective curriculum implementation",
+      "C": "PTA management only",
+      "D": "Punishment over learning"
+    },
+    "answer": "B",
+    "explanation": "The core function of a school is to deliver the planned educational content. The Headteacher's most critical professional duty is to provide instructional leadership and resources to guarantee **Effective curriculum implementation** (B) in the classroom."
+  },
+  {
+    "id": 6,
+    "question": "Job rotation helps staff",
+    "options": {
+      "A": "Become confused",
+      "B": "Gain varied experience",
+      "C": "Lose skills",
+      "D": "Avoid duties"
+    },
+    "answer": "B",
+    "explanation": "Job rotation is a staff development technique where employees move between different roles or departments. The purpose is to broaden their understanding of the organization and enhance their versatility, allowing them to **Gain varied experience** (B)."
+  },
+  {
+    "id": 7,
+    "question": "Transparency in leadership builds",
+    "options": {
+      "A": "Distrust",
+      "B": "Confidence",
+      "C": "Conflict",
+      "D": "Hostility"
+    },
+    "answer": "B",
+    "explanation": "Transparency, or operating openly and allowing stakeholders to see how decisions are made and resources are used, is crucial for establishing credibility and trust. It builds **Confidence** (B) in the leadership and the institution."
+  },
+  {
+    "id": 8,
+    "question": "A supervision tool must be",
+    "options": {
+      "A": "Hidden",
+      "B": "Valid and reliable",
+      "C": "Verbal",
+      "D": "Irrelevant"
+    },
+    "answer": "B",
+    "explanation": "To ensure fairness and produce trustworthy data, any tool used for supervision (e.g., observation checklist, survey) must be accurate (**Valid**) in measuring what it is supposed to measure and consistent (**reliable**) across different uses. The tool must be **Valid and reliable** (B)."
+  },
+  {
+    "id": 9,
+    "question": "Delegated duties must be",
+    "options": {
+      "A": "Impossible",
+      "B": "Clearly explained",
+      "C": "Kept secret",
+      "D": "Random"
+    },
+    "answer": "B",
+    "explanation": "For delegation to succeed, the staff member must fully understand the scope of the task, the authority granted, the expected standards, and the deadline. This requires the duties to be **Clearly explained** (B)."
+  },
+  {
+    "id": 10,
+    "question": "An effective meeting must have",
+    "options": {
+      "A": "No agenda",
+      "B": "A clear agenda and purpose",
+      "C": "No time limits",
+      "D": "No records"
+    },
+    "answer": "B",
+    "explanation": "Meetings are only efficient if they are focused. A written **A clear agenda and purpose** (B) ensures that all participants know what topics will be covered, why they are meeting, and what is expected to be achieved."
+  },
+  {
+    "id": 11,
+    "question": "Public relations in schools help",
+    "options": {
+      "A": "Break community trust",
+      "B": "Build a positive school image",
+      "C": "Create conflict",
+      "D": "Reduce student enrolment"
+    },
+    "answer": "B",
+    "explanation": "Public relations activities manage the flow of information between the school and its community. The strategic goal is always to improve reputation and garner support, which means to **Build a positive school image** (B)."
+  },
+  {
+    "id": 12,
+    "question": "Accountability in leadership requires",
+    "options": {
+      "A": "Blaming others",
+      "B": "Taking responsibility",
+      "C": "Avoiding reports",
+      "D": "Hiding mistakes"
+    },
+    "answer": "B",
+    "explanation": "At its core, accountability is the willingness to be answerable for one's actions, whether the outcome is positive or negative. A responsible leader must accept the consequences, thus **Taking responsibility** (B)."
+  },
+  {
+    "id": 13,
+    "question": "Performance reviews must be",
+    "options": {
+      "A": "Once every five years",
+      "B": "Regular and objective",
+      "C": "Skipped for seniors",
+      "D": "Based on emotions"
+    },
+    "answer": "B",
+    "explanation": "For performance reviews (appraisals) to be developmental and fair, they must be conducted at defined intervals (**Regular**) and based on verifiable facts and standards, not personal feelings (**objective**). The standard is **Regular and objective** (B)."
+  },
+  {
+    "id": 14,
+    "question": "A grievance procedure protects",
+    "options": {
+      "A": "Only headteachers",
+      "B": "Staff rights",
+      "C": "Only students",
+      "D": "PTA executives"
+    },
+    "answer": "B",
+    "explanation": "A formal grievance procedure provides staff with a structured, fair, and confidential process for raising workplace issues or disputes. Its existence safeguards **Staff rights** (B) by ensuring issues are addressed impartially."
+  },
+  {
+    "id": 15,
+    "question": "An ADI must promote",
+    "options": {
+      "A": "Delay in responses",
+      "B": "Effective communication",
+      "C": "Negligence",
+      "D": "Teacher absenteeism"
+    },
+    "answer": "B",
+    "explanation": "As a key supervisory and administrative officer, the ADI needs information to flow accurately and timely across all supervised schools and departments. This requires continuous promotion of **Effective communication** (B)."
+  },
+  {
+    "id": 16,
+    "question": "Records management ensures",
+    "options": {
+      "A": "Disorganisation",
+      "B": "Orderly storage and retrieval",
+      "C": "Increased risks",
+      "D": "Staff conflict"
+    },
+    "answer": "B",
+    "explanation": "Records management is the practice of systematically controlling the creation, maintenance, use, and disposal of records. Its core function is to maintain accessibility and accountability through **Orderly storage and retrieval** (B)."
+  },
+  {
+    "id": 17,
+    "question": "The duty of the ADI includes",
+    "options": {
+      "A": "Conducting national exams",
+      "B": "Supervising educational programmes",
+      "C": "Hiring casual staff",
+      "D": "Regulating school fees"
+    },
+    "answer": "B",
+    "explanation": "The Assistant Director I (ADI) rank involves significant field duties, specifically overseeing the quality of teaching, learning, and curriculum delivery within schools. This is best described as **Supervising educational programmes** (B)."
+  },
+  {
+    "id": 18,
+    "question": "A good leader uses authority to",
+    "options": {
+      "A": "Intimidate",
+      "B": "Guide and support",
+      "C": "Punish",
+      "D": "Create fear"
+    },
+    "answer": "B",
+    "explanation": "The constructive use of authority is not domination, but influence. A good leader uses their position to provide direction, resources, and mentorship to help staff achieve goals. This is to **Guide and support** (B)."
+  },
+  {
+    "id": 19,
+    "question": "Interpersonal skills help leaders",
+    "options": {
+      "A": "Resolve conflicts",
+      "B": "Increase fights",
+      "C": "Reduce collaboration",
+      "D": "Create tension"
+    },
+    "answer": "A",
+    "explanation": "Interpersonal skills (such as communication, empathy, and negotiation) are essential for managing relationships within a team. Their primary application in a challenging situation is to mediate and **Resolve conflicts** (A)."
+  },
+  {
+    "id": 20,
+    "question": "A performance indicator shows",
+    "options": {
+      "A": "Staff hobbies",
+      "B": "Level of achievement",
+      "C": "Salary steps",
+      "D": "PTA rules"
+    },
+    "answer": "B",
+    "explanation": "A performance indicator (PI) is a measurable value that demonstrates how effectively an organization or individual is achieving key objectives. In short, it shows the **Level of achievement** (B) relative to a set target."
+  },
+  {
+    "id": 21,
+    "question": "A management information system (MIS) provides",
+    "options": {
+      "A": "Irrelevant data",
+      "B": "Organised information for decisions",
+      "C": "Rumours",
+      "D": "Unstructured reports"
+    },
+    "answer": "B",
+    "explanation": "An MIS is designed to collect, process, and present data in a structured, user-friendly format (reports, tables, charts) to assist managers. It delivers **Organised information for decisions** (B)."
+  },
+  {
+    "id": 22,
+    "question": "Staff orientation helps new employees",
+    "options": {
+      "A": "Become confused",
+      "B": "Understand organisational procedures",
+      "C": "Skip duties",
+      "D": "Avoid collaboration"
+    },
+    "answer": "B",
+    "explanation": "Orientation is the formal process of welcoming new staff and familiarizing them with the institution's culture, policies, organizational structure, and administrative routines. Its goal is to help them **Understand organisational procedures** (B)."
+  },
+  {
+    "id": 23,
+    "question": "Minutes must include",
+    "options": {
+      "A": "Gossip",
+      "B": "Decisions and agreements reached",
+      "C": "Teacher salaries",
+      "D": "Student complaints"
+    },
+    "answer": "B",
+    "explanation": "The minutes of a meeting serve as the official, documented record. While they note attendees and key discussion points, their most critical component for administrative action is the listing of all **Decisions and agreements reached** (B) and the assigned actions."
+  },
+  {
+    "id": 24,
+    "question": "Professional misconduct is addressed through",
+    "options": {
+      "A": "Disciplinary procedures",
+      "B": "Staff fights",
+      "C": "Rumours",
+      "D": "PTA punishments"
+    },
+    "answer": "A",
+    "explanation": "Misconduct must be handled formally, legally, and according to established employment rules to ensure fairness and adherence to public service regulations. This is done through official **Disciplinary procedures** (A)."
+  },
+  {
+    "id": 25,
+    "question": "Effective leadership improves",
+    "options": {
+      "A": "Organisational outcomes",
+      "B": "Conflicts",
+      "C": "Teacher absenteeism",
+      "D": "Miscommunication"
+    },
+    "answer": "A",
+    "explanation": "The ultimate measure of leadership quality is the success of the institution in achieving its goals (like high student performance, efficient use of resources, and policy implementation). Effective leadership directly improves **Organisational outcomes** (A)."
+  },
+  {
+    "id": 26,
+    "question": "The purpose of follow-up supervision is to",
+    "options": {
+      "A": "Threaten staff",
+      "B": "Ensure improvements are implemented",
+      "C": "Repeat the same visit",
+      "D": "Write reports only"
+    },
+    "answer": "B",
+    "explanation": "After an initial supervisory visit identifies areas for improvement, a subsequent follow-up is necessary to verify that the recommended changes have been made and are yielding results. This is to **Ensure improvements are implemented** (B)."
+  },
+  {
+    "id": 27,
+    "question": "Decision-making models help leaders",
+    "options": {
+      "A": "Avoid responsibility",
+      "B": "Analyse situations systematically",
+      "C": "Create confusion",
+      "D": "Delay action"
+    },
+    "answer": "B",
+    "explanation": "Decision-making models (e.g., rational model, incremental model) provide a framework for defining the problem, gathering data, weighing alternatives, and selecting the best course of action. They help leaders **Analyse situations systematically** (B)."
+  },
+  {
+    "id": 28,
+    "question": "Time-on-task refers to",
+    "options": {
+      "A": "Teacher leisure",
+      "B": "Actual learning time used effectively",
+      "C": "PTA meetings",
+      "D": "Extra hours"
+    },
+    "answer": "B",
+    "explanation": "In education, 'time-on-task' is the amount of time students are actively engaged in learning activities relevant to the instructional goals. It represents the **Actual learning time used effectively** (B)."
+  },
+  {
+    "id": 29,
+    "question": "Risks in management must be",
+    "options": {
+      "A": "Ignored",
+      "B": "Identified and mitigated",
+      "C": "Increased",
+      "D": "Encouraged"
+    },
+    "answer": "B",
+    "explanation": "Risk management is a core administrative function. It involves recognizing potential threats (financial, operational, reputational) and taking steps to reduce their likelihood or impact. They must be **Identified and mitigated** (B)."
+  },
+  {
+    "id": 30,
+    "question": "Organisational culture influences",
+    "options": {
+      "A": "Staff behaviour",
+      "B": "Trees around the school",
+      "C": "The weather",
+      "D": "Student uniforms"
+    },
+    "answer": "A",
+    "explanation": "Organizational culture is the shared set of values, beliefs, and norms that govern how things are done. It is the invisible force that heavily dictates the attitudes, motivation, and interaction style, hence influencing **Staff behaviour** (A)."
+  },
+  {
+    "id": 31,
+    "question": "A good staff welfare programme improves",
+    "options": {
+      "A": "Absenteeism",
+      "B": "Staff morale",
+      "C": "Conflict",
+      "D": "Resignations"
+    },
+    "answer": "B",
+    "explanation": "Welfare programs (e.g., healthcare access, housing support, professional development funding) demonstrate that the institution cares about its employees' well-being, leading to increased job satisfaction and **Staff morale** (B)."
+  },
+  {
+    "id": 32,
+    "question": "Crisis management requires",
+    "options": {
+      "A": "Panic",
+      "B": "Preparedness and quick action",
+      "C": "Rumours",
+      "D": "Delays"
+    },
+    "answer": "B",
+    "explanation": "Effective crisis management involves having pre-planned protocols (the **Preparedness** aspect) and executing them decisively and efficiently when an unforeseen event occurs (**quick action**). The answer is **Preparedness and quick action** (B)."
+  },
+  {
+    "id": 33,
+    "question": "Delegation without follow-up leads to",
+    "options": {
+      "A": "Confusion",
+      "B": "Efficiency",
+      "C": "Clarity",
+      "D": "Better performance"
+    },
+    "answer": "A",
+    "explanation": "When a task is delegated but the supervisor fails to monitor progress, provide feedback, or address obstacles, the subordinate may lose direction, make avoidable mistakes, or duplicate effort, resulting in **Confusion** (A) and failed execution."
+  },
+  {
+    "id": 34,
+    "question": "A code of conduct outlines",
+    "options": {
+      "A": "Professional standards",
+      "B": "Exam questions",
+      "C": "PTA rules",
+      "D": "Salary adjustments"
+    },
+    "answer": "A",
+    "explanation": "A code of conduct is a set of rules outlining the responsibilities of staff and students, including ethical and behavior guidelines. It sets the required **Professional standards** (A) for conduct within the institution."
+  },
+  {
+    "id": 35,
+    "question": "Staff evaluation identifies",
+    "options": {
+      "A": "Teacher clothing",
+      "B": "Performance gaps",
+      "C": "Favourite staff",
+      "D": "Classroom décor"
+    },
+    "answer": "B",
+    "explanation": "The core function of staff evaluation is to compare the actual performance of an employee against the expected performance standard or target. This comparison directly reveals any **Performance gaps** (B) that require training or intervention."
+  },
+  {
+    "id": 36,
+    "question": "Reward systems in schools must be",
+    "options": {
+      "A": "Biased",
+      "B": "Fair and motivating",
+      "C": "Secret",
+      "D": "Rare"
+    },
+    "answer": "B",
+    "explanation": "To encourage high performance, rewards must be seen as equitable and linked transparently to merit (**Fair**). The rewards themselves must be valuable enough to inspire sustained effort (**motivating**). The best answer is **Fair and motivating** (B)."
+  },
+  {
+    "id": 37,
+    "question": "School achievements must be",
+    "options": {
+      "A": "Hidden",
+      "B": "Celebrated",
+      "C": "Ignored",
+      "D": "Reported only orally"
+    },
+    "answer": "B",
+    "explanation": "Recognizing success boosts morale, reinforces positive behavior, and builds the school's reputation. Whether large or small, accomplishments must be acknowledged and **Celebrated** (B) publicly."
+  },
+  {
+    "id": 38,
+    "question": "A good mentorship programme supports",
+    "options": {
+      "A": "Teacher growth",
+      "B": "Laziness",
+      "C": "Conflict",
+      "D": "Resentment"
+    },
+    "answer": "A",
+    "explanation": "Mentorship pairs a knowledgeable teacher with a less experienced one to transfer skills and knowledge. This process is explicitly designed to accelerate the professional development and competence of the mentee, supporting **Teacher growth** (A)."
+  },
+  {
+    "id": 39,
+    "question": "The ADI ensures supervision reports are",
+    "options": {
+      "A": "Without evidence",
+      "B": "Accurate and actionable",
+      "C": "Political",
+      "D": "Hidden"
+    },
+    "answer": "B",
+    "explanation": "Supervision reports are used for evidence-based decision-making. They must be factually correct (**Accurate**) and contain clear, practical recommendations that can be implemented to bring about change (**actionable**). The ADI must ensure they are **Accurate and actionable** (B)."
+  },
+  {
+    "id": 40,
+    "question": "Continuous professional development (CPD) improves",
+    "options": {
+      "A": "Teacher capacity",
+      "B": "Teacher absenteeism",
+      "C": "Paperwork",
+      "D": "Punishment"
+    },
+    "answer": "A",
+    "explanation": "CPD refers to ongoing training, workshops, and learning activities for staff. Its sole purpose is to update knowledge and skills, directly increasing **Teacher capacity** (A) to deliver high-quality instruction."
+  },
+  {
+    "id": 41,
+    "question": "Policy implementation is successful when",
+    "options": {
+      "A": "Stakeholders understand the policy",
+      "B": "It is hidden",
+      "C": "No training is done",
+      "D": "There is no supervision"
+    },
+    "answer": "A",
+    "explanation": "A policy can only be implemented effectively if the people responsible for carrying it out, and those affected by it, are aware of its requirements, objectives, and procedures. Success depends on whether **Stakeholders understand the policy** (A)."
+  },
+  {
+    "id": 42,
+    "question": "Effective communication removes",
+    "options": {
+      "A": "Misunderstandings",
+      "B": "Harmony",
+      "C": "Respect",
+      "D": "Collaboration"
+    },
+    "answer": "A",
+    "explanation": "Clear, complete, and timely communication prevents ambiguity. By ensuring that the message sent is the message received, effective communication removes **Misunderstandings** (A)."
+  },
+  {
+    "id": 43,
+    "question": "A good supervision schedule must be",
+    "options": {
+      "A": "Transparent",
+      "B": "Hidden",
+      "C": "Random",
+      "D": "Unknown"
+    },
+    "answer": "A",
+    "explanation": "The purpose of supervision is development and accountability, not surprise or catching people out. Announcing the schedule in advance makes the process collaborative and reduces anxiety, making it **Transparent** (A)."
+  },
+  {
+    "id": 44,
+    "question": "Leadership effectiveness depends on",
+    "options": {
+      "A": "Emotional stability",
+      "B": "Anger",
+      "C": "Dominance",
+      "D": "Rigidity"
+    },
+    "answer": "A",
+    "explanation": "Effective leaders must handle pressure, manage conflicts, and maintain composure under stress to make rational decisions. This ability to remain balanced is defined as **Emotional stability** (A)."
+  },
+  {
+    "id": 45,
+    "question": "Vision statements describe",
+    "options": {
+      "A": "School history",
+      "B": "Future aspirations",
+      "C": "Annual budgets",
+      "D": "Daily routines"
+    },
+    "answer": "B",
+    "explanation": "A vision statement is a compelling picture of the ideal future state of the organization. It clearly outlines the organization's long-term goals and **Future aspirations** (B)."
+  },
+  {
+    "id": 46,
+    "question": "Mission statements define",
+    "options": {
+      "A": "How the vision will be achieved",
+      "B": "Teacher holidays",
+      "C": "PTA expectations",
+      "D": "Classroom rules"
+    },
+    "answer": "A",
+    "explanation": "While the vision states 'what we want to become,' the mission explains 'what we do today' and why. It outlines the core purpose, the audience served, and the actions taken, defining **How the vision will be achieved** (A)."
+  },
+  {
+    "id": 47,
+    "question": "Performance contracts help staff",
+    "options": {
+      "A": "Avoid duties",
+      "B": "Understand expected outcomes",
+      "C": "Reduce productivity",
+      "D": "Ignore targets"
+    },
+    "answer": "B",
+    "explanation": "A performance contract is a formal agreement between an employee and the organization that clearly sets out the specific, measurable goals and standards they are expected to meet. It helps them **Understand expected outcomes** (B)."
+  },
+  {
+    "id": 48,
+    "question": "Records of work submitted help",
+    "options": {
+      "A": "Provide accountability",
+      "B": "Promote absenteeism",
+      "C": "Replace teachers",
+      "D": "Reduce learning"
+    },
+    "answer": "A",
+    "explanation": "Records of work (e.g., scheme of work, lesson notes, reports) serve as verifiable evidence that official duties have been performed and curriculum delivery has taken place. They are essential to **Provide accountability** (A) for teaching time and content coverage."
+  },
+  {
+    "id": 49,
+    "question": "Good public relations help schools",
+    "options": {
+      "A": "Create hostility",
+      "B": "Build community trust",
+      "C": "Reduce enrolment",
+      "D": "Increase complaints"
+    },
+    "answer": "B",
+    "explanation": "Effective public relations involves open communication and positive engagement with the surrounding community. This continuous effort results in a strong positive relationship and helps to **Build community trust** (B)."
+  },
+  {
+    "id": 50,
+    "question": "Monitoring learning outcomes helps",
+    "options": {
+      "A": "Improve instructional strategies",
+      "B": "Increase fees",
+      "C": "Avoid supervision",
+      "D": "Promote punishment"
+    },
+    "answer": "A",
+    "explanation": "When learning outcomes (e.g., student results) are monitored, the data collected indicates whether current teaching methods are working. If results are poor, the data signals the need to change and **Improve instructional strategies** (A)."
+  }
+]

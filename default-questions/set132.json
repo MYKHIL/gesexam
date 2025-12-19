@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "Teachers promote discipline by:",
+    "options": {
+      "A": "Caning",
+      "B": "Being consistent and fair",
+      "C": "Shouting",
+      "D": "Humiliating learners"
+    },
+    "answer": "B",
+    "explanation": "Effective classroom management relies on clear, known rules enforced without prejudice. **Being consistent** ensures students know what to expect, and **fair** application ensures respect for the teacher's authority."
+  },
+  {
+    "id": 2,
+    "question": "Continuous Professional Development (CPD) helps teachers to:",
+    "options": {
+      "A": "Become obsolete",
+      "B": "Upgrade their knowledge",
+      "C": "Avoid work",
+      "D": "Stop teaching"
+    },
+    "answer": "B",
+    "explanation": "CPD is a career-long process of enhancing professional competence. Its core function is to allow teachers to acquire new skills, learn about curriculum changes, and **Upgrade their knowledge** and pedagogical techniques."
+  },
+  {
+    "id": 3,
+    "question": "The hidden curriculum refers to:",
+    "options": {
+      "A": "Secret documents",
+      "B": "Unplanned values and behaviours learners acquire",
+      "C": "Extra classes",
+      "D": "Exams"
+    },
+    "answer": "B",
+    "explanation": "The hidden curriculum encompasses the unstated lessons, values, attitudes, and perspectives that students learn through the school environment, rules, and teacher-student interactions (**Unplanned values and behaviours learners acquire**)."
+  },
+  {
+    "id": 4,
+    "question": "The main purpose of a lesson plan is to:",
+    "options": {
+      "A": "Be a rigid script",
+      "B": "Guide the teaching and learning process systematically",
+      "C": "Grade the teacher",
+      "D": "Increase confusion"
+    },
+    "answer": "B",
+    "explanation": "The lesson plan is a teacher's blueprint. It outlines the sequence of activities, timing, resources, and methods, helping the teacher **Guide the teaching and learning process systematically** toward specific objectives."
+  },
+  {
+    "id": 5,
+    "question": "Differentiated instruction addresses:",
+    "options": {
+      "A": "Only the class average",
+      "B": "The diverse learning needs of students",
+      "C": "Teacher interests",
+      "D": "Curriculum complexity"
+    },
+    "answer": "B",
+    "explanation": "Differentiation is a teaching philosophy that modifies content, process, products, or environment to cater to varying levels of readiness, interest, and learning profiles, addressing **The diverse learning needs of students**."
+  },
+  {
+    "id": 6,
+    "question": "Effective feedback to learners should be:",
+    "options": {
+      "A": "Vague",
+      "B": "Specific, timely, and actionable",
+      "C": "Only positive",
+      "D": "Delayed"
+    },
+    "answer": "B",
+    "explanation": "For learners to improve, feedback must clearly identify what they did well and what needs fixing (**Specific**), be delivered promptly (**timely**), and offer a path for correction (**actionable**)."
+  },
+  {
+    "id": 7,
+    "question": "Formative assessment is used to:",
+    "options": {
+      "A": "Give final grades",
+      "B": "Monitor student learning and adjust teaching strategies",
+      "C": "Punish students",
+      "D": "Compare schools"
+    },
+    "answer": "B",
+    "explanation": "Formative assessment is ongoing during instruction. Its primary goal is to check for understanding, provide immediate feedback, and allow the teacher to **Monitor student learning and adjust teaching strategies** in real-time."
+  },
+  {
+    "id": 8,
+    "question": "Critical thinking skills are promoted by asking:",
+    "options": {
+      "A": "Recall questions",
+      "B": "Higher-order questions (analysis, evaluation)",
+      "C": "Yes/No questions",
+      "D": "Easy questions"
+    },
+    "answer": "B",
+    "explanation": "Higher-order thinking involves skills like analysis, synthesis, and evaluation (Blooms Taxonomy). These skills are activated by challenging students with **Higher-order questions** that require reasoning and justification beyond simple recall."
+  },
+  {
+    "id": 9,
+    "question": "A well-managed classroom is characterized by:",
+    "options": {
+      "A": "Silence",
+      "B": "Clear rules and routines",
+      "C": "Teacher control only",
+      "D": "Strict punishment"
+    },
+    "answer": "B",
+    "explanation": "Classroom management is proactive. Students thrive in predictable environments. **Clear rules and routines** minimize disruptions, maximize instructional time, and foster a respectful learning climate."
+  },
+  {
+    "id": 10,
+    "question": "In the classroom, motivation is best enhanced by:",
+    "options": {
+      "A": "Threatening failure",
+      "B": "Relating content to real-life experiences and student interests",
+      "C": "Giving easy work",
+      "D": "Ignoring effort"
+    },
+    "answer": "B",
+    "explanation": "Intrinsic motivation increases when students perceive the content as valuable and relevant. **Relating content to real-life experiences and student interests** helps students see the purpose of the lesson."
+  },
+  {
+    "id": 11,
+    "question": "A teacher must consider **readiness** when planning to teach a new concept to ensure:",
+    "options": {
+      "A": "The teacher is ready",
+      "B": "Learners have the prerequisite knowledge and skills",
+      "C": "The lesson is short",
+      "D": "The subject is easy"
+    },
+    "answer": "B",
+    "explanation": "Readiness refers to the necessary foundational knowledge and developmental maturity required to succeed with new content. Checking readiness ensures **Learners have the prerequisite knowledge and skills** to absorb the new concept."
+  },
+  {
+    "id": 12,
+    "question": "The main advantage of group work is:",
+    "options": {
+      "A": "Noise",
+      "B": "Development of collaborative and communication skills",
+      "C": "Teacher rest",
+      "D": "Avoiding individual assessment"
+    },
+    "answer": "B",
+    "explanation": "Group work is a social learning strategy. Beyond content mastery, it is invaluable for helping students practice and refine vital soft skills like problem-solving, negotiation, and **Development of collaborative and communication skills**."
+  },
+  {
+    "id": 13,
+    "question": "A good learning objective should be:",
+    "options": {
+      "A": "Vague",
+      "B": "Observable and measurable",
+      "C": "Teacher-focused",
+      "D": "Hidden"
+    },
+    "answer": "B",
+    "explanation": "Learning objectives define what students should be able to *do* after a lesson. To assess mastery, the outcome must be visible to the teacher (**Observable**) and quantifiable in some way (**measurable**)."
+  },
+  {
+    "id": 14,
+    "question": "In the classroom, positive reinforcement involves:",
+    "options": {
+      "A": "Criticism",
+      "B": "Praising good behaviour and effort",
+      "C": "Ignoring good work",
+      "D": "Shouting"
+    },
+    "answer": "B",
+    "explanation": "Positive reinforcement is a core behavior management technique. It involves adding a desirable stimulus (e.g., praise, a reward) immediately after a desired behavior occurs to increase the likelihood of that behavior being repeated (**Praising good behaviour and effort**)."
+  },
+  {
+    "id": 15,
+    "question": "The use of teaching and learning materials (TLMs) aims to:",
+    "options": {
+      "A": "Complicate lessons",
+      "B": "Make lessons concrete and aid understanding",
+      "C": "Waste time",
+      "D": "Replace the teacher"
+    },
+    "answer": "B",
+    "explanation": "TLMs bridge the gap between abstract concepts and real-world understanding. They provide sensory input and tangible examples, which helps to **Make lessons concrete and aid understanding**."
+  },
+  {
+    "id": 16,
+    "question": "Summative assessment is conducted to:",
+    "options": {
+      "A": "Adjust daily teaching",
+      "B": "Evaluate student learning at the end of an instructional period (grading)",
+      "C": "Provide daily feedback",
+      "D": "Motivate students"
+    },
+    "answer": "B",
+    "explanation": "Summative assessment is evaluative. It occurs at the conclusion of a unit, term, or year to measure how much a student has learned against a standard and is used to **Evaluate student learning at the end of an instructional period** and assign a grade."
+  },
+  {
+    "id": 17,
+    "question": "Bloom’s Taxonomy is used by teachers to:",
+    "options": {
+      "A": "Manage classroom noise",
+      "B": "Classify learning objectives by cognitive complexity",
+      "C": "Grade student handwriting",
+      "D": "Plan school menus"
+    },
+    "answer": "B",
+    "explanation": "Bloom’s Taxonomy provides a hierarchical framework of cognitive skills, from simple recall to complex evaluation. Teachers use it to structure and **Classify learning objectives by cognitive complexity** and design varying assessment questions."
+  },
+  {
+    "id": 18,
+    "question": "The concept of **Spiral Curriculum** ensures that content is:",
+    "options": {
+      "A": "Taught only once",
+      "B": "Revisited at increasing levels of complexity",
+      "C": "Difficult from the start",
+      "D": "Left out if difficult"
+    },
+    "answer": "B",
+    "explanation": "A spiral curriculum introduces key concepts at an early age in a simple form, and then systematically **Revisited at increasing levels of complexity** in subsequent years, reinforcing mastery and deep understanding."
+  },
+  {
+    "id": 19,
+    "question": "Remedial teaching is given to:",
+    "options": {
+      "A": "All learners",
+      "B": "Learners struggling to meet learning targets",
+      "C": "Gifted learners",
+      "D": "Teachers"
+    },
+    "answer": "B",
+    "explanation": "Remedial instruction is targeted support provided to students who have fallen behind. Its purpose is to re-teach concepts and provide practice to help **Learners struggling to meet learning targets** catch up with their peers."
+  },
+  {
+    "id": 20,
+    "question": "The purpose of reflection in teaching is to:",
+    "options": {
+      "A": "Avoid work",
+      "B": "Analyze teaching practices and plan for improvement",
+      "C": "Blame students",
+      "D": "Fill time"
+    },
+    "answer": "B",
+    "explanation": "Reflection is a critical habit for professional growth. It involves the teacher consciously reviewing a lesson's execution and outcomes, often by writing, to **Analyze teaching practices and plan for improvement** in future lessons."
+  },
+  {
+    "id": 21,
+    "question": "Action research in teaching aims to:",
+    "options": {
+      "A": "Publish a book",
+      "B": "Solve a practical, local classroom problem",
+      "C": "Increase teacher salary",
+      "D": "Conduct national surveys"
+    },
+    "answer": "B",
+    "explanation": "Action research is a cyclical process conducted *by* the teacher *on* their own practice. It is focused on diagnosing and improving a specific, real-world issue, hence **Solve a practical, local classroom problem**."
+  },
+  {
+    "id": 22,
+    "question": "In classroom management, **proximity control** involves:",
+    "options": {
+      "A": "Shouting",
+      "B": "Moving closer to disruptive learners to stop misbehaviour",
+      "C": "Ignoring students",
+      "D": "Punishing all students"
+    },
+    "answer": "B",
+    "explanation": "Proximity control is a non-verbal, non-punitive intervention technique where the teacher **Moving closer to disruptive learners** utilizes their physical presence to de-escalate minor misbehavior and regain focus without interrupting the lesson flow."
+  },
+  {
+    "id": 23,
+    "question": "Pedagogy refers to the:",
+    "options": {
+      "A": "Curriculum content",
+      "B": "Art and science of teaching methods and principles",
+      "C": "School building",
+      "D": "Student age"
+    },
+    "answer": "B",
+    "explanation": "Pedagogy is the discipline that deals with the theory and practice of education. It encompasses the professional methods and strategies a teacher employs, hence the **Art and science of teaching methods and principles**."
+  },
+  {
+    "id": 24,
+    "question": "Creative thinking in learners is promoted by:",
+    "options": {
+      "A": "Rote learning",
+      "B": "Open-ended tasks and brainstorming",
+      "C": "Dictation",
+      "D": "Memorization only"
+    },
+    "answer": "B",
+    "explanation": "Creative thinking requires generating novel ideas. This is best fostered by giving students problems with multiple valid solutions (**Open-ended tasks**) and encouraging free-flow idea generation (**brainstorming**)."
+  },
+  {
+    "id": 25,
+    "question": "A teacher’s Scheme of Work outlines:",
+    "options": {
+      "A": "Daily activities",
+      "B": "The topics to be covered over a specific period (term/year)",
+      "C": "Student grades",
+      "D": "School rules"
+    },
+    "answer": "B",
+    "explanation": "The Scheme of Work is a long-range plan. It translates the curriculum into a practical timeline, detailing the sequence and pace of instruction by outlining **The topics to be covered over a specific period**."
+  },
+  {
+    "id": 26,
+    "question": "The use of questioning in class aims to:",
+    "options": {
+      "A": "Fill time",
+      "B": "Check comprehension and stimulate thinking",
+      "C": "Punish students",
+      "D": "Test teacher knowledge"
+    },
+    "answer": "B",
+    "explanation": "Questioning is a fundamental teaching strategy. It helps the teacher gauge whether students have grasped the content (**Check comprehension**) and encourages cognitive engagement (**stimulate thinking**)."
+  },
+  {
+    "id": 27,
+    "question": "Metacognition refers to:",
+    "options": {
+      "A": "Rote memory",
+      "B": "Thinking about one's own thinking and learning processes",
+      "C": "Reading fast",
+      "D": "Ignoring mistakes"
+    },
+    "answer": "B",
+    "explanation": "Metacognition, or 'learning how to learn,' involves self-awareness of one's strengths and weaknesses, and the ability to monitor and regulate one's learning strategy (**Thinking about one's own thinking and learning processes**)."
+  },
+  {
+    "id": 28,
+    "question": "The most effective method for teaching procedural skills (e.g., in Science or PE) is:",
+    "options": {
+      "A": "Lecture",
+      "B": "Demonstration and practice",
+      "C": "Reading a textbook",
+      "D": "Silent study"
+    },
+    "answer": "B",
+    "explanation": "Procedural skills require physical performance and imitation. The most effective approach is for the teacher to show the correct steps (**Demonstration**) followed by supervised student activity (**practice**)."
+  },
+  {
+    "id": 29,
+    "question": "The principle of **integration** in curriculum design ensures:",
+    "options": {
+      "A": "Subjects are taught in isolation",
+      "B": "Linking content across different subject areas",
+      "C": "More homework",
+      "D": "Fewer subjects"
+    },
+    "answer": "B",
+    "explanation": "Curriculum integration aims to make learning holistic by showing students how concepts relate across various disciplines, thus **Linking content across different subject areas** and creating deeper understanding."
+  },
+  {
+    "id": 30,
+    "question": "A portfolio assessment is advantageous because it:",
+    "options": {
+      "A": "Is quick to grade",
+      "B": "Shows progress, process, and product over time",
+      "C": "Only shows final grades",
+      "D": "Is only for art subjects"
+    },
+    "answer": "B",
+    "explanation": "Unlike a single test, a portfolio is a collection of student work that documents a journey. It allows evaluation of the learner's development, their working methods (**process**), and their final results (**product**) **over time**."
+  },
+  {
+    "id": 31,
+    "question": "Lesson planning must be flexible to accommodate:",
+    "options": {
+      "A": "Teacher moods",
+      "B": "Unexpected student questions or deeper understanding",
+      "C": "Frequent breaks",
+      "D": "Teacher lateness"
+    },
+    "answer": "B",
+    "explanation": "Teaching is dynamic. While the plan provides structure, a good teacher is prepared to deviate or extend activities to explore relevant topics or capitalize on a moment of **deeper understanding** from students."
+  },
+  {
+    "id": 32,
+    "question": "The use of rubrics in assessment promotes:",
+    "options": {
+      "A": "Vagueness",
+      "B": "Objectivity and transparency in grading",
+      "C": "Subjectivity",
+      "D": "Cheating"
+    },
+    "answer": "B",
+    "explanation": "A rubric is a scoring guide with specific criteria. By clearly defining performance levels, it reduces arbitrary judgment (**Objectivity**) and lets students know the standards for success (**transparency**)."
+  },
+  {
+    "id": 33,
+    "question": "Peer tutoring is effective because it:",
+    "options": {
+      "A": "Replaces the teacher",
+      "B": "Provides immediate support and strengthens the tutor’s mastery",
+      "C": "Increases competition",
+      "D": "Is a form of punishment"
+    },
+    "answer": "B",
+    "explanation": "Peer tutoring offers learning support tailored to the student's perspective (**immediate support**), and the act of teaching the concept to someone else deepens the **tutor's mastery** of the subject."
+  },
+  {
+    "id": 34,
+    "question": "The main goal of classroom inquiry-based learning is to:",
+    "options": {
+      "A": "Give easy answers",
+      "B": "Develop problem-solving and investigation skills",
+      "C": "Read quietly",
+      "D": "Memorize facts"
+    },
+    "answer": "B",
+    "explanation": "Inquiry-based learning places students at the center of the learning process by asking them to explore questions, conduct research, and form conclusions, directly fostering **Develop problem-solving and investigation skills**."
+  },
+  {
+    "id": 35,
+    "question": "Assessment *for* learning (AfL) focuses on:",
+    "options": {
+      "A": "Final grades",
+      "B": "Using evidence to adjust teaching and learning while instruction is ongoing",
+      "C": "Punishment",
+      "D": "Ranking students"
+    },
+    "answer": "B",
+    "explanation": "AfL is a formative approach where the teacher gathers information during the lesson to inform the next steps in instruction and for students to actively manage their own learning (**Using evidence to adjust teaching and learning**)."
+  },
+  {
+    "id": 36,
+    "question": "Constructivism in education suggests that learners:",
+    "options": {
+      "A": "Are empty vessels",
+      "B": "Actively construct knowledge based on prior experience",
+      "C": "Learn only by listening",
+      "D": "Only memorize facts"
+    },
+    "answer": "B",
+    "explanation": "Constructivism is a learning theory that posits that students do not passively receive information. Instead, they **Actively construct knowledge based on prior experience** by relating new information to existing mental frameworks."
+  },
+  {
+    "id": 37,
+    "question": "Effective questioning techniques require:",
+    "options": {
+      "A": "Rapid-fire questioning",
+      "B": "Wait time after asking a question",
+      "C": "Calling on only one student",
+      "D": "Ignoring wrong answers"
+    },
+    "answer": "B",
+    "explanation": "After asking a question, a teacher must pause for several seconds (**Wait time**) to allow students time to process the question, formulate a response, and encourage deeper thought from all students."
+  },
+  {
+    "id": 38,
+    "question": "In classroom planning, a teacher must align assessment tasks with:",
+    "options": {
+      "A": "The funniest topic",
+      "B": "The learning objectives and activities",
+      "C": "Student complaints",
+      "D": "Other teachers’ plans"
+    },
+    "answer": "B",
+    "explanation": "Curriculum alignment is essential. The assessment must accurately measure whether the student has mastered what the objective stated and what the activities taught, meaning it must align with **The learning objectives and activities**."
+  },
+  {
+    "id": 39,
+    "question": "In a teacher-centered classroom, the primary focus is on:",
+    "options": {
+      "A": "Student exploration",
+      "B": "The teacher as the sole source of knowledge",
+      "C": "Collaborative projects",
+      "D": "Student independence"
+    },
+    "answer": "B",
+    "explanation": "Teacher-centered instruction focuses on the teacher's role in delivering content, often through lecture or demonstration, establishing **The teacher as the sole source of knowledge** and authority."
+  },
+  {
+    "id": 40,
+    "question": "The most effective way to address student misconceptions is to:",
+    "options": {
+      "A": "Ignore them",
+      "B": "Elicit the misconception and provide contrasting evidence",
+      "C": "Punish the student",
+      "D": "Tell them they are wrong"
+    },
+    "answer": "B",
+    "explanation": "Misconceptions are strongly held, inaccurate beliefs. They must first be revealed (**Elicit the misconception**) and then challenged with factual, compelling information (**provide contrasting evidence**) to facilitate cognitive change."
+  },
+  {
+    "id": 41,
+    "question": "The use of stories and narratives in teaching primarily supports:",
+    "options": {
+      "A": "Teacher entertainment",
+      "B": "Memory and contextual understanding",
+      "C": "Classroom noise",
+      "D": "Testing only"
+    },
+    "answer": "B",
+    "explanation": "Humans are wired to learn through narrative. Stories provide emotional and logical context, which significantly improves a student's ability to retain information (**Memory**) and see how concepts apply in the real world (**contextual understanding**)."
+  },
+  {
+    "id": 42,
+    "question": "A well-planned class transition minimizes:",
+    "options": {
+      "A": "Learning",
+      "B": "Disruptions and maximizes instructional time",
+      "C": "Teacher control",
+      "D": "Student movement"
+    },
+    "answer": "B",
+    "explanation": "Transitions between activities are often sources of chaos. A planned transition (e.g., clear cues, defined movement) reduces unnecessary interruptions (**Disruptions**) and ensures more time is spent on learning (**maximizes instructional time**)."
+  },
+  {
+    "id": 43,
+    "question": "The use of visuals (charts, diagrams) in a lesson supports:",
+    "options": {
+      "A": "Verbal learners only",
+      "B": "Visual and spatial learning modalities",
+      "C": "Auditory learners only",
+      "D": "Teacher workload"
+    },
+    "answer": "B",
+    "explanation": "Visual aids are crucial for catering to learners who process information best through sight. They help illustrate complex relationships and spatial concepts, thus supporting **Visual and spatial learning modalities**."
+  },
+  {
+    "id": 44,
+    "question": "Pedagogical content knowledge (PCK) refers to:",
+    "options": {
+      "A": "Knowing the subject only",
+      "B": "Knowing how to teach a specific subject matter effectively",
+      "C": "Knowing the students only",
+      "D": "Knowing the school rules"
+    },
+    "answer": "B",
+    "explanation": "PCK is the blend of content mastery and teaching methods. It is the specialized knowledge that enables a teacher to take complex subject matter and present it in a way that is understandable to students, hence **Knowing how to teach a specific subject matter effectively**."
+  },
+  {
+    "id": 45,
+    "question": "Inclusive classroom practice requires:",
+    "options": {
+      "A": "Ignoring differences",
+      "B": "Adjusting teaching and materials for all student needs",
+      "C": "Grouping students by ability only",
+      "D": "Focusing on the majority"
+    },
+    "answer": "B",
+    "explanation": "The inclusive teacher actively adapts their methods and resources (**Adjusting teaching and materials**) to ensure that every student, including those with special educational needs, can access and participate in the curriculum."
+  },
+  {
+    "id": 46,
+    "question": "Open-ended questions are used to encourage:",
+    "options": {
+      "A": "Simple answers",
+      "B": "Extended thought and diverse responses",
+      "C": "Silence",
+      "D": "One-word answers"
+    },
+    "answer": "B",
+    "explanation": "Open-ended questions (those without a single correct answer) push students past simple recall, prompting them to synthesize information, justify opinions, and engage in **Extended thought and diverse responses**."
+  },
+  {
+    "id": 47,
+    "question": "Teachers keep anecdotal records to:",
+    "options": {
+      "A": "Sell items",
+      "B": "Track significant learner behaviours",
+      "C": "Record fees",
+      "D": "Punish learners"
+    },
+    "answer": "B",
+    "explanation": "Anecdotal records are brief, factual, objective notes documenting a specific observation of a student's behavior, skill, or attitude. They are key for maintaining evidence and **Track significant learner behaviours** over time."
+  },
+  {
+    "id": 48,
+    "question": "The most appropriate instructional aid for map reading is:",
+    "options": {
+      "A": "Song",
+      "B": "Globe",
+      "C": "Poem",
+      "D": "Chalk"
+    },
+    "answer": "B",
+    "explanation": "A **Globe** is a three-dimensional model of the Earth. It is the most accurate representation of the continents and oceans in their true shape and proportion, making it the most appropriate aid for teaching fundamental concepts of map reading and geography."
+  },
+  {
+    "id": 49,
+    "question": "Which activity promotes listening skills?",
+    "options": {
+      "A": "Dictation",
+      "B": "Jumping",
+      "C": "Drawing",
+      "D": "Running"
+    },
+    "answer": "A",
+    "explanation": "**Dictation** is an exercise where students write down exactly what is being read aloud to them. This task requires intense concentration and careful aural discrimination, directly promoting and assessing listening comprehension skills."
+  },
+  {
+    "id": 50,
+    "question": "The role of the teacher as a **facilitator** involves:",
+    "options": {
+      "A": "Lecturing only",
+      "B": "Guiding students to discover knowledge themselves",
+      "C": "Punishing students",
+      "D": "Giving all answers"
+    },
+    "answer": "B",
+    "explanation": "In a learner-centered model, the teacher shifts from a knowledge dispenser to a facilitator. This involves structuring activities, asking probing questions, and providing support that helps students **Guiding students to discover knowledge themselves**."
+  }
+]

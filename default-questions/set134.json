@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "The GES structure is an example of",
+    "options": {
+      "A": "Centralised bureaucracy",
+      "B": "Organisational hierarchy with defined roles and responsibilities",
+      "C": "Random distribution",
+      "D": "Informal leadership"
+    },
+    "answer": "B",
+    "explanation": "The Ghana Education Service (GES) operates with clear levels of authority (National, Regional, District, Circuit, School). This is characteristic of an **Organisational hierarchy with defined roles and responsibilities** from the Director-General down to the classroom teacher."
+  },
+  {
+    "id": 2,
+    "question": "The circuit supervisor’s role includes",
+    "options": {
+      "A": "Teaching all classes",
+      "B": "Inspecting shops",
+      "C": "Supervising and supporting schools in the circuit to improve quality education",
+      "D": "Giving scholarships"
+    },
+    "answer": "C",
+    "explanation": "The CS is the field-level representative of the district authority. Their core mandate is to monitor, evaluate, and provide on-site guidance to headteachers and teachers, thereby **Supervising and supporting schools in the circuit to improve quality education**."
+  },
+  {
+    "id": 3,
+    "question": "Leadership accountability demands",
+    "options": {
+      "A": "Hiding mistakes",
+      "B": "Taking responsibility for decisions and actions taken",
+      "C": "Blaming teachers",
+      "D": "Avoiding reporting"
+    },
+    "answer": "B",
+    "explanation": "Accountability is the obligation to justify conduct and accept the consequences of outcomes. A responsible leader must always be prepared to **Taking responsibility for decisions and actions taken** by themselves and their unit."
+  },
+  {
+    "id": 4,
+    "question": "The school improvement plan (SIP) must be developed with:",
+    "options": {
+      "A": "Only the headteacher",
+      "B": "Stakeholder participation and ownership (teachers, parents, SMC)",
+      "C": "External consultants only",
+      "D": "The newest teacher"
+    },
+    "answer": "B",
+    "explanation": "Involving all key groups (**Stakeholder participation**) ensures that the SIP is relevant to local needs, benefits from diverse perspectives, and gains community commitment and support (**ownership**) for its implementation."
+  },
+  {
+    "id": 5,
+    "question": "Delegation is most effective when the task is given to a staff member who:",
+    "options": {
+      "A": "Is the leader's favourite",
+      "B": "Has the necessary skill or potential for growth",
+      "C": "Is the most junior",
+      "D": "Is avoiding work"
+    },
+    "answer": "B",
+    "explanation": "To ensure task success and to develop staff capacity, delegation should be strategic. The task should be assigned to the individual who **Has the necessary skill or potential for growth** to perform it competently."
+  },
+  {
+    "id": 6,
+    "question": "The main goal of staff motivation is to improve:",
+    "options": {
+      "A": "Conflicts",
+      "B": "Productivity, commitment, and job satisfaction",
+      "C": "Teacher workload",
+      "D": "Absenteeism"
+    },
+    "answer": "B",
+    "explanation": "Motivation leads to better performance. Engaged staff are more likely to work harder (**Productivity**), be loyal (**commitment**), and enjoy their profession (**job satisfaction**)."
+  },
+  {
+    "id": 7,
+    "question": "A staff grievance procedure ensures:",
+    "options": {
+      "A": "Punishment",
+      "B": "Fair, structured, and consistent resolution of employee complaints",
+      "C": "Delay tactics",
+      "D": "Ignoring staff concerns"
+    },
+    "answer": "B",
+    "explanation": "A formal grievance procedure provides an established, non-arbitrary process. This ensures that all employee complaints are addressed according to due process, guaranteeing a **Fair, structured, and consistent resolution**."
+  },
+  {
+    "id": 8,
+    "question": "In financial management, transparency is crucial to build:",
+    "options": {
+      "A": "Mistrust",
+      "B": "Stakeholder confidence and prevent corruption",
+      "C": "Secrecy",
+      "D": "High debt"
+    },
+    "answer": "B",
+    "explanation": "Transparency—openness in recording and reporting financial activities—allows public scrutiny. This builds **Stakeholder confidence** in the integrity of management and is the best defense against **corruption**."
+  },
+  {
+    "id": 9,
+    "question": "The main purpose of a performance appraisal conference is to:",
+    "options": {
+      "A": "Issue threats",
+      "B": "Discuss results, set targets, and plan staff development",
+      "C": "Gossip",
+      "D": "Announce transfers"
+    },
+    "answer": "B",
+    "explanation": "This conference is a forward-looking, formalized dialogue. It reviews past achievements (**Discuss results**), defines the scope of future work (**set targets**), and determines the necessary training/support (**plan staff development**)."
+  },
+  {
+    "id": 10,
+    "question": "Effective communication must be:",
+    "options": {
+      "A": "Ambiguous",
+      "B": "Clear, concise, and complete",
+      "C": "Verbal only",
+      "D": "Delayed"
+    },
+    "answer": "B",
+    "explanation": "The core tenets of good communication are ensuring the message is easily understood (**Clear**), brief (**concise**), and contains all necessary information (**complete**)."
+  },
+  {
+    "id": 11,
+    "question": "A teacher’s professional portfolio is evidence of their:",
+    "options": {
+      "A": "Personal wealth",
+      "B": "Teaching competence and professional growth",
+      "C": "Bank details",
+      "D": "Food habits"
+    },
+    "answer": "B",
+    "explanation": "The portfolio is a performance assessment tool. The artifacts collected within it (e.g., observation notes, lesson plans, CPD certificates) demonstrate their **Teaching competence and professional growth** over time."
+  },
+  {
+    "id": 12,
+    "question": "The main goal of instructional supervision is to:",
+    "options": {
+      "A": "Find faults",
+      "B": "Improve teaching methodology and learning environment",
+      "C": "Reduce teaching time",
+      "D": "Increase teacher anxiety"
+    },
+    "answer": "B",
+    "explanation": "Instructional supervision is a supportive function. It is designed to diagnose classroom issues, provide mentorship, and guide the teacher toward adopting best practices, ultimately to **Improve teaching methodology and learning environment**."
+  },
+  {
+    "id": 13,
+    "question": "A democratic leadership style encourages:",
+    "options": {
+      "A": "Autocracy",
+      "B": "Staff participation and collective decision-making",
+      "C": "Isolation",
+      "D": "Fear"
+    },
+    "answer": "B",
+    "explanation": "Democratic leadership is inclusive. It values the input of team members, seeking their advice and consent before making final choices, which results in **Staff participation and collective decision-making**."
+  },
+  {
+    "id": 14,
+    "question": "Effective time management helps a leader to:",
+    "options": {
+      "A": "Avoid key tasks",
+      "B": "Focus on high-priority strategic tasks",
+      "C": "Reduce planning time",
+      "D": "Make hasty decisions"
+    },
+    "answer": "B",
+    "explanation": "Time management allows leaders to allocate energy to activities that yield the highest strategic return, ensuring they **Focus on high-priority strategic tasks** rather than getting bogged down in low-priority routines."
+  },
+  {
+    "id": 15,
+    "question": "A school budget must reflect:",
+    "options": {
+      "A": "Random spending",
+      "B": "Alignment of expenditure with educational goals",
+      "C": "High debt",
+      "D": "Unnecessary purchases"
+    },
+    "answer": "B",
+    "explanation": "Financial planning must support the mission. The budget should clearly demonstrate that every allocated shilling or dollar is purposefully directed toward achieving the school's **educational goals**."
+  },
+  {
+    "id": 16,
+    "question": "The ethical conduct of a Deputy Director demands:",
+    "options": {
+      "A": "Favouritism",
+      "B": "Impartiality in official dealings",
+      "C": "Secrecy",
+      "D": "Misuse of office"
+    },
+    "answer": "B",
+    "explanation": "As a senior official with broad authority, the Deputy Director must execute all duties (recruitment, transfers, discipline) without personal bias, ensuring **Impartiality in official dealings**."
+  },
+  {
+    "id": 17,
+    "question": "A key role of the School Management Committee (SMC) is to:",
+    "options": {
+      "A": "Teach classes",
+      "B": "Ensure transparency and accountability in school management",
+      "C": "Discipline teachers",
+      "D": "Manage student clubs"
+    },
+    "answer": "B",
+    "explanation": "The SMC is the local governing body. It acts as the check-and-balance system for the headteacher, providing oversight to **Ensure transparency and accountability in school management** and resource utilization."
+  },
+  {
+    "id": 18,
+    "question": "The most effective way to communicate with all staff simultaneously is through:",
+    "options": {
+      "A": "Rumour",
+      "B": "Formal staff meeting or circular",
+      "C": "Whispering to one teacher",
+      "D": "Individual phone calls"
+    },
+    "answer": "B",
+    "explanation": "To ensure a message is delivered consistently and officially to everyone at once, the two primary formal tools are a collective **Formal staff meeting** or a written **circular** distributed to all."
+  },
+  {
+    "id": 19,
+    "question": "Effective conflict resolution in schools requires:",
+    "options": {
+      "A": "Ignoring the problem",
+      "B": "Fair hearing and mutual respect for all parties",
+      "C": "Punishing the loudest person",
+      "D": "Taking sides"
+    },
+    "answer": "B",
+    "explanation": "Resolution must be perceived as just. This demands providing both parties an opportunity to state their case (**Fair hearing**) and ensuring the process is conducted with dignity (**mutual respect**)."
+  },
+  {
+    "id": 20,
+    "question": "The purpose of Continuous Assessment (CA) is to:",
+    "options": {
+      "A": "Give final scores only",
+      "B": "Provide ongoing feedback to students and teachers on learning progress",
+      "C": "Reduce teacher workload",
+      "D": "Increase exam stress"
+    },
+    "answer": "B",
+    "explanation": "CA is a formative process integrated into teaching. It systematically gathers data throughout instruction to **Provide ongoing feedback to students and teachers on learning progress** and guide remedial action."
+  },
+  {
+    "id": 21,
+    "question": "A school policy on student discipline must be:",
+    "options": {
+      "A": "Secret",
+      "B": "Clear, accessible, and consistently enforced",
+      "C": "Applied selectively",
+      "D": "Verbal only"
+    },
+    "answer": "B",
+    "explanation": "For any rule system to work, it must be well-understood (**Clear, accessible**), and the consequences must be applied uniformly without bias (**consistently enforced**)."
+  },
+  {
+    "id": 22,
+    "question": "A strategic plan is focused on:",
+    "options": {
+      "A": "Daily routines",
+      "B": "Long-term vision (3-5 years) and organizational direction",
+      "C": "Monthly expenses",
+      "D": "Teacher transfers"
+    },
+    "answer": "B",
+    "explanation": "Strategic planning is concerned with the future of the school. It maps out the desired end-state (**Long-term vision**) and the major initiatives required to get there (**organizational direction**)."
+  },
+  {
+    "id": 23,
+    "question": "The use of data in supervision helps to:",
+    "options": {
+      "A": "Make subjective decisions",
+      "B": "Identify specific areas of teacher weakness for targeted intervention",
+      "C": "Blame the teacher",
+      "D": "Avoid observation"
+    },
+    "answer": "B",
+    "explanation": "Data (e.g., test scores, observation rubrics) provides objective evidence. It moves supervision away from opinion and allows the supervisor to **Identify specific areas of teacher weakness for targeted intervention** (coaching or training)."
+  },
+  {
+    "id": 24,
+    "question": "Teamwork in school administration helps to:",
+    "options": {
+      "A": "Create isolation",
+      "B": "Enhance problem-solving and work efficiency",
+      "C": "Increase duplication of effort",
+      "D": "Reduce communication"
+    },
+    "answer": "B",
+    "explanation": "When administrators work together, they bring varied expertise to challenges, leading to better, faster solutions (**Enhance problem-solving**), and they can divide the workload, increasing **work efficiency**."
+  },
+  {
+    "id": 25,
+    "question": "The most important quality of a headteacher is:",
+    "options": {
+      "A": "Strictness",
+      "B": "Instructional leadership and organizational competence",
+      "C": "Favouritism",
+      "D": "Wealth"
+    },
+    "answer": "B",
+    "explanation": "The headteacher is both the instructional leader (focusing on teaching) and the chief administrator (managing systems). A blend of **Instructional leadership and organizational competence** is essential for school success."
+  },
+  {
+    "id": 26,
+    "question": "A school's ICT policy must address:",
+    "options": {
+      "A": "Teacher salaries",
+      "B": "Acceptable use, security, and digital citizenship",
+      "C": "School uniform",
+      "D": "Student complaints"
+    },
+    "answer": "B",
+    "explanation": "The ICT policy sets rules for technology use. This includes guidelines on appropriate behavior (**Acceptable use**), data protection (**security**), and responsible online conduct (**digital citizenship**)."
+  },
+  {
+    "id": 27,
+    "question": "The principle of **flexibility** in management ensures:",
+    "options": {
+      "A": "Rigid rules",
+      "B": "Adaptability to changing circumstances and unexpected events",
+      "C": "Ignoring policy",
+      "D": "Autocracy"
+    },
+    "answer": "B",
+    "explanation": "While rules exist, effective management must be able to adjust plans, schedules, and resource allocation in response to new information or crises, demonstrating **Adaptability to changing circumstances and unexpected events**."
+  },
+  {
+    "id": 28,
+    "question": "Proper record keeping is vital for:",
+    "options": {
+      "A": "Punishment",
+      "B": "Audit trails and legal compliance",
+      "C": "Secrecy",
+      "D": "Transfer of funds"
+    },
+    "answer": "B",
+    "explanation": "Records provide the evidence required to prove actions were taken correctly. They establish the **Audit trails** for financial and administrative checks and ensure the school meets **legal compliance** requirements."
+  },
+  {
+    "id": 29,
+    "question": "The goal of a Continuous Professional Development (CPD) plan is to:",
+    "options": {
+      "A": "Keep staff busy",
+      "B": "Close identified professional performance gaps",
+      "C": "Increase teacher workload",
+      "D": "Avoid supervision"
+    },
+    "answer": "B",
+    "explanation": "The CPD plan is a targeted effort. It organizes training and mentoring to ensure that teachers acquire the specific skills needed to meet required standards, thereby helping to **Close identified professional performance gaps**."
+  },
+  {
+    "id": 30,
+    "question": "The role of the Parent-Teacher Association (PTA) is primarily advisory and supportive of:",
+    "options": {
+      "A": "Political activities",
+      "B": "School welfare and infrastructure projects",
+      "C": "Daily teaching",
+      "D": "Teacher transfers"
+    },
+    "answer": "B",
+    "explanation": "The PTA is meant to assist the school administration, typically focusing on raising funds for non-budgetary needs, improving student **welfare**, and contributing to **infrastructure projects**."
+  },
+  {
+    "id": 31,
+    "question": "The main purpose of a school staff meeting is to:",
+    "options": {
+      "A": "Gossip",
+      "B": "Promote cohesion and communicate policies/updates",
+      "C": "Punish latecomers",
+      "D": "Waste time"
+    },
+    "answer": "B",
+    "explanation": "Staff meetings are formal communication platforms that ensure everyone receives the same information (**communicate policies/updates**) and provide a collective forum to build team spirit (**Promote cohesion**)."
+  },
+  {
+    "id": 32,
+    "question": "Leadership ethics requires a leader to:",
+    "options": {
+      "A": "Favour staff",
+      "B": "Avoid conflicts of interest and maintain integrity",
+      "C": "Be secretive",
+      "D": "Blame others"
+    },
+    "answer": "B",
+    "explanation": "The core of ethical leadership is making decisions based on organizational good, not personal gain. This means actively working to **Avoid conflicts of interest and maintain integrity** in all official dealings."
+  },
+  {
+    "id": 33,
+    "question": "The most effective way to address a staff performance gap is through:",
+    "options": {
+      "A": "Punishment",
+      "B": "Targeted coaching and mentorship",
+      "C": "Ignoring the problem",
+      "D": "Immediate dismissal"
+    },
+    "answer": "B",
+    "explanation": "A performance gap is a development need. The most constructive and effective intervention is providing one-on-one guidance (**Targeted coaching**) and experienced support (**mentorship**) to bridge the skill deficit."
+  },
+  {
+    "id": 34,
+    "question": "Effective decision-making requires the leader to:",
+    "options": {
+      "A": "Act on impulse",
+      "B": "Consult stakeholders and evaluate options based on data",
+      "C": "Follow only their own opinion",
+      "D": "Delay decisions"
+    },
+    "answer": "B",
+    "explanation": "Rational decision-making involves gathering the necessary facts (**evaluate options based on data**) and seeking input from those affected (**Consult stakeholders**) to select the optimal course of action."
+  },
+  {
+    "id": 35,
+    "question": "The main benefit of a school-based risk assessment is to:",
+    "options": {
+      "A": "Avoid work",
+      "B": "Identify and eliminate hazards to the safety of students and staff",
+      "C": "Increase accidents",
+      "D": "Create fear"
+    },
+    "answer": "B",
+    "explanation": "Risk assessment is a systematic process of identifying potential dangers (e.g., faulty wiring, bullying, fire hazards) and planning steps to either remove or reduce them, primarily to **Identify and eliminate hazards to the safety of students and staff**."
+  },
+  {
+    "id": 36,
+    "question": "The most important quality of a school administrator is:",
+    "options": {
+      "A": "Strictness",
+      "B": "Organizational ability and efficiency",
+      "C": "Favouritism",
+      "D": "Loud voice"
+    },
+    "answer": "B",
+    "explanation": "Administration is the execution of plans and management of logistics. Success requires structuring tasks and personnel effectively (**Organizational ability**) and completing tasks with minimal waste (**efficiency**)."
+  },
+  {
+    "id": 37,
+    "question": "A school policy must be aligned with:",
+    "options": {
+      "A": "Teacher mood",
+      "B": "GES regulations and national laws",
+      "C": "Student complaints",
+      "D": "Headteacher preference"
+    },
+    "answer": "B",
+    "explanation": "As a public institution, all local school policies must be subsidiary to, and compliant with, the overarching framework provided by the national educational authority (**GES regulations**) and the country's **national laws**."
+  },
+  {
+    "id": 38,
+    "question": "The purpose of a school prospectus is to:",
+    "options": {
+      "A": "Record grades",
+      "B": "Market the school and inform stakeholders about programs and rules",
+      "C": "Punish staff",
+      "D": "List bank details"
+    },
+    "answer": "B",
+    "explanation": "The prospectus is an external communication tool. It is used to publicize the school's offerings (**Market the school**) and clearly state the curriculum, policies, and expectations (**inform stakeholders about programs and rules**)."
+  },
+  {
+    "id": 39,
+    "question": "In the classroom, a teacher’s main role is to:",
+    "options": {
+      "A": "Be a dictator",
+      "B": "Facilitate learning and maintain a positive environment",
+      "C": "Avoid interaction",
+      "D": "Only lecture"
+    },
+    "answer": "B",
+    "explanation": "The modern teacher's role is to guide the student's journey (**Facilitate learning**) and ensure the classroom is a safe, orderly, and motivating space (**maintain a positive environment**)."
+  },
+  {
+    "id": 40,
+    "question": "The main goal of the Deputy Director is to ensure:",
+    "options": {
+      "A": "Personal promotion",
+      "B": "Effective implementation of educational policies in the district/region",
+      "C": "School autonomy",
+      "D": "Avoidance of supervision"
+    },
+    "answer": "B",
+    "explanation": "The Deputy Director's senior role involves working across multiple schools or circuits to ensure that the strategic mandates from the national level are properly executed, focusing on **Effective implementation of educational policies in the district/region**."
+  },
+  {
+    "id": 41,
+    "question": "A good school timetable should consider:",
+    "options": {
+      "A": "Teacher popularity",
+      "B": "Curriculum sequence and student attention span",
+      "C": "Long daily breaks",
+      "D": "Avoidance of core subjects"
+    },
+    "answer": "B",
+    "explanation": "Timetabling is instructional. It must follow the logical progression of content (**Curriculum sequence**) and maximize learning by placing demanding subjects during periods of peak alertness (**student attention span**)."
+  },
+  {
+    "id": 42,
+    "question": "The use of **minutes** in a meeting ensures:",
+    "options": {
+      "A": "Delay",
+      "B": "Accurate record of decisions and assignments for follow-up",
+      "C": "Secrecy",
+      "D": "Gossip"
+    },
+    "answer": "B",
+    "explanation": "Minutes are the official, written summary of the meeting. They are vital for legal and administrative purposes, providing an **Accurate record of decisions and assignments for follow-up** and accountability."
+  },
+  {
+    "id": 43,
+    "question": "Professional development is mandatory for teachers to:",
+    "options": {
+      "A": "Avoid teaching",
+      "B": "Maintain competence and professional license/status",
+      "C": "Get early promotion",
+      "D": "Complain more"
+    },
+    "answer": "B",
+    "explanation": "In many professional settings, including education, continuous learning is a non-negotiable requirement. It is essential to **Maintain competence and professional license/status** in an evolving field."
+  },
+  {
+    "id": 44,
+    "question": "Effective school management requires:",
+    "options": {
+      "A": "Ignoring policy",
+      "B": "Adherence to established rules and procedures",
+      "C": "Random action",
+      "D": "Favouritism"
+    },
+    "answer": "B",
+    "explanation": "Management is about consistency and order. Successful administration depends on all staff uniformly following the agreed-upon standards, ensuring **Adherence to established rules and procedures**."
+  },
+  {
+    "id": 45,
+    "question": "A **circular** is used to communicate:",
+    "options": {
+      "A": "Personal gossip",
+      "B": "Official policies or instructions to a wide audience",
+      "C": "Financial reports only",
+      "D": "Secret plans"
+    },
+    "answer": "B",
+    "explanation": "A circular is a mass-communication document used to convey formal, standardized, non-urgent information or instructions to multiple departments, schools, or staff members, thus delivering **Official policies or instructions to a wide audience**."
+  },
+  {
+    "id": 46,
+    "question": "Staff motivation increases when leaders:",
+    "options": {
+      "A": "Reduce pay",
+      "B": "Recognize achievements and provide growth opportunities",
+      "C": "Increase threats",
+      "D": "Avoid staff interaction"
+    },
+    "answer": "B",
+    "explanation": "Motivation is sustained by feeling valued and seeing a future. Leaders who regularly **Recognize achievements** and invest in their staff's future through **growth opportunities** foster high commitment."
+  },
+  {
+    "id": 47,
+    "question": "The main benefit of using a school logbook is:",
+    "options": {
+      "A": "Avoiding documentation",
+      "B": "Creating a historical record for administrative reference",
+      "C": "Recording student mistakes",
+      "D": "Punishing staff"
+    },
+    "answer": "B",
+    "explanation": "The logbook provides a daily timeline of all significant administrative, instructional, and external events. It is a fundamental legal and administrative document **Creating a historical record for administrative reference**."
+  },
+  {
+    "id": 48,
+    "question": "The school logbook records",
+    "options": {
+      "A": "Lesson notes",
+      "B": "Significant daily events and official visits for historical and administrative reference purposes",
+      "C": "Funny stories",
+      "D": "Class tests"
+    },
+    "answer": "B",
+    "explanation": "The school logbook serves as the chronological, official diary of the school, recording all major occurrences, including official inspections and major decisions, necessary **for historical and administrative reference purposes**."
+  },
+  {
+    "id": 49,
+    "question": "The principles of good governance include",
+    "options": {
+      "A": "Oppression",
+      "B": "Transparency, participation and accountability in school management systems",
+      "C": "Threats",
+      "D": "Isolation"
+    },
+    "answer": "B",
+    "explanation": "Good governance ensures ethical, effective leadership. It is characterized by openness (**Transparency**), involvement of stakeholders (**participation**), and the obligation to justify actions (**accountability**)."
+  },
+  {
+    "id": 50,
+    "question": "Effective delegation reduces",
+    "options": {
+      "A": "Efficiency",
+      "B": "Workload pressure and promotes teamwork in accomplishing school tasks collectively",
+      "C": "Teacher cooperation",
+      "D": "Productivity"
+    },
+    "answer": "B",
+    "explanation": "When tasks are appropriately distributed, the primary leader's **Workload pressure** is lowered, and staff learn to collaborate and rely on each other, thereby **promot[ing] teamwork in accomplishing school tasks collectively**."
+  }
+]

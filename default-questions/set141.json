@@ -1,0 +1,605 @@
+Here is the refactored JSON data, presenting the multiple-choice questions with educational explanations focused on principles of instructional supervision, curriculum management, and school leadership.
+
+```json
+[
+  {
+    "id": 1,
+    "question": "Remedial instruction is most effective when:",
+    "options": {
+      "A": "Tailored to learner needs",
+      "B": "Generalized",
+      "C": "Rushed",
+      "D": "Punitive"
+    },
+    "answer": "A",
+    "explanation": "Remedial instruction is designed to address specific learning gaps identified through diagnosis. Its effectiveness relies on diagnosing the exact difficulty and **Tailoring the instruction to the individual learner's needs** (A), rather than offering a generic approach."
+  },
+  {
+    "id": 2,
+    "question": "Good record-keeping supports:",
+    "options": {
+      "A": "Decision-making",
+      "B": "Disorder",
+      "C": "Gossip",
+      "D": "Waste"
+    },
+    "answer": "A",
+    "explanation": "In school administration, accurate records provide historical data, track progress, and ensure accountability. This objective evidence is crucial for informed **Decision-making** (A) regarding resource allocation, student placement, and performance evaluation."
+  },
+  {
+    "id": 3,
+    "question": "Which of the following promotes effective learning?",
+    "options": {
+      "A": "Active learner involvement",
+      "B": "Monotony",
+      "C": "Long lectures only",
+      "D": "No TLMs"
+    },
+    "answer": "A",
+    "explanation": "Contemporary pedagogy emphasizes that learning is a constructive process. Effective learning is maximized when students are mentally and physically engaged in the material, which is facilitated by **Active learner involvement** (A)."
+  },
+  {
+    "id": 4,
+    "question": "A PS promotes quality teaching by:",
+    "options": {
+      "A": "Providing instructional support",
+      "B": "Reducing supervision",
+      "C": "Avoiding schools",
+      "D": "Ignoring challenges"
+    },
+    "answer": "A",
+    "explanation": "A Principal/Program Specialist (PS) promotes quality teaching primarily by acting as an instructional leader. This involves offering resources, training, and constructive feedback, summarized as **Providing instructional support** (A)."
+  },
+  {
+    "id": 5,
+    "question": "Effective lesson closure helps learners to:",
+    "options": {
+      "A": "Summarize understanding",
+      "B": "Become confused",
+      "C": "Lose focus",
+      "D": "Reduce participation"
+    },
+    "answer": "A",
+    "explanation": "The closing stage of a lesson is vital for metacognition and retention. It provides an opportunity for students to review key points, consolidate learning, and articulate their takeaways, helping them to **Summarize understanding** (A)."
+  },
+  {
+    "id": 6,
+    "question": "Which of the following best reflects instructional leadership?",
+    "options": {
+      "A": "Maintaining school facilities",
+      "B": "Supervising classroom teaching",
+      "C": "Approving school budgets",
+      "D": "Enforcing discipline"
+    },
+    "answer": "B",
+    "explanation": "Instructional leadership focuses directly on the core mission of the school: teaching and learning. The most explicit act of instructional leadership is the improvement of pedagogy through **Supervising classroom teaching** (B) and providing feedback."
+  },
+  {
+    "id": 7,
+    "question": "A key responsibility of an ADII is to ensure:",
+    "options": {
+      "A": "Teachers arrive before students",
+      "B": "Learning outcomes improve",
+      "C": "Students wear correct uniforms",
+      "D": "Exams start on time"
+    },
+    "answer": "B",
+    "explanation": "The Assistant Director of Instruction/Education (ADII) is primarily concerned with educational quality and impact. While other options are administrative, the ultimate measure of their effectiveness is that **Learning outcomes improve** (B) across the schools they supervise."
+  },
+  {
+    "id": 8,
+    "question": "The most effective tool for monitoring curriculum implementation is:",
+    "options": {
+      "A": "Attendance register",
+      "B": "Lesson observation guide",
+      "C": "Timetable",
+      "D": "PTA minutes"
+    },
+    "answer": "B",
+    "explanation": "Curriculum implementation refers to what is actually taught and how. A **Lesson observation guide** (B) is the tool specifically designed to check if the teacher is following the scheme of work, using appropriate methods, and covering the required content."
+  },
+  {
+    "id": 9,
+    "question": "In staff development, an ADII should primarily:",
+    "options": {
+      "A": "Punish weak teachers",
+      "B": "Facilitate coaching and mentoring",
+      "C": "Reduce teacher workload",
+      "D": "Approve all transfers"
+    },
+    "answer": "B",
+    "explanation": "Staff development focuses on improving teacher skills. The ADII's role is to create a culture of continuous professional growth by pairing experienced teachers with others, meaning they should **Facilitate coaching and mentoring** (B)."
+  },
+  {
+    "id": 10,
+    "question": "A data-driven school leader relies on:",
+    "options": {
+      "A": "Teacher complaints",
+      "B": "Assessment statistics",
+      "C": "Rumours from students",
+      "D": "PTA suggestions only"
+    },
+    "answer": "B",
+    "explanation": "Data-driven leadership prioritizes objective information. The most concrete and measurable source of instructional data is quantitative performance metrics, such as standardized test results and internal **Assessment statistics** (B)."
+  },
+  {
+    "id": 11,
+    "question": "The most important purpose of a school improvement plan (SIP) is:",
+    "options": {
+      "A": "To obtain more funding",
+      "B": "To guide school development actions",
+      "C": "To impress supervisors",
+      "D": "To meet national demands only"
+    },
+    "answer": "B",
+    "explanation": "The SIP is the strategic blueprint for the school's future. It defines specific, measurable, achievable, relevant, and time-bound goals derived from the school's needs assessment, designed **To guide school development actions** (B)."
+  },
+  {
+    "id": 12,
+    "question": "Effective delegation requires:",
+    "options": {
+      "A": "Authority without responsibility",
+      "B": "Responsibility without accountability",
+      "C": "Matching tasks to competence",
+      "D": "Avoiding supervision"
+    },
+    "answer": "C",
+    "explanation": "To ensure tasks are completed successfully and efficiently, the leader must assign duties to individuals who possess the necessary skills and knowledge. This principle is **Matching tasks to competence** (C)."
+  },
+  {
+    "id": 13,
+    "question": "Conflict in school is best resolved through:",
+    "options": {
+      "A": "Threats",
+      "B": "Dialogue and negotiation",
+      "C": "Punishment",
+      "D": "Avoidance"
+    },
+    "answer": "B",
+    "explanation": "Constructive conflict resolution moves beyond punitive measures or avoidance. It requires open communication to understand differing perspectives and find a mutually acceptable solution, achieved via **Dialogue and negotiation** (B)."
+  },
+  {
+    "id": 14,
+    "question": "A formative assessment is mainly used to:",
+    "options": {
+      "A": "Rank learners",
+      "B": "Prepare end-of-term reports",
+      "C": "Improve learning during instruction",
+      "D": "Determine promotion"
+    },
+    "answer": "C",
+    "explanation": "Formative assessment is 'assessment for learning.' It is conducted during the instructional process to provide teachers and students with information that can be used to **Improve learning during instruction** (C) by adjusting teaching and study habits."
+  },
+  {
+    "id": 15,
+    "question": "School policies must be:",
+    "options": {
+      "A": "Oral",
+      "B": "Written and communicated",
+      "C": "Secret",
+      "D": "Only for teachers"
+    },
+    "answer": "B",
+    "explanation": "For consistency, fairness, and legal defensibility, policies must be clearly documented. Furthermore, they are useless unless all stakeholders know they exist, so they must be **Written and communicated** (B)."
+  },
+  {
+    "id": 16,
+    "question": "The most effective classroom supervision technique is:",
+    "options": {
+      "A": "Surprise monitoring only",
+      "B": "Collaborative lesson observation",
+      "C": "Criticism",
+      "D": "Delegation"
+    },
+    "answer": "B",
+    "explanation": "Modern supervision is developmental. **Collaborative lesson observation** (B) involves joint planning, observation, and reflective discussion between the supervisor and teacher, fostering trust and mutual growth rather than punitive critique."
+  },
+  {
+    "id": 17,
+    "question": "A child-centered approach promotes:",
+    "options": {
+      "A": "Memorization",
+      "B": "Passive listening",
+      "C": "Active participation",
+      "D": "Teacher dominance"
+    },
+    "answer": "C",
+    "explanation": "A child-centered approach shifts the focus from the teacher lecturing to the student exploring and constructing meaning. This inherently demands that the learner is engaged through **Active participation** (C)."
+  },
+  {
+    "id": 18,
+    "question": "The best way to improve teacher punctuality is:",
+    "options": {
+      "A": "Threatening sanctions",
+      "B": "Providing incentives and monitoring",
+      "C": "Reducing periods",
+      "D": "Changing the timetable monthly"
+    },
+    "answer": "B",
+    "explanation": "While sanctions are necessary, the most sustainable strategy uses both positive reinforcement (**Providing incentives**) and systematic tracking (**monitoring**) to encourage good behaviour, making **Providing incentives and monitoring** (B) the most effective approach."
+  },
+  {
+    "id": 19,
+    "question": "Effective communication requires:",
+    "options": {
+      "A": "Complex vocabulary",
+      "B": "Clarity and conciseness",
+      "C": "Emotional language",
+      "D": "Lengthy messages"
+    },
+    "answer": "B",
+    "explanation": "The goal of communication is successful transfer of meaning. This is best achieved when the message is direct, free of ambiguity, and focused, emphasizing **Clarity and conciseness** (B)."
+  },
+  {
+    "id": 20,
+    "question": "An ADII promotes inclusive education by:",
+    "options": {
+      "A": "Separating learners with disabilities",
+      "B": "Ignoring differences",
+      "C": "Providing support services",
+      "D": "Reducing curriculum content"
+    },
+    "answer": "C",
+    "explanation": "Inclusive education means all learners are educated together, with their diverse needs met. The ADII promotes this by ensuring resources, aids, specialized teaching, and counseling are available, i.e., **Providing support services** (C)."
+  },
+  {
+    "id": 21,
+    "question": "A school timetable ensures:",
+    "options": {
+      "A": "Teacher freedom",
+      "B": "Efficient organization of learning",
+      "C": "PTA satisfaction",
+      "D": "Easy supervision only"
+    },
+    "answer": "B",
+    "explanation": "The timetable is the logistical backbone of the school year. Its core function is to allocate time, subjects, classes, and teachers in a structured way, guaranteeing the **Efficient organization of learning** (B) delivery."
+  },
+  {
+    "id": 22,
+    "question": "A key principle of leadership is:",
+    "options": {
+      "A": "Popularity",
+      "B": "Influence",
+      "C": "Wealth",
+      "D": "Seniority"
+    },
+    "answer": "B",
+    "explanation": "Leadership is fundamentally defined as the process of motivating and directing others towards a shared goal. This process relies on the leader's ability to exert **Influence** (B) over their followers."
+  },
+  {
+    "id": 23,
+    "question": "Which leadership style encourages teamwork?",
+    "options": {
+      "A": "Autocratic",
+      "B": "Democratic",
+      "C": "Laissez-faire",
+      "D": "Bureaucratic"
+    },
+    "answer": "B",
+    "explanation": "The **Democratic** (B) style involves consulting with team members and allowing them to participate in the decision-making process, which naturally fosters a spirit of shared responsibility and teamwork."
+  },
+  {
+    "id": 24,
+    "question": "Which action best promotes accountability?",
+    "options": {
+      "A": "Blaming others",
+      "B": "Keeping records",
+      "C": "Hiding information",
+      "D": "Delegating without follow-up"
+    },
+    "answer": "B",
+    "explanation": "Accountability is the obligation to justify an action or decision. This justification is impossible without objective proof of activities and outcomes, meaning **Keeping records** (B) is essential for demonstrating accountability."
+  },
+  {
+    "id": 25,
+    "question": "The most reliable type of assessment is:",
+    "options": {
+      "A": "Guesswork",
+      "B": "Standardized tests",
+      "C": "Oral questioning only",
+      "D": "Random checking"
+    },
+    "answer": "B",
+    "explanation": "**Reliability** in assessment refers to the consistency of the results. **Standardized tests** (B) are designed with consistent scoring, administration, and content, making their results the most dependable and consistent over time."
+  },
+  {
+    "id": 26,
+    "question": "School culture mainly refers to:",
+    "options": {
+      "A": "Buildings",
+      "B": "Shared beliefs and values",
+      "C": "Discipline rules",
+      "D": "Curriculum"
+    },
+    "answer": "B",
+    "explanation": "School culture is the intangible essence of the school environment, representing the deep-seated, often unwritten, norms that shape how staff and students interact. It is defined by **Shared beliefs and values** (B)."
+  },
+  {
+    "id": 27,
+    "question": "A professional learning community (PLC) aims to:",
+    "options": {
+      "A": "Evaluate teachers",
+      "B": "Improve teaching practices",
+      "C": "Replace supervisors",
+      "D": "Reduce contact hours"
+    },
+    "answer": "B",
+    "explanation": "PLCs are groups of educators who meet regularly, share expertise, and work collaboratively to deepen their content knowledge and instructional skills, with the ultimate goal to **Improve teaching practices** (B)."
+  },
+  {
+    "id": 28,
+    "question": "One key function of educational supervision is:",
+    "options": {
+      "A": "Inspection only",
+      "B": "Guidance and support",
+      "C": "Policing",
+      "D": "Dismissal"
+    },
+    "answer": "B",
+    "explanation": "While supervision includes inspection, its primary modern function is developmental. It is intended to help teachers grow professionally through feedback and resources, focusing on **Guidance and support** (B)."
+  },
+  {
+    "id": 29,
+    "question": "A school vision must be:",
+    "options": {
+      "A": "Only inspirational",
+      "B": "Clear and achievable",
+      "C": "Long and complex",
+      "D": "Written in technical language"
+    },
+    "answer": "B",
+    "explanation": "A vision statement needs to be easy for all stakeholders to understand (**Clear**) and must present a credible, realistic future state (**achievable**). This makes **Clear and achievable** (B) the most effective description."
+  },
+  {
+    "id": 30,
+    "question": "A performance appraisal focuses on:",
+    "options": {
+      "A": "Salary",
+      "B": "Improving teacher effectiveness",
+      "C": "Punishment",
+      "D": "Social relationships"
+    },
+    "answer": "B",
+    "explanation": "The main goal of a performance appraisal is not punitive or purely administrative but developmental. It aims to evaluate performance against standards and establish growth plans for **Improving teacher effectiveness** (B)."
+  },
+  {
+    "id": 31,
+    "question": "Time-on-task refers to the:",
+    "options": {
+      "A": "Time spent outside class",
+      "B": "Actual learning time",
+      "C": "Teacher break time",
+      "D": "Administrative work"
+    },
+    "answer": "B",
+    "explanation": "**Time-on-task** (B) is the amount of time students are actively engaged with the learning material or task, which is a stronger predictor of achievement than simple allocated class time."
+  },
+  {
+    "id": 32,
+    "question": "The best medium for emergency communication is:",
+    "options": {
+      "A": "Notice board",
+      "B": "Phone call or SMS",
+      "C": "Staff meeting",
+      "D": "Memo"
+    },
+    "answer": "B",
+    "explanation": "In an emergency, communication needs to be immediate and pervasive. A direct medium that reaches individuals rapidly, such as a **Phone call or SMS** (B) alert system, is necessary to ensure safety and quick action."
+  },
+  {
+    "id": 33,
+    "question": "Teacher motivation increases when:",
+    "options": {
+      "A": "Tasks are unclear",
+      "B": "Effort is recognized",
+      "C": "Micromanagement is high",
+      "D": "Punishment is frequent"
+    },
+    "answer": "B",
+    "explanation": "Motivation is strongly tied to feeling valued and competent. When a leader publicly or privately acknowledges a teacher's hard work, **Effort is recognized** (B), which boosts morale and encourages continued high performance."
+  },
+  {
+    "id": 34,
+    "question": "School records are kept mainly to:",
+    "options": {
+      "A": "Punish staff",
+      "B": "Provide evidence and support decisions",
+      "C": "Impress visitors",
+      "D": "Increase workload"
+    },
+    "answer": "B",
+    "explanation": "School records serve a dual purpose: they are the historical memory of the school and the objective proof of actions taken, enabling the school to **Provide evidence and support decisions** (B) in matters of finance, curriculum, and personnel."
+  },
+  {
+    "id": 35,
+    "question": "A needs assessment helps a school to:",
+    "options": {
+      "A": "Reduce students",
+      "B": "Identify priority areas",
+      "C": "Abolish subjects",
+      "D": "Increase the timetable"
+    },
+    "answer": "B",
+    "explanation": "A needs assessment systematically gathers data to determine the gap between the current state and the desired state. This allows the school leadership to **Identify priority areas** (B) for intervention and resource allocation."
+  },
+  {
+    "id": 36,
+    "question": "An ADII ensures curriculum fidelity by:",
+    "options": {
+      "A": "Changing curriculum",
+      "B": "Monitoring lesson plans",
+      "C": "Reducing topics",
+      "D": "Giving free periods"
+    },
+    "answer": "B",
+    "explanation": "Curriculum fidelity is the faithful implementation of the official curriculum. The ADII checks this by reviewing the teacher's planned instruction, ensuring alignment with the standards, through **Monitoring lesson plans** (B)."
+  },
+  {
+    "id": 37,
+    "question": "The most effective feedback to teachers is:",
+    "options": {
+      "A": "Delayed and harsh",
+      "B": "Quick and constructive",
+      "C": "Vague and emotional",
+      "D": "Public criticism"
+    },
+    "answer": "A",
+    "explanation": "For maximum impact, feedback should be delivered soon after the observation (**Quick**) and must focus on observable, actionable behaviours, offering solutions (**constructive**). The most effective feedback is **Quick and constructive** (A)."
+  },
+  {
+    "id": 38,
+    "question": "A key feature of competence-based curriculum is:",
+    "options": {
+      "A": "Rote learning",
+      "B": "Skill demonstration",
+      "C": "Theory only",
+      "D": "Teacher-centered instruction"
+    },
+    "answer": "B",
+    "explanation": "A competence-based curriculum moves beyond memorization to focus on what students can *do* with their knowledge. Assessment, therefore, emphasizes performance and practical application, i.e., **Skill demonstration** (B)."
+  },
+  {
+    "id": 39,
+    "question": "Ethically, a leader must be:",
+    "options": {
+      "A": "Biased",
+      "B": "Fair and transparent",
+      "C": "Secretive",
+      "D": "Selective"
+    },
+    "answer": "B",
+    "explanation": "Ethical leadership is grounded in moral principles. This requires treating all staff and students equitably (**Fair**) and ensuring processes and rationale for decisions are openly available (**transparent**). A leader must be **Fair and transparent** (B)."
+  },
+  {
+    "id": 40,
+    "question": "School-community partnership enhances:",
+    "options": {
+      "A": "Conflict",
+      "B": "Shared support",
+      "C": "Isolation",
+      "D": "Reduced participation"
+    },
+    "answer": "B",
+    "explanation": "Partnerships integrate the school's mission with the resources and goodwill of the local community. This collaboration builds a sense of collective responsibility and fosters **Shared support** (B) for student success."
+  },
+  {
+    "id": 41,
+    "question": "An ADII promotes safety by:",
+    "options": {
+      "A": "Ignoring hazards",
+      "B": "Conducting risk assessments",
+      "C": "Locking all gates",
+      "D": "Punishing students"
+    },
+    "answer": "B",
+    "explanation": "Proactive safety management involves systematically identifying potential dangers and implementing controls to minimize them. This is the definition of **Conducting risk assessments** (B)."
+  },
+  {
+    "id": 42,
+    "question": "In monitoring trends, the best tool is:",
+    "options": {
+      "A": "Observation",
+      "B": "Data analysis",
+      "C": "Rumours",
+      "D": "Random checks"
+    },
+    "answer": "B",
+    "explanation": "Trends are long-term patterns or changes in performance or behaviour. Identifying these patterns requires quantitative processing of records, making **Data analysis** (B) the only tool capable of this task."
+  },
+  {
+    "id": 43,
+    "question": "An effective meeting requires:",
+    "options": {
+      "A": "No agenda",
+      "B": "Agenda and minutes",
+      "C": "Only attendance",
+      "D": "Free discussion"
+    },
+    "answer": "B",
+    "explanation": "An **Agenda** (B) provides structure, sets objectives, and guides the discussion, while **minutes** provide an official record of decisions and assigned actions, ensuring productivity and accountability."
+  },
+  {
+    "id": 44,
+    "question": "A school budget ensures:",
+    "options": {
+      "A": "Misuse of funds",
+      "B": "Planned spending",
+      "C": "Excessive spending",
+      "D": "Confusion"
+    },
+    "answer": "B",
+    "explanation": "A budget is a financial roadmap. It forecasts revenues and expenses over a period, ensuring that resources are allocated according to strategic goals and facilitating **Planned spending** (B)."
+  },
+  {
+    "id": 45,
+    "question": "The final stage of the supervision cycle is:",
+    "options": {
+      "A": "Pre-conference",
+      "B": "Observation",
+      "C": "Post-conference",
+      "D": "Planning"
+    },
+    "answer": "C",
+    "explanation": "The typical supervision cycle (clinical supervision) follows the order: 1) Planning/Pre-conference, 2) Observation, 3) Analysis, and 4) Feedback/Post-conference. The **Post-conference** (C) is the final stage where instructional improvements are discussed."
+  },
+  {
+    "id": 46,
+    "question": "The essence of monitoring instruction is to:",
+    "options": {
+      "A": "Punish teachers",
+      "B": "Improve teaching",
+      "C": "Reduce contact hours",
+      "D": "Increase paperwork"
+    },
+    "answer": "B",
+    "explanation": "Instructional monitoring, like all supervision, is developmental. Its core purpose is to gather data on classroom practice to identify areas for growth and help teachers **Improve teaching** (B) and student outcomes."
+  },
+  {
+    "id": 47,
+    "question": "Delegation becomes ineffective when:",
+    "options": {
+      "A": "Competence is low",
+      "B": "Tasks are clear",
+      "C": "Supervision exists",
+      "D": "Authority is provided"
+    },
+    "answer": "A",
+    "explanation": "If the person delegated the task lacks the necessary skills, knowledge, or training (**Competence is low** (A)), the task is likely to be done poorly or fail, rendering the delegation effort ineffective."
+  },
+  {
+    "id": 48,
+    "question": "The best way to support new teachers is through:",
+    "options": {
+      "A": "Isolation",
+      "B": "Mentorship",
+      "C": "Criticism",
+      "D": "Heavy workloads"
+    },
+    "answer": "B",
+    "explanation": "New teachers face a steep learning curve. **Mentorship** (B) provides a trusted, experienced guide who can offer emotional support, share resources, and provide constructive advice, accelerating professional competence."
+  },
+  {
+    "id": 49,
+    "question": "In decision-making, the most important element is:",
+    "options": {
+      "A": "Speed",
+      "B": "Evidence",
+      "C": "Emotion",
+      "D": "Popularity"
+    },
+    "answer": "B",
+    "explanation": "To ensure decisions are rational, defensible, and have the highest chance of positive impact, they must be based on facts and data. Therefore, **Evidence** (B) is the most critical element in high-quality decision-making."
+  },
+  {
+    "id": 50,
+    "question": "The most effective school disciplinary measure is:",
+    "options": {
+      "A": "Corporal punishment",
+      "B": "Guidance and counselling",
+      "C": "Humiliation",
+      "D": "Suspension only"
+    },
+    "answer": "B",
+    "explanation": "Effective discipline aims for behavioral change and emotional health, not merely punishment. **Guidance and counselling** (B) addresses the root causes of misbehavior and equips the student with coping and social skills for future success."
+  }
+]

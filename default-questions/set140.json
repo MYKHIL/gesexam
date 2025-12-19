@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "A PS supports teacher professionalism by:",
+    "options": {
+      "A": "Encouraging absenteeism",
+      "B": "Supporting adherence to standards",
+      "C": "Ignoring misconduct",
+      "D": "Promoting shortcuts"
+    },
+    "answer": "B",
+    "explanation": "Professionalism is defined by an educator's ethical behavior, competence, and reliability. The role of the Principal/Program Specialist (PS) is to uphold and foster professional growth by actively **Supporting adherence to standards** (B) for conduct and teaching quality."
+  },
+  {
+    "id": 2,
+    "question": "Assessment of learning is used mainly to:",
+    "options": {
+      "A": "Diagnose learning difficulties",
+      "B": "Certify achievement",
+      "C": "Support daily improvement",
+      "D": "Replace teaching"
+    },
+    "answer": "B",
+    "explanation": "Assessment *of* learning is typically summative, occurring at the end of a unit, term, or course. Its primary function is to evaluate student proficiency against a standard and **Certify achievement** (B) for grading or promotion purposes."
+  },
+  {
+    "id": 3,
+    "question": "Team teaching encourages:",
+    "options": {
+      "A": "Collaboration",
+      "B": "Isolation",
+      "C": "Poor planning",
+      "D": "Harsh supervision"
+    },
+    "answer": "A",
+    "explanation": "Team teaching involves two or more teachers working together to plan, organize, and deliver instruction to a class. This naturally requires and promotes professional **Collaboration** (A) among educators."
+  },
+  {
+    "id": 4,
+    "question": "Item analysis helps teachers to:",
+    "options": {
+      "A": "Delay grading",
+      "B": "Improve test quality",
+      "C": "Create confusion",
+      "D": "Standardize poor tests"
+    },
+    "answer": "B",
+    "explanation": "Item analysis is a statistical technique used to evaluate the effectiveness of test questions. It identifies items that are too difficult, too easy, or poorly written, which helps the teacher to **Improve test quality** (B) and reliability."
+  },
+  {
+    "id": 5,
+    "question": "Effective remediation should be:",
+    "options": {
+      "A": "Learner-specific",
+      "B": "Generalized",
+      "C": "Compulsory for all",
+      "D": "Avoided"
+    },
+    "answer": "A",
+    "explanation": "Remediation is most effective when it is targeted. It must address the specific gaps or misconceptions identified in an individual student, thus requiring it to be **Learner-specific** (A)."
+  },
+  {
+    "id": 6,
+    "question": "The main purpose of a lesson plan is to:",
+    "options": {
+      "A": "Replace teacher initiative",
+      "B": "Guide instruction systematically",
+      "C": "Serve as punishment",
+      "D": "Impress supervisors"
+    },
+    "answer": "B",
+    "explanation": "A lesson plan serves as the teacher's blueprint, organizing learning objectives, materials, activities, and assessment into a logical sequence to **Guide instruction systematically** (B)."
+  },
+  {
+    "id": 7,
+    "question": "Classroom rules are effective when:",
+    "options": {
+      "A": "Learners contribute",
+      "B": "Teachers impose them alone",
+      "C": "They are vague",
+      "D": "They are punitive"
+    },
+    "answer": "A",
+    "explanation": "Rules are more likely to be followed and respected when students feel a sense of ownership over them. Involving **Learners** (A) in the rule-making process fosters responsibility and buy-in."
+  },
+  {
+    "id": 8,
+    "question": "A good supervisor must be:",
+    "options": {
+      "A": "Partial",
+      "B": "Approachable",
+      "C": "Fearful",
+      "D": "Emotional"
+    },
+    "answer": "B",
+    "explanation": "Effective supervision is developmental and relies on trust between the supervisor and the teacher. This trust is established when the supervisor is perceived as supportive and **Approachable** (B) for guidance and feedback."
+  },
+  {
+    "id": 9,
+    "question": "Learning difficulties are best addressed through:",
+    "options": {
+      "A": "Early identification",
+      "B": "Punishment",
+      "C": "Ignoring signs",
+      "D": "Increasing syllabus load"
+    },
+    "answer": "A",
+    "explanation": "Intervention is most successful when problems are caught early. **Early identification** (A) of a learning difficulty allows for immediate, targeted support before the gap widens and the student falls further behind."
+  },
+  {
+    "id": 10,
+    "question": "Child protection policies promote:",
+    "options": {
+      "A": "Abuse",
+      "B": "Safety and welfare",
+      "C": "Teacher dominance",
+      "D": "Physical punishment"
+    },
+    "answer": "B",
+    "explanation": "The explicit and primary purpose of child protection policies is to create a secure environment, setting guidelines and procedures to ensure the **Safety and welfare** (B) of all learners."
+  },
+  {
+    "id": 11,
+    "question": "The best time to correct errors in learning is:",
+    "options": {
+      "A": "Immediately",
+      "B": "Weeks later",
+      "C": "Never",
+      "D": "During exams"
+    },
+    "answer": "A",
+    "explanation": "Immediate feedback is crucial because it prevents the learner from practicing and consolidating an error or misconception. Correcting the error **Immediately** (A) reinforces the correct understanding."
+  },
+  {
+    "id": 12,
+    "question": "Syllabuses help teachers to:",
+    "options": {
+      "A": "Know content and standards",
+      "B": "Ignore curriculum",
+      "C": "Reduce teaching",
+      "D": "Create personal topics"
+    },
+    "answer": "A",
+    "explanation": "The syllabus is the official document that outlines the scope, sequence, and requirements of a course. It enables teachers to **Know the required content and standards** (A) that must be covered."
+  },
+  {
+    "id": 13,
+    "question": "Strong school culture is built on:",
+    "options": {
+      "A": "Shared values",
+      "B": "Fear",
+      "C": "Division",
+      "D": "Gossip"
+    },
+    "answer": "A",
+    "explanation": "School culture is the collective sense of identity, purpose, and belief system within the institution. A strong, positive culture relies on all stakeholders holding **Shared values** (A) and norms."
+  },
+  {
+    "id": 14,
+    "question": "Learning aids should be:",
+    "options": {
+      "A": "Relevant and appropriate",
+      "B": "Confusing",
+      "C": "Excessive",
+      "D": "Irrelevant"
+    },
+    "answer": "A",
+    "explanation": "Effective Teaching and Learning Materials (TLMs) must directly support the lesson objectives (**Relevant**) and be suitable for the age and context of the learners (**appropriate**). Thus, they should be **Relevant and appropriate** (A)."
+  },
+  {
+    "id": 15,
+    "question": "Professional learning communities help teachers:",
+    "options": {
+      "A": "Work in isolation",
+      "B": "Share best practices",
+      "C": "Encourage conflict",
+      "D": "Limit growth"
+    },
+    "answer": "B",
+    "explanation": "A Professional Learning Community (PLC) is a collaborative group of educators who meet to improve teaching skills and student outcomes. Their core function is to analyze data and **Share best practices** (B)."
+  },
+  {
+    "id": 16,
+    "question": "The PS enhances learning quality by:",
+    "options": {
+      "A": "Monitoring teaching consistently",
+      "B": "Avoiding supervision",
+      "C": "Reducing standards",
+      "D": "Ignoring learner needs"
+    },
+    "answer": "A",
+    "explanation": "The PS is an instructional leader. Ensuring high-quality teaching is maintained requires a systematic approach, which involves **Monitoring teaching consistently** (A) and providing continuous feedback."
+  },
+  {
+    "id": 17,
+    "question": "Effective time management in lessons requires:",
+    "options": {
+      "A": "Clear pacing",
+      "B": "Random activities",
+      "C": "No planning",
+      "D": "Overlong introductions"
+    },
+    "answer": "A",
+    "explanation": "**Clear pacing** (A) is the deliberate setting of an optimal rate for moving through the lesson activities and content. It ensures that all objectives are covered within the allotted time without rushing or dragging."
+  },
+  {
+    "id": 18,
+    "question": "Authentic assessment measures:",
+    "options": {
+      "A": "Memorization",
+      "B": "Real-life application",
+      "C": "Irrelevant facts",
+      "D": "Guessing"
+    },
+    "answer": "B",
+    "explanation": "Authentic assessment requires students to perform tasks or solve problems that replicate challenges faced in the real world. It focuses on the **Real-life application** (B) of knowledge and skills, not rote recall."
+  },
+  {
+    "id": 19,
+    "question": "The best approach to grouping learners is:",
+    "options": {
+      "A": "Based on learning needs",
+      "B": "Height",
+      "C": "Uniform size",
+      "D": "Surname"
+    },
+    "answer": "A",
+    "explanation": "Effective grouping is instructional. It is done to maximize learning by targeting specific skill deficits or providing enrichment, meaning grouping must be **Based on learning needs** (A) or readiness levels."
+  },
+  {
+    "id": 20,
+    "question": "A PS ensures fairness by:",
+    "options": {
+      "A": "Treating all staff equitably",
+      "B": "Being biased",
+      "C": "Encouraging favouritism",
+      "D": "Promoting conflict"
+    },
+    "answer": "A",
+    "explanation": "Fairness in leadership is achieved by applying rules, policies, and expectations consistently and without prejudice to all members of the team, which is **Treating all staff equitably** (A)."
+  },
+  {
+    "id": 21,
+    "question": "Classroom routines help to:",
+    "options": {
+      "A": "Reduce learning time",
+      "B": "Maintain order",
+      "C": "Create confusion",
+      "D": "Promote noise"
+    },
+    "answer": "B",
+    "explanation": "Routines are established, repeatable procedures for common tasks (e.g., handing in work, beginning lessons). They minimize transitions, reduce chaos, and allow the teacher to **Maintain order** (B) efficiently."
+  },
+  {
+    "id": 22,
+    "question": "A well-organised classroom promotes:",
+    "options": {
+      "A": "Disruption",
+      "B": "Effective learning",
+      "C": "Stress",
+      "D": "Fear"
+    },
+    "answer": "B",
+    "explanation": "An organized classroom, both physically and procedurally, reduces distractions and increases the available time for instruction, directly supporting and promoting **Effective learning** (B)."
+  },
+  {
+    "id": 23,
+    "question": "Teachers demonstrate professionalism when they:",
+    "options": {
+      "A": "Report early",
+      "B": "Ignore deadlines",
+      "C": "Come unprepared",
+      "D": "Rely on guesswork"
+    },
+    "answer": "A",
+    "explanation": "Punctuality is a key professional expectation. Adherence to time schedules, which includes being prepared and **Reporting early** (A) for duties, demonstrates respect for the learning process and colleagues."
+  },
+  {
+    "id": 24,
+    "question": "Which strategy improves higher-order thinking?",
+    "options": {
+      "A": "Open-ended questions",
+      "B": "Rote drilling",
+      "C": "Copying notes",
+      "D": "Dictation"
+    },
+    "answer": "A",
+    "explanation": "**Open-ended questions** (A) (e.g., 'Why did this happen?' or 'How can we solve this?') require students to apply, analyze, synthesize, or evaluate information, engaging them in higher-order thinking skills."
+  },
+  {
+    "id": 25,
+    "question": "Effective supervision includes:",
+    "options": {
+      "A": "Follow-up support",
+      "B": "One-time visits",
+      "C": "Harsh criticism",
+      "D": "Avoidance"
+    },
+    "answer": "A",
+    "explanation": "Effective supervision is a continuous process. After an observation and feedback, the supervisor must ensure that the teacher is implementing the agreed-upon changes through ongoing **Follow-up support** (A) and monitoring."
+  },
+  {
+    "id": 26,
+    "question": "Co-teaching benefits learners by:",
+    "options": {
+      "A": "Confusing them",
+      "B": "Providing multiple perspectives",
+      "C": "Reducing feedback",
+      "D": "Encouraging absenteeism"
+    },
+    "answer": "B",
+    "explanation": "With two teachers in the room, students can hear the same content explained in different ways or gain different insights and teaching styles, effectively **Providing multiple perspectives** (B) on the material."
+  },
+  {
+    "id": 27,
+    "question": "Which is most important in planning instruction?",
+    "options": {
+      "A": "Learning objectives",
+      "B": "Decorations",
+      "C": "Student uniforms",
+      "D": "Office politics"
+    },
+    "answer": "A",
+    "explanation": "The **Learning objectives** (A) define the intended outcomes—what students should know or be able to do by the end of the lesson. They are the essential foundation upon which all instructional activities and assessments are built."
+  },
+  {
+    "id": 28,
+    "question": "Lesson evaluation helps teachers to:",
+    "options": {
+      "A": "Improve future lessons",
+      "B": "Punish students",
+      "C": "Fill forms",
+      "D": "Reduce content"
+    },
+    "answer": "A",
+    "explanation": "Lesson evaluation is the process of reflecting on the lesson's success based on student learning and engagement. This reflection is vital for a teacher to identify weaknesses and refine their approach to **Improve future lessons** (A)."
+  },
+  {
+    "id": 29,
+    "question": "An effective teacher uses:",
+    "options": {
+      "A": "Multiple teaching strategies",
+      "B": "One method only",
+      "C": "Only chalk-and-talk",
+      "D": "No learner involvement"
+    },
+    "answer": "A",
+    "explanation": "Students have diverse learning styles and needs. An effective teacher addresses this diversity and maintains high engagement by employing **Multiple teaching strategies** (A) and varying their instructional methods."
+  },
+  {
+    "id": 30,
+    "question": "Learner engagement increases when teachers:",
+    "options": {
+      "A": "Ask interactive questions",
+      "B": "Talk throughout",
+      "C": "Dictate notes",
+      "D": "Use no TLMs"
+    },
+    "answer": "A",
+    "explanation": "Engagement is active participation. The use of frequent, targeted, and open-ended **Interactive questions** (A) immediately requires students to think, process information, and respond, increasing their mental and verbal involvement."
+  },
+  {
+    "id": 31,
+    "question": "A PS monitors school records to ensure:",
+    "options": {
+      "A": "Accountability",
+      "B": "Duplication",
+      "C": "Guesswork",
+      "D": "Disorder"
+    },
+    "answer": "A",
+    "explanation": "Accurate and well-maintained school records are the objective evidence of staff actions, student progress, and financial transactions. Monitoring these records is essential for enforcing **Accountability** (A) across all operations."
+  },
+  {
+    "id": 32,
+    "question": "A key principle of assessment is:",
+    "options": {
+      "A": "Reliability",
+      "B": "Humour",
+      "C": "Delay",
+      "D": "Punishment"
+    },
+    "answer": "A",
+    "explanation": "**Reliability** (A) refers to the consistency of an assessment measure: a reliable test should produce similar results if administered repeatedly under the same conditions. It is a fundamental technical quality of any good test."
+  },
+  {
+    "id": 33,
+    "question": "Collaboration between teachers leads to:",
+    "options": {
+      "A": "Shared expertise",
+      "B": "Laziness",
+      "C": "Conflict",
+      "D": "Decline in quality"
+    },
+    "answer": "A",
+    "explanation": "When teachers collaborate, they pool their experiences, knowledge, and instructional materials. This collective effort results in the development and access to **Shared expertise** (A) and improved instructional quality."
+  },
+  {
+    "id": 34,
+    "question": "School supervision helps to:",
+    "options": {
+      "A": "Improve teaching standards",
+      "B": "Increase misconduct",
+      "C": "Reduce monitoring",
+      "D": "Promote conflict"
+    },
+    "answer": "A",
+    "explanation": "The core function of modern school supervision is developmental. By observing, providing feedback, and offering support, supervision aims directly to **Improve teaching standards** (A) and effectiveness."
+  },
+  {
+    "id": 35,
+    "question": "Learner portfolios are used to:",
+    "options": {
+      "A": "Track progress over time",
+      "B": "Store complaints",
+      "C": "Reduce assessment",
+      "D": "Replace exams"
+    },
+    "answer": "A",
+    "explanation": "A portfolio is a deliberate collection of student work that shows effort, progress, and achievement. They are particularly effective assessment tools for demonstrating and **Tracking progress over time** (A) in a subject or skill."
+  },
+  {
+    "id": 36,
+    "question": "Good questioning techniques promote:",
+    "options": {
+      "A": "Critical thinking",
+      "B": "Silence",
+      "C": "Confusion",
+      "D": "Fear"
+    },
+    "answer": "A",
+    "explanation": "Techniques like using higher-order questions and providing adequate wait time encourage students to move beyond surface-level answers and engage in deeper analysis, fostering **Critical thinking** (A)."
+  },
+  {
+    "id": 37,
+    "question": "Teacher appraisal helps to:",
+    "options": {
+      "A": "Identify training needs",
+      "B": "Encourage conflict",
+      "C": "Promote gossip",
+      "D": "Reduce professionalism"
+    },
+    "answer": "A",
+    "explanation": "A systematic teacher appraisal process evaluates current performance against established standards. The resulting data is then used to plan professional development interventions, helping to **Identify training needs** (A)."
+  },
+  {
+    "id": 38,
+    "question": "The main purpose of feedback is to:",
+    "options": {
+      "A": "Improve performance",
+      "B": "Lower confidence",
+      "C": "Punish workers",
+      "D": "Delay decisions"
+    },
+    "answer": "A",
+    "explanation": "Feedback is specific information provided to a teacher or learner to guide them in closing the gap between their current performance and the desired outcome, making its core purpose to **Improve performance** (A)."
+  },
+  {
+    "id": 39,
+    "question": "Classroom observation records must be:",
+    "options": {
+      "A": "Accurate and objective",
+      "B": "Opinion-based",
+      "C": "Emotional",
+      "D": "Secret"
+    },
+    "answer": "A",
+    "explanation": "To provide constructive and defensible feedback, observation records must be based on verifiable facts about what occurred during the lesson. They must therefore be **Accurate and objective** (A), avoiding subjective judgment."
+  },
+  {
+    "id": 40,
+    "question": "A safe school environment is one that:",
+    "options": {
+      "A": "Encourages bullying",
+      "B": "Protects learners",
+      "C": "Promotes fear",
+      "D": "Ignores abuse"
+    },
+    "answer": "B",
+    "explanation": "Safety in a school context means the active creation of a physical and emotional environment free from hazard, violence, and abuse. Its essential quality is that it **Protects learners** (B)."
+  },
+  {
+    "id": 41,
+    "question": "Formative assessment occurs:",
+    "options": {
+      "A": "During learning",
+      "B": "Only at the end",
+      "C": "Once a year",
+      "D": "After exams"
+    },
+    "answer": "A",
+    "explanation": "Formative assessment is 'assessment for learning.' It is an ongoing process integrated into the instructional time, designed to provide immediate feedback to guide teaching and learning **During learning** (A)."
+  },
+  {
+    "id": 42,
+    "question": "Differentiation is important because:",
+    "options": {
+      "A": "Learners have diverse needs",
+      "B": "It wastes time",
+      "C": "It reduces learning",
+      "D": "It increases indiscipline"
+    },
+    "answer": "A",
+    "explanation": "Differentiation is the practice of adjusting content, process, products, or environment to cater to the fact that all **Learners have diverse needs** (A) regarding readiness, interest, and learning profiles."
+  },
+  {
+    "id": 43,
+    "question": "Effective teacher–learner relationships promote:",
+    "options": {
+      "A": "Learning",
+      "B": "Fear",
+      "C": "Silence",
+      "D": "Stress"
+    },
+    "answer": "A",
+    "explanation": "A positive relationship built on mutual trust and respect is a foundational element of a supportive classroom, which increases student motivation, engagement, and ultimately, **Learning** (A)."
+  },
+  {
+    "id": 44,
+    "question": "Classroom routines enhance:",
+    "options": {
+      "A": "Orderliness",
+      "B": "Chaos",
+      "C": "Disruption",
+      "D": "Fear"
+    },
+    "answer": "A",
+    "explanation": "Routines provide predictable structure for the daily operation of the classroom, minimizing wasted time and student uncertainty. This certainty directly enhances **Orderliness** (A) and efficient management."
+  },
+  {
+    "id": 45,
+    "question": "A PS must demonstrate:",
+    "options": {
+      "A": "Professional conduct",
+      "B": "Bias",
+      "C": "Hostility",
+      "D": "Indiscipline"
+    },
+    "answer": "A",
+    "explanation": "As a school leader, the PS's behavior sets the standard for the entire institution. It is imperative that they consistently model high ethical standards and **Professional conduct** (A) in all their interactions."
+  },
+  {
+    "id": 46,
+    "question": "A positive learning environment should promote:",
+    "options": {
+      "A": "Engagement",
+      "B": "Fear",
+      "C": "Isolation",
+      "D": "Harshness"
+    },
+    "answer": "A",
+    "explanation": "A positive, supportive environment where students feel safe to take risks and ask questions is highly conducive to active involvement in tasks and intellectual exploration, thereby promoting **Engagement** (A)."
+  },
+  {
+    "id": 47,
+    "question": "Assessment rubrics ensure:",
+    "options": {
+      "A": "Clear scoring criteria",
+      "B": "Guesswork",
+      "C": "Bias",
+      "D": "Unfair marking"
+    },
+    "answer": "A",
+    "explanation": "Rubrics are guides that specify the expectations and quality indicators for different levels of performance. Their use makes assessment transparent and objective, guaranteeing **Clear scoring criteria** (A)."
+  },
+  {
+    "id": 48,
+    "question": "Inquiry-based learning encourages:",
+    "options": {
+      "A": "Curiosity",
+      "B": "Silence",
+      "C": "Memorization only",
+      "D": "Teacher dominance"
+    },
+    "answer": "A",
+    "explanation": "Inquiry-based learning is centered on student questions and investigations. By placing a problem or phenomenon at the center of instruction, it inherently stimulates the student's **Curiosity** (A) and drive to discover."
+  },
+  {
+    "id": 49,
+    "question": "A PS must ensure teachers:",
+    "options": {
+      "A": "Prepare adequately",
+      "B": "Ignore planning",
+      "C": "Teach randomly",
+      "D": "Skip assessments"
+    },
+    "answer": "A",
+    "explanation": "The PS is responsible for quality control of instruction. This requires ensuring that all staff meet the basic professional expectation to **Prepare adequately** (A) for every lesson through planning and resource gathering."
+  },
+  {
+    "id": 50,
+    "question": "Classroom supervision aims to:",
+    "options": {
+      "A": "Improve teaching",
+      "B": "Intimidate teachers",
+      "C": "Reduce support",
+      "D": "Discourage learning"
+    },
+    "answer": "A",
+    "explanation": "The overarching goal of classroom supervision, through all its methods (observation, feedback, mentoring), is not punitive but developmental. Its fundamental aim is to support teachers and ultimately **Improve teaching** (A)."
+  }
+]

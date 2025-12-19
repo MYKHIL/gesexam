@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "The best tool for monitoring is",
+    "options": {
+      "A": "Guesswork",
+      "B": "Checklists",
+      "C": "Rumours",
+      "D": "Emotions"
+    },
+    "answer": "B",
+    "explanation": "Effective monitoring requires a systematic and objective method to track compliance and progress against standards. **Checklists** (B) are the best tool for this, as they ensure consistency and document essential steps."
+  },
+  {
+    "id": 2,
+    "question": "The span of control refers to",
+    "options": {
+      "A": "Number of meetings",
+      "B": "Number of subordinates supervised",
+      "C": "Number of offices",
+      "D": "Budget size"
+    },
+    "answer": "B",
+    "explanation": "The **span of control** is a core concept in organizational structure, defined as the **Number of subordinates supervised** (B) effectively by one manager or director."
+  },
+  {
+    "id": 3,
+    "question": "A Deputy Director enhances teamwork by",
+    "options": {
+      "A": "Encouraging collaboration",
+      "B": "Promoting division",
+      "C": "Creating fear",
+      "D": "Limiting communication"
+    },
+    "answer": "A",
+    "explanation": "Teamwork is built on shared goals and mutual support. A Deputy Director actively fosters a culture of shared effort and open dialogue by **Encouraging collaboration** (A) among staff."
+  },
+  {
+    "id": 4,
+    "question": "A report is credible when",
+    "options": {
+      "A": "It is evidence-based",
+      "B": "It is emotional",
+      "C": "It is vague",
+      "D": "It lacks data"
+    },
+    "answer": "A",
+    "explanation": "Credibility in administrative reporting comes from objectivity and verifiability. A report is credible when it is founded on verifiable facts, data, and analysis, meaning **It is evidence-based** (A)."
+  },
+  {
+    "id": 5,
+    "question": "Effective planning begins with",
+    "options": {
+      "A": "Setting objectives",
+      "B": "Issuing sanctions",
+      "C": "Recruitment",
+      "D": "Avoiding priorities"
+    },
+    "answer": "A",
+    "explanation": "The planning process starts by defining where the organization wants to go. This is achieved by first **Setting objectives** (A), which then guide the selection of strategies and allocation of resources."
+  },
+  {
+    "id": 6,
+    "question": "Organisational leadership requires",
+    "options": {
+      "A": "Manipulation",
+      "B": "Vision",
+      "C": "Corruption",
+      "D": "Hostility"
+    },
+    "answer": "B",
+    "explanation": "Leadership is primarily about guiding an organization toward a desired future state. This requires having a clear, inspiring image of the future, which is known as **Vision** (B)."
+  },
+  {
+    "id": 7,
+    "question": "Communication barriers include",
+    "options": {
+      "A": "Feedback",
+      "B": "Noise",
+      "C": "Clarity",
+      "D": "Listening"
+    },
+    "answer": "B",
+    "explanation": "**Noise** (B) in the communication model refers to any interference that hinders the intended message from being understood (e.g., physical distractions, semantic confusion, or psychological filters). Feedback, clarity, and listening are elements of good communication."
+  },
+  {
+    "id": 8,
+    "question": "A Deputy Director prevents conflict by",
+    "options": {
+      "A": "Encouraging rumours",
+      "B": "Promoting communication",
+      "C": "Ignoring issues",
+      "D": "Spreading fear"
+    },
+    "answer": "B",
+    "explanation": "Misunderstandings are a major source of conflict. By fostering an environment of open dialogue and clear information sharing, a leader can proactively prevent disputes by **Promoting communication** (B)."
+  },
+  {
+    "id": 9,
+    "question": "Budgeting ensures",
+    "options": {
+      "A": "Waste",
+      "B": "Proper allocation of resources",
+      "C": "Mismanagement",
+      "D": "Guesswork"
+    },
+    "answer": "B",
+    "explanation": "Budgeting is the process of planning how money will be acquired and spent to meet organizational goals, thereby ensuring the **Proper allocation of resources** (B) to prioritized activities."
+  },
+  {
+    "id": 10,
+    "question": "A good decision must be",
+    "options": {
+      "A": "Emotional",
+      "B": "Rational",
+      "C": "Biased",
+      "D": "Blind"
+    },
+    "answer": "B",
+    "explanation": "In an administrative context, effective decisions should be based on logic, objective data, and careful evaluation of alternatives, meaning they must be **Rational** (B)."
+  },
+  {
+    "id": 11,
+    "question": "Duty rosters promote",
+    "options": {
+      "A": "Confusion",
+      "B": "Organisation",
+      "C": "Lateness",
+      "D": "Absenteeism"
+    },
+    "answer": "B",
+    "explanation": "A **duty roster** is a systematic schedule of tasks and responsibilities assigned to specific staff members over a defined period. Its purpose is to ensure clear roles and coverage, promoting **Organisation** (B)."
+  },
+  {
+    "id": 12,
+    "question": "Motivation increases when",
+    "options": {
+      "A": "Work is ignored",
+      "B": "Staff are appreciated",
+      "C": "Incentives are withheld",
+      "D": "Threats increase"
+    },
+    "answer": "B",
+    "explanation": "Recognition and positive feedback fulfill fundamental psychological needs for belonging and esteem, directly boosting morale and motivation when **Staff are appreciated** (B)."
+  },
+  {
+    "id": 13,
+    "question": "Monitoring improves",
+    "options": {
+      "A": "Performance",
+      "B": "Misconduct",
+      "C": "Waste",
+      "D": "Confusion"
+    },
+    "answer": "A",
+    "explanation": "The process of monitoring provides timely data on outputs and progress, allowing for corrective action, guidance, and support, which directly leads to an improvement in **Performance** (A)."
+  },
+  {
+    "id": 14,
+    "question": "A Deputy Director ensures fairness by",
+    "options": {
+      "A": "Applying rules equally",
+      "B": "Favouring friends",
+      "C": "Using bias",
+      "D": "Delaying justice"
+    },
+    "answer": "A",
+    "explanation": "Equity and fairness in administration mean treating all staff according to the established policies and procedures without discrimination. This is achieved by **Applying rules equally** (A)."
+  },
+  {
+    "id": 15,
+    "question": "A vision statement inspires",
+    "options": {
+      "A": "Future aspirations",
+      "B": "Daily operations",
+      "C": "Punishment",
+      "D": "Retirement"
+    },
+    "answer": "A",
+    "explanation": "A **vision statement** describes the long-term desired status of the organization. It is designed to motivate stakeholders by outlining the ideal future, hence inspiring **Future aspirations** (A)."
+  },
+  {
+    "id": 16,
+    "question": "An audit promotes",
+    "options": {
+      "A": "Accountability",
+      "B": "Corruption",
+      "C": "Confusion",
+      "D": "Secrecy"
+    },
+    "answer": "A",
+    "explanation": "An **audit** is an official inspection of an organization's accounts and procedures, designed to verify compliance with laws and policies. Its main role is to promote transparency and **Accountability** (A)."
+  },
+  {
+    "id": 17,
+    "question": "Supervision requires",
+    "options": {
+      "A": "Guidance",
+      "B": "Neglect",
+      "C": "Threats",
+      "D": "Fear"
+    },
+    "answer": "A",
+    "explanation": "Effective supervision is developmental and supportive, not punitive. It involves observing work and providing constructive feedback and **Guidance** (A) to help employees improve."
+  },
+  {
+    "id": 18,
+    "question": "The purpose of induction is",
+    "options": {
+      "A": "Orientation",
+      "B": "Confusion",
+      "C": "Mismanagement",
+      "D": "Punishment"
+    },
+    "answer": "A",
+    "explanation": "**Induction** (or onboarding) is the process of introducing a new employee to the organization's policies, culture, staff, and job duties. Its core purpose is **Orientation** (A)."
+  },
+  {
+    "id": 19,
+    "question": "A Deputy Director ensures quality by",
+    "options": {
+      "A": "Consistent monitoring",
+      "B": "Ignoring standards",
+      "C": "Promoting shortcuts",
+      "D": "Avoiding evaluation"
+    },
+    "answer": "A",
+    "explanation": "Quality assurance is an ongoing process of oversight and evaluation to ensure standards are met. This requires **Consistent monitoring** (A) of outputs and processes."
+  },
+  {
+    "id": 20,
+    "question": "Best leadership practice involves",
+    "options": {
+      "A": "Consistency",
+      "B": "Favouritism",
+      "C": "Dishonesty",
+      "D": "Miscommunication"
+    },
+    "answer": "A",
+    "explanation": "Leaders must be reliable and fair in their expectations, communication, and application of rules. **Consistency** (A) builds trust and predictability, which is key to a positive working environment."
+  },
+  {
+    "id": 21,
+    "question": "Decision-making requires",
+    "options": {
+      "A": "Alternatives",
+      "B": "Rumours",
+      "C": "Guesswork",
+      "D": "Assumptions"
+    },
+    "answer": "A",
+    "explanation": "The decision-making process involves identifying a problem, gathering information, and then evaluating potential courses of action, or **Alternatives** (A), before selecting the best option."
+  },
+  {
+    "id": 22,
+    "question": "Performance standards must be",
+    "options": {
+      "A": "Clear",
+      "B": "Hidden",
+      "C": "Absent",
+      "D": "Confusing"
+    },
+    "answer": "A",
+    "explanation": "Employees cannot meet expectations they do not understand. For effective accountability and motivation, performance standards must be explicitly defined and communicated, meaning they must be **Clear** (A)."
+  },
+  {
+    "id": 23,
+    "question": "A schedule helps in",
+    "options": {
+      "A": "Time management",
+      "B": "Wasting time",
+      "C": "Creating disorder",
+      "D": "Avoiding work"
+    },
+    "answer": "A",
+    "explanation": "A **schedule** is a detailed plan for carrying out tasks at specific times. It is a fundamental tool for planning and control, directly supporting **Time management** (A)."
+  },
+  {
+    "id": 24,
+    "question": "Organisational success is driven by",
+    "options": {
+      "A": "Coordination",
+      "B": "Division",
+      "C": "Fear",
+      "D": "Rumours"
+    },
+    "answer": "A",
+    "explanation": "For an organization to meet complex goals, different departments and individuals must work together smoothly, requiring strong synchronization of activities, known as **Coordination** (A)."
+  },
+  {
+    "id": 25,
+    "question": "Effective leadership is based on",
+    "options": {
+      "A": "Influence",
+      "B": "Threats",
+      "C": "Hostility",
+      "D": "Bias"
+    },
+    "answer": "A",
+    "explanation": "Leadership is defined as the ability to move others towards a goal. The most powerful way to achieve this is through voluntary compliance and motivation, which is achieved through positive **Influence** (A)."
+  },
+  {
+    "id": 26,
+    "question": "Productivity increases when",
+    "options": {
+      "A": "Resources are used efficiently",
+      "B": "Waste is encouraged",
+      "C": "Deadlines are ignored",
+      "D": "Roles are unclear"
+    },
+    "answer": "A",
+    "explanation": "**Productivity** is a measure of output per unit of input. By minimizing waste and maximizing output from the available resources, **Resources are used efficiently** (A) and productivity rises."
+  },
+  {
+    "id": 27,
+    "question": "A Deputy Director addresses grievances by",
+    "options": {
+      "A": "Listening",
+      "B": "Ignoring staff",
+      "C": "Blaming victims",
+      "D": "Delaying action"
+    },
+    "answer": "A",
+    "explanation": "The first and most critical step in conflict resolution and grievance handling is active **Listening** (A) to fully understand the nature and cause of the complaint."
+  },
+  {
+    "id": 28,
+    "question": "A good meeting concludes with",
+    "options": {
+      "A": "Action points",
+      "B": "Confusion",
+      "C": "No records",
+      "D": "Arguments"
+    },
+    "answer": "A",
+    "explanation": "The value of a meeting is determined by the clarity of the resulting work. A good meeting summarizes decisions made and specifies who is responsible for what by setting clear **Action points** (A)."
+  },
+  {
+    "id": 29,
+    "question": "Integrity in leadership involves",
+    "options": {
+      "A": "Honesty",
+      "B": "Manipulation",
+      "C": "Secrecy",
+      "D": "Inconsistency"
+    },
+    "answer": "A",
+    "explanation": "**Integrity** is the quality of being honest and having strong moral principles. It is the foundation of trust between a leader and their team, requiring **Honesty** (A)."
+  },
+  {
+    "id": 30,
+    "question": "The main goal of supervision is",
+    "options": {
+      "A": "Improvement",
+      "B": "Punishment",
+      "C": "Delay",
+      "D": "Division"
+    },
+    "answer": "A",
+    "explanation": "Whether it is instructional or administrative, the ultimate objective of supervision is to provide the feedback and support necessary for **Improvement** (A) in staff practice and organizational outcomes."
+  },
+  {
+    "id": 31,
+    "question": "Teamwork improves when",
+    "options": {
+      "A": "Roles are clear",
+      "B": "Gossip increases",
+      "C": "Hostility grows",
+      "D": "Communication breaks"
+    },
+    "answer": "A",
+    "explanation": "In a team, ambiguity regarding responsibilities leads to duplicated effort and conflict. Team efficiency and collaboration increase dramatically when **Roles are clear** (A)."
+  },
+  {
+    "id": 32,
+    "question": "A Deputy Director promotes excellence by",
+    "options": {
+      "A": "Setting high standards",
+      "B": "Reducing expectations",
+      "C": "Encouraging shortcuts",
+      "D": "Accepting mediocrity"
+    },
+    "answer": "A",
+    "explanation": "Excellence is achieved through striving for the best possible outcomes. This requires the leader to motivate the team toward superior results by **Setting high standards** (A)."
+  },
+  {
+    "id": 33,
+    "question": "Performance indicators measure",
+    "options": {
+      "A": "Achievement",
+      "B": "Opinions",
+      "C": "Rumours",
+      "D": "Expectations"
+    },
+    "answer": "A",
+    "explanation": "Key **Performance Indicators (KPIs)** are quantifiable metrics used to evaluate the success of an organization or employee in meeting objectives, essentially measuring **Achievement** (A)."
+  },
+  {
+    "id": 34,
+    "question": "A good leader supports",
+    "options": {
+      "A": "Professional development",
+      "B": "Corruption",
+      "C": "Secrecy",
+      "D": "Bias"
+    },
+    "answer": "A",
+    "explanation": "To maintain a skilled and motivated workforce, leaders must invest in the growth of their staff by providing opportunities for continuous learning and **Professional development** (A)."
+  },
+  {
+    "id": 35,
+    "question": "Decision-making is enhanced by",
+    "options": {
+      "A": "Critical thinking",
+      "B": "Fear",
+      "C": "Guesswork",
+      "D": "Delay"
+    },
+    "answer": "A",
+    "explanation": "High-quality decisions rely on the ability to analyze information objectively, evaluate various options, and reason logically, which are the core components of **Critical thinking** (A)."
+  },
+  {
+    "id": 36,
+    "question": "Records are important for",
+    "options": {
+      "A": "Audit",
+      "B": "Destruction",
+      "C": "Confusion",
+      "D": "Loss"
+    },
+    "answer": "A",
+    "explanation": "Well-kept records provide the necessary documentation and evidence required to verify financial and procedural compliance during an **Audit** (A)."
+  },
+  {
+    "id": 37,
+    "question": "Coordination reduces",
+    "options": {
+      "A": "Conflict",
+      "B": "Unity",
+      "C": "Cooperation",
+      "D": "Clarity"
+    },
+    "answer": "A",
+    "explanation": "By aligning the efforts of different parts of the organization, coordination eliminates duplication, misunderstanding, and competition over resources, thereby reducing **Conflict** (A)."
+  },
+  {
+    "id": 38,
+    "question": "A Deputy Director ensures safety by",
+    "options": {
+      "A": "Enforcing guidelines",
+      "B": "Ignoring hazards",
+      "C": "Encouraging carelessness",
+      "D": "Delaying inspections"
+    },
+    "answer": "A",
+    "explanation": "Ensuring a safe working environment involves establishing clear rules and procedures and consistently monitoring adherence to them, meaning the leader is **Enforcing guidelines** (A)."
+  },
+  {
+    "id": 39,
+    "question": "Performance reviews identify",
+    "options": {
+      "A": "Strengths and weaknesses",
+      "B": "Secrets",
+      "C": "Rumours",
+      "D": "Misconduct only"
+    },
+    "answer": "A",
+    "explanation": "A comprehensive performance review assesses overall contribution, detailing both areas of exceptional performance (**Strengths**) and areas needing development (**weaknesses**) (A)."
+  },
+  {
+    "id": 40,
+    "question": "Effective monitoring uses",
+    "options": {
+      "A": "Reports",
+      "B": "Hearsay",
+      "C": "Suspicion",
+      "D": "Bias"
+    },
+    "answer": "A",
+    "explanation": "The data collected through monitoring is formally presented and documented for analysis and decision-making in the form of **Reports** (A). Hearsay, suspicion, and bias introduce subjectivity and inaccuracy."
+  },
+  {
+    "id": 41,
+    "question": "Staff development enhances",
+    "options": {
+      "A": "Skills",
+      "B": "Misconduct",
+      "C": "Laziness",
+      "D": "Waste"
+    },
+    "answer": "A",
+    "explanation": "The primary goal of **staff development** (training, professional development) is to update, expand, and enhance the capabilities and **Skills** (A) of the employees."
+  },
+  {
+    "id": 42,
+    "question": "Organisational decisions must be",
+    "options": {
+      "A": "Objective",
+      "B": "Biased",
+      "C": "Emotional",
+      "D": "Random"
+    },
+    "answer": "A",
+    "explanation": "Administrative decisions should be based on facts, data, and the best interest of the organization, free from personal feelings or prejudice, making them **Objective** (A)."
+  },
+  {
+    "id": 43,
+    "question": "Good leadership communication must be",
+    "options": {
+      "A": "Open",
+      "B": "Secretive",
+      "C": "Harsh",
+      "D": "Uncertain"
+    },
+    "answer": "A",
+    "explanation": "Transparency is crucial for building trust and ensuring employees feel informed. Therefore, good leadership communication should be clear, honest, and **Open** (A)."
+  },
+  {
+    "id": 44,
+    "question": "Time management requires",
+    "options": {
+      "A": "Prioritisation",
+      "B": "Procrastination",
+      "C": "Delay",
+      "D": "Guesswork"
+    },
+    "answer": "A",
+    "explanation": "**Time management** is fundamentally about allocating time to the most important tasks. This critical activity is achieved through effective **Prioritisation** (A)."
+  },
+  {
+    "id": 45,
+    "question": "A Deputy Director improves service delivery by",
+    "options": {
+      "A": "Streamlining processes",
+      "B": "Increasing bureaucracy",
+      "C": "Reducing supervision",
+      "D": "Adding complexity"
+    },
+    "answer": "A",
+    "explanation": "Improving service delivery often means making the delivery faster, simpler, and more efficient. This is done by reviewing and optimizing workflows, which is called **Streamlining processes** (A)."
+  },
+  {
+    "id": 46,
+    "question": "Team morale increases with",
+    "options": {
+      "A": "Recognition",
+      "B": "Neglect",
+      "C": "Bias",
+      "D": "Conflict"
+    },
+    "answer": "A",
+    "explanation": "Acknowledging and celebrating the hard work and achievements of the team members boosts their feeling of worth and value, directly increasing team morale through **Recognition** (A)."
+  },
+  {
+    "id": 47,
+    "question": "Strategic goals must be",
+    "options": {
+      "A": "Achievable",
+      "B": "Impossible",
+      "C": "Hidden",
+      "D": "Undefined"
+    },
+    "answer": "A",
+    "explanation": "Following the SMART framework, goals must be realistic and within the organization's capacity to complete. A strategic goal must be **Achievable** (A) to be motivating and credible."
+  },
+  {
+    "id": 48,
+    "question": "Performance evaluation ensures",
+    "options": {
+      "A": "Improvement",
+      "B": "Decline",
+      "C": "Confusion",
+      "D": "Misinformation"
+    },
+    "answer": "A",
+    "explanation": "By providing structured feedback and identifying areas for development, **performance evaluation** serves as a vital management tool for planning training and supporting employee **Improvement** (A)."
+  },
+  {
+    "id": 49,
+    "question": "Ethical behaviour requires",
+    "options": {
+      "A": "Fairness",
+      "B": "Favouritism",
+      "C": "Corruption",
+      "D": "Dishonesty"
+    },
+    "answer": "A",
+    "explanation": "Ethical practice involves acting impartially, justly, and without prejudice. At its core, ethical behaviour requires **Fairness** (A) in all dealings."
+  },
+  {
+    "id": 50,
+    "question": "Staff motivation increases when leaders",
+    "options": {
+      "A": "Support their needs",
+      "B": "Ignore them",
+      "C": "Punish them",
+      "D": "Avoid them"
+    },
+    "answer": "A",
+    "explanation": "Leaders who are attentive to their staff's professional development, well-being, and resource requirements (i.e., **Support their needs** (A)) foster a positive work environment, leading to higher motivation."
+  }
+]

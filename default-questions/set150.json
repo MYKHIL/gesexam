@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "Professional ethics ensure",
+    "options": {
+      "A": "Higher salaries",
+      "B": "Responsible conduct",
+      "C": "Fear",
+      "D": "Conflict"
+    },
+    "answer": "B",
+    "explanation": "Professional ethics are a set of moral principles governing the behavior of an individual or group. Their core function is to ensure **Responsible conduct** (B) and integrity within the profession, particularly in interactions with students, colleagues, and the community."
+  },
+  {
+    "id": 2,
+    "question": "The key element of participatory leadership is",
+    "options": {
+      "A": "Dictating orders",
+      "B": "Involving staff",
+      "C": "Secrecy",
+      "D": "Isolation"
+    },
+    "answer": "B",
+    "explanation": "Participatory (or democratic) leadership is defined by the involvement of subordinates in decision-making and planning, making **Involving staff** (B) the most accurate key element. This fosters commitment and utilizes team expertise."
+  },
+  {
+    "id": 3,
+    "question": "The school logbook records",
+    "options": {
+      "A": "Food inventory",
+      "B": "Important school events",
+      "C": "Exam marks",
+      "D": "Salaries"
+    },
+    "answer": "B",
+    "explanation": "The **school logbook** is an official record used to document significant daily or periodic occurrences in the school, such as visits by inspectors, accidents, staff absences, and other **Important school events** (B)."
+  },
+  {
+    "id": 4,
+    "question": "Staff development programmes lead to",
+    "options": {
+      "A": "Skill improvement",
+      "B": "Decline in quality",
+      "C": "More conflict",
+      "D": "Less efficiency"
+    },
+    "answer": "A",
+    "explanation": "Staff development programs (such as in-service training or workshops) are intentionally designed to update knowledge and practices, resulting directly in **Skill improvement** (A) and increased professional competence."
+  },
+  {
+    "id": 5,
+    "question": "A teacher’s lesson plan should include",
+    "options": {
+      "A": "Assignment dates",
+      "B": "Objectives and activities",
+      "C": "Staff meeting notes",
+      "D": "Salaries"
+    },
+    "answer": "B",
+    "explanation": "A lesson plan details what the teacher intends to achieve and how. The most crucial components are the learning **Objectives and activities** (B), which define the purpose and the steps of the lesson."
+  },
+  {
+    "id": 6,
+    "question": "An effective school leader promotes",
+    "options": {
+      "A": "Innovation",
+      "B": "Rigidity",
+      "C": "Confusion",
+      "D": "Fear"
+    },
+    "answer": "A",
+    "explanation": "Effective leaders create an environment where staff are encouraged to explore new ideas, try different pedagogical methods, and seek continuous improvement, actively promoting **Innovation** (A) in teaching and management."
+  },
+  {
+    "id": 7,
+    "question": "The most important reason for school rules is",
+    "options": {
+      "A": "Control",
+      "B": "Smooth running of the institution",
+      "C": "Punishment",
+      "D": "Power"
+    },
+    "answer": "B",
+    "explanation": "School rules are foundational for creating a safe, orderly, and productive environment. Their ultimate purpose is to ensure the **Smooth running of the institution** (B), allowing teaching and learning to proceed without constant disruption."
+  },
+  {
+    "id": 8,
+    "question": "An appraisal interview must be",
+    "options": {
+      "A": "Aggressive",
+      "B": "Constructive and supportive",
+      "C": "Humiliating",
+      "D": "One-sided"
+    },
+    "answer": "B",
+    "explanation": "The staff appraisal process is intended for professional growth. The interview must be **Constructive and supportive** (B), offering balanced feedback and working collaboratively with the employee on development goals."
+  },
+  {
+    "id": 9,
+    "question": "The purpose of a cumulative record is to",
+    "options": {
+      "A": "Track student progress over time",
+      "B": "Record teacher names",
+      "C": "Store punishments",
+      "D": "Keep textbooks"
+    },
+    "answer": "A",
+    "explanation": "A **cumulative record** (or cumulative file) is a long-term document that aggregates a student's academic, social, personal, and health information from entry to exit, primarily used to **Track student progress over time** (A)."
+  },
+  {
+    "id": 10,
+    "question": "Effective supervision requires",
+    "options": {
+      "A": "Observation and feedback",
+      "B": "Rumours",
+      "C": "Punishment only",
+      "D": "Avoidance"
+    },
+    "answer": "A",
+    "explanation": "Instructional supervision is a systematic process that begins with classroom **Observation** followed by a developmental conference to provide meaningful and actionable **feedback** (A) to the teacher."
+  },
+  {
+    "id": 11,
+    "question": "A school budget is prepared",
+    "options": {
+      "A": "Yearly",
+      "B": "Daily",
+      "C": "Hourly",
+      "D": "Termly"
+    },
+    "answer": "A",
+    "explanation": "A **school budget** is a detailed plan of estimated revenue and expenditures for a future financial period, which in most administrative contexts is prepared **Yearly** (A)."
+  },
+  {
+    "id": 12,
+    "question": "The most reliable assessment type is",
+    "options": {
+      "A": "Guesswork",
+      "B": "Valid and reliable tests",
+      "C": "Hearsay",
+      "D": "Oral rumours"
+    },
+    "answer": "B",
+    "explanation": "Assessment instruments are judged by their quality criteria. A test must be **Valid** (measuring what it's supposed to) and **reliable** (consistent scores across repeated use) to be the most trustworthy assessment type (B)."
+  },
+  {
+    "id": 13,
+    "question": "Parent involvement enhances",
+    "options": {
+      "A": "Conflict",
+      "B": "Student achievement",
+      "C": "Teacher punishment",
+      "D": "Late coming"
+    },
+    "answer": "B",
+    "explanation": "Strong parental involvement in a child's education has been consistently shown to correlate with higher motivation, better behavior, and overall increased **Student achievement** (B)."
+  },
+  {
+    "id": 14,
+    "question": "A circular is used to",
+    "options": {
+      "A": "Share official information",
+      "B": "Punish teachers",
+      "C": "Enter exam marks",
+      "D": "Fix timetables"
+    },
+    "answer": "A",
+    "explanation": "A **circular** is a formal, written communication distributed widely within a school or system to **Share official information** (A), policies, or decisions."
+  },
+  {
+    "id": 15,
+    "question": "Supervision becomes effective when",
+    "options": {
+      "A": "Teachers fear the supervisor",
+      "B": "Feedback is timely",
+      "C": "Meetings are avoided",
+      "D": "Communication is unclear"
+    },
+    "answer": "B",
+    "explanation": "Feedback is crucial for professional growth. When supervisory **Feedback is timely** (B), teachers can immediately link it to their observed behavior and implement changes effectively."
+  },
+  {
+    "id": 16,
+    "question": "The teacher’s job description outlines",
+    "options": {
+      "A": "Salaries",
+      "B": "Professional duties",
+      "C": "Appraisal results",
+      "D": "Logbook history"
+    },
+    "answer": "B",
+    "explanation": "A **job description** is a document that clearly lists the responsibilities, tasks, and requirements of a specific position, thus outlining a teacher's **Professional duties** (B)."
+  },
+  {
+    "id": 17,
+    "question": "Strategic planning involves",
+    "options": {
+      "A": "Setting long-term goals",
+      "B": "Daily punishment",
+      "C": "Random decisions",
+      "D": "Changing teachers"
+    },
+    "answer": "A",
+    "explanation": "**Strategic planning** is the process of defining the school's long-term direction, vision, and how resources will be used to achieve future aspirations, primarily through **Setting long-term goals** (A). "
+  },
+  {
+    "id": 18,
+    "question": "Decision-making improves when",
+    "options": {
+      "A": "Only the head decides",
+      "B": "Data is used",
+      "C": "Rumours guide actions",
+      "D": "Opinions are ignored"
+    },
+    "answer": "B",
+    "explanation": "High-quality decisions in school management require an empirical basis. **Data is used** (B) to evaluate options, assess risks, and predict outcomes, making the final decision more informed and defensible."
+  },
+  {
+    "id": 19,
+    "question": "School inspections help",
+    "options": {
+      "A": "Improve quality",
+      "B": "Create fear only",
+      "C": "Punish learners",
+      "D": "Stop teaching"
+    },
+    "answer": "A",
+    "explanation": "The fundamental goal of a school inspection is to evaluate the institution's performance against set standards and provide recommendations and support to **Improve quality** (A) of education and governance."
+  },
+  {
+    "id": 20,
+    "question": "Time management is essential for",
+    "options": {
+      "A": "Improving productivity",
+      "B": "Reducing organization",
+      "C": "Increasing confusion",
+      "D": "Wasting resources"
+    },
+    "answer": "A",
+    "explanation": "Effective time management is the process of planning and controlling how much time is spent on specific activities. In a school setting, this maximizes efficiency and contributes to **Improving productivity** (A) for both staff and students."
+  },
+  {
+    "id": 21,
+    "question": "School-community relations promote",
+    "options": {
+      "A": "Isolation",
+      "B": "Support for school programmes",
+      "C": "Conflict",
+      "D": "Secret activities"
+    },
+    "answer": "B",
+    "explanation": "Positive school-community relations build trust and collaboration, which is vital for garnering resources, volunteer time, and general **Support for school programmes** (B) and initiatives."
+  },
+  {
+    "id": 22,
+    "question": "The first step in problem-solving is",
+    "options": {
+      "A": "Blaming",
+      "B": "Identifying the problem clearly",
+      "C": "Guessing",
+      "D": "Punishing"
+    },
+    "answer": "B",
+    "explanation": "In any systematic problem-solving process, the critical first step is accurately **Identifying the problem clearly** (B). Without a precise definition, any proposed solution is likely to miss the root cause."
+  },
+  {
+    "id": 23,
+    "question": "Classroom supervision should focus on",
+    "options": {
+      "A": "Appearance",
+      "B": "Learner engagement",
+      "C": "Teacher age",
+      "D": "Punishment"
+    },
+    "answer": "B",
+    "explanation": "The primary objective of classroom supervision is instructional improvement, which means observing teaching and learning effectiveness. This is best measured by the level of **Learner engagement** (B) and participation in the activities."
+  },
+  {
+    "id": 24,
+    "question": "The purpose of a disciplinary committee is to",
+    "options": {
+      "A": "Enforce fair disciplinary procedures",
+      "B": "Punish teachers",
+      "C": "Set timetables",
+      "D": "Write lesson notes"
+    },
+    "answer": "A",
+    "explanation": "A disciplinary committee is constituted to review serious disciplinary matters, ensuring that actions taken are consistent, justifiable, and adhere to due process, thus helping to **Enforce fair disciplinary procedures** (A)."
+  },
+  {
+    "id": 25,
+    "question": "Records management ensures",
+    "options": {
+      "A": "Accountability",
+      "B": "Confusion",
+      "C": "Secrecy",
+      "D": "Rumours"
+    },
+    "answer": "A",
+    "explanation": "Proper records management ensures that there is a documented trail of decisions, finances, and events. This documentation is essential for **Accountability** (A), allowing staff and leaders to be held responsible for their actions."
+  },
+  {
+    "id": 26,
+    "question": "School vision statements must be",
+    "options": {
+      "A": "Inspiring",
+      "B": "Confusing",
+      "C": "Hidden",
+      "D": "Lengthy"
+    },
+    "answer": "A",
+    "explanation": "A vision statement describes the school's desired future. It must be motivating, ambitious, and compelling to guide and rally all stakeholders, therefore being **Inspiring** (A)."
+  },
+  {
+    "id": 27,
+    "question": "Incentives motivate teachers by",
+    "options": {
+      "A": "Creating fear",
+      "B": "Recognizing effort",
+      "C": "Increasing punishment",
+      "D": "Reducing resources"
+    },
+    "answer": "B",
+    "explanation": "Incentives, whether monetary or non-monetary, serve as positive reinforcement. They motivate teachers by making them feel valued for their contributions, effectively **Recognizing effort** (B) and excellent performance."
+  },
+  {
+    "id": 28,
+    "question": "Supervision visits must be",
+    "options": {
+      "A": "Planned",
+      "B": "Secret raids",
+      "C": "Avoided",
+      "D": "Disorganized"
+    },
+    "answer": "A",
+    "explanation": "While some unannounced visits occur, effective, developmental supervision should primarily be **Planned** (A). Planning ensures the teacher is prepared, reduces anxiety, and allows the supervisor to focus on specific, agreed-upon areas for observation."
+  },
+  {
+    "id": 29,
+    "question": "The best way to improve school discipline is",
+    "options": {
+      "A": "Set clear rules",
+      "B": "Use excessive punishment",
+      "C": "Ignore misbehaviour",
+      "D": "Create fear"
+    },
+    "answer": "A",
+    "explanation": "Proactive discipline is far more effective than reactive punishment. Establishing and consistently enforcing **Set clear rules** (A) helps students understand expectations and self-regulate their behavior."
+  },
+  {
+    "id": 30,
+    "question": "Staff appraisal provides",
+    "options": {
+      "A": "Promotion only",
+      "B": "Performance information",
+      "C": "Punishment",
+      "D": "Rumours"
+    },
+    "answer": "B",
+    "explanation": "The core outcome of staff appraisal is the systematic evaluation of a teacher's job effectiveness, providing detailed, documented **Performance information** (B) for professional development and administrative decisions."
+  },
+  {
+    "id": 31,
+    "question": "Effective delegation requires",
+    "options": {
+      "A": "Giving unclear instructions",
+      "B": "Assigning tasks with authority",
+      "C": "Blaming",
+      "D": "Fear"
+    },
+    "answer": "B",
+    "explanation": "Delegation must involve granting the necessary power to carry out the assigned duties. For the task to be successfully completed, it must include **Assigning tasks with authority** (B) to the delegate."
+  },
+  {
+    "id": 32,
+    "question": "The purpose of an action plan is to",
+    "options": {
+      "A": "Provide steps to achieve goals",
+      "B": "Replace supervision",
+      "C": "Punish learners",
+      "D": "Write exams"
+    },
+    "answer": "A",
+    "explanation": "An **action plan** translates strategic goals into concrete, achievable activities. Its purpose is to clearly **Provide steps to achieve goals** (A), assigning responsibilities, timelines, and necessary resources."
+  },
+  {
+    "id": 33,
+    "question": "A school budget deficit occurs when",
+    "options": {
+      "A": "Income = expenditure",
+      "B": "Expenditure exceeds income",
+      "C": "Income is more",
+      "D": "Nothing is spent"
+    },
+    "answer": "B",
+    "explanation": "A budget deficit is the financial state where the total **Expenditure exceeds income** (B) for a given period, indicating the school has spent more money than it received."
+  },
+  {
+    "id": 34,
+    "question": "School leadership is most effective when",
+    "options": {
+      "A": "Transactional",
+      "B": "Transformational",
+      "C": "Laissez-faire",
+      "D": "Autocratic"
+    },
+    "answer": "B",
+    "explanation": "**Transformational** (B) leadership is widely considered the most effective in education as it focuses on inspiring staff, fostering a shared vision, encouraging innovation, and elevating the morale and motivation of the entire school community. "
+  },
+  {
+    "id": 35,
+    "question": "The best record for tracking teacher attendance is",
+    "options": {
+      "A": "Staff duty roster",
+      "B": "Staff attendance book",
+      "C": "Logbook",
+      "D": "Inventory"
+    },
+    "answer": "B",
+    "explanation": "The **Staff attendance book** (B) is the dedicated, formal register used specifically for logging the daily arrival and departure times of all teaching and non-teaching staff, making it the best record for tracking attendance."
+  },
+  {
+    "id": 36,
+    "question": "Summative evaluation is conducted",
+    "options": {
+      "A": "During teaching",
+      "B": "At the end of a learning period",
+      "C": "Before planning",
+      "D": "After punishment"
+    },
+    "answer": "B",
+    "explanation": "**Summative evaluation** is used to summarize and measure student learning against a standard or benchmark, and it is always conducted **At the end of a learning period** (B), such as a unit, term, or course."
+  },
+  {
+    "id": 37,
+    "question": "A school budget must be",
+    "options": {
+      "A": "Accurate",
+      "B": "Guesswork",
+      "C": "Hidden",
+      "D": "Unapproved"
+    },
+    "answer": "A",
+    "explanation": "Financial planning requires reliable figures. A school budget must be **Accurate** (A) with realistic projections of income and expenditure to prevent shortages or surpluses and ensure effective resource management."
+  },
+  {
+    "id": 38,
+    "question": "Positive school culture promotes",
+    "options": {
+      "A": "Teacher disengagement",
+      "B": "Improved performance",
+      "C": "Confusion",
+      "D": "Fear"
+    },
+    "answer": "B",
+    "explanation": "A positive school culture—characterized by trust, collaboration, and high expectations—directly influences motivation and effort, leading to **Improved performance** (B) from both students and staff."
+  },
+  {
+    "id": 39,
+    "question": "Communication breakdown occurs when",
+    "options": {
+      "A": "Instructions are unclear",
+      "B": "Feedback is given",
+      "C": "Meetings are held",
+      "D": "Policies are written"
+    },
+    "answer": "A",
+    "explanation": "A communication breakdown happens when the receiver fails to understand the sender's intended message, often because the **Instructions are unclear** (A), vague, or poorly transmitted."
+  },
+  {
+    "id": 40,
+    "question": "The most effective feedback is",
+    "options": {
+      "A": "Delayed",
+      "B": "Immediate",
+      "C": "Harsh",
+      "D": "Confusing"
+    },
+    "answer": "B",
+    "explanation": "To maximize learning and behavioral impact, feedback should be provided as closely as possible to the action or performance being assessed. Thus, **Immediate** (B) feedback is the most effective."
+  },
+  {
+    "id": 41,
+    "question": "A teacher’s register records",
+    "options": {
+      "A": "Salaries",
+      "B": "Learner attendance",
+      "C": "Assessment",
+      "D": "Assets"
+    },
+    "answer": "B",
+    "explanation": "The teacher's class register is primarily a legal document for recording the daily **Learner attendance** (B) in the class or subject."
+  },
+  {
+    "id": 42,
+    "question": "Continuous professional development ensures",
+    "options": {
+      "A": "Stagnation",
+      "B": "Updated teacher skills",
+      "C": "Punishment",
+      "D": "Secrecy"
+    },
+    "answer": "B",
+    "explanation": "**Continuous professional development (CPD)** is the ongoing effort by teachers to learn and apply new knowledge and techniques, specifically ensuring **Updated teacher skills** (B) and relevance in the classroom."
+  },
+  {
+    "id": 43,
+    "question": "Effective school leaders",
+    "options": {
+      "A": "Inspire staff",
+      "B": "Create fear",
+      "C": "Ignore teachers",
+      "D": "Avoid decisions"
+    },
+    "answer": "A",
+    "explanation": "Effective school leaders engage in transformational leadership, which centers on motivating and **Inspiring staff** (A) to commit to the school's vision and excel in their roles, rather than relying on punitive authority."
+  },
+  {
+    "id": 44,
+    "question": "Decision-making committees enhance",
+    "options": {
+      "A": "Dictatorship",
+      "B": "Shared governance",
+      "C": "Secret plans",
+      "D": "Punitive action"
+    },
+    "answer": "B",
+    "explanation": "By involving multiple stakeholders (e.g., teachers, parents, administrators) in formal groups, decision-making committees promote **Shared governance** (B), which distributes leadership and makes decisions more representative."
+  },
+  {
+    "id": 45,
+    "question": "School rules must be",
+    "options": {
+      "A": "Unclear",
+      "B": "Known to all",
+      "C": "Secret",
+      "D": "Unwritten"
+    },
+    "answer": "B",
+    "explanation": "For rules to maintain order and be fairly applied, they must be clearly communicated and accessible to everyone they govern. Therefore, school rules must be **Known to all** (B)."
+  },
+  {
+    "id": 46,
+    "question": "Teacher supervision should be",
+    "options": {
+      "A": "Constructive",
+      "B": "Harsh",
+      "C": "Punitive",
+      "D": "Secretive"
+    },
+    "answer": "A",
+    "explanation": "Modern supervision is focused on development and improvement. It should be **Constructive** (A), providing helpful suggestions and praise, rather than being purely judgmental or punitive."
+  },
+  {
+    "id": 47,
+    "question": "The purpose of guidance and counselling is to",
+    "options": {
+      "A": "Punish students",
+      "B": "Support learner wellbeing",
+      "C": "Replace teaching",
+      "D": "Increase workload"
+    },
+    "answer": "B",
+    "explanation": "**Guidance and counselling** services are established in schools to help students address academic, personal, social, and emotional issues, making the main purpose to **Support learner wellbeing** (B) and holistic development."
+  },
+  {
+    "id": 48,
+    "question": "An effective meeting agenda must be",
+    "options": {
+      "A": "Clear and focused",
+      "B": "Vague",
+      "C": "Hidden",
+      "D": "Very long"
+    },
+    "answer": "A",
+    "explanation": "The agenda sets the roadmap for the meeting. To ensure productivity and prevent time wastage, it must be **Clear and focused** (A) on specific topics requiring discussion or decision."
+  },
+  {
+    "id": 49,
+    "question": "Good instructional leadership involves",
+    "options": {
+      "A": "Monitoring teaching",
+      "B": "Avoiding classrooms",
+      "C": "Hiding weaknesses",
+      "D": "Ignoring learners"
+    },
+    "answer": "A",
+    "explanation": "**Instructional leadership** requires the leader to be deeply involved in the quality of classroom delivery. This includes regular classroom visits and follow-up activities, which is best described as **Monitoring teaching** (A)."
+  },
+  {
+    "id": 50,
+    "question": "Teacher motivation improves when",
+    "options": {
+      "A": "Working conditions are supportive",
+      "B": "Resources are withheld",
+      "C": "Decisions are secret",
+      "D": "No feedback is given"
+    },
+    "answer": "A",
+    "explanation": "Motivation is strongly influenced by the environment. When **Working conditions are supportive** (A)—meaning resources are adequate, the climate is positive, and safety is assured—teachers feel respected and are more motivated to perform."
+  }
+]

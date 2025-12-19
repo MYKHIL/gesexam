@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "CPD ensures:",
+    "options": {
+      "A": "Teacher redundancies",
+      "B": "Continuous skill improvement",
+      "C": "Salary change",
+      "D": "New buildings"
+    },
+    "answer": "B",
+    "explanation": "Continuous Professional Development (CPD) is the lifelong process of learning that ensures teachers keep their skills up-to-date with new methodologies, technologies, and subject knowledge, directly leading to skill improvement."
+  },
+  {
+    "id": 2,
+    "question": "A mentor teacher:",
+    "options": {
+      "A": "Punishes new teachers",
+      "B": "Guides new teachers",
+      "C": "Writes reports",
+      "D": "Supervises payroll"
+    },
+    "answer": "B",
+    "explanation": "A mentor is an experienced educator assigned to support, advise, and guide a novice or newly qualified teacher through the early stages of their career, helping them navigate challenges and improve practice."
+  },
+  {
+    "id": 3,
+    "question": "Ethical behaviour encourages:",
+    "options": {
+      "A": "Abuse of power",
+      "B": "Corruption",
+      "C": "Professional trust",
+      "D": "Fear"
+    },
+    "answer": "C",
+    "explanation": "When educators act ethically—with integrity, fairness, and transparency—it fosters confidence and trust among students, colleagues, and parents, which is the foundation of a healthy school environment."
+  },
+  {
+    "id": 4,
+    "question": "In GES, the highest office is:",
+    "options": {
+      "A": "Deputy Director",
+      "B": "Director-General",
+      "C": "Regional Director",
+      "D": "District Director"
+    },
+    "answer": "B",
+    "explanation": "The Director-General is the administrative head of the Ghana Education Service (GES), responsible for the overall management and implementation of educational policies at the pre-tertiary level nationwide."
+  },
+  {
+    "id": 5,
+    "question": "Quality assurance ensures:",
+    "options": {
+      "A": "School closure",
+      "B": "Standards are met",
+      "C": "Low enrollment",
+      "D": "Permanent supervision"
+    },
+    "answer": "B",
+    "explanation": "Quality assurance involves systematic monitoring and evaluation processes designed to guarantee that educational provisions and outcomes meet established national standards and benchmarks."
+  },
+  {
+    "id": 6,
+    "question": "The Code of Conduct ensures:",
+    "options": {
+      "A": "Teacher silence",
+      "B": "Student punishment",
+      "C": "Professional discipline",
+      "D": "Exam leakages"
+    },
+    "answer": "C",
+    "explanation": "The Code of Conduct outlines the ethical rules and expected behaviors for teachers, serving as the regulatory framework to maintain professional discipline and integrity within the service."
+  },
+  {
+    "id": 7,
+    "question": "Poor supervision leads to:",
+    "options": {
+      "A": "Higher performance",
+      "B": "Decline in standards",
+      "C": "Motivation",
+      "D": "Quality teaching"
+    },
+    "answer": "B",
+    "explanation": "Without effective supervision to monitor quality, specific feedback, and accountability, teaching standards inevitably slip, leading to a general decline in the quality of education."
+  },
+  {
+    "id": 8,
+    "question": "Action research helps teachers to:",
+    "options": {
+      "A": "Write exams",
+      "B": "Punish students",
+      "C": "Solve classroom problems",
+      "D": "Supervise directors"
+    },
+    "answer": "C",
+    "explanation": "Action research is a reflective enquiry process where teachers investigate their own classroom practices to identify specific problems and implement testable solutions to solve them."
+  },
+  {
+    "id": 9,
+    "question": "Effective communication in schools is:",
+    "options": {
+      "A": "One-way",
+      "B": "Loud and harsh",
+      "C": "Clear and respectful",
+      "D": "Avoided"
+    },
+    "answer": "C",
+    "explanation": "To build a positive school culture, communication must be unambiguous (clear) to prevent misunderstandings and conducted with mutual respect to maintain healthy professional relationships."
+  },
+  {
+    "id": 10,
+    "question": "The highest form of teacher misconduct is:",
+    "options": {
+      "A": "Lateness",
+      "B": "Sexual harassment",
+      "C": "Noise-making",
+      "D": "Dress code violation"
+    },
+    "answer": "B",
+    "explanation": "Sexual harassment is considered a grave professional offense and a criminal act due to the severe breach of trust and the physical and psychological harm it causes to students."
+  },
+  {
+    "id": 11,
+    "question": "A circuit supervisor reports to:",
+    "options": {
+      "A": "PTA",
+      "B": "Students",
+      "C": "District Director",
+      "D": "Parents"
+    },
+    "answer": "C",
+    "explanation": "The Circuit Supervisor (now School Improvement Support Officer) operates at the circuit level but reports directly to the District Director of Education, who oversees all circuits."
+  },
+  {
+    "id": 12,
+    "question": "A reflective teacher:",
+    "options": {
+      "A": "Never thinks",
+      "B": "Reviews and improves practice",
+      "C": "Copies notes",
+      "D": "Avoids feedback"
+    },
+    "answer": "B",
+    "explanation": "Reflective practice involves critical self-assessment—thinking about what worked, what didn't, and why—as a systematic way to improve teaching skills and outcomes."
+  },
+  {
+    "id": 13,
+    "question": "A school improvement plan is:",
+    "options": {
+      "A": "A punishment tool",
+      "B": "A roadmap for raising standards",
+      "C": "A test kit",
+      "D": "A record book"
+    },
+    "answer": "B",
+    "explanation": "A School Improvement Plan (SIP) is a strategic document that outlines the school's priorities, targets, and the actions required to raise educational standards over a specific period."
+  },
+  {
+    "id": 14,
+    "question": "Effective supervision is:",
+    "options": {
+      "A": "Secretive",
+      "B": "Harsh",
+      "C": "Continuous and supportive",
+      "D": "One-time"
+    },
+    "answer": "C",
+    "explanation": "Supervision is most effective when it is an ongoing, continuous process of observation and support, rather than a one-time event, allowing for sustained improvement."
+  },
+  {
+    "id": 15,
+    "question": "The ultimate goal of an ADI is:",
+    "options": {
+      "A": "Write reports",
+      "B": "Travel frequently",
+      "C": "Control staff",
+      "D": "Improve quality education"
+    },
+    "answer": "D",
+    "explanation": "While Assistant Directors of Inspection (ADIs) report and monitor compliance, their ultimate purpose is to ensure and enhance the quality of education provided to the learners."
+  },
+  {
+    "id": 16,
+    "question": "The primary role of a District Director is to:",
+    "options": {
+      "A": "Monitor classroom lessons",
+      "B": "Supervise and coordinate district-level education administration",
+      "C": "Conduct national examinations",
+      "D": "Manage only private schools"
+    },
+    "answer": "B",
+    "explanation": "The District Director is the chief administrator at the district level, responsible for coordinating all educational policies, supervising schools, and managing resources within the district."
+  },
+  {
+    "id": 17,
+    "question": "Which of the following best describes educational supervision?",
+    "options": {
+      "A": "Punishing teachers",
+      "B": "Guiding and supporting teachers for improvement",
+      "C": "Replacing headteachers",
+      "D": "Reducing workload"
+    },
+    "answer": "B",
+    "explanation": "Educational supervision is a leadership function aimed at improving instruction by offering guidance, support, and professional development opportunities to teachers."
+  },
+  {
+    "id": 18,
+    "question": "A District Director is accountable mainly to:",
+    "options": {
+      "A": "Students",
+      "B": "PTA",
+      "C": "Regional Director of Education",
+      "D": "Classroom teachers"
+    },
+    "answer": "C",
+    "explanation": "In the GES hierarchy, the District Director reports to the Regional Director, who in turn reports to the Director-General."
+  },
+  {
+    "id": 19,
+    "question": "One major function of a District Director is to:",
+    "options": {
+      "A": "Approve teacher salaries",
+      "B": "Ensure curriculum implementation",
+      "C": "Conduct lectures in universities",
+      "D": "Print textbooks"
+    },
+    "answer": "B",
+    "explanation": "A core responsibility of the District Director is to ensure that the national curriculum is being correctly and effectively effectively implemented in all basic schools within their jurisdiction."
+  },
+  {
+    "id": 20,
+    "question": "The District Director ensures that teachers follow:",
+    "options": {
+      "A": "Local traditions",
+      "B": "Curriculum guidelines",
+      "C": "Trade union laws",
+      "D": "Student suggestions"
+    },
+    "answer": "B",
+    "explanation": "The director must monitor compliance to ensure that teaching adheres to the official curriculum guidelines and standards set by the Ministry and GES."
+  },
+  {
+    "id": 21,
+    "question": "A key tool for performance appraisal in schools is:",
+    "options": {
+      "A": "Student attendance sheet",
+      "B": "Teacher appraisal form",
+      "C": "Textbook inventory",
+      "D": "Headteacher’s diary"
+    },
+    "answer": "B",
+    "explanation": "The teacher appraisal form is the standard instrument used to evaluate a teacher's performance against set criteria, documenting achievements and areas for improvement."
+  },
+  {
+    "id": 22,
+    "question": "In educational leadership, delegation means:",
+    "options": {
+      "A": "Doing all the work alone",
+      "B": "Assigning tasks to others with authority",
+      "C": "Avoiding responsibility",
+      "D": "Reducing staff numbers"
+    },
+    "answer": "B",
+    "explanation": "Delegation involves transferring the responsibility for specific tasks to subordinates while giving them the necessary authority to execute those tasks, though accountability usually remains with the leader."
+  },
+  {
+    "id": 23,
+    "question": "A District Director leads mainly through:",
+    "options": {
+      "A": "Fear",
+      "B": "Orders",
+      "C": "Authority and collaboration",
+      "D": "Gossip"
+    },
+    "answer": "C",
+    "explanation": "Effective directors combine their formal authority with a collaborative approach, working with heads and stakeholders to achieve educational goals."
+  },
+  {
+    "id": 24,
+    "question": "School supervision improves:",
+    "options": {
+      "A": "Teacher discipline only",
+      "B": "Teaching and learning outcomes",
+      "C": "Uniform styles",
+      "D": "Only headteacher performance"
+    },
+    "answer": "B",
+    "explanation": "The primary and most important outcome of effective supervision is the improvement of the teaching-learning process, which directly results in better student outcomes."
+  },
+  {
+    "id": 25,
+    "question": "Which education act governs basic education in Ghana?",
+    "options": {
+      "A": "Education Decree 1960",
+      "B": "Education Act 2008 (Act 778)",
+      "C": "Curriculum Act 2010",
+      "D": "GES Directive 1999"
+    },
+    "answer": "B",
+    "explanation": "The Education Act 2008 (Act 778) is the current legislative framework that governs the provision and management of education, including basic education, in Ghana."
+  },
+  {
+    "id": 26,
+    "question": "In management, the process of setting targets is known as:",
+    "options": {
+      "A": "Delegation",
+      "B": "Planning",
+      "C": "Evaluation",
+      "D": "Coordinating"
+    },
+    "answer": "B",
+    "explanation": "Planning is the fundamental management function that involves setting goals (targets) and deciding in advance the actions and resources needed to achieve them."
+  },
+  {
+    "id": 27,
+    "question": "A school budget is prepared by:",
+    "options": {
+      "A": "District Assembly",
+      "B": "Headteacher",
+      "C": "Students",
+      "D": "District Police"
+    },
+    "answer": "B",
+    "explanation": "The headteacher, as the financial manager of the school, is responsible for preparing the school budget, often in collaboration with the School Management Committee (SMC)."
+  },
+  {
+    "id": 28,
+    "question": "A District Director ensures that headteachers:",
+    "options": {
+      "A": "Punish teachers regularly",
+      "B": "Follow GES policies",
+      "C": "Buy new uniforms",
+      "D": "Change curriculum"
+    },
+    "answer": "B",
+    "explanation": "The director ensures administrative compliance, checking that headteachers manage their schools in strict accordance with the policies and directives issued by the GES."
+  },
+  {
+    "id": 29,
+    "question": "A key indicator of school performance is:",
+    "options": {
+      "A": "Building colour",
+      "B": "Student achievement",
+      "C": "Teacher age",
+      "D": "PTA dues"
+    },
+    "answer": "B",
+    "explanation": "The ultimate measure of a school's success is not its appearance or inputs, but the academic and holistic achievement of its students."
+  },
+  {
+    "id": 30,
+    "question": "Educational leadership focuses on:",
+    "options": {
+      "A": "Teacher retirement",
+      "B": "Teaching and learning quality",
+      "C": "Beauty of classrooms",
+      "D": "Buying new buses"
+    },
+    "answer": "B",
+    "explanation": "While management might handle logistics like buses, leadership is distinct in its laser focus on improving the quality of the core business: teaching and learning."
+  },
+  {
+    "id": 31,
+    "question": "Circuit supervisors report directly to:",
+    "options": {
+      "A": "PTA",
+      "B": "Headteacher",
+      "C": "District Director",
+      "D": "Students"
+    },
+    "answer": "C",
+    "explanation": "Circuit supervisors are field officers of the district directorate and submit their reports and findings directly to the District Director."
+  },
+  {
+    "id": 32,
+    "question": "School inspection differs from supervision because it is more:",
+    "options": {
+      "A": "Punitive",
+      "B": "Summative",
+      "C": "Noisier",
+      "D": "Informal"
+    },
+    "answer": "B",
+    "explanation": "Inspection is often a periodic, external evaluation (summative) to judge standards, whereas supervision is a continuous, internal process of support (formative)."
+  },
+  {
+    "id": 33,
+    "question": "Which of these is a leadership style?",
+    "options": {
+      "A": "Democratic",
+      "B": "Punitive",
+      "C": "Passive",
+      "D": "Structural"
+    },
+    "answer": "A",
+    "explanation": "Democratic leadership is a recognized style where the leader involves team members in the decision-making process. 'Punitive' and 'Passive' are behaviors, not formal styles."
+  },
+  {
+    "id": 34,
+    "question": "In monitoring, data is collected:",
+    "options": {
+      "A": "After five years",
+      "B": "Continuously",
+      "C": "Only at inauguration",
+      "D": "Without evidence"
+    },
+    "answer": "B",
+    "explanation": "Monitoring is a continuous management function that aims to check progress against plans in real-time, allowing for immediate corrective action."
+  },
+  {
+    "id": 35,
+    "question": "A good District Director must be:",
+    "options": {
+      "A": "Autocratic",
+      "B": "Corrupt",
+      "C": "Competent and ethical",
+      "D": "Indecisive"
+    },
+    "answer": "C",
+    "explanation": "Competence ensures the job is done well, and ethics ensure it is done right. A director needs both professional skill and moral integrity to lead effectively."
+  },
+  {
+    "id": 36,
+    "question": "Which of the following is NOT a function of the District Education Office?",
+    "options": {
+      "A": "Teacher professional development",
+      "B": "Classroom lesson delivery",
+      "C": "School supervision",
+      "D": "Resource allocation"
+    },
+    "answer": "B",
+    "explanation": "The District Office manages and supports education, but the actual delivery of lessons in the classroom is the function of the school and the teachers, not district officers."
+  },
+  {
+    "id": 37,
+    "question": "The GES Code of Conduct applies to:",
+    "options": {
+      "A": "Students only",
+      "B": "Teachers only",
+      "C": "All GES staff",
+      "D": "Headteachers only"
+    },
+    "answer": "C",
+    "explanation": "The Code of Conduct creates a standard for behavior that binds every employee of the Ghana Education Service, from the Director-General down to the newest recruit."
+  },
+  {
+    "id": 38,
+    "question": "CPD stands for:",
+    "options": {
+      "A": "Continuous Professional Development",
+      "B": "Central Police Dispatch",
+      "C": "Core Policy Direction",
+      "D": "Curriculum Program Design"
+    },
+    "answer": "A",
+    "explanation": "CPD is the standard acronym for Continuous Professional Development, which refers to the ongoing training and education of professionals."
+  },
+  {
+    "id": 39,
+    "question": "A school’s enrolment trend is part of:",
+    "options": {
+      "A": "Infrastructure data",
+      "B": "EMIS data",
+      "C": "Disciplinary record",
+      "D": "Textbook audit"
+    },
+    "answer": "B",
+    "explanation": "Education Management Information System (EMIS) data includes key statistical information like enrolment figures, which helps in tracking trends and planning resources."
+  },
+  {
+    "id": 40,
+    "question": "The District Director must collaborate with:",
+    "options": {
+      "A": "Market women",
+      "B": "Education stakeholders",
+      "C": "Only teachers",
+      "D": "Only politicians"
+    },
+    "answer": "B",
+    "explanation": "Successful education administration requires partnership with all stakeholders—parents, traditional rulers, religious bodies, and local assemblies—not just teachers."
+  },
+  {
+    "id": 41,
+    "question": "An example of a school record is:",
+    "options": {
+      "A": "Student report card",
+      "B": "Television",
+      "C": "Chalk box",
+      "D": "School uniform"
+    },
+    "answer": "A",
+    "explanation": "A report card is a formal document recording a student's academic performance, unlike the other options which are physical items or assets."
+  },
+  {
+    "id": 42,
+    "question": "Which body appoints a District Director?",
+    "options": {
+      "A": "NTC",
+      "B": "GES Council",
+      "C": "NAGRAT",
+      "D": "CHASS"
+    },
+    "answer": "B",
+    "explanation": "The GES Council is the governing body responsible for policy and high-level appointments, including the appointment of District Directors (often in consultation with the Public Services Commission)."
+  },
+  {
+    "id": 43,
+    "question": "Vision in leadership means:",
+    "options": {
+      "A": "External pressure",
+      "B": "Clear future direction",
+      "C": "Daily lesson notes",
+      "D": "Buying furniture"
+    },
+    "answer": "B",
+    "explanation": "A vision is a clear, inspiring mental picture of what the leader wants the organization to achieve or become in the future."
+  },
+  {
+    "id": 44,
+    "question": "The purpose of in-service training is to:",
+    "options": {
+      "A": "Punish teachers",
+      "B": "Help teacher growth",
+      "C": "Sack old staff",
+      "D": "Replace new curriculum"
+    },
+    "answer": "B",
+    "explanation": "In-service training is designed to foster the professional growth of teachers, equipping them with new skills and knowledge to improve their performance."
+  },
+  {
+    "id": 45,
+    "question": "The district education office keeps records for:",
+    "options": {
+      "A": "Just decoration",
+      "B": "Accountability and planning",
+      "C": "Politics",
+      "D": "Gossip"
+    },
+    "answer": "B",
+    "explanation": "Records are vital for accountability (proving what has been done) and planning (using past data to make future decisions) at the district level."
+  },
+  {
+    "id": 46,
+    "question": "Effective communication in leadership requires:",
+    "options": {
+      "A": "Threats",
+      "B": "Listening",
+      "C": "Anger",
+      "D": "Avoidance"
+    },
+    "answer": "B",
+    "explanation": "Communication is a two-way street. Effective leaders must be good listeners to understand the needs, concerns, and ideas of their team."
+  },
+  {
+    "id": 47,
+    "question": "Which is an internal school stakeholder?",
+    "options": {
+      "A": "District assembly",
+      "B": "Teachers",
+      "C": "NGO",
+      "D": "Media"
+    },
+    "answer": "B",
+    "explanation": "Internal stakeholders are those who are part of the daily operations within the school walls, such as students, teachers, and non-teaching staff."
+  },
+  {
+    "id": 48,
+    "question": "Education decentralization means:",
+    "options": {
+      "A": "All power in Accra",
+      "B": "Power shared to local levels",
+      "C": "Removing teachers",
+      "D": "School privatization"
+    },
+    "answer": "B",
+    "explanation": "Decentralization involves the devolution of decision-making power, responsibility, and resources from the national headquarters to regional, district, and school levels."
+  },
+  {
+    "id": 49,
+    "question": "The GES organogram places the District Director:",
+    "options": {
+      "A": "Below the teacher",
+      "B": "Under Regional Director",
+      "C": "Above Minister",
+      "D": "Equal to PTA"
+    },
+    "answer": "B",
+    "explanation": "In the administrative structure (organogram) of the GES, the District Director is subordinate to and supervised by the Regional Director."
+  },
+  {
+    "id": 50,
+    "question": "A leader who involves staff in decision-making is:",
+    "options": {
+      "A": "Autocratic",
+      "B": "Democratic",
+      "C": "Lazy",
+      "D": "Rigid"
+    },
+    "answer": "B",
+    "explanation": "A democratic leader (or participative leader) actively encourages staff participation and input in the decision-making process."
+  }
+]

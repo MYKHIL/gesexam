@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "Teacher punctuality helps to:",
+    "options": {
+      "A": "Improve discipline",
+      "B": "Waste time",
+      "C": "Confuse pupils",
+      "D": "Skip lessons"
+    },
+    "answer": "A",
+    "explanation": "Teacher punctuality is a fundamental aspect of professional conduct that significantly impacts the learning environment and student behavior, making \"Improve discipline\" the correct answer.\n\n*   **Models Responsibility and Discipline:** A teacher who is consistently on time acts as a positive role model, instilling a sense of responsibility and discipline in their students. By setting an example of adherence to scheduled times, the teacher establishes a norm that students are encouraged to emulate.\n*   **Establishes Classroom Control:** Punctuality helps the teacher to immediately take charge of the classroom and begin the lesson on time, which is crucial for maintaining discipline. Conversely, teacher lateness often creates a vacuum of authority, leading to disruptive behavior and making it difficult to maintain discipline.\n*   **Creates a Predictable Structure:** Being punctual reduces stress and anxiety for both students and educators by minimizing disruption to the flow of the classroom. A predictable and consistent schedule reinforces behavioral expectations and order.\n*   **Prevents Wasted Time:** Options B (\"Waste time\") and D (\"Skip lessons\") are effects of **lateness**, not punctuality. Punctuality ensures that instructional time is maximized and teaching activities are not interrupted or shortened.\n*   **Avoids Confusion:** Teacher punctuality provides a clear, consistent structure, which directly works against option C (\"Confuse pupils\"). The absence of the teacher causes uncertainty and disruption, while presence provides clarity and order."
+  },
+  {
+    "id": 2,
+    "question": "A primary school teacher teaches:",
+    "options": {
+      "A": "Subject experts only",
+      "B": "Multiple subjects",
+      "C": "Only PE",
+      "D": "Only ICT"
+    },
+    "answer": "B",
+    "explanation": "A primary school teacher is responsible for educating children typically between the ages of 5 and 11, which is a critical period in their development. Their core responsibility is to teach across a wide curriculum, delivering lessons in **multiple subjects** to their class.\n\n*   **Correct Answer (B: Multiple subjects):** Primary school teachers generally provide an overall teaching experience, covering the broad range of subjects included in the national curriculum. This range commonly includes core subjects like literacy and numeracy, as well as science, history, geography, art and design, music, and physical education (PE). They plan, prepare, and deliver lessons across these various subjects.\n*   **Incorrect Options (A, C, D):**\n    *   **A (Subject experts only):** This is typically characteristic of secondary school education, where teachers specialize in one or two subjects. While a primary teacher may specialize in a subject area, their general role is to teach many subjects.\n    *   **C (Only PE) and D (Only ICT):** PE and ICT (Information and Communication Technology) are individual subjects within the broader primary curriculum, but they do not constitute the primary teacher's entire teaching load. A teacher whose sole focus is PE or ICT is usually a specialist teacher, a role less common than the generalist primary teacher who teaches all or most subjects to their class."
+  },
+  {
+    "id": 3,
+    "question": "Parent involvement improves:",
+    "options": {
+      "A": "Learning outcomes",
+      "B": "Only sports",
+      "C": "Teacher salary",
+      "D": "School colours"
+    },
+    "answer": "A",
+    "explanation": "Parent involvement in education is one of the most significant predictors of a student's academic success and overall well-being.\n\n*   **Direct Link to Learning Outcomes:** Numerous studies have shown a statistically significant association between parental involvement and improved **learning outcomes**, including increased student achievement, higher grades, and better academic performance.\n*   **Specific Academic Benefits:** When parents are actively engaged, students tend to exhibit higher motivation, better school attitudes, and greater academic self-efficacy, all of which directly contribute to stronger learning outcomes.\n*   **Wider Benefits:** Beyond grades, parental participation is linked to broader positive outcomes such as reduced absenteeism, improved social skills, better behavior, and better adaptation to school. These elements create a more conducive environment for learning, further boosting academic results.\n*   **Exclusion of Other Options:** Options B, C, and D are not the primary, documented, or direct effects of parent involvement. While parents may be involved in school sports (Option B) or fundraising that might indirectly affect a school's budget (Option C, Teacher salary) or aesthetics (Option D, School colours), the fundamental and universally recognized benefit is the positive influence on the child's academic and developmental results (**Learning outcomes**)."
+  },
+  {
+    "id": 4,
+    "question": "A teacher guide supports:",
+    "options": {
+      "A": "Banking",
+      "B": "Classroom instruction",
+      "C": "Road safety",
+      "D": "Uniform sewing"
+    },
+    "answer": "B",
+    "explanation": "A teacher guide, also known as an instructional guide or course guide, is an educational resource specifically designed to assist teachers in their professional duties.\n\n*   **Primary Purpose:** The fundamental purpose of a teacher guide is to support, structure, and facilitate **Classroom instruction**.\n*   **Key Components:** These guides function as a \"blueprint for a course,\" providing educators with essential tools and information, such as daily lesson plans, learning objectives, instructional techniques, and precise instructions on how to teach specific content. They help keep instruction aligned with broader educational goals and provide a directive line on what and how to teach.\n*   **Exclusion of Other Options:** While a teacher might, in a specific context, teach about banking, road safety, or uniform sewing, a general *teacher guide* is a pedagogical resource dedicated to the process of education itself—the planning, delivery, and assessment of content in the classroom. Therefore, **Classroom instruction** is the only option that correctly describes the core function of a teacher guide."
+  },
+  {
+    "id": 5,
+    "question": "Numeracy builds:",
+    "options": {
+      "A": "Singing skills",
+      "B": "Number sense",
+      "C": "Reading fluency",
+      "D": "Drawing only"
+    },
+    "answer": "B",
+    "explanation": "Numeracy is defined as the ability to understand and work with numbers, applying basic math in real-life situations.\n\n*   **Core Relationship:** Numeracy concepts are fundamentally built upon **number sense**, which is one of its three main components. Number sense is the intuitive understanding of numbers, quantities, and their relationships, serving as the foundation for more complex mathematical reasoning. Therefore, building numeracy skills directly builds and relies on number sense.\n*   **Incorrect Options:**\n    *   **Singing skills** and **Reading fluency** are key components of literacy (language and communication skills), not numeracy, although language abilities can play a role in developing number words and counting.\n    *   **Drawing only** is a specific artistic skill and has no primary or essential connection to the development of numerical abilities."
+  },
+  {
+    "id": 6,
+    "question": "A teacher’s role includes:",
+    "options": {
+      "A": "Punishing only",
+      "B": "Facilitating learning",
+      "C": "Creating fear",
+      "D": "Avoiding supervision"
+    },
+    "answer": "B",
+    "explanation": "The primary and most essential role of a modern teacher is to be a **facilitator of learning**. This role involves guiding, assisting, and managing discussions, and creating an environment where students can take an active role in their own education.\n\n*   **Option B (Facilitating learning)** is correct because a teacher's core duty is to stimulate children's thinking, extend their learning, provide scaffolding, resources, and the necessary support to help them explore and navigate their studies. The teacher helps students learn *how* to learn, rather than simply delivering information.\n\n*   **Option A (Punishing only)** is incorrect. While discipline is part of classroom management, the teacher's role is a complex one that includes mentorship, inspiration, and relationship development, not just singular focus on punishment.\n\n*   **Option C (Creating fear)** is incorrect. A productive learning environment is built on security and trust, not fear. Creating fear is detrimental to the educational process and is counterproductive to facilitating learning.\n\n*   **Option D (Avoiding supervision)** is incorrect. A key responsibility of a teacher is to manage the classroom and supervise students, which includes observing and evaluating their performance and development."
+  },
+  {
+    "id": 7,
+    "question": "A school's vision tells:",
+    "options": {
+      "A": "What it hopes to achieve",
+      "B": "Who must be punished",
+      "C": "How many pupils to admit",
+      "D": "Who teaches what"
+    },
+    "answer": "A",
+    "explanation": "A school's **vision statement** is a public declaration that describes the institution's high-level, long-term aspirations and desired future achievements. It outlines what the school wants to achieve for its pupils, staff, and parents.\n\n*   **Option A: What it hopes to achieve** is the correct answer because the core function of a school's vision is to articulate its goals, aspirations, and desired future state. It is the \"where we want to be\" statement that provides direction and purpose for the entire school community.\n*   **Option B: Who must be punished** is incorrect. School policies, disciplinary codes, and student handbooks govern punishment, not the broad, aspirational vision statement.\n*   **Option C: How many pupils to admit** is incorrect. Admission quotas or targets are part of a school's operational or strategic plan, typically decided by management or governing bodies, and are not the primary content of the vision statement.\n*   **Option D: Who teaches what** is incorrect. This information is found in a school's timetable, curriculum map, or staff assignment schedule, not the vision statement, which focuses on the overall future and goals of the institution.\n\nIn essence, while the **mission statement** outlines the school's core purpose and reason for existing, the **vision statement** articulates the long-term goals and aspirations—what the school hopes to achieve."
+  },
+  {
+    "id": 8,
+    "question": "A flashcard is a:",
+    "options": {
+      "A": "Seating plan",
+      "B": "Visual learning aid",
+      "C": "Test paper",
+      "D": "Report card"
+    },
+    "answer": "B",
+    "explanation": "A flashcard is an educational tool consisting of a small card that typically presents a question, term, or image on one side and an answer, definition, or related information on the other.\n\n*   **Visual Learning Aid (Option B):** This is the correct description because flashcards display information—such as words, pictures, or concepts—in a **visual** format on a card to facilitate learning, memory retrieval, and self-testing. They are fundamentally used for systematic drill and review of information, making them a type of visual aid used in education.\n*   **Seating plan (Option A):** A seating plan is a diagram used to arrange people in a specific order for a room or event, and is unrelated to a memory or learning tool.\n*   **Test paper (Option C):** A test paper is used for formal assessment to evaluate knowledge or skill, while flashcards are primarily used for *studying* and *practicing* active recall before or during a test.\n*   **Report card (Option D):** A report card is a formal document used to communicate a student's grades or performance to parents or guardians."
+  },
+  {
+    "id": 9,
+    "question": "A good teacher must observe:",
+    "options": {
+      "A": "School rules",
+      "B": "Class gossip",
+      "C": "Peer arguments",
+      "D": "PTA loans"
+    },
+    "answer": "A",
+    "explanation": "A good teacher **must observe** school rules because adherence to institutional policies and regulations is a fundamental, non-negotiable professional and ethical responsibility.\n\n*   **Professional Obligation:** Teachers have an ethical obligation to comply with the policies and procedures established by the school, college, or national educational body. Being familiar with all school policies and adhering to them is considered a core professional responsibility.\n*   **Creating a Safe Environment:** School rules are essential guidelines for conduct that help maintain a safe, secure, and orderly environment for students and staff. By observing and upholding these rules, a teacher ensures the school can function effectively and that students feel respected and ready to learn.\n*   **Role Modeling:** A teacher's conduct should honor the rule of law and serve as a role model for students. Following school rules sets a vital example of responsibility and self-discipline for the students they are teaching.\n*   **Distinguishing the Options:**\n    *   **Class gossip** and **Peer arguments** are forms of student interaction that a teacher must *manage* or *mediate* as part of classroom management and student welfare, but they are not the primary, overarching *rules* that a teacher **must observe** in their professional conduct.\n    *   **PTA loans** (Parent-Teacher Association loans) refer to an administrative or financial matter and are outside the scope of a teacher's core professional duties and observations."
+  },
+  {
+    "id": 10,
+    "question": "The teacher’s register records:",
+    "options": {
+      "A": "Meal time",
+      "B": "Teacher attendance",
+      "C": "Exam marks",
+      "D": "Library books"
+    },
+    "answer": "B",
+    "explanation": "The correct option is **Teacher attendance** because the **Teacher's Register**, often formally called the **Teacher's Attendance Register**, is a specific school document maintained for the express purpose of recording the presence, absence, and regularity of the teaching staff.\n\n*   **Teacher attendance (Option B):** This is the primary function of the Teacher's Register. It serves as an official record of staff regularity and is an essential administrative document for monitoring personnel.\n*   **Exam marks (Option C):** Exam marks are typically recorded in a separate document such as an **Examination Register** or **Mark Sheet**, not the teacher's attendance register.\n*   **Library books (Option D):** Records of library books (stock, issue, and return) are maintained in a dedicated **Library Register** or **Library Stock Register**.\n*   **Meal time (Option A):** While a school may track meal counts, this information is not generally recorded in the formal **Teacher's Register**."
+  },
+  {
+    "id": 11,
+    "question": "Pedagogy means:",
+    "options": {
+      "A": "Child learning",
+      "B": "Art of teaching",
+      "C": "Classroom cleaning",
+      "D": "School feeding"
+    },
+    "answer": "B",
+    "explanation": "Pedagogy is accurately defined as the method, practice, or study of teaching. It is the theory and practice of learning, specifically focusing on how knowledge and skills are imparted in an educational context.\n\n*   **Option B: Art of teaching** is the correct answer because one of the primary definitions of pedagogy is \"the art, science, or profession of teaching.\" It encompasses the methods, strategies, and approaches an educator uses to help students achieve learning objectives. The term covers everything from the curriculum design and instructional delivery to the overall teaching philosophy.\n*   **Option A: Child learning** refers to **andragogy** (adult learning) and **pedagogy** (initially derived from Greek words meaning \"to lead a child\"), but pedagogy's modern, broader meaning is the art and practice of teaching itself, not simply the act of learning by the child.\n*   **Options C and D** are unrelated to the definition of pedagogy, which is an academic and professional discipline related to educational theory and practice."
+  },
+  {
+    "id": 12,
+    "question": "A good question checks:",
+    "options": {
+      "A": "Anger",
+      "B": "Understanding",
+      "C": "Height",
+      "D": "Report cards"
+    },
+    "answer": "B",
+    "explanation": "The primary function of a question, especially in an educational or communicative setting, is to determine the knowledge, comprehension, or grasp of the subject matter by the person being asked.\n\n*   **Understanding is the Goal:** Good questions are designed to clarify, reveal, and generate reflection. Specifically, **effective questions diagnose student understanding of material**. By asking a question, a teacher or communicator can assess whether the core concepts have been absorbed and processed by the recipient.\n*   **Discriminating Power:** Questions that encourage higher levels of thinking, such as application, analysis, or evaluation, are often considered good questions because they move beyond simple recall and require the respondent to demonstrate a deeper understanding of the topic.\n*   **Eliminating Other Options:**\n    *   **Anger** (Option A) is an emotion and not something a question is fundamentally designed to check, although a poorly framed question might provoke it.\n    *   **Height** (Option C) is a physical measurement and is irrelevant to the function of a knowledge-based question.\n    *   **Report cards** (Option D) are a record of past performance, not a current assessment tool that a single question provides.\n*   In summary, while a good question has many characteristics—such as being clear, concise, and purposeful—its most essential function is to gauge **Understanding** (Option B)."
+  },
+  {
+    "id": 13,
+    "question": "A diagnostic assessment is done:",
+    "options": {
+      "A": "At the end",
+      "B": "Before teaching",
+      "C": "During punishment",
+      "D": "In exams only"
+    },
+    "answer": "B",
+    "explanation": "A **diagnostic assessment** is a form of pre-assessment or pre-test administered to evaluate a student's knowledge, skills, strengths, weaknesses, and learning needs *before* instruction begins on a new topic, unit, or course.\n\n*   **Purpose:** The primary goal of a diagnostic assessment is to identify what students already know and what knowledge gaps they have. This information allows the teacher to plan future teaching content, tailor instruction, and modify the curriculum to meet the specific needs of the learners.\n*   **Why Option B is Correct (Before teaching):** Because the assessment is designed to diagnose a student's existing state *prior* to instruction, it must be given at the beginning of the learning process to inform the teaching strategy.\n*   **Why Other Options are Incorrect:**\n    *   **A: At the end** refers to **summative assessment**, which is used to evaluate learning and skill acquisition after a unit of instruction has been completed.\n    *   **C: During punishment** is not a phase of educational assessment.\n    *   **D: In exams only** is too restrictive; diagnostic assessments can be various tools like pre-tests, self-assessments, or concept maps, and they are distinct from typical summative or high-stakes exams.\n    *   **During teaching** is the phase for **formative assessment**, which is used to monitor student learning and provide ongoing feedback during instruction.\n\nTherefore, a diagnostic assessment is fundamentally conducted **before teaching**."
+  },
+  {
+    "id": 14,
+    "question": "CBC stands for:",
+    "options": {
+      "A": "Child Behaviour Chart",
+      "B": "Creative-Based Curriculum",
+      "C": "Competency-Based Curriculum",
+      "D": "Classroom Based Code"
+    },
+    "answer": "C",
+    "explanation": "The acronym **CBC** in an educational context stands for **Competency-Based Curriculum**.\n\nA Competency-Based Curriculum is a modern approach to education that shifts the focus from merely covering content or spending a certain amount of time in a classroom to ensuring that a learner can actually *do* something upon completion—that is, they demonstrate mastery of specific skills, competencies, and attitudes.\n\nKey characteristics of a CBC include:\n\n*   **Focus on Learning Outcomes:** It emphasizes what a student can practically do and apply after a successful learning experience.\n*   **Demonstration of Mastery:** Students progress by proving they have mastered defined skills or competencies, rather than simply passing a standardized test or finishing a term.\n*   **Practical Skills Development:** The curriculum is designed to develop practical skills and competencies required for real-world application, often by aligning with National Competency Standards.\n*   **Learner-Centric Approach:** It is often described as a learner-centric system that trains the whole student by focusing on essential knowledge, skills, values, and attitudes.\n\nThe other options are not standard or widely recognized educational acronyms for \"CBC.\" For example, the CBC system is the new national education system in countries like Kenya, where it is replacing older models."
+  },
+  {
+    "id": 15,
+    "question": "The overall goal of primary school teaching is to:",
+    "options": {
+      "A": "Complete syllabus",
+      "B": "Promote holistic learning",
+      "C": "Punish learners",
+      "D": "Prepare scripts"
+    },
+    "answer": "B",
+    "explanation": "The overall goal of primary school teaching is **Promote holistic learning** because education at this stage is fundamentally about the comprehensive development of a child, not just academic instruction.\n\n*   **Holistic Education Defined:** Holistic education is an integrated approach that aims to nurture the \"whole child\" by addressing their intellectual, social, emotional, physical, and spiritual development. It seeks to provide a well-rounded learning experience.\n*   **Broad Objectives:** Key objectives of primary education—such as acquiring literacy, numeracy, creativity, communication skills, and developing a love for learning—are all encompassed within the framework of holistic development.\n*   **Why Option B is Superior:** \"Promote holistic learning\" is the overall, philosophical goal. While **A) Complete syllabus** is a necessary *task* or *means* of primary schooling, it is not the ultimate *end goal*. The syllabus is simply a tool or structure used to facilitate the broader aim of developing a well-rounded, capable, and lifelong learner.\n*   **Exclusion of Other Options:** Options **C) Punish learners** and **D) Prepare scripts** (or notes/documents) are not legitimate educational goals. Punishment is a disciplinary action, not an educational goal, and preparing materials is a teacher's task, not the overall objective of the teaching process."
+  },
+  {
+    "id": 16,
+    "question": "Educational leadership that focuses on empowering teachers is known as:",
+    "options": {
+      "A": "Transformational leadership",
+      "B": "Distributed leadership",
+      "C": "Autocratic leadership",
+      "D": "Charismatic leadership"
+    },
+    "answer": "B",
+    "explanation": "**Distributed leadership** is the correct answer because its core principle is the purposeful sharing of leadership roles, responsibilities, and decision-making authority across the school community, particularly with teachers.\n\nHere is a breakdown of why this option is correct and why the others are not:\n\n*   **Distributed Leadership (Correct Answer):** This model is structurally designed to **empower teachers** by acknowledging their expertise and making them active participants in school-wide management, curriculum development, and instructional improvement. It focuses on capacity building by sharing leadership and allowing teachers to take on formal and informal leadership opportunities, thereby preventing leadership overload on a single individual and increasing the impact of teacher leaders. The practice is directly linked to fostering a collaborative culture and ensuring teacher voices are represented in school decisions.\n\n*   **Autocratic Leadership (Incorrect):** This style is characterized by the concentration of power and decision-making in the hands of the principal or a single leader. It is fundamentally opposed to empowering teachers and is often shown to negatively affect teacher performance, collaboration, and efficacy.\n\n*   **Transformational Leadership (Less Precise):** Transformational leaders *do* aim to inspire and empower teachers by communicating a compelling vision, fostering creative self-confidence, and encouraging intellectual stimulation. However, the primary focus of transformational leadership is on motivation, vision, and organizational change through inspiration, whereas **distributed leadership** specifically focuses on the **structural mechanism** of **sharing and diffusing** leadership roles to formally empower them through new responsibilities.\n\n*   **Charismatic Leadership (Less Precise):** This style relies heavily on the leader's personality, charm, and inspirational qualities to motivate followers and correlate with follower empowerment. While it can empower individuals, it is centered on the single leader's personal influence rather than a systemic, structural approach to distributing authority and responsibility to teachers as a collective and formal leadership strategy."
+  },
+  {
+    "id": 17,
+    "question": "The Ghana Education Service operates under the authority of:",
+    "options": {
+      "A": "Ministry of Labour",
+      "B": "Ministry of Education",
+      "C": "Ministry of Youth",
+      "D": "Ministry of Interior"
+    },
+    "answer": "B",
+    "explanation": "The Ghana Education Service (GES) is a government agency that **operates under the auspices of the Ministry of Education**. The GES is officially established as part of the Public Service of Ghana, and its mandate is to implement the government's pre-tertiary educational policies and programs.\n\n*   **Ministry of Education (Option B)** is the correct supervisory body. The Ministry of Education (MoE) is responsible for the overall formulation of educational policy, while the GES is the principal agency tasked with the day-to-day implementation of these policies. Therefore, the GES is directly accountable to the Ministry of Education.\n*   The other options—Ministry of Labour (A), Ministry of Youth (C), and Ministry of Interior (D)—deal with different sectors of governance and have no direct, formal operational authority over the GES or the pre-tertiary education sector."
+  },
+  {
+    "id": 18,
+    "question": "The process of comparing actual performance to expected standards is:",
+    "options": {
+      "A": "Planning",
+      "B": "Delegation",
+      "C": "Evaluation",
+      "D": "Structuring"
+    },
+    "answer": "C",
+    "explanation": "The correct answer is **Evaluation** because it is the management function that directly involves the process described in the question.\n\n*   **Evaluation** is the systematic process of measuring and analyzing the effectiveness, efficiency, and impact of a project, program, or individual's work. In a performance management context, this process specifically entails **comparing the actual performance or results achieved against the pre-established expected standards or goals.** This comparison allows management to determine the degree to which objectives were met and to identify any deviations.\n\n### Why the other options are incorrect:\n\n*   **A) Planning:** This is a forward-looking function that involves setting objectives and determining the best course of action *in advance* to achieve those objectives. It defines the standards, but it does not perform the comparison.\n*   **B) Delegation:** This is the process of assigning tasks, responsibilities, and authority to a subordinate or team member. It is about distributing work, not measuring performance against standards.\n*   **D) Structuring (Organizational Structure):** This refers to the framework of roles, responsibilities, and authority relationships within an organization. It defines how an organization is built and operates, but it is not the process of measuring performance."
+  },
+  {
+    "id": 19,
+    "question": "A continuous record of a child’s academic progress is called:",
+    "options": {
+      "A": "Checklist",
+      "B": "Cumulative record",
+      "C": "Anecdotal record",
+      "D": "Report sheet"
+    },
+    "answer": "B",
+    "explanation": "The chosen correct answer, **Option B: Cumulative record**, is accurate because this term specifically refers to a comprehensive and continuous document that systematically tracks a student's development and academic history throughout their entire educational career.\n\n*   **Cumulative Record:** This is a permanent and confidential record that compiles various assessment results and judgments made over time. It typically includes academic performance (grades, test scores), educational history, attendance, health information, co-curricular activities, and often behavioral notes, providing a complete, long-term picture of the child's progress from school entry until they leave. The essence of the term is its **continuous** nature, consolidating data from various sources to show a student's growth and development.\n*   **Checklist (Option A):** A checklist is a structured assessment tool used by educators to note the presence or absence of specific skills, learning objectives, or behaviors at a given point in time. It is a component of assessment but not the continuous, comprehensive academic history itself.\n*   **Anecdotal Record (Option C):** This is a brief, written narrative documenting a specific, notable incident, behavior, or interaction observed in a child. Its focus is qualitative, often on personality or social-emotional behavior, rather than being the all-encompassing, continuous record of academic progress.\n*   **Report Sheet / Report Card (Option D):** This is a formal, periodic document that summarizes a student's progress and performance, usually over one term or semester, and is communicated to parents. It is a summary of progress over a short period, not the single, continuous **cumulative** document that spans the child's entire schooling."
+  },
+  {
+    "id": 20,
+    "question": "Which assessment type helps to diagnose learning difficulties early?",
+    "options": {
+      "A": "Summative",
+      "B": "Formative",
+      "C": "Norm-referenced",
+      "D": "Standardized"
+    },
+    "answer": "B",
+    "explanation": "The chosen answer, **Option B (Formative)**, is correct because formative assessment is specifically designed to monitor student learning and provide immediate, ongoing feedback, making it the ideal tool for early diagnosis.\n\n*   **Formative Assessment's Diagnostic Role:** Formative assessment is defined as an \"assessment *for* learning\" and includes **diagnostic testing**. Its primary purpose is to conduct in-process evaluations of a student's comprehension and learning needs during instruction.\n*   **Early Intervention:** By using a variety of formal and informal methods (like observations, quick quizzes, or exit tickets), teachers can identify misunderstandings, gaps in knowledge, or specific learning struggles *as they occur*—long before a final test. This early evidence allows the teacher to adapt instruction to meet student needs and intervene immediately, which is crucial for addressing potential learning difficulties before they become significant barriers.\n*   **Contrast with Other Options:**\n    *   **Summative assessment** (Option A) is an evaluation *of* learning that occurs at the end of a unit or course (e.g., a final exam). While it measures achievement, the feedback is too late for early intervention or diagnosis.\n    *   **Norm-referenced assessment** (Option C) and **Standardized assessment** (Option D) are primarily used to compare a student's performance against a peer group (the \"norm\") or against a large population using consistent procedures. While they can indicate a *discrepancy* in performance, they typically lack the specific, granular data needed to diagnose the *cause* of an individual student's difficulties and adapt daily teaching."
+  },
+  {
+    "id": 21,
+    "question": "Which approach focuses most on learner experience?",
+    "options": {
+      "A": "Subject-centered",
+      "B": "Learner-centered",
+      "C": "Teacher-centered",
+      "D": "Content-centered"
+    },
+    "answer": "B",
+    "explanation": "The correct choice is **Learner-centered** because this educational philosophy fundamentally prioritizes the student's needs, interests, passions, and active involvement in the educational process, which together constitute the \"learner experience.\"\n\n*   **Learner-centered Approach (Option B):** This approach intentionally shifts the focus of instruction from the teacher and the content to the individual student and the process of learning. It emphasizes principles like the personalization of learning, active learning, student autonomy, and collaborative learning. By focusing on the student's strengths, meaningful experiences, and individual learning process, this approach maximizes the quality of the learner's experience.\n*   **Teacher-centered Approach (Option C):** This method traditionally focuses on the instructor's knowledge, the delivery of content, and the teacher's role as the primary source of information, often resulting in a more passive learning experience for the student.\n*   **Subject-centered and Content-centered Approaches (Options A and D):** These terms are often used interchangeably and focus primarily on the academic content, curriculum, or subject matter to be covered. They emphasize the structure and delivery of information rather than the individual student's needs, interests, or active participation.\n\nIn summary, the very definition of the **Learner-centered** approach is to put the student and their experience at the center of the educational design, making it the one that focuses most on the learner experience."
+  },
+  {
+    "id": 22,
+    "question": "The act of guiding teachers professionally is:",
+    "options": {
+      "A": "Monitoring",
+      "B": "Supervision",
+      "C": "Auditing",
+      "D": "Moderation"
+    },
+    "answer": "B",
+    "explanation": "The correct option is **Supervision** because the term is specifically defined within educational administration and professional development as the act of professionally guiding and supporting teachers.\n\n*   **Supervision** in the context of education is a creative, dynamic, and continuous process that involves providing friendly guidance, direction, support, and leadership to teachers and other educational workers. Its primary objective is to facilitate the optimal development of a teacher's potential, improve their instructional skills, introduce new pedagogical approaches, and ultimately enhance the overall teaching-learning process. This comprehensive focus on professional development and guidance makes it the most accurate term for the act described.\n\nThe other options are incorrect because they refer to specific, narrower processes:\n\n*   **Monitoring** involves tracking, observing, and collecting data on instructional practices, student learning outcomes, and teacher performance to make data-driven decisions. While a part of the supervision process, monitoring is focused on *observation and tracking* rather than the holistic *guidance and development* implied by professional guidance.\n*   **Auditing** is a systematic evaluation or on-site verification process, primarily concerned with assessing an institution's financial records, operations, compliance with regulations, or the effectiveness and quality of the curriculum. It is an accountability and compliance function, not a continuous professional guidance mechanism for individual teachers.\n*   **Moderation** is a quality assurance process focused on ensuring that teachers make consistent and reliable judgments about student standards, marks, or grades, regardless of the individual teacher or marker. It is strictly an assessment-related activity and does not encompass the full scope of professional guidance and development."
+  },
+  {
+    "id": 23,
+    "question": "A school timetable is an example of:",
+    "options": {
+      "A": "Policy document",
+      "B": "Administrative record",
+      "C": "Academic register",
+      "D": "Management review"
+    },
+    "answer": "B",
+    "explanation": "The correct option, **Administrative record**, is the best classification for a school timetable because of its primary function in the day-to-day operation and coordination of the school.\n\n*   **Administrative Record:** An administrative record is a document that pertains to the origin, development, activities, functions, and procedures of an organization. A school timetable is a crucial administrative tool that provides a detailed plan and schedule of time allocation for various subjects and activities. It coordinates the use of essential school resources, such as teachers, classrooms, and time slots, to ensure an orderly schedule for classes. The preparation and maintenance of the timetable is a core administrative task, making the document itself an administrative record.\n\n*   **Incorrect Options:**\n    *   **Policy document:** A policy document clearly defines what the school board or administration intends or requires, outlining principles, rules, or guidelines (e.g., a \"student conduct policy\" or \"education records policy\"). A school timetable, however, is a specific implementation tool and schedule, not a set of governing principles.\n    *   **Academic register:** An academic register typically refers to a formal record of student-specific academic information, such as attendance, grades, and academic achievements or results. While the timetable is a *schedule* for academic activity, it is not a *record* of an individual student's performance or presence.\n    *   **Management review:** A management review is a process—a regular evaluation of the performance of management systems to ensure they remain focused on continual improvement and alignment with goals. It is a periodic evaluation activity, not a static planning document like a timetable."
+  },
+  {
+    "id": 24,
+    "question": "Which law governs basic education in Ghana?",
+    "options": {
+      "A": "RLG Act 2015",
+      "B": "Education Act 2008 (Act 778)",
+      "C": "Act 915",
+      "D": "Act 672"
+    },
+    "answer": "B",
+    "explanation": "The chosen correct answer is **Education Act 2008 (Act 778)**. This Act is the principal legislation that governs the structure and provision of education in Ghana.\n\n*   **Education Act, 2008 (Act 778)** is the central law that establishes the entire system of education in Ghana, including basic, second-cycle, and tertiary education.\n*   The Act specifically mandates the provision of **free and compulsory basic education** in Ghana, making it the definitive legal instrument for this level of schooling. It details provisions for the curriculum, assessment, and inspection of educational institutions.\n\nThe other options are incorrect because they govern different areas of Ghanaian law:\n\n*   **RLG Act 2015** is not a known or major piece of education legislation. \"RLG\" generally refers to a communications group and is a distracter in this context.\n*   **Act 915** refers to the **Revenue Administration Act, 2016**, which governs the administration and collection of taxes by the Ghana Revenue Authority (GRA).\n*   **Act 672** refers to the **University of Education, Winneba Act, 2004**, a law that establishes and governs a specific tertiary (higher education) institution, not the general framework for basic education."
+  },
+  {
+    "id": 25,
+    "question": "The official head of a public basic school is:",
+    "options": {
+      "A": "District Director",
+      "B": "Headteacher",
+      "C": "Circuit Supervisor",
+      "D": "Senior Teacher"
+    },
+    "answer": "B",
+    "explanation": "The correct answer is **Option B (Headteacher)** because the Headteacher (or School Head/Head of Institution) is the official administrative and instructional leader of an individual public basic school.\n\n*   **Headteacher (Option B - Correct):** The Headteacher is the chief executive of a public basic school, responsible for its day-to-day management. Their duties include overseeing educational activities, managing staff, ensuring financial accountability, maintaining school discipline, and generally ensuring that the school achieves its educational goals.\n\n*   **District Director (Option A - Incorrect):** The District Director of Education (DDE) is the head of the *District Education Office*, which is responsible for the overall administration, policy implementation, monitoring, and evaluation of *all* basic schools (and other educational institutions) within a specific administrative district. They supervise Headteachers, but they are not the head of a single school.\n\n*   **Circuit Supervisor (Option C - Incorrect):** A Circuit Supervisor is an officer tasked with the instructional supervision and quality assurance of *multiple* basic schools located within a smaller geographical area called a 'circuit'. They provide professional support and monitor compliance, but they do not serve as the official head of any single school.\n\n*   **Senior Teacher (Option D - Incorrect):** A Senior Teacher is an experienced classroom teacher who may have additional responsibilities, such as mentoring junior teachers, being responsible for a specific class or grade level, or assisting the Headteacher in management duties. While they are an important part of the school's leadership structure, they are not the official, overall head of the institution."
+  },
+  {
+    "id": 26,
+    "question": "Instructional objectives must be:",
+    "options": {
+      "A": "Broad and unclear",
+      "B": "Teacher based",
+      "C": "Specific and measurable",
+      "D": "Difficult to assess"
+    },
+    "answer": "C",
+    "explanation": "The correct characteristics for instructional objectives are that they must be **specific and measurable**. This is based on the widely used **SMART** framework, which dictates that effective learning goals should be Specific, Measurable, Achievable, Relevant, and Time-bound.\n\n*   **Specific:** An effective instructional objective must be crystal clear, specifying exactly what the learner is expected to achieve or be able to do upon completion of the learning experience. This rules out **Option A (Broad and unclear)**.\n*   **Measurable:** The objective must be observable and measurable, meaning the teacher can assess the student's performance against a standard to determine if the objective has been met. This ensures the objective can be assessed, which rules out **Option D (Difficult to assess)**.\n*   **Student-Oriented:** While not an option, good objectives are student-oriented, describing a learning outcome that is based on the student's behavior or ability. This is in contrast to **Option B (Teacher based)**, as the focus is on what the *student* will do, not the teacher.\n\nTherefore, \"Specific and measurable\" represents two fundamental and essential characteristics of a well-written instructional objective, which are necessary for both guiding instruction and evaluating learning."
+  },
+  {
+    "id": 27,
+    "question": "The teacher’s lesson notes are primarily for:",
+    "options": {
+      "A": "Parents",
+      "B": "Teaching guidance",
+      "C": "Inspectors",
+      "D": "Students"
+    },
+    "answer": "B",
+    "explanation": "A teacher's lesson notes, or a lesson plan, are fundamentally a structured guide and \"road map\" created by the teacher, for the teacher, to ensure effective instruction.\n\n*   **Primary Purpose (Teaching Guidance):** The lesson notes detail the instructor's teaching goals, learning objectives, content to be covered, methods of delivery (activities, procedures), materials needed, and how student learning will be assessed. The notes serve as an essential guide for the teacher to plan, prepare, and deliver the lesson, align instruction with curriculum standards, and thoughtfully address the individual learning needs of students. This aligns directly with the term \"Teaching guidance.\"\n*   **Secondary Users (Inspectors, Students, Parents):**\n    *   **Inspectors:** Lesson notes may be reviewed by inspectors or administrators as evidence of planning and lesson delivery, but this is a secondary, administrative function, not the primary reason the notes are created.\n    *   **Students:** Students are the beneficiaries of the lesson content and activities derived from the notes, but the notes themselves are the teacher's organizational tool, not the student's instructional material.\n    *   **Parents:** Parents might receive a high-level overview of the curriculum or learning objectives, but the detailed instructional notes are not primarily intended for them.\n\nTherefore, the main, indispensable function of the notes is to provide a guide for the teacher's instruction, making \"Teaching guidance\" the most accurate choice."
+  },
+  {
+    "id": 28,
+    "question": "A test that compares a pupil to others is:",
+    "options": {
+      "A": "Criterion-referenced",
+      "B": "Norm-referenced",
+      "C": "Performance test",
+      "D": "Aptitude test"
+    },
+    "answer": "B",
+    "explanation": "A **norm-referenced test** is an assessment designed specifically to compare and rank the performance of a test-taker relative to other test-takers, often referred to as a \"norming group\" or \"peer group\".\n\n*   **Option B (Norm-referenced)** is correct because the primary purpose of this type of test is to estimate an individual's position within a predefined population (e.g., how a student's score compares to all other students in their grade nationally). Scores are often reported as percentiles, which indicate the percentage of peers a student outperformed.\n\n*   **Option A (Criterion-referenced)** is incorrect. This type of test compares a pupil's performance against a pre-established standard, learning goal, or level of proficiency, not against the performance of other pupils. For example, a student might be judged as \"proficient\" or \"not proficient\" based on reaching a set score, regardless of how others scored.\n\n*   **Option C (Performance test)** is incorrect because it describes the *format* of the assessment (one that requires the test-taker to demonstrate skills by completing a task) rather than the *method* of score comparison. A performance test could be scored in a norm-referenced or criterion-referenced manner.\n\n*   **Option D (Aptitude test)** is incorrect because it describes the *content* of the assessment (one designed to measure a person's potential or capacity to learn or succeed in a certain area). An aptitude test can also be scored using either norm-referenced or criterion-referenced methods."
+  },
+  {
+    "id": 29,
+    "question": "Which principle holds that authority flows from top to bottom?",
+    "options": {
+      "A": "Unity of direction",
+      "B": "Scalar chain",
+      "C": "Equity",
+      "D": "Espirit de corps"
+    },
+    "answer": "B",
+    "explanation": "The chosen correct answer is **Scalar chain (Option B)** because it is the fundamental principle of management that establishes a formal, hierarchical line of authority and communication.\n\n*   **Scalar Chain** is one of the 14 Principles of Management defined by Henri Fayol. It refers to the **chain of command**—the line of authority that runs from the top-most manager to the lowest rank in the organization. This chain serves as the path through which authority flows *down* and communication flows *up* and *down* within the hierarchy. Therefore, the principle holds that authority and orders originate at the top and are relayed successively down through each layer of management to the bottom.\n\n*   **Unity of direction (Option A)** is the principle that all activities with the same objective must have one head and one plan, ensuring alignment and coordination across the organization.\n*   **Equity (Option C)** is the principle that managers should treat employees with justice, fairness, and kindness.\n*   **Espirit de corps (Option D)** is the principle that promotes harmony, unity, and team spirit within the organization (\"union is strength\").\n\nNone of the other options specifically define the structure or principle governing the **flow of authority from top to bottom**, which is the precise definition of the Scalar Chain principle."
+  },
+  {
+    "id": 30,
+    "question": "A school’s mission statement describes:",
+    "options": {
+      "A": "Future vision",
+      "B": "Present purpose",
+      "C": "Rules and regulations",
+      "D": "Community demands"
+    },
+    "answer": "B",
+    "explanation": "A school's mission statement describes its **present purpose**.\n\n*   **Mission vs. Vision:** The mission statement defines the school's fundamental reason for existing, explaining specifically *what* the school does, *how* it does it, and *why* it does it. This is its current operational purpose and philosophy. It serves as a point of reference for the school's daily work.\n*   **Present Focus:** A mission statement addresses the \"why\" a school exists in the present. It outlines the school's core values, goals, and direction.\n*   **Incorrect Options:**\n    *   **Future vision** (Option A) is distinct from the mission. The **vision statement** is a separate document or concept that describes what the school *wants to become* in the future. The mission, by contrast, outlines the purpose and how the school will achieve that vision.\n    *   **Rules and regulations** (Option C) are the specific policies and procedures that are *driven by* the philosophy and purpose outlined in the mission statement, but they are not the mission statement itself.\n    *   **Community demands** (Option D) may influence the mission statement during its creation, but the statement itself is the school's defined, actionable purpose, not a simple list of external requests."
+  },
+  {
+    "id": 31,
+    "question": "Mentorship in education develops:",
+    "options": {
+      "A": "Competition",
+      "B": "Professional growth",
+      "C": "Conflict",
+      "D": "Evaluation skills"
+    },
+    "answer": "B",
+    "explanation": "Mentorship in education is a formal or informal relationship where an experienced individual (mentor) guides and supports a less experienced individual (mentee), typically a new teacher or a student, to help them navigate their career or academic path.\n\n*   **Professional Growth (Option B):** This is the primary and most direct outcome of an effective mentorship program. Mentorship acts as a catalyst for professional growth by offering personalized skill development, career guidance, and instructional support. Mentors encourage mentees, such as new teachers, to engage in reflective practice, set professional goals, and continuously work toward improving their teaching methods and overall performance. It is a structured form of professional development where a senior teacher supports a novice teacher by providing necessary guidance and experience.\n*   **Competition (Option A):** Mentorship is inherently a supportive and collaborative relationship, not a competitive one. The goal is to build the mentee's confidence and competence, not to foster rivalry.\n*   **Conflict (Option C):** While conflicts can sometimes arise in any interpersonal relationship, mentorship is designed to provide emotional support, instruction, and inspiration, actively working to prevent confusion and conflict, especially for new teachers facing challenges.\n*   **Evaluation skills (Option D):** Evaluation skills may be one component of a mentee's professional development (e.g., learning to self-evaluate or receive feedback), but \"Professional growth\" is the broader, overarching goal and a more accurate description of the relationship's primary function."
+  },
+  {
+    "id": 32,
+    "question": "A teacher's written observation of student behavior is:",
+    "options": {
+      "A": "Checklist",
+      "B": "Anecdotal record",
+      "C": "Inventory report",
+      "D": "Summative note"
+    },
+    "answer": "B",
+    "explanation": "The correct answer is **Anecdotal record** because it precisely matches the definition of a teacher's written observation of student behavior.\n\n*   **Anecdotal Record (Option B) is Correct:** An anecdotal record is an informal observation method used by teachers to document a child's personality or behavior. It is a brief, objective narrative or note—a snapshot in time—that documents a specific incident, behavior, or what a child says or does during activities or routines. The purpose is to provide a detailed, descriptive account that informs the teacher's understanding and planning. This is the only option that describes a written narrative based on a direct observation of a student's behavior.\n\n*   **Checklist (Option A) is Incorrect:** A checklist is a structured assessment tool used to systematically identify the presence or absence of specific elements or criteria. Instead of a detailed written narrative, it typically consists of statements or traits that are marked with a simple \"Yes/No\" or \"Done/Not Done.\" It is not a continuous, descriptive written observation.\n\n*   **Inventory Report (Option C) is Incorrect:** In an educational context, an inventory typically refers to a structured tool used to gather information about an individual's personality, preferences, interests, or to take stock of a district's overall assessment strategies. An \"inventory report\" would be the summary of this collected data, not the direct, moment-by-moment written observation of behavior by a teacher.\n\n*   **Summative Note (Option D) is Incorrect:** Summative assessment, and therefore a \"summative note,\" is focused on evaluating student learning outcomes at the **end** of an instructional unit, course, or semester by comparing it against a standard or benchmark. While it summarizes performance, it is generally a final grade or evaluation, not the kind of in-the-moment, descriptive note on behavior that an anecdotal record is."
+  },
+  {
+    "id": 33,
+    "question": "Curriculum review happens mainly to:",
+    "options": {
+      "A": "Reduce workload",
+      "B": "Meet changing needs",
+      "C": "Please administrators",
+      "D": "Replace textbooks"
+    },
+    "answer": "B",
+    "explanation": "Curriculum review is a systematic and critical process in education primarily driven by the need to maintain the educational program's quality, effectiveness, and relevance.\n\n*   **Option B: Meet changing needs** is the most comprehensive and correct answer. The main objective of reviewing a curriculum is to assess its effectiveness, address gaps, and ensure the programs remain **relevant** by responding to **changing needs**. These \"changing needs\" are broad and can include:\n    *   **Societal and Economic Shifts:** Incorporating new skills required by the modern workplace (e.g., digital literacy, critical thinking).\n    *   **New Research and Best Practices:** Integrating the latest pedagogical research and findings on how students learn best.\n    *   **Student Performance Data:** Modifying content or delivery based on a critical, evidence-based examination of student outcomes.\n    *   **Technological Advancements:** Adapting the curriculum to utilize or teach new technologies.\n    *   **Policy Changes:** Aligning the curriculum with new governmental or institutional educational standards.\n\n*   **Option A: Reduce workload** is incorrect, as a thorough curriculum review is often a substantial and time-intensive professional task, frequently *increasing* initial workload.\n*   **Option C: Please administrators** is not an official educational or professional rationale for a complex, evidence-based process designed to enhance student learning.\n*   **Option D: Replace textbooks** is a potential *outcome* of a curriculum review, not the central purpose. The review focuses on the educational content, learning outcomes, and instructional methods; new textbooks or resources may be selected if the old ones no longer align with the revised content."
+  },
+  {
+    "id": 34,
+    "question": "A rapid school survey on dropouts is an example of:",
+    "options": {
+      "A": "Basic research",
+      "B": "Experimental research",
+      "C": "Action research",
+      "D": "Ethnographic research"
+    },
+    "answer": "C",
+    "explanation": "The correct answer is **Action research** because the scenario—a \"rapid school survey on dropouts\"—perfectly fits its purpose and methodology.\n\n*   **Action research** is a systematic, cyclical process of inquiry conducted by practitioners (like teachers, administrators, or school staff) to improve their own practice and solve an immediate, specific problem within their local setting.\n*   The problem of **school dropouts** is a specific, practical issue requiring prompt intervention and decision-making at the school level. The \"rapid survey\" component indicates a focus on quickly collecting data to diagnose the problem's scope and inform immediate practical action or an improvement plan, which is the defining characteristic of this type of research.\n\nThe other options are incorrect:\n\n*   **Basic research** (or pure research) is aimed at expanding fundamental knowledge and theoretical understanding of phenomena, with no immediate practical application in mind. A rapid survey to solve a local school problem is practical, not fundamental.\n*   **Experimental research** is a scientific method that investigates cause-and-effect relationships by intentionally manipulating one or more independent variables to observe their effect on dependent variables. A simple survey on dropouts does not involve variable manipulation or control groups.\n*   **Ethnographic research** is a qualitative method that requires deep, long-term immersion in a particular community or group to study their culture, relationships, and behavior in their natural environment. A \"rapid survey\" is not a long-term, immersive cultural study."
+  },
+  {
+    "id": 35,
+    "question": "School budgeting begins with:",
+    "options": {
+      "A": "Costing",
+      "B": "Needs assessment",
+      "C": "Report writing",
+      "D": "Auditing"
+    },
+    "answer": "B",
+    "explanation": "The correct answer is **Needs assessment** because it is the foundational, initial stage of the school budgeting cycle.\n\n*   **Needs Assessment as the First Step:** School budgeting is a process designed to support educational goals, and therefore, the first action must be to determine those goals and the resources required to achieve them. The needs assessment phase involves understanding what the school requires, assessing current needs, and projecting future expenses for the upcoming academic year. This initial step identifies essential expenditures like staffing, curriculum updates, and facility maintenance before any financial figures are calculated.\n*   **Purpose and Function:** The data acquired from the needs assessment drives the entire budget, ensuring that financial planning is aligned with program development and the educational needs of the students. Without this step, the subsequent budget would lack a clear justification and a strategic focus.\n*   **Why other options are incorrect:**\n    *   **Costing** (Option A) is a subsequent step where the financial value is assigned to the needs identified during the assessment. It comes *after* the needs have been identified.\n    *   **Report writing** (Option C) and **Auditing** (Option D) are final or post-budget activities. Report writing is typically done to document and propose the finalized budget, and auditing is a review of the budget's execution and financial records that takes place *after* the funds have been spent."
+  },
+  {
+    "id": 36,
+    "question": "CPD stands for:",
+    "options": {
+      "A": "Classroom Professional Duty",
+      "B": "Continuous Professional Development",
+      "C": "Current Policy Development",
+      "D": "Control Process Design"
+    },
+    "answer": "B",
+    "explanation": "The acronym **CPD** universally stands for **Continuous Professional Development**.\n\n*   **Continuous Professional Development (CPD)** refers to the ongoing, intentional learning activities professionals engage in to develop and enhance their skills, knowledge, and experience throughout their careers.\n*   It is a proactive and structured approach professionals use to maintain, improve, and broaden their expertise and competence to ensure they are performing at their best.\n*   CPD is particularly vital in regulated fields like education, healthcare, finance, and engineering, where maintaining a high standard of practice and keeping up with industry changes, new technologies, and policy updates is mandatory or essential.\n*   The process often involves tracking and documenting various learning experiences, such as courses, workshops, seminars, self-study, and on-the-job training, which help a professional develop and improve their professional practice."
+  },
+  {
+    "id": 37,
+    "question": "A democratic leader:",
+    "options": {
+      "A": "Commands obedience",
+      "B": "Encourages participation",
+      "C": "Works alone",
+      "D": "Punishes heavily"
+    },
+    "answer": "B",
+    "explanation": "A democratic leader, also known as a **participative leader**, highly values team input and collaboration, making Option B the correct choice.\n\n*   **Encourages participation (Option B):** This is the defining characteristic of a democratic leadership style. A democratic leader includes team members in the decision-making process, solicits group opinion, and values diverse perspectives before making the final decision. This style promotes open communication, creativity, and a \"team player\" attitude.\n\n*   **Commands obedience (Option A):** This behavior is characteristic of an **autocratic** or **authoritarian** leadership style, where the leader dictates policies and procedures, decides what goals are to be achieved, and expects strict compliance.\n*   **Works alone (Option C):** This contradicts the core principle of democratic leadership, which is inclusivity and shared decision-making. The idea of \"working alone\" would more closely align with a highly autocratic or perhaps a *laissez-faire* (hands-off) approach depending on the context, but certainly not a democratic one.\n*   **Punishes heavily (Option D):** This is an aggressive and punitive approach, not a standard characteristic of a democratic leader, who typically aims to build trust through transparency and collaboration, rather than fear."
+  },
+  {
+    "id": 38,
+    "question": "Motivation is best sustained by:",
+    "options": {
+      "A": "Salary alone",
+      "B": "Recognition",
+      "C": "Threats",
+      "D": "Competition"
+    },
+    "answer": "B",
+    "explanation": "**Recognition** is the best option because it taps into deeper psychological needs, leading to intrinsic motivation, which is essential for sustained effort and commitment.\n\n*   **Recognition Fosters Intrinsic Motivation (Correct):** Recognition (praise, acknowledgment, awards) is a powerful, non-monetary motivator because it fulfills the core human psychological needs for competence and relatedness, key components of intrinsic motivation.\n    *   **Sustained Impact:** When employees or individuals are recognized, it helps them see the impact of their work, connects their daily tasks to the larger mission, and aligns their personal values with their role, driving sustained engagement and loyalty.\n    *   **Motivational Cycle:** Recognizing effort and achievement boosts self-esteem, provides validation, and reinforces the desired behavior, making the individual more likely to continue the effort in the long run.\n\n*   **Salary Alone (A) is a Short-Term Extrinsic Motivator:** While financial compensation is necessary for job satisfaction (a \"hygiene factor\"), simply increasing the **salary alone** is generally considered a short-term, extrinsic motivator that does not provide sustained motivation. Once a person adjusts to a higher salary, its motivational effect quickly fades.\n\n*   **Threats (C) Undermine Long-Term Motivation:** **Threats** (or fear of punishment) may enforce short-term compliance but activate defensive or survival states in the brain, leading to stress, anxiety, resentment, and a focus on avoidance rather than positive, sustained, high-quality performance.\n\n*   **Competition (D) is Conditional and Unstable:** **Competition** can be a temporary motivator for some, but its long-term effects are conditional. It can increase motivation, but often undermines it if not handled in a way that is intrinsic motivation-friendly. Furthermore, it often depends on the outcome (winning or losing), and for those who lose consistently, it can be demotivating, making it less reliable for sustaining motivation across a group."
+  },
+  {
+    "id": 39,
+    "question": "Induction helps newly posted teachers to:",
+    "options": {
+      "A": "Punish learners",
+      "B": "Replace senior teachers",
+      "C": "Adjust and perform",
+      "D": "Lead committees"
+    },
+    "answer": "C",
+    "explanation": "Teacher induction programs are systematic structures of support designed for newly posted or beginning teachers.\n\n*   **Adjustment (Adjust):** Induction programs facilitate a smooth transition for new educators by helping them to **adjust** to the new school environment. This includes providing individualized support, building confidence, and familiarizing them with the school's specific policies, procedures, and culture.\n*   **Performance (Perform):** The core goal is to equip new teachers with the necessary conceptual and pedagogical skills to effectively **perform** their duties. The programs enhance teaching practice, help new teachers understand their professional obligations, and ultimately aim to improve student learning outcomes.\n\nTherefore, the combination of helping the teacher settle in (adjust) and developing the skills and knowledge needed for the job (perform) makes **Option C (Adjust and perform)** the most comprehensive and accurate description of the primary purpose of teacher induction.\n\nThe other options are incorrect:\n*   **Option A (Punish learners)** is not a goal; the ultimate purpose of induction is to support the teacher to positively affect student learning.\n*   **Option B (Replace senior teachers)** is an incorrect and unrelated function; induction focuses on integrating and supporting *new* staff.\n*   **Option D (Lead committees)** is a long-term, optional leadership role, not the immediate, fundamental objective of a foundational induction program."
+  },
+  {
+    "id": 40,
+    "question": "National Inspectorate Board ensures:",
+    "options": {
+      "A": "Hiring teachers",
+      "B": "Standards in schools",
+      "C": "Building schools",
+      "D": "Disbursing salaries"
+    },
+    "answer": "B",
+    "explanation": "The primary function of a National Inspectorate Board (sometimes known as a National Schools Inspectorate Authority, like NaSIA) is to ensure the quality of education within a country's school system. This is achieved through specific, mandated responsibilities:\n\n*   **Inspection of Schools:** The Board is tasked with undertaking the periodic inspection of schools, both public and private, to evaluate the quality of teaching and learning.\n*   **Setting and Enforcing Standards:** A core function is to set and enforce the standards that must be observed in educational institutions at the basic and secondary levels. These standards cover all aspects of school operation, including curriculum delivery, management, safety, and performance.\n*   **Quality Assurance:** By conducting inspections and setting standards, the Board acts as the national quality assurance body for pre-tertiary education.\n\nThe other options are generally handled by different government bodies:\n\n*   **Hiring teachers (Option A)** and **Disbursing salaries (Option D)** are typically functions of a country's national or regional education service (e.g., the Ghana Education Service) or the Ministry of Finance.\n*   **Building schools (Option C)** is a function of a government's Ministry of Education, Ministry of Works and Housing, or a dedicated infrastructural development agency.\n\nTherefore, the main purpose that directly aligns with the functions of a National Inspectorate Board is guaranteeing **Standards in schools**."
+  },
+  {
+    "id": 41,
+    "question": "Records kept daily include:",
+    "options": {
+      "A": "Scheme of work",
+      "B": "Attendance register",
+      "C": "Annual report",
+      "D": "Audit report"
+    },
+    "answer": "B",
+    "explanation": "The **Attendance register** is the record kept and updated on a daily basis in an educational setting.\n\n*   **Attendance Register (Option B - Correct):** The primary purpose of an attendance register is to track the presence or absence of students on a session-by-session or day-by-day basis, making it a critical record that must be marked and maintained daily. Teachers are required to use a reliable system to record attendance daily.\n\n*   **Scheme of Work (Option A - Incorrect):** A scheme of work is a long-term instructional plan that outlines the structure, content, and sequence of lessons for a subject over an extended period, such as a term, semester, or an entire academic year. It is planned in advance, not written or revised daily.\n\n*   **Annual Report (Option C - Incorrect):** By its very definition, an annual report is prepared and issued once a year to summarize the school's activities, performance, and achievements over the course of the previous academic or fiscal year.\n\n*   **Audit Report (Option D - Incorrect):** An audit report is a formal document resulting from a periodic inspection and verification of a school's financial, operational, or administrative records. Financial audits, for example, are typically performed annually, or their frequency is risk-based, not daily."
+  },
+  {
+    "id": 42,
+    "question": "The hidden curriculum refers to:",
+    "options": {
+      "A": "Official syllabus",
+      "B": "Unstated values learned",
+      "C": "Textbook content",
+      "D": "Assignment tasks"
+    },
+    "answer": "B",
+    "explanation": "The **hidden curriculum** refers to the unwritten, informal lessons that students learn in school that are not part of the formal academic curriculum, making \"Unstated values learned\" the correct option.\n\n*   **Core Definition:** The hidden curriculum encompasses the unspoken or implicit rules, norms, values, and beliefs that are conveyed in a school's culture, structure, and daily interactions.\n*   **Examples:** It includes lessons about obedience, conformity, gender roles, social hierarchies, punctuality, and respect for authority, which students learn simply by participating in the schooling experience.\n*   **Contrast with Formal Curriculum:** Options A (\"Official syllabus\"), C (\"Textbook content\"), and D (\"Assignment tasks\") all refer to the **formal** or **explicit** curriculum—the planned, officially stated learning goals and content. The hidden curriculum, conversely, consists of lessons that are \"learned but not openly intended\" to be taught.\n*   **Mechanism:** Educators convey the hidden curriculum through their modeling, interactions with students, and the overall school or classroom environment."
+  },
+  {
+    "id": 43,
+    "question": "The type of supervision that encourages cooperation is:",
+    "options": {
+      "A": "Autocratic supervision",
+      "B": "Democratic supervision",
+      "C": "Punitive supervision",
+      "D": "Static supervision"
+    },
+    "answer": "B",
+    "explanation": "**Democratic supervision** is the type of supervision that is explicitly designed to encourage cooperation, collaboration, and high employee commitment.\n\nHere is a breakdown of why this option is correct and why the others are not:\n\n*   **Democratic Supervision (Option B):** This style is characterized by shared leadership where the supervisor involves subordinates in the decision-making process through mutual discussion and consultation. By promoting the participation and empowerment of employees, a democratic supervisor fosters a strong sense of ownership and mutual respect, which directly leads to increased cooperation, job satisfaction, and commitment within the team.\n\n*   **Autocratic Supervision (Option A):** This style is the opposite of democratic, as it involves centralized decision-making where the supervisor makes all choices with minimal or no consultation with team members. This strict control and lack of employee input hinder cooperation, often leading to reliance on the leader, rather than teamwork.\n\n*   **Punitive Supervision (Option C):** This management style relies on the use of punishment or threats of punishment to motivate personnel. Such a negative approach generates fear, resentment, and resistance, which actively discourages cooperation and teamwork.\n\n*   **Static Supervision (Option D):** This is not a recognized style of management or leadership focused on employee relations. Instead, \"static supervision\" generally refers to fixed-location security, surveillance, or monitoring duties, such as those performed by a stationary security guard."
+  },
+  {
+    "id": 44,
+    "question": "Which is NOT a school record?",
+    "options": {
+      "A": "Admission register",
+      "B": "Tax clearance",
+      "C": "Log book",
+      "D": "Inventory book"
+    },
+    "answer": "B",
+    "explanation": "The correct answer is **Option B (Tax clearance)** because, unlike the other options, it is not an internal, operational, or statutory record used for the day-to-day administration of the school.\n\nThe term \"school record\" generally refers to registers, logs, or books that document the educational, administrative, or financial activities of the institution.\n\n*   **Admission Register (Option A):** This is a mandatory, essential, and permanent statutory school record that keeps track of basic details about every student admitted to the school, their progress, and their eventual withdrawal.\n*   **Log Book (Option C):** This is an official record, often maintained by the Head Teacher, used as a diary of school life to record significant events, daily activities, staff changes, notable incidents, and other matters of importance.\n*   **Inventory Book (Option D):** This is an essential financial/general record used to keep an accurate account of all the physical assets, property, equipment, and stock (such as books, furniture, and laboratory equipment) belonging to the school.\n\n**Tax Clearance (Option B)**, or a Tax Clearance Certificate (TCC), is a document issued by a government's tax or revenue authority to confirm that a taxpayer (which an institution like a school can be) has fulfilled all their tax obligations up to the date of issuance. While a school may need and possess this external document for compliance, contracts, or specific transactions, it is a **proof of compliance** from a government agency, not a functional, internal **operational record** of the school's core activities."
+  },
+  {
+    "id": 45,
+    "question": "Validity in testing refers to:",
+    "options": {
+      "A": "Reliability over time",
+      "B": "Accuracy of measurement",
+      "C": "Ease of marking",
+      "D": "Student interest"
+    },
+    "answer": "B",
+    "explanation": "Validity in testing is a core concept in psychometrics and educational assessment, and it refers to the extent to which a test measures what it is intended to measure.\n\n*   **Option B: Accuracy of measurement** is the correct answer because the definition of test validity is \"the degree to which evidence and theory support the interpretations of test scores\" or simply, how well a test measures what it is supposed to measure. If a test has high validity, it means the measurements it provides are an accurate reflection of the construct (e.g., knowledge, skill, aptitude) it was designed to assess. For example, a valid mathematics test accurately measures mathematical ability, not reading comprehension.\n\n**Why the other options are incorrect:**\n\n*   **Option A: Reliability over time** refers to **Test Reliability**. Reliability is the consistency of the assessment results. Specifically, \"reliability over time\" is known as *test-retest reliability*, which is the degree to which a test yields the same scores when administered to the same group on different occasions. A reliable test can be inaccurate (not valid), and a valid test must, by definition, also be reliable. However, the definition of validity is *accuracy* (measuring the right thing), not *consistency* (getting the same result repeatedly).\n*   **Option C: Ease of marking** is a practical factor related to test administration and scoring efficiency, but it is not a psychometric quality that defines the measurement accuracy or consistency of the test itself.\n*   **Option D: Student interest** is a factor related to engagement and motivation in the learning or testing process. While important for educational outcomes, it is not a technical criterion used to judge the quality (validity or reliability) of a measurement instrument."
+  },
+  {
+    "id": 46,
+    "question": "The best conflict resolution style in schools is:",
+    "options": {
+      "A": "Avoiding",
+      "B": "Dominating",
+      "C": "Collaboration",
+      "D": "Withdrawal"
+    },
+    "answer": "C",
+    "explanation": "The best conflict resolution style in schools is **Collaboration** (also known as integrating) because it is the only approach that seeks a \"win-win\" solution, which is essential for preserving relationships and teaching critical problem-solving skills to students.\n\n*   **Collaboration (Option C)**: This style is characterized by high concern for both one's own goals and the goals of the other party involved in the conflict.\n    *   **Educational Benefits:** In a school setting, collaboration requires open dialogue and cooperation, allowing both students (or staff) to express their needs and find a mutually satisfactory solution. This approach not only resolves the immediate conflict but also builds trust, fosters stronger relationships, and teaches students valuable life skills in communication, empathy, and negotiation, which is a primary goal of education. It is cited as one of the most effective conflict resolution methods.\n\n*   **Avoiding (Option A) and Withdrawal (Option D)**: These styles are largely synonymous; both involve physically or mentally removing oneself from the conflict and postponing or evading the issue.\n    *   **Drawbacks in School:** While temporary avoidance might be useful for cooling down emotions, it is not an effective long-term resolution strategy. It fails to address the root cause of the conflict, which often leads to resentment, repeated conflicts, and a failure to teach students how to manage disagreements constructively.\n\n*   **Dominating (Option B)**: Also known as competing, this is a power-oriented style where one party pursues their own concerns at the expense of the other, corresponding to a \"win-lose\" outcome.\n    *   **Drawbacks in School:** Using a dominating style can damage relationships, create a hostile environment, and is counterproductive to fostering a positive, collaborative learning atmosphere. While it may resolve a conflict quickly, the losing party is likely to harbor resentment, making future conflicts more severe."
+  },
+  {
+    "id": 47,
+    "question": "A performance appraisal aims at:",
+    "options": {
+      "A": "Humiliation",
+      "B": "Professional improvement",
+      "C": "Salary reduction",
+      "D": "Punishment"
+    },
+    "answer": "B",
+    "explanation": "A performance appraisal is a systematic process designed to evaluate an employee's job performance and productivity over a specific period.\n\nThe core aims of a performance appraisal are centered on employee and organizational growth:\n*   **Professional Development:** A primary goal is the personal and professional development of employees. The appraisal process provides an opportunity to discuss an employee's career goals, offer developmental opportunities, and support their professional growth.\n*   **Feedback and Improvement:** The review provides constructive feedback by discussing an employee's strengths and areas for improvement, which is essential for enhancing productivity and efficiency. This feedback leads directly to **professional improvement** by identifying skill gaps and creating action plans.\n*   **Goal Alignment:** Appraisals help align individual employee goals with the overall organizational goals and set future expectations.\n\nThe alternative options are generally considered contrary to the purpose of a performance appraisal:\n*   Options A, C, and D (\"Humiliation,\" \"Salary reduction,\" and \"Punishment\") describe negative or punitive actions. While appraisal outcomes can sometimes inform difficult decisions like salary actions or disciplinary measures, their fundamental and ultimate aim is not to humiliate or punish, but to provide guidance and management for career development. Effective appraisals focus on feedback, coaching, and development, making **Professional improvement** the correct and overarching positive aim."
+  },
+  {
+    "id": 48,
+    "question": "A teacher who conducts research to solve classroom problems is using:",
+    "options": {
+      "A": "Historical research",
+      "B": "Action research",
+      "C": "Survey research",
+      "D": "Theoretical research"
+    },
+    "answer": "B",
+    "explanation": "The correct option is **B (Action research)** because this type of research is specifically designed for educators to solve immediate, practical problems within their own teaching environment.\n\n*   **Action Research** is a systematic method of inquiry conducted by teachers to investigate and solve a specific problem, improve their professional practices, and make decisions at the local or classroom level. It is an iterative process of planning, acting, observing, and reflecting, with the primary goal of improving the quality of teaching and learning in a particular setting. A teacher researching a classroom problem, such as low student engagement or an ineffective instructional strategy, is engaging directly in action research.\n\n*   **Historical Research (Option A)** involves the systematic investigation of past events, recorded information, and documents to understand the development and transformation of educational systems, policies, or practices. Its purpose is not to solve an immediate, practical classroom problem but to draw modern conclusions from historical data.\n\n*   **Survey Research (Option C)** is a method used to gather information about the beliefs, attitudes, behaviors, or characteristics of a population, typically through standardized questionnaires or interviews. While a teacher might use a survey as a data-collection tool within action research, the overall research *method* for solving a problem is not called survey research.\n\n*   **Theoretical Research (Option D)**, also known as pure or fundamental research, is conducted to expand the knowledge base and develop or test theories, concepts, and models to explain phenomena, without a direct, immediate practical application in mind. A teacher is instead focused on the **applied** task of solving an *immediate* classroom problem."
+  },
+  {
+    "id": 49,
+    "question": "A school timetable manages:",
+    "options": {
+      "A": "Finance",
+      "B": "Discipline",
+      "C": "Time allocation",
+      "D": "Staff promotion"
+    },
+    "answer": "C",
+    "explanation": "The correct answer is Option C, **Time allocation**, because the fundamental purpose of a school timetable is to efficiently organize and manage the temporal structure of the school day.\n\n*   **Core Function:** A school timetable is a crucial administrative tool that acts as a calendar or schedule, coordinating activities, students, teachers, and classrooms across specific time periods within the school day or week.\n*   **Management of Time:** The process of creating a timetable involves the management of multiple variables to ensure an orderly and structured working environment. This explicitly involves the efficient **allocation of time** for various subjects, breaks, and other school activities.\n*   **Exclusion of Other Options:**\n    *   **Finance (A):** A timetable is a schedule and does not manage the school's monetary budget or financial resources.\n    *   **Discipline (B):** While an organized timetable contributes to an orderly environment, its primary function is scheduling, not the direct management of student or staff discipline.\n    *   **Staff promotion (D):** The timetable is a scheduling instrument and has no direct role in the human resources process of staff career advancement or promotion."
+  },
+  {
+    "id": 50,
+    "question": "The school’s SMC stands for:",
+    "options": {
+      "A": "Staff Monitoring Council",
+      "B": "School Management Committee",
+      "C": "Student Moral Club",
+      "D": "Social Media Council"
+    },
+    "answer": "B",
+    "explanation": "In the context of a school's administration and governance, the acronym **SMC** universally stands for **School Management Committee**.\n\n*   The School Management Committee (SMC) is a legally established body in many educational systems.\n*   Its primary function is to oversee the school's affairs and play a pivotal role in school governance and improvement.\n*   The SMC typically consists of various stakeholders, including teachers, parents, community members, and sometimes the principal or head teacher.\n*   The committee is responsible for supervising school activities, ensuring fair admissions, managing staff welfare, approving school expenditure, and fostering community involvement in school functioning.\n*   The involvement of parents in the SMC is often aimed at improving educational management.\n\nTherefore, \"School Management Committee\" (Option B) is the correct and widely recognized full form of SMC in an educational setting, especially when referring to an administrative body within the school."
+  }
+]

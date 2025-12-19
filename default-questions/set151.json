@@ -1,0 +1,603 @@
+[
+  {
+    "id": 1,
+    "question": "School policies must be",
+    "options": {
+      "A": "Flexible and relevant",
+      "B": "Punitive",
+      "C": "Confusing",
+      "D": "Hidden"
+    },
+    "answer": "A",
+    "explanation": "School policies should be **Flexible and relevant** (A) to accommodate diverse student needs, changing educational environments, and ensure applicability to the school's context. Options B, C, and D contradict the principles of good governance and transparent school management."
+  },
+  {
+    "id": 2,
+    "question": "A supervisor's report should be",
+    "options": {
+      "A": "Objective",
+      "B": "Biased",
+      "C": "Rumour-based",
+      "D": "Punitive"
+    },
+    "answer": "A",
+    "explanation": "A supervisor's report must be **Objective** (A), meaning it should be based on factual evidence, observable data, and fair assessment criteria, rather than personal feelings or hearsay. Bias, rumors, and a solely punitive focus undermine the integrity of supervision."
+  },
+  {
+    "id": 3,
+    "question": "School assets are recorded in the",
+    "options": {
+      "A": "Staff register",
+      "B": "Inventory book",
+      "C": "Admission register",
+      "D": "Logbook"
+    },
+    "answer": "B",
+    "explanation": "School assets (such as equipment, furniture, and books) are formally recorded in the **Inventory book** (B) for proper accountability, tracking, and management. This register ensures the school knows what it owns and where it is located."
+  },
+  {
+    "id": 4,
+    "question": "Instructional supervision improves",
+    "options": {
+      "A": "Teaching quality",
+      "B": "Punishment",
+      "C": "Conflict",
+      "D": "Confusion"
+    },
+    "answer": "A",
+    "explanation": "**Instructional supervision** is specifically designed to enhance the effectiveness of teaching and learning, thereby improving **Teaching quality** (A). Its focus is on professional development and pedagogical excellence, not negative outcomes like punishment or confusion."
+  },
+  {
+    "id": 5,
+    "question": "Effective school management requires",
+    "options": {
+      "A": "Planning, organizing, leading and controlling",
+      "B": "Guesswork",
+      "C": "Blame",
+      "D": "Avoidance"
+    },
+    "answer": "A",
+    "explanation": "Effective management is defined by the four core functions of management: **Planning, organizing, leading, and controlling** (A). These systematic steps ensure resources are utilized efficiently and goals are achieved."[Image of the four functions of management
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Which statement best describes democratic leadership?",
+    "options": {
+      "A": "Leader makes all decisions",
+      "B": "Leader consults group members before decisions",
+      "C": "Leader avoids giving directions",
+      "D": "Leader delegates completely"
+    },
+    "answer": "B",
+    "explanation": "Democratic leadership is characterized by the leader involving team members in the decision-making process, meaning the **Leader consults group members before decisions** (B). This style fosters collaboration, commitment, and shared ownership."
+  },
+  {
+    "id": 7,
+    "question": "The primary purpose of supervision in schools is to:",
+    "options": {
+      "A": "Punish teachers",
+      "B": "Ensure adherence to rules",
+      "C": "Improve teaching and learning",
+      "D": "Evaluate students only"
+    },
+    "answer": "C",
+    "explanation": "While ensuring adherence to rules (B) is a function, the **primary** goal of modern educational supervision is developmental, focused on professional growth and enhancing classroom instruction to ultimately **Improve teaching and learning** (C)."
+  },
+  {
+    "id": 8,
+    "question": "Formative evaluation is conducted:",
+    "options": {
+      "A": "At the end of a program",
+      "B": "Only when problems occur",
+      "C": "Continuously to improve instruction",
+      "D": "After exams"
+    },
+    "answer": "C",
+    "explanation": "**Formative evaluation** is an ongoing process used to monitor student learning and provide continuous feedback to both students and teachers **Continuously to improve instruction** (C), unlike summative evaluation (A), which occurs at the end."
+  },
+  {
+    "id": 9,
+    "question": "Which of the following is an advantage of team teaching?",
+    "options": {
+      "A": "Reduces collaboration",
+      "B": "Encourages isolation",
+      "C": "Promotes shared expertise",
+      "D": "Limits flexibility"
+    },
+    "answer": "C",
+    "explanation": "Team teaching involves two or more teachers working together, which naturally leads to the pooling of knowledge, skills, and perspectives, thereby **Promoting shared expertise** (C) and better lesson delivery."
+  },
+  {
+    "id": 10,
+    "question": "The hidden curriculum refers to:",
+    "options": {
+      "A": "Written syllabus",
+      "B": "Intended learning outcomes",
+      "C": "Unofficial norms and values learned in school",
+      "D": "Formal assessments"
+    },
+    "answer": "C",
+    "explanation": "The **hidden curriculum** encompasses the unspoken lessons, beliefs, attitudes, and behaviors conveyed through the school's structure, climate, and daily interactions—the **Unofficial norms and values learned in school** (C)."
+  },
+  {
+    "id": 11,
+    "question": "A scheme of work is prepared:",
+    "options": {
+      "A": "Yearly",
+      "B": "Daily",
+      "C": "During examinations",
+      "D": "After teaching"
+    },
+    "answer": "A",
+    "explanation": "A **scheme of work** (or curriculum map) outlines the content, topics, and learning objectives for a specific subject over an entire academic period, typically **Yearly** or termly, making it a long-term plan."
+  },
+  {
+    "id": 12,
+    "question": "Which principle is most associated with child-centered education?",
+    "options": {
+      "A": "Rote memorization",
+      "B": "Teacher dominance",
+      "C": "Learner autonomy",
+      "D": "Strict discipline"
+    },
+    "answer": "C",
+    "explanation": "Child-centered education shifts the focus from the teacher to the student, emphasizing the learner's needs, interests, and participation. This aligns best with **Learner autonomy** (C), which is the ability of a learner to take charge of their own learning."
+  },
+  {
+    "id": 13,
+    "question": "The main purpose of a lesson plan is to:",
+    "options": {
+      "A": "Record student attendance",
+      "B": "Guide teaching activities",
+      "C": "Replace curriculum",
+      "D": "Serve as punishment"
+    },
+    "answer": "B",
+    "explanation": "A lesson plan is a teacher's detailed blueprint for a specific lesson, providing structure, objectives, materials, and activities to **Guide teaching activities** (B) and ensure an orderly and effective learning session."
+  },
+  {
+    "id": 14,
+    "question": "The most effective feedback is:",
+    "options": {
+      "A": "Delayed",
+      "B": "General",
+      "C": "Immediate and specific",
+      "D": "Negative"
+    },
+    "answer": "C",
+    "explanation": "Effective feedback is actionable and timely. **Immediate and specific** (C) feedback helps the learner understand exactly what they did well or where they need to improve while the context is still fresh in their mind."
+  },
+  {
+    "id": 15,
+    "question": "Which teaching method is most suitable for large classes?",
+    "options": {
+      "A": "Discovery",
+      "B": "Lecture",
+      "C": "Role-play",
+      "D": "Experimentation"
+    },
+    "answer": "B",
+    "explanation": "The **Lecture** (B) method, while often less interactive, is the most practical and efficient way to deliver a large volume of content to a **large class** simultaneously. Discovery, role-play, and experimentation are generally better suited for smaller groups."
+  },
+  {
+    "id": 16,
+    "question": "Inclusive education aims to:",
+    "options": {
+      "A": "Separate learners",
+      "B": "Support only gifted learners",
+      "C": "Provide access for all learners",
+      "D": "Reduce school enrolment"
+    },
+    "answer": "C",
+    "explanation": "**Inclusive education** is a system designed to ensure that all learners, regardless of their background, ability, or disability, are fully integrated and supported in the general education setting, which is to **Provide access for all learners** (C)."
+  },
+  {
+    "id": 17,
+    "question": "Which factor best motivates staff intrinsically?",
+    "options": {
+      "A": "Salary",
+      "B": "Punishment",
+      "C": "Recognition and responsibility",
+      "D": "Promotion delays"
+    },
+    "answer": "C",
+    "explanation": "Intrinsic motivation comes from within the individual. Factors like **Recognition and responsibility** (C) satisfy higher-level needs (e.g., achievement and esteem), making work more meaningful and intrinsically rewarding. Salary (A) is an extrinsic motivator."
+  },
+  {
+    "id": 18,
+    "question": "A circular issued by the education ministry is an example of:",
+    "options": {
+      "A": "Informal communication",
+      "B": "Official communication",
+      "C": "Oral feedback",
+      "D": "Horizontal conflict"
+    },
+    "answer": "B",
+    "explanation": "A circular from a government body like the education ministry is a formal, written directive or announcement, making it a clear example of **Official communication** (B)."
+  },
+  {
+    "id": 19,
+    "question": "Effective classroom management begins with:",
+    "options": {
+      "A": "Punitive measures",
+      "B": "Clear rules and expectations",
+      "C": "Ignoring misbehavior",
+      "D": "Assigning heavy punishment"
+    },
+    "answer": "B",
+    "explanation": "Proactive classroom management focuses on preventing misbehavior. This starts by establishing a predictable and safe environment through **Clear rules and expectations** (B) that are understood and agreed upon by the students."
+  },
+  {
+    "id": 20,
+    "question": "The most reliable assessment tool is:",
+    "options": {
+      "A": "Oral questioning",
+      "B": "Observation checklist",
+      "C": "Standardized test",
+      "D": "Group discussions"
+    },
+    "answer": "C",
+    "explanation": "A **Standardized test** (C) is typically designed, administered, and scored in a consistent, controlled manner, which gives it high reliability (consistency of results) compared to subjective or less formal methods."
+  },
+  {
+    "id": 21,
+    "question": "A school timetable mainly ensures:",
+    "options": {
+      "A": "Teacher favoritism",
+      "B": "Time wastage",
+      "C": "Orderly allocation of activities",
+      "D": "Student punishment"
+    },
+    "answer": "C",
+    "explanation": "The core function of a school timetable is to organize time and resources efficiently, ensuring the **Orderly allocation of activities** (C) like subjects, breaks, and special programs across the school day and week."
+  },
+  {
+    "id": 22,
+    "question": "The term “pedagogy” refers to:",
+    "options": {
+      "A": "Learning outcomes",
+      "B": "Teaching methods",
+      "C": "Administrative duties",
+      "D": "School infrastructure"
+    },
+    "answer": "B",
+    "explanation": "**Pedagogy** is the art, science, or profession of teaching. It specifically concerns the principles and methods of instruction, hence referring to **Teaching methods** (B)."
+  },
+  {
+    "id": 23,
+    "question": "Vertical communication occurs between:",
+    "options": {
+      "A": "Peers",
+      "B": "Teacher and student",
+      "C": "Two headteachers",
+      "D": "Parents and students"
+    },
+    "answer": "B",
+    "explanation": "**Vertical communication** flows between different levels in an organizational hierarchy (e.g., from Headteacher to Teacher, or from **Teacher and student** (B)). Communication between peers (A) or two headteachers (C) is typically *horizontal*."
+  },
+  {
+    "id": 24,
+    "question": "The primary function of a headteacher is to:",
+    "options": {
+      "A": "Discipline all students",
+      "B": "Provide instructional leadership",
+      "C": "Teach all subjects",
+      "D": "Cancel meetings"
+    },
+    "answer": "B",
+    "explanation": "While they manage the school, the headteacher's most critical role is **Provide instructional leadership** (B), which involves setting the vision for teaching and learning, mentoring staff, and focusing the school on academic excellence."
+  },
+  {
+    "id": 25,
+    "question": "The main purpose of continuous assessment is to:",
+    "options": {
+      "A": "Summarize learning",
+      "B": "Rank students only",
+      "C": "Monitor progress",
+      "D": "Punish slow learners"
+    },
+    "answer": "C",
+    "explanation": "**Continuous assessment (CA)** involves regular, ongoing checks throughout the course to gauge student learning and provide feedback, making its main purpose to **Monitor progress** (C) and adjust instruction accordingly."
+  },
+  {
+    "id": 26,
+    "question": "Effective delegation requires:",
+    "options": {
+      "A": "No supervision",
+      "B": "Clear roles and authority",
+      "C": "Fear of the leader",
+      "D": "Centralized decisions"
+    },
+    "answer": "B",
+    "explanation": "Delegation is giving authority to another person to perform a task. To be effective, the person must be granted sufficient power and know exactly what is expected, requiring **Clear roles and authority** (B)."
+  },
+  {
+    "id": 27,
+    "question": "Which is an example of psychomotor learning?",
+    "options": {
+      "A": "Solving equations",
+      "B": "Remembering facts",
+      "C": "Writing neatly",
+      "D": "Defining terms"
+    },
+    "answer": "C",
+    "explanation": "**Psychomotor learning** involves the coordination of mental and physical activities to perform motor skills. **Writing neatly** (C) is a physical skill requiring manual dexterity, distinguishing it from cognitive tasks (A, B, D)."
+  },
+  {
+    "id": 28,
+    "question": "A needs assessment helps schools to:",
+    "options": {
+      "A": "Avoid development",
+      "B": "Determine priority areas",
+      "C": "Remove staff",
+      "D": "Increase conflict"
+    },
+    "answer": "B",
+    "explanation": "A **needs assessment** is a systematic process of identifying gaps between the current situation and the desired outcome. The results are used to strategically allocate resources and efforts, which helps to **Determine priority areas** (B) for improvement."
+  },
+  {
+    "id": 29,
+    "question": "When a teacher varies instructional activities, this increases:",
+    "options": {
+      "A": "Monotony",
+      "B": "Student fatigue",
+      "C": "Engagement",
+      "D": "Classroom noise only"
+    },
+    "answer": "C",
+    "explanation": "Using a variety of teaching methods, materials, and group configurations (instructional variation) prevents boredom and caters to different learning styles, which is highly effective in increasing **Engagement** (C)."
+  },
+  {
+    "id": 30,
+    "question": "A record of work is prepared:",
+    "options": {
+      "A": "Before teaching",
+      "B": "During planning",
+      "C": "After each lesson",
+      "D": "Only at term end"
+    },
+    "answer": "C",
+    "explanation": "A **record of work** documents what was actually taught in the classroom, the resources used, and homework assigned. It is essentially a log kept **After each lesson** (C) to track curriculum coverage."
+  },
+  {
+    "id": 31,
+    "question": "Inductive teaching moves from:",
+    "options": {
+      "A": "General to specific",
+      "B": "Specific to general",
+      "C": "Unknown to known",
+      "D": "Simple to complex"
+    },
+    "answer": "B",
+    "explanation": "**Inductive teaching** begins with specific examples, observations, or case studies, and then guides the learner to discover the general rule, principle, or conclusion, moving from **Specific to general** (B). Deductive teaching is the reverse."
+  },
+  {
+    "id": 32,
+    "question": "The best way to resolve conflict in school is:",
+    "options": {
+      "A": "Avoid discussion",
+      "B": "Use force",
+      "C": "Open dialogue",
+      "D": "Ignore staff concerns"
+    },
+    "answer": "C",
+    "explanation": "The most constructive and effective approach to conflict resolution is through communication. **Open dialogue** (C) allows all parties to express their views, understand the core issue, and work collaboratively towards a mutually acceptable solution."
+  },
+  {
+    "id": 33,
+    "question": "The main purpose of monitoring is to:",
+    "options": {
+      "A": "Create fear",
+      "B": "Track progress",
+      "C": "Punish errors",
+      "D": "Delay decisions"
+    },
+    "answer": "B",
+    "explanation": "**Monitoring** is the continuous, systematic process of gathering information on performance against plans, primarily to **Track progress** (B) and ensure activities are on schedule and achieving their objectives."
+  },
+  {
+    "id": 34,
+    "question": "A good school climate promotes:",
+    "options": {
+      "A": "Hostility",
+      "B": "Low morale",
+      "C": "High productivity",
+      "D": "Constant conflict"
+    },
+    "answer": "C",
+    "explanation": "School climate refers to the quality and character of school life. A positive climate is supportive, orderly, and encouraging, which fosters staff and student well-being and leads to **High productivity** (C) and better academic outcomes."
+  },
+  {
+    "id": 35,
+    "question": "The most suitable method to teach values is:",
+    "options": {
+      "A": "Dictation",
+      "B": "Brainstorming",
+      "C": "Role-play",
+      "D": "Lecture only"
+    },
+    "answer": "C",
+    "explanation": "Values are often abstract and best learned through experience and empathy. **Role-play** (C) allows students to practice social interactions, understand different perspectives, and emotionally engage with the value being taught, making it highly suitable."
+  },
+  {
+    "id": 36,
+    "question": "In-service training is organized to:",
+    "options": {
+      "A": "Replace teachers",
+      "B": "Improve teacher skills",
+      "C": "Reduce salaries",
+      "D": "Punish staff"
+    },
+    "answer": "B",
+    "explanation": "**In-service training (INSET)** is professional development provided to currently employed staff. Its sole purpose is to update knowledge, introduce new pedagogy, and ultimately **Improve teacher skills** (B)."
+  },
+  {
+    "id": 37,
+    "question": "Which of the following is a characteristic of effective leadership?",
+    "options": {
+      "A": "Rigidity",
+      "B": "Shared decision-making",
+      "C": "Avoidance of teamwork",
+      "D": "Blaming others"
+    },
+    "answer": "B",
+    "explanation": "Effective leadership often involves empowering and respecting subordinates. **Shared decision-making** (B) is a key characteristic, as it leverages the expertise of the team and increases commitment to the final decision."
+  },
+  {
+    "id": 38,
+    "question": "A diagnostic test is given to:",
+    "options": {
+      "A": "Check readiness",
+      "B": "Grade students",
+      "C": "Punish absenteeism",
+      "D": "Rank teachers"
+    },
+    "answer": "A",
+    "explanation": "The main goal of a **diagnostic test** is to identify a student's existing knowledge, strengths, weaknesses, and potential learning difficulties *before* instruction begins, helping to **Check readiness** (A) and tailor the curriculum."
+  },
+  {
+    "id": 39,
+    "question": "School culture refers to:",
+    "options": {
+      "A": "Classroom arrangement",
+      "B": "Traditions, values, and norms",
+      "C": "Curriculum topics",
+      "D": "Assessment format"
+    },
+    "answer": "B",
+    "explanation": "**School culture** is the set of established, deeply held beliefs, **Traditions, values, and norms** (B) that shape how teachers, students, and administrators interact and approach their work."
+  },
+  {
+    "id": 40,
+    "question": "Effective communication should be:",
+    "options": {
+      "A": "Vague",
+      "B": "Delayed",
+      "C": "Clear and timely",
+      "D": "One-way"
+    },
+    "answer": "C",
+    "explanation": "For communication to be effective, the message must be easily understood and delivered when needed. Therefore, it should be **Clear and timely** (C). Vague or delayed communication is often misunderstood or irrelevant."
+  },
+  {
+    "id": 41,
+    "question": "The term “attendance register” refers to:",
+    "options": {
+      "A": "Staff record",
+      "B": "Student daily presence",
+      "C": "Exam results",
+      "D": "Teaching notes"
+    },
+    "answer": "B",
+    "explanation": "The **attendance register** is a critical administrative document used to formally record the **Student daily presence** (B) or absence, ensuring accountability and meeting regulatory requirements."
+  },
+  {
+    "id": 42,
+    "question": "Which rating scale uses descriptive categories?",
+    "options": {
+      "A": "Checklist",
+      "B": "Rubric",
+      "C": "Essay test",
+      "D": "True/false"
+    },
+    "answer": "B",
+    "explanation": "A **Rubric** (B) is an assessment tool that articulates expectations for an assignment by listing criteria and providing a scale with **descriptive categories** (e.g., 'Excellent,' 'Proficient,' 'Needs Improvement') for each criterion."
+  },
+  {
+    "id": 43,
+    "question": "The best approach to motivate teachers is:",
+    "options": {
+      "A": "Threats",
+      "B": "Isolation",
+      "C": "Recognition and involvement",
+      "D": "Constant criticism"
+    },
+    "answer": "C",
+    "explanation": "As key professionals, teachers are best motivated by feeling valued and empowered. **Recognition and involvement** (C) in school matters foster professional pride and commitment, which are strong intrinsic motivators."
+  },
+  {
+    "id": 44,
+    "question": "Questioning in class helps to:",
+    "options": {
+      "A": "Waste time",
+      "B": "Assess understanding",
+      "C": "Reduce participation",
+      "D": "Encourage only memorization"
+    },
+    "answer": "B",
+    "explanation": "Strategic questioning is a core pedagogical tool. Its main immediate benefit is to provide the teacher with real-time data on student comprehension, allowing them to **Assess understanding** (B) and adjust the lesson."
+  },
+  {
+    "id": 45,
+    "question": "The most important quality of a good teacher is:",
+    "options": {
+      "A": "Harshness",
+      "B": "Mastery of content",
+      "C": "Anger",
+      "D": "Bias"
+    },
+    "answer": "B",
+    "explanation": "A teacher cannot effectively guide learning without deep knowledge of the subject matter. Therefore, **Mastery of content** (B) is the fundamental prerequisite for effective teaching, ensuring accurate and insightful instruction."
+  },
+  {
+    "id": 46,
+    "question": "Classroom rules should be:",
+    "options": {
+      "A": "Created by the teacher alone",
+      "B": "Imposed harshly",
+      "C": "Clear and agreed upon",
+      "D": "Hidden"
+    },
+    "answer": "C",
+    "explanation": "For rules to be effective, students must know and accept them. Rules should be few, simple, positive, and most importantly, **Clear and agreed upon** (C), often established collaboratively to promote student ownership."
+  },
+  {
+    "id": 47,
+    "question": "Effective budgeting in schools ensures:",
+    "options": {
+      "A": "Misallocation",
+      "B": "Transparency",
+      "C": "Overspending",
+      "D": "Conflict"
+    },
+    "answer": "B",
+    "explanation": "A well-managed budget ensures that financial decisions are documented and understandable to all stakeholders. This practice promotes **Transparency** (B) and public trust in how school funds are used."
+  },
+  {
+    "id": 48,
+    "question": "The purpose of a portfolio is to:",
+    "options": {
+      "A": "Record teacher salary",
+      "B": "Monitor learner progress over time",
+      "C": "Punish students",
+      "D": "Provide holidays"
+    },
+    "answer": "B",
+    "explanation": "A student **portfolio** is a collection of student work (essays, projects, samples) gathered over a period of time. Its primary purpose is to showcase growth and development, helping to **Monitor learner progress over time** (B)."
+  },
+  {
+    "id": 49,
+    "question": "Which method promotes critical thinking?",
+    "options": {
+      "A": "Lecture",
+      "B": "Debate",
+      "C": "Dictation",
+      "D": "Drills"
+    },
+    "answer": "B",
+    "explanation": "**Debate** (B) requires students to analyze issues, construct logical arguments, evaluate counter-arguments, and present a reasoned position, all of which are advanced critical thinking skills. Lecture, dictation, and drills focus on content delivery or memorization."
+  },
+  {
+    "id": 50,
+    "question": "A good test should be:",
+    "options": {
+      "A": "Unreliable",
+      "B": "Biased",
+      "C": "Valid",
+      "D": "Difficult only"
+    },
+    "answer": "C",
+    "explanation": "The most fundamental quality of a good test is **Validity** (C), which means the test actually measures what it is intended to measure. Reliability (consistency) is also crucial, but validity ensures the assessment's relevance and correctness."
+  }
+]

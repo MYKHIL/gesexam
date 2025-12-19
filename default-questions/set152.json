@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "The best way to address lateness is:",
+    "options": {
+      "A": "Ignoring it",
+      "B": "Counseling",
+      "C": "Punishing immediately",
+      "D": "Cancelling classes"
+    },
+    "answer": "B",
+    "explanation": "Counseling addresses the root causes of lateness (e.g., personal issues, logistical challenges) through dialogue and supportive intervention, aiming for sustained behavioral change rather than just punitive action."
+  },
+  {
+    "id": 2,
+    "question": "A headteacher ensures community participation through:",
+    "options": {
+      "A": "Closed meetings",
+      "B": "PTA collaboration",
+      "C": "Avoiding parents",
+      "D": "Restricting information"
+    },
+    "answer": "B",
+    "explanation": "Parent-Teacher Association (PTA) collaboration provides a formal, structured mechanism for the community (parents/guardians) to contribute to school decision-making, resource mobilization, and student welfare."
+  },
+  {
+    "id": 3,
+    "question": "The goal of curriculum implementation is to:",
+    "options": {
+      "A": "Store documents",
+      "B": "Deliver planned learning experiences",
+      "C": "Punish learners",
+      "D": "Reduce learning"
+    },
+    "answer": "B",
+    "explanation": "Curriculum implementation is the process of translating the written curriculum (plans, objectives, content) into observable teaching and learning activities within the classroom and school environment."
+  },
+  {
+    "id": 4,
+    "question": "A performance appraisal helps to:",
+    "options": {
+      "A": "Assign blame",
+      "B": "Improve staff effectiveness",
+      "C": "Reduce staff numbers",
+      "D": "Cause conflict"
+    },
+    "answer": "B",
+    "explanation": "The primary goal of performance appraisal is developmental: to provide constructive feedback, identify growth areas, and support professional development, ultimately enhancing staff efficiency and effectiveness."
+  },
+  {
+    "id": 5,
+    "question": "Which principle guides effective supervision?",
+    "options": {
+      "A": "Fault-finding",
+      "B": "Collaboration",
+      "C": "Harsh penalties",
+      "D": "Teacher intimidation"
+    },
+    "answer": "B",
+    "explanation": "Effective instructional supervision is non-judgemental and collaborative, focusing on mutual growth, shared responsibility for student learning, and working with teachers rather than simply inspecting them."
+  },
+  {
+    "id": 6,
+    "question": "A school vision statement mainly describes:",
+    "options": {
+      "A": "Immediate tasks",
+      "B": "Long-term aspirations",
+      "C": "Daily routines",
+      "D": "Punishment rules"
+    },
+    "answer": "B",
+    "explanation": "A vision statement articulates the school's ideal future state—its ultimate purpose and long-range goals—inspiring stakeholders toward a shared, ambitious objective."
+  },
+  {
+    "id": 7,
+    "question": "Which is a characteristic of a SMART objective?",
+    "options": {
+      "A": "Vague",
+      "B": "Hard to measure",
+      "C": "Time-bound",
+      "D": "Complicated"
+    },
+    "answer": "C",
+    "explanation": "The 'T' in the SMART acronym (Specific, Measurable, Achievable, Relevant, Time-bound) stands for Time-bound, meaning the objective must have a clear deadline or timeframe specified for its completion."
+  },
+  {
+    "id": 8,
+    "question": "The main purpose of an annual school budget is to:",
+    "options": {
+      "A": "Delay expenditure",
+      "B": "Guide financial decisions",
+      "C": "Create conflict",
+      "D": "Reduce enrolment"
+    },
+    "answer": "B",
+    "explanation": "The budget serves as a strategic financial plan, providing a clear framework and authorization for all spending, ensuring that financial decisions are aligned with school priorities and available resources."
+  },
+  {
+    "id": 9,
+    "question": "A teacher’s lesson reflection helps to:",
+    "options": {
+      "A": "Assign grades",
+      "B": "Improve future teaching",
+      "C": "Replace supervision",
+      "D": "Punish students"
+    },
+    "answer": "B",
+    "explanation": "Lesson reflection is a metacognitive process that allows the teacher to analyze what worked, what didn't, and why, leading to informed adjustments and continuous improvement of their pedagogical practice."
+  },
+  {
+    "id": 10,
+    "question": "Which is an example of a non-verbal cue?",
+    "options": {
+      "A": "A written note",
+      "B": "Hand gesture",
+      "C": "Telephone call",
+      "D": "Email message"
+    },
+    "answer": "B",
+    "explanation": "Non-verbal cues are forms of communication that do not involve spoken language, such as body language, facial expressions, and gestures, used to reinforce or contradict verbal messages."
+  },
+  {
+    "id": 11,
+    "question": "The best way to support slow learners is to:",
+    "options": {
+      "A": "Ignore them",
+      "B": "Provide remediation",
+      "C": "Punish them",
+      "D": "Increase homework only"
+    },
+    "answer": "B",
+    "explanation": "Remediation involves providing targeted, individualized instruction and support to help learners catch up by addressing specific gaps in their foundational knowledge or skills, allowing them to progress."
+  },
+  {
+    "id": 12,
+    "question": "Which step in problem-solving comes first?",
+    "options": {
+      "A": "Evaluating solutions",
+      "B": "Implementing solutions",
+      "C": "Identifying the problem",
+      "D": "Reporting to authorities"
+    },
+    "answer": "C",
+    "explanation": "The foundational step in any systematic problem-solving process is accurately recognizing, defining, and understanding the core issue that needs to be resolved before seeking solutions."
+  },
+  {
+    "id": 13,
+    "question": "A school code of conduct promotes:",
+    "options": {
+      "A": "Disorder",
+      "B": "Consistent discipline",
+      "C": "Unfair rules",
+      "D": "Confusion"
+    },
+    "answer": "B",
+    "explanation": "A written code of conduct ensures that rules, expectations, and consequences are clearly defined and applied uniformly across all students, promoting fairness and consistency in disciplinary actions."
+  },
+  {
+    "id": 14,
+    "question": "A peer observation is used to:",
+    "options": {
+      "A": "Blame colleagues",
+      "B": "Support professional growth",
+      "C": "Replace assessment",
+      "D": "Punish teachers"
+    },
+    "answer": "B",
+    "explanation": "Peer observation is a non-evaluative, collegial process where teachers observe one another to provide constructive feedback and share best practices, fostering mutual professional development."
+  },
+  {
+    "id": 15,
+    "question": "The affective domain emphasizes:",
+    "options": {
+      "A": "Skills",
+      "B": "Knowledge",
+      "C": "Attitudes and values",
+      "D": "Experiments"
+    },
+    "answer": "C",
+    "explanation": "The affective domain (one of Bloom's taxonomies) deals with how individuals respond emotionally, focusing on areas like feelings, values, appreciation, motivation, and attitudes."
+  },
+  {
+    "id": 16,
+    "question": "A circular from the district office is an example of:",
+    "options": {
+      "A": "Informal report",
+      "B": "Official communication",
+      "C": "Oral feedback",
+      "D": "Student memo"
+    },
+    "answer": "B",
+    "explanation": "A circular is a formal, written document distributed by a central authority (like a district office) to multiple subordinates, conveying official policy, instruction, or general information."
+  },
+  {
+    "id": 17,
+    "question": "The main purpose of a staff meeting is to:",
+    "options": {
+      "A": "Waste time",
+      "B": "Coordinate activities",
+      "C": "Punish teachers",
+      "D": "Increase workload"
+    },
+    "answer": "B",
+    "explanation": "Staff meetings primarily serve as a platform for sharing information, aligning goals, making collaborative decisions, and ensuring that all departmental and individual activities are coordinated toward institutional objectives."
+  },
+  {
+    "id": 18,
+    "question": "A reliable test produces:",
+    "options": {
+      "A": "Varied results each time",
+      "B": "Consistent results",
+      "C": "Biased outcomes",
+      "D": "Low scores only"
+    },
+    "answer": "B",
+    "explanation": "Reliability in assessment refers to the degree to which a test measures the same thing consistently, yielding stable and predictable results upon repeated application under the same conditions."
+  },
+  {
+    "id": 19,
+    "question": "Incentives help teachers to:",
+    "options": {
+      "A": "Feel discouraged",
+      "B": "Improve performance",
+      "C": "Avoid duties",
+      "D": "Reduce cooperation"
+    },
+    "answer": "B",
+    "explanation": "Incentives (which include recognition, rewards, and non-monetary benefits) serve as motivational tools, encouraging teachers to invest more effort and maintain high standards, thus improving their performance."
+  },
+  {
+    "id": 20,
+    "question": "Teamwork in schools promotes:",
+    "options": {
+      "A": "Isolation",
+      "B": "Shared responsibility",
+      "C": "Conflict",
+      "D": "Competition only"
+    },
+    "answer": "B",
+    "explanation": "Effective teamwork allows staff members to divide complex tasks, pool expertise, and collectively own the successes and failures of school goals, leading to shared responsibility for student outcomes."
+  },
+  {
+    "id": 21,
+    "question": "The cognitive domain mainly focuses on:",
+    "options": {
+      "A": "Feelings",
+      "B": "Physical skills",
+      "C": "Intellectual abilities",
+      "D": "Moral values"
+    },
+    "answer": "C",
+    "explanation": "The cognitive domain relates to mental skills and the acquisition of knowledge, including intellectual abilities such as remembering, reasoning, comprehension, and problem-solving."
+  },
+  {
+    "id": 22,
+    "question": "An effective school timetable prevents:",
+    "options": {
+      "A": "Balanced periods",
+      "B": "Time clashes",
+      "C": "Orderliness",
+      "D": "Teacher presence"
+    },
+    "answer": "B",
+    "explanation": "The fundamental goal of constructing a timetable is efficient resource allocation and sequencing, specifically designed to prevent conflicts (clashes) in the use of rooms, teachers, or shared equipment."
+  },
+  {
+    "id": 23,
+    "question": "Record-keeping is important because it:",
+    "options": {
+      "A": "Creates chaos",
+      "B": "Supports decision-making",
+      "C": "Hides information",
+      "D": "Delays teaching"
+    },
+    "answer": "B",
+    "explanation": "Accurate, organized records provide the necessary historical data and factual evidence required for informed, evidence-based administrative, pedagogical, and financial decisions."
+  },
+  {
+    "id": 24,
+    "question": "The best way to promote discipline is:",
+    "options": {
+      "A": "Consistency",
+      "B": "Harsh punishment",
+      "C": "Intimidation",
+      "D": "Humiliation"
+    },
+    "answer": "A",
+    "explanation": "Consistency in applying rules and consequences ensures fairness and predictability, which are crucial for establishing a stable, disciplined, and respected school environment."
+  },
+  {
+    "id": 25,
+    "question": "Which factor is essential for effective school leadership?",
+    "options": {
+      "A": "Poor communication",
+      "B": "Transparency",
+      "C": "Autocracy",
+      "D": "Fear"
+    },
+    "answer": "B",
+    "explanation": "Transparency builds trust among staff, students, and the community by making processes, decisions, and outcomes visible and understandable, fostering a culture of accountability and openness."
+  },
+  {
+    "id": 26,
+    "question": "Which teaching method best promotes creativity?",
+    "options": {
+      "A": "Drill and practice",
+      "B": "Discovery learning",
+      "C": "Lecture",
+      "D": "Dictation"
+    },
+    "answer": "B",
+    "explanation": "Discovery learning is an inquiry-based method where students actively explore, hypothesize, and solve problems independently, which naturally fosters critical thinking and creative solutions rather than rote memorization."
+  },
+  {
+    "id": 27,
+    "question": "Remedial teaching is for:",
+    "options": {
+      "A": "Advanced learners",
+      "B": "Learners with difficulties",
+      "C": "Absent teachers",
+      "D": "Gifted students only"
+    },
+    "answer": "B",
+    "explanation": "Remedial teaching is specifically designed to provide specialized instruction to students who are experiencing learning difficulties or falling behind their peers, helping them overcome specific weaknesses."
+  },
+  {
+    "id": 28,
+    "question": "Curriculum evaluation examines:",
+    "options": {
+      "A": "Student attendance",
+      "B": "Curriculum effectiveness",
+      "C": "Teacher emotions",
+      "D": "Classroom layout"
+    },
+    "answer": "B",
+    "explanation": "Curriculum evaluation is the process of gathering and analyzing data to determine the extent to which the curriculum goals are being achieved and to judge the overall merit or worth of the program."
+  },
+  {
+    "id": 29,
+    "question": "A good classroom environment is:",
+    "options": {
+      "A": "Threatening",
+      "B": "Supportive",
+      "C": "Fearful",
+      "D": "Unpredictable"
+    },
+    "answer": "B",
+    "explanation": "A supportive classroom environment is characterized by safety, mutual respect, encouragement, and a focus on learning, which minimizes anxiety and maximizes student engagement and academic risk-taking."
+  },
+  {
+    "id": 30,
+    "question": "A democratic leader encourages:",
+    "options": {
+      "A": "Dictatorship",
+      "B": "Collaboration",
+      "C": "Silence",
+      "D": "Isolation"
+    },
+    "answer": "B",
+    "explanation": "A democratic (participative) leader involves team members in decision-making and planning, valuing their input and promoting a culture of collaboration and shared ownership."
+  },
+  {
+    "id": 31,
+    "question": "The first step in supervision is:",
+    "options": {
+      "A": "Giving punishment",
+      "B": "Setting objectives",
+      "C": "Reporting teachers",
+      "D": "Cancelling lessons"
+    },
+    "answer": "B",
+    "explanation": "The supervisory cycle begins by collaboratively establishing clear, measurable goals and performance targets so that both the supervisor and the supervisee understand what needs to be achieved."
+  },
+  {
+    "id": 32,
+    "question": "A performance contract is used to:",
+    "options": {
+      "A": "Reduce teacher roles",
+      "B": "Specify duties and expectations",
+      "C": "Punish staff",
+      "D": "Terminate employment"
+    },
+    "answer": "B",
+    "explanation": "A performance contract is a formal agreement that clearly outlines the employee's duties, key results areas (KRAs), and measurable performance expectations for a defined period."
+  },
+  {
+    "id": 33,
+    "question": "A continuous assessment record helps to:",
+    "options": {
+      "A": "Hide results",
+      "B": "Track learner progress",
+      "C": "Inflate grades",
+      "D": "Reduce teaching time"
+    },
+    "answer": "B",
+    "explanation": "Continuous assessment involves ongoing evaluation throughout the learning process, and its record provides a holistic, longitudinal picture of the student's development, strengths, and areas needing intervention."
+  },
+  {
+    "id": 34,
+    "question": "School inventory refers to:",
+    "options": {
+      "A": "Student register",
+      "B": "List of school properties",
+      "C": "Teaching plans",
+      "D": "Staff attendance"
+    },
+    "answer": "B",
+    "explanation": "Inventory is a detailed, itemized record of all tangible assets (properties) owned by the school, such as furniture, equipment, books, and supplies, which is essential for asset management and accountability."
+  },
+  {
+    "id": 35,
+    "question": "The most important part of a lesson introduction is to:",
+    "options": {
+      "A": "Confuse learners",
+      "B": "Prepare learners for learning",
+      "C": "Waste time",
+      "D": "Punish lateness"
+    },
+    "answer": "B",
+    "explanation": "The introduction (or 'set induction') should capture the learners' attention, connect to prior knowledge, and clearly state the lesson's objectives, effectively preparing them mentally and emotionally for the new content."
+  },
+  {
+    "id": 36,
+    "question": "A teacher’s professional file usually contains:",
+    "options": {
+      "A": "Holiday plans",
+      "B": "Lesson notes",
+      "C": "Student complaints",
+      "D": "Classroom noise report"
+    },
+    "answer": "B",
+    "explanation": "A professional file (or portfolio) typically includes documentation of the teacher's core professional duties and evidence of planning, such as schemes of work, lesson notes, and student performance records."
+  },
+  {
+    "id": 37,
+    "question": "A school improvement plan is developed to:",
+    "options": {
+      "A": "Reduce performance",
+      "B": "Enhance school quality",
+      "C": "Punish staff",
+      "D": "Increase workload"
+    },
+    "answer": "B",
+    "explanation": "A School Improvement Plan (SIP) is a strategic document designed to identify specific areas for growth and implement targeted actions intended to raise student achievement and overall institutional quality."
+  },
+  {
+    "id": 38,
+    "question": "Which type of leadership focuses on rewards and penalties?",
+    "options": {
+      "A": "Transformational",
+      "B": "Laissez-faire",
+      "C": "Autocratic",
+      "D": "Transactional"
+    },
+    "answer": "D",
+    "explanation": "Transactional leadership is based on a system of exchange: followers receive rewards for meeting targets or face corrective action/penalties for failing to meet clear expectations ('transactions')."
+  },
+  {
+    "id": 39,
+    "question": "An instructional resource is anything that:",
+    "options": {
+      "A": "Distracts learners",
+      "B": "Supports teaching and learning",
+      "C": "Replaces teachers",
+      "D": "Hinders understanding"
+    },
+    "answer": "B",
+    "explanation": "Instructional resources (or teaching aids) are tools, materials, or methods used by educators to facilitate the learning process, making concepts clearer, more engaging, and more meaningful for students."
+  },
+  {
+    "id": 40,
+    "question": "A project method encourages:",
+    "options": {
+      "A": "Passive learning",
+      "B": "Hands-on experience",
+      "C": "Memorization only",
+      "D": "Teacher domination"
+    },
+    "answer": "B",
+    "explanation": "The project method is a student-centered approach where learners gain knowledge and skills by working on an extended, real-world task or challenge, inherently requiring practical, hands-on application."
+  },
+  {
+    "id": 41,
+    "question": "School policies must be:",
+    "options": {
+      "A": "Hidden",
+      "B": "Clear and accessible",
+      "C": "Unknown to students",
+      "D": "Conflicting"
+    },
+    "answer": "B",
+    "explanation": "Policies must be clearly articulated to avoid ambiguity and made accessible to all stakeholders (staff, students, parents) to ensure everyone understands their rights, responsibilities, and expected behaviors."
+  },
+  {
+    "id": 42,
+    "question": "Effective communication requires:",
+    "options": {
+      "A": "Noise",
+      "B": "Feedback",
+      "C": "Distortion",
+      "D": "Delay"
+    },
+    "answer": "B",
+    "explanation": "Feedback is essential in the communication loop as it confirms that the message was received and understood accurately, allowing the sender to adjust the message if necessary and ensuring two-way dialogue."
+  },
+  {
+    "id": 43,
+    "question": "The best way to encourage punctuality is to:",
+    "options": {
+      "A": "Ignore lateness",
+      "B": "Model punctuality",
+      "C": "Close the gates permanently",
+      "D": "Remove lessons"
+    },
+    "answer": "B",
+    "explanation": "Leaders and teachers setting a positive example (modeling the desired behavior) is the most powerful way to establish punctuality as a core, respected cultural norm within the school."
+  },
+  {
+    "id": 44,
+    "question": "A scheme of work helps teachers to:",
+    "options": {
+      "A": "Teach randomly",
+      "B": "Organize content systematically",
+      "C": "Skip topics",
+      "D": "Reduce curriculum"
+    },
+    "answer": "B",
+    "explanation": "A scheme of work (or unit plan) is a long-term plan that breaks down the curriculum into manageable units, outlining the sequencing of topics, resources, and assessment methods systematically over a period."
+  },
+  {
+    "id": 45,
+    "question": "The main purpose of staff development is to:",
+    "options": {
+      "A": "Punish teachers",
+      "B": "Improve competencies",
+      "C": "Reduce salaries",
+      "D": "Increase workload"
+    },
+    "answer": "B",
+    "explanation": "Staff development (Professional Development) aims to upgrade, enhance, and diversify the knowledge, skills, and professional competencies of teachers and administrators to improve educational outcomes."
+  },
+  {
+    "id": 46,
+    "question": "Which assessment tool is best for practical skills?",
+    "options": {
+      "A": "Essay",
+      "B": "Portfolio",
+      "C": "Checklist",
+      "D": "Multiple choice"
+    },
+    "answer": "C",
+    "explanation": "A checklist is ideal for assessing practical or psychomotor skills (like conducting an experiment or performing an action) because it allows the assessor to mark off specific, sequential steps as they are accurately performed."
+  },
+  {
+    "id": 47,
+    "question": "A good leader must be able to:",
+    "options": {
+      "A": "Manipulate others",
+      "B": "Inspire followers",
+      "C": "Create confusion",
+      "D": "Avoid responsibility"
+    },
+    "answer": "B",
+    "explanation": "Inspiring followers involves motivating, encouraging, and communicating a compelling vision that moves others to commit enthusiastically to achieving the school's goals, often a characteristic of transformational leadership."
+  },
+  {
+    "id": 48,
+    "question": "The term “span of control” refers to:",
+    "options": {
+      "A": "School area",
+      "B": "Number of people supervised",
+      "C": "Number of classrooms",
+      "D": "Amount of resources"
+    },
+    "answer": "B",
+    "explanation": "Span of control is a concept in organizational management that defines the number of subordinates (teachers, staff) who report directly to a single manager (headteacher, department head)."
+  },
+  {
+    "id": 49,
+    "question": "A lesson conclusion should:",
+    "options": {
+      "A": "Confuse learners",
+      "B": "Reinforce key ideas",
+      "C": "Punish learners",
+      "D": "Add new unrelated topics"
+    },
+    "answer": "B",
+    "explanation": "The conclusion provides closure to the lesson, summarizing the main points and objectives achieved, which is critical for review, consolidation, and long-term retention of the material taught."
+  },
+  {
+    "id": 50,
+    "question": "Good school-community relations promote:",
+    "options": {
+      "A": "Isolation",
+      "B": "Conflict",
+      "C": "Support and cooperation",
+      "D": "Avoidance"
+    },
+    "answer": "C",
+    "explanation": "Positive school-community relations ensure that the school and community work in partnership, leading to mutual support in areas like fundraising, volunteer efforts, and providing resources for students."
+  }
+]

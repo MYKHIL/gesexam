@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "School inspections aim to:",
+    "options": {
+      "A": "Close down schools",
+      "B": "Ensure quality standards are met",
+      "C": "Create fear",
+      "D": "Promote only private schools"
+    },
+    "answer": "B",
+    "explanation": "School inspections are formal, external evaluations conducted by designated bodies. Their fundamental purpose is to assess the school's compliance with national curriculum and operational mandates and **Ensure quality standards are met** in teaching and learning."
+  },
+  {
+    "id": 2,
+    "question": "A teacher on interdiction is usually:",
+    "options": {
+      "A": "Promoted",
+      "B": "Temporarily removed pending investigation",
+      "C": "Retired",
+      "D": "Rewarded"
+    },
+    "answer": "B",
+    "explanation": "Interdiction is a formal administrative process where a staff member suspected of misconduct is **Temporarily removed pending investigation** or disciplinary action. It is not a punishment, but a measure to ensure a fair process."
+  },
+  {
+    "id": 3,
+    "question": "A Deputy Director must always uphold:",
+    "options": {
+      "A": "Personal interests",
+      "B": "Organizational ethical standards",
+      "C": "Favouritism",
+      "D": "Unprofessional conduct"
+    },
+    "answer": "B",
+    "explanation": "As a senior official, the Deputy Director is expected to embody professionalism and integrity. Upholding **Organizational ethical standards** ensures that official duties are carried out with fairness, impartiality, and honesty."
+  },
+  {
+    "id": 4,
+    "question": "The main objective of a school board is:",
+    "options": {
+      "A": "Raise funds only",
+      "B": "Provide governance and strategic direction",
+      "C": "Clean the school",
+      "D": "Interfere in daily teaching"
+    },
+    "answer": "B",
+    "explanation": "A school board (SMC/BOG) is a governance body. It operates at a policy level, overseeing the headteacher and setting the long-term vision (**strategic direction**) while ensuring accountability."
+  },
+  {
+    "id": 5,
+    "question": "Administrative files should be kept:",
+    "options": {
+      "A": "In a box",
+      "B": "Under lock and key for security and confidentiality",
+      "C": "On the desk",
+      "D": "In a public area"
+    },
+    "answer": "B",
+    "explanation": "Administrative files often contain sensitive information (staff records, financial data, student data). To protect privacy and prevent unauthorized access or loss, these records must be secured **Under lock and key for security and confidentiality**."
+  },
+  {
+    "id": 6,
+    "question": "Effective delegation means giving the subordinate:",
+    "options": {
+      "A": "Blame",
+      "B": "Authority commensurate with the task",
+      "C": "Punishment",
+      "D": "Extra workload without support"
+    },
+    "answer": "B",
+    "explanation": "For delegation to be successful, the person receiving the task must also be given the official power and resources (**Authority commensurate with the task**) needed to complete it, ensuring they are empowered to act independently."
+  },
+  {
+    "id": 7,
+    "question": "Supervision is best when it is:",
+    "options": {
+      "A": "Punitive",
+      "B": "Collaborative and developmental",
+      "C": "Arbitrary",
+      "D": "One-way"
+    },
+    "answer": "B",
+    "explanation": "Modern supervision focuses on professional growth. It works best when the supervisor and supervisee work together (**Collaborative**) to identify strengths and areas for improvement, making it a **developmental** process."
+  },
+  {
+    "id": 8,
+    "question": "In communication, barriers include:",
+    "options": {
+      "A": "Clarity",
+      "B": "Jargon, poor listening, and noise",
+      "C": "Feedback",
+      "D": "Professionalism"
+    },
+    "answer": "B",
+    "explanation": "Barriers impede the accurate flow of information. Using specialized or technical language (**Jargon**), a lack of focus when receiving messages (**poor listening**), and physical distractions (**noise**) are common barriers."
+  },
+  {
+    "id": 9,
+    "question": "A good teacher uses lesson notes to:",
+    "options": {
+      "A": "Cover up mistakes",
+      "B": "Organize subject matter and instructional activities",
+      "C": "Avoid planning",
+      "D": "Impress visitors only"
+    },
+    "answer": "B",
+    "explanation": "Lesson notes are the detailed operational plan derived from the lesson plan. They serve as the teacher's script, ensuring all steps, materials, and questions are sequenced and ready to **Organize subject matter and instructional activities**."
+  },
+  {
+    "id": 10,
+    "question": "The main challenge of decentralized management is:",
+    "options": {
+      "A": "Increased efficiency",
+      "B": "Inconsistency in application of standards across units",
+      "C": "Faster decision-making",
+      "D": "Increased staff morale"
+    },
+    "answer": "B",
+    "explanation": "Decentralization grants autonomy, but this can lead to different local interpretations or standards. The risk is **Inconsistency in application of standards across units** (e.g., in curriculum delivery or financial reporting)."
+  },
+  {
+    "id": 11,
+    "question": "Effective motivation involves:",
+    "options": {
+      "A": "Threats",
+      "B": "Creating a positive, supportive work environment",
+      "C": "Ignoring complaints",
+      "D": "Overworking staff"
+    },
+    "answer": "B",
+    "explanation": "Creating high staff motivation requires more than just pay; it involves cultivating a culture where staff feel respected, valued, and safe to raise concerns, achieved by **Creating a positive, supportive work environment**."
+  },
+  {
+    "id": 12,
+    "question": "School financial records must be:",
+    "options": {
+      "A": "Vague",
+      "B": "Auditable and transparent",
+      "C": "Secret",
+      "D": "Incomplete"
+    },
+    "answer": "B",
+    "explanation": "As public institutions, schools must handle funds responsibly. Financial records must be detailed enough to withstand external scrutiny (**Auditable**) and openly shared with oversight bodies (**transparent**)."
+  },
+  {
+    "id": 13,
+    "question": "A curriculum document outlines:",
+    "options": {
+      "A": "Teacher salaries",
+      "B": "Learning objectives, content, and assessment methods",
+      "C": "School uniform style",
+      "D": "PTA meeting dates"
+    },
+    "answer": "B",
+    "explanation": "The curriculum is the blueprint for learning. It defines *what* students should know and be able to do (**Learning objectives**), *what* information will be covered (**content**), and *how* mastery will be measured (**assessment methods**)."
+  },
+  {
+    "id": 14,
+    "question": "Staff appraisal should be based on:",
+    "options": {
+      "A": "Favouritism",
+      "B": "Agreed-upon performance criteria",
+      "C": "Personal opinion",
+      "D": "Rumour"
+    },
+    "answer": "B",
+    "explanation": "For appraisal to be fair and credible, it must be objective. This requires establishing clear, quantifiable standards and expectations, which are the **Agreed-upon performance criteria**, at the beginning of the appraisal cycle."
+  },
+  {
+    "id": 15,
+    "question": "The main goal of time management for a leader is to:",
+    "options": {
+      "A": "Fill the schedule",
+      "B": "Prioritize tasks and focus on strategic activities",
+      "C": "Avoid meetings",
+      "D": "Work late"
+    },
+    "answer": "B",
+    "explanation": "Effective time management is not about doing everything quickly, but about efficiency. It allows the leader to identify and allocate maximum time to critical tasks that contribute most to school improvement (**focus on strategic activities**)."
+  },
+  {
+    "id": 16,
+    "question": "A good school motto should be:",
+    "options": {
+      "A": "Long",
+      "B": "Inspiring and reflective of school values",
+      "C": "Unrelated to education",
+      "D": "Funny"
+    },
+    "answer": "B",
+    "explanation": "The school motto is a short, memorable phrase that encapsulates the school's core belief system and mission. It should be **Inspiring and reflective of school values** to motivate the community."
+  },
+  {
+    "id": 17,
+    "question": "The main purpose of a school disciplinary committee is to:",
+    "options": {
+      "A": "Punish severely",
+      "B": "Ensure fair, structured hearing of misconduct cases",
+      "C": "Bypass due process",
+      "D": "Interfere with teaching"
+    },
+    "answer": "B",
+    "explanation": "The committee provides a structured, impartial forum to investigate and review complex disciplinary matters, ensuring that the staff or student involved receives a **fair, structured hearing of misconduct cases** according to established rules."
+  },
+  {
+    "id": 18,
+    "question": "The best way to resolve teacher conflict is through:",
+    "options": {
+      "A": "Public reprimand",
+      "B": "Private, impartial mediation",
+      "C": "Ignoring it until it escalates",
+      "D": "Transferring the teachers"
+    },
+    "answer": "B",
+    "explanation": "Conflicts are best resolved in a non-threatening, confidential setting. **Private, impartial mediation** allows the parties to address the issues directly with a neutral party guiding them toward a resolution."
+  },
+  {
+    "id": 19,
+    "question": "A school improvement plan must have:",
+    "options": {
+      "A": "No deadlines",
+      "B": "Specific, actionable strategies with clear timelines",
+      "C": "Vague goals",
+      "D": "Only financial targets"
+    },
+    "answer": "B",
+    "explanation": "For an improvement plan to be effective, it needs clear steps (**actionable strategies**) detailing *how* to achieve the goal, and a framework for measuring progress and accountability (**clear timelines**)."
+  },
+  {
+    "id": 20,
+    "question": "ICT integration in teaching aims to:",
+    "options": {
+      "A": "Replace teachers",
+      "B": "Enhance teaching effectiveness and student engagement",
+      "C": "Increase printing costs",
+      "D": "Complicate lessons"
+    },
+    "answer": "B",
+    "explanation": "Technology should serve pedagogy. The goal of integrating ICT is to leverage digital tools to make lessons more dynamic, personalize learning, and ultimately **Enhance teaching effectiveness and student engagement**."
+  },
+  {
+    "id": 21,
+    "question": "The main purpose of a staff durbar is:",
+    "options": {
+      "A": "Socializing only",
+      "B": "Open dialogue and clarification of school issues",
+      "C": "Announcing punishments",
+      "D": "Recruiting staff"
+    },
+    "answer": "B",
+    "explanation": "A durbar provides a structured opportunity for the leadership to communicate directly with all staff, allowing for questions, concerns, and two-way feedback, facilitating **Open dialogue and clarification of school issues**."
+  },
+  {
+    "id": 22,
+    "question": "A teacher's professional portfolio provides evidence of:",
+    "options": {
+      "A": "Wealth",
+      "B": "Growth, performance, and professional development",
+      "C": "Bank balance",
+      "D": "Student names"
+    },
+    "answer": "B",
+    "explanation": "The portfolio is a performance document. It contains artifacts (certificates, observation reports, lesson plans) that demonstrate a teacher's competence, commitment to development, and overall **Growth, performance, and professional development**."
+  },
+  {
+    "id": 23,
+    "question": "The key role of a Circuit Supervisor (CS) is to:",
+    "options": {
+      "A": "Collect fees",
+      "B": "Provide on-site quality assurance and support to schools",
+      "C": "Teach every class",
+      "D": "Discipline all students"
+    },
+    "answer": "B",
+    "explanation": "The CS is the primary field officer for the GES, responsible for overseeing a cluster of schools. Their main duty is to conduct routine visits, monitor standards, and **Provide on-site quality assurance and support** to school heads and teachers."
+  },
+  {
+    "id": 24,
+    "question": "Effective feedback to staff must be:",
+    "options": {
+      "A": "General and delayed",
+      "B": "Specific, timely, and constructive",
+      "C": "Emotional",
+      "D": "Only negative"
+    },
+    "answer": "B",
+    "explanation": "Feedback is a tool for improvement. To be effective, it must address observable actions (**Specific**), be given soon after the event (**timely**), and offer solutions rather than just criticism (**constructive**)."
+  },
+  {
+    "id": 25,
+    "question": "The purpose of risk management in schools is to:",
+    "options": {
+      "A": "Ignore danger",
+      "B": "Identify potential hazards and mitigate their impact",
+      "C": "Create fear",
+      "D": "Increase accidents"
+    },
+    "answer": "B",
+    "explanation": "Risk management is a proactive process involving identifying, assessing, and controlling threats to the school's capital and earnings, and the safety of its community. The goal is to **Identify potential hazards and mitigate their impact**."
+  },
+  {
+    "id": 26,
+    "question": "A school’s success is measured by its:",
+    "options": {
+      "A": "Building colour",
+      "B": "Ability to achieve its mission and strategic goals",
+      "C": "Student population size",
+      "D": "Number of teachers"
+    },
+    "answer": "B",
+    "explanation": "Success is determined by performance against stated objectives. A school is successful if it effectively carries out its primary function (education) and achieves the objectives outlined in its **mission and strategic goals**."
+  },
+  {
+    "id": 27,
+    "question": "Leadership accountability requires:",
+    "options": {
+      "A": "Secrecy",
+      "B": "Justifying actions and accepting responsibility for results",
+      "C": "Blaming subordinates",
+      "D": "Avoiding documentation"
+    },
+    "answer": "B",
+    "explanation": "Accountability means leaders must be prepared to explain their decisions (**Justifying actions**) and take ownership of the outcomes, positive or negative, **accepting responsibility for results**."
+  },
+  {
+    "id": 28,
+    "question": "The main purpose of a formal school assembly is to:",
+    "options": {
+      "A": "Gossip",
+      "B": "Share official announcements and reinforce shared values",
+      "C": "Waste time",
+      "D": "Punish students"
+    },
+    "answer": "B",
+    "explanation": "Assemblies are routine gatherings used to convey important updates, celebrate achievements, set expectations, and provide a collective moment to **reinforce shared values** and behavioral norms."
+  },
+  {
+    "id": 29,
+    "question": "The best leadership style in a crisis is often:",
+    "options": {
+      "A": "Laissez-faire (hands-off)",
+      "B": "Autocratic/Directive (clear and swift decision-making)",
+      "C": "Democratic (consensus)",
+      "D": "Passive"
+    },
+    "answer": "B",
+    "explanation": "In high-stakes, time-critical situations (**crisis**), rapid action is paramount. The **Autocratic/Directive** style is effective because it allows the leader to take charge, issue **clear and swift decision-making**, and coordinate the immediate response without delay."
+  },
+  {
+    "id": 30,
+    "question": "A good policy on student assessment should ensure:",
+    "options": {
+      "A": "One type of test",
+      "B": "Variety of assessment methods and fairness",
+      "C": "Surprise exams only",
+      "D": "Subjective grading"
+    },
+    "answer": "B",
+    "explanation": "Assessment policy should ensure that all learners are fairly evaluated. This requires using a **Variety of assessment methods** (formative, summative, performance) to capture different skills and ensuring unbiased marking (**fairness**)."
+  },
+  {
+    "id": 31,
+    "question": "The key role of the National Council for Curriculum and Assessment (NaCCA) is to:",
+    "options": {
+      "A": "Fund schools",
+      "B": "Develop national curriculum and assessment frameworks",
+      "C": "Discipline teachers",
+      "D": "Manage school finances"
+    },
+    "answer": "B",
+    "explanation": "NaCCA is the mandated body for educational content. Its responsibilities are to conduct research, consult stakeholders, and officially **Develop national curriculum and assessment frameworks** for pre-tertiary education."
+  },
+  {
+    "id": 32,
+    "question": "To manage rumors in school, the leader must:",
+    "options": {
+      "A": "Spread them further",
+      "B": "Provide timely, accurate, and official information",
+      "C": "Ignore them",
+      "D": "Find the source and punish them severely"
+    },
+    "answer": "B",
+    "explanation": "Rumors thrive in an information vacuum. The most effective strategy to stop them is to replace the speculation with facts. The leader must proactively **Provide timely, accurate, and official information** through formal channels."
+  },
+  {
+    "id": 33,
+    "question": "Effective teacher recruitment focuses on:",
+    "options": {
+      "A": "Family connections",
+      "B": "Competence, qualifications, and experience",
+      "C": "Age only",
+      "D": "Political affiliation"
+    },
+    "answer": "B",
+    "explanation": "Staff recruitment must be objective and based on merit to ensure quality teaching. Selection criteria should be tied to the job requirements, emphasizing proven skills (**Competence**), necessary education (**qualifications**), and work history (**experience**)."
+  },
+  {
+    "id": 34,
+    "question": "A school safety policy must include procedures for:",
+    "options": {
+      "A": "Daily gossip",
+      "B": "Evacuation, first aid, and emergency contacts",
+      "C": "School fees collection",
+      "D": "Lesson plan checking"
+    },
+    "answer": "B",
+    "explanation": "A safety policy must be practical for emergencies. It should contain clear instructions for critical situations, such as student and staff **Evacuation** during fire/threats, and access to immediate medical attention (**first aid**)."
+  },
+  {
+    "id": 35,
+    "question": "The purpose of a school logbook is to record:",
+    "options": {
+      "A": "Teacher attendance only",
+      "B": "Significant daily events, visits, and school happenings",
+      "C": "Student marks",
+      "D": "Financial transactions"
+    },
+    "answer": "B",
+    "explanation": "The logbook is the official historical record of the school. It must be maintained daily to document important administrative, supervisory, or structural occurrences, specifically **Significant daily events, visits, and school happenings**."
+  },
+  {
+    "id": 36,
+    "question": "A Deputy Director promotes quality assurance by:",
+    "options": {
+      "A": "Avoiding school visits",
+      "B": "Monitoring implementation of national education policies",
+      "C": "Punishing all teachers",
+      "D": "Reducing funds"
+    },
+    "answer": "B",
+    "explanation": "Quality assurance at the senior level involves macro-oversight. The Deputy Director plays a crucial role in ensuring that the vision and mandates from the national level are being properly carried out by schools, hence **Monitoring implementation of national education policies**."
+  },
+  {
+    "id": 37,
+    "question": "In education management, efficiency means:",
+    "options": {
+      "A": "Doing things slowly",
+      "B": "Achieving maximum results with minimal resources (Doing things right)",
+      "C": "Ignoring resources",
+      "D": "Working long hours"
+    },
+    "answer": "B",
+    "explanation": "Efficiency is a measure of resource utilization. It is defined as the ability to produce the desired outcomes or **Achieving maximum results with minimal resources** (often phrased as 'doing things right')."
+  },
+  {
+    "id": 38,
+    "question": "Mentoring is effective when it is:",
+    "options": {
+      "A": "One-off",
+      "B": "Long-term and guided by a specific development plan",
+      "C": "Unpaid",
+      "D": "Mandatory for all"
+    },
+    "answer": "B",
+    "explanation": "Mentoring involves a sustained relationship where an experienced person guides a less experienced one. For deep professional growth, it must be **Long-term and guided by a specific development plan** to track progress and milestones."
+  },
+  {
+    "id": 39,
+    "question": "Decisive leadership requires:",
+    "options": {
+      "A": "Fear",
+      "B": "Gathering relevant data and making timely choices",
+      "C": "Constant delay",
+      "D": "Consulting everyone"
+    },
+    "answer": "B",
+    "explanation": "A decisive leader is able to make informed decisions without undue delay. This process involves quickly collecting and analyzing the available **relevant data and making timely choices** necessary for the organization to move forward."
+  },
+  {
+    "id": 40,
+    "question": "A good performance review should focus on:",
+    "options": {
+      "A": "Past mistakes only",
+      "B": "Future goals and staff development needs",
+      "C": "Personal issues",
+      "D": "Salary complaints"
+    },
+    "answer": "B",
+    "explanation": "While it reviews the past, the core utility of a performance review is forward-looking. It should establish new objectives (**Future goals**) and identify the training, resources, or support required (**staff development needs**)."
+  },
+  {
+    "id": 41,
+    "question": "To manage conflict, the first step is to:",
+    "options": {
+      "A": "Blame a party",
+      "B": "Identify the root cause of the disagreement",
+      "C": "Separate the parties",
+      "D": "Give a warning"
+    },
+    "answer": "B",
+    "explanation": "Effective conflict resolution begins with diagnosis. Before any solution can be proposed, the mediator must understand the core issues, misunderstandings, or competing needs that led to the disagreement and **Identify the root cause**."
+  },
+  {
+    "id": 42,
+    "question": "The purpose of a staff register is to record:",
+    "options": {
+      "A": "Student names",
+      "B": "Teacher attendance, check-in, and check-out times",
+      "C": "Curriculum details",
+      "D": "School financial transactions"
+    },
+    "answer": "B",
+    "explanation": "The staff register is an official record-keeping tool. It provides documented proof of the teachers' daily **attendance, check-in, and check-out times**, ensuring accountability for time spent on duty."
+  },
+  {
+    "id": 43,
+    "question": "The main role of the Parent-Teacher Association (PTA) is to:",
+    "options": {
+      "A": "Manage the school",
+      "B": "Promote cooperation between home and school for student welfare and development",
+      "C": "Teach classes",
+      "D": "Discipline teachers"
+    },
+    "answer": "B",
+    "explanation": "The PTA is a formal partnership. Its function is to facilitate dialogue and joint efforts between the school administration and parents to support the educational and developmental needs (**welfare and development**) of the students."
+  },
+  {
+    "id": 44,
+    "question": "The most important quality of a school administrator is:",
+    "options": {
+      "A": "Strictness",
+      "B": "Organizational ability and attention to detail",
+      "C": "Wealth",
+      "D": "Loud voice"
+    },
+    "answer": "B",
+    "explanation": "Administration is fundamentally about managing systems, processes, and resources. Success depends on the ability to structure complex tasks (**Organizational ability**) and ensure compliance and accuracy (**attention to detail**)."
+  },
+  {
+    "id": 45,
+    "question": "A school disciplinary action should be:",
+    "options": {
+      "A": "Revengeful",
+      "B": "Restorative, rehabilitative, and corrective",
+      "C": "Permanent",
+      "D": "Publicly humiliating"
+    },
+    "answer": "B",
+    "explanation": "Modern discipline aims to teach appropriate behavior rather than just punish. Effective discipline focuses on repairing harm (**Restorative**), developing better coping mechanisms (**rehabilitative**), and guiding future conduct (**corrective**)."
+  },
+  {
+    "id": 46,
+    "question": "The most effective way to communicate a school policy is through:",
+    "options": {
+      "A": "Word of mouth",
+      "B": "Written, accessible documents and staff training/meetings",
+      "C": "Rumour",
+      "D": "Only notice boards"
+    },
+    "answer": "B",
+    "explanation": "For a policy to be legally sound and universally understood, it must be officially documented (**Written**) and its contents must be explicitly taught and discussed (**staff training/meetings**)."
+  },
+  {
+    "id": 47,
+    "question": "The Buffer Stock Company provides:",
+    "options": {
+      "A": "Uniforms",
+      "B": "Supplementary learning materials",
+      "C": "Lunch",
+      "D": "Letters"
+    },
+    "answer": "C",
+    "explanation": "In the context of some national school feeding programs, the Buffer Stock Company (e.g., in Ghana) is often tasked with managing and supplying food and resources, such as ingredients for school **Lunch**, to maintain consistency and supply."
+  },
+  {
+    "id": 48,
+    "question": "The cardinal rule of inclusivity is:",
+    "options": {
+      "A": "Exclusion",
+      "B": "Ensuring every learner participates fully",
+      "C": "Ignoring special needs",
+      "D": "Seating all learners at the back"
+    },
+    "answer": "B",
+    "explanation": "Inclusivity means eliminating all barriers—physical, social, and pedagogical—that might prevent a child from accessing education. The core goal is **Ensuring every learner participates fully** in classroom life and activities."
+  },
+  {
+    "id": 49,
+    "question": "The teacher’s job description is found in the:",
+    "options": {
+      "A": "Borrowing book",
+      "B": "Code of Conduct",
+      "C": "Report book",
+      "D": "Mark sheet"
+    },
+    "answer": "B",
+    "explanation": "While specific duties are often detailed in appointment letters, the official and comprehensive outline of a teacher's professional responsibilities, standards, and expectations is contained within the **Code of Conduct and Conditions of Service for Teachers** (or similar official documentation)."
+  },
+  {
+    "id": 50,
+    "question": "A diagnostic test is given:",
+    "options": {
+      "A": "At the end of a course",
+      "B": "To identify specific learning gaps or weaknesses",
+      "C": "For grading only",
+      "D": "Before registration"
+    },
+    "answer": "B",
+    "explanation": "A diagnostic test is a formative assessment administered to determine a student's current knowledge and skills before instruction begins or when a problem is suspected. Its purpose is **To identify specific learning gaps or weaknesses** so instruction can be tailored."
+  }
+]

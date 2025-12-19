@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "A competency-based curriculum focuses on:",
+    "options": {
+      "A": "Content memorization",
+      "B": "Skills and performance",
+      "C": "Teacher comfort",
+      "D": "Exams only"
+    },
+    "answer": "B",
+    "explanation": "Unlike traditional curricula which focus on content retention, a Competency-Based Curriculum (CBC) prioritizes the ability of learners to apply knowledge and demonstrating mastery of specific skills and tasks."
+  },
+  {
+    "id": 2,
+    "question": "Teaching effectiveness requires:",
+    "options": {
+      "A": "Anger",
+      "B": "Preparation and method",
+      "C": "Harshness",
+      "D": "Long notes"
+    },
+    "answer": "B",
+    "explanation": "No matter the resources, effective teaching relies most on how well a teacher plans (preparation) and the pedagogical strategies (method) they use to engage students and convey concepts."
+  },
+  {
+    "id": 3,
+    "question": "Key element of a lesson plan is:",
+    "options": {
+      "A": "Student names",
+      "B": "Learning objectives",
+      "C": "Furniture list",
+      "D": "Teacher salary"
+    },
+    "answer": "B",
+    "explanation": "The learning objectives are the foundation of any lesson plan; they define specifically what students should know or be able to do by the end of the lesson, guiding all other activities."
+  },
+  {
+    "id": 4,
+    "question": "Differentiated instruction considers:",
+    "options": {
+      "A": "Same method for all",
+      "B": "Individual differences",
+      "C": "Only fast learners",
+      "D": "Teacher interest"
+    },
+    "answer": "B",
+    "explanation": "Differentiated instruction is an approach where teachers adjust their curriculum, teaching methods, and resources to accommodate the diverse learning needs, styles, and abilities of individual students."
+  },
+  {
+    "id": 5,
+    "question": "Remedial teaching helps:",
+    "options": {
+      "A": "High achievers",
+      "B": "Slow learners",
+      "C": "Teachers",
+      "D": "Inspectors"
+    },
+    "answer": "B",
+    "explanation": "Remedial teaching is a specific intervention designed to support students who are falling behind ('slow learners') by re-teaching core concepts using simplified or alternative methods to close learning gaps."
+  },
+  {
+    "id": 6,
+    "question": "A syllabus is:",
+    "options": {
+      "A": "Parent handbook",
+      "B": "A subject outline",
+      "C": "A report sheet",
+      "D": "Teaching list"
+    },
+    "answer": "B",
+    "explanation": "A syllabus is a document that outlines the topics and content to be covered in a specific subject over a course of study, serving as a contract between the exam body/curriculum developers and the school."
+  },
+  {
+    "id": 7,
+    "question": "Lesson notes are written to:",
+    "options": {
+      "A": "Impress head",
+      "B": "Guide teaching",
+      "C": "Waste time",
+      "D": "Fill files"
+    },
+    "answer": "B",
+    "explanation": "Lesson notes are the expanded version of the lesson plan, serving as a detailed guide for the teacher during the lesson to ensure valid delivery of content and adherence to objectives."
+  },
+  {
+    "id": 8,
+    "question": "Effective questioning:",
+    "options": {
+      "A": "Uses yes/no questions",
+      "B": "Promotes critical thinking",
+      "C": "Keeps students silent",
+      "D": "Confuses learners"
+    },
+    "answer": "B",
+    "explanation": "Good questions go beyond simple recall; they challenge students to analyze, evaluate, and synthesize information, thereby stimulating higher-order critical thinking skills."
+  },
+  {
+    "id": 9,
+    "question": "Classroom control is best achieved through:",
+    "options": {
+      "A": "Fear",
+      "B": "Clear rules and engagement",
+      "C": "Anger",
+      "D": "Isolation"
+    },
+    "answer": "B",
+    "explanation": "The most sustainable way to manage a classroom is not through fear, but by establishing clear expectations (rules) and keeping students actively engaged in interesting work, which prevents disruptive behavior."
+  },
+  {
+    "id": 10,
+    "question": "Teaching aids help:",
+    "options": {
+      "A": "Decorate classroom",
+      "B": "Clarify concepts",
+      "C": "Waste time",
+      "D": "Reduce supervision"
+    },
+    "answer": "B",
+    "explanation": "Teaching aids (visuals, models, realia) bridge the gap between abstract concepts and concrete understanding, making difficult ideas clearer and easier for students to grasp."
+  },
+  {
+    "id": 11,
+    "question": "Summative assessment is:",
+    "options": {
+      "A": "Diagnostic",
+      "B": "Informal",
+      "C": "Final evaluation",
+      "D": "Oral questioning"
+    },
+    "answer": "C",
+    "explanation": "Summative assessment is conducted at the end of an instructional period (like a term or year) to evaluate student learning against standards, often for grading or certification purposes."
+  },
+  {
+    "id": 12,
+    "question": "A test is valid when:",
+    "options": {
+      "A": "It is difficult",
+      "B": "It measures what it's supposed to",
+      "C": "Students fail",
+      "D": "It is repeated"
+    },
+    "answer": "B",
+    "explanation": "Validity refers to accuracy. A test is valid if it actually assesses the specific content or skills it claims to test, rather than irrelevant factors like reading speed or prior knowledge."
+  },
+  {
+    "id": 13,
+    "question": "Reliability means:",
+    "options": {
+      "A": "Predictable answers",
+      "B": "Consistent results",
+      "C": "High marks only",
+      "D": "No errors"
+    },
+    "answer": "B",
+    "explanation": "Reliability refers to consistency. A reliable assessment yields stable and similar scores if administered to the same student on different occasions or by different markers."
+  },
+  {
+    "id": 14,
+    "question": "A cumulative record card contains:",
+    "options": {
+      "A": "Exam fees",
+      "B": "A learner’s full history",
+      "C": "Staff list",
+      "D": "School budget"
+    },
+    "answer": "B",
+    "explanation": "A cumulative record is a permanent history of a student's entire educational journey, containing academic grades, attendance, health data, and behavioral remarks from year to year."
+  },
+  {
+    "id": 15,
+    "question": "Anecdotal records are:",
+    "options": {
+      "A": "Test results",
+      "B": "Narrative observations",
+      "C": "TLM inventory",
+      "D": "Attendance list"
+    },
+    "answer": "B",
+    "explanation": "Anecdotal records are brief, written notes describing specific incidents or behaviors observed by the teacher, providing qualitative data on a student's social and behavioral development."
+  },
+  {
+    "id": 16,
+    "question": "The logbook is used to record:",
+    "options": {
+      "A": "Student grades",
+      "B": "Official school events",
+      "C": "Teacher attitude",
+      "D": "Classroom rules"
+    },
+    "answer": "B",
+    "explanation": "The logbook is a statutory record where the headteacher records significant daily events, such as official visits, staffing changes, and major incidents affecting the school."
+  },
+  {
+    "id": 17,
+    "question": "The admission register records:",
+    "options": {
+      "A": "Exams",
+      "B": "First school entry details",
+      "C": "Teacher salary",
+      "D": "PTA dues"
+    },
+    "answer": "B",
+    "explanation": "The admission register is the definitive record of every student who has ever enrolled in the school, capturing their personal details and entry dates permanently."
+  },
+  {
+    "id": 18,
+    "question": "Education records must be:",
+    "options": {
+      "A": "Destroyed often",
+      "B": "Accurate and updated",
+      "C": "Kept secretly",
+      "D": "Stored at home"
+    },
+    "answer": "B",
+    "explanation": "For records to be useful for decision-making, planning, and accountability, they must be maintained with strict accuracy and kept current at all times."
+  },
+  {
+    "id": 19,
+    "question": "A portfolio assessment contains:",
+    "options": {
+      "A": "Punishment list",
+      "B": "Samples of student work",
+      "C": "School rules",
+      "D": "Budget sheets"
+    },
+    "answer": "B",
+    "explanation": "A portfolio is a purposeful collection of student work (assignments, projects, art) selected to demonstrate progress, achievement, and effort over time."
+  },
+  {
+    "id": 20,
+    "question": "Assessment helps teachers to:",
+    "options": {
+      "A": "Punish",
+      "B": "Diagnose learning needs",
+      "C": "Avoid planning",
+      "D": "Delay lessons"
+    },
+    "answer": "B",
+    "explanation": "One of the most important functions of assessment is diagnostic: distinguishing what students know from what they don't, allowing teachers to identify gaps and target instruction."
+  },
+  {
+    "id": 21,
+    "question": "The progress report shows:",
+    "options": {
+      "A": "Teacher qualification",
+      "B": "Learner’s term performance",
+      "C": "Syllabus content",
+      "D": "Logbook entries"
+    },
+    "answer": "B",
+    "explanation": "A progress report (or report card) communicates a summary of a student's academic performance and behavior for a specific term to parents and guardians."
+  },
+  {
+    "id": 22,
+    "question": "Diagnostic assessment is used:",
+    "options": {
+      "A": "After all exams",
+      "B": "At term end",
+      "C": "To identify learning challenges",
+      "D": "For promotion"
+    },
+    "answer": "C",
+    "explanation": "Diagnostic assessments are specifically designed to be administered before instruction to reveal prior knowledge, misconceptions, and specific learning difficulties."
+  },
+  {
+    "id": 23,
+    "question": "Continuous assessment improves:",
+    "options": {
+      "A": "Fees",
+      "B": "Learning feedback",
+      "C": "Teacher rank",
+      "D": "Student punishment"
+    },
+    "answer": "B",
+    "explanation": "By assessing regularly, teachers can provide timely feedback to students about their performance, helping them improve while the learning is still happening."
+  },
+  {
+    "id": 24,
+    "question": "The attendance register must be marked:",
+    "options": {
+      "A": "Weekly",
+      "B": "Monthly",
+      "C": "Daily",
+      "D": "Termly"
+    },
+    "answer": "C",
+    "explanation": "To accurately track absenteeism and ensure child safety, the class attendance register must be marked every single school day, typically morning and afternoon."
+  },
+  {
+    "id": 25,
+    "question": "A test blueprint ensures:",
+    "options": {
+      "A": "Students pass",
+      "B": "Balanced test content",
+      "C": "Long questions",
+      "D": "Few items"
+    },
+    "answer": "B",
+    "explanation": "A test blueprint (or table of specification) is a planning tool that ensures the test covers the curriculum content and cognitive levels in the correct proportions, avoiding bias towards one topic."
+  },
+  {
+    "id": 26,
+    "question": "In assessment, objectivity means:",
+    "options": {
+      "A": "Free of bias",
+      "B": "Free of marks",
+      "C": "Free of errors",
+      "D": "Full of errors"
+    },
+    "answer": "A",
+    "explanation": "In assessment, objectivity implies that the scoring is fair and consistent, not influenced by the personal feelings, relationship, or bias of the marker."
+  },
+  {
+    "id": 27,
+    "question": "Promotion depends on:",
+    "options": {
+      "A": "Teacher opinion",
+      "B": "Performance criteria",
+      "C": "Classroom noise",
+      "D": "PTA choice"
+    },
+    "answer": "B",
+    "explanation": "Moving a student to the next class (promotion) should be based on objective criteria regarding their academic performance and readiness, rather than arbitrary factors."
+  },
+  {
+    "id": 28,
+    "question": "The terminal exam is:",
+    "options": {
+      "A": "Diagnostic",
+      "B": "Summative",
+      "C": "Formative",
+      "D": "Predictive"
+    },
+    "answer": "B",
+    "explanation": "A terminal exam happens at the end of a term. Because it is used to judge final performance for that period, it is a classic example of summative assessment."
+  },
+  {
+    "id": 29,
+    "question": "A table of specification matches:",
+    "options": {
+      "A": "Test and answers",
+      "B": "Content and objectives",
+      "C": "Marks and fees",
+      "D": "Books and students"
+    },
+    "answer": "B",
+    "explanation": "The Table of Specification maps the subject matter (content) against the instructional objectives (cognitive levels like knowledge, application), ensuring a valid assessment."
+  },
+  {
+    "id": 30,
+    "question": "The class register helps to monitor:",
+    "options": {
+      "A": "School budget",
+      "B": "Attendance",
+      "C": "TLM supply",
+      "D": "Teacher promotion"
+    },
+    "answer": "B",
+    "explanation": "The primary function of the class register is to officially record and monitor the daily presence or absence of students."
+  },
+  {
+    "id": 31,
+    "question": "School supervision is:",
+    "options": {
+      "A": "A fault-finding task",
+      "B": "A support process",
+      "C": "Punitive",
+      "D": "Occasional"
+    },
+    "answer": "B",
+    "explanation": "Supervision is meant to be a collaborative process where supervisors provide professional guidance and resources to help teachers improve, rather than just finding faults."
+  },
+  {
+    "id": 32,
+    "question": "A good supervisor must:",
+    "options": {
+      "A": "Be harsh",
+      "B": "Communicate clearly",
+      "C": "Punish fast",
+      "D": "Avoid feedback"
+    },
+    "answer": "B",
+    "explanation": "Effective supervision relies on clear feedback. A supervisor must be able to articulate observations and recommendations in a way that is understood and actionable by the teacher."
+  },
+  {
+    "id": 33,
+    "question": "Clinical supervision involves:",
+    "options": {
+      "A": "Surprise visits",
+      "B": "Pre- and post-observation discussion",
+      "C": "Dismissals",
+      "D": "Discipline only"
+    },
+    "answer": "B",
+    "explanation": "Clinical supervision is a specific model involving a cycle of a pre-observation conference, the observation itself, and a post-observation debrief to reflect on the lesson."
+  },
+  {
+    "id": 34,
+    "question": "Teacher appraisal improves:",
+    "options": {
+      "A": "Salary only",
+      "B": "Performance and growth",
+      "C": "Conflicts",
+      "D": "Absenteeism"
+    },
+    "answer": "B",
+    "explanation": "The goal of appraising a teacher is not just to judge competence, but to identify areas for professional development and support their career growth."
+  },
+  {
+    "id": 35,
+    "question": "An INSET is meant for:",
+    "options": {
+      "A": "Students",
+      "B": "Teacher professional training",
+      "C": "PTA",
+      "D": "Community groups"
+    },
+    "answer": "B",
+    "explanation": "In-Service Education and Training (INSET) refers to courses and workshops provided to teachers who are already employed, to upgrade their skills and knowledge."
+  },
+  {
+    "id": 36,
+    "question": "CPD ensures:",
+    "options": {
+      "A": "Teacher redundancies",
+      "B": "Continuous skill improvement",
+      "C": "Salary change",
+      "D": "New buildings"
+    },
+    "answer": "B",
+    "explanation": "Continuous Professional Development (CPD) is the lifelong process of learning that ensures teachers keep their skills up-to-date with new methodologies and knowledge."
+  },
+  {
+    "id": 37,
+    "question": "A mentor teacher:",
+    "options": {
+      "A": "Punishes new teachers",
+      "B": "Guides new teachers",
+      "C": "Writes reports",
+      "D": "Supervises payroll"
+    },
+    "answer": "B",
+    "explanation": "A mentor is an experienced teacher assigned to support, advise, and guide a novice or newly qualified teacher through the early stages of their career."
+  },
+  {
+    "id": 38,
+    "question": "Ethical behaviour encourages:",
+    "options": {
+      "A": "Abuse of power",
+      "B": "Corruption",
+      "C": "Professional trust",
+      "D": "Fear"
+    },
+    "answer": "C",
+    "explanation": "When educators act ethically—with integrity and fairness—it builds trust with students, parents, and colleagues, which is essential for a functioning school community."
+  },
+  {
+    "id": 39,
+    "question": "In GES, the highest office is:",
+    "options": {
+      "A": "Deputy Director",
+      "B": "Director-General",
+      "C": "Regional Director",
+      "D": "District Director"
+    },
+    "answer": "B",
+    "explanation": "The Director-General is the administrative head of the Ghana Education Service, responsible for the day-to-day management of pre-tertiary education nationwide."
+  },
+  {
+    "id": 40,
+    "question": "Quality assurance ensures:",
+    "options": {
+      "A": "School closure",
+      "B": "Standards are met",
+      "C": "Low enrollment",
+      "D": "Permanent supervision"
+    },
+    "answer": "B",
+    "explanation": "Quality assurance involves systematic monitoring and evaluation processes to guarantee that educational provision meets established national standards and benchmarks."
+  },
+  {
+    "id": 41,
+    "question": "The Code of Conduct ensures:",
+    "options": {
+      "A": "Teacher silence",
+      "B": "Student punishment",
+      "C": "Professional discipline",
+      "D": "Exam leakages"
+    },
+    "answer": "C",
+    "explanation": "The Code of Conduct sets the rules and ethical standards for teacher behavior, serving as the basis for maintaining professional discipline and integrity."
+  },
+  {
+    "id": 42,
+    "question": "Poor supervision leads to:",
+    "options": {
+      "A": "Higher performance",
+      "B": "Decline in standards",
+      "C": "Motivation",
+      "D": "Quality teaching"
+    },
+    "answer": "B",
+    "explanation": "Without effective supervision to monitor quality and provide feedback, teaching standards often slip, leading to lower student achievement and school decline."
+  },
+  {
+    "id": 43,
+    "question": "Action research helps teachers to:",
+    "options": {
+      "A": "Write exams",
+      "B": "Punish students",
+      "C": "Solve classroom problems",
+      "D": "Supervise directors"
+    },
+    "answer": "C",
+    "explanation": "Action research is a reflective process where teachers investigate their own practice to identify specific classroom problems and test solutions to solve them."
+  },
+  {
+    "id": 44,
+    "question": "Effective communication in schools is:",
+    "options": {
+      "A": "One-way",
+      "B": "Loud and harsh",
+      "C": "Clear and respectful",
+      "D": "Avoided"
+    },
+    "answer": "C",
+    "explanation": "In a professional school environment, communication must be unambiguous (clear) to prevent misunderstandings and conducted with respect to maintain good relationships."
+  },
+  {
+    "id": 45,
+    "question": "The highest form of teacher misconduct is:",
+    "options": {
+      "A": "Lateness",
+      "B": "Sexual harassment",
+      "C": "Noise-making",
+      "D": "Dress code violation"
+    },
+    "answer": "B",
+    "explanation": "Sexual harassment is considered a grave professional offense due to the power imbalance between teachers and students and the severe psychological harm it causes."
+  },
+  {
+    "id": 46,
+    "question": "A circuit supervisor reports to:",
+    "options": {
+      "A": "PTA",
+      "B": "Students",
+      "C": "District Director",
+      "D": "Parents"
+    },
+    "answer": "C",
+    "explanation": "The Circuit Supervisor (now SISO) works at the circuit level but is directly accountable to the District Director of Education, who oversees all circuits in the district."
+  },
+  {
+    "id": 47,
+    "question": "A reflective teacher:",
+    "options": {
+      "A": "Never thinks",
+      "B": "Reviews and improves practice",
+      "C": "Copies notes",
+      "D": "Avoids feedback"
+    },
+    "answer": "B",
+    "explanation": "Reflection is the habit of thinking critically about one's own teaching—what worked, what didn't, and why—as a means to continuously improve professional practice."
+  },
+  {
+    "id": 48,
+    "question": "A school improvement plan is:",
+    "options": {
+      "A": "A punishment tool",
+      "B": "A roadmap for raising standards",
+      "C": "A test kit",
+      "D": "A record book"
+    },
+    "answer": "B",
+    "explanation": "An SIP documents the school's self-evaluation and outlines a strategic roadmap of priorities and actions intended to raise the quality of education over a specific period."
+  },
+  {
+    "id": 49,
+    "question": "Effective supervision is:",
+    "options": {
+      "A": "Secretive",
+      "B": "Harsh",
+      "C": "Continuous and supportive",
+      "D": "One-time"
+    },
+    "answer": "C",
+    "explanation": "Supervision works best when it is not a one-off event, but a continuous process of support, feedback, and development throughout the academic year."
+  },
+  {
+    "id": 50,
+    "question": "The ultimate goal of an ADI is:",
+    "options": {
+      "A": "Write reports",
+      "B": "Travel frequently",
+      "C": "Control staff",
+      "D": "Improve quality education"
+    },
+    "answer": "D",
+    "explanation": "While Assistant Directors of Inspection (ADIs) report and monitor, their ultimate purpose, like all supervision, is to enhance the quality of education provided to learners."
+  }
+]

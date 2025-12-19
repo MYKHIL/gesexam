@@ -1,0 +1,604 @@
+[
+  {
+    "id": 1,
+    "question": "The ADI must collaborate with",
+    "options": {
+      "A": "Market women",
+      "B": "Stakeholders in education",
+      "C": "Drivers only",
+      "D": "Students’ parents alone"
+    },
+    "answer": "B",
+    "explanation": "Effective educational administration relies on partnerships. The ADI must engage with all relevant **Stakeholders in education** (B), which include teachers, parents, community leaders, NGOs, and local government, to ensure shared goals and resource mobilization."
+  },
+  {
+    "id": 2,
+    "question": "Workload distribution must be",
+    "options": {
+      "A": "Fair",
+      "B": "Biased",
+      "C": "Secret",
+      "D": "Punitive"
+    },
+    "answer": "A",
+    "explanation": "A core principle of good management is equity and efficiency. Workload should be assigned based on staff capacity, qualifications, and clearly defined roles, ensuring that the distribution is **Fair** (A) and promotes productivity rather than resentment."
+  },
+  {
+    "id": 3,
+    "question": "Effective supervision reduces",
+    "options": {
+      "A": "Teacher performance",
+      "B": "Instructional challenges",
+      "C": "School attendance",
+      "D": "Teaching time"
+    },
+    "answer": "B",
+    "explanation": "The primary goal of instructional supervision is to identify weaknesses in teaching methods or resource utilization and provide corrective feedback and support. This directly works to reduce **Instructional challenges** (B) and improve teaching quality."
+  },
+  {
+    "id": 4,
+    "question": "A good leader models",
+    "options": {
+      "A": "Professional behaviour",
+      "B": "Neglect",
+      "C": "Anger",
+      "D": "Favouritism"
+    },
+    "answer": "A",
+    "explanation": "Leaders set the standard for the entire organization. By demonstrating high levels of ethics, responsibility, and competence, a good leader models **Professional behaviour** (A), which is then expected of all staff."
+  },
+  {
+    "id": 5,
+    "question": "The ADI role requires",
+    "options": {
+      "A": "Strong leadership and management skills",
+      "B": "Social media popularity",
+      "C": "Punitive supervision",
+      "D": "Avoiding stakeholders"
+    },
+    "answer": "A",
+    "explanation": "The ADI rank involves significant responsibility for implementing policies, supervising schools, and managing personnel and resources. This mandates the possession of **Strong leadership and management skills** (A) to guide teams and run operations efficiently."
+  },
+  {
+    "id": 6,
+    "question": "Which of the following best captures the core mandate of a Deputy Director (DD) in an educational institution?",
+    "options": {
+      "A": "Designing national curriculum",
+      "B": "Supervising district-level implementation of policies",
+      "C": "Allocating national education budget",
+      "D": "Hiring all teachers"
+    },
+    "answer": "B",
+    "explanation": "Deputy Directors (DDs) typically operate at the sub-national (district or regional) level. Their key function is translating national and institutional guidelines into local action and ensuring compliance, which is **Supervising district-level implementation of policies** (B)."
+  },
+  {
+    "id": 7,
+    "question": "Strategic planning at the DD level primarily focuses on:",
+    "options": {
+      "A": "Classroom lesson delivery",
+      "B": "Long-term institutional development",
+      "C": "Only student discipline",
+      "D": "Managing only procurement"
+    },
+    "answer": "B",
+    "explanation": "Strategic planning deals with the organization's overall direction, goals, and resource allocation over a period of three to five years. It is inherently concerned with **Long-term institutional development** (B). Operational planning handles daily activities (A)."
+  },
+  {
+    "id": 8,
+    "question": "In public administration, the principle of “span of control” refers to:",
+    "options": {
+      "A": "Number of teachers in a school",
+      "B": "Number of subordinates a manager directly supervises",
+      "C": "Amount of funds a director manages",
+      "D": "Steps of disciplinary procedures"
+    },
+    "answer": "B",
+    "explanation": "The 'span of control' principle dictates the **Number of subordinates a manager directly supervises** (B). A manageable span ensures the manager can provide effective leadership, communication, and oversight. "
+  },
+  {
+    "id": 9,
+    "question": "A Deputy Director ensures monitoring and evaluation primarily to:",
+    "options": {
+      "A": "Punish non-performing staff",
+      "B": "Provide evidence for decision-making",
+      "C": "Replace headteachers",
+      "D": "Reduce the workload of supervisors"
+    },
+    "answer": "B",
+    "explanation": "Monitoring and Evaluation (M&E) systems systematically collect data on progress and outcomes. This data is critical for leaders to determine what is working, what needs adjustment, and where resources should be redirected, effectively helping to **Provide evidence for decision-making** (B)."
+  },
+  {
+    "id": 10,
+    "question": "The best leadership style for managing diverse staff is:",
+    "options": {
+      "A": "Autocratic",
+      "B": "Democratic",
+      "C": "Laissez-faire",
+      "D": "Charismatic only"
+    },
+    "answer": "B",
+    "explanation": "The **Democratic** (B) (or participative) leadership style involves consulting staff and considering their input before making a final decision. This approach leverages diverse perspectives, fosters ownership, and improves morale among a varied workforce."
+  },
+  {
+    "id": 11,
+    "question": "Which document guides the DD’s administrative operations?",
+    "options": {
+      "A": "Students’ report cards",
+      "B": "Scheme of learning",
+      "C": "Public Service Act",
+      "D": "PTA constitution"
+    },
+    "answer": "C",
+    "explanation": "As a public sector official, the Deputy Director's duties, powers, and procedural limits are defined by national legislation governing the civil service. The **Public Service Act** (C) and other relevant regulations (like the Education Service Act) are the ultimate guides for administrative operations."
+  },
+  {
+    "id": 12,
+    "question": "In conflict resolution, the first step is:",
+    "options": {
+      "A": "Punishing the parties",
+      "B": "Identifying the root cause",
+      "C": "Writing a report immediately",
+      "D": "Transferring the parties"
+    },
+    "answer": "B",
+    "explanation": "Effective conflict resolution is about solving the underlying issue, not just managing the symptoms. This requires careful listening and investigation to accurately **Identifying the root cause** (B) of the disagreement."
+  },
+  {
+    "id": 13,
+    "question": "Accountability in educational leadership means:",
+    "options": {
+      "A": "Delegating without supervision",
+      "B": "Providing justification for decisions",
+      "C": "Allowing staff to act freely",
+      "D": "Avoiding transparency"
+    },
+    "answer": "B",
+    "explanation": "Accountability is the obligation to answer for a responsibility conferred. In leadership, this means being prepared to explain and logically defend the rationale, process, and outcomes of one's choices, thus **Providing justification for decisions** (B)."
+  },
+  {
+    "id": 14,
+    "question": "A Deputy Director supervises schools mainly to:",
+    "options": {
+      "A": "Promote compliance and support improvement",
+      "B": "Replace headteachers",
+      "C": "Share teaching notes",
+      "D": "Conduct classroom teaching"
+    },
+    "answer": "A",
+    "explanation": "Supervision is a supportive and regulatory function. It ensures adherence to institutional rules (**compliance**) while offering professional guidance and resources to enhance performance (**support improvement**). The main goal is to **Promote compliance and support improvement** (A)."
+  },
+  {
+    "id": 15,
+    "question": "Which of the following is a key component of school improvement planning?",
+    "options": {
+      "A": "Staff birthdays",
+      "B": "Data-driven targets",
+      "C": "Physical appearance of staff",
+      "D": "Length of PTA meetings"
+    },
+    "answer": "B",
+    "explanation": "School improvement planning must be based on measurable results (like test scores, attendance rates, etc.) to ensure that interventions are focused and their success can be evaluated. This requires setting **Data-driven targets** (B)."
+  },
+  {
+    "id": 16,
+    "question": "Fiscal discipline means:",
+    "options": {
+      "A": "Spending without approval",
+      "B": "Using resources appropriately",
+      "C": "Spending all funds before deadline",
+      "D": "Delegating budget without oversight"
+    },
+    "answer": "B",
+    "explanation": "Fiscal discipline is the responsible management of public funds. It ensures that expenditures are lawful, economical, and directly tied to authorized activities, which is best summarized as **Using resources appropriately** (B)."
+  },
+  {
+    "id": 17,
+    "question": "Which indicator best measures school performance?",
+    "options": {
+      "A": "Staff uniformity",
+      "B": "Learning outcomes",
+      "C": "Classroom decorations",
+      "D": "Number of meetings"
+    },
+    "answer": "B",
+    "explanation": "The core mandate of any educational institution is to ensure student learning. Therefore, the best measure of overall effectiveness is the success of students, reflected in **Learning outcomes** (B) (e.g., test scores, graduation rates)."
+  },
+  {
+    "id": 18,
+    "question": "The term “equity in education” implies:",
+    "options": {
+      "A": "Treating all schools equally",
+      "B": "Providing additional support where needed",
+      "C": "Giving urban schools more resources",
+      "D": "Ignoring disadvantaged learners"
+    },
+    "answer": "B",
+    "explanation": "Equity is about fairness, not just equality. It recognizes that some students or schools have greater needs due to disadvantage and requires **Providing additional support where needed** (B) to ensure they have an equal opportunity to succeed. "
+  },
+  {
+    "id": 19,
+    "question": "A Deputy Director’s decision should be anchored on:",
+    "options": {
+      "A": "Rumours",
+      "B": "Evidence",
+      "C": "Peer pressure",
+      "D": "Staff criticism"
+    },
+    "answer": "B",
+    "explanation": "To maintain objectivity, fairness, and defensibility, administrative decisions in the public sector must be based on verifiable facts, data, or policies. They should be anchored on **Evidence** (B)."
+  },
+  {
+    "id": 20,
+    "question": "Which leadership theory focuses on relationships and task structure?",
+    "options": {
+      "A": "Trait theory",
+      "B": "Fiedler’s contingency theory",
+      "C": "Behavioural theory",
+      "D": "Human capital theory"
+    },
+    "answer": "B",
+    "explanation": "Fiedler's Contingency Theory (B) posits that a leader's effectiveness is contingent on whether their leadership style (task-oriented or relationship-oriented) matches the favorableness of the situation, which is determined by factors like leader-member relations, task structure, and position power. [Image of Fiedler's Contingency Theory model
+    ]
+"
+  },
+  {
+    "id": 21,
+    "question": "Professional ethics in the public sector requires:",
+    "options": {
+      "A": "Bias in decision-making",
+      "B": "Integrity and impartiality",
+      "C": "Rewarding favourites",
+      "D": "Hiding information"
+    },
+    "answer": "B",
+    "explanation": "Professional ethics demand that public officials act honestly (**Integrity**) and treat all individuals and situations equally, without personal preference (**impartiality**). Thus, **Integrity and impartiality** (B) are key requirements."
+  },
+  {
+    "id": 22,
+    "question": "Which communication channel is best for urgent official instructions?",
+    "options": {
+      "A": "Notice board",
+      "B": "Email",
+      "C": "Staff durbar",
+      "D": "Annual report"
+    },
+    "answer": "B",
+    "explanation": "For urgent, formal instructions, **Email** (B) is the most suitable channel as it allows for immediate, documented, official transmission to multiple recipients simultaneously and provides a record of delivery."
+  },
+  {
+    "id": 23,
+    "question": "Delegation improves efficiency by:",
+    "options": {
+      "A": "Removing responsibility from the leader",
+      "B": "Empowering subordinates",
+      "C": "Creating confusion",
+      "D": "Eliminating supervision"
+    },
+    "answer": "B",
+    "explanation": "Delegation not only frees up the manager but, more importantly, it develops the skills and confidence of the staff, making them more proactive and capable. This is the process of **Empowering subordinates** (B)."
+  },
+  {
+    "id": 24,
+    "question": "Stakeholder engagement in educational leadership includes:",
+    "options": {
+      "A": "Only teachers",
+      "B": "Teachers, parents, community members",
+      "C": "Only headteachers",
+      "D": "Only district directors"
+    },
+    "answer": "B",
+    "explanation": "Stakeholders are all parties interested in or affected by education outcomes. This is a broad group encompassing staff, beneficiaries, and the surrounding community. It includes **Teachers, parents, community members** (B) and others like local government and traditional leaders."
+  },
+  {
+    "id": 25,
+    "question": "Which of the following strengthens transparency?",
+    "options": {
+      "A": "Keeping decisions secret",
+      "B": "Publishing financial reports",
+      "C": "Restricting information",
+      "D": "Limiting participation"
+    },
+    "answer": "B",
+    "explanation": "Transparency is making organizational activities visible and understandable to all relevant parties. **Publishing financial reports** (B) is a key mechanism for demonstrating how public funds have been utilized and holding officials accountable."
+  },
+  {
+    "id": 26,
+    "question": "The most effective monitoring process is:",
+    "options": {
+      "A": "Event-based",
+      "B": "Continuous",
+      "C": "Occasional",
+      "D": "Selective"
+    },
+    "answer": "B",
+    "explanation": "Monitoring is meant to track progress in real-time and allow for timely adjustments. For this, the process must be systematic and **Continuous** (B), not sporadic or after-the-fact."
+  },
+  {
+    "id": 27,
+    "question": "In decision-making, the “consultative approach” involves:",
+    "options": {
+      "A": "Asking no one",
+      "B": "Seeking input before deciding",
+      "C": "Delegating decisions entirely",
+      "D": "Avoiding responsibility"
+    },
+    "answer": "B",
+    "explanation": "A consultative approach is where the leader gathers advice, opinions, and information from relevant parties (**Seeking input before deciding** (B)) but retains the authority to make the final choice."
+  },
+  {
+    "id": 28,
+    "question": "School audits are conducted to:",
+    "options": {
+      "A": "Reward high-performing teachers",
+      "B": "Ensure proper financial management",
+      "C": "Punish accountants",
+      "D": "Cancel procurement activities"
+    },
+    "answer": "B",
+    "explanation": "Audits are independent examinations of financial records and operational procedures. Their primary purpose is to verify compliance with financial regulations and to **Ensure proper financial management** (B) and reporting."
+  },
+  {
+    "id": 29,
+    "question": "Which of the following is a key element of supervision?",
+    "options": {
+      "A": "Bias",
+      "B": "Guidance and support",
+      "C": "Fear",
+      "D": "Intimidation"
+    },
+    "answer": "B",
+    "explanation": "Modern supervision is supportive and developmental. Its central element is helping staff improve their skills and addressing obstacles through **Guidance and support** (B), rather than punitive measures."
+  },
+  {
+    "id": 30,
+    "question": "Which document outlines expected learning achievements?",
+    "options": {
+      "A": "Timetable",
+      "B": "Curriculum",
+      "C": "Staff meeting minutes",
+      "D": "PTA constitution"
+    },
+    "answer": "B",
+    "explanation": "The **Curriculum** (B) is the official document that specifies the content, methodology, and learning objectives—the expected achievements—for students at different levels."
+  },
+  {
+    "id": 31,
+    "question": "A Deputy Director promotes staff motivation through:",
+    "options": {
+      "A": "Threats",
+      "B": "Recognition and support",
+      "C": "Harassment",
+      "D": "Delays in promotion"
+    },
+    "answer": "B",
+    "explanation": "Motivation is significantly boosted when staff feel valued (**Recognition**) and have the resources and help they need to succeed (**support**). The combination of **Recognition and support** (B) is highly effective."
+  },
+  {
+    "id": 32,
+    "question": "Data verification ensures:",
+    "options": {
+      "A": "Guesswork",
+      "B": "Accuracy",
+      "C": "Duplication",
+      "D": "Irrelevant reporting"
+    },
+    "answer": "B",
+    "explanation": "Data verification is the process of checking collected information against original sources to confirm its validity and reliability. This critical process ensures **Accuracy** (B) in reporting and planning."
+  },
+  {
+    "id": 33,
+    "question": "The purpose of mentoring new headteachers is to:",
+    "options": {
+      "A": "Increase workload",
+      "B": "Promote professional growth",
+      "C": "Replace supervisors",
+      "D": "Reduce monitoring"
+    },
+    "answer": "B",
+    "explanation": "Mentoring involves experienced leaders providing guidance to newer ones. This transfer of practical knowledge and skills is aimed at accelerating the new headteacher's development and competence, thus helping to **Promote professional growth** (B)."
+  },
+  {
+    "id": 34,
+    "question": "Which report is mandatory for accountability?",
+    "options": {
+      "A": "Social media post",
+      "B": "Annual performance report",
+      "C": "Weekly WhatsApp update",
+      "D": "PTA statement"
+    },
+    "answer": "B",
+    "explanation": "Formal, comprehensive reporting is a statutory requirement for public officials to demonstrate the use of resources and achievement of targets over a fiscal period. The **Annual performance report** (B) is the mandatory document for institutional accountability."
+  },
+  {
+    "id": 35,
+    "question": "Effective leadership requires:",
+    "options": {
+      "A": "Emotional intelligence",
+      "B": "Avoiding feedback",
+      "C": "Strict command",
+      "D": "Ignoring staff suggestions"
+    },
+    "answer": "A",
+    "explanation": "Effective leaders must be self-aware and able to manage their emotions and relationships with others. **Emotional intelligence** (A) is crucial for motivating staff, handling conflicts, and building a positive work environment."
+  },
+  {
+    "id": 36,
+    "question": "Policy implementation at the DD level involves:",
+    "options": {
+      "A": "Creating personal rules",
+      "B": "Adhering to national guidelines",
+      "C": "Bypassing procedures",
+      "D": "Focusing on rumours"
+    },
+    "answer": "B",
+    "explanation": "As an implementing agent, the DD's role is to ensure that all local actions align perfectly with the mandates set by the central authority. This requires strict **Adhering to national guidelines** (B)."
+  },
+  {
+    "id": 37,
+    "question": "Staff appraisal helps to:",
+    "options": {
+      "A": "Dismiss workers quickly",
+      "B": "Identify strengths and improvement areas",
+      "C": "Create conflict",
+      "D": "Promote without basis"
+    },
+    "answer": "B",
+    "explanation": "Staff appraisal (performance review) is a systematic process used to evaluate performance against set objectives. Its primary goal is formative: to recognize achievements (**strengths**) and pinpoint specific areas needing professional development (**improvement areas**). This is **Identify strengths and improvement areas** (B)."
+  },
+  {
+    "id": 38,
+    "question": "Which type of planning is done yearly?",
+    "options": {
+      "A": "Operational planning",
+      "B": "Strategic planning",
+      "C": "Emergency planning",
+      "D": "Incident planning"
+    },
+    "answer": "A",
+    "explanation": "Strategic planning is long-term (3-5 years). **Operational planning** (A) translates the long-term goals into detailed, short-term actions, budgets, and schedules, typically covering a 1-year cycle."
+  },
+  {
+    "id": 39,
+    "question": "A Deputy Director should treat complaints by:",
+    "options": {
+      "A": "Ignoring them",
+      "B": "Investigating objectively",
+      "C": "Supporting one side",
+      "D": "Delaying response"
+    },
+    "answer": "B",
+    "explanation": "The resolution of complaints must be fair and impartial to maintain trust. This requires a formal process of gathering facts and making a decision based on evidence, which means **Investigating objectively** (B)."
+  },
+  {
+    "id": 40,
+    "question": "Organizational culture refers to:",
+    "options": {
+      "A": "Staff salaries",
+      "B": "Shared values and norms",
+      "C": "Procurement processes",
+      "D": "Annual leave"
+    },
+    "answer": "B",
+    "explanation": "Organizational culture is the deeply ingrained set of beliefs, assumptions, and practices that influence how people behave and interact within an organization. This is defined by the **Shared values and norms** (B)."
+  },
+  {
+    "id": 41,
+    "question": "The most effective way to prevent corruption is:",
+    "options": {
+      "A": "Lack of checks",
+      "B": "Strong internal controls",
+      "C": "Verbal warnings",
+      "D": "Hiding financial data"
+    },
+    "answer": "B",
+    "explanation": "Corruption is prevented by installing systems that make illicit activities difficult to execute or easy to detect. This includes segregation of duties, regular audits, and clear authorization processes, collectively known as **Strong internal controls** (B)."
+  },
+  {
+    "id": 42,
+    "question": "A school census helps to:",
+    "options": {
+      "A": "Track only buildings",
+      "B": "Provide accurate enrolment data",
+      "C": "Measure teachers’ salaries",
+      "D": "Rank communities"
+    },
+    "answer": "B",
+    "explanation": "A school census is a comprehensive, periodic enumeration of all students, teachers, and facilities in a defined area. Its core output is to **Provide accurate enrolment data** (B) for planning and resource allocation."
+  },
+  {
+    "id": 43,
+    "question": "Coaching focuses on:",
+    "options": {
+      "A": "Punishment",
+      "B": "Improving skills",
+      "C": "Ignoring weaknesses",
+      "D": "Reducing supervision"
+    },
+    "answer": "B",
+    "explanation": "Coaching is a development process where an expert provides personalized, ongoing training and feedback to a subordinate with the specific aim of **Improving skills** (B) and performance in a particular area."
+  },
+  {
+    "id": 44,
+    "question": "A Deputy Director ensures inclusivity by:",
+    "options": {
+      "A": "Excluding disabled learners",
+      "B": "Providing support for all learners",
+      "C": "Reducing teacher numbers",
+      "D": "Limiting curriculum access"
+    },
+    "answer": "B",
+    "explanation": "Inclusivity means ensuring that all learners, regardless of background, ability, or status, have equal access to quality education. This is achieved by adapting resources and systems to needs, which is **Providing support for all learners** (B)."
+  },
+  {
+    "id": 45,
+    "question": "A good leader must be:",
+    "options": {
+      "A": "Biased",
+      "B": "Accountable",
+      "C": "Harsh",
+      "D": "Secretive"
+    },
+    "answer": "B",
+    "explanation": "Public officials hold delegated authority and must justify their actions and take responsibility for results. The most fundamental requirement for any public service leader is to be **Accountable** (B)."
+  },
+  {
+    "id": 46,
+    "question": "Which record is critical during audits?",
+    "options": {
+      "A": "Birthday list",
+      "B": "Cash book",
+      "C": "Chalk distribution list",
+      "D": "PTA messages"
+    },
+    "answer": "B",
+    "explanation": "An audit is primarily a financial examination. The **Cash book** (B), which is the primary and detailed record of all cash receipts and payments, is the most critical document for auditors to verify financial transactions."
+  },
+  {
+    "id": 47,
+    "question": "Performance gaps are identified through:",
+    "options": {
+      "A": "Gossip",
+      "B": "Monitoring data",
+      "C": "Fear",
+      "D": "Social media"
+    },
+    "answer": "B",
+    "explanation": "A performance gap is the difference between the actual result and the desired outcome. This difference can only be reliably quantified and analyzed using systematic data collection and review, which is **Monitoring data** (B)."
+  },
+  {
+    "id": 48,
+    "question": "In public administration, a directive is:",
+    "options": {
+      "A": "Personal advice",
+      "B": "Official instruction",
+      "C": "Rumour",
+      "D": "Threat"
+    },
+    "answer": "B",
+    "explanation": "A directive is a formal, authoritative communication issued by a superior to subordinates, commanding or guiding action. It is an **Official instruction** (B) that staff are expected to follow."
+  },
+  {
+    "id": 49,
+    "question": "Effective teamwork requires:",
+    "options": {
+      "A": "Respect and cooperation",
+      "B": "Competition",
+      "C": "Distrust",
+      "D": "Silence"
+    },
+    "answer": "A",
+    "explanation": "The foundation of a functional team is positive interpersonal dynamics, where members value each other (**Respect**) and work together willingly toward a common goal (**cooperation**). This is **Respect and cooperation** (A)."
+  },
+  {
+    "id": 50,
+    "question": "School mapping helps in:",
+    "options": {
+      "A": "Locating facilities",
+      "B": "Teacher dismissal",
+      "C": "Meeting arrangement",
+      "D": "Staff ranking"
+    },
+    "answer": "A",
+    "explanation": "School mapping is a planning technique that uses geographical data to determine the optimal location, size, and number of schools needed to serve a population. Its function is primarily about geographical data and planning, specifically **Locating facilities** (A) and identifying areas underserved by schools."
+  }
+]
