@@ -3952,20 +3952,48 @@
         // Relies on global helpers: fetchAdminPasswordFromFirebase, loadReportsObject, updateReportStatus, deleteReport
 
         async function promptAdminAndShowReports() {
-            // 1. Fetch real password
-            let realPassword = await fetchAdminPasswordFromFirebase();
-            if (!realPassword) realPassword = "admin"; // default fallback
+            try {
+                showMessage("Verifying admin access...", "info");
+                console.log("Starting admin authentication flow...");
 
-            const input = prompt("Enter Admin Password:");
-            if (input === null) return; // cancelled
+                // 1. Fetch real password with timeout to prevent hanging  
+                let realPassword = null;
+                try {
+                    // Create a timeout promise
+                    const timeout = new Promise((resolve) => setTimeout(() => resolve("TIMEOUT"), 5000));
+                    // Race the fetch against timeout
+                    const result = await Promise.race([fetchAdminPasswordFromFirebase(), timeout]);
 
-            if (input !== realPassword) {
-                showMessage("Incorrect password.", "error");
-                return;
+                    if (result === "TIMEOUT") {
+                        console.warn("Admin password fetch timed out, using fallback");
+                        realPassword = "admin";
+                    } else {
+                        realPassword = result;
+                    }
+                } catch (e) {
+                    console.error("Error fetching admin password:", e);
+                }
+
+                if (!realPassword) realPassword = "admin"; // default fallback
+
+                // Clear the "Verifying..." message by showing a new status or just proceeding
+                // (prompt blocks execution, so message might persist until prompt is closed)
+
+                const input = prompt("Enter Admin Password:");
+                if (input === null) return; // cancelled
+
+                if (input !== realPassword) {
+                    showMessage("Incorrect password.", "error");
+                    return;
+                }
+
+                showMessage("Access granted. Loading reports...", "success");
+                // Password correct, show reports
+                renderReportsList();
+            } catch (e) {
+                console.error("promptAdminAndShowReports error:", e);
+                showMessage("An error occurred: " + e.message, "error");
             }
-
-            // Password correct, show reports
-            renderReportsList();
         }
 
         async function renderReportsList() {
