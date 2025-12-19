@@ -1549,161 +1549,7 @@
         }
 
         // Admin: prompt for password then display reported questions
-        async function promptAdminAndShowReports() {
-            // Fetch admin password from Firebase if available (best-effort)
-            let expectedPw = JSONBIN_ADMIN_PASSWORD;
-            try {
-                const fetched = await fetchAdminPasswordFromFirebase();
-                if (fetched) expectedPw = fetched;
-            } catch (e) {
-                console.debug('Could not read admin password from Firebase, using fallback.', e);
-            }
-
-            const pw = prompt('Enter admin password to view reported questions:');
-            if (!pw) return;
-            if (pw !== expectedPw) { showMessage('Invalid admin password.', 'error'); return; }
-
-            // Try Firebase first, then jsonbin fallback for the reports
-            try {
-                const fbReports = await fetchReportsFromFirebase();
-                if (Array.isArray(fbReports) && fbReports.length > 0) {
-                    renderReportsList(fbReports);
-                    return;
-                }
-            } catch (e) {
-                console.debug('Could not fetch reports from Firebase (fallback to jsonbin):', e);
-            }
-            try {
-                const data = await fetchJsonBinData(JSONBIN_REVIEWS_BIN_ID);
-                const reports = (data && Array.isArray(data.reports)) ? data.reports : [];
-                renderReportsList(reports);
-            } catch (e) {
-                console.error('Could not fetch reports from jsonbin:', e);
-                showMessage('Failed to load reports.', 'error');
-            }
-        }
-
-        function renderReportsList(reports) {
-            const modal = _createModalContainer('reports-modal');
-            // Build an interactive admin UI: filters + actionable list
-            const safeReports = Array.isArray(reports) ? reports.slice().reverse() : [];
-            const modalHtml = `
-                <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-60">
-                    <div class="bg-white rounded-lg p-4 max-w-[92vw] sm:max-w-3xl md:max-w-5xl w-full shadow-2xl max-h-[85vh] overflow-auto mx-2">
-                        <div class="flex items-start justify-between mb-4">
-                            <h3 class="text-xl font-bold">Reported Questions (${safeReports.length})</h3>
-                            <div class="space-x-2">
-                                <button onclick="closeReportsModal()" class="px-3 py-1 bg-gray-200 rounded">Close</button>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 mb-4">
-                            <div>
-                                <label class="text-sm font-semibold">Status</label>
-                                <select id="report-filter-status" class="w-full p-2 border rounded">
-                                    <option value="all">All</option>
-                                    <option value="open">Open</option>
-                                    <option value="resolved">Resolved</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="text-sm font-semibold">Tag</label>
-                                <input id="report-filter-tag" class="w-full p-2 border rounded" placeholder="tag filter (e.g. typo)" />
-                            </div>
-                            <div>
-                                <label class="text-sm font-semibold">Set #</label>
-                                <input id="report-filter-set" class="w-full p-2 border rounded" placeholder="e.g. 3" />
-                            </div>
-                            <div>
-                                <label class="text-sm font-semibold">Search</label>
-                                <input id="report-filter-search" class="w-full p-2 border rounded" placeholder="search question or comment" />
-                            </div>
-                        </div>
-                        <div id="reports-list-container" class="space-y-2">
-                        </div>
-                    </div>
-                </div>
-            `;
-            modal.innerHTML = modalHtml;
-
-            // Render list with filters applied
-            function renderList() {
-                const status = (document.getElementById('report-filter-status') && document.getElementById('report-filter-status').value) || 'all';
-                const tag = (document.getElementById('report-filter-tag') && document.getElementById('report-filter-tag').value.trim().toLowerCase()) || '';
-                const setNum = (document.getElementById('report-filter-set') && document.getElementById('report-filter-set').value.trim()) || '';
-                const search = (document.getElementById('report-filter-search') && document.getElementById('report-filter-search').value.trim().toLowerCase()) || '';
-
-                const container = document.getElementById('reports-list-container');
-                if (!container) return;
-
-                const filtered = safeReports.filter(r => {
-                    if (status !== 'all' && ((r.status || 'open') !== status)) return false;
-                    if (tag) {
-                        const tags = Array.isArray(r.tags) ? r.tags.map(t => t.toLowerCase()) : [];
-                        if (!tags.includes(tag)) return false;
-                    }
-                    if (setNum) {
-                        const setMatch = r.sourceFile ? (r.sourceFile.match(/set(\d+)\.json/) || []) : [];
-                        const s = setMatch[1] || '';
-                        if (s !== setNum) return false;
-                    }
-                    if (search) {
-                        const hay = ((r.question || '') + ' ' + (r.comment || '')).toLowerCase();
-                        if (!hay.includes(search)) return false;
-                    }
-                    return true;
-                });
-
-                if (filtered.length === 0) {
-                    container.innerHTML = `<div class="p-4 text-sm text-gray-600">No reports match the current filters.</div>`;
-                    return;
-                }
-
-                container.innerHTML = filtered.map(r => {
-                    const setMatch = r.sourceFile ? (r.sourceFile.match(/set(\d+)\.json/) || []) : [];
-                    const setNum = setMatch[1] || 'N/A';
-                    const reporter = r.reporterName ? `${r.reporterName}${r.reporterLocation && (r.reporterLocation.city || r.reporterLocation.country) ? ' — ' + (r.reporterLocation.city ? r.reporterLocation.city + ', ' : '') + (r.reporterLocation.country || '') : ''}` : (r.deviceId || 'Anonymous');
-                    const statusLabel = (r.status || 'open') === 'resolved' ? '<span class="text-green-700 font-semibold">Resolved</span>' : '<span class="text-yellow-700 font-semibold">Open</span>';
-                    return `
-                        <div class="border rounded p-3 bg-white">
-                            <div class="flex justify-between items-start">
-                                <div class="flex-1">
-                                    <div class="text-sm text-gray-500">Set: ${setNum} • ${r.sourceFile || 'unknown'}${r.sourceLine ? ' (line ' + r.sourceLine + ')' : ''}</div>
-                                    <div class="font-semibold mt-1">${(r.question || '').substring(0, 200)}</div>
-                                    <div class="text-sm text-gray-700 mt-2">Comment: ${r.comment || '<i>none</i>'}</div>
-                                    <div class="text-sm text-gray-600 mt-2">Tags: ${Array.isArray(r.tags) ? r.tags.join(', ') : ''}</div>
-                                </div>
-                                <div class="ml-4 text-right">
-                                    <div>${statusLabel}</div>
-                                    <div class="text-xs text-gray-500 mt-2">${new Date(r.createdAt).toLocaleString()}</div>
-                                    <div class="mt-3 flex flex-col items-end gap-2">
-                                        ${(r.status || 'open') !== 'resolved' ? `<button onclick="(async()=>{ if(confirm('Mark this report as resolved?')){ try{ await updateReportStatus('${r.id}','resolved'); const freshObj = await loadReportsObject(); renderReportsList(freshObj && Array.isArray(freshObj.reports) ? freshObj.reports : []); showMessage('Marked resolved','success'); }catch(e){ showMessage('Failed to update report','error'); } } })()" class="px-3 py-1 bg-green-600 text-white rounded text-sm">Mark Resolved</button>` : `<div class="flex gap-2"><button onclick="(async()=>{ if(confirm('Reopen this report?')){ try{ await updateReportStatus('${r.id}','open'); const freshObj = await loadReportsObject(); renderReportsList(freshObj && Array.isArray(freshObj.reports) ? freshObj.reports : []); showMessage('Reopened report','info'); }catch(e){ showMessage('Failed to update report','error'); } } })()" class="px-3 py-1 bg-gray-200 rounded text-sm">Reopen</button>` +
-                            ` <button onclick="(async()=>{ if(confirm('Delete this report permanently?')){ try{ await deleteReport('${r.id}'); const freshObj = await loadReportsObject(); renderReportsList(freshObj && Array.isArray(freshObj.reports) ? freshObj.reports : []); showMessage('Deleted report','success'); }catch(e){ console.error(e); showMessage('Failed to delete report','error'); } } })()" class="px-3 py-1 bg-red-600 text-white rounded text-sm">Delete</button></div>`}
-                                    </div>
-                                    <div class="mt-2 text-xs text-gray-500">Reporter: ${escapeHtml(reporter)}</div>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                }).join('');
-            }
-
-            // Attach filter listeners
-            ['report-filter-status', 'report-filter-tag', 'report-filter-set', 'report-filter-search'].forEach(id => {
-                const el = document.getElementById(id);
-                if (!el) return;
-                el.oninput = () => renderList();
-                el.onchange = () => renderList();
-            });
-
-            // Initial render
-            renderList();
-            return;
-        }
-
-        function closeReportsModal() {
-            const modal = document.getElementById('reports-modal');
-            if (modal) modal.innerHTML = '';
-        }
+        // [MIGRATED] promptAdminAndShowReports, renderReportsList, etc. moved to reported_questions.js
 
         // registration promise control so ensureRegistered can wait until user registers
         let _registrationResolver = null;
@@ -1938,7 +1784,7 @@
                         qs.forEach(d => usersRaw.push(d.data()));
                     }
                 } catch (e) {
-                    console.debug('Could not fetch users from Firestore (fallback to jsonbin):', e);
+                    console.debug('Could not fetch users from Firestore for online count (fallback to jsonbin):', e);
                     try { if (FIREBASE_NOTIFICATION_ENABLED) showMessage('Could not load leaderboard from Firebase; falling back to jsonbin.io', 'info'); } catch (err) { }
                 }
                 if (!usersRaw || usersRaw.length === 0) {
@@ -2004,7 +1850,8 @@
                                             if (perc !== null && u.latestScore != null) {
                                                 if (Math.abs(perc - parseFloat(u.latestScore)) < 0.0001) { ts = s.timestamp || s.time || s.t || null; break; }
                                             } else {
-                                                ts = s.timestamp || s.time || s.t || null; break;
+                                                ts = s.timestamp || s.time || s.t || null;
+                                                break;
                                             }
                                         }
                                     }
@@ -3738,12 +3585,18 @@
                 <div class="w-full bg-gray-200 rounded-full h-2.5"><div class="bg-blue-600 h-2.5 rounded-full" style="width: ${progressPercentage}%"></div></div>`;
         }
 
-        // Initialize the quiz on load
+    </script>
+    <!-- Import separated Reported Questions Logic -->
+    <script src="reported_questions.js"></script>
+
+    <script>
+        // Start app
         window.onload = function () {
             loadState();
         };
-
     </script>
 </body>
+
+</html>
 
 </html>

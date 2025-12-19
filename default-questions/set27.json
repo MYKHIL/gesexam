@@ -18,7 +18,7 @@
       "A": "Accredit institutions offering teacher education and development programmes",
       "B": "Issue license and accreditation to pre-tertiary institutions in Ghana",
       "C": "Issue temporary certification to unqualified persons who desire to teach",
-      "D": "Provide the framework for the development of teacher education curriculum"
+      "D": "Monitor teacher education quality"
     },
     "answer": "B",
     "explanation": "NTC licenses individual teachers, not institutions. Institutional accreditation is the responsibility of the Ghana Tertiary Education Commission (GTEC) and CTVET."
@@ -637,7 +637,7 @@
   },
   {
     "id": 54,
-    "question": "Which teaching strategy are the teachers promoting?",
+    "question": "*Teachers work together planning lessons, selecting materials, conducting evaluations, and developing tests.* \nWhich teaching strategy are the teachers promoting?",
     "options": {
       "A": "Team teaching",
       "B": "Inquiry-based teaching",

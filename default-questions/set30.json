@@ -486,8 +486,8 @@
       "A": "True",
       "B": "False"
     },
-    "answer": "A",
-    "explanation": "Professor Jane Opoku-Agyeman served as Minister of Education from 2009 to 2012 during the National Democratic Congress administration."
+    "answer": "B",
+    "explanation": "Professor Jane Naana Opoku‑Agyemang served as Ghana’s Minister of Education from February 2013 until January 2017, having been appointed by President John Dramani Mahama following the National Democratic Congress’s victory in the 2012 elections."
   },
   {
     "id": 50,
@@ -1351,7 +1351,7 @@
   },
   {
     "id": 136,
-    "question": "A school can directly improve academic performance by students by improving teacher's note-taking skills.",
+    "question": "A school can directly improve academic performance of students by improving teacher's note-taking skills.",
     "options": {
       "A": "True",
       "B": "False"

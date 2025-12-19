@@ -73,7 +73,7 @@
   },
   {
     "id": 7,
-    "question": "Testing in education is only possible by using",
+    "question": "Educational testing that allows for valid comparison of learners’ performance is best carried out using",
     "options": {
       "A": "Achievement test",
       "B": "Intelligence Test",
@@ -81,7 +81,7 @@
       "D": "Standardized Achievement Test"
     },
     "answer": "D",
-    "explanation": "NOTE: This question is conceptually flawed. Testing can use various forms including teacher-made tests, not exclusively standardized tests. Standardized tests provide uniform measurement for comparison."
+    "explanation": "A Standardized Achievement Test is designed with uniform procedures for administration and scoring, ensuring valid, reliable, and comparable results across learners, which is essential for educational testing."
   },
   {
     "id": 8,

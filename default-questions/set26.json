@@ -325,7 +325,7 @@
   },
   {
     "id": 28,
-    "question": "The administration of a senior high school wants to know what proportion of their students are satisfied with library facilities. Eighteen library staff select 200 students in the library during the first week of exams and ask them to fill a satisfaction questionnaire. What is the population that the sample was selected from?",
+    "question": "*The administration of a senior high school wants to know what proportion of their students are satisfied with library facilities. Eighteen library staff select 200 students in the library during the first week of exams and ask them to fill a satisfaction questionnaire.* \nWhat is the population that the sample was selected from?",
     "options": {
       "A": "The 200 students who completed the questionnaire",
       "B": "All the students and library staff",
@@ -337,7 +337,7 @@
   },
   {
     "id": 29,
-    "question": "In the same survey, what is the population that the school administration is interested in?",
+    "question": "*The administration of a senior high school wants to know what proportion of their students are satisfied with library facilities. Eighteen library staff select 200 students in the library during the first week of exams and ask them to fill a satisfaction questionnaire.* \nWhat is the population that the school administration is interested in?",
     "options": {
       "A": "The 200 students who completed the questionnaire",
       "B": "All the students and library staff",
@@ -349,7 +349,7 @@
   },
   {
     "id": 30,
-    "question": "What is the sample size for the survey?",
+    "question": "*The administration of a senior high school wants to know what proportion of their students are satisfied with library facilities. Eighteen library staff select 200 students in the library during the first week of exams and ask them to fill a satisfaction questionnaire.*\nWhat is the sample size for the survey?",
     "options": {
       "A": "200",
       "B": "218",
@@ -577,7 +577,7 @@
   },
   {
     "id": 49,
-    "question": "The capitation grant provided to a school can be used for the ",
+    "question": "The capitation grant provided to a school cannot be used to ",
     "options": {
       "A": "Procure stationery",
       "B": "Organise extra classes for pupils",
@@ -848,5 +848,77 @@
     },
     "answer": "A",
     "explanation": "Teachers can utilize formative assessments (quizzes, observations, exit tickets), summative tests (exams), diagnostic tools, portfolios, and performance tasks."
+  },
+  {
+    "id": 76,
+    "question": "Who was adjudged Ghana’s National Best Teacher in 2020?",
+    "options": {
+      "A": "Ebenezer Kojo Otoo",
+      "B": "Eric Asomani Asante",
+      "C": "Stella Gyimaah Larbi",
+      "D": "Faith Aku Dzakpasu"
+    },
+    "answer": "B",
+    "explanation": "Eric Asomani Asante was honoured as Ghana’s National Best Teacher for 2020, recognising his exceptional contributions to education. :contentReference[oaicite:0]{index=0}"
+  },
+  {
+    "id": 77,
+    "question": "Who won the Ghana Teacher Prize as the Most Outstanding Teacher in 2021?",
+    "options": {
+      "A": "Ebenezer Kojo Otoo",
+      "B": "Stella Gyimaah Larbi",
+      "C": "Fuseina Fuseini",
+      "D": "Richard W. Tiimob"
+    },
+    "answer": "A",
+    "explanation": "Mr. Ebenezer Kojo Otoo of Winneba Senior High School was crowned Ghana’s Most Outstanding Teacher in 2021. :contentReference[oaicite:1]{index=1}"
+  },
+  {
+    "id": 78,
+    "question": "Who was adjudged Ghana’s overall best teacher in 2022?",
+    "options": {
+      "A": "Faith Aku Dzakpasu",
+      "B": "Eric Asomani Asante",
+      "C": "Stella Gyimaah Larbi",
+      "D": "Fuseina Fuseini"
+    },
+    "answer": "C",
+    "explanation": "Ms. Stella Gyimaah Larbi, a teacher at Adenta Community JHS, was adjudged the overall national best teacher for 2022. :contentReference[oaicite:2]{index=2}"
+  },
+  {
+    "id": 79,
+    "question": "Who was named Ghana’s Most Outstanding Teacher in 2023?",
+    "options": {
+      "A": "Fuseina Fuseini",
+      "B": "Faith Aku Dzakpasu",
+      "C": "Richard W. Tiimob",
+      "D": "Ebenezer Kojo Otoo"
+    },
+    "answer": "B",
+    "explanation": "Faith Aku Dzakpasu of Greta ‘D’ Shepherd Basic School won the 2023 Most Outstanding Teacher Award in Ghana. :contentReference[oaicite:3]{index=3}"
+  },
+  {
+    "id": 80,
+    "question": "Who was adjudged Ghana’s Most Outstanding (Best) Teacher in 2024?",
+    "options": {
+      "A": "Stella Gyimaah Larbi",
+      "B": "Fuseina Fuseini",
+      "C": "Faith Aku Dzakpasu",
+      "D": "Richard W. Tiimob"
+    },
+    "answer": "B",
+    "explanation": "Miss Fuseina Fuseini of SDA Basic School, Madina was adjudged the national best teacher for 2024 at the Ghana Teacher Prize. :contentReference[oaicite:4]{index=4}"
+  },
+  {
+    "id": 81,
+    "question": "Who won Ghana’s Most Outstanding Teacher Award in 2025?",
+    "options": {
+      "A": "Ebenezer Kojo Otoo",
+      "B": "Fuseina Fuseini",
+      "C": "Richard W. Tiimob",
+      "D": "Faith Aku Dzakpasu"
+    },
+    "answer": "C",
+    "explanation": "Richard W. Tiimob, a science teacher at Savelugu Senior High School, was crowned Ghana’s Most Outstanding Teacher in 2025. :contentReference[oaicite:5]{index=5}"
   }
 ]
