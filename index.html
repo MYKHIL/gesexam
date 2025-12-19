@@ -2040,14 +2040,23 @@
                     try {
                         // Prefer sanitized_name_deviceId id when available
                         const sanitizedName = sanitizeForDocId(userObj.name);
-                        const preferredId = (sanitizedName && userObj.deviceId) ? `${sanitizedName}_${userObj.deviceId}` : (sanitizedName || userObj.deviceId);
-                        const docRef = window._fb.doc(firestoreDb, 'users', preferredId);
-                        // ensure deviceIds array exists for future lookups
-                        userObj.deviceIds = Array.isArray(userObj.deviceIds) ? Array.from(new Set(userObj.deviceIds.concat([userObj.deviceId]))) : [userObj.deviceId];
-                        await window._fb.setDoc(docRef, userObj);
+
+                        // STRICT REGISTRATION: Ensure we have a valid name to create the ID
+                        if (sanitizedName && sanitizedName.length > 0 && userObj.deviceId) {
+                            const preferredId = `${sanitizedName}_${userObj.deviceId}`;
+                            const docRef = window._fb.doc(firestoreDb, 'users', preferredId);
+                            // ensure deviceIds array exists for future lookups
+                            userObj.deviceIds = Array.isArray(userObj.deviceIds) ? Array.from(new Set(userObj.deviceIds.concat([userObj.deviceId]))) : [userObj.deviceId];
+                            await window._fb.setDoc(docRef, userObj);
+                        } else {
+                            // Abort if no valid name
+                            console.warn('Registration aborted: Invalid or missing username for strict ID generation.');
+                            showMessage('Registration failed: Invalid username.', 'error');
+                            return;
+                        }
                     } catch (e) {
-                        console.debug('Registration write (sanitized) failed, falling back to deviceId write:', e);
-                        await window._fb.setDoc(window._fb.doc(firestoreDb, 'users', userObj.deviceId), userObj).catch(() => null);
+                        console.debug('Registration write failed:', e);
+                        showMessage('Could not save registration to cloud properly.', 'info');
                     }
                     try { setNavDisabled(false); } catch (e) { }
                     return;
@@ -2570,11 +2579,13 @@
                 try {
                     if (!firebaseInitialized) await initFirebase();
                     if (firebaseInitialized && firestoreDb && window._fb && window._fb.getDoc && window._fb.setDoc) {
-                        const docRef = window._fb.doc(firestoreDb, 'users', deviceId);
-                        const snap = await window._fb.getDoc(docRef).catch(() => null);
-                        const exists = snap && (typeof snap.exists === 'function' ? snap.exists() : snap.exists);
-                        let user = exists ? (snap.data ? snap.data() : (snap && snap.data) || {}) : null;
+                        const resolved = await resolveUserDocRef(deviceId);
+                        if (!resolved || !resolved.ref || !resolved.data) return; // User not found in Firestore
+
+                        const docRef = resolved.ref;
+                        let user = resolved.data;
                         let changed = false;
+
                         if (user) {
                             if ((loc.city && (!user.city || user.city !== loc.city)) || (loc.country && (!user.country || user.country !== loc.country))) {
                                 user.city = loc.city || user.city;
@@ -2583,8 +2594,11 @@
                             }
                             user.lastTimestamp = new Date().toISOString();
                         }
-                        // Only update if the user record exists and there are changes
-                        if (changed && user) {
+                        // Only update if there are changes (always update timestamp though?)
+                        // Logic implies: if location changed OR we just want to update timestamp? 
+                        // The original code only saved if 'changed && user'. 
+                        // Let's stick to original logic: only save if location changed.
+                        if (changed) {
                             await window._fb.setDoc(docRef, user);
                         }
                         return;
@@ -3932,8 +3946,137 @@
         }
 
     </script>
-    <!-- Import separated Reported Questions Logic -->
-    <script src="reported_questions.js"></script>
+    <!-- Admin / Reported Questions Logic (Restored) -->
+    <script>
+        // Admin UI logic for reported questions
+        // Relies on global helpers: fetchAdminPasswordFromFirebase, loadReportsObject, updateReportStatus, deleteReport
+
+        async function promptAdminAndShowReports() {
+            // 1. Fetch real password
+            let realPassword = await fetchAdminPasswordFromFirebase();
+            if (!realPassword) realPassword = "admin"; // default fallback
+
+            const input = prompt("Enter Admin Password:");
+            if (input === null) return; // cancelled
+
+            if (input !== realPassword) {
+                showMessage("Incorrect password.", "error");
+                return;
+            }
+
+            // Password correct, show reports
+            renderReportsList();
+        }
+
+        async function renderReportsList() {
+            const contentArea = document.getElementById('content-area');
+            if (!contentArea) return;
+
+            contentArea.innerHTML = `<div class="p-8 text-center"><div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div><p class="mt-4 text-gray-600">Loading reports...</p></div>`;
+
+            try {
+                const data = await loadReportsObject();
+                // Ensure we get an array
+                const reports = (data && data.reports && Array.isArray(data.reports)) ? data.reports : [];
+
+                if (reports.length === 0) {
+                    contentArea.innerHTML = `
+                        <div class="p-6 bg-white rounded-xl shadow-lg">
+                            <div class="flex justify-between items-center mb-6">
+                                <h2 class="text-2xl font-bold text-gray-800">Reported Questions</h2>
+                                <button onclick="renderSettingsView()" class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">Back to Settings</button>
+                            </div>
+                            <div class="text-center py-12 bg-gray-50 rounded-lg border-2 border-dashed border-gray-200">
+                                <p class="text-gray-500 text-lg">No reports found.</p>
+                                <p class="text-sm text-gray-400 mt-2">Good job! The question bank seems clean.</p>
+                            </div>
+                        </div>`;
+                    return;
+                }
+
+                // Sort by date desc (newest first)
+                reports.sort((a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0));
+
+                const rows = reports.map(r => {
+                    const qText = r.fullQuestionObject ? escapeHtml(r.fullQuestionObject.question) : "Unknown Question";
+                    const tags = (r.tags || []).join(', ');
+                    const statusColor = r.status === 'resolved' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800';
+
+                    return `
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="px-4 py-3 align-top">
+                                <span class="inline-block px-2 py-1 rounded-full text-xs font-bold ${statusColor}">
+                                    ${escapeHtml(r.status || 'open')}
+                                </span>
+                                <div class="text-xs text-gray-500 mt-1">${r.createdAt ? new Date(r.createdAt).toLocaleDateString() : '—'}</div>
+                            </td>
+                            <td class="px-4 py-3 align-top">
+                                <div class="font-medium text-gray-900 mb-1">${qText}</div>
+                                <div class="text-sm text-gray-600 italic">"${escapeHtml(r.comment || 'No comment')}"</div>
+                                ${tags ? `<div class="mt-1 flex flex-wrap gap-1">${r.tags.map(t => `<span class="px-1.5 py-0.5 bg-gray-100 border rounded text-xs text-gray-600">${escapeHtml(t)}</span>`).join('')}</div>` : ''}
+                            </td>
+                            <td class="px-4 py-3 align-top text-right space-y-2">
+                                ${r.status !== 'resolved' ?
+                            `<button onclick="handleResolveReport('${r.id}')" class="w-full px-3 py-1 bg-green-600 text-white text-xs rounded hover:bg-green-700">Mark Resolved</button>` :
+                            `<span class="text-xs text-gray-400">Resolved</span>`
+                        }
+                                <button onclick="handleDeleteReport('${r.id}')" class="w-full px-3 py-1 bg-red-100 text-red-700 text-xs rounded hover:bg-red-200">Delete</button>
+                            </td>
+                        </tr>
+                    `;
+                }).join('');
+
+                contentArea.innerHTML = `
+                    <div class="p-6 bg-white rounded-xl shadow-lg">
+                        <div class="flex justify-between items-center mb-6">
+                            <h2 class="text-2xl font-bold text-gray-800">Reported Questions (${reports.length})</h2>
+                            <button onclick="renderSettingsView()" class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">Back to Settings</button>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="bg-gray-100 text-gray-600 text-sm uppercase tracking-wider">
+                                        <th class="px-4 py-3 rounded-tl-lg">Status</th>
+                                        <th class="px-4 py-3">Issue Detail</th>
+                                        <th class="px-4 py-3 rounded-tr-lg text-right">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-sm">
+                                    ${rows}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                `;
+
+            } catch (e) {
+                console.error('Error rendering reports:', e);
+                showMessage("Failed to load reports.", "error");
+            }
+        }
+
+        async function handleResolveReport(id) {
+            if (!confirm("Mark this report as resolved?")) return;
+            try {
+                await updateReportStatus(id, 'resolved');
+                renderReportsList(); // refresh
+                showMessage("Report resolved.", "success");
+            } catch (e) {
+                showMessage("Failed to resolve.", "error");
+            }
+        }
+
+        async function handleDeleteReport(id) {
+            if (!confirm("Permanently delete this report?")) return;
+            try {
+                await deleteReport(id);
+                renderReportsList(); // refresh
+                showMessage("Report deleted.", "success");
+            } catch (e) {
+                showMessage("Failed to delete.", "error");
+            }
+        }
+    </script>
 
     <script>
         // Start app
