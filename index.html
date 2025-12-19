@@ -579,6 +579,13 @@
             const filtered = (users || []).filter(u => {
                 if (!u || !u.deviceId || !u.name || String(u.name).trim() === '') return false;
                 const best = getBestScoreWithinWindow(u, cutoff);
+                if (best === null) {
+                    // Debug: Log why a user might be filtered out if they have scores
+                    if (u.scores && u.scores.length > 0) {
+                        // Uncomment for verbose debugging:
+                        // console.debug(`[filterUsersForRankings] Dropping user ${u.name} (Scores: ${u.scores.length}) - No score within window (Cutoff: ${cutoff})`);
+                    }
+                }
                 return best !== null;
             });
 
@@ -610,98 +617,116 @@
             return ranked;
         }
 
+        /**
+         * Merge two user objects to consolidate duplicate records (e.g. legacy deviceId vs new name_deviceId)
+         * @param {Object} existing - The existing user object in cache
+         * @param {Object} incoming - The new user object to merge in
+         * @returns {Object} - The merged user object
+         */
+        function mergeUserStats(existing, incoming) {
+            if (!existing) return incoming;
+            if (!incoming) return existing;
+
+            // Clone to avoid mutating original references
+            const merged = Object.assign({}, existing, incoming); // Incoming takes precedence for scalar props
+
+            // 1. Merge Scores (deduplicate by timestamp/content)
+            const scores1 = Array.isArray(existing.scores) ? existing.scores : [];
+            const scores2 = Array.isArray(incoming.scores) ? incoming.scores : [];
+
+            // Create a map by timestamp to deduplicate
+            const scoreMap = new Map();
+            [...scores1, ...scores2].forEach(s => {
+                const ts = s.timestamp || s.time || s.t;
+                if (ts) {
+                    // key by timestamp + total (to differentiate same-time quizzes if any)
+                    const key = `${ts}_${s.totalQuestions || s.total || 0}`;
+                    if (!scoreMap.has(key)) {
+                        scoreMap.set(key, s);
+                    }
+                }
+            });
+            merged.scores = Array.from(scoreMap.values());
+
+            // 2. Merge Device IDs
+            const did1 = Array.isArray(existing.deviceIds) ? existing.deviceIds : (existing.deviceId ? [existing.deviceId] : []);
+            const did2 = Array.isArray(incoming.deviceIds) ? incoming.deviceIds : (incoming.deviceId ? [incoming.deviceId] : []);
+            merged.deviceIds = Array.from(new Set([...did1, ...did2]));
+
+            // 3. Keep the name from the most recently updated record (or prefer longer name)
+            // (Here we just let 'incoming' win via Object.assign, but we ensure it's not empty)
+            if (!merged.name && existing.name) merged.name = existing.name;
+
+            // 4. Recalculate 'latest' stats from the merged scores to be safe
+            // (Optional: standard behavior relies on getBestScoreWithinWindow anyway)
+
+            return merged;
+        }
+
         // Resolve the correct Firestore user document for a deviceId.
-        // Tries: sanitized current user name doc -> legacy deviceId doc -> query by deviceId/deviceIds.
-        // If a legacy doc is found and a sanitized name exists, attempts to migrate the doc to the new id.
+        // 1. Try strict ID (sanitizedName_deviceId) if name is known locally.
+        // 2. Recovery: Query by deviceId field -> check suffix to find correct migrated doc.
+        // 3. Auto-restore identity if found.
         async function resolveUserDocRef(deviceId) {
             try {
                 if (!firebaseInitialized) await initFirebase();
                 if (!firebaseInitialized || !firestoreDb || !window._fb || !window._fb.getDoc) return null;
 
                 const usersCol = window._fb.collection(firestoreDb, 'users');
-
-                // Try current local user name first (if set)
                 let currentUser = null;
                 try { currentUser = JSON.parse(localStorage.getItem('gesCurrentUser') || 'null'); } catch (e) { currentUser = null; }
-                if (currentUser && currentUser.name) {
+
+                // 1. Fast Path: We know the name, check the Strict ID directly
+                if (currentUser && currentUser.name && deviceId) {
                     const sanitizedName = sanitizeForDocId(currentUser.name);
-                    const preferredWithDevice = (sanitizedName && deviceId) ? `${sanitizedName}_${deviceId}` : null;
-                    if (preferredWithDevice) {
-                        const byPrefRef = window._fb.doc(firestoreDb, 'users', preferredWithDevice);
-                        const snapPref = await window._fb.getDoc(byPrefRef).catch(() => null);
-                        const existsPref = snapPref && (typeof snapPref.exists === 'function' ? snapPref.exists() : snapPref.exists);
-                        if (existsPref) return { ref: byPrefRef, id: preferredWithDevice, data: snapPref.data ? snapPref.data() : snapPref };
-                    }
-                    // Fallback: try sanitizedName alone (for compatibility)
                     if (sanitizedName) {
-                        const byNameRef = window._fb.doc(firestoreDb, 'users', sanitizedName);
-                        const snapName = await window._fb.getDoc(byNameRef).catch(() => null);
-                        const existsName = snapName && (typeof snapName.exists === 'function' ? snapName.exists() : snapName.exists);
-                        if (existsName) return { ref: byNameRef, id: sanitizedName, data: snapName.data ? snapName.data() : snapName };
-                    }
-                }
-
-                // Try legacy deviceId-as-doc-id
-                if (deviceId) {
-                    const byDeviceRef = window._fb.doc(firestoreDb, 'users', deviceId);
-                    const snapDevice = await window._fb.getDoc(byDeviceRef).catch(() => null);
-                    const existsDevice = snapDevice && (typeof snapDevice.exists === 'function' ? snapDevice.exists() : snapDevice.exists);
-                    if (existsDevice) {
-                        const data = snapDevice.data ? snapDevice.data() : snapDevice;
-                        // If we have a currentUser name, attempt migration to sanitized_name_deviceId
-                        if (currentUser && currentUser.name) {
-                            const sanitized = sanitizeForDocId(currentUser.name);
-                            const preferredId = (sanitized && deviceId) ? `${sanitized}_${deviceId}` : null;
-                            if (preferredId && preferredId !== deviceId) {
-                                const newRef = window._fb.doc(firestoreDb, 'users', preferredId);
-                                const snapNew = await window._fb.getDoc(newRef).catch(() => null);
-                                const existsNew = snapNew && (typeof snapNew.exists === 'function' ? snapNew.exists() : snapNew.exists);
-                                if (existsNew) {
-                                    // merge into existing new doc
-                                    const target = snapNew.data ? snapNew.data() : snapNew;
-                                    target.deviceIds = Array.from(new Set([...(target.deviceIds || []), deviceId]));
-                                    target.scores = Array.isArray(target.scores) ? target.scores.concat(data.scores || []) : (data.scores || []);
-                                    target.latestScore = (target.latestScore != null) ? target.latestScore : data.latestScore;
-                                    target.lastTimestamp = normalizeTimestampToISO(target.lastTimestamp || data.lastTimestamp);
-                                    await window._fb.setDoc(newRef, target).catch(() => null);
-                                    await window._fb.deleteDoc(byDeviceRef).catch(() => null);
-                                    return { ref: newRef, id: preferredId, data: target };
-                                } else {
-                                    // create new doc at sanitized_name_deviceId
-                                    data.deviceIds = Array.isArray(data.deviceIds) ? Array.from(new Set(data.deviceIds.concat([deviceId]))) : [deviceId];
-                                    data.name = data.name || currentUser.name;
-                                    data.lastTimestamp = normalizeTimestampToISO(data.lastTimestamp);
-                                    await window._fb.setDoc(newRef, data).catch(() => null);
-                                    await window._fb.deleteDoc(byDeviceRef).catch(() => null);
-                                    return { ref: newRef, id: preferredId, data: data };
-                                }
-                            }
+                        const strictId = `${sanitizedName}_${deviceId}`;
+                        const docRef = window._fb.doc(firestoreDb, 'users', strictId);
+                        const snap = await window._fb.getDoc(docRef).catch(() => null);
+                        if (snap && (typeof snap.exists === 'function' ? snap.exists() : snap.exists)) {
+                            return { ref: docRef, id: strictId, data: snap.data ? snap.data() : snap };
                         }
-                        return { ref: byDeviceRef, id: deviceId, data: data };
                     }
                 }
 
-                // Query by explicit deviceId field
-                try {
-                    const q1 = window._fb.query(usersCol, window._fb.where('deviceId', '==', deviceId), window._fb.limit(1));
-                    const qs1 = await window._fb.getDocs(q1).catch(() => null);
-                    let found = null;
-                    if (qs1 && typeof qs1.forEach === 'function') {
-                        qs1.forEach(d => { found = { ref: window._fb.doc(firestoreDb, 'users', d.id), id: d.id, data: d.data() }; });
-                        if (found) return found;
-                    }
-                } catch (e) { /* ignore query errors */ }
+                // 2. Recovery Path: We don't know the name (or strict lookup failed).
+                // Query ALL docs where deviceId field matches, then check ID suffix.
+                if (deviceId) {
+                    try {
+                        const q = window._fb.query(usersCol, window._fb.where('deviceId', '==', deviceId));
+                        const qs = await window._fb.getDocs(q).catch(() => null);
 
-                // Query by deviceIds array
-                try {
-                    const q2 = window._fb.query(usersCol, window._fb.where('deviceIds', 'array-contains', deviceId), window._fb.limit(1));
-                    const qs2 = await window._fb.getDocs(q2).catch(() => null);
-                    let found2 = null;
-                    if (qs2 && typeof qs2.forEach === 'function') {
-                        qs2.forEach(d => { found2 = { ref: window._fb.doc(firestoreDb, 'users', d.id), id: d.id, data: d.data() }; });
-                        if (found2) return found2;
-                    }
-                } catch (e) { /* ignore query errors */ }
+                        let bestMatch = null;
+                        if (qs && typeof qs.forEach === 'function') {
+                            qs.forEach(d => {
+                                // STRICT VALIDATION: ID must end with underscore + deviceId
+                                // This prevents matching unrelated docs or legacy docs (which equal deviceId)
+                                const suffix = `_${deviceId}`;
+                                if (d.id.endsWith(suffix) && d.id.length > suffix.length) { // ensure pre-suffix part exists
+                                    bestMatch = { ref: d.ref, id: d.id, data: d.data() };
+                                }
+                            });
+                        }
+
+                        if (bestMatch) {
+                            // RECOVERY SUCCESS: We found the user's migrated account!
+                            console.log('Recovered user account via deviceId suffix:', bestMatch.id);
+
+                            // Restore identity locally if missing
+                            if (bestMatch.data && bestMatch.data.name && (!currentUser || !currentUser.name)) {
+                                const restoredUser = {
+                                    name: bestMatch.data.name,
+                                    phone: bestMatch.data.phone || '',
+                                    email: bestMatch.data.email || ''
+                                };
+                                localStorage.setItem('gesCurrentUser', JSON.stringify(restoredUser));
+                                console.log('Restored local user session:', bestMatch.data.name);
+                                // Updates UI immediately if on specific pages? (optional)
+                            }
+                            return bestMatch;
+                        }
+                    } catch (e) { console.debug('Recovery query failed:', e); }
+                }
 
                 return null;
             } catch (e) {
@@ -2074,8 +2099,20 @@
                     if (!docRef) {
                         let currentUser = null;
                         try { currentUser = JSON.parse(localStorage.getItem('gesCurrentUser') || 'null'); } catch (e) { currentUser = null; }
-                        const preferredId = (currentUser && currentUser.name) ? sanitizeForDocId(currentUser.name) : deviceId;
-                        docRef = window._fb.doc(firestoreDb, 'users', preferredId);
+
+                        // STRICT WRITE: Must enforce name_deviceId format
+                        const sanitized = (currentUser && currentUser.name) ? sanitizeForDocId(currentUser.name) : null;
+
+                        // VALIDATION: Ensure sanitized name is not empty/null
+                        if (sanitized && sanitized.length > 0 && deviceId) {
+                            const strictId = `${sanitized}_${deviceId}`;
+                            docRef = window._fb.doc(firestoreDb, 'users', strictId);
+                        } else {
+                            // Cannot write strict doc => abort (or prompt for registration/name)
+                            console.warn("Save aborted: No valid username found to construct Strict ID. User must register.");
+                            if (typeof showMessage === 'function') showMessage('Please register your name in "Settings" to save your scores.', 'error');
+                            return;
+                        }
                     }
 
                     const score = { percentage: parseFloat(percentage), timestamp, correctAnswers: correctAnswers, totalQuestions: totalQuestions };
@@ -2153,7 +2190,6 @@
             let prevTotal = null;
             let itemsBefore = 0;
             let currentRank = 1;
-
             for (let i = 0; i < ranked.length; i++) {
                 const u = ranked[i];
                 let rank;
@@ -2191,10 +2227,18 @@
                     if (firebaseInitialized && firestoreDb && window._fb && window._fb.getDocs) {
                         const qs = await window._fb.getDocs(window._fb.collection(firestoreDb, 'users'));
                         qs.forEach(d => {
+                            // STRICT FILTER: Only include docs with "migrated" structure (name_deviceId)
+                            // Heuristic: must have underscore AND have both name/deviceId fields
+                            if (!d.id.includes('_')) return;
+
                             const u = d.data();
+                            if (!u.name || !u.deviceId) return; // double check data integrity
+
                             usersRaw.push(u);
-                            // Populate global cache for realtime updates
-                            if (u && u.deviceId) globalUsersCache[u.deviceId] = u;
+                            // Populate global cache for realtime updates (with merge)
+                            if (u && u.deviceId) {
+                                globalUsersCache[u.deviceId] = mergeUserStats(globalUsersCache[u.deviceId], u);
+                            }
                         });
                     }
                 } catch (e) {
@@ -2650,10 +2694,17 @@
                 _realtimeUnsub = window._fb.onSnapshot(q, (snapshot) => {
                     const users = [];
                     snapshot.forEach(doc => {
+                        // STRICT FILTER: Only update with "migrated" docs
+                        if (!doc.id.includes('_')) return;
+
                         const u = doc.data();
+                        if (!u || !u.name || !u.deviceId) return;
+
                         users.push(u);
-                        // Update global cache with latest data
-                        if (u && u.deviceId) globalUsersCache[u.deviceId] = u;
+                        // Update global cache with latest data (merged)
+                        if (u && u.deviceId) {
+                            globalUsersCache[u.deviceId] = mergeUserStats(globalUsersCache[u.deviceId], u);
+                        }
                     });
                     _cachedOnlineUsers = users;
 
@@ -2669,7 +2720,9 @@
                             renderRankingsView(true);
                         } else {
                             // Pass the full merged list to the update function
-                            updateRankingsTable(Object.values(globalUsersCache));
+                            const cachedUsers = Object.values(globalUsersCache);
+                            console.log(`[Rankings Debug] Listener update. Cache size: ${cachedUsers.length}. Incoming doc updates: ${users.length}`);
+                            updateRankingsTable(cachedUsers);
                         }
                     }
                 }, (error) => {
