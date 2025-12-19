@@ -261,7 +261,7 @@
             if (firebaseInitialized) return;
             try {
                 const { initializeApp } = await import('https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js');
-                const { getFirestore, doc, getDoc, setDoc, updateDoc, collection, getDocs, deleteDoc } = await import('https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js');
+                const { getFirestore, doc, getDoc, setDoc, updateDoc, collection, getDocs, deleteDoc, query, orderBy, limit, onSnapshot, where } = await import('https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js');
                 const { getAuth, signInAnonymously, onAuthStateChanged } = await import('https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js');
                 const { getAnalytics } = await import('https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js');
 
@@ -270,7 +270,7 @@
                 firestoreDb = getFirestore(app);
 
                 // Expose commonly used functions via a small shim
-                window._fb = { doc, getDoc, setDoc, updateDoc, collection, getDocs, deleteDoc, auth };
+                window._fb = { doc, getDoc, setDoc, updateDoc, collection, getDocs, deleteDoc, auth, query, orderBy, limit, onSnapshot, where };
 
                 // Initialize Analytics (best-effort) and attempt anonymous sign-in when configured to do so
                 try {
@@ -355,8 +355,13 @@
             ttsEnabled: true, // Reader ON by default
             ttsVoice: null, // URI of the selected voice
             ttsRate: 1,     // Playback rate (0.1 to 10)
-            ttsPitch: 1     // Playback pitch (0 to 2)
+            ttsRate: 1,     // Playback rate (0.1 to 10)
+            ttsPitch: 1,    // Playback pitch (0 to 2)
+            timeLimit: 0    // Limit in minutes (0 = disabled)
         };
+
+        let quizTimerInterval = null;
+        let sessionEndTime = null;
 
         const contentArea = document.getElementById('content-area');
         const messageBox = document.getElementById('message-box');
@@ -575,6 +580,8 @@
                     loadedSettings.ttsVoice = loadedSettings.ttsVoice || null;
                     loadedSettings.ttsRate = loadedSettings.ttsRate || 1;
                     loadedSettings.ttsPitch = loadedSettings.ttsPitch || 1;
+                    loadedSettings.timeLimit = loadedSettings.timeLimit || 0;
+
 
                     loadedSettings.numQuestions = Math.min(loadedSettings.numQuestions, allQuestions.length);
                     Object.assign(quizSettings, loadedSettings);
@@ -870,6 +877,8 @@
                         <span>${quizSettings.numQuestions} Questions</span>
                         <span>|</span>
                         <span>${quizSettings.randomize ? 'Randomized' : 'Sequential'}</span>
+                        <span>|</span>
+                        <span>${quizSettings.timeLimit > 0 ? quizSettings.timeLimit + ' min Timer' : 'No Timer'}</span>
                     </div>
                     
                     <div class="flex flex-col sm:flex-row justify-center gap-4">
@@ -888,6 +897,12 @@
                 </div>
                 
                 <div id="quiz-container" class="hidden">
+                    <div id="timer-bar" class="hidden bg-red-100 border-l-4 border-red-500 text-red-700 p-2 mb-4 rounded flex justify-between items-center sticky top-0 z-10 shadow-sm">
+                        <span class="font-bold text-lg flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Time Remaining: <span id="timer-display" class="ml-2 font-mono text-xl">00:00</span>
+                        </span>
+                    </div>
                     <div class="flex justify-end gap-2 mb-4">
                         <button id="tts-toggle-btn" onclick="toggleTts()" class="flex items-center px-4 py-2 text-sm font-bold rounded-full transition duration-150 shadow-md">
                             <!-- Button content will be updated by updateTtsButton -->
@@ -982,6 +997,15 @@
                         <label for="randomize" class="text-lg font-semibold text-gray-700">Randomize Question Order</label>
                         <input type="checkbox" id="randomize" ${quizSettings.randomize ? 'checked' : ''} onchange="updateSettingsAuto()" class="w-5 h-5 text-blue-600 rounded">
                     </div>
+                
+                    <div class="border-t pt-4">
+                        <label for="timeLimit" class="block text-lg font-semibold text-gray-700 mb-2">Timer (Minutes)</label>
+                        <p class="text-sm text-gray-500 mb-3">Set a time limit for your quiz. Set to 0 to disable.</p>
+                        <div class="flex items-center gap-4">
+                            <input type="number" id="timeLimit" min="0" max="180" value="${quizSettings.timeLimit || 0}" onchange="updateSettingsAuto()" class="w-full sm:w-1/3 p-3 border border-gray-300 rounded-lg text-lg focus:ring-2 focus:ring-blue-500 focus:outline-none placeholder-gray-400" placeholder="e.g. 30">
+                            <span class="text-gray-600 font-medium">min</span>
+                        </div>
+                    </div>
                     
                     <div class="border-t pt-4 space-y-4">
                         <h3 class="text-xl font-semibold text-gray-800">Text-to-Speech (TTS)</h3>
@@ -1026,6 +1050,12 @@
             quizSettings.ttsVoice = document.getElementById('ttsVoice').value;
             quizSettings.ttsRate = parseFloat(document.getElementById('ttsRate').value);
             quizSettings.ttsPitch = parseFloat(document.getElementById('ttsPitch').value);
+            // Handle timer input (allow empty/null to mean 0)
+            const tEl = document.getElementById('timeLimit');
+            if (tEl) {
+                const val = parseInt(tEl.value, 10);
+                quizSettings.timeLimit = isNaN(val) ? 0 : val;
+            }
 
             saveSettings();
             updateTtsButtons();
@@ -2338,7 +2368,14 @@
         let _rankingsRefreshTimer = null;
         function startRankingsAutoRefresh() {
             stopRankingsAutoRefresh();
-            // Immediately render once and then refresh periodically while user stays on the rankings view
+            // Realtime listener now handles updates if setup
+            if (firebaseInitialized && _realtimeUnsub) {
+                // Just render once, the listener will handle subsequent updates
+                try { if (currentView === 'rankings') renderRankingsView(true); } catch (e) { /* silent */ }
+                return;
+            }
+
+            // Fallback polling if listener unavailable
             try { if (currentView === 'rankings') renderRankingsView(); } catch (e) { /* silent */ }
             _rankingsRefreshTimer = setInterval(() => {
                 if (currentView === 'rankings') {
@@ -2437,9 +2474,106 @@
             } catch (e) { /* silent */ }
         }
 
+        let _realtimeUnsub = null;
+        let _cachedOnlineUsers = []; // Cache for the listener data
+
+        function startOnlineMonitoring() {
+            // ensure we don't start multiple times
+            stopOnlineMonitoring();
+            // Immediately update heartbeat (best-effort, silent)
+            sendHeartbeatSilently();
+            // Periodically send heartbeat
+            _heartbeatTimer = setInterval(() => { sendHeartbeatSilently(); }, HEARTBEAT_INTERVAL_MS);
+
+            // Also send a heartbeat when the page becomes visible again
+            document.addEventListener('visibilitychange', _visibilityHeartbeatHandler);
+            // Try to send a final heartbeat when the page unloads (best-effort)
+            window.addEventListener('beforeunload', _beforeUnloadHeartbeatHandler);
+
+            // Start the single efficient Firestore listener
+            if (firebaseInitialized) {
+                setupRealtimeListener();
+            } else {
+                // Fallback for non-firebase (using old polling if absolutely necessary, or just wait for init)
+                setTimeout(() => { if (firebaseInitialized) setupRealtimeListener(); }, 2000);
+            }
+
+            // Attach click handler to header badge to show online users popup
+            try {
+                const badge = document.getElementById('online-badge');
+                if (badge && !badge._onlineClickAttached) {
+                    badge.addEventListener('click', showOnlineUsersPopup);
+                    badge.addEventListener('touchstart', showOnlineUsersPopup);
+                    badge._onlineClickAttached = true;
+                }
+            } catch (e) { /* silent */ }
+        }
+
+        function setupRealtimeListener() {
+            try {
+                if (_realtimeUnsub) _realtimeUnsub(); // Clear existing
+
+                // Efficient Query: Get the 50 most recently active users
+                // This covers "Online Users" (recent timestamp) AND gives a good sample for the "Leaderboard"
+                const q = window._fb.query(
+                    window._fb.collection(firestoreDb, 'users'),
+                    window._fb.orderBy('lastTimestamp', 'desc'),
+                    window._fb.limit(50)
+                );
+
+                _realtimeUnsub = window._fb.onSnapshot(q, (snapshot) => {
+                    const users = [];
+                    snapshot.forEach(doc => {
+                        users.push(doc.data());
+                    });
+                    _cachedOnlineUsers = users;
+
+                    // 1. Update the "X users online" badge
+                    updateOnlineCountUI(users);
+
+                    // 2. If we are on the Rankings/Leaderboard view, update it live
+                    if (currentView === 'rankings') {
+                        renderRankingsView(true); // true = use cache
+                    }
+                }, (error) => {
+                    console.debug("Realtime listener error:", error);
+                });
+
+                console.log("Started efficient realtime Firestore listener");
+            } catch (e) {
+                console.warn("Failed to setup realtime listener:", e);
+            }
+        }
+
+        function updateOnlineCountUI(users) {
+            // Count how many are "online" (active in last 5 mins)
+            const fiveMinsAgo = new Date(Date.now() - 5 * 60 * 1000).toISOString();
+            const onlineCount = users.filter(u => u.lastTimestamp > fiveMinsAgo).length;
+
+            const badge = document.getElementById('online-counter');
+            if (badge) {
+                badge.innerHTML = `<span id="online-badge" class="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-bold shadow-sm cursor-pointer animate-pulse hover:bg-green-200 transaction">
+                    <span class="w-2 h-2 inline-block bg-green-500 rounded-full mr-2"></span>
+                    ${onlineCount} users online
+                </span>`;
+                // Re-attach listener if element was recreated
+                const badgeEl = document.getElementById('online-badge');
+                if (badgeEl) {
+                    badgeEl.addEventListener('click', showOnlineUsersPopup);
+                    badgeEl._onlineClickAttached = true;
+                }
+            }
+        }
+
         function stopOnlineMonitoring() {
             if (_heartbeatTimer) { clearInterval(_heartbeatTimer); _heartbeatTimer = null; }
-            if (_onlineFetchTimer) { clearInterval(_onlineFetchTimer); _onlineFetchTimer = null; }
+            if (_onlineFetchTimer) { clearInterval(_onlineFetchTimer); _onlineFetchTimer = null; } // Legacy cleanup
+            if (_realtimeUnsub) {
+                _realtimeUnsub();
+                _realtimeUnsub = null;
+                console.log("Stopped realtime listener");
+            }
+
             try { document.removeEventListener('visibilitychange', _visibilityHeartbeatHandler); } catch (e) { }
             try { window.removeEventListener('beforeunload', _beforeUnloadHeartbeatHandler); } catch (e) { }
             try {
@@ -2449,7 +2583,6 @@
                     try { badge.removeEventListener('touchstart', showOnlineUsersPopup); } catch (e) { }
                     delete badge._onlineClickAttached;
                 }
-                // Ensure popup removed
                 const popup = document.getElementById('online-users-popup'); if (popup) popup.remove();
                 document.removeEventListener('click', _onlinePopupOutsideClickHandler);
             } catch (e) { /* silent */ }
@@ -2753,6 +2886,83 @@
 
             renderQuestion();
             showMessage(`New session started with ${sessionQuestions.length} questions.`, 'info');
+
+            // Start timer if configured
+            if (quizSettings.timeLimit > 0) {
+                startTimer(quizSettings.timeLimit);
+            } else {
+                document.getElementById('timer-bar').classList.add('hidden');
+            }
+        }
+
+        // --- Timer Logic ---
+
+        function startTimer(minutes) {
+            stopTimer(); // Just in case
+
+            const timerBar = document.getElementById('timer-bar');
+            const timerDisplay = document.getElementById('timer-display');
+
+            if (timerBar) timerBar.classList.remove('hidden');
+
+            const now = Date.now();
+            sessionEndTime = now + (minutes * 60 * 1000);
+
+            updateTimerDisplay(); // Immediate update
+
+            quizTimerInterval = setInterval(() => {
+                const remaining = sessionEndTime - Date.now();
+                if (remaining <= 0) {
+                    stopTimer();
+                    if (timerDisplay) timerDisplay.textContent = "00:00";
+                    handleTimeUp();
+                } else {
+                    const m = Math.floor(remaining / 60000);
+                    const s = Math.floor((remaining % 60000) / 1000);
+                    if (timerDisplay) {
+                        timerDisplay.textContent = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+                        // Visual urgency warning
+                        if (remaining < 60000) { // last minute
+                            timerBar.classList.add('animate-pulse', 'bg-red-200');
+                        }
+                    }
+                }
+            }, 1000);
+        }
+
+        function stopTimer() {
+            if (quizTimerInterval) {
+                clearInterval(quizTimerInterval);
+                quizTimerInterval = null;
+            }
+            const timerBar = document.getElementById('timer-bar');
+            if (timerBar) {
+                timerBar.classList.remove('animate-pulse', 'bg-red-200'); // remove urgency styles
+            }
+        }
+
+        function updateTimerDisplay() {
+            // Helper for manual updates if needed, though interval mostly handles it
+            const display = document.getElementById('timer-display');
+            if (!display || !sessionEndTime) return;
+            const remaining = Math.max(0, sessionEndTime - Date.now());
+            const m = Math.floor(remaining / 60000);
+            const s = Math.floor((remaining % 60000) / 1000);
+            display.textContent = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+        }
+
+        function handleTimeUp() {
+            showMessage("Time's up! Session ended.", 'error');
+            // Play a sound or TTS alert?
+            if (quizSettings.ttsEnabled) {
+                speak("Time is up. Submitting your quiz now.");
+            }
+            // Logic: End the quiz. Unanswered questions remain unanswered in `userAnswers`
+            // and `calculateScore` will naturally count them as 0 correct.
+            // We force a render of results.
+            setTimeout(() => {
+                renderResults();
+            }, 1500); // Short delay to let the user see "00:00"
         }
 
         function renderQuestion() {
@@ -3294,6 +3504,7 @@
         }
 
         function renderResults() {
+            stopTimer();
             renderResultsCalled = true;
             window.speechSynthesis.cancel();
             const result = calculateScore();
@@ -3390,6 +3601,7 @@
                 const proceed = confirm(`You have answered ${answeredCount} question(s). Are you sure you want to quit without completing the quiz?`);
                 if (!proceed) return;
             }
+            stopTimer();
             resetAndStartNewSession();
         }
 
