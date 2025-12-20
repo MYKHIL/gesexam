@@ -345,6 +345,7 @@
         let currentSelection = null;
         let feedbackShown = false;
         let reviewMode = false; // Flag to track if we're in review mode
+        let reviewingUnanswered = false; // Flag to track if we're reviewing unanswered questions
         let sessionHistory = []; // Array to store all session scores and timestamps
         let sessionResultsSaved = false; // Flag to prevent duplicate session saves
         let shouldAutoSpeakQuestion = false; // Flag to trigger auto-speak on question render
@@ -968,6 +969,8 @@
             // 6. Hide loading indicator
             setTimeout(() => {
                 document.getElementById('loading-indicator').classList.add('hidden');
+                // Check for admin feedback after app loads
+                checkAndShowAdminFeedback();
             }, 500); // Small delay for smooth transition
         }
 
@@ -1656,9 +1659,17 @@
          * Generic custom prompt modal.
          * @returns {Promise<string|null>} Resolves with input value or null if cancelled.
          */
-        function showCustomPrompt(title, message, placeholder = "", confirmText = "OK", cancelText = "Cancel") {
+        function showCustomPrompt(title, message, placeholder = "", confirmText = "OK", cancelText = "Cancel", inputType = "text") {
             return new Promise((resolve) => {
                 const modal = _createModalContainer('custom-prompt-modal');
+
+                let inputHtml = '';
+                if (inputType === 'textarea') {
+                    inputHtml = `<textarea id="modal-prompt-input" placeholder="${placeholder}" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-shadow mb-6 text-lg h-32 resize-none" autofocus></textarea>`;
+                } else {
+                    inputHtml = `<input id="modal-prompt-input" type="${inputType}" placeholder="${placeholder}" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-shadow mb-6 text-lg" autofocus />`;
+                }
+
                 modal.innerHTML = `
                     <div class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm transition-opacity duration-300">
                         <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full mx-4 overflow-hidden transform transition-all scale-100">
@@ -1667,7 +1678,7 @@
                                 <div class="text-gray-600 text-base leading-relaxed mb-4">
                                     ${formatText(message)}
                                 </div>
-                                <input id="modal-prompt-input" type="password" placeholder="${placeholder}" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-shadow mb-6 text-lg" autofocus />
+                                ${inputHtml}
                                 <div class="flex justify-end space-x-3">
                                     <button id="modal-prompt-cancel-btn" class="px-5 py-2.5 rounded-xl text-gray-700 font-semibold bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 transition-colors">
                                         ${cancelText}
@@ -1700,9 +1711,15 @@
 
                 confirmBtn.onclick = confirm;
 
-                // Allow Enter key to submit
+                // Allow Enter key to submit (Ctrl+Enter for textarea)
                 input.onkeydown = (e) => {
-                    if (e.key === 'Enter') confirm();
+                    if (e.key === 'Enter') {
+                        if (inputType === 'textarea') {
+                            if (e.ctrlKey || e.metaKey) confirm();
+                            return;
+                        }
+                        confirm();
+                    }
                     if (e.key === 'Escape') { cleanup(); resolve(null); }
                 };
 
@@ -2430,23 +2447,21 @@
                 // Determine styling based on rank
                 let rankDisplay = `<span class="text-gray-500 font-mono font-bold">#${rank}</span>`;
                 let scoreClass = "text-blue-600 font-bold";
-                let cardClass = "relative overflow-hidden";
-                let cardStyle = "";
+                let cardClass = "";
+                let cardStyle = "background: #f8f9fa; border-color: #e9ecef;";
 
                 if (rank === 1) {
                     rankDisplay = `<span class="text-3xl" title="1st Place">🥇</span>`;
-                    scoreClass = "text-yellow-800 font-bold text-lg";
-                    cardStyle = "background: linear-gradient(135deg, rgba(255, 235, 59, 0.3) 0%, rgba(255, 193, 7, 0.4) 100%); backdrop-filter: blur(10px); border: 2px solid rgba(255, 215, 0, 0.5); box-shadow: 0 8px 32px 0 rgba(255, 215, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.5);";
+                    scoreClass = "text-yellow-700 font-bold";
+                    cardStyle = "background: #fff9e6; border-color: #ffd700;";
                 } else if (rank === 2) {
                     rankDisplay = `<span class="text-3xl" title="2nd Place">🥈</span>`;
-                    scoreClass = "text-gray-700 font-bold text-lg";
-                    cardStyle = "background: linear-gradient(135deg, rgba(192, 192, 192, 0.3) 0%, rgba(169, 169, 169, 0.4) 100%); backdrop-filter: blur(10px); border: 2px solid rgba(192, 192, 192, 0.5); box-shadow: 0 8px 32px 0 rgba(169, 169, 169, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.5);";
+                    scoreClass = "text-gray-700 font-bold";
+                    cardStyle = "background: #f5f5f5; border-color: #c0c0c0;";
                 } else if (rank === 3) {
                     rankDisplay = `<span class="text-3xl" title="3rd Place">🥉</span>`;
-                    scoreClass = "text-orange-800 font-bold";
-                    cardStyle = "background: linear-gradient(135deg, rgba(255, 152, 0, 0.3) 0%, rgba(230, 126, 34, 0.4) 100%); backdrop-filter: blur(10px); border: 2px solid rgba(205, 127, 50, 0.5); box-shadow: 0 8px 32px 0 rgba(205, 127, 50, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.5);";
-                } else {
-                    cardStyle = "background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.2) 100%); backdrop-filter: blur(10px); border: 1px solid rgba(139, 92, 246, 0.3); box-shadow: 0 4px 16px 0 rgba(99, 102, 241, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 0.3);";
+                    scoreClass = "text-orange-700 font-bold";
+                    cardStyle = "background: #fff4e6; border-color: #ff8c00;";
                 }
 
                 let locationText = '—';
@@ -2463,35 +2478,28 @@
                 }
 
                 cardsArr.push(`
-                <div class="${cardClass} rounded-2xl p-5 transition-all duration-300 hover:scale-[1.02]" style="${cardStyle}">
-                    ${rank <= 3 ? '<div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>' : ''}
-                    <div class="relative z-10">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center gap-3">
-                                <div class="flex-shrink-0 transform transition-transform hover:scale-110">${rankDisplay}</div>
-                                <div>
-                                    <div class="font-bold text-gray-900 text-lg">${escapeHtml(u.name)}</div>
-                                    <div class="text-xs text-gray-600 flex items-center gap-1 mt-1">
-                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                        ${escapeHtml(locationText)}
-                                    </div>
-                                </div>
+                <div class="${cardClass} rounded-xl p-4 border-2" style="${cardStyle}">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="flex items-center gap-2">
+                            <div class="text-2xl">${rankDisplay}</div>
+                            <div>
+                                <div class="font-bold text-gray-900">${escapeHtml(u.name)}</div>
+                                <div class="text-xs text-gray-600">${escapeHtml(locationText)}</div>
                             </div>
                         </div>
-                        <div class="grid grid-cols-2 gap-4 mt-4 pt-4" style="border-top: 1px solid rgba(255, 255, 255, 0.2);">
-                            <div class="bg-white/20 rounded-lg p-3 backdrop-blur-sm">
-                                <div class="text-xs font-semibold text-gray-600 uppercase tracking-wide">Score</div>
-                                <div class="text-base font-bold text-gray-900 mt-1">${u.latestCorrect} / ${u.latestTotal}</div>
-                            </div>
-                            <div class="bg-white/20 rounded-lg p-3 backdrop-blur-sm">
-                                <div class="text-xs font-semibold text-gray-600 uppercase tracking-wide">Percentage</div>
-                                <div class="text-xl font-extrabold ${scoreClass} mt-1">${u.latestScore}%</div>
-                            </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3 pt-3 border-t border-gray-200">
+                        <div class="bg-gray-50 rounded-lg p-2">
+                            <div class="text-xs font-medium text-gray-600">Score</div>
+                            <div class="text-sm font-bold text-gray-900">${u.latestCorrect} / ${u.latestTotal}</div>
                         </div>
-                        <div class="mt-4 pt-4 bg-white/10 rounded-lg p-3 backdrop-blur-sm" style="border-top: 1px solid rgba(255, 255, 255, 0.1);">
-                            <div class="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-1">Date Obtained</div>
-                            <div class="text-sm font-medium text-gray-800">${dateTimeText}</div>
+                        <div class="bg-gray-50 rounded-lg p-2">
+                            <div class="text-xs font-medium text-gray-600">Percentage</div>
+                            <div class="text-lg font-bold ${scoreClass}">${u.latestScore}%</div>
                         </div>
+                    </div>
+                    <div class="mt-3 pt-3 border-t border-gray-200">
+                        <div class="text-xs text-gray-500">${dateTimeText}</div>
                     </div>
                 </div>
                 `);
@@ -2533,10 +2541,12 @@
 
         // Cache users for pagination to avoid refetching
         let _cachedRankingsUsers = null;
+        let _currentRankingsPage = 1; // Track current page to persist across updates
 
         // Helper function to render rankings with specific page (for pagination)
         function renderRankingsWithPage(page) {
             if (_cachedRankingsUsers && _cachedRankingsUsers.length > 0) {
+                _currentRankingsPage = page; // Save current page
                 updateRankingsTable(_cachedRankingsUsers, page);
                 // Scroll to top of cards container for better UX
                 const cardsContainer = document.getElementById('rankings-cards-container');
@@ -2641,8 +2651,8 @@
                 _cachedRankingsUsers = usersRaw;
 
                 // Use the separate update function to render the rows with the consistent (medals) design
-                // Start at page 1 for mobile pagination
-                updateRankingsTable(usersRaw, 1);
+                // Use current page to maintain pagination state across updates
+                updateRankingsTable(usersRaw, _currentRankingsPage);
 
             } catch (e) {
                 console.error('Failed to render rankings:', e);
@@ -3060,7 +3070,8 @@
                             // Pass the full merged list to the update function
                             const cachedUsers = Object.values(globalUsersCache);
                             console.log(`[Rankings Debug] Listener update. Cache size: ${cachedUsers.length}. Incoming doc updates: ${users.length}`);
-                            updateRankingsTable(cachedUsers);
+                            // CRITICAL: Maintain current page to prevent reset
+                            updateRankingsTable(cachedUsers, _currentRankingsPage);
                         }
                     }
                 }, (error) => {
@@ -3731,11 +3742,38 @@
                 );
 
                 if (shouldGoToQuestion) {
+                    reviewingUnanswered = true; // Enable smart navigation mode
                     goToQuestion(unanswered[0]);
                     return;
                 }
             }
             renderResults();
+        }
+
+        // Helper function to find the next unanswered question from current position
+        function getNextUnansweredIndex() {
+            for (let i = currentQuestionIndex + 1; i < sessionQuestions.length; i++) {
+                if (!userAnswers[sessionQuestions[i].id]) {
+                    return i;
+                }
+            }
+            return -1; // No more unanswered questions
+        }
+
+        // Helper function to check if this is the last unanswered question
+        function isLastUnansweredQuestion() {
+            return getNextUnansweredIndex() === -1;
+        }
+
+        // Helper function to count remaining unanswered questions
+        function getRemainingUnansweredCount() {
+            let count = 0;
+            for (let i = 0; i < sessionQuestions.length; i++) {
+                if (!userAnswers[sessionQuestions[i].id]) {
+                    count++;
+                }
+            }
+            return count;
         }
 
         function renderActionButtons(actionButtons) {
@@ -3751,14 +3789,26 @@
             }
 
             if (feedbackShown) {
-                actionButtons.innerHTML += `<button onclick="navigate('next')" ${isLastQuestion ? 'disabled' : ''} class="w-full sm:w-auto px-4 py-2 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 disabled:opacity-50">${isLastQuestion ? 'Review Complete' : 'Next'}</button>`;
+                // Check if we're in reviewing unanswered mode and this was the last unanswered question
+                if (reviewingUnanswered && isLastUnansweredQuestion()) {
+                    // This is the last unanswered question - show "View Score"
+                    actionButtons.innerHTML += `<button onclick="confirmFinish()" class="w-full sm:w-auto px-6 py-3 bg-purple-600 text-white font-bold rounded-xl hover:bg-purple-700">View Score</button>`;
+                } else if (reviewingUnanswered) {
+                    // More unanswered questions remaining - show "Next Unanswered"
+                    const remaining = getRemainingUnansweredCount();
+                    actionButtons.innerHTML += `<button onclick="navigate('next')" class="w-full sm:w-auto px-4 py-2 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700">Next Unanswered (${remaining} left)</button>`;
+                } else {
+                    // Normal mode
+                    actionButtons.innerHTML += `<button onclick="navigate('next')" ${isLastQuestion ? 'disabled' : ''} class="w-full sm:w-auto px-4 py-2 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 disabled:opacity-50">${isLastQuestion ? 'Review Complete' : 'Next'}</button>`;
+                }
             } else if (currentSelection) {
                 actionButtons.innerHTML += `<button onclick="checkAnswer()" class="w-full sm:w-auto px-6 py-3 bg-green-600 text-white font-bold rounded-xl">Check Answer</button>`;
             } else {
                 actionButtons.innerHTML += `<button disabled class="w-full sm:w-auto px-6 py-3 bg-gray-400 text-white font-bold rounded-xl">Select an Option</button>`;
             }
 
-            if (isLastQuestion && feedbackShown) {
+            // Override for last question in normal mode
+            if (isLastQuestion && feedbackShown && !reviewingUnanswered) {
                 actionButtons.innerHTML = `${prevBtn} <button onclick="confirmFinish()" class="w-full sm:w-auto px-6 py-3 bg-purple-600 text-white font-bold rounded-xl">View Score</button>`;
             }
         }
@@ -3887,13 +3937,25 @@
 
         function navigate(direction) {
             window.speechSynthesis.cancel();
-            if (direction === 'next' && currentQuestionIndex < sessionQuestions.length - 1) {
-                currentQuestionIndex++;
-                shouldAutoSpeakQuestion = true;
+
+            if (direction === 'next') {
+                if (reviewingUnanswered) {
+                    // Smart navigation: jump to next unanswered question
+                    const nextUnanswered = getNextUnansweredIndex();
+                    if (nextUnanswered !== -1) {
+                        currentQuestionIndex = nextUnanswered;
+                        shouldAutoSpeakQuestion = true;
+                    }
+                } else if (currentQuestionIndex < sessionQuestions.length - 1) {
+                    // Normal navigation: next sequential question
+                    currentQuestionIndex++;
+                    shouldAutoSpeakQuestion = true;
+                }
             } else if (direction === 'prev' && currentQuestionIndex > 0) {
                 currentQuestionIndex--;
                 shouldAutoSpeakQuestion = true;
             }
+
             renderQuestion();
 
             // Fix: Accurate scroll to top of the content area/question
@@ -4460,7 +4522,8 @@
                     "Please enter the administrative password to view reported questions.",
                     "Password",
                     "Access Reports",
-                    "Cancel"
+                    "Cancel",
+                    "password"
                 );
 
                 if (input === null) {
@@ -4516,6 +4579,36 @@
                     const tags = (r.tags || []).join(', ');
                     const statusColor = r.status === 'resolved' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800';
 
+                    // Extract source file and line
+                    const sourceFile = r.sourceFile || '—';
+                    const sourceLine = r.sourceLine ? `Line ${r.sourceLine}` : '—';
+                    const sourceInfo = sourceFile !== '—' || sourceLine !== '—'
+                        ? `<div class="text-xs text-gray-500 mt-1"><span class="font-mono">${escapeHtml(sourceFile)}</span> ${sourceLine}</div>`
+                        : '';
+
+                    // Extract reporter info
+                    const reporterName = r.reporterName || 'Anonymous';
+                    let reporterLocationStr = '—';
+                    if (r.reporterLocation && (r.reporterLocation.city || r.reporterLocation.country)) {
+                        const parts = [r.reporterLocation.city, r.reporterLocation.country].filter(Boolean);
+                        reporterLocationStr = parts.join(', ');
+                    }
+
+                    // Feedback conversation display
+                    let feedbackHtml = '';
+                    if (r.adminFeedback) {
+                        feedbackHtml += `<div class="mt-2 text-xs">
+                            <div class="font-bold text-blue-800 mb-0.5">Administrator Message:</div>
+                            <div class="p-2 bg-blue-50 rounded border border-blue-100 text-gray-800 whitespace-pre-wrap">${escapeHtml(r.adminFeedback)}</div>
+                        </div>`;
+                    }
+                    if (r.userReply) {
+                        feedbackHtml += `<div class="mt-2 text-xs ml-4">
+                            <div class="font-bold text-green-800 mb-0.5">User Reply:</div>
+                            <div class="p-2 bg-green-50 rounded border border-green-100 text-gray-800 whitespace-pre-wrap">${escapeHtml(r.userReply)}</div>
+                        </div>`;
+                    }
+
                     return `
                         <tr class="border-b hover:bg-gray-50">
                             <td class="px-4 py-3 align-top">
@@ -4527,12 +4620,25 @@
                             <td class="px-4 py-3 align-top">
                                 <div class="font-medium text-gray-900 mb-1">${qText}</div>
                                 <div class="text-sm text-gray-600 italic">"${escapeHtml(r.comment || 'No comment')}"</div>
-                                ${tags ? `<div class="mt-1 flex flex-wrap gap-1">${r.tags.map(t => `<span class="px-1.5 py-0.5 bg-gray-100 border rounded text-xs text-gray-600">${escapeHtml(t)}</span>`).join('')}</div>` : ''}
+                                ${tags ? `<div class="mt-1 flex flex-wrap gap-1 mb-1">${r.tags.map(t => `<span class="px-1.5 py-0.5 bg-gray-100 border rounded text-xs text-gray-600">${escapeHtml(t)}</span>`).join('')}</div>` : ''}
+                                ${sourceInfo}
+                                ${feedbackHtml}
+                            </td>
+                            <td class="px-4 py-3 align-top text-sm">
+                                <div class="font-medium text-gray-700">👤 ${escapeHtml(reporterName)}</div>
+                                <div class="text-xs text-gray-500 mt-0.5">📍 ${escapeHtml(reporterLocationStr)}</div>
                             </td>
                             <td class="px-4 py-3 align-top text-right space-y-2">
                                 ${r.status !== 'resolved' ?
                             `<button onclick="handleResolveReport('${r.id}')" class="w-full px-3 py-1 bg-green-600 text-white text-xs rounded hover:bg-green-700">Mark Resolved</button>` :
-                            `<span class="text-xs text-gray-400">Resolved</span>`
+                            `<button onclick="handleResolveReport('${r.id}')" class="w-full px-3 py-1 bg-gray-100 text-gray-500 text-xs rounded hover:bg-gray-200">Re-open</button>`
+                        }
+                                ${!r.adminFeedback ?
+                            `<button onclick="handleSendFeedback('${r.id}')" class="w-full px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded hover:bg-blue-200">Send Feedback</button>` :
+                            `<div class="flex gap-1">
+                                        <button onclick="handleSendFeedback('${r.id}', '${escapeHtml(r.adminFeedback).replace(/'/g, "\\'")}')" class="flex-1 px-2 py-1 bg-yellow-100 text-yellow-700 text-xs rounded hover:bg-yellow-200">Edit</button>
+                                        <button onclick="handleUnsendFeedback('${r.id}')" class="flex-1 px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded hover:bg-gray-200">Unsend</button>
+                                    </div>`
                         }
                                 <button onclick="handleDeleteReport('${r.id}')" class="w-full px-3 py-1 bg-red-100 text-red-700 text-xs rounded hover:bg-red-200">Delete</button>
                             </td>
@@ -4552,6 +4658,7 @@
                                     <tr class="bg-gray-100 text-gray-600 text-sm uppercase tracking-wider">
                                         <th class="px-4 py-3 rounded-tl-lg">Status</th>
                                         <th class="px-4 py-3">Issue Detail</th>
+                                        <th class="px-4 py-3">Reporter</th>
                                         <th class="px-4 py-3 rounded-tr-lg text-right">Actions</th>
                                     </tr>
                                 </thead>
@@ -4570,13 +4677,13 @@
         }
 
         async function handleResolveReport(id) {
-            if (!confirm("Mark this report as resolved?")) return;
+            if (!confirm("Update report status?")) return;
             try {
                 await updateReportStatus(id, 'resolved');
-                renderReportsList(); // refresh
-                showMessage("Report resolved.", "success");
+                renderReportsList();
+                showMessage("Report updated.", "success");
             } catch (e) {
-                showMessage("Failed to resolve.", "error");
+                showMessage("Failed to update status.", "error");
             }
         }
 
@@ -4588,6 +4695,152 @@
                 showMessage("Report deleted.", "success");
             } catch (e) {
                 showMessage("Failed to delete.", "error");
+            }
+        }
+
+        async function handleSendFeedback(id, currentMsg = '') {
+            const promptTitle = currentMsg ? "Edit Feedback" : "Send Feedback to Reporter";
+            const promptMsg = currentMsg ? "Update your message to the reporter:" : "Enter your message for the reporter provided context or asking for clarification:";
+
+            const message = await showCustomPrompt(
+                promptTitle,
+                promptMsg + (currentMsg ? `<br><br><b>Current:</b> "<i>${currentMsg}</i>"` : ""),
+                "Your message here...",
+                "Send Feedback",
+                "Cancel",
+                "textarea"
+            );
+
+            if (!message) return;
+
+            try {
+                await updateReportFeedback(id, message);
+                renderReportsList(); // refresh
+                showMessage("Feedback " + (currentMsg ? "updated." : "sent."), "success");
+            } catch (e) {
+                console.error("Failed to send feedback:", e);
+                showMessage("Failed to send feedback.", "error");
+            }
+        }
+
+        async function handleUnsendFeedback(id) {
+            if (!confirm("Are you sure you want to unsend/delete your feedback message?")) return;
+            try {
+                await updateReportFeedback(id, null);
+                renderReportsList();
+                showMessage("Feedback removed.", "success");
+            } catch (e) {
+                showMessage("Failed to remove feedback.", "error");
+            }
+        }
+
+        async function checkAndShowAdminFeedback() {
+            try {
+                const data = await loadReportsObject();
+                if (!data || !data.reports) return;
+
+                const myDeviceId = getDeviceId();
+
+                const pending = (data.reports || []).find(r =>
+                    r.deviceId === myDeviceId &&
+                    r.adminFeedback &&
+                    !r.userReply
+                );
+
+                if (pending) {
+                    const qPreview = (pending.question || 'Question').substring(0, 50) + (pending.question?.length > 50 ? '...' : '');
+
+                    const reply = await showCustomPrompt(
+                        "Message from Administrator",
+                        `Regarding your report on: <b>"${escapeHtml(qPreview)}"</b><br><br>` +
+                        `<div class="bg-blue-50 p-3 rounded border border-blue-100 mb-2">` +
+                        `<div class="text-xs font-bold text-blue-800 uppercase">Administrator Message:</div>` +
+                        `<div class="text-gray-800 italic whitespace-pre-wrap">"${escapeHtml(pending.adminFeedback)}"</div>` +
+                        `</div>` +
+                        `You can reply below:`,
+                        "Type your reply here...",
+                        "Reply",
+                        "Close",
+                        "textarea"
+                    );
+
+                    if (reply) {
+                        await submitUserReply(pending.id, reply);
+                        showMessage("Reply sent. The administrator will see it shortly.", "success");
+                    }
+                }
+            } catch (e) {
+                console.debug("Error checking for admin feedback:", e);
+            }
+        }
+
+        async function submitUserReply(reportId, replyText) {
+            const updates = {
+                userReply: replyText,
+                userReplyAt: new Date().toISOString()
+            };
+
+            try {
+                if (!firebaseInitialized) await initFirebase();
+                if (firebaseInitialized && firestoreDb && window._fb && window._fb.updateDoc) {
+                    const docRef = window._fb.doc(firestoreDb, 'reviews', reportId);
+                    await window._fb.updateDoc(docRef, updates);
+                    return;
+                }
+            } catch (e) { /* silent */ }
+
+            try {
+                const data = await fetchJsonBinData(JSONBIN_REVIEWS_BIN_ID);
+                const base = (data && typeof data === 'object') ? data : {};
+                base.reports = Array.isArray(base.reports) ? base.reports : [];
+                const idx = base.reports.findIndex(r => r.id === reportId);
+                if (idx !== -1) {
+                    base.reports[idx].userReply = updates.userReply;
+                    base.reports[idx].userReplyAt = updates.userReplyAt;
+                    await putJsonBinData(base, JSONBIN_REVIEWS_BIN_ID);
+                }
+            } catch (e) {
+                console.error("submitUserReply error:", e);
+            }
+        }
+
+
+        async function updateReportFeedback(reportId, feedbackMsg) {
+            // Try Firestore update first (best-effort), then fallback to jsonbin
+            const updates = {
+                adminFeedback: feedbackMsg,
+                adminFeedbackAt: new Date().toISOString()
+            };
+
+            try {
+                if (!firebaseInitialized) await initFirebase();
+                if (firebaseInitialized && firestoreDb && window._fb && window._fb.updateDoc) {
+                    try {
+                        const docRef = window._fb.doc(firestoreDb, 'reviews', reportId);
+                        await window._fb.updateDoc(docRef, updates);
+                        return; // Success
+                    } catch (e) {
+                        console.debug('Firestore updateReportFeedback failed, trying fallback:', e);
+                    }
+                }
+            } catch (e) { /* silent */ }
+
+            // Fallback: update in JSONBin reviews bin
+            try {
+                const data = await fetchJsonBinData(JSONBIN_REVIEWS_BIN_ID);
+                const base = (data && typeof data === 'object') ? data : {};
+                base.reports = Array.isArray(base.reports) ? base.reports : [];
+                const idx = base.reports.findIndex(r => r.id === reportId);
+                if (idx === -1) throw new Error('Report not found');
+
+                // Merge updates
+                base.reports[idx].adminFeedback = updates.adminFeedback;
+                base.reports[idx].adminFeedbackAt = updates.adminFeedbackAt;
+
+                await putJsonBinData(base, JSONBIN_REVIEWS_BIN_ID);
+            } catch (e) {
+                console.error('updateReportFeedback error:', e);
+                throw e;
             }
         }
     </script>
