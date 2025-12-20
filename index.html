@@ -762,41 +762,36 @@
 
             // Target only the default-questions folder with set files
             const filesToTry = [];
-            for (let i = 1; i <= 50; i++) {
+            for (let i = 1; i <= 80; i++) {
                 filesToTry.push(`default-questions/set${i}.json`);
             }
 
-            let filesProcessed = 0;
-            const existingFiles = []; // Store only confirmed existing files
+            const totalFilesToCheck = filesToTry.length;
+            let filesChecked = 0;
 
-            // First pass: Check which files exist without loading them
+            // Single-pass: Check if file exists, then load it immediately
             for (const filePath of filesToTry) {
+                filesChecked++;
+                
                 try {
+                    // Check if file exists
                     const headResponse = await fetch(filePath, { method: 'HEAD' });
-                    if (headResponse.ok) {
-                        existingFiles.push(filePath);
+                    
+                    // Update progress for the check
+                    const checkProgress = (filesChecked / totalFilesToCheck) * 100;
+                    document.getElementById('loading-progress').style.width = checkProgress + '%';
+                    document.getElementById('loading-status').textContent = `Checking ${filePath}...`;
+                    
+                    if (!headResponse.ok) {
+                        // File doesn't exist, skip it
+                        continue;
                     }
-                } catch (e) {
-                    // Silently skip - file doesn't exist or fetch not supported
-                }
-            }
-
-            const totalFiles = existingFiles.length;
-            if (totalFiles === 0) return allQuestionsLoaded; // No files found, return empty
-
-            // Second pass: Load only existing files
-            for (const filePath of existingFiles) {
-                try {
-                    // Append cache buster to the URL
+                    
+                    // File exists, load it immediately
+                    document.getElementById('loading-status').textContent = `Loading ${filePath}...`;
                     const urlWithCacheBuster = `${filePath}?${cacheBuster}`;
                     const response = await fetch(urlWithCacheBuster);
-                    filesProcessed++;
-
-                    // Update progress bar
-                    const progressPercent = (filesProcessed / totalFiles) * 100;
-                    document.getElementById('loading-progress').style.width = progressPercent + '%';
-                    document.getElementById('loading-count').textContent = `${allQuestionsLoaded.length} questions loaded | Loading set${filesProcessed} of ${totalFiles}...`;
-
+                    
                     if (!response.ok) continue; // Skip if file can't be read
 
                     // Load raw text to capture source file and approximate line numbers
@@ -846,11 +841,11 @@
 
                     if (validCount > 0) {
                         console.log(`Successfully loaded ${validCount} questions from: ${filePath}`);
-                        document.getElementById('loading-status').textContent = `Found ${validCount} questions in set${filesProcessed}.json`;
+                        document.getElementById('loading-count').textContent = `${allQuestionsLoaded.length} questions loaded`;
                     }
                 } catch (e) {
-                    // Silently skip files that fail to parse
-                    console.debug(`Skipped ${filePath}:`, e.message);
+                    // Silently skip - file doesn't exist or fetch not supported
+                    continue;
                 }
             }
 
@@ -2295,7 +2290,8 @@
         }
 
         // Silent update function for rankings table (prevents flash)
-        function updateRankingsTable(users) {
+        // Added pagination for mobile card view to improve performance
+        function updateRankingsTable(users, mobileCurrentPage = 1, mobilePerPage = 20) {
             if (!users || users.length === 0) return;
 
             const tbody = document.getElementById('rankings-table-body');
@@ -2318,6 +2314,13 @@
                 if (cardsContainer) cardsContainer.innerHTML = '<div class="p-8 text-center text-gray-500 italic">No rankings available for the last 5 days. Be the first!</div>';
                 return;
             }
+
+            // Calculate pagination for mobile cards
+            const totalUsers = ranked.length;
+            const totalPages = Math.ceil(totalUsers / mobilePerPage);
+            const startIdx = (mobileCurrentPage - 1) * mobilePerPage;
+            const endIdx = Math.min(startIdx + mobilePerPage, totalUsers);
+            const paginatedRanked = ranked.slice(startIdx, endIdx);
 
             for (let i = 0; i < ranked.length; i++) {
                 const u = ranked[i];
@@ -2377,7 +2380,7 @@
                     dateTimeText = `${dateStr} at ${timeStr}`;
                 }
 
-                // Build table row
+                // Build table row (desktop - show all)
                 rowsArr.push(`
                 <tr class="${rowClass}">
                     <td class="px-4 py-4 text-center w-16">${rankDisplay}</td>
@@ -2400,8 +2403,65 @@
                     </td>
                 </tr>
                 `);
+            }
 
-                // Build mobile card with glassmorphism
+            // Build mobile cards - only for current page
+            // Reset ranking calculation for paginated view
+            prevScore = null;
+            prevTotal = null;
+            itemsBefore = startIdx;
+            currentRank = startIdx + 1;
+
+            for (let i = 0; i < paginatedRanked.length; i++) {
+                const u = paginatedRanked[i];
+                let rank;
+                // Recalculate rank based on global position
+                const globalIdx = startIdx + i;
+                if (globalIdx > 0 && ranked[globalIdx - 1] && prevScore === u.latestScore && prevTotal === u.latestTotal) {
+                    rank = currentRank;
+                } else {
+                    rank = itemsBefore + 1;
+                    currentRank = rank;
+                    prevScore = u.latestScore;
+                    prevTotal = u.latestTotal;
+                }
+                itemsBefore++;
+
+                // Determine styling based on rank
+                let rankDisplay = `<span class="text-gray-500 font-mono font-bold">#${rank}</span>`;
+                let scoreClass = "text-blue-600 font-bold";
+                let cardClass = "relative overflow-hidden";
+                let cardStyle = "";
+
+                if (rank === 1) {
+                    rankDisplay = `<span class="text-3xl" title="1st Place">🥇</span>`;
+                    scoreClass = "text-yellow-800 font-bold text-lg";
+                    cardStyle = "background: linear-gradient(135deg, rgba(255, 235, 59, 0.3) 0%, rgba(255, 193, 7, 0.4) 100%); backdrop-filter: blur(10px); border: 2px solid rgba(255, 215, 0, 0.5); box-shadow: 0 8px 32px 0 rgba(255, 215, 0, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.5);";
+                } else if (rank === 2) {
+                    rankDisplay = `<span class="text-3xl" title="2nd Place">🥈</span>`;
+                    scoreClass = "text-gray-700 font-bold text-lg";
+                    cardStyle = "background: linear-gradient(135deg, rgba(192, 192, 192, 0.3) 0%, rgba(169, 169, 169, 0.4) 100%); backdrop-filter: blur(10px); border: 2px solid rgba(192, 192, 192, 0.5); box-shadow: 0 8px 32px 0 rgba(169, 169, 169, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.5);";
+                } else if (rank === 3) {
+                    rankDisplay = `<span class="text-3xl" title="3rd Place">🥉</span>`;
+                    scoreClass = "text-orange-800 font-bold";
+                    cardStyle = "background: linear-gradient(135deg, rgba(255, 152, 0, 0.3) 0%, rgba(230, 126, 34, 0.4) 100%); backdrop-filter: blur(10px); border: 2px solid rgba(205, 127, 50, 0.5); box-shadow: 0 8px 32px 0 rgba(205, 127, 50, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.5);";
+                } else {
+                    cardStyle = "background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.2) 100%); backdrop-filter: blur(10px); border: 1px solid rgba(139, 92, 246, 0.3); box-shadow: 0 4px 16px 0 rgba(99, 102, 241, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 0.3);";
+                }
+
+                let locationText = '—';
+                if (u.city || u.country) {
+                    locationText = [u.city, u.country].filter(Boolean).join(', ');
+                }
+
+                let dateTimeText = '—';
+                if (u.timestamp) {
+                    const dt = new Date(u.timestamp);
+                    const dateStr = dt.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+                    const timeStr = dt.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+                    dateTimeText = `${dateStr} at ${timeStr}`;
+                }
+
                 cardsArr.push(`
                 <div class="${cardClass} rounded-2xl p-5 transition-all duration-300 hover:scale-[1.02]" style="${cardStyle}">
                     ${rank <= 3 ? '<div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>' : ''}
@@ -2439,7 +2499,51 @@
 
             // Update without flash by setting innerHTML
             if (tbody) tbody.innerHTML = rowsArr.join('');
-            if (cardsContainer) cardsContainer.innerHTML = cardsArr.join('');
+            if (cardsContainer) {
+                let paginationHtml = '';
+                // Add pagination controls if more than one page
+                if (totalPages > 1) {
+                    const prevDisabled = mobileCurrentPage === 1 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-700 cursor-pointer';
+                    const nextDisabled = mobileCurrentPage === totalPages ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-700 cursor-pointer';
+
+                    paginationHtml = `
+                    <div class="flex items-center justify-between mt-6 pt-4 border-t border-gray-200">
+                        <button 
+                            onclick="${mobileCurrentPage > 1 ? `renderRankingsWithPage(${mobileCurrentPage - 1})` : 'return false;'}" 
+                            class="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold transition-all ${prevDisabled}"
+                            ${mobileCurrentPage === 1 ? 'disabled' : ''}>
+                            ← Previous
+                        </button>
+                        <div class="text-sm font-medium text-gray-600">
+                            Page <span class="font-bold text-blue-600">${mobileCurrentPage}</span> of <span class="font-bold">${totalPages}</span>
+                            <span class="text-xs text-gray-500 ml-2">(${startIdx + 1}-${endIdx} of ${totalUsers})</span>
+                        </div>
+                        <button 
+                            onclick="${mobileCurrentPage < totalPages ? `renderRankingsWithPage(${mobileCurrentPage + 1})` : 'return false;'}" 
+                            class="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold transition-all ${nextDisabled}"
+                            ${mobileCurrentPage === totalPages ? 'disabled' : ''}>
+                            Next →
+                        </button>
+                    </div>
+                    `;
+                }
+                cardsContainer.innerHTML = cardsArr.join('') + paginationHtml;
+            }
+        }
+
+        // Cache users for pagination to avoid refetching
+        let _cachedRankingsUsers = null;
+
+        // Helper function to render rankings with specific page (for pagination)
+        function renderRankingsWithPage(page) {
+            if (_cachedRankingsUsers && _cachedRankingsUsers.length > 0) {
+                updateRankingsTable(_cachedRankingsUsers, page);
+                // Scroll to top of cards container for better UX
+                const cardsContainer = document.getElementById('rankings-cards-container');
+                if (cardsContainer) {
+                    cardsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
         }
 
         async function renderRankingsView() {
@@ -2528,11 +2632,17 @@
 
                 if (!usersRaw || usersRaw.length === 0) {
                     document.getElementById('rankings-table-body').innerHTML = '<tr><td colspan="5" class="p-8 text-center text-gray-500 italic">No registered users found. Be the first to join!</td></tr>';
+                    const cardsContainer = document.getElementById('rankings-cards-container');
+                    if (cardsContainer) cardsContainer.innerHTML = '<div class="p-8 text-center text-gray-500 italic">No registered users found. Be the first to join!</div>';
                     return;
                 }
 
+                // Cache users for pagination
+                _cachedRankingsUsers = usersRaw;
+
                 // Use the separate update function to render the rows with the consistent (medals) design
-                updateRankingsTable(usersRaw);
+                // Start at page 1 for mobile pagination
+                updateRankingsTable(usersRaw, 1);
 
             } catch (e) {
                 console.error('Failed to render rankings:', e);
