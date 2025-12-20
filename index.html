@@ -772,26 +772,26 @@
             // Single-pass: Check if file exists, then load it immediately
             for (const filePath of filesToTry) {
                 filesChecked++;
-                
+
                 try {
                     // Check if file exists
                     const headResponse = await fetch(filePath, { method: 'HEAD' });
-                    
+
                     // Update progress for the check
                     const checkProgress = (filesChecked / totalFilesToCheck) * 100;
                     document.getElementById('loading-progress').style.width = checkProgress + '%';
                     document.getElementById('loading-status').textContent = `Checking ${filePath}...`;
-                    
+
                     if (!headResponse.ok) {
                         // File doesn't exist, skip it
                         continue;
                     }
-                    
+
                     // File exists, load it immediately
                     document.getElementById('loading-status').textContent = `Loading ${filePath}...`;
                     const urlWithCacheBuster = `${filePath}?${cacheBuster}`;
                     const response = await fetch(urlWithCacheBuster);
-                    
+
                     if (!response.ok) continue; // Skip if file can't be read
 
                     // Load raw text to capture source file and approximate line numbers
@@ -2291,7 +2291,7 @@
 
         // Silent update function for rankings table (prevents flash)
         // Added pagination for mobile card view to improve performance
-        function updateRankingsTable(users, mobileCurrentPage = 1, mobilePerPage = 20) {
+        function updateRankingsTable(users, mobileCurrentPage = 1, mobilePerPage = 10) {
             if (!users || users.length === 0) return;
 
             const tbody = document.getElementById('rankings-table-body');
