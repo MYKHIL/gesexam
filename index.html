@@ -854,12 +854,249 @@
             return allQuestionsLoaded;
         }
 
+
+        // ============= USER BLOCKING SYSTEM =============
+        let appBlocked = false;
+        let messagingBlocked = false;
+
+        async function checkBlockStatus() {
+            try {
+                const deviceId = getDeviceId();
+                
+                if (!firebaseInitialized) await initFirebase();
+                
+                if (firebaseInitialized && firestoreDb && window._fb) {
+                    try {
+                        const docRef = window._fb.doc(firestoreDb, 'blockedUsers', deviceId);
+                        const docSnap = await window._fb.getDoc(docRef);
+                        
+                        if (docSnap.exists()) {
+                            const data = docSnap.data();
+                            
+                            if (data.blockedFromApp) {
+                                appBlocked = true;
+                                showLockoutScreen(data.reason || 'Your access has been restricted.');
+                                disableStartButton();
+                                return true;
+                            }
+                            
+                            if (data.blockedFromMessaging) {
+                                messagingBlocked = true;
+                                disableReportFeatures();
+                            }
+                        }
+                    } catch (e) {
+                        console.debug('Error checking block status:', e);
+                    }
+                }
+                
+                return false;
+            } catch (e) {
+                console.debug('Block check failed:', e);
+                return false;
+            }
+        }
+
+        function showLockoutScreen(reason) {
+            const lockout = document.createElement('div');
+            lockout.id = 'lockout-screen';
+            lockout.className = 'fixed inset-0 z-[9999] bg-gradient-to-br from-red-50 to-red-100 flex items-center justify-center';
+            lockout.innerHTML = `
+                <div class="max-w-md mx-4 p-8 bg-white rounded-2xl shadow-2xl border-4 border-red-500">
+                    <div class="flex flex-col items-center text-center space-y-4">
+                        <div class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center">
+                            <svg class="w-12 h-12 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-900">Access Restricted</h2>
+                        <p class="text-gray-600 leading-relaxed">${escapeHtml(reason)}</p>
+                        <div class="pt-4 text-sm text-gray-500">
+                            If you believe this is an error, please contact the administrator.
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(lockout);
+        }
+
+        function disableStartButton() {
+            const originalStartQuiz = window.startQuiz;
+            window.startQuiz = function() {
+                showMessage('Access restricted. Please contact administrator.', 'error');
+            };
+            
+            setTimeout(() => {
+                const startBtn = document.querySelector('button[onclick*="startQuiz"]');
+                if (startBtn) {
+                    startBtn.disabled = true;
+                    startBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                    startBtn.title = 'Access restricted';
+                }
+            }, 100);
+        }
+
+        function disableReportFeatures() {
+            // Get block data to check if reporting is disabled
+            setTimeout(async () => {
+                try {
+                    const deviceId = getDeviceId();
+                    if (firebaseInitialized && firestoreDb && window._fb) {
+                        const docRef = window._fb.doc(firestoreDb, 'blockedUsers', deviceId);
+                        const docSnap = await window._fb.getDoc(docRef);
+                        
+                        if (docSnap.exists()) {
+                            const data = docSnap.data();
+                            
+                            // Only hide report button if explicitly disabled
+                            if (data.disableReporting) {
+                                const reportBtn = document.getElementById('report-question-btn');
+                                if (reportBtn) reportBtn.style.display = 'none';
+                            }
+                        }
+                    }
+                } catch (e) {
+                    console.debug('Error checking report disable status:', e);
+                }
+            }, 100);
+            
+            // Block user-to-user messaging (but allow admin contact)
+            const originalStartChat = window.startChat;
+            if (originalStartChat) {
+                window.startChat = async function(targetUserId, targetName) {
+                    // Check if target is admin
+                    const isAdminTarget = await checkIfAdmin(targetUserId);
+                    if (isAdminTarget) {
+                        // Allow chat with admin
+                        return originalStartChat(targetUserId, targetName);
+                    } else {
+                        showMessage('Messaging with other users is currently disabled for your account. You can still contact the administrator.', 'info');
+                    }
+                };
+            }
+            
+            // Block report dialog if reporting is disabled
+            const originalOpenReport = window.openReportDialog;
+            window.openReportDialog = function() {
+                showMessage('Reporting is currently disabled for your account.', 'info');
+            };
+        }
+        
+        async function checkIfAdmin(userId) {
+            // Basic admin check - you can enhance this
+            // For now, check if user has admin flag in their profile
+            try {
+                if (!firebaseInitialized) return false;
+                // Implement your admin detection logic here
+                // This could check a users collection for an isAdmin flag
+                return false; // Default: not admin
+            } catch (e) {
+                return false;
+            }
+        }
+
+        // ============= REAL-TIME BLOCK ENFORCEMENT =============
+        let blockStatusUnsubscribe = null;
+
+        function startBlockStatusListener() {
+            try {
+                const deviceId = getDeviceId();
+                
+                if (!firebaseInitialized || !firestoreDb || !window._fb) {
+                    console.debug('Firebase not ready for block listener');
+                    return;
+                }
+
+                // Set up real-time listener
+                const docRef = window._fb.doc(firestoreDb, 'blockedUsers', deviceId);
+                
+                blockStatusUnsubscribe = window._fb.onSnapshot(docRef, (snapshot) => {
+                    if (snapshot.exists()) {
+                        const data = snapshot.data();
+                        
+                        // Immediate app block enforcement
+                        if (data.blockedFromApp && !appBlocked) {
+                            console.warn('User blocked from app in real-time');
+                            appBlocked = true;
+                            showLockoutScreen(data.reason || 'Your access has been restricted.');
+                            disableStartButton();
+                            
+                            // Force stop any active quiz
+                            if (window.stopQuiz) {
+                                try { window.stopQuiz(); } catch (e) {}
+                            }
+                        }
+                        
+                        // Messaging block enforcement
+                        if (data.blockedFromMessaging && !messagingBlocked) {
+                            console.warn('User messaging blocked in real-time');
+                            messagingBlocked = true;
+                            disableReportFeatures();
+                            showMessage('Your messaging privileges have been restricted.', 'warning');
+                        }
+                        
+                        // Handle unblock
+                        if (!data.blockedFromApp && appBlocked) {
+                            console.log('User unblocked from app');
+                            appBlocked = false;
+                            const lockout = document.getElementById('lockout-screen');
+                            if (lockout) lockout.remove();
+                            showMessage('Access restored. Please reload the page for full functionality.', 'success');
+                        }
+                        
+                        if (!data.blockedFromMessaging && messagingBlocked) {
+                            console.log('User messaging unblocked');
+                            messagingBlocked = false;
+                            showMessage('Messaging access restored. Please reload the page.', 'success');
+                        }
+                    } else {
+                        // Document deleted = unblocked
+                        if (appBlocked || messagingBlocked) {
+                            console.log('User fully unblocked (document removed)');
+                            appBlocked = false;
+                            messagingBlocked = false;
+                            const lockout = document.getElementById('lockout-screen');
+                            if (lockout) lockout.remove();
+                            showMessage('Access restored. Please reload the page for full functionality.', 'success');
+                        }
+                    }
+                }, (error) => {
+                    console.debug('Block listener error:', error);
+                });
+                
+                console.log('Block status listener started');
+            } catch (e) {
+                console.debug('Could not start block listener:', e);
+            }
+        }
+
+
+
+
         async function loadState() {
             // Show loading indicator
             const loadingIndicator = document.getElementById('loading-indicator');
             loadingIndicator.classList.remove('hidden');
 
+            // CRITICAL: Initialize Firebase and check blocks FIRST
+            document.getElementById('loading-status').textContent = 'Checking access...';
+            try {
+                await initFirebase();
+            } catch (e) {
+                console.debug('Firebase init failed:', e);
+            }
+
+            const isBlocked = await checkBlockStatus();
+            if (isBlocked) {
+                document.getElementById('loading-indicator').classList.add('hidden');
+                return;
+
+            // Start real-time block status listener
+            startBlockStatusListener();
+            }
+
             // 1. Recursively load and merge all valid JSON files from base directory
+            document.getElementById('loading-status').textContent = 'Loading questions...';
             try {
                 console.log("Starting to load questions from available sources...");
                 let loadedQuestions = await fetchJsonFilesRecursively();
@@ -939,12 +1176,7 @@
             // 4. Load session history
             loadSessionHistory();
 
-            // 5. Initialize Firebase first so registration checks can query Firestore
-            try {
-                await initFirebase();
-            } catch (e) {
-                console.debug('Firebase init skipped or failed (will fallback to jsonbin):', e);
-            }
+            // 5. Firebase already initialized at start
 
             // Ensure device is registered on the remote leaderboard store
             try {
@@ -5934,6 +6166,222 @@
         window.onload = function () {
             loadState();
         };
+
+
+        // ============= ADMIN USER MANAGEMENT =============
+        
+        async function renderUserManagementView() {
+            const contentArea = document.getElementById('content-area');
+            if (!contentArea) return;
+
+            contentArea.innerHTML = `<div class="p-8 text-center"><div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto"></div></div>`;
+
+            try {
+                // Gather all unique users from multiple sources
+                const users = new Map();
+                
+                // From leaderboard
+                try {
+                    const leaderboardData = await loadGlobalLeaderboard();
+                    if (leaderboardData && Array.isArray(leaderboardData)) {
+                        leaderboardData.forEach(entry => {
+                            if (entry.deviceId && !users.has(entry.deviceId)) {
+                                users.set(entry.deviceId, {
+                                    deviceId: entry.deviceId,
+                                    name: entry.name || 'Unknown',
+                                    location: entry.location || {},
+                                    lastSeen: entry.lastActivity || entry.createdAt
+                                });
+                            }
+                        });
+                    }
+                } catch (e) { console.debug('Error loading leaderboard:', e); }
+
+                // From reports
+                try {
+                    const reportsData = await loadReportsObject();
+                    if (reportsData && reportsData.reports) {
+                        reportsData.reports.forEach(r => {
+                            if (r.deviceId && !users.has(r.deviceId)) {
+                                users.set(r.deviceId, {
+                                    deviceId: r.deviceId,
+                                    name: r.reporterName || 'Unknown',
+                                    location: r.reporterLocation || {},
+                                    lastSeen: r.createdAt
+                                });
+                            }
+                        });
+                    }
+                } catch (e) { console.debug('Error loading reports:', e); }
+
+                // Get block status for all users
+                const blockStatuses = new Map();
+                if (firebaseInitialized && firestoreDb && window._fb) {
+                    try {
+                        const blockedCol = window._fb.collection(firestoreDb, 'blockedUsers');
+                        const snapshot = await window._fb.getDocs(blockedCol);
+                        snapshot.forEach(doc => {
+                            blockStatuses.set(doc.id, doc.data());
+                        });
+                    } catch (e) { console.debug('Error loading block statuses:', e); }
+                }
+
+                const userArray = Array.from(users.values()).sort((a, b) => 
+                    new Date(b.lastSeen || 0) - new Date(a.lastSeen || 0)
+                );
+
+                const rows = userArray.map(user => {
+                    const blockStatus = blockStatuses.get(user.deviceId);
+                    const isAppBlocked = blockStatus?.blockedFromApp || false;
+                    const isMsgBlocked = blockStatus?.blockedFromMessaging || false;
+                    const reportDisabled = blockStatus?.disableReporting || false;
+                    
+                    const locationStr = user.location?.city || user.location?.country ? 
+                        `${user.location.city || ''} ${user.location.country || ''}`.trim() : 'Unknown';
+
+                    return `
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="px-4 py-3 font-mono text-xs text-gray-600">${user.deviceId.substring(0, 12)}...</td>
+                            <td class="px-4 py-3 font-medium">${escapeHtml(user.name)}</td>
+                            <td class="px-4 py-3 text-sm text-gray-600">${escapeHtml(locationStr)}</td>
+                            <td class="px-4 py-3">
+                                ${isAppBlocked ? '<span class="px-2 py-1 bg-red-100 text-red-700 text-xs rounded-full font-bold">🚫 App Blocked</span>' :
+                                  isMsgBlocked ? `<span class="px-2 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-bold">💬 Messaging ${reportDisabled ? '+ Report' : ''} Blocked</span>` :
+                                  '<span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">✓ Active</span>'}
+                            </td>
+                            <td class="px-4 py-3 text-right">
+                                ${!isAppBlocked && !isMsgBlocked ? `
+                                    <button onclick="showBlockDialog('${user.deviceId}', '${escapeHtml(user.name)}')" class="px-3 py-1 bg-red-600 text-white text-xs rounded hover:bg-red-700">Block User</button>
+                                ` : `
+                                    <button onclick="unblockUser('${user.deviceId}')" class="px-3 py-1 bg-green-600 text-white text-xs rounded hover:bg-green-700">Unblock</button>
+                                `}
+                            </td>
+                        </tr>
+                    `;
+                }).join('');
+
+                contentArea.innerHTML = `
+                    <div class="p-6 bg-white rounded-xl shadow-lg">
+                        <div class="flex justify-between items-center mb-6">
+                            <h2 class="text-2xl font-bold text-gray-800">👥 User Management (${userArray.length})</h2>
+                            <button onclick="setView('settings')" class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">Back</button>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="bg-gray-100 text-gray-600 text-sm uppercase">
+                                        <th class="px-4 py-3 rounded-tl-lg">Device ID</th>
+                                        <th class="px-4 py-3">Name</th>
+                                        <th class="px-4 py-3">Location</th>
+                                        <th class="px-4 py-3">Status</th>
+                                        <th class="px-4 py-3 rounded-tr-lg text-right">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>${rows}</tbody>
+                            </table>
+                        </div>
+                    </div>
+                `;
+            } catch (e) {
+                console.error('Error rendering user management:', e);
+                contentArea.innerHTML = `<div class="p-8 text-center text-red-600">Error loading users</div>`;
+            }
+        }
+
+        function showBlockDialog(deviceId, userName) {
+            const modal = _createModalContainer('block-user-modal');
+            modal.innerHTML = `
+                <div class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+                    <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full mx-4 overflow-hidden">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-900 mb-4">Block User: ${escapeHtml(userName)}</h3>
+                            
+                            <div class="space-y-4 mb-6">
+                                <label class="flex items-start gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50">
+                                    <input type="radio" name="blockType" value="app" class="mt-1">
+                                    <div>
+                                        <div class="font-bold text-gray-900">Block from App</div>
+                                        <div class="text-sm text-gray-600">Complete lockout (recommended for violations)</div>
+                                    </div>
+                                </label>
+                                
+                                <label class="flex items-start gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50">
+                                    <input type="radio" name="blockType" value="messaging" class="mt-1" checked>
+                                    <div>
+                                        <div class="font-bold text-gray-900">Block Messaging Only</div>
+                                        <div class="text-sm text-gray-600">User cannot chat with others (can still use quiz)</div>
+                                        <label class="flex items-center gap-2 mt-2 ml-4">
+                                            <input type="checkbox" id="disableReporting" class="rounded">
+                                            <span class="text-sm">Also disable question reporting</span>
+                                        </label>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <textarea id="blockReason" placeholder="Reason for blocking (optional)" class="w-full border rounded-lg p-3 mb-4 text-sm" rows="3"></textarea>
+                            
+                            <div class="flex gap-3">
+                                <button onclick="document.getElementById('block-user-modal').remove()" class="flex-1 px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">Cancel</button>
+                                <button onclick="confirmBlockUser('${deviceId}')" class="flex-1 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700">Block User</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        async function confirmBlockUser(deviceId) {
+            try {
+                const blockType = document.querySelector('input[name="blockType"]:checked').value;
+                const reason = document.getElementById('blockReason').value || 'No reason provided';
+                const disableReporting = document.getElementById('disableReporting').checked;
+
+                const blockData = {
+                    deviceId: deviceId,
+                    blockedFromApp: blockType === 'app',
+                    blockedFromMessaging: blockType === 'messaging',
+                    disableReporting: blockType === 'messaging' && disableReporting,
+                    blockedAt: new Date().toISOString(),
+                    blockedBy: 'admin',
+                    reason: reason
+                };
+
+                if (!firebaseInitialized) await initFirebase();
+                if (firebaseInitialized && firestoreDb && window._fb) {
+                    const docRef = window._fb.doc(firestoreDb, 'blockedUsers', deviceId);
+                    await window._fb.setDoc(docRef, blockData);
+                    showMessage('User blocked successfully', 'success');
+                    document.getElementById('block-user-modal').remove();
+                    renderUserManagementView();
+                } else {
+                    throw new Error('Firebase not available');
+                }
+            } catch (e) {
+                console.error('Error blocking user:', e);
+                showMessage('Failed to block user', 'error');
+            }
+        }
+
+        async function unblockUser(deviceId) {
+            if (!confirm('Are you sure you want to unblock this user?')) return;
+            
+            try {
+                if (!firebaseInitialized) await initFirebase();
+                if (firebaseInitialized && firestoreDb && window._fb) {
+                    const docRef = window._fb.doc(firestoreDb, 'blockedUsers', deviceId);
+                    await window._fb.deleteDoc(docRef);
+                    showMessage('User unblocked successfully', 'success');
+                    renderUserManagementView();
+                } else {
+                    throw new Error('Firebase not available');
+                }
+            } catch (e) {
+                console.error('Error unblocking user:', e);
+                showMessage('Failed to unblock user', 'error');
+            }
+        }
+
+
     </script>
 </body>
 
