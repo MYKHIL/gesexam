@@ -268,6 +268,7 @@
                 const app = initializeApp(FIREBASE_CONFIG);
                 const auth = getAuth(app);
                 firestoreDb = getFirestore(app);
+                window.firestoreDb = firestoreDb; // Ensure global access across script blocks
 
                 // Expose commonly used functions via a small shim
                 window._fb = { doc, getDoc, setDoc, updateDoc, collection, getDocs, deleteDoc, auth, query, orderBy, limit, onSnapshot, where };
@@ -1930,7 +1931,8 @@
             if (!firebaseInitialized) await initFirebase();
             if (!firebaseInitialized || !firestoreDb || !window._fb || !window._fb.getDocs) return null;
             try {
-                const qs = await window._fb.getDocs(window._fb.collection(firestoreDb, 'reviews'));
+                const db = window.firestoreDb || firestoreDb;
+                const qs = await window._fb.getDocs(window._fb.collection(db, 'reviews'));
                 const arr = [];
                 qs.forEach(d => arr.push(d.data()));
                 return arr;
@@ -4681,21 +4683,23 @@
 
         async function handleResolveReport(id) {
             try {
-                // Fetch latest status to toggle correctly
-                const reportRef = window._fb.doc(window.firestoreDb, 'reports', id);
-                const snap = await window._fb.getDoc(reportRef);
+                // Fetch latest reports to find the current status (supports Firestore + JSONBin fallback)
+                const data = await loadReportsObject();
+                const reports = (data && data.reports) ? data.reports : [];
+                const report = reports.find(r => r.id === id);
 
-                if (!snap.exists()) {
+                if (!report) {
                     showMessage("Report not found.", "error");
                     return;
                 }
 
-                const currentStatus = snap.data().status;
+                const currentStatus = report.status || 'open';
                 const newStatus = (currentStatus === 'resolved') ? 'open' : 'resolved';
 
                 if (!confirm(`Mark this report as ${newStatus}?`)) return;
 
-                await window._fb.updateDoc(reportRef, { status: newStatus });
+                // Use the helper which handles correct collection ('reviews') and fallback logic
+                await updateReportStatus(id, newStatus);
 
                 // Refresh UI
                 if (document.getElementById('msg-center-modal')) {
