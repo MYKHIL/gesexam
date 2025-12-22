@@ -2971,6 +2971,8 @@
             }
         }
 
+        let _messageListenerUnsub = null;
+
         function startOnlineMonitoring() {
             // ensure we don't start multiple timers
             stopOnlineMonitoring();
@@ -2994,7 +2996,92 @@
                     badge._onlineClickAttached = true;
                 }
             } catch (e) { /* silent */ }
+
+            // --- Real-time Message Center Listener ---
+            if (!_messageListenerUnsub && window.firestoreDb && window._fb && window._fb.onSnapshot) {
+                try {
+                    const db = window.firestoreDb;
+                    // Listen to 'reviews' collection
+                    const q = window._fb.collection(db, 'reviews');
+                    _messageListenerUnsub = window._fb.onSnapshot(q, (snapshot) => {
+                        const reports = [];
+                        snapshot.forEach((doc) => {
+                            reports.push(doc.data());
+                        });
+
+                        // Feed this data directly to checkAndShowAdminFeedback to update UI
+                        // We need to modify checkAndShowAdminFeedback to accept data injection or cache it
+                        // For now, simpler: Update a global cache that checkAndShowAdminFeedback uses?
+                        // actually checkAndShowAdminFeedback calls loadReportsObject. 
+                        // Let's create a specialized updater.
+                        updateMessageCenterUIFromRealtime(reports);
+
+                    }, (error) => {
+                        console.debug("Message listener error:", error);
+                    });
+                    console.log("Message center real-time listener started.");
+                } catch (e) {
+                    console.error("Failed to start message listener:", e);
+                }
+            }
         }
+
+        function updateMessageCenterUIFromRealtime(reports) {
+            // This function mimicks checkAndShowAdminFeedback but uses provided data
+            // 1. Update Floating Button
+            // 2. If Modal is Open -> Refresh Content
+            // 3. If User -> Check for new popups
+
+            // Check Admin Status
+            const deviceId = getDeviceId();
+            // We need user status. Resolve it properly (async) or check local cache logic? 
+            // We can't easily wait here. let's assume we can get it from localStorage or re-fetch loosely.
+            // For responsiveness, let's use the async check but inside a self-executing block
+            (async () => {
+                try {
+                    const userDoc = await resolveUserDocRef(deviceId);
+                    const isAdmin = userDoc && userDoc.data && (userDoc.data.status === 'Admin' || userDoc.data.Status === 'Admin');
+
+                    if (isAdmin) {
+                        const openCount = reports.filter(r => r.status !== 'resolved').length;
+                        renderFloatingMessageButton(reports, true, openCount);
+
+                        // If modal open, refresh it
+                        const modalContent = document.getElementById('msg-center-content');
+                        if (modalContent) {
+                            // Re-render the list quietly? Or just call openMessageCenter which fetches?
+                            // openMessageCenter call fetches data again usually. 
+                            // Creating a render function that takes data would be better.
+                            // For now, let's just trigger openMessageCenter if modal exists, 
+                            // BUT we must avoid infinite loops if possible. 
+                            // Actually openMessageCenter uses loadReportsObject which fetches from FB.
+                            // If we just got an update from FB, fetching again is redundant but safe.
+                            openMessageCenter();
+                        }
+                    } else {
+                        // User Mode
+                        const myDeviceId = getDeviceId();
+                        const myMessages = reports.filter(r => r.deviceId === myDeviceId && r.adminFeedback);
+                        renderFloatingMessageButton(myMessages, false);
+
+                        // Auto-popup logic (User Only)
+                        const seen = getSeenMessages();
+                        const unseen = myMessages.find(r => !seen.includes(r.id));
+
+                        // Only triggering popup if NOT already looking at it?
+                        // checkAndShowAdminFeedback logic:
+                        if (unseen && !document.querySelector('.custom-confirm-overlay')) {
+                            // Reuse checkAndShowAdminFeedback logic or call it?
+                            // calling checkAndShowAdminFeedback() will re-fetch.
+                            // Let's call it to keep logic centralized, assuming re-fetch is fast enough 
+                            // or negligible compared to UX benefit.
+                            checkAndShowAdminFeedback();
+                        }
+                    }
+                } catch (e) { console.debug("Realtime UI update failed:", e); }
+            })();
+        }
+
 
         let _realtimeUnsub = null;
         let _cachedOnlineUsers = []; // Cache for the listener data
@@ -3131,7 +3218,11 @@
                 _realtimeUnsub = null;
                 console.log("Stopped realtime listener");
             }
-
+            if (_messageListenerUnsub) {
+                _messageListenerUnsub();
+                _messageListenerUnsub = null;
+                console.log("Stopped message center listener");
+            }
             try { document.removeEventListener('visibilitychange', _visibilityHeartbeatHandler); } catch (e) { }
             try { window.removeEventListener('beforeunload', _beforeUnloadHeartbeatHandler); } catch (e) { }
             try {
@@ -4877,29 +4968,713 @@
                 count = messages.filter(r => !seen.includes(r.id)).length;
             }
 
-            // Always show button if there are messages in history OR if status is Admin (who manages system)
-            // User requested: "send all reported messages directly to the message center floating button... for the admin"
-            if (messages.length > 0 || isAdmin) {
-                btn.classList.remove('hidden');
+            // Always show button for everyone (User requirement: "allow users... to chat each other")
+            btn.classList.remove('hidden');
 
-                // Icon (Mail or Chat)
-                let badgeHtml = '';
-                if (count > 0) {
-                    badgeHtml = `<span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold px-1.5 py-0.5 rounded-full shadow-sm animate-pulse">${count}</span>`;
-                }
+            // Icon (Mail or Chat)
+            let badgeHtml = '';
+            if (count > 0) {
+                badgeHtml = `<span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold px-1.5 py-0.5 rounded-full shadow-sm animate-pulse">${count}</span>`;
+            }
 
-                btn.innerHTML = `
-                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
-                    </svg>
-                    ${badgeHtml}
+            btn.innerHTML = `
+                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+                </svg>
+                ${badgeHtml}
+            `;
+        }
+
+        async function openMessageCenter(defaultTab = 'chats') {
+            try {
+                // Determine Admin vs User
+                const deviceId = getDeviceId();
+                const userDoc = await resolveUserDocRef(deviceId);
+                const isAdmin = userDoc && userDoc.data && (userDoc.data.status === 'Admin' || userDoc.data.Status === 'Admin');
+                
+                // Store for global access (used by back buttons in sub-views)
+                window._currentUserIsAdmin = isAdmin;
+
+                // If admin, default to reports unless specified otherwise. If user, always chats.
+                let activeTab = isAdmin ? (defaultTab === 'chats' ? 'chats' : 'reports') : 'chats';
+
+                // Show loading
+                const modal = _createModalContainer('msg-center-modal');
+                // Use a larger modal for chat comfortably
+                modal.innerHTML = `
+                    <div class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
+                         <div class="bg-white rounded-2xl shadow-2xl max-w-4xl w-full mx-4 overflow-hidden flex flex-col h-[85vh]">
+                            <!-- Header -->
+                            <div class="p-4 border-b bg-gray-50 flex flex-col">
+                                <div class="flex justify-between items-center mb-3">
+                                    <h3 class="text-lg font-bold text-gray-800 flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                                        Message Center
+                                    </h3>
+                                    <button onclick="document.getElementById('msg-center-modal').remove()" class="text-gray-500 hover:text-gray-700">
+                                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                    </button>
+                                </div>
+                                
+                                ${isAdmin ? `
+                                <!-- Admin Tabs -->
+                                <div class="flex space-x-1 bg-gray-200 p-1 rounded-lg self-start">
+                                    <button onclick="_switchMsgTab('reports')" id="tab-btn-reports" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all ${activeTab === 'reports' ? 'bg-white text-blue-700 shadow-sm' : 'text-gray-600 hover:text-gray-800'}">
+                                        Reports
+                                    </button>
+                                    <button onclick="_switchMsgTab('chats')" id="tab-btn-chats" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all ${activeTab === 'chats' ? 'bg-white text-blue-700 shadow-sm' : 'text-gray-600 hover:text-gray-800'}">
+                                        My Chats
+                                    </button>
+                                    <button onclick="_switchMsgTab('monitor')" id="tab-btn-monitor" class="px-4 py-1.5 rounded-md text-sm font-medium transition-all ${activeTab === 'monitor' ? 'bg-white text-blue-700 shadow-sm' : 'text-gray-600 hover:text-gray-800'}">
+                                        Monitor All
+                                    </button>
+                                </div>
+                                ` : ''}
+                            </div>
+                            
+                            <!-- Content -->
+                            <div class="flex-1 overflow-hidden relative" id="msg-center-content-area">
+                                <!-- Dynamic Content Injected Here -->
+                                <div class="flex justify-center items-center h-full"><div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>
+                            </div>
+                         </div>
+                    </div>
                 `;
-            } else {
-                btn.classList.add('hidden');
+
+                // Attach global tab switcher helper
+                window._switchMsgTab = async (tab) => {
+                    const btnR = document.getElementById('tab-btn-reports');
+                    const btnC = document.getElementById('tab-btn-chats');
+                    const btnM = document.getElementById('tab-btn-monitor');
+                    
+                    // Reset all buttons
+                    [btnR, btnC, btnM].forEach(btn => {
+                        if (btn) {
+                            btn.classList.remove('bg-white', 'text-blue-700', 'shadow-sm');
+                            btn.classList.add('text-gray-600', 'hover:text-gray-800');
+                        }
+                    });
+                    
+                    // Activate selected button
+                    if (tab === 'reports' && btnR) {
+                        btnR.classList.add('bg-white', 'text-blue-700', 'shadow-sm');
+                        btnR.classList.remove('text-gray-600', 'hover:text-gray-800');
+                    } else if (tab === 'chats' && btnC) {
+                        btnC.classList.add('bg-white', 'text-blue-700', 'shadow-sm');
+                        btnC.classList.remove('text-gray-600', 'hover:text-gray-800');
+                    } else if (tab === 'monitor' && btnM) {
+                        btnM.classList.add('bg-white', 'text-blue-700', 'shadow-sm');
+                        btnM.classList.remove('text-gray-600', 'hover:text-gray-800');
+                    }
+                    
+                    await _renderMsgTabContent(tab, isAdmin);
+                };
+
+                // Initial Render
+                await _renderMsgTabContent(activeTab, isAdmin);
+
+            } catch (e) {
+                console.error('Error opening message center:', e);
+                showMessage("Failed to open message center.", "error");
             }
         }
 
-        async function openMessageCenter() {
+        async function _renderMsgTabContent(tab, isAdmin) {
+            const container = document.getElementById('msg-center-content-area');
+            if (!container) return;
+
+            container.innerHTML = `<div class="flex justify-center items-center h-full"><div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>`;
+
+            if (tab === 'reports') {
+                if (!isAdmin) {
+                    // Should not happen, but fallback
+                    _renderMsgTabContent('chats', false);
+                    return;
+                }
+                await _renderReportsTab(container, true);
+            } else if (tab === 'monitor') {
+                if (!isAdmin) {
+                    _renderMsgTabContent('chats', false);
+                    return;
+                }
+                await _renderMonitorChatsTab(container);
+            } else {
+                await _renderChatsTab(container, isAdmin);
+            }
+        }
+
+        // --- Tab 1: Reports (Admin Only) ---
+        // Moved original render logic here
+        async function _renderReportsTab(container, isAdmin) {
+            const data = await loadReportsObject();
+            const reports = (data && data.reports) ? data.reports : [];
+
+            // Admin Sort
+            const displayMessages = reports.sort((a, b) => {
+                const isResolvedA = a.status === 'resolved';
+                const isResolvedB = b.status === 'resolved';
+                if (isResolvedA !== isResolvedB) return isResolvedA ? 1 : -1;
+                return new Date(b.createdAt || 0) - new Date(a.createdAt || 0);
+            });
+
+            if (displayMessages.length === 0) {
+                container.innerHTML = `<div class="text-center py-10 text-gray-500">No reported questions found.</div>`;
+                return;
+            }
+
+            // Wrap in overflow-y-auto for the content area
+            let html = `<div class="h-full overflow-y-auto p-4 space-y-4">`;
+
+            html += displayMessages.map(r => {
+                const statusColor = r.status === 'resolved' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800';
+                const reporter = r.reporterName || 'Anonymous';
+                const sourceFile = r.sourceFile || '—';
+                const sourceLine = r.sourceLine ? `Line ${r.sourceLine}` : '';
+                const sourceInfo = (sourceFile !== '—' || sourceLine !== '')
+                    ? `<div class="text-xs text-gray-500 mt-1 mb-2 border-t border-dashed pt-1"><span class="font-mono bg-gray-50 px-1 rounded">${escapeHtml(sourceFile)}</span> <span class="text-gray-400">${sourceLine}</span></div>`
+                    : '';
+
+                const tagsHtml = (r.tags && r.tags.length > 0)
+                    ? `<div class="flex flex-wrap gap-1 mt-2 mb-2">
+                        ${r.tags.map(t => `<span class="px-2 py-0.5 bg-indigo-50 text-indigo-700 text-[10px] font-bold uppercase rounded-md border border-indigo-100">${escapeHtml(t)}</span>`).join('')}
+                       </div>`
+                    : '';
+
+                // Add feedback display logic
+                const feedbackHtml = r.adminFeedback ?
+                    `<div class="mt-2 text-xs bg-blue-50 p-2 rounded border border-blue-100">
+                        <div class="font-bold text-blue-800 mb-0.5">Your Feedback:</div>
+                        <div class="italic text-gray-700">${escapeHtml(r.adminFeedback)}</div>
+                        ${r.userReply ? `<div class="mt-2 pt-2 border-t border-blue-200">
+                            <div class="font-bold text-green-800 mb-0.5">User Reply:</div>
+                            <div class="text-gray-800">${escapeHtml(r.userReply)}</div>
+                         </div>` : ''}
+                     </div>` : '';
+
+                return `
+                    <div class="border rounded-xl p-4 bg-white border-gray-200 hover:shadow-md transition-shadow">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <span class="inline-block px-2 py-0.5 rounded text-xs font-bold ${statusColor} mb-1">${escapeHtml(r.status || 'open')}</span>
+                                <div class="text-xs text-gray-400">${new Date(r.createdAt).toLocaleString()} • ${escapeHtml(reporter)}</div>
+                            </div>
+                            <div class="flex gap-1">
+                                 <button onclick="handleResolveReport('${r.id}')" class="px-2 py-1 bg-green-50 text-green-700 text-xs rounded border border-green-200 hover:bg-green-100">
+                                    ${r.status !== 'resolved' ? 'Resolve' : 'Re-open'}
+                                 </button>
+                                 <button onclick="handleSendFeedback('${r.id}', '${escapeHtml(r.adminFeedback || '').replace(/'/g, "\\'")}')" class="px-2 py-1 bg-blue-50 text-blue-700 text-xs rounded border border-blue-200 hover:bg-blue-100">
+                                    ${r.adminFeedback ? 'Edit Reply' : 'Reply'}
+                                 </button>
+                                 <button onclick="handleDeleteReport('${r.id}')" class="px-2 py-1 bg-red-50 text-red-700 text-xs rounded border border-red-200 hover:bg-red-100">Del</button>
+                            </div>
+                        </div>
+                        <div class="text-sm font-medium text-gray-800 mb-1">${escapeHtml(r.question || 'Unknown Question')}</div>
+                        ${tagsHtml}
+                        <div class="text-xs text-gray-500 italic mb-2">"${escapeHtml(r.comment || '')}"</div>
+                        ${sourceInfo}
+                        ${feedbackHtml}
+                    </div>
+                `;
+            }).join('');
+
+            html += `</div>`;
+            container.innerHTML = html;
+        }
+
+        // --- Tab 3: Monitor All Chats (Admin Only) ---
+        async function _renderMonitorChatsTab(container) {
+            container.innerHTML = `<div class="flex justify-center items-center h-full"><div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>`;
+            
+            try {
+                // Fetch ALL conversations (admin oversight)
+                if (!firebaseInitialized) await initFirebase();
+                const db = window.firestoreDb;
+                const chatsCollection = window._fb.collection(db, 'chats');
+                
+                // No filter - get all chats
+                const snapshot = await window._fb.getDocs(chatsCollection);
+                
+                const conversations = [];
+                snapshot.forEach(d => conversations.push({ id: d.id, ...d.data() }));
+                
+                // Sort by lastMessage timestamp (most recent first)
+                conversations.sort((a, b) => {
+                    const aTime = a.lastMessage?.timestamp || a.createdAt || 0;
+                    const bTime = b.lastMessage?.timestamp || b.createdAt || 0;
+                    return new Date(bTime) - new Date(aTime);
+                });
+                
+                // Render with special admin styling
+                let html = `
+                    <div class="flex flex-col h-full">
+                        <div class="p-4 border-b bg-amber-50 border-amber-200">
+                            <div class="flex items-center gap-2 mb-2">
+                                <svg class="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                <h4 class="font-bold text-amber-900">Moderator View - All Conversations</h4>
+                            </div>
+                            <p class="text-xs text-amber-700">Viewing all user-to-user chats for moderation purposes. Total: ${conversations.length}</p>
+                        </div>
+                        <div class="flex-1 overflow-y-auto">
+                `;
+                
+                if (conversations.length === 0) {
+                    html += `
+                        <div class="p-8 text-center text-gray-500">
+                            <p>No user conversations yet.</p>
+                        </div>
+                    `;
+                } else {
+                    conversations.forEach(c => {
+                        // Extract both participant names
+                        const names = c.participantMap ? Object.values(c.participantMap) : (c.participantNames || ['User A', 'User B']);
+                        const displayName = names.join(' ↔ ');
+                        
+                        const lastMsg = c.lastMessage ? escapeHtml(c.lastMessage.text).substring(0, 50) + (c.lastMessage.text.length > 50 ? '...' : '') : 'No messages yet';
+                        const timestamp = c.lastMessage?.timestamp || c.createdAt;
+                        const timeStr = timestamp ? new Date(timestamp).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) : '';
+                        
+                        // Dummy partner for view function (admin is viewing)
+                        const participant1 = c.participants[0];
+                        const participant2 = c.participants[1];
+                        
+                        html += `
+                            <div class="flex items-center p-4 hover:bg-gray-50 cursor-pointer border-b border-gray-100 transition-colors" onclick="_renderChatViewAsAdmin('${c.id}', '${escapeHtml(displayName).replace(/'/g, "\\'")}', '${participant1}', '${participant2}')">
+                                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-white font-bold text-sm mr-3 shadow">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path></svg>
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex justify-between items-baseline">
+                                        <div class="font-semibold text-gray-800 truncate">${escapeHtml(displayName)}</div>
+                                        <div class="text-xs text-gray-400 ml-2 flex-shrink-0">${timeStr}</div>
+                                    </div>
+                                    <div class="text-sm text-gray-500 truncate">${lastMsg}</div>
+                                    <div class="text-xs text-amber-600 mt-1">${c.participants.length} participants</div>
+                                </div>
+                            </div>
+                        `;
+                    });
+                }
+                
+                html += `
+                        </div>
+                    </div>
+                `;
+                
+                container.innerHTML = html;
+                
+            } catch (e) {
+                console.error("Error loading monitor chats:", e);
+                container.innerHTML = `<div class="p-8 text-center text-red-500">Failed to load conversations.</div>`;
+            }
+        }
+        
+        // Admin read-only chat view
+        async function _renderChatViewAsAdmin(chatId, chatParticipantNames, participant1, participant2) {
+            const container = document.getElementById('msg-center-content-area');
+            if (!container) return;
+            
+            // Clean up previous listener
+            if (_activeChatUnsub) { _activeChatUnsub(); _activeChatUnsub = null; }
+
+            container.innerHTML = `
+                <div class="flex flex-col h-full bg-gray-50">
+                    <!-- Chat Header -->
+                    <div class="px-4 py-3 bg-amber-50 border-b border-amber-200 flex justify-between items-center">
+                        <div class="flex items-center gap-2">
+                             <button onclick="_renderMsgTabContent('monitor', true)" class="p-1 rounded-full hover:bg-amber-100 text-amber-700">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                            </button>
+                            <div class="flex items-center gap-2">
+                                <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                                <h4 class="font-bold text-amber-900">${escapeHtml(chatParticipantNames)}</h4>
+                            </div>
+                        </div>
+                        <span class="text-xs bg-amber-200 text-amber-800 px-2 py-1 rounded-full font-medium">Monitor Mode</span>
+                    </div>
+                    
+                    <!-- Messages Area -->
+                    <div class="flex-1 overflow-y-auto p-4 space-y-3" id="chat-messages-scroll">
+                        <div class="flex justify-center py-4"><div class="animate-spin rounded-full h-6 w-6 border-b-2 border-amber-500"></div></div>
+                    </div>
+                    
+                    <!-- Info Footer (no input for admin in monitor mode) -->
+                    <div class="p-3 bg-amber-50 border-t border-amber-200 text-center text-xs text-amber-700">
+                        <svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Read-only view. You are monitoring this conversation.
+                    </div>
+                </div>
+             `;
+
+             // Start Real-time Listener for Messages
+             if (!firebaseInitialized) await initFirebase();
+             const db = window.firestoreDb;
+             
+             const messagesRef = window._fb.collection(db, 'chats', chatId, 'messages');
+             const q = window._fb.query(messagesRef, window._fb.orderBy('timestamp', 'asc'), window._fb.limit(100));
+             
+             _activeChatUnsub = window._fb.onSnapshot(q, (snapshot) => {
+                 const msgsDiv = document.getElementById('chat-messages-scroll');
+                 if (!msgsDiv) return;
+                 
+                 const messages = [];
+                 snapshot.forEach(d => messages.push({ id: d.id, ...d.data() }));
+                 
+                 if (messages.length === 0) {
+                     msgsDiv.innerHTML = `<div class="text-center text-gray-400 text-xs mt-4">No messages in this conversation yet.</div>`;
+                 } else {
+                     msgsDiv.innerHTML = messages.map(m => {
+                         // Show which user sent it
+                         const isParticipant1 = m.senderId === participant1;
+                         return `
+                            <div class="flex w-full ${isParticipant1 ? 'justify-start' : 'justify-end'}">
+                                <div class="max-w-[75%]">
+                                    <div class="text-[10px] font-semibold ${isParticipant1 ? 'text-blue-600' : 'text-green-600'} mb-1 px-2">
+                                        ${isParticipant1 ? '👤 User 1' : '👤 User 2'}
+                                    </div>
+                                    <div class="px-4 py-2 rounded-2xl text-sm ${isParticipant1 ? 'bg-blue-100 text-gray-800 rounded-tl-none' : 'bg-green-100 text-gray-800 rounded-tr-none'} shadow-sm">
+                                        <div>${escapeHtml(m.text)}</div>
+                                        <div class="text-[10px] text-gray-500 mt-1 opacity-75">
+                                            ${new Date(m.timestamp).toLocaleString([], {month: 'short', day: 'numeric', hour: '2-digit', minute:'2-digit'})}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         `;
+                     }).join('');
+                     
+                     // Scroll to bottom
+                     msgsDiv.scrollTop = msgsDiv.scrollHeight;
+                 }
+             });
+        }
+
+        // --- Tab 2: Chats (User to User) ---
+        async function _renderChatsTab(container, isAdmin) {
+            container.innerHTML = `<div class="flex justify-center items-center h-full"><div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>`;
+            
+            try {
+                const myDeviceId = getDeviceId();
+                const userDoc = await resolveUserDocRef(myDeviceId);
+                if (!userDoc) {
+                    container.innerHTML = `<div class="p-8 text-center text-gray-500">Please register to use chat.</div>`;
+                    return;
+                }
+                const myId = userDoc.id;
+                
+                // Fetch conversations where I am a participant
+                if (!firebaseInitialized) await initFirebase();
+                const db = window.firestoreDb;
+                const chatsCollection = window._fb.collection(db, 'chats');
+                
+                // Query: where participants array-contains myId
+                const q = window._fb.query(chatsCollection, window._fb.where('participants', 'array-contains', myId));
+                const snapshot = await window._fb.getDocs(q);
+                
+                const conversations = [];
+                snapshot.forEach(d => conversations.push({ id: d.id, ...d.data() }));
+                
+                // Sort by lastMessage timestamp (most recent first)
+                conversations.sort((a, b) => {
+                    const aTime = a.lastMessage?.timestamp || a.createdAt || 0;
+                    const bTime = b.lastMessage?.timestamp || b.createdAt || 0;
+                    return new Date(bTime) - new Date(aTime);
+                });
+                
+                // Render
+                let html = `
+                    <div class="flex flex-col h-full">
+                        <div class="p-4 border-b flex justify-between items-center bg-white">
+                            <h4 class="font-bold text-gray-700">Conversations</h4>
+                            <button onclick="_renderUserSelection(document.getElementById('msg-center-content-area'))" class="px-3 py-1.5 bg-blue-600 text-white text-xs font-bold rounded-full hover:bg-blue-700 flex items-center gap-1 shadow-sm">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                                New Chat
+                            </button>
+                        </div>
+                        <div class="flex-1 overflow-y-auto">
+                `;
+                
+                if (conversations.length === 0) {
+                    html += `
+                        <div class="p-4 flex flex-col items-center justify-center text-gray-500 mt-8">
+                            <svg class="w-16 h-16 text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                            <p class="mb-2">No active conversations.</p>
+                            <p class="text-sm">Start a chat to connect with other users.</p>
+                            ${!isAdmin ? `<div class="mt-8 pt-6 border-t w-full text-center"><p class="text-xs text-gray-400 uppercase font-bold mb-2">Your Reports</p><p class="text-xs text-gray-500">If you have reported questions, Admin replies will appear here soon.</p></div>` : ''}
+                        </div>
+                    `;
+                } else {
+                    conversations.forEach(c => {
+                        // Determine chat partner name
+                        const partnerName = c.participantMap ? 
+                            Object.entries(c.participantMap).find(([id, name]) => id !== myId)?.[1] || 'Unknown' :
+                            (c.participantNames?.find(n => n !== userDoc.data.name) || 'Unknown');
+                        
+                        const partnerId = c.participants.find(id => id !== myId);
+                        
+                        const lastMsg = c.lastMessage ? escapeHtml(c.lastMessage.text).substring(0, 40) + (c.lastMessage.text.length > 40 ? '...' : '') : 'No messages yet';
+                        const timestamp = c.lastMessage?.timestamp || c.createdAt;
+                        const timeStr = timestamp ? new Date(timestamp).toLocaleDateString([], { month: 'short', day: 'numeric' }) : '';
+                        
+                        html += `
+                            <div class="flex items-center p-4 hover:bg-gray-50 cursor-pointer border-b border-gray-100 transition-colors" onclick="_renderChatView(document.getElementById('msg-center-content-area'), '${c.id}', '${escapeHtml(partnerName).replace(/'/g, "\\'")}', '${partnerId}')">
+                                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center text-white font-bold text-lg mr-3 shadow">
+                                    ${partnerName.charAt(0).toUpperCase()}
+                                </div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex justify-between items-baseline">
+                                        <div class="font-semibold text-gray-800 truncate">${escapeHtml(partnerName)}</div>
+                                        <div class="text-xs text-gray-400 ml-2 flex-shrink-0">${timeStr}</div>
+                                    </div>
+                                    <div class="text-sm text-gray-500 truncate">${lastMsg}</div>
+                                </div>
+                            </div>
+                        `;
+                    });
+                }
+                
+                html += `
+                        </div>
+                    </div>
+                `;
+                
+                container.innerHTML = html;
+                
+            } catch (e) {
+                console.error("Error loading chats:", e);
+                container.innerHTML = `<div class="p-8 text-center text-red-500">Failed to load conversations.</div>`;
+            }
+        }
+        // --- User Selection for New Chat ---
+        async function _renderUserSelection(container) {
+            container.innerHTML = `<div class="flex justify-center items-center h-full"><div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>`;
+
+            try {
+                // Fetch all users
+                const users = [];
+                if (!firebaseInitialized) await initFirebase();
+                if (window._fb && window._fb.collection) {
+                    const db = window.firestoreDb;
+                    // Maybe optimize this query later? but for now get all
+                    const qs = await window._fb.getDocs(window._fb.collection(db, 'users'));
+                    qs.forEach(d => users.push({ id: d.id, ...d.data() }));
+                }
+
+                // Filter out self
+                const myDeviceId = getDeviceId();
+                // Resolve my name for display logic if needed
+                const userDoc = await resolveUserDocRef(myDeviceId);
+                const myName = userDoc ? (userDoc.data.name || 'Me') : 'Me';
+
+                const validUsers = users.filter(u => u.deviceId !== myDeviceId && u.name);
+
+                // Sort by name
+                validUsers.sort((a, b) => (a.name || '').localeCompare(b.name || ''));
+
+                const html = `
+                    <div class="flex flex-col h-full bg-gray-50">
+                        <div class="p-4 bg-white border-b sticky top-0 z-10">
+                            <div class="flex items-center gap-2 mb-3">
+                                <button onclick="_renderMsgTabContent('chats', ${window._currentUserIsAdmin !== undefined ? window._currentUserIsAdmin : 'false'})" class="p-1 rounded-full hover:bg-gray-100">
+                                    <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                                </button>
+                                <h4 class="font-bold text-gray-800 text-lg">New Message</h4>
+                            </div>
+                            <input type="text" id="user-search-input" placeholder="Search people..." class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none text-sm" oninput="_filterUserList(this.value)">
+                        </div>
+                        <div class="flex-1 overflow-y-auto p-2" id="user-list-container">
+                            ${validUsers.map(u => `
+                                <div class="user-card flex items-center p-3 hover:bg-white hover:shadow-sm rounded-lg cursor-pointer transition-all border border-transparent hover:border-gray-200" onclick="startChatWith('${u.id}', '${escapeHtml(u.name || 'Unknown').replace(/'/g, "\\'")}')" data-name="${(u.name || '').toLowerCase()}">
+                                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-lg mr-3">
+                                        ${(u.name || '?').charAt(0).toUpperCase()}
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-800">${escapeHtml(u.name)}</div>
+                                        <div class="text-xs text-gray-500">${u.role || (u.status === 'Admin' ? 'Administrator' : 'User')} • ${escapeHtml(u.city || 'Unknown Location')}</div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+
+                container.innerHTML = html;
+
+                // Expose filter helper globally for this view
+                window._filterUserList = (term) => {
+                    const cards = document.querySelectorAll('.user-card');
+                    const t = term.toLowerCase();
+                    cards.forEach(c => {
+                        const n = c.dataset.name;
+                        if (n.includes(t)) c.classList.remove('hidden');
+                        else c.classList.add('hidden');
+                    });
+                };
+            } catch (e) {
+                console.error("Error loading users:", e);
+                container.innerHTML = `<div class="p-8 text-center text-red-500">Failed to load user list.</div>`;
+            }
+        }
+
+        async function startChatWith(targetUserId, targetName) {
+            const myDeviceId = getDeviceId();
+            try {
+                const userDoc = await resolveUserDocRef(myDeviceId);
+                if (!userDoc) { showMessage("Please register to chat.", "error"); return; }
+                const myId = userDoc.id; // Firestore Document ID
+                const myName = userDoc.data.name || 'Anonymous';
+
+                // Unique Chat ID: sort IDs
+                const participantIds = [myId, targetUserId].sort();
+                const chatId = participantIds.join('_');
+
+                // Create conversation if not exists
+                if (!firebaseInitialized) await initFirebase();
+                const db = window.firestoreDb;
+                const chatRef = window._fb.doc(db, 'chats', chatId);
+                const chatSnap = await window._fb.getDoc(chatRef);
+
+                if (!chatSnap.exists()) {
+                    await window._fb.setDoc(chatRef, {
+                        participants: participantIds,
+                        participantNames: [myName, targetName], // Approximation, array order matches IDs? No, just store for search
+                        participantMap: { [myId]: myName, [targetUserId]: targetName },
+                        createdAt: new Date().toISOString(),
+                        lastMessage: null,
+                        visibleTo: participantIds
+                    });
+                }
+
+                // Switch to Chat View
+                _renderChatView(document.getElementById('msg-center-content-area'), chatId, targetName, targetUserId);
+
+            } catch (e) {
+                console.error("Error starting chat:", e);
+                showMessage("Could not initialize chat.", "error");
+            }
+        }
+
+        let _activeChatUnsub = null;
+
+        async function _renderChatView(container, chatId, chatPartnerName, chatPartnerId) {
+            // Clean up previous listener if switching within same modal session
+            if (_activeChatUnsub) { _activeChatUnsub(); _activeChatUnsub = null; }
+
+            const myDeviceId = getDeviceId();
+            // We need my ID for 'sent' vs 'received' style.
+            // resolveUserDocRef might be slow repeatedly? Call once.
+            const userDoc = await resolveUserDocRef(myDeviceId);
+            const myId = userDoc ? userDoc.id : null;
+
+            container.innerHTML = `
+                <div class="flex flex-col h-full bg-gray-50">
+                    <!-- Chat Header -->
+                    <div class="px-4 py-3 bg-white border-b flex justify-between items-center shadow-sm">
+                        <div class="flex items-center gap-2">
+                             <button onclick="_renderMsgTabContent('chats', ${window._currentUserIsAdmin !== undefined ? window._currentUserIsAdmin : 'false'})" class="p-1 rounded-full hover:bg-gray-100 text-gray-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                            </button>
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-sm shadow">
+                                    ${chatPartnerName.charAt(0).toUpperCase()}
+                                </div>
+                                <h4 class="font-bold text-gray-800">${escapeHtml(chatPartnerName)}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Messages Area -->
+                    <div class="flex-1 overflow-y-auto p-4 space-y-3" id="chat-messages-scroll">
+                        <div class="flex justify-center py-4"><div class="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-500"></div></div>
+                    </div>
+                    
+                    <!-- Input Area -->
+                    <div class="p-3 bg-white border-t">
+                        <form onsubmit="event.preventDefault(); _sendChatMessage('${chatId}', '${myId}');" class="flex gap-2">
+                            <input type="text" id="chat-input" class="flex-1 border rounded-full px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none" placeholder="Type a message..." autocomplete="off">
+                            <button type="submit" class="p-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 shadow-md transition-transform transform active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed">
+                                <svg class="w-5 h-5 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+             `;
+
+            // Start Real-time Listener for Messages
+            if (!firebaseInitialized) await initFirebase();
+            const db = window.firestoreDb;
+
+            // Check if 'messages' subcollection exists? Or just array in doc? 
+            // Subcollection is better for scalability.
+            const messagesRef = window._fb.collection(db, 'chats', chatId, 'messages');
+            const q = window._fb.query(messagesRef, window._fb.orderBy('timestamp', 'asc'), window._fb.limit(100)); // Limit to last 100
+
+            _activeChatUnsub = window._fb.onSnapshot(q, (snapshot) => {
+                const msgsDiv = document.getElementById('chat-messages-scroll');
+                if (!msgsDiv) return;
+
+                const messages = [];
+                snapshot.forEach(d => messages.push({ id: d.id, ...d.data() }));
+
+                if (messages.length === 0) {
+                    msgsDiv.innerHTML = `<div class="text-center text-gray-400 text-xs mt-4">Start the conversation...</div>`;
+                } else {
+                    msgsDiv.innerHTML = messages.map(m => {
+                        const isMe = m.senderId === myId;
+                        return `
+                            <div class="flex w-full ${isMe ? 'justify-end' : 'justify-start'}">
+                                <div class="max-w-[75%] px-4 py-2 rounded-2xl text-sm ${isMe ? 'bg-blue-600 text-white rounded-tr-none' : 'bg-gray-200 text-gray-800 rounded-tl-none'} shadow-sm">
+                                    <div>${escapeHtml(m.text)}</div>
+                                    <div class="text-[10px] ${isMe ? 'text-blue-200 text-right' : 'text-gray-500'} mt-1 opacity-75">
+                                        ${new Date(m.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                                    </div>
+                                </div>
+                            </div>
+                         `;
+                    }).join('');
+
+                    // Scroll to bottom
+                    msgsDiv.scrollTop = msgsDiv.scrollHeight;
+                }
+            });
+
+            // Attach sender function globally so form can call it
+            window._sendChatMessage = async (cId, sId) => {
+                const input = document.getElementById('chat-input');
+                const text = input.value.trim();
+                if (!text) return;
+
+                input.value = ''; // clear immediately
+
+                try {
+                    if (!firebaseInitialized) await initFirebase();
+                    const db = window.firestoreDb;
+                    const messagesRef = window._fb.collection(db, 'chats', cId, 'messages');
+
+                    await window._fb.setDoc(window._fb.doc(messagesRef), { // Auto ID
+                        text: text,
+                        senderId: sId,
+                        timestamp: new Date().toISOString()
+                    });
+
+                    // Update last message in parent doc
+                    const chatDocRef = window._fb.doc(db, 'chats', cId);
+                    await window._fb.updateDoc(chatDocRef, {
+                        lastMessage: {
+                            text: text,
+                            senderId: sId,
+                            timestamp: new Date().toISOString()
+                        },
+                        updatedAt: new Date().toISOString()
+                    });
+
+                } catch (e) {
+                    console.error("Failed to send message:", e);
+                    showMessage("Failed to send.", "error");
+                }
+            };
+        }
+
+        async function openMessageCenter_OLD() { // Renamed original function for reference during development
             try {
                 // Determine Admin vs User
                 const deviceId = getDeviceId();
