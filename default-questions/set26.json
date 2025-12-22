@@ -85,7 +85,7 @@
   },
   {
     "id": 8,
-    "question": "Which best describes the behavior of Ama's boss in the scenario?",
+    "question": "Ama works as a receptionist at an educational institution. Her boss just came through the door and yelled at her, telling her that the front office was a mess and that she needed to get up and clean it immediately. After her boss left the room, Ama grabbed some papers and violently slammed them into the dustbin. \nWhich best describes the behavior of Ama's boss in the scenario?",
     "options": {
       "A": "Rude",
       "B": "Impolite",
@@ -219,13 +219,13 @@
     "id": 19,
     "question": "Who is the Director-General of the Ghana TVET Service?",
     "options": {
-      "A": "Mr. David Prah",
-      "B": "Madam Mawusi Nudekor Awity",
-      "C": "Madam Gifty Twum Boafo",
-      "D": "Dr. Fred Kyei Asamoah"
-    },
-    "answer": "B",
-    "explanation": "As of early 2023, Madam Mawusi Nudekor Awity served as Director-General. Note: This position may have changed; verify with current Ghana TVET Service records."
+    "A": "Mr. David Prah",
+    "B": "Madam Mawusi Nudekor Awity",
+    "C": "Engr. Dr. Eric Kofi Adzroe",
+    "D": "Dr. Fred Kyei Asamoah"
+  },
+    "answer": "C",
+    "explanation": "**Engr. Dr. Eric Kofi Adzroe** is the current Director-General of the Ghana TVET Service. \nMadam Mawusi Nudekor Awity previously held the position but is no longer in office. The other options listed do not serve as Director-General of the Ghana TVET Service."
   },
   {
     "id": 20,

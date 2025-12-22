@@ -1394,11 +1394,13 @@
                             <input type="range" id="ttsPitch" min="0" max="2" step="0.1" value="${quizSettings.ttsPitch}" oninput="updateSettingsAuto(); document.getElementById('ttsPitchValue').textContent = this.value" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
                         </div>
                     </div>
+                    <!-- Legacy Admin Button Hidden
                     <div class="border-t pt-4">
                         <h3 class="text-xl font-semibold text-gray-800">Admin</h3>
                         <p class="text-sm text-gray-600 mb-3">View and manage questions reported by users. Requires admin password.</p>
                         <button onclick="promptAdminAndShowReports()" class="px-4 py-2 bg-yellow-600 text-white rounded-lg font-semibold hover:bg-yellow-700">View Reported Questions (Admin)</button>
                     </div>
+                    -->
                 </div>
             `;
         }
@@ -4678,12 +4680,33 @@
         }
 
         async function handleResolveReport(id) {
-            if (!confirm("Update report status?")) return;
             try {
-                await updateReportStatus(id, 'resolved');
-                renderReportsList();
-                showMessage("Report updated.", "success");
+                // Fetch latest status to toggle correctly
+                const reportRef = window._fb.doc(window.firestoreDb, 'reports', id);
+                const snap = await window._fb.getDoc(reportRef);
+
+                if (!snap.exists()) {
+                    showMessage("Report not found.", "error");
+                    return;
+                }
+
+                const currentStatus = snap.data().status;
+                const newStatus = (currentStatus === 'resolved') ? 'open' : 'resolved';
+
+                if (!confirm(`Mark this report as ${newStatus}?`)) return;
+
+                await window._fb.updateDoc(reportRef, { status: newStatus });
+
+                // Refresh UI
+                if (document.getElementById('msg-center-modal')) {
+                    openMessageCenter(); // Re-open (refresh) the modal
+                } else {
+                    renderReportsList(); // Fallback
+                }
+
+                showMessage(`Report marked as ${newStatus}.`, "success");
             } catch (e) {
+                console.error(e);
                 showMessage("Failed to update status.", "error");
             }
         }
@@ -4906,8 +4929,16 @@
 
                 let displayMessages = [];
                 if (isAdmin) {
-                    // Admin: Show All, sort by date (newest first). Prioritize unresolved?
-                    displayMessages = reports.sort((a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0));
+                    // Admin: Sort by Status (Open first), then Date (Newest first)
+                    displayMessages = reports.sort((a, b) => {
+                        // 1. Status: Open/Pending < Resolved
+                        const isResolvedA = a.status === 'resolved';
+                        const isResolvedB = b.status === 'resolved';
+                        if (isResolvedA !== isResolvedB) return isResolvedA ? 1 : -1;
+
+                        // 2. Date: Newest first
+                        return new Date(b.createdAt || 0) - new Date(a.createdAt || 0);
+                    });
                 } else {
                     // User: My messages
                     const myDeviceId = getDeviceId();
@@ -4936,6 +4967,13 @@
                             ? `<div class="text-xs text-gray-500 mt-1 mb-2 border-t border-dashed pt-1"><span class="font-mono bg-gray-50 px-1 rounded">${escapeHtml(sourceFile)}</span> <span class="text-gray-400">${sourceLine}</span></div>`
                             : '';
 
+                        // Extract Tags
+                        const tagsHtml = (r.tags && r.tags.length > 0)
+                            ? `<div class="flex flex-wrap gap-1 mt-2 mb-2">
+                                ${r.tags.map(t => `<span class="px-2 py-0.5 bg-indigo-50 text-indigo-700 text-[10px] font-bold uppercase rounded-md border border-indigo-100">${escapeHtml(t)}</span>`).join('')}
+                               </div>`
+                            : '';
+
                         return `
                             <div class="border rounded-xl p-4 bg-white border-gray-200 hover:shadow-md transition-shadow">
                                 <div class="flex justify-between items-start mb-2">
@@ -4954,6 +4992,7 @@
                                     </div>
                                 </div>
                                 <div class="text-sm font-medium text-gray-800 mb-1">${escapeHtml(r.question || 'Unknown Question')}</div>
+                                ${tagsHtml}
                                 <div class="text-xs text-gray-500 italic mb-2">"${escapeHtml(r.comment || '')}"</div>
                                 ${sourceInfo}
                                 
