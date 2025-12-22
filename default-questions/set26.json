@@ -219,11 +219,11 @@
     "id": 19,
     "question": "Who is the Director-General of the Ghana TVET Service?",
     "options": {
-    "A": "Mr. David Prah",
-    "B": "Madam Mawusi Nudekor Awity",
-    "C": "Engr. Dr. Eric Kofi Adzroe",
-    "D": "Dr. Fred Kyei Asamoah"
-  },
+      "A": "Mr. David Prah",
+      "B": "Madam Mawusi Nudekor Awity",
+      "C": "Engr. Dr. Eric Kofi Adzroe",
+      "D": "Dr. Fred Kyei Asamoah"
+    },
     "answer": "C",
     "explanation": "**Engr. Dr. Eric Kofi Adzroe** is the current Director-General of the Ghana TVET Service. \nMadam Mawusi Nudekor Awity previously held the position but is no longer in office. The other options listed do not serve as Director-General of the Ghana TVET Service."
   },
@@ -859,7 +859,7 @@
       "D": "Faith Aku Dzakpasu"
     },
     "answer": "B",
-    "explanation": "Eric Asomani Asante was honoured as Ghana’s National Best Teacher for 2020, recognising his exceptional contributions to education. :contentReference[oaicite:0]{index=0}"
+    "explanation": "Eric Asomani Asante was honoured as Ghana’s National Best Teacher for 2020, recognising his exceptional contributions to education."
   },
   {
     "id": 77,
@@ -871,7 +871,7 @@
       "D": "Richard W. Tiimob"
     },
     "answer": "A",
-    "explanation": "Mr. Ebenezer Kojo Otoo of Winneba Senior High School was crowned Ghana’s Most Outstanding Teacher in 2021. :contentReference[oaicite:1]{index=1}"
+    "explanation": "Mr. Ebenezer Kojo Otoo of Winneba Senior High School was crowned Ghana’s Most Outstanding Teacher in 2021. "
   },
   {
     "id": 78,
@@ -883,7 +883,7 @@
       "D": "Fuseina Fuseini"
     },
     "answer": "C",
-    "explanation": "Ms. Stella Gyimaah Larbi, a teacher at Adenta Community JHS, was adjudged the overall national best teacher for 2022. :contentReference[oaicite:2]{index=2}"
+    "explanation": "Ms. Stella Gyimaah Larbi, a teacher at Adenta Community JHS, was adjudged the overall national best teacher for 2022. "
   },
   {
     "id": 79,
@@ -895,7 +895,7 @@
       "D": "Ebenezer Kojo Otoo"
     },
     "answer": "B",
-    "explanation": "Faith Aku Dzakpasu of Greta ‘D’ Shepherd Basic School won the 2023 Most Outstanding Teacher Award in Ghana. :contentReference[oaicite:3]{index=3}"
+    "explanation": "Faith Aku Dzakpasu of Greta ‘D’ Shepherd Basic School won the 2023 Most Outstanding Teacher Award in Ghana."
   },
   {
     "id": 80,
@@ -907,7 +907,7 @@
       "D": "Richard W. Tiimob"
     },
     "answer": "B",
-    "explanation": "Miss Fuseina Fuseini of SDA Basic School, Madina was adjudged the national best teacher for 2024 at the Ghana Teacher Prize. :contentReference[oaicite:4]{index=4}"
+    "explanation": "Miss Fuseina Fuseini of SDA Basic School, Madina was adjudged the national best teacher for 2024 at the Ghana Teacher Prize."
   },
   {
     "id": 81,
@@ -915,10 +915,10 @@
     "options": {
       "A": "Ebenezer Kojo Otoo",
       "B": "Fuseina Fuseini",
-      "C": "Richard W. Tiimob",
+      "C": "Richard Wonnsibe Tiimob",
       "D": "Faith Aku Dzakpasu"
     },
     "answer": "C",
-    "explanation": "Richard W. Tiimob, a science teacher at Savelugu Senior High School, was crowned Ghana’s Most Outstanding Teacher in 2025. :contentReference[oaicite:5]{index=5}"
+    "explanation": "Richard Wonnsibe Tiimob, a science teacher at Savelugu Senior High School, was crowned Ghana’s Most Outstanding Teacher in 2025."
   }
 ]
