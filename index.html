@@ -1866,6 +1866,38 @@
                                         ${confirmText}
                                     </button>
                                 </div>
+                                </div>
+                                <div class="relative">
+                                    <button onclick="event.stopPropagation(); toggleChatMenu('${c.id}')" class="p-2 rounded-full hover:bg-gray-200 transition-colors opacity-0 group-hover:opacity-100">
+                                        <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>
+                                    </button>
+                                    <div id="chat-menu-${c.id}" class="hidden absolute right-0 top-full mt-1 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50 min-w-[200px]">
+                                        <button onclick="deleteChat('${c.id}')" class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm text-red-600 flex items-center gap-2">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                                            Delete Chat
+                                        </button>
+                                        <button onclick="blockUserFromMessaging('${partnerId}', '${escapeHtml(partnerName).replace(/'/g, "\\''")}')" class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm text-gray-700 flex items-center gap-2">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
+                                            Block Sender
+                                        </button>
+                                        <button onclick="showPasswordHideDialog('${c.id}')" class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm text-gray-700 flex items-center gap-2">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                                            Hide with Password
+                                        </button>
+                                        ${isAdmin ? `
+                                        <hr class="my-2"/>
+                                        <div class="px-3 py-1 text-[10px] text-gray-400 uppercase font-bold">Admin Only</div>
+                                        <button onclick="adminQuickBlockMessaging('${partnerId}', '${escapeHtml(partnerName).replace(/'/g, "\\''")}')" class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm text-orange-600 flex items-center gap-2">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
+                                            Block from Messaging (All)
+                                        </button>
+                                        <button onclick="adminQuickBlockApp('${partnerId}', '${escapeHtml(partnerName).replace(/'/g, "\\''")}')" class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm text-red-700 flex items-center gap-2">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                                            Block from App
+                                        </button>
+                                        ` : ''}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -5429,8 +5461,22 @@
                 const conversations = [];
                 snapshot.forEach(d => conversations.push({ id: d.id, ...d.data() }));
                 
+                // Admin Monitor Mode - show ALL chats (no filtering)
+                let filteredConversations = conversations;
+                if (false) {  // Admin always sees all chats in monitor mode
+                    try {
+                        const hiddenRef = window._fb.collection(db, 'hiddenChats', myId, 'hidden');
+                        const hiddenSnapshot = await window._fb.getDocs(hiddenRef);
+                        const hiddenIds = new Set();
+                        hiddenSnapshot.forEach(d => hiddenIds.add(d.id));
+                        filteredConversations = conversations.filter(c => !hiddenIds.has(c.id));
+                    } catch (e) {
+                        console.debug('Error loading hidden chats:', e);
+                    }
+                }
+                
                 // Sort by lastMessage timestamp (most recent first)
-                conversations.sort((a, b) => {
+                filteredConversations.sort((a, b) => {
                     const aTime = a.lastMessage?.timestamp || a.createdAt || 0;
                     const bTime = b.lastMessage?.timestamp || b.createdAt || 0;
                     return new Date(bTime) - new Date(aTime);
@@ -5449,14 +5495,14 @@
                         <div class="flex-1 overflow-y-auto">
                 `;
                 
-                if (conversations.length === 0) {
+                if (filteredConversations.length === 0) {
                     html += `
                         <div class="p-8 text-center text-gray-500">
                             <p>No user conversations yet.</p>
                         </div>
                     `;
                 } else {
-                    conversations.forEach(c => {
+                    filteredConversations.forEach(c => {
                         // Extract both participant names
                         const names = c.participantMap ? Object.values(c.participantMap) : (c.participantNames || ['User A', 'User B']);
                         const displayName = names.join(' ↔ ');
@@ -5615,12 +5661,20 @@
                 // Render
                 let html = `
                     <div class="flex flex-col h-full">
-                        <div class="p-4 border-b flex justify-between items-center bg-white">
-                            <h4 class="font-bold text-gray-700">Conversations</h4>
-                            <button onclick="_renderUserSelection(document.getElementById('msg-center-content-area'))" class="px-3 py-1.5 bg-blue-600 text-white text-xs font-bold rounded-full hover:bg-blue-700 flex items-center gap-1 shadow-sm">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
-                                New Chat
-                            </button>
+                        <div class="p-4 border-b bg-white">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="font-bold text-gray-700">Conversations</h4>
+                                <div class="flex gap-2">
+                                    <button onclick="clearAllChats()" class="px-3 py-1.5 bg-red-100 text-red-700 text-xs font-bold rounded-full hover:bg-red-200 flex items-center gap-1">
+                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                                        Clear All
+                                    </button>
+                                    <button onclick="_renderUserSelection(document.getElementById('msg-center-content-area'))" class="px-3 py-1.5 bg-blue-600 text-white text-xs font-bold rounded-full hover:bg-blue-700 flex items-center gap-1 shadow-sm">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                                        New Chat
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                         <div class="flex-1 overflow-y-auto">
                 `;
@@ -5648,18 +5702,51 @@
                         const timeStr = timestamp ? new Date(timestamp).toLocaleDateString([], { month: 'short', day: 'numeric' }) : '';
                         
                         html += `
-                            <div class="flex items-center p-4 hover:bg-gray-50 cursor-pointer border-b border-gray-100 transition-colors" onclick="_renderChatView(document.getElementById('msg-center-content-area'), '${c.id}', '${escapeHtml(partnerName).replace(/'/g, "\\'")}', '${partnerId}')">
-                                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center text-white font-bold text-lg mr-3 shadow">
-                                    ${partnerName.charAt(0).toUpperCase()}
-                                </div>
-                                <div class="flex-1 min-w-0">
-                                    <div class="flex justify-between items-baseline">
-                                        <div class="font-semibold text-gray-800 truncate">${escapeHtml(partnerName)}</div>
-                                        <div class="text-xs text-gray-400 ml-2 flex-shrink-0">${timeStr}</div>
+                            <div class="flex items-center p-4 hover:bg-gray-50 border-b border-gray-100 transition-colors relative group">
+                                <div class="flex-1 flex items-center cursor-pointer" onclick="_renderChatView(document.getElementById('msg-center-content-area'), '${c.id}', '${escapeHtml(partnerName).replace(/'/g, "\\'")}', '${partnerId}')">
+                                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center text-white font-bold text-lg mr-3 shadow">
+                                        ${partnerName.charAt(0).toUpperCase()}
                                     </div>
-                                    <div class="text-sm text-gray-500 truncate">${lastMsg}</div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="flex justify-between items-baseline">
+                                            <div class="font-semibold text-gray-800 truncate">${escapeHtml(partnerName)}</div>
+                                            <div class="text-xs text-gray-400 ml-2 flex-shrink-0">${timeStr}</div>
+                                        </div>
+                                        <div class="text-sm text-gray-500 truncate">${lastMsg}</div>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="relative ml-2">
+                                    <button onclick="event.stopPropagation(); toggleChatMenu('${c.id}')" class="p-2 rounded-full hover:bg-gray-200 transition-colors opacity-0 group-hover:opacity-100">
+                                        <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>
+                                    </button>
+                                    <div id="chat-menu-${c.id}" class="hidden absolute right-0 top-full mt-1 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50 min-w-[200px]">
+                                        <button onclick="deleteChat('${c.id}')" class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm text-red-600 flex items-center gap-2">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                                            Delete Chat
+                                        </button>
+                                        <button onclick="blockUserFromMessaging('${partnerId}', '${escapeHtml(partnerName).replace(/'/g, "\\''")}')" class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm text-gray-700 flex items-center gap-2">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
+                                            Block Sender
+                                        </button>
+                                        <button onclick="showPasswordHideDialog('${c.id}')" class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm text-gray-700 flex items-center gap-2">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                                            Hide with Password
+                                        </button>
+                                        ${isAdmin ? `
+                                        <hr class="my-2"/>
+                                        <div class="px-3 py-1 text-[10px] text-gray-400 uppercase font-bold">Admin Only</div>
+                                        <button onclick="adminQuickBlockMessaging('${partnerId}', '${escapeHtml(partnerName).replace(/'/g, "\\''")}')" class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm text-orange-600 flex items-center gap-2">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
+                                            Block from Messaging (All)
+                                        </button>
+                                        <button onclick="adminQuickBlockApp('${partnerId}', '${escapeHtml(partnerName).replace(/'/g, "\\''")}')" class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm text-red-700 flex items-center gap-2">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                                            Block from App
+                                        </button>
+                                        ` : ''}
+                                    </div>
+                                </div>
+</div>
                         `;
                     });
                 }
@@ -6378,6 +6465,209 @@
             } catch (e) {
                 console.error('Error unblocking user:', e);
                 showMessage('Failed to unblock user', 'error');
+            }
+        }
+
+
+
+
+        // ============= CHAT MANAGEMENT FUNCTIONS =============
+        
+        function toggleChatMenu(chatId) {
+            // Close all other menus
+            document.querySelectorAll('[id^="chat-menu-"]').forEach(menu => {
+                if (menu.id !== `chat-menu-${chatId}`) {
+                    menu.classList.add('hidden');
+                }
+            });
+            
+            // Toggle this menu
+            const menu = document.getElementById(`chat-menu-${chatId}`);
+            if (menu) {
+                menu.classList.toggle('hidden');
+            }
+        }
+
+        // Close menus when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('[id^="chat-menu-"]') && !e.target.closest('button[onclick*="toggleChatMenu"]')) {
+                document.querySelectorAll('[id^="chat-menu-"]').forEach(menu => menu.classList.add('hidden'));
+            }
+        });
+
+        async function clearAllChats() {
+            if (!confirm('Are you sure you want to clear ALL your chats? This cannot be undone.')) return;
+            
+            try {
+                const myDeviceId = getDeviceId();
+                const userDoc = await resolveUserDocRef(myDeviceId);
+                if (!userDoc) return;
+                
+                if (!firebaseInitialized) await initFirebase();
+                const db = window.firestoreDb;
+                const chatsCol = window._fb.collection(db, 'chats');
+                const q = window._fb.query(chatsCol, window._fb.where('participants', 'array-contains', userDoc.id));
+                const snapshot = await window._fb.getDocs(q);
+                
+                const deletePromises = [];
+                snapshot.forEach(doc => {
+                    deletePromises.push(window._fb.deleteDoc(doc.ref));
+                });
+                
+                await Promise.all(deletePromises);
+                showMessage('All chats cleared', 'success');
+                
+                // Refresh chat list
+                _renderMsgTabContent('chats', false);
+            } catch (e) {
+                console.error('Error clearing chats:', e);
+                showMessage('Failed to clear chats', 'error');
+            }
+        }
+
+        async function deleteChat(chatId) {
+            if (!confirm('Delete this conversation? This cannot be undone.')) return;
+            
+            try {
+                if (!firebaseInitialized) await initFirebase();
+                const db = window.firestoreDb;
+                const chatRef = window._fb.doc(db, 'chats', chatId);
+                await window._fb.deleteDoc(chatRef);
+                showMessage('Chat deleted', 'success');
+                
+                // Refresh
+                _renderMsgTabContent('chats', false);
+            } catch (e) {
+                console.error('Error deleting chat:', e);
+                showMessage('Failed to delete chat', 'error');
+            }
+        }
+
+        async function blockUserFromMessaging(userId, userName) {
+            const reason = await showCustomPrompt(
+                'Block User',
+                `Prevent <b>${escapeHtml(userName)}</b> from sending you messages?`,
+                'Optional reason...',
+                'Block',
+                'Cancel'
+            );
+            
+            if (reason === null) return;
+            
+            try {
+                const myDeviceId = getDeviceId();
+                const userDoc = await resolveUserDocRef(myDeviceId);
+                if (!userDoc) return;
+                
+                if (!firebaseInitialized) await initFirebase();
+                const db = window.firestoreDb;
+                const blockRef = window._fb.doc(db, 'chatBlocks', userDoc.id, 'blocked', userId);
+                await window._fb.setDoc(blockRef, {
+                    blockedAt: new Date().toISOString(),
+                    reason: reason || 'No reason provided'
+                });
+                
+                showMessage(`Blocked ${userName} from messaging you`, 'success');
+                toggleChatMenu('');  // Close menu
+            } catch (e) {
+                console.error('Error blocking user:', e);
+                showMessage('Failed to block user', 'error');
+            }
+        }
+
+        async function showPasswordHideDialog(chatId) {
+            const password = await showCustomPrompt(
+                'Hide Chat',
+                'Set a password to hide this conversation. You\'ll need it to view the chat later.',
+                'Enter password...',
+                'Hide Chat',
+                'Cancel',
+                'password'
+            );
+            
+            if (!password) return;
+            
+            if (password.length < 4) {
+                showMessage('Password must be at least 4 characters', 'warning');
+                return;
+            }
+            
+            try {
+                const myDeviceId = getDeviceId();
+                const userDoc = await resolveUserDocRef(myDeviceId);
+                if (!userDoc) return;
+                
+                // Hash password with SHA-256
+                const msgBuffer = new TextEncoder().encode(password);
+                const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+                const hashArray = Array.from(new Uint8Array(hashBuffer));
+                const passwordHash = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+                
+                if (!firebaseInitialized) await initFirebase();
+                const db = window.firestoreDb;
+                const hideRef = window._fb.doc(db, 'hiddenChats', userDoc.id, 'hidden', chatId);
+                await window._fb.setDoc(hideRef, {
+                    hiddenAt: new Date().toISOString(),
+                    passwordHash: passwordHash
+                });
+                
+                showMessage('Chat hidden', 'success');
+                _renderMsgTabContent('chats', false);
+            } catch (e) {
+                console.error('Error hiding chat:', e);
+                showMessage('Failed to hide chat', 'error');
+            }
+        }
+
+        async function adminQuickBlockMessaging(userId, userName) {
+            if (!confirm(`Block ${userName} from sending messages to ANY user?`)) return;
+            
+            try {
+                const blockData = {
+                    deviceId: userId,
+                    blockedFromApp: false,
+                    blockedFromMessaging: true,
+                    disableReporting: false,
+                    blockedAt: new Date().toISOString(),
+                    blockedBy: 'admin',
+                    reason: 'Blocked via chat menu'
+                };
+                
+                if (!firebaseInitialized) await initFirebase();
+                const docRef = window._fb.doc(firestoreDb, 'blockedUsers', userId);
+                await window._fb.setDoc(docRef, blockData);
+                
+                showMessage(`${userName} blocked from messaging`, 'success');
+                toggleChatMenu('');
+            } catch (e) {
+                console.error('Error blocking user:', e);
+                showMessage('Failed to block user', 'error');
+            }
+        }
+
+        async function adminQuickBlockApp(userId, userName) {
+            if (!confirm(`BLOCK ${userName} FROM APP? This will lock them out completely.`)) return;
+            
+            try {
+                const blockData = {
+                    deviceId: userId,
+                    blockedFromApp: true,
+                    blockedFromMessaging: false,
+                    disableReporting: false,
+                    blockedAt: new Date().toISOString(),
+                    blockedBy: 'admin',
+                    reason: 'Blocked via chat menu'
+                };
+                
+                if (!firebaseInitialized) await initFirebase();
+                const docRef = window._fb.doc(firestoreDb, 'blockedUsers', userId);
+                await window._fb.setDoc(docRef, blockData);
+                
+                showMessage(`${userName} blocked from app`, 'success');
+                toggleChatMenu('');
+            } catch (e) {
+                console.error('Error blocking user:', e);
+                showMessage('Failed to block user', 'error');
             }
         }
 
