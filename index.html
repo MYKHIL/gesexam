@@ -921,7 +921,8 @@
         }
 
         function disableStartButton() {
-            const originalStartQuiz = window.startQuiz;
+            // Only disable if called (i.e., user is actually blocked)
+            const originalStartQuiz = window.startQuiz || function() {};
             window.startQuiz = function() {
                 showMessage('Access restricted. Please contact administrator.', 'error');
             };
@@ -1093,6 +1094,9 @@
 
             // Start real-time block status listener
             startBlockStatusListener();
+
+            // Start message notification listener
+            startMessageNotificationListener();
             }
 
             // 1. Recursively load and merge all valid JSON files from base directory
@@ -1868,41 +1872,14 @@
                                 </div>
                                 </div>
                                 <div class="relative">
-                                    <button onclick="event.stopPropagation(); toggleChatMenu('${c.id}')" class="p-2 rounded-full hover:bg-gray-200 transition-colors opacity-0 group-hover:opacity-100">
-                                        <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="19" r="2"/></svg>
-                                    </button>
-                                    <div id="chat-menu-${c.id}" class="hidden absolute right-0 top-full mt-1 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50 min-w-[200px]">
-                                        <button onclick="deleteChat('${c.id}')" class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm text-red-600 flex items-center gap-2">
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
-                                            Delete Chat
-                                        </button>
-                                        <button onclick="blockUserFromMessaging('${partnerId}', '${escapeHtml(partnerName).replace(/'/g, "\\''")}')" class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm text-gray-700 flex items-center gap-2">
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
-                                            Block Sender
-                                        </button>
-                                        <button onclick="showPasswordHideDialog('${c.id}')" class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm text-gray-700 flex items-center gap-2">
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                                            Hide with Password
-                                        </button>
-                                        ${isAdmin ? `
-                                        <hr class="my-2"/>
-                                        <div class="px-3 py-1 text-[10px] text-gray-400 uppercase font-bold">Admin Only</div>
-                                        <button onclick="adminQuickBlockMessaging('${partnerId}', '${escapeHtml(partnerName).replace(/'/g, "\\''")}')" class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm text-orange-600 flex items-center gap-2">
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
-                                            Block from Messaging (All)
-                                        </button>
-                                        <button onclick="adminQuickBlockApp('${partnerId}', '${escapeHtml(partnerName).replace(/'/g, "\\''")}')" class="w-full text-left px-4 py-2 hover:bg-gray-50 text-sm text-red-700 flex items-center gap-2">
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                                            Block from App
-                                        </button>
-                                        ` : ''}
-                                    </div>
+                                </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 `;
 
+                // Attach event handlers
                 const confirmBtn = document.getElementById('modal-confirm-btn');
                 const cancelBtn = document.getElementById('modal-cancel-btn');
 
@@ -5875,6 +5852,8 @@
         let _activeChatUnsub = null;
 
         async function _renderChatView(container, chatId, chatPartnerName, chatPartnerId) {
+            setActiveChatId(chatId);
+
             // Clean up previous listener if switching within same modal session
             if (_activeChatUnsub) { _activeChatUnsub(); _activeChatUnsub = null; }
 
@@ -5889,7 +5868,7 @@
                     <!-- Chat Header -->
                     <div class="px-4 py-3 bg-white border-b flex justify-between items-center shadow-sm">
                         <div class="flex items-center gap-2">
-                             <button onclick="_renderMsgTabContent('chats', ${window._currentUserIsAdmin !== undefined ? window._currentUserIsAdmin : 'false'})" class="p-1 rounded-full hover:bg-gray-100 text-gray-600">
+                             <button onclick="setActiveChatId(null); _renderMsgTabContent('chats', ${window._currentUserIsAdmin !== undefined ? window._currentUserIsAdmin : 'false'})" class="p-1 rounded-full hover:bg-gray-100 text-gray-600">
                                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                             </button>
                             <div class="flex items-center gap-2">
@@ -6831,6 +6810,222 @@
             }
         }
 
+
+
+
+        // ============= BLOCK ENFORCEMENT FUNCTIONS =============
+        
+        async function _sendChatMessage(chatId, senderId) {
+            const input = document.getElementById('chat-input');
+            const messageText = input.value.trim();
+            if (!messageText) return;
+            
+            try {
+                // Get current user's device ID for block checks
+                const myDeviceId = getDeviceId();
+                
+                // Check 1: Am I blocked from messaging (admin block)?
+                if (!firebaseInitialized) await initFirebase();
+                const db = window.firestoreDb;
+                
+                const myBlockRef = window._fb.doc(db, 'blockedUsers', myDeviceId);
+                const myBlockSnap = await window._fb.getDoc(myBlockRef);
+                
+                if (myBlockSnap.exists() && myBlockSnap.data().blockedFromMessaging) {
+                    showMessage('You are blocked from sending messages.', 'error');
+                    return;
+                }
+                
+                if (myBlockSnap.exists() && myBlockSnap.data().blockedFromApp) {
+                    showMessage('Your access is restricted.', 'error');
+                    return;
+                }
+                
+                // Check 2: Has the other person blocked me from messaging them?
+                const userDoc = await resolveUserDocRef(myDeviceId);
+                if (!userDoc) return;
+                const myId = userDoc.id;
+                
+                // Get the other participant ID
+                const chatRef = window._fb.doc(db, 'chats', chatId);
+                const chatSnap = await window._fb.getDoc(chatRef);
+                if (chatSnap.exists()) {
+                    const chatData = chatSnap.data();
+                    const otherUserId = chatData.participants.find(id => id !== myId);
+                    
+                    if (otherUserId) {
+                        // Check if they blocked me
+                        const blockRef = window._fb.doc(db, 'chatBlocks', otherUserId, 'blocked', myId);
+                        const blockSnap = await window._fb.getDoc(blockRef);
+                        
+                        if (blockSnap.exists()) {
+                            showMessage('This user has blocked you from sending messages.', 'error');
+                            return;
+                        }
+                    }
+                }
+                
+                // All checks passed - send the message
+                const messagesRef = window._fb.collection(db, 'chats', chatId, 'messages');
+                await window._fb.addDoc(messagesRef, {
+                    text: messageText,
+                    senderId: senderId,
+                    timestamp: new Date().toISOString(),
+                    readBy: [senderId]
+                });
+                
+                // Update last message in chat
+                await window._fb.updateDoc(chatRef, {
+                    lastMessage: {
+                        text: messageText,
+                        senderId: senderId,
+                        timestamp: new Date().toISOString()
+                    }
+                });
+                
+                input.value = '';
+            } catch (e) {
+                console.error('Error sending message:', e);
+                showMessage('Failed to send message', 'error');
+            }
+        }
+
+
+        // ============= MESSAGE NOTIFICATION SYSTEM =============
+        let messageNotificationListener = null;
+        let lastMessageCount = 0;
+        let currentActiveChatId = null;  // Track which chat user is viewing
+        
+        async function startMessageNotificationListener() {
+            try {
+                const myDeviceId = getDeviceId();
+                const userDoc = await resolveUserDocRef(myDeviceId);
+                if (!userDoc) return;
+                const myId = userDoc.id;
+                
+                if (!firebaseInitialized) await initFirebase();
+                const db = window.firestoreDb;
+                
+                // Listen to all chats where user is a participant
+                const chatsCol = window._fb.collection(db, 'chats');
+                const q = window._fb.query(chatsCol, window._fb.where('participants', 'array-contains', myId));
+                
+                messageNotificationListener = window._fb.onSnapshot(q, async (snapshot) => {
+                    let totalUnreadCount = 0;
+                    
+                    for (const chatDoc of snapshot.docs) {
+                        const chatId = chatDoc.id;
+                        const chatData = chatDoc.data();
+                        
+                        // Get messages in this chat
+                        const messagesRef = window._fb.collection(db, 'chats', chatId, 'messages');
+                        const messagesSnap = await window._fb.getDocs(messagesRef);
+                        
+                        messagesSnap.forEach(msgDoc => {
+                            const msg = msgDoc.data();
+                            // Count unread: messages from others that I haven't read
+                            if (msg.senderId !== myId && !msg.readBy?.includes(myId)) {
+                                totalUnreadCount++;
+                                
+                                // Play sound if not in this chat actively AND this is a new message
+                                if (currentActiveChatId !== chatId) {
+                                    // Check if this is truly new (timestamp within last 5 seconds)
+                                    const msgTime = new Date(msg.timestamp).getTime();
+                                    const now = Date.now();
+                                    if (now - msgTime < 5000) {
+                                        playMessageSound();
+                                    }
+                                }
+                            }
+                        });
+                    }
+                    
+                    // Update floating button badge
+                    updateMessageBadge(totalUnreadCount);
+                    lastMessageCount = totalUnreadCount;
+                }, (error) => {
+                    console.debug('Message notification listener error:', error);
+                });
+                
+                console.log('Message notification listener started');
+            } catch (e) {
+                console.debug('Could not start message notification listener:', e);
+            }
+        }
+        
+        function updateMessageBadge(count) {
+            const badge = document.getElementById('message-badge');
+            if (badge) {
+                if (count > 0) {
+                    badge.textContent = count > 99 ? '99+' : count;
+                    badge.classList.remove('hidden');
+                } else {
+                    badge.classList.add('hidden');
+                }
+            }
+        }
+        
+        function playMessageSound() {
+            try {
+                // Create simple notification beep using Web Audio API
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                oscillator.frequency.value = 800; // Frequency in Hz
+                oscillator.type = 'sine';
+                
+                gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.2);
+                
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.2);
+            } catch (e) {
+                console.debug('Could not play notification sound:', e);
+            }
+        }
+        
+        // Track active chat for notification suppression
+        window.setActiveChatId = function(chatId) {
+            currentActiveChatId = chatId;
+            // Mark messages as read when entering chat
+            if (chatId) {
+                markChatMessagesAsRead(chatId);
+            }
+        };
+        
+        async function markChatMessagesAsRead(chatId) {
+            try {
+                const myDeviceId = getDeviceId();
+                const userDoc = await resolveUserDocRef(myDeviceId);
+                if (!userDoc) return;
+                const myId = userDoc.id;
+                
+                if (!firebaseInitialized) await initFirebase();
+                const db = window.firestoreDb;
+                const messagesRef = window._fb.collection(db, 'chats', chatId, 'messages');
+                const snapshot = await window._fb.getDocs(messagesRef);
+                
+                const updatePromises = [];
+                snapshot.forEach(msgDoc => {
+                    const msg = msgDoc.data();
+                    if (msg.senderId !== myId && !msg.readBy?.includes(myId)) {
+                        const readBy = msg.readBy || [];
+                        readBy.push(myId);
+                        updatePromises.push(
+                            window._fb.updateDoc(msgDoc.ref, { readBy })
+                        );
+                    }
+                });
+                
+                await Promise.all(updatePromises);
+            } catch (e) {
+                console.debug('Error marking messages as read:', e);
+            }
+        }
 
     </script>
 </body>
