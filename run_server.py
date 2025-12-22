@@ -238,7 +238,7 @@ def run(port: int, directory: str, open_browser_flag: bool = True):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Serve this project locally and open index.html')
-    parser.add_argument('--port', '-p', type=int, default=8000, help='Port to listen on (default: 8000)')
+    parser.add_argument('--port', '-p', type=int, default=4000, help='Port to listen on (default: 8000)')
     parser.add_argument('--dir', '-d', default='.', help='Directory to serve (default: current directory)')
     parser.add_argument('--no-open', action='store_true', help="Don't open the browser automatically")
 

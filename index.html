@@ -862,25 +862,26 @@
         async function checkBlockStatus() {
             try {
                 const deviceId = getDeviceId();
-                
+
                 if (!firebaseInitialized) await initFirebase();
-                
+
                 if (firebaseInitialized && firestoreDb && window._fb) {
                     try {
-                        const docRef = window._fb.doc(firestoreDb, 'blockedUsers', deviceId);
-                        const docSnap = await window._fb.getDoc(docRef);
-                        
-                        if (docSnap.exists()) {
-                            const data = docSnap.data();
-                            
-                            if (data.blockedFromApp) {
+                        // Get user document ID using resolveUserDocRef
+                        const userDoc = await resolveUserDocRef(deviceId);
+
+                        if (userDoc && userDoc.data) {
+                            const data = userDoc.data;
+
+                            // Check new schema: isBanned flag
+                            if (data.isBanned === true) {
                                 appBlocked = true;
-                                showLockoutScreen(data.reason || 'Your access has been restricted.');
-                                disableStartButton();
-                                return true;
+                                showLockoutScreen('Your access has been restricted by an administrator.');
+                                return true; // BLOCKED - stop loading
                             }
-                            
-                            if (data.blockedFromMessaging) {
+
+                            // Check messaging block
+                            if (data.cannotMessage === true) {
                                 messagingBlocked = true;
                                 disableReportFeatures();
                             }
@@ -889,8 +890,8 @@
                         console.debug('Error checking block status:', e);
                     }
                 }
-                
-                return false;
+
+                return false; // Not blocked
             } catch (e) {
                 console.debug('Block check failed:', e);
                 return false;
@@ -922,11 +923,11 @@
 
         function disableStartButton() {
             // Only disable if called (i.e., user is actually blocked)
-            const originalStartQuiz = window.startQuiz || function() {};
-            window.startQuiz = function() {
+            const originalStartQuiz = window.startQuiz || function () { };
+            window.startQuiz = function () {
                 showMessage('Access restricted. Please contact administrator.', 'error');
             };
-            
+
             setTimeout(() => {
                 const startBtn = document.querySelector('button[onclick*="startQuiz"]');
                 if (startBtn) {
@@ -945,10 +946,10 @@
                     if (firebaseInitialized && firestoreDb && window._fb) {
                         const docRef = window._fb.doc(firestoreDb, 'blockedUsers', deviceId);
                         const docSnap = await window._fb.getDoc(docRef);
-                        
+
                         if (docSnap.exists()) {
                             const data = docSnap.data();
-                            
+
                             // Only hide report button if explicitly disabled
                             if (data.disableReporting) {
                                 const reportBtn = document.getElementById('report-question-btn');
@@ -960,11 +961,11 @@
                     console.debug('Error checking report disable status:', e);
                 }
             }, 100);
-            
+
             // Block user-to-user messaging (but allow admin contact)
             const originalStartChat = window.startChat;
             if (originalStartChat) {
-                window.startChat = async function(targetUserId, targetName) {
+                window.startChat = async function (targetUserId, targetName) {
                     // Check if target is admin
                     const isAdminTarget = await checkIfAdmin(targetUserId);
                     if (isAdminTarget) {
@@ -975,14 +976,14 @@
                     }
                 };
             }
-            
+
             // Block report dialog if reporting is disabled
             const originalOpenReport = window.openReportDialog;
-            window.openReportDialog = function() {
+            window.openReportDialog = function () {
                 showMessage('Reporting is currently disabled for your account.', 'info');
             };
         }
-        
+
         async function checkIfAdmin(userId) {
             // Basic admin check - you can enhance this
             // For now, check if user has admin flag in their profile
@@ -1002,7 +1003,7 @@
         function startBlockStatusListener() {
             try {
                 const deviceId = getDeviceId();
-                
+
                 if (!firebaseInitialized || !firestoreDb || !window._fb) {
                     console.debug('Firebase not ready for block listener');
                     return;
@@ -1010,24 +1011,24 @@
 
                 // Set up real-time listener
                 const docRef = window._fb.doc(firestoreDb, 'blockedUsers', deviceId);
-                
+
                 blockStatusUnsubscribe = window._fb.onSnapshot(docRef, (snapshot) => {
                     if (snapshot.exists()) {
                         const data = snapshot.data();
-                        
+
                         // Immediate app block enforcement
                         if (data.blockedFromApp && !appBlocked) {
                             console.warn('User blocked from app in real-time');
                             appBlocked = true;
                             showLockoutScreen(data.reason || 'Your access has been restricted.');
                             disableStartButton();
-                            
+
                             // Force stop any active quiz
                             if (window.stopQuiz) {
-                                try { window.stopQuiz(); } catch (e) {}
+                                try { window.stopQuiz(); } catch (e) { }
                             }
                         }
-                        
+
                         // Messaging block enforcement
                         if (data.blockedFromMessaging && !messagingBlocked) {
                             console.warn('User messaging blocked in real-time');
@@ -1035,7 +1036,7 @@
                             disableReportFeatures();
                             showMessage('Your messaging privileges have been restricted.', 'warning');
                         }
-                        
+
                         // Handle unblock
                         if (!data.blockedFromApp && appBlocked) {
                             console.log('User unblocked from app');
@@ -1044,7 +1045,7 @@
                             if (lockout) lockout.remove();
                             showMessage('Access restored. Please reload the page for full functionality.', 'success');
                         }
-                        
+
                         if (!data.blockedFromMessaging && messagingBlocked) {
                             console.log('User messaging unblocked');
                             messagingBlocked = false;
@@ -1064,7 +1065,7 @@
                 }, (error) => {
                     console.debug('Block listener error:', error);
                 });
-                
+
                 console.log('Block status listener started');
             } catch (e) {
                 console.debug('Could not start block listener:', e);
@@ -1092,11 +1093,12 @@
                 document.getElementById('loading-indicator').classList.add('hidden');
                 return;
 
-            // Start real-time block status listener
-            startBlockStatusListener();
+                // Start real-time block status listener
+                startBlockStatusListener();
 
-            // Start message notification listener
-            startMessageNotificationListener();
+                // Start message notification listener
+                startMessageNotificationListener();
+                startUserBlockListener();
             }
 
             // 1. Recursively load and merge all valid JSON files from base directory
@@ -5232,7 +5234,7 @@
                 const deviceId = getDeviceId();
                 const userDoc = await resolveUserDocRef(deviceId);
                 const isAdmin = userDoc && userDoc.data && (userDoc.data.status === 'Admin' || userDoc.data.Status === 'Admin');
-                
+
                 // Store for global access (used by back buttons in sub-views)
                 window._currentUserIsAdmin = isAdmin;
 
@@ -5287,7 +5289,7 @@
                     const btnR = document.getElementById('tab-btn-reports');
                     const btnC = document.getElementById('tab-btn-chats');
                     const btnM = document.getElementById('tab-btn-monitor');
-                    
+
                     // Reset all buttons
                     [btnR, btnC, btnM].forEach(btn => {
                         if (btn) {
@@ -5295,7 +5297,7 @@
                             btn.classList.add('text-gray-600', 'hover:text-gray-800');
                         }
                     });
-                    
+
                     // Activate selected button
                     if (tab === 'reports' && btnR) {
                         btnR.classList.add('bg-white', 'text-blue-700', 'shadow-sm');
@@ -5307,7 +5309,7 @@
                         btnM.classList.add('bg-white', 'text-blue-700', 'shadow-sm');
                         btnM.classList.remove('text-gray-600', 'hover:text-gray-800');
                     }
-                    
+
                     await _renderMsgTabContent(tab, isAdmin);
                 };
 
@@ -5425,19 +5427,19 @@
         // --- Tab 3: Monitor All Chats (Admin Only) ---
         async function _renderMonitorChatsTab(container) {
             container.innerHTML = `<div class="flex justify-center items-center h-full"><div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>`;
-            
+
             try {
                 // Fetch ALL conversations (admin oversight)
                 if (!firebaseInitialized) await initFirebase();
                 const db = window.firestoreDb;
                 const chatsCollection = window._fb.collection(db, 'chats');
-                
+
                 // No filter - get all chats
                 const snapshot = await window._fb.getDocs(chatsCollection);
-                
+
                 const conversations = [];
                 snapshot.forEach(d => conversations.push({ id: d.id, ...d.data() }));
-                
+
                 // Admin Monitor Mode - show ALL chats (no filtering)
                 let filteredConversations = conversations;
                 if (false) {  // Admin always sees all chats in monitor mode
@@ -5451,14 +5453,14 @@
                         console.debug('Error loading hidden chats:', e);
                     }
                 }
-                
+
                 // Sort by lastMessage timestamp (most recent first)
                 filteredConversations.sort((a, b) => {
                     const aTime = a.lastMessage?.timestamp || a.createdAt || 0;
                     const bTime = b.lastMessage?.timestamp || b.createdAt || 0;
                     return new Date(bTime) - new Date(aTime);
                 });
-                
+
                 // Render with special admin styling
                 let html = `
                     <div class="flex flex-col h-full">
@@ -5471,7 +5473,7 @@
                         </div>
                         <div class="flex-1 overflow-y-auto">
                 `;
-                
+
                 if (filteredConversations.length === 0) {
                     html += `
                         <div class="p-8 text-center text-gray-500">
@@ -5483,15 +5485,15 @@
                         // Extract both participant names
                         const names = c.participantMap ? Object.values(c.participantMap) : (c.participantNames || ['User A', 'User B']);
                         const displayName = names.join(' ↔ ');
-                        
+
                         const lastMsg = c.lastMessage ? escapeHtml(c.lastMessage.text).substring(0, 50) + (c.lastMessage.text.length > 50 ? '...' : '') : 'No messages yet';
                         const timestamp = c.lastMessage?.timestamp || c.createdAt;
                         const timeStr = timestamp ? new Date(timestamp).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' }) : '';
-                        
+
                         // Dummy partner for view function (admin is viewing)
                         const participant1 = c.participants[0];
                         const participant2 = c.participants[1];
-                        
+
                         html += `
                             <div class="flex items-center p-4 hover:bg-gray-50 cursor-pointer border-b border-gray-100 transition-colors" onclick="_renderChatViewAsAdmin('${c.id}', '${escapeHtml(displayName).replace(/'/g, "\\'")}', '${participant1}', '${participant2}')">
                                 <div class="w-12 h-12 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-white font-bold text-sm mr-3 shadow">
@@ -5509,25 +5511,25 @@
                         `;
                     });
                 }
-                
+
                 html += `
                         </div>
                     </div>
                 `;
-                
+
                 container.innerHTML = html;
-                
+
             } catch (e) {
                 console.error("Error loading monitor chats:", e);
                 container.innerHTML = `<div class="p-8 text-center text-red-500">Failed to load conversations.</div>`;
             }
         }
-        
+
         // Admin read-only chat view
         async function _renderChatViewAsAdmin(chatId, chatParticipantNames, participant1, participant2) {
             const container = document.getElementById('msg-center-content-area');
             if (!container) return;
-            
+
             // Clean up previous listener
             if (_activeChatUnsub) { _activeChatUnsub(); _activeChatUnsub = null; }
 
@@ -5560,27 +5562,27 @@
                 </div>
              `;
 
-             // Start Real-time Listener for Messages
-             if (!firebaseInitialized) await initFirebase();
-             const db = window.firestoreDb;
-             
-             const messagesRef = window._fb.collection(db, 'chats', chatId, 'messages');
-             const q = window._fb.query(messagesRef, window._fb.orderBy('timestamp', 'asc'), window._fb.limit(100));
-             
-             _activeChatUnsub = window._fb.onSnapshot(q, (snapshot) => {
-                 const msgsDiv = document.getElementById('chat-messages-scroll');
-                 if (!msgsDiv) return;
-                 
-                 const messages = [];
-                 snapshot.forEach(d => messages.push({ id: d.id, ...d.data() }));
-                 
-                 if (messages.length === 0) {
-                     msgsDiv.innerHTML = `<div class="text-center text-gray-400 text-xs mt-4">No messages in this conversation yet.</div>`;
-                 } else {
-                     msgsDiv.innerHTML = messages.map(m => {
-                         // Show which user sent it
-                         const isParticipant1 = m.senderId === participant1;
-                         return `
+            // Start Real-time Listener for Messages
+            if (!firebaseInitialized) await initFirebase();
+            const db = window.firestoreDb;
+
+            const messagesRef = window._fb.collection(db, 'chats', chatId, 'messages');
+            const q = window._fb.query(messagesRef, window._fb.orderBy('timestamp', 'asc'), window._fb.limit(100));
+
+            _activeChatUnsub = window._fb.onSnapshot(q, (snapshot) => {
+                const msgsDiv = document.getElementById('chat-messages-scroll');
+                if (!msgsDiv) return;
+
+                const messages = [];
+                snapshot.forEach(d => messages.push({ id: d.id, ...d.data() }));
+
+                if (messages.length === 0) {
+                    msgsDiv.innerHTML = `<div class="text-center text-gray-400 text-xs mt-4">No messages in this conversation yet.</div>`;
+                } else {
+                    msgsDiv.innerHTML = messages.map(m => {
+                        // Show which user sent it
+                        const isParticipant1 = m.senderId === participant1;
+                        return `
                             <div class="flex w-full ${isParticipant1 ? 'justify-start' : 'justify-end'}">
                                 <div class="max-w-[75%]">
                                     <div class="text-[10px] font-semibold ${isParticipant1 ? 'text-blue-600' : 'text-green-600'} mb-1 px-2">
@@ -5589,24 +5591,24 @@
                                     <div class="px-4 py-2 rounded-2xl text-sm ${isParticipant1 ? 'bg-blue-100 text-gray-800 rounded-tl-none' : 'bg-green-100 text-gray-800 rounded-tr-none'} shadow-sm">
                                         <div>${escapeHtml(m.text)}</div>
                                         <div class="text-[10px] text-gray-500 mt-1 opacity-75">
-                                            ${new Date(m.timestamp).toLocaleString([], {month: 'short', day: 'numeric', hour: '2-digit', minute:'2-digit'})}
+                                            ${new Date(m.timestamp).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                          `;
-                     }).join('');
-                     
-                     // Scroll to bottom
-                     msgsDiv.scrollTop = msgsDiv.scrollHeight;
-                 }
-             });
+                    }).join('');
+
+                    // Scroll to bottom
+                    msgsDiv.scrollTop = msgsDiv.scrollHeight;
+                }
+            });
         }
 
         // --- Tab 2: Chats (User to User) ---
         async function _renderChatsTab(container, isAdmin) {
             container.innerHTML = `<div class="flex justify-center items-center h-full"><div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>`;
-            
+
             try {
                 const myDeviceId = getDeviceId();
                 const userDoc = await resolveUserDocRef(myDeviceId);
@@ -5615,26 +5617,26 @@
                     return;
                 }
                 const myId = userDoc.id;
-                
+
                 // Fetch conversations where I am a participant
                 if (!firebaseInitialized) await initFirebase();
                 const db = window.firestoreDb;
                 const chatsCollection = window._fb.collection(db, 'chats');
-                
+
                 // Query: where participants array-contains myId
                 const q = window._fb.query(chatsCollection, window._fb.where('participants', 'array-contains', myId));
                 const snapshot = await window._fb.getDocs(q);
-                
+
                 const conversations = [];
                 snapshot.forEach(d => conversations.push({ id: d.id, ...d.data() }));
-                
+
                 // Sort by lastMessage timestamp (most recent first)
                 conversations.sort((a, b) => {
                     const aTime = a.lastMessage?.timestamp || a.createdAt || 0;
                     const bTime = b.lastMessage?.timestamp || b.createdAt || 0;
                     return new Date(bTime) - new Date(aTime);
                 });
-                
+
                 // Render
                 let html = `
                     <div class="flex flex-col h-full">
@@ -5655,7 +5657,7 @@
                         </div>
                         <div class="flex-1 overflow-y-auto">
                 `;
-                
+
                 if (conversations.length === 0) {
                     html += `
                         <div class="p-4 flex flex-col items-center justify-center text-gray-500 mt-8">
@@ -5666,18 +5668,31 @@
                         </div>
                     `;
                 } else {
+                    // Pre-fetch block statuses for all partners
+                    const blockStatuses = {};
+                    for (const c of conversations) {
+                        const partnerId = c.participants.find(id => id !== myId);
+                        if (partnerId) {
+                            try {
+                                blockStatuses[partnerId] = await getUserBlockStatus(partnerId);
+                            } catch (e) {
+                                blockStatuses[partnerId] = { isBanned: false, cannotMessage: false };
+                            }
+                        }
+                    }
+
                     conversations.forEach(c => {
                         // Determine chat partner name
-                        const partnerName = c.participantMap ? 
+                        const partnerName = c.participantMap ?
                             Object.entries(c.participantMap).find(([id, name]) => id !== myId)?.[1] || 'Unknown' :
                             (c.participantNames?.find(n => n !== userDoc.data.name) || 'Unknown');
-                        
+
                         const partnerId = c.participants.find(id => id !== myId);
-                        
+
                         const lastMsg = c.lastMessage ? escapeHtml(c.lastMessage.text).substring(0, 40) + (c.lastMessage.text.length > 40 ? '...' : '') : 'No messages yet';
                         const timestamp = c.lastMessage?.timestamp || c.createdAt;
                         const timeStr = timestamp ? new Date(timestamp).toLocaleDateString([], { month: 'short', day: 'numeric' }) : '';
-                        
+
                         html += `
                             <div class="flex items-center p-4 hover:bg-gray-50 border-b border-gray-100 transition-colors relative group">
                                 <div class="flex-1 flex items-center cursor-pointer" onclick="_renderChatView(document.getElementById('msg-center-content-area'), '${c.id}', '${escapeHtml(partnerName).replace(/'/g, "\\'")}', '${partnerId}')">
@@ -5727,14 +5742,14 @@
                         `;
                     });
                 }
-                
+
                 html += `
                         </div>
                     </div>
                 `;
-                
+
                 container.innerHTML = html;
-                
+
             } catch (e) {
                 console.error("Error loading chats:", e);
                 container.innerHTML = `<div class="p-8 text-center text-red-500">Failed to load conversations.</div>`;
@@ -5922,7 +5937,7 @@
                 } else {
                     msgsDiv.innerHTML = messages.map(m => {
                         const isMe = m.senderId === myId;
-                        
+
                         // Handle deleted messages
                         if (m.deletedForAll) {
                             return `
@@ -5933,7 +5948,7 @@
                                 </div>
                             `;
                         }
-                        
+
                         if (m.deletedFor && m.deletedFor.includes(myId)) {
                             return `
                                 <div class="flex w-full ${isMe ? 'justify-end' : 'justify-start'}">
@@ -5943,7 +5958,7 @@
                                 </div>
                             `;
                         }
-                        
+
                         return `
                             <div class="flex w-full ${isMe ? 'justify-end' : 'justify-start'} group relative">
                                 <div class="max-w-[75%] px-4 py-2 rounded-2xl text-sm ${isMe ? 'bg-blue-600 text-white rounded-tr-none' : 'bg-gray-200 text-gray-800 rounded-tl-none'} shadow-sm">
@@ -6281,8 +6296,64 @@
         };
 
 
+        // ============= REAL-TIME USER BLOCK LISTENER =============
+        let userBlockListener = null;
+
+        async function startUserBlockListener() {
+            try {
+                const deviceId = getDeviceId();
+                const userDoc = await resolveUserDocRef(deviceId);
+                if (!userDoc) return;
+
+                if (!firebaseInitialized) await initFirebase();
+                const db = window.firestoreDb;
+
+                // Listen to changes on the user's own document
+                const userRef = window._fb.doc(db, 'users', userDoc.id);
+
+                userBlockListener = window._fb.onSnapshot(userRef, (snapshot) => {
+                    if (snapshot.exists()) {
+                        const data = snapshot.data();
+
+                        // Check app block
+                        if (data.isBanned === true && !appBlocked) {
+                            appBlocked = true;
+                            showLockoutScreen('Your access has been restricted by an administrator.');
+                        }
+
+                        // Check messaging block
+                        if (data.cannotMessage === true && !messagingBlocked) {
+                            messagingBlocked = true;
+                            disableReportFeatures();
+                            showMessage('Messaging has been disabled for your account', 'warning');
+                        }
+
+                        // Check unblock
+                        if (data.isBanned === false && appBlocked) {
+                            // User was unblocked - reload page
+                            showMessage('Your access has been restored', 'success');
+                            setTimeout(() => location.reload(), 2000);
+                        }
+
+                        if (data.cannotMessage === false && messagingBlocked) {
+                            messagingBlocked = false;
+                            showMessage('Messaging has been restored', 'success');
+                            // Could re-enable features here
+                        }
+                    }
+                }, (error) => {
+                    console.debug('User block listener error:', error);
+                });
+
+                console.log('User block listener started');
+            } catch (e) {
+                console.debug('Could not start user block listener:', e);
+            }
+        }
+
+
         // ============= ADMIN USER MANAGEMENT =============
-        
+
         async function renderUserManagementView() {
             const contentArea = document.getElementById('content-area');
             if (!contentArea) return;
@@ -6292,7 +6363,7 @@
             try {
                 // Gather all unique users from multiple sources
                 const users = new Map();
-                
+
                 // From leaderboard
                 try {
                     const leaderboardData = await loadGlobalLeaderboard();
@@ -6339,7 +6410,7 @@
                     } catch (e) { console.debug('Error loading block statuses:', e); }
                 }
 
-                const userArray = Array.from(users.values()).sort((a, b) => 
+                const userArray = Array.from(users.values()).sort((a, b) =>
                     new Date(b.lastSeen || 0) - new Date(a.lastSeen || 0)
                 );
 
@@ -6348,8 +6419,8 @@
                     const isAppBlocked = blockStatus?.blockedFromApp || false;
                     const isMsgBlocked = blockStatus?.blockedFromMessaging || false;
                     const reportDisabled = blockStatus?.disableReporting || false;
-                    
-                    const locationStr = user.location?.city || user.location?.country ? 
+
+                    const locationStr = user.location?.city || user.location?.country ?
                         `${user.location.city || ''} ${user.location.country || ''}`.trim() : 'Unknown';
 
                     return `
@@ -6359,8 +6430,8 @@
                             <td class="px-4 py-3 text-sm text-gray-600">${escapeHtml(locationStr)}</td>
                             <td class="px-4 py-3">
                                 ${isAppBlocked ? '<span class="px-2 py-1 bg-red-100 text-red-700 text-xs rounded-full font-bold">🚫 App Blocked</span>' :
-                                  isMsgBlocked ? `<span class="px-2 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-bold">💬 Messaging ${reportDisabled ? '+ Report' : ''} Blocked</span>` :
-                                  '<span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">✓ Active</span>'}
+                            isMsgBlocked ? `<span class="px-2 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-bold">💬 Messaging ${reportDisabled ? '+ Report' : ''} Blocked</span>` :
+                                '<span class="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full">✓ Active</span>'}
                             </td>
                             <td class="px-4 py-3 text-right">
                                 ${!isAppBlocked && !isMsgBlocked ? `
@@ -6477,7 +6548,7 @@
 
         async function unblockUser(deviceId) {
             if (!confirm('Are you sure you want to unblock this user?')) return;
-            
+
             try {
                 if (!firebaseInitialized) await initFirebase();
                 if (firebaseInitialized && firestoreDb && window._fb) {
@@ -6498,7 +6569,7 @@
 
 
         // ============= CHAT MANAGEMENT FUNCTIONS =============
-        
+
         function toggleChatMenu(chatId) {
             // Close all other menus
             document.querySelectorAll('[id^="chat-menu-"]').forEach(menu => {
@@ -6506,7 +6577,7 @@
                     menu.classList.add('hidden');
                 }
             });
-            
+
             // Toggle this menu
             const menu = document.getElementById(`chat-menu-${chatId}`);
             if (menu) {
@@ -6523,26 +6594,26 @@
 
         async function clearAllChats() {
             if (!confirm('Are you sure you want to clear ALL your chats? This cannot be undone.')) return;
-            
+
             try {
                 const myDeviceId = getDeviceId();
                 const userDoc = await resolveUserDocRef(myDeviceId);
                 if (!userDoc) return;
-                
+
                 if (!firebaseInitialized) await initFirebase();
                 const db = window.firestoreDb;
                 const chatsCol = window._fb.collection(db, 'chats');
                 const q = window._fb.query(chatsCol, window._fb.where('participants', 'array-contains', userDoc.id));
                 const snapshot = await window._fb.getDocs(q);
-                
+
                 const deletePromises = [];
                 snapshot.forEach(doc => {
                     deletePromises.push(window._fb.deleteDoc(doc.ref));
                 });
-                
+
                 await Promise.all(deletePromises);
                 showMessage('All chats cleared', 'success');
-                
+
                 // Refresh chat list
                 _renderMsgTabContent('chats', false);
             } catch (e) {
@@ -6553,14 +6624,14 @@
 
         async function deleteChat(chatId) {
             if (!confirm('Delete this conversation? This cannot be undone.')) return;
-            
+
             try {
                 if (!firebaseInitialized) await initFirebase();
                 const db = window.firestoreDb;
                 const chatRef = window._fb.doc(db, 'chats', chatId);
                 await window._fb.deleteDoc(chatRef);
                 showMessage('Chat deleted', 'success');
-                
+
                 // Refresh
                 _renderMsgTabContent('chats', false);
             } catch (e) {
@@ -6577,14 +6648,14 @@
                 'Block',
                 'Cancel'
             );
-            
+
             if (reason === null) return;
-            
+
             try {
                 const myDeviceId = getDeviceId();
                 const userDoc = await resolveUserDocRef(myDeviceId);
                 if (!userDoc) return;
-                
+
                 if (!firebaseInitialized) await initFirebase();
                 const db = window.firestoreDb;
                 const blockRef = window._fb.doc(db, 'chatBlocks', userDoc.id, 'blocked', userId);
@@ -6592,7 +6663,7 @@
                     blockedAt: new Date().toISOString(),
                     reason: reason || 'No reason provided'
                 });
-                
+
                 showMessage(`Blocked ${userName} from messaging you`, 'success');
                 toggleChatMenu('');  // Close menu
             } catch (e) {
@@ -6610,25 +6681,25 @@
                 'Cancel',
                 'password'
             );
-            
+
             if (!password) return;
-            
+
             if (password.length < 4) {
                 showMessage('Password must be at least 4 characters', 'warning');
                 return;
             }
-            
+
             try {
                 const myDeviceId = getDeviceId();
                 const userDoc = await resolveUserDocRef(myDeviceId);
                 if (!userDoc) return;
-                
+
                 // Hash password with SHA-256
                 const msgBuffer = new TextEncoder().encode(password);
                 const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
                 const hashArray = Array.from(new Uint8Array(hashBuffer));
                 const passwordHash = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-                
+
                 if (!firebaseInitialized) await initFirebase();
                 const db = window.firestoreDb;
                 const hideRef = window._fb.doc(db, 'hiddenChats', userDoc.id, 'hidden', chatId);
@@ -6636,7 +6707,7 @@
                     hiddenAt: new Date().toISOString(),
                     passwordHash: passwordHash
                 });
-                
+
                 showMessage('Chat hidden', 'success');
                 _renderMsgTabContent('chats', false);
             } catch (e) {
@@ -6646,54 +6717,106 @@
         }
 
         async function adminQuickBlockMessaging(userId, userName) {
-            if (!confirm(`Block ${userName} from sending messages to ANY user?`)) return;
-            
             try {
-                const blockData = {
-                    deviceId: userId,
-                    blockedFromApp: false,
-                    blockedFromMessaging: true,
-                    disableReporting: false,
-                    blockedAt: new Date().toISOString(),
-                    blockedBy: 'admin',
-                    reason: 'Blocked via chat menu'
-                };
-                
-                if (!firebaseInitialized) await initFirebase();
-                const docRef = window._fb.doc(firestoreDb, 'blockedUsers', userId);
-                await window._fb.setDoc(docRef, blockData);
-                
-                showMessage(`${userName} blocked from messaging`, 'success');
+                const status = await getUserBlockStatus(userId);
+
+                if (status.cannotMessage) {
+                    // Currently blocked - unblock
+                    if (!confirm(`UNBLOCK ${userName} from messaging? They can send messages again.`)) return;
+
+                    if (!firebaseInitialized) await initFirebase();
+                    const userRef = window._fb.doc(firestoreDb, 'users', userId);
+
+                    await window._fb.updateDoc(userRef, {
+                        cannotMessage: false,
+                        messagingUnblockedAt: new Date().toISOString(),
+                        messagingUnblockedBy: 'admin'
+                    });
+
+                    showMessage(`${userName} unblocked from messaging`, 'success');
+                } else {
+                    // Not blocked - block them
+                    if (!confirm(`Block ${userName} from sending messages to ANY user?`)) return;
+
+                    if (!firebaseInitialized) await initFirebase();
+                    const userRef = window._fb.doc(firestoreDb, 'users', userId);
+
+                    await window._fb.updateDoc(userRef, {
+                        cannotMessage: true,
+                        messagingBlockedAt: new Date().toISOString(),
+                        messagingBlockedBy: 'admin'
+                    });
+
+                    showMessage(`${userName} blocked from messaging`, 'success');
+                }
+
                 toggleChatMenu('');
             } catch (e) {
-                console.error('Error blocking user:', e);
-                showMessage('Failed to block user', 'error');
+                console.error('Error toggling messaging block:', e);
+                showMessage('Failed to update messaging block', 'error');
+            }
+        }
+
+
+        // Check user's current block status for dynamic UI
+        async function getUserBlockStatus(userId) {
+            try {
+                if (!firebaseInitialized) await initFirebase();
+                const userRef = window._fb.doc(firestoreDb, 'users', userId);
+                const userSnap = await window._fb.getDoc(userRef);
+
+                if (userSnap.exists()) {
+                    const data = userSnap.data();
+                    return {
+                        isBanned: data.isBanned === true,
+                        cannotMessage: data.cannotMessage === true
+                    };
+                }
+                return { isBanned: false, cannotMessage: false };
+            } catch (e) {
+                console.error('Error checking block status:', e);
+                return { isBanned: false, cannotMessage: false };
             }
         }
 
         async function adminQuickBlockApp(userId, userName) {
-            if (!confirm(`BLOCK ${userName} FROM APP? This will lock them out completely.`)) return;
-            
             try {
-                const blockData = {
-                    deviceId: userId,
-                    blockedFromApp: true,
-                    blockedFromMessaging: false,
-                    disableReporting: false,
-                    blockedAt: new Date().toISOString(),
-                    blockedBy: 'admin',
-                    reason: 'Blocked via chat menu'
-                };
-                
-                if (!firebaseInitialized) await initFirebase();
-                const docRef = window._fb.doc(firestoreDb, 'blockedUsers', userId);
-                await window._fb.setDoc(docRef, blockData);
-                
-                showMessage(`${userName} blocked from app`, 'success');
+                const status = await getUserBlockStatus(userId);
+
+                if (status.isBanned) {
+                    // Currently blocked - unblock
+                    if (!confirm(`UNBLOCK ${userName} from app? They will regain access.`)) return;
+
+                    if (!firebaseInitialized) await initFirebase();
+                    const userRef = window._fb.doc(firestoreDb, 'users', userId);
+
+                    await window._fb.updateDoc(userRef, {
+                        isBanned: false,
+                        unbannedAt: new Date().toISOString(),
+                        unbannedBy: 'admin'
+                    });
+
+                    showMessage(`${userName} unblocked from app`, 'success');
+                } else {
+                    // Not blocked - block them
+                    if (!confirm(`BLOCK ${userName} FROM APP? This will lock them out completely.`)) return;
+
+                    if (!firebaseInitialized) await initFirebase();
+                    const userRef = window._fb.doc(firestoreDb, 'users', userId);
+
+                    await window._fb.updateDoc(userRef, {
+                        isBanned: true,
+                        bannedAt: new Date().toISOString(),
+                        bannedBy: 'admin'
+                    });
+
+                    showMessage(`${userName} blocked from app`, 'success');
+                }
+
                 toggleChatMenu('');
             } catch (e) {
-                console.error('Error blocking user:', e);
-                showMessage('Failed to block user', 'error');
+                console.error('Error toggling block:', e);
+                showMessage('Failed to update block status', 'error');
             }
         }
 
@@ -6701,7 +6824,7 @@
 
 
         // ============= MESSAGE MANAGEMENT FUNCTIONS =============
-        
+
         function toggleMessageMenu(msgId) {
             document.querySelectorAll('[id^="msg-menu-"]').forEach(m => {
                 if (m.id !== `msg-menu-${msgId}`) m.classList.add('hidden');
@@ -6725,9 +6848,9 @@
                 'Cancel',
                 'textarea'
             );
-            
+
             if (!newText || newText === currentText) return;
-            
+
             try {
                 if (!firebaseInitialized) await initFirebase();
                 const db = window.firestoreDb;
@@ -6749,12 +6872,12 @@
                 const myDeviceId = getDeviceId();
                 const userDoc = await resolveUserDocRef(myDeviceId);
                 if (!userDoc) return;
-                
+
                 if (!firebaseInitialized) await initFirebase();
                 const db = window.firestoreDb;
                 const msgRef = window._fb.doc(db, 'chats', chatId, 'messages', messageId);
                 const msgSnap = await window._fb.getDoc(msgRef);
-                
+
                 if (msgSnap.exists()) {
                     const deletedFor = msgSnap.data().deletedFor || [];
                     if (!deletedFor.includes(userDoc.id)) {
@@ -6771,7 +6894,7 @@
 
         async function unsendMessage(messageId, chatId) {
             if (!confirm('Delete this message for everyone? This cannot be undone.')) return;
-            
+
             try {
                 if (!firebaseInitialized) await initFirebase();
                 const db = window.firestoreDb;
@@ -6790,18 +6913,18 @@
 
         async function clearAllMessagesInChat(chatId) {
             if (!confirm('Clear all messages in this conversation? This cannot be undone.')) return;
-            
+
             try {
                 if (!firebaseInitialized) await initFirebase();
                 const db = window.firestoreDb;
                 const messagesRef = window._fb.collection(db, 'chats', chatId, 'messages');
                 const snapshot = await window._fb.getDocs(messagesRef);
-                
+
                 const deletePromises = [];
                 snapshot.forEach(doc => {
                     deletePromises.push(window._fb.deleteDoc(doc.ref));
                 });
-                
+
                 await Promise.all(deletePromises);
                 showMessage('All messages cleared', 'success');
             } catch (e) {
@@ -6814,58 +6937,27 @@
 
 
         // ============= BLOCK ENFORCEMENT FUNCTIONS =============
-        
+
         async function _sendChatMessage(chatId, senderId) {
             const input = document.getElementById('chat-input');
             const messageText = input.value.trim();
             if (!messageText) return;
-            
+
             try {
                 // Get current user's device ID for block checks
                 const myDeviceId = getDeviceId();
-                
-                // Check 1: Am I blocked from messaging (admin block)?
+
+                // Firestore rules will enforce blocks - just try to send
                 if (!firebaseInitialized) await initFirebase();
                 const db = window.firestoreDb;
-                
-                const myBlockRef = window._fb.doc(db, 'blockedUsers', myDeviceId);
-                const myBlockSnap = await window._fb.getDoc(myBlockRef);
-                
-                if (myBlockSnap.exists() && myBlockSnap.data().blockedFromMessaging) {
-                    showMessage('You are blocked from sending messages.', 'error');
-                    return;
-                }
-                
-                if (myBlockSnap.exists() && myBlockSnap.data().blockedFromApp) {
-                    showMessage('Your access is restricted.', 'error');
-                    return;
-                }
-                
-                // Check 2: Has the other person blocked me from messaging them?
+
                 const userDoc = await resolveUserDocRef(myDeviceId);
                 if (!userDoc) return;
                 const myId = userDoc.id;
-                
-                // Get the other participant ID
+
                 const chatRef = window._fb.doc(db, 'chats', chatId);
-                const chatSnap = await window._fb.getDoc(chatRef);
-                if (chatSnap.exists()) {
-                    const chatData = chatSnap.data();
-                    const otherUserId = chatData.participants.find(id => id !== myId);
-                    
-                    if (otherUserId) {
-                        // Check if they blocked me
-                        const blockRef = window._fb.doc(db, 'chatBlocks', otherUserId, 'blocked', myId);
-                        const blockSnap = await window._fb.getDoc(blockRef);
-                        
-                        if (blockSnap.exists()) {
-                            showMessage('This user has blocked you from sending messages.', 'error');
-                            return;
-                        }
-                    }
-                }
-                
-                // All checks passed - send the message
+
+                // Send the message - rules will reject if blocked
                 const messagesRef = window._fb.collection(db, 'chats', chatId, 'messages');
                 await window._fb.addDoc(messagesRef, {
                     text: messageText,
@@ -6873,7 +6965,7 @@
                     timestamp: new Date().toISOString(),
                     readBy: [senderId]
                 });
-                
+
                 // Update last message in chat
                 await window._fb.updateDoc(chatRef, {
                     lastMessage: {
@@ -6882,11 +6974,23 @@
                         timestamp: new Date().toISOString()
                     }
                 });
-                
+
+
                 input.value = '';
             } catch (e) {
                 console.error('Error sending message:', e);
-                showMessage('Failed to send message', 'error');
+                // Handle Firestore permission errors
+                if (e.code === 'permission-denied') {
+                    if (e.message.includes('isBanned')) {
+                        showMessage('You are banned from the app', 'error');
+                    } else if (e.message.includes('cannotMessage')) {
+                        showMessage('You are blocked from sending messages', 'error');
+                    } else {
+                        showMessage('This user has blocked you', 'error');
+                    }
+                } else {
+                    showMessage('Failed to send message', 'error');
+                }
             }
         }
 
@@ -6895,38 +6999,38 @@
         let messageNotificationListener = null;
         let lastMessageCount = 0;
         let currentActiveChatId = null;  // Track which chat user is viewing
-        
+
         async function startMessageNotificationListener() {
             try {
                 const myDeviceId = getDeviceId();
                 const userDoc = await resolveUserDocRef(myDeviceId);
                 if (!userDoc) return;
                 const myId = userDoc.id;
-                
+
                 if (!firebaseInitialized) await initFirebase();
                 const db = window.firestoreDb;
-                
+
                 // Listen to all chats where user is a participant
                 const chatsCol = window._fb.collection(db, 'chats');
                 const q = window._fb.query(chatsCol, window._fb.where('participants', 'array-contains', myId));
-                
+
                 messageNotificationListener = window._fb.onSnapshot(q, async (snapshot) => {
                     let totalUnreadCount = 0;
-                    
+
                     for (const chatDoc of snapshot.docs) {
                         const chatId = chatDoc.id;
                         const chatData = chatDoc.data();
-                        
+
                         // Get messages in this chat
                         const messagesRef = window._fb.collection(db, 'chats', chatId, 'messages');
                         const messagesSnap = await window._fb.getDocs(messagesRef);
-                        
+
                         messagesSnap.forEach(msgDoc => {
                             const msg = msgDoc.data();
                             // Count unread: messages from others that I haven't read
                             if (msg.senderId !== myId && !msg.readBy?.includes(myId)) {
                                 totalUnreadCount++;
-                                
+
                                 // Play sound if not in this chat actively AND this is a new message
                                 if (currentActiveChatId !== chatId) {
                                     // Check if this is truly new (timestamp within last 5 seconds)
@@ -6939,20 +7043,20 @@
                             }
                         });
                     }
-                    
+
                     // Update floating button badge
                     updateMessageBadge(totalUnreadCount);
                     lastMessageCount = totalUnreadCount;
                 }, (error) => {
                     console.debug('Message notification listener error:', error);
                 });
-                
+
                 console.log('Message notification listener started');
             } catch (e) {
                 console.debug('Could not start message notification listener:', e);
             }
         }
-        
+
         function updateMessageBadge(count) {
             const badge = document.getElementById('message-badge');
             if (badge) {
@@ -6964,51 +7068,51 @@
                 }
             }
         }
-        
+
         function playMessageSound() {
             try {
                 // Create simple notification beep using Web Audio API
                 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
                 const oscillator = audioContext.createOscillator();
                 const gainNode = audioContext.createGain();
-                
+
                 oscillator.connect(gainNode);
                 gainNode.connect(audioContext.destination);
-                
+
                 oscillator.frequency.value = 800; // Frequency in Hz
                 oscillator.type = 'sine';
-                
+
                 gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
                 gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.2);
-                
+
                 oscillator.start(audioContext.currentTime);
                 oscillator.stop(audioContext.currentTime + 0.2);
             } catch (e) {
                 console.debug('Could not play notification sound:', e);
             }
         }
-        
+
         // Track active chat for notification suppression
-        window.setActiveChatId = function(chatId) {
+        window.setActiveChatId = function (chatId) {
             currentActiveChatId = chatId;
             // Mark messages as read when entering chat
             if (chatId) {
                 markChatMessagesAsRead(chatId);
             }
         };
-        
+
         async function markChatMessagesAsRead(chatId) {
             try {
                 const myDeviceId = getDeviceId();
                 const userDoc = await resolveUserDocRef(myDeviceId);
                 if (!userDoc) return;
                 const myId = userDoc.id;
-                
+
                 if (!firebaseInitialized) await initFirebase();
                 const db = window.firestoreDb;
                 const messagesRef = window._fb.collection(db, 'chats', chatId, 'messages');
                 const snapshot = await window._fb.getDocs(messagesRef);
-                
+
                 const updatePromises = [];
                 snapshot.forEach(msgDoc => {
                     const msg = msgDoc.data();
@@ -7020,7 +7124,7 @@
                         );
                     }
                 });
-                
+
                 await Promise.all(updatePromises);
             } catch (e) {
                 console.debug('Error marking messages as read:', e);
