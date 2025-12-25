@@ -283,6 +283,7 @@ class GitDeployment:
             "!/default-questions/**\n"
             "!/.gitignore\n"  # Keep .gitignore itself
             "!/deploy.py\n"   # Keep the deployment script too (optional but recommended)
+            "!/firestore.rules\n" # Keep firestore security rules
         )
         
         try:

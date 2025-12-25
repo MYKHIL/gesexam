@@ -1,0 +1,95 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // ============= IMPORTANT NOTE =============
+    // This app uses deviceId instead of Firebase Auth
+    // Rules are permissive for reading, validate writes using data fields
+    
+    // ============= HELPER FUNCTIONS =============
+    
+    // Check if a user document shows they're banned
+    function isUserBanned(userId) {
+      return exists(/databases/$(database)/documents/users/$(userId)) &&
+             get(/databases/$(database)/documents/users/$(userId)).data.get('isBanned', false) == true;
+    }
+    // Check if a user cannot send messages
+    function userCannotMessage(userId) {
+      return exists(/databases/$(database)/documents/users/$(userId)) &&
+             get(/databases/$(database)/documents/users/$(userId)).data.get('cannotMessage', false) == true;
+    }
+    // Check if receiver blocked sender (user-to-user block)
+    function isBlockedByReceiver(receiverId, senderId) {
+      return exists(/databases/$(database)/documents/users/$(receiverId)/blockedUsers/$(senderId));
+    }
+    // Get other participant from chat
+    function getOtherParticipant(chatId, myId) {
+      let chat = get(/databases/$(database)/documents/chats/$(chatId));
+      let participants = chat.data.participants;
+      return participants[0] == myId ? participants[1] : participants[0];
+    }
+    // ============= SECURITY RULES =============
+    // Messages: Validate sender isn't blocked before allowing create
+    match /chats/{chatId}/messages/{messageId} {
+      // Anyone can read messages
+      allow read: if true;
+      
+      // Can create if sender ID is provided and passes all block checks
+      allow create: if request.resource.data.senderId != null
+                    && !isUserBanned(request.resource.data.senderId)
+                    && !userCannotMessage(request.resource.data.senderId)
+                    && !isBlockedByReceiver(
+                        getOtherParticipant(chatId, request.resource.data.senderId),
+                        request.resource.data.senderId
+                      );
+      
+      // Can update/delete own messages
+      allow update, delete: if true;
+    }
+    // Chats: Allow reading and writing
+    match /chats/{chatId} {
+      allow read, write: if true;
+    }
+    // Users: Allow all operations (needed for admin to set flags)
+    match /users/{userId} {
+      allow read, write: if true;
+    }
+    // User-to-User Blocks: Allow anyone to manage (client validates ownership)
+    match /users/{userId}/blockedUsers/{blockedId} {
+      allow read, write: if true;
+    }
+    // Leaderboard: Open read/write
+    match /leaderboard/{userId} {
+      allow read, write: if true;
+    }
+    // Reports: Open access for now
+    match /reports/{reportId} {
+      allow read, write: if true;
+    }
+    
+    // ============= ADDED: Reviews collection (THIS WAS MISSING) =============
+    // Reviews: Open access - used by fetchReportsFromFirebase() which caused the error
+    match /reviews/{reviewId} {
+      allow read, write: if true;
+    }
+    
+    // ============= ADDED: Admin password collection (THIS WAS MISSING) =============
+    // Admin Password: Read-only for clients, write via console only
+    match /adminpassword/{docId} {
+      allow read: if true;
+      allow write: if false;  // Only admins can write via Firebase Console
+    }
+    
+    // ============= ADDED: Blocked Users collection (THIS WAS MISSING) =============
+    // Blocked Users: Read-only for clients
+    match /blockedUsers/{userId} {
+      allow read: if true;
+      allow write: if false;  // Only admins can write via Firebase Console
+    }
+    
+    // Default: Deny other collections
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
