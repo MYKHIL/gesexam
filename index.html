@@ -3931,10 +3931,31 @@
             return array;
         }
 
-        // Identify if a question is True/False (has exactly 2 options)
+        // Identify if a question is True/False (has exactly 2 non-empty options)
         function isTrueFalse(question) {
             if (!question || !question.options) return false;
-            return Object.keys(question.options).length === 2;
+            const validOptions = Object.entries(question.options)
+                .filter(([key, val]) => val && val.trim() !== "");
+            return validOptions.length === 2;
+        }
+
+        // Clean existing cache to ensure legacy questions with extra empty options are correctly categorized
+        function cleanQuestionCache(cache) {
+            if (!cache) return;
+            Object.values(cache).forEach(q => {
+                if (q && q.options) {
+                    const validKeys = Object.entries(q.options)
+                        .filter(([key, val]) => val && val.trim() !== "")
+                        .map(([key, val]) => key);
+
+                    if (validKeys.length === 2) {
+                        // Prune keys that aren't in the valid set
+                        const newOptions = {};
+                        validKeys.forEach(k => newOptions[k] = q.options[k]);
+                        q.options = newOptions;
+                    }
+                }
+            });
         }
 
         // Get a sequential subset starting from a random index (with wraparound)
@@ -3951,96 +3972,107 @@
         }
 
         function generateSessionQuestions() {
-            // Segregate questions
-            const tfQuestions = [];
-            const mcQuestions = []; // Multiple choice (more than 2 options)
-
-            // 1. Prioritized Wrong Questions
-            const prioritized = [];
-            const seenPrioritizedHashes = new Set();
-            const wrongHashes = Object.keys(wrongQuestionsCache);
-
-            if (wrongHashes.length > 0) {
-                // Pick up to 20% of the requested session size from personal wrong questions
-                const quota = Math.ceil(quizSettings.numQuestions * 0.20);
-                const shuffledWrong = shuffle([...wrongHashes]);
-                const hashesToPick = shuffledWrong.slice(0, quota);
-
-                hashesToPick.forEach(hash => {
-                    prioritized.push(wrongQuestionsCache[hash]);
-                    seenPrioritizedHashes.add(hash);
-                });
-                console.log(`Prioritized ${prioritized.length} personal wrong questions.`);
-            }
-
-            // 1.5 Global Wrong Questions
-            if (globalWrongQuestionsCache.length > 0) {
-                const globalQuota = Math.ceil(quizSettings.numQuestions * 0.15);
-                const shuffledGlobal = shuffle([...globalWrongQuestionsCache]);
-                let pickedCount = 0;
-
-                for (const q of shuffledGlobal) {
-                    if (pickedCount >= globalQuota) break;
-                    const hash = createQuestionHash(q);
-                    if (!seenPrioritizedHashes.has(hash)) {
-                        prioritized.push(q);
-                        seenPrioritizedHashes.add(hash);
-                        pickedCount++;
-                    }
-                }
-                console.log(`Prioritized ${pickedCount} global wrong questions.`);
-            }
-
-            allQuestions.forEach(q => {
-                const hash = createQuestionHash(q);
-                if (seenPrioritizedHashes.has(hash)) return; // Skip if already prioritized
-
-                if (isTrueFalse(q)) {
-                    tfQuestions.push(q);
-                } else {
-                    mcQuestions.push(q);
+            // Cleanup existing caches to ensure strict categorization
+            cleanQuestionCache(wrongQuestionsCache);
+            // Also clean global cache items if they exist as a list
+            globalWrongQuestionsCache.forEach(q => {
+                const validKeys = Object.entries(q.options)
+                    .filter(([key, val]) => val && val.trim() !== "")
+                    .map(([key, val]) => key);
+                if (validKeys.length === 2) {
+                    const newOptions = {};
+                    validKeys.forEach(k => newOptions[k] = q.options[k]);
+                    q.options = newOptions;
                 }
             });
 
-            // Calculate quotas
-            // 33% (1/3) should be True/False
-            const totalRequested = quizSettings.numQuestions;
-            const totalNeeded = Math.max(0, totalRequested - prioritized.length);
-            let tfCount = Math.round(totalNeeded / 3);
+            const prioritizedMC = [];
+            const prioritizedTF = [];
+            const regularMC = [];
+            const regularTF = [];
+            const seenPrioritizedHashes = new Set();
 
-            // If we don't have enough TF questions, take what we have
-            if (tfCount > tfQuestions.length) {
-                tfCount = tfQuestions.length;
-            }
+            const wrongHashes = Object.keys(wrongQuestionsCache);
+            const globalWrong = [...globalWrongQuestionsCache];
 
-            let mcCount = totalNeeded - tfCount;
-            // If we don't have enough MC questions, try to fill with TF if available
-            if (mcCount > mcQuestions.length) {
-                const shortfall = mcCount - mcQuestions.length;
-                mcCount = mcQuestions.length;
-                if (tfQuestions.length > tfCount) {
-                    const extraTf = Math.min(shortfall, tfQuestions.length - tfCount);
-                    tfCount += extraTf;
+            // 1. Collect all prioritized candidates (Personal)
+            const personalCandidates = shuffle([...wrongHashes]);
+            personalCandidates.forEach(hash => {
+                const q = wrongQuestionsCache[hash];
+                if (!seenPrioritizedHashes.has(hash)) {
+                    if (isTrueFalse(q)) prioritizedTF.push(q);
+                    else prioritizedMC.push(q);
+                    seenPrioritizedHashes.add(hash);
                 }
+            });
+
+            // 2. Collect all prioritized candidates (Global)
+            const globalCandidates = shuffle([...globalWrong]);
+            globalCandidates.forEach(q => {
+                const hash = createQuestionHash(q);
+                if (!seenPrioritizedHashes.has(hash)) {
+                    if (isTrueFalse(q)) prioritizedTF.push(q);
+                    else prioritizedMC.push(q);
+                    seenPrioritizedHashes.add(hash);
+                }
+            });
+
+            // 3. Collect all regular candidates
+            allQuestions.forEach(q => {
+                const hash = createQuestionHash(q);
+                if (seenPrioritizedHashes.has(hash)) return;
+                if (isTrueFalse(q)) regularTF.push(q);
+                else regularMC.push(q);
+            });
+
+            // 4. Determine Global Quotas
+            const totalRequested = quizSettings.numQuestions;
+            let targetTF = Math.round(totalRequested / 3);
+
+            // Limit TF questions to available stock
+            const availableTF = prioritizedTF.length + regularTF.length;
+            if (targetTF > availableTF) targetTF = availableTF;
+
+            let targetMC = totalRequested - targetTF;
+            // Handle MCQ shortfall if we don't have enough MCQs
+            const availableMC = prioritizedMC.length + regularMC.length;
+            if (targetMC > availableMC) {
+                const shortfall = targetMC - availableMC;
+                targetMC = availableMC;
+                // Try to fill shortfall with extra TF if possible
+                const extraTfCapacity = availableTF - targetTF;
+                targetTF += Math.min(shortfall, extraTfCapacity);
             }
 
-            let selectedMC = [];
-            let selectedTF = [];
+            // 5. Select and Mix MCQ Group
+            let finalMC = [];
+            // Use as many prioritized MCQs as fit in targetMC
+            const chosenPrioritisedMC = prioritizedMC.slice(0, targetMC);
+            const neededRegularMC = targetMC - chosenPrioritisedMC.length;
 
+            let sourceRegularMC = [];
             if (quizSettings.randomize) {
-                // Case 1: Fully Random
-                const shuffledMC = shuffle([...mcQuestions]);
-                const shuffledTF = shuffle([...tfQuestions]);
-                selectedMC = shuffledMC.slice(0, mcCount);
-                selectedTF = shuffledTF.slice(0, tfCount);
+                sourceRegularMC = shuffle([...regularMC]).slice(0, neededRegularMC);
             } else {
-                // Case 2: Sequential Random Start
-                selectedMC = getSequentialRandomSubset(mcQuestions, mcCount);
-                selectedTF = getSequentialRandomSubset(tfQuestions, tfCount);
+                sourceRegularMC = getSequentialRandomSubset(regularMC, neededRegularMC);
             }
+            finalMC = shuffle([...chosenPrioritisedMC, ...sourceRegularMC]);
 
-            // Combine: Prioritized first, then MC, then TF
-            return [...prioritized, ...selectedMC, ...selectedTF];
+            // 6. Select and Mix TF Group
+            let finalTF = [];
+            const chosenPrioritisedTF = prioritizedTF.slice(0, targetTF);
+            const neededRegularTF = targetTF - chosenPrioritisedTF.length;
+
+            let sourceRegularTF = [];
+            if (quizSettings.randomize) {
+                sourceRegularTF = shuffle([...regularTF]).slice(0, neededRegularTF);
+            } else {
+                sourceRegularTF = getSequentialRandomSubset(regularTF, neededRegularTF);
+            }
+            finalTF = shuffle([...chosenPrioritisedTF, ...sourceRegularTF]);
+
+            console.log(`Generated session with ${finalMC.length} MCQs and ${finalTF.length} TFs (Total: ${finalMC.length + finalTF.length})`);
+            return [...finalMC, ...finalTF];
         }
 
         function startSession() {
