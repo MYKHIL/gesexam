@@ -227,6 +227,7 @@
         const LOCAL_STORAGE_KEY = 'gesAdiiQuizQuestions';
         const SETTINGS_KEY = 'gesAdiiQuizSettings';
         const SESSION_HISTORY_KEY = 'gesAdiiSessionHistory';
+        const WRONG_QUESTIONS_KEY = 'gesAdiiWrongQuestions';
         // JSONBin.io configuration (provided by user)
         const JSONBIN_BIN_ID = '69296a23ae596e708f7617ae';
         const JSONBIN_MASTER_KEY = '$2a$10$Zwr/q5r0c.Lv/6Ikq9a.ROrJruWGsHzf8uSI/HWq7yjG.4OrsE2O6';
@@ -350,6 +351,7 @@
         let sessionHistory = []; // Array to store all session scores and timestamps
         let sessionResultsSaved = false; // Flag to prevent duplicate session saves
         let shouldAutoSpeakQuestion = false; // Flag to trigger auto-speak on question render
+        let wrongQuestionsCache = {}; // Cache for incorrectly answered questions (hash -> question object)
 
         // Updated quizSettings with new native TTS options
         let quizSettings = {
@@ -360,7 +362,8 @@
             ttsRate: 1,     // Playback rate (0.1 to 10)
             ttsRate: 1,     // Playback rate (0.1 to 10)
             ttsPitch: 1,    // Playback pitch (0 to 2)
-            timeLimit: 0    // Limit in minutes (0 = disabled)
+            timeLimit: 0,   // Limit in minutes (0 = disabled)
+            markAfterSession: false // Suppress immediate feedback
         };
 
         let quizTimerInterval = null;
@@ -1158,6 +1161,7 @@
                     loadedSettings.ttsRate = loadedSettings.ttsRate || 1;
                     loadedSettings.ttsPitch = loadedSettings.ttsPitch || 1;
                     loadedSettings.timeLimit = loadedSettings.timeLimit || 0;
+                    loadedSettings.markAfterSession = loadedSettings.hasOwnProperty('markAfterSession') ? loadedSettings.markAfterSession : quizSettings.markAfterSession;
 
 
                     loadedSettings.numQuestions = Math.min(loadedSettings.numQuestions, allQuestions.length);
@@ -1181,6 +1185,19 @@
 
             // 4. Load session history
             loadSessionHistory();
+
+            // 4.5 Load Wrong Questions Cache
+            const savedWrong = localStorage.getItem(WRONG_QUESTIONS_KEY);
+            if (savedWrong) {
+                try {
+                    wrongQuestionsCache = JSON.parse(savedWrong);
+                } catch (e) {
+                    console.error("Error parsing wrong questions cache:", e);
+                    wrongQuestionsCache = {};
+                }
+            }
+            // Load Global Wrong Questions Cache (Async)
+            loadGlobalWrongQuestions();
 
             // 5. Firebase already initialized at start
 
@@ -1232,6 +1249,106 @@
             } catch (e) {
                 showMessage('Could not save settings.', 'error');
                 console.error("Local storage error:", e);
+            }
+        }
+
+        const MASTERY_THRESHOLD = 3;
+
+        function updateWrongQuestionsCache(question, isCorrect) {
+            if (!question) return;
+            const hash = createQuestionHash(question);
+
+            if (isCorrect) {
+                // If correct, check mastery threshold
+                if (wrongQuestionsCache[hash]) {
+                    wrongQuestionsCache[hash].consecutiveCorrect = (wrongQuestionsCache[hash].consecutiveCorrect || 0) + 1;
+
+                    if (wrongQuestionsCache[hash].consecutiveCorrect >= MASTERY_THRESHOLD) {
+                        delete wrongQuestionsCache[hash];
+                        console.log(`Question mastered (3/3) and removed from cache: ${hash.substring(0, 10)}...`);
+                    } else {
+                        console.log(`Question answered correctly (${wrongQuestionsCache[hash].consecutiveCorrect}/${MASTERY_THRESHOLD}): ${hash.substring(0, 10)}...`);
+                    }
+                }
+            } else {
+                // If wrong, add/update in cache and RESET consecutive correct
+                wrongQuestionsCache[hash] = {
+                    ...question,
+                    lastMissed: Date.now(),
+                    missCount: (wrongQuestionsCache[hash]?.missCount || 0) + 1,
+                    consecutiveCorrect: 0
+                };
+                console.log(`Question missed and added/updated in cache: ${hash.substring(0, 10)}...`);
+            }
+
+            // Always save to localStorage
+            try {
+                localStorage.setItem(WRONG_QUESTIONS_KEY, JSON.stringify(wrongQuestionsCache));
+            } catch (e) {
+                console.error("Error saving wrong questions cache:", e);
+            }
+
+            // Sync with Firestore (Best effort)
+            syncWrongQuestionsToFirestore(hash, isCorrect ? null : wrongQuestionsCache[hash]);
+            // Sync with Global Cache
+            updateGlobalWrongQuestions(question, isCorrect);
+        }
+
+        async function updateGlobalWrongQuestions(question, isCorrect) {
+            if (!firebaseInitialized || !firestoreDb || !window._fb || isCorrect) return;
+            try {
+                const hash = createQuestionHash(question);
+                const docRef = window._fb.doc(firestoreDb, 'globalWrongQuestions', hash);
+
+                // Increment missCount globally
+                await window._fb.setDoc(docRef, {
+                    question: question,
+                    missCount: window._fb.increment ? window._fb.increment(1) : (window._fb.FieldValue ? window._fb.FieldValue.increment(1) : 1),
+                    lastMissed: window._fb.serverTimestamp ? window._fb.serverTimestamp() : new Date().toISOString()
+                }, { merge: true });
+                console.log(`Global miss count incremented for: ${hash.substring(0, 10)}...`);
+            } catch (e) {
+                console.debug('Global wrong questions sync failed:', e);
+            }
+        }
+
+        async function syncWrongQuestionsToFirestore(hash, questionData) {
+            if (!firebaseInitialized || !firestoreDb || !window._fb) return;
+            try {
+                const deviceId = getDeviceId();
+                const docRef = window._fb.doc(firestoreDb, 'users', deviceId, 'wrongQuestions', hash);
+
+                if (questionData) {
+                    await window._fb.setDoc(docRef, {
+                        ...questionData,
+                        updatedAt: window._fb.serverTimestamp ? window._fb.serverTimestamp() : new Date().toISOString()
+                    });
+                } else {
+                    await window._fb.deleteDoc(docRef);
+                }
+            } catch (e) {
+                console.debug('Firestore sync for wrong questions failed:', e);
+            }
+        }
+
+        let globalWrongQuestionsCache = [];
+
+        async function loadGlobalWrongQuestions() {
+            if (!firebaseInitialized || !firestoreDb || !window._fb || !window._fb.getDocs) return;
+            try {
+                const q = window._fb.query(
+                    window._fb.collection(firestoreDb, 'globalWrongQuestions'),
+                    window._fb.orderBy('missCount', 'desc'),
+                    window._fb.limit(20)
+                );
+                const querySnapshot = await window._fb.getDocs(q);
+                globalWrongQuestionsCache = [];
+                querySnapshot.forEach((doc) => {
+                    globalWrongQuestionsCache.push(doc.data().question);
+                });
+                console.log(`Loaded ${globalWrongQuestionsCache.length} global wrong questions.`);
+            } catch (e) {
+                console.debug('Could not load global wrong questions:', e);
             }
         }
 
@@ -1469,10 +1586,12 @@
                         <span>${quizSettings.randomize ? 'Randomized' : 'Sequential'}</span>
                         <span>|</span>
                         <span>${quizSettings.timeLimit > 0 ? quizSettings.timeLimit + ' min Timer' : 'No Timer'}</span>
+                        <span>|</span>
+                        <span>${quizSettings.markAfterSession ? 'Mark After Session' : 'Immediate Feedback'}</span>
                     </div>
                     
                     <div class="flex flex-col sm:flex-row justify-center gap-4">
-                         <button id="tts-toggle-btn-pre" onclick="toggleTts()" class="flex items-center justify-center px-6 py-3 font-bold rounded-xl transition duration-150 shadow-md">
+                        <button id="tts-toggle-btn-pre" onclick="toggleTts()" class="flex items-center justify-center px-6 py-3 font-bold rounded-xl transition duration-150 shadow-md">
                             <!-- Button content will be updated by updateTtsButton -->
                         </button>
                         <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-xl shadow-md border border-gray-200">
@@ -1480,6 +1599,10 @@
                             <label for="timer-input-pre" class="text-sm font-semibold text-gray-700">Timer:</label>
                             <input type="number" id="timer-input-pre" min="0" max="180" value="${quizSettings.timeLimit || 0}" onchange="updateTimerFromInput()" class="w-20 p-2 border border-gray-300 rounded-lg text-center focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="0">
                             <span class="text-sm text-gray-600 font-medium">min</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-xl shadow-md border border-gray-200">
+                             <input type="checkbox" id="mark-after-session-pre" ${quizSettings.markAfterSession ? 'checked' : ''} onchange="quizSettings.markAfterSession = this.checked; saveSettings(); renderHomeView();" class="w-5 h-5 text-blue-600 rounded">
+                             <label for="mark-after-session-pre" class="text-sm font-semibold text-gray-700">Mark After Session</label>
                         </div>
                         <button onclick="startSession()" class="w-full sm:w-auto px-10 py-4 bg-green-600 text-white font-extrabold text-xl rounded-xl hover:bg-green-700 transition duration-150 shadow-lg transform hover:scale-105">
                             Start Session (${quizSettings.numQuestions} Qs)
@@ -1598,6 +1721,14 @@
                         <label for="randomize" class="text-lg font-semibold text-gray-700">Randomize Question Order</label>
                         <input type="checkbox" id="randomize" ${quizSettings.randomize ? 'checked' : ''} onchange="updateSettingsAuto()" class="w-5 h-5 text-blue-600 rounded">
                     </div>
+
+                    <div class="flex items-center justify-between border-t pt-4">
+                        <div>
+                            <label for="markAfterSession" class="text-lg font-semibold text-gray-700">Mark After Session</label>
+                            <p class="text-sm text-gray-500">Hide feedback until the end of the session.</p>
+                        </div>
+                        <input type="checkbox" id="markAfterSession" ${quizSettings.markAfterSession ? 'checked' : ''} onchange="updateSettingsAuto()" class="w-5 h-5 text-blue-600 rounded">
+                    </div>
                 
                     <div class="border-t pt-4">
                         <label for="timeLimit" class="block text-lg font-semibold text-gray-700 mb-2">Timer (Minutes)</label>
@@ -1633,6 +1764,12 @@
                             <input type="range" id="ttsPitch" min="0" max="2" step="0.1" value="${quizSettings.ttsPitch}" oninput="updateSettingsAuto(); document.getElementById('ttsPitchValue').textContent = this.value" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer">
                         </div>
                     </div>
+
+                    <div class="border-t pt-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Reinforcement</h3>
+                        <p class="text-sm text-gray-500 mb-3">You have <span class="font-bold text-red-600">${Object.keys(wrongQuestionsCache).length}</span> questions in your reinforcement cache. These are prioritized in your sessions.</p>
+                        <button onclick="confirmClearWrongQuestions()" class="px-4 py-2 bg-red-100 text-red-700 rounded-lg font-semibold hover:bg-red-200 border border-red-200 transition">Clear Reinforcement Cache</button>
+                    </div>
                     <!-- Legacy Admin Button Hidden
                     <div class="border-t pt-4">
                         <h3 class="text-xl font-semibold text-gray-800">Admin</h3>
@@ -1649,6 +1786,7 @@
         function updateSettingsAuto() {
             quizSettings.numQuestions = parseInt(document.getElementById('numQuestions').value, 10);
             quizSettings.randomize = document.getElementById('randomize').checked;
+            quizSettings.markAfterSession = document.getElementById('markAfterSession').checked;
             quizSettings.ttsEnabled = document.getElementById('ttsEnabled').checked;
             quizSettings.ttsVoice = document.getElementById('ttsVoice').value;
             quizSettings.ttsRate = parseFloat(document.getElementById('ttsRate').value);
@@ -1662,6 +1800,40 @@
 
             saveSettings();
             updateTtsButtons();
+        }
+
+        async function confirmClearWrongQuestions() {
+            const count = Object.keys(wrongQuestionsCache).length;
+            if (count === 0) {
+                showMessage("Reinforcement cache is already empty.", "info");
+                return;
+            }
+
+            const confirmed = await showCustomConfirm(
+                "Clear Reinforcement Cache?",
+                `Are you sure you want to clear all ${count} questions from your reinforcement cache? This will reset your progress on missed questions.`,
+                "Clear All",
+                "Cancel",
+                "bg-red-600 hover:bg-red-700"
+            );
+
+            if (confirmed) {
+                // Clear local cache
+                wrongQuestionsCache = {};
+                localStorage.setItem(WRONG_QUESTIONS_KEY, JSON.stringify(wrongQuestionsCache));
+
+                // Clear Firestore (best effort)
+                try {
+                    const deviceId = getDeviceId();
+                    // In a real app, you'd probably want a batch delete or a cloud function.
+                    // For now, we'll just inform the user we are clearing the local cache.
+                    // Syncing a full clear to Firestore is complex without a collection-level clear tool.
+                    showMessage("Reinforcement cache cleared locally.", "success");
+                    renderSettingsView(); // Refresh view
+                } catch (e) {
+                    console.error("Error clearing reinforcement cache:", e);
+                }
+            }
         }
 
         function formatText(text) {
@@ -3801,7 +3973,46 @@
             const tfQuestions = [];
             const mcQuestions = []; // Multiple choice (more than 2 options)
 
+            // 1. Prioritized Wrong Questions
+            const prioritized = [];
+            const seenPrioritizedHashes = new Set();
+            const wrongHashes = Object.keys(wrongQuestionsCache);
+
+            if (wrongHashes.length > 0) {
+                // Pick up to 20% of the requested session size from personal wrong questions
+                const quota = Math.ceil(quizSettings.numQuestions * 0.20);
+                const shuffledWrong = shuffle([...wrongHashes]);
+                const hashesToPick = shuffledWrong.slice(0, quota);
+
+                hashesToPick.forEach(hash => {
+                    prioritized.push(wrongQuestionsCache[hash]);
+                    seenPrioritizedHashes.add(hash);
+                });
+                console.log(`Prioritized ${prioritized.length} personal wrong questions.`);
+            }
+
+            // 1.5 Global Wrong Questions
+            if (globalWrongQuestionsCache.length > 0) {
+                const globalQuota = Math.ceil(quizSettings.numQuestions * 0.15);
+                const shuffledGlobal = shuffle([...globalWrongQuestionsCache]);
+                let pickedCount = 0;
+
+                for (const q of shuffledGlobal) {
+                    if (pickedCount >= globalQuota) break;
+                    const hash = createQuestionHash(q);
+                    if (!seenPrioritizedHashes.has(hash)) {
+                        prioritized.push(q);
+                        seenPrioritizedHashes.add(hash);
+                        pickedCount++;
+                    }
+                }
+                console.log(`Prioritized ${pickedCount} global wrong questions.`);
+            }
+
             allQuestions.forEach(q => {
+                const hash = createQuestionHash(q);
+                if (seenPrioritizedHashes.has(hash)) return; // Skip if already prioritized
+
                 if (isTrueFalse(q)) {
                     tfQuestions.push(q);
                 } else {
@@ -3845,8 +4056,8 @@
                 selectedTF = getSequentialRandomSubset(tfQuestions, tfCount);
             }
 
-            // Combine: MC first, then TF at the end
-            return [...selectedMC, ...selectedTF];
+            // Combine: Prioritized first, then MC, then TF
+            return [...prioritized, ...selectedMC, ...selectedTF];
         }
 
         function startSession() {
@@ -4154,6 +4365,13 @@
 
         // Updated displayFeedback signature to control TTS
         function displayFeedback(q, selectedOption, feedbackArea, useTts = true) {
+            // Respect the "Mark after session" setting
+            if (quizSettings.markAfterSession && !reviewMode) {
+                feedbackArea.classList.add('hidden');
+                feedbackArea.innerHTML = '';
+                return;
+            }
+
             const isCorrect = selectedOption === q.answer;
             // Enhanced visual feedback colors as requested
             const statusClass = isCorrect
@@ -4268,8 +4486,14 @@
         function checkAnswer() {
             if (!currentSelection) return;
             const q = sessionQuestions[currentQuestionIndex];
+            const isCorrect = currentSelection === q.answer;
+
             userAnswers[q.id] = currentSelection;
             feedbackShown = true;
+
+            // Update wrong questions cache
+            updateWrongQuestionsCache(q, isCorrect);
+
             renderQuestion();
             displayFeedback(q, currentSelection, document.getElementById('feedback-area'), true);
         }
@@ -4749,7 +4973,8 @@
                     </div>
                     <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
                         <button onclick="resetAndStartNewSession()" class="px-6 py-3 bg-purple-600 text-white font-bold rounded-lg hover:bg-purple-700">New Session</button>
-                        <button onclick="startReview()" class="px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700">Review Questions</button>
+                        <button onclick="startReview(false)" class="px-6 py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700">Review All</button>
+                        <button onclick="startReview(true)" class="px-6 py-3 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 ${result.correct === result.total ? 'hidden' : ''}">Review Wrong Only</button>
                         <button onclick="setView('leaderboard')" class="px-6 py-3 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700">View Leaderboard</button>
                     </div>
                 </div>
@@ -4775,11 +5000,21 @@
             speak(appraisal);
         }
 
-        function startReview() {
+        let reviewFilterWrongOnly = false;
+
+        function startReview(wrongOnly = false) {
             reviewMode = true;
+            reviewFilterWrongOnly = wrongOnly;
             currentQuestionIndex = 0;
             currentSelection = null;
             feedbackShown = false;
+
+            // If wrongOnly, find first incorrect question
+            if (reviewFilterWrongOnly) {
+                const firstWrong = sessionQuestions.findIndex(q => userAnswers[q.id] !== q.answer);
+                if (firstWrong !== -1) currentQuestionIndex = firstWrong;
+            }
+
             // Show quiz review container
             document.getElementById('results-container').classList.add('hidden');
             document.getElementById('quiz-container-review').classList.remove('hidden');
