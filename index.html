@@ -4448,28 +4448,68 @@
             renderProgressBar(progressContainer);
         }
 
+        function getNextWrongIndex(currentIndex) {
+            for (let i = currentIndex + 1; i < sessionQuestions.length; i++) {
+                if (userAnswers[sessionQuestions[i].id] !== sessionQuestions[i].answer) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        function getPrevWrongIndex(currentIndex) {
+            for (let i = currentIndex - 1; i >= 0; i--) {
+                if (userAnswers[sessionQuestions[i].id] !== sessionQuestions[i].answer) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
         function renderReviewActionButtons(actionButtons) {
             actionButtons.innerHTML = '';
-            const prevBtn = `<button onclick="navigateReview('prev')" ${currentQuestionIndex === 0 ? 'disabled' : ''} class="w-full sm:w-auto px-4 py-2 bg-gray-200 text-gray-700 font-bold rounded-lg hover:bg-gray-300 disabled:opacity-50">Previous</button>`;
+
+            let prevDisabled = false;
+            if (reviewFilterWrongOnly) {
+                prevDisabled = getPrevWrongIndex(currentQuestionIndex) === -1;
+            } else {
+                prevDisabled = currentQuestionIndex === 0;
+            }
+
+            const prevBtn = `<button onclick="navigateReview('prev')" ${prevDisabled ? 'disabled' : ''} class="w-full sm:w-auto px-4 py-2 bg-gray-200 text-gray-700 font-bold rounded-lg hover:bg-gray-300 disabled:opacity-50">Previous</button>`;
             actionButtons.innerHTML += prevBtn;
 
-            const isLastQuestion = currentQuestionIndex === sessionQuestions.length - 1;
-            if (isLastQuestion) {
-                actionButtons.innerHTML += `<button onclick="returnToResults()" class="w-full sm:w-auto px-6 py-3 bg-purple-600 text-white font-bold rounded-xl">Review Complete</button>`;
+            if (reviewFilterWrongOnly) {
+                const nextWrong = getNextWrongIndex(currentQuestionIndex);
+                if (nextWrong === -1) {
+                    actionButtons.innerHTML += `<button onclick="returnToResults()" class="w-full sm:w-auto px-6 py-3 bg-purple-600 text-white font-bold rounded-xl">Review Complete</button>`;
+                } else {
+                    actionButtons.innerHTML += `<button onclick="navigateReview('next')" class="w-full sm:w-auto px-4 py-2 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700">Next Wrong Question</button>`;
+                }
             } else {
-                actionButtons.innerHTML += `<button onclick="navigateReview('next')" class="w-full sm:w-auto px-4 py-2 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700">Next</button>`;
+                const isLastQuestion = currentQuestionIndex === sessionQuestions.length - 1;
+                if (isLastQuestion) {
+                    actionButtons.innerHTML += `<button onclick="returnToResults()" class="w-full sm:w-auto px-6 py-3 bg-purple-600 text-white font-bold rounded-xl">Review Complete</button>`;
+                } else {
+                    actionButtons.innerHTML += `<button onclick="navigateReview('next')" class="w-full sm:w-auto px-4 py-2 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700">Next</button>`;
+                }
             }
         }
 
         function renderReviewNavigation(navigationArea) {
+            let questionsToDisplay = sessionQuestions.map((q, i) => ({ q, i }));
+
+            if (reviewFilterWrongOnly) {
+                questionsToDisplay = questionsToDisplay.filter(item => userAnswers[item.q.id] !== item.q.answer);
+            }
+
             navigationArea.innerHTML = `
                 <div class="mt-8">
-                    <h3 class="text-lg font-semibold mb-3 text-gray-700">Question Navigator</h3>
-                    <div class="grid-container flex gap-2 p-2 bg-gray-100 rounded-lg">
-                        ${sessionQuestions.map((q, index) => {
-                const statusClass = userAnswers[q.id] ? 'nav-answered' : 'nav-unanswered';
-                const isCurrent = index === currentQuestionIndex ? 'nav-current' : '';
-                return `<button class="question-nav-button ${statusClass} ${isCurrent} flex-shrink-0" onclick="goToReviewQuestion(${index})">${index + 1}</button>`;
+                    <h3 class="text-lg font-semibold mb-3 text-gray-700">${reviewFilterWrongOnly ? 'Wrong Question Navigator' : 'Question Navigator'}</h3>
+                    <div class="grid-container flex gap-2 p-2 bg-gray-100 rounded-lg overflow-x-auto">
+                        ${questionsToDisplay.map(item => {
+                const isCurrent = item.i === currentQuestionIndex ? 'nav-current' : '';
+                return `<button class="question-nav-button nav-incorrect ${isCurrent} flex-shrink-0" onclick="goToReviewQuestion(${item.i})">${item.i + 1}</button>`;
             }).join('')}
                     </div>
                 </div>
@@ -4478,10 +4518,21 @@
 
         function navigateReview(direction) {
             window.speechSynthesis.cancel();
-            if (direction === 'next' && currentQuestionIndex < sessionQuestions.length - 1) {
-                currentQuestionIndex++;
-            } else if (direction === 'prev' && currentQuestionIndex > 0) {
-                currentQuestionIndex--;
+
+            if (reviewFilterWrongOnly) {
+                if (direction === 'next') {
+                    const nextWrong = getNextWrongIndex(currentQuestionIndex);
+                    if (nextWrong !== -1) currentQuestionIndex = nextWrong;
+                } else {
+                    const prevWrong = getPrevWrongIndex(currentQuestionIndex);
+                    if (prevWrong !== -1) currentQuestionIndex = prevWrong;
+                }
+            } else {
+                if (direction === 'next' && currentQuestionIndex < sessionQuestions.length - 1) {
+                    currentQuestionIndex++;
+                } else if (direction === 'prev' && currentQuestionIndex > 0) {
+                    currentQuestionIndex--;
+                }
             }
             renderReviewQuestion();
         }
