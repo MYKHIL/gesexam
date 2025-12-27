@@ -757,102 +757,82 @@
         }
 
         async function fetchJsonFilesRecursively(basePath = '.') {
-            // Optimized: Only scan existing files in the default-questions folder
-
             const allQuestionsLoaded = [];
             const seenHashes = new Set();
-
-            // Cache busting: add timestamp to prevent browser caching
             const cacheBuster = `v=${Date.now()}`;
-
-            // Target only the default-questions folder with set files
             const filesToTry = [];
             for (let i = 1; i <= 80; i++) {
                 filesToTry.push(`default-questions/set${i}.json`);
             }
 
             const totalFilesToCheck = filesToTry.length;
-            let filesChecked = 0;
+            let filesProcessed = 0;
 
-            // Single-pass: Check if file exists, then load it immediately
-            for (const filePath of filesToTry) {
-                filesChecked++;
+            const updateProgress = () => {
+                filesProcessed++;
+                const progress = (filesProcessed / totalFilesToCheck) * 100;
+                document.getElementById('loading-progress').style.width = progress + '%';
+                document.getElementById('loading-status').textContent = `Loaded ${filesProcessed}/${totalFilesToCheck} sources...`;
+            };
 
+            const loadFile = async (filePath) => {
                 try {
-                    // Check if file exists
-                    const headResponse = await fetch(filePath, { method: 'HEAD' });
-
-                    // Update progress for the check
-                    const checkProgress = (filesChecked / totalFilesToCheck) * 100;
-                    document.getElementById('loading-progress').style.width = checkProgress + '%';
-                    document.getElementById('loading-status').textContent = `Checking ${filePath}...`;
-
-                    if (!headResponse.ok) {
-                        // File doesn't exist, skip it
-                        continue;
+                    const response = await fetch(`${filePath}?${cacheBuster}`);
+                    if (!response.ok) {
+                        updateProgress();
+                        return [];
                     }
 
-                    // File exists, load it immediately
-                    document.getElementById('loading-status').textContent = `Loading ${filePath}...`;
-                    const urlWithCacheBuster = `${filePath}?${cacheBuster}`;
-                    const response = await fetch(urlWithCacheBuster);
-
-                    if (!response.ok) continue; // Skip if file can't be read
-
-                    // Load raw text to capture source file and approximate line numbers
                     const rawText = await response.text();
+                    updateProgress();
+
                     let data;
                     try {
                         data = JSON.parse(rawText);
                     } catch (e) {
-                        console.debug(`Failed to parse JSON from ${filePath}:`, e);
-                        continue; // skip file if not valid JSON
+                        return [];
                     }
-                    if (!Array.isArray(data)) continue;
+                    if (!Array.isArray(data)) return [];
 
-                    // Validate and deduplicate, attach source metadata
-                    let validCount = 0;
+                    const fileQuestions = [];
                     for (let i = 0; i < data.length; i++) {
                         const item = data[i];
                         if (isValidQuestion(item)) {
                             const hash = createQuestionHash(item);
                             if (!seenHashes.has(hash)) {
                                 seenHashes.add(hash);
-                                // Attach source metadata so we can identify file and approximate line later
                                 try {
-                                    // Attempt to find the stringified item in the raw text to get a line number
                                     const itemString = JSON.stringify(item);
                                     let idx = rawText.indexOf(itemString);
-                                    // If not found, try a more robust approach using the question text
                                     if (idx === -1 && item.question) {
                                         idx = rawText.indexOf(item.question);
                                     }
                                     const lineNumber = idx === -1 ? null : (rawText.slice(0, idx).split('\n').length + 1);
-                                    const enriched = Object.assign({}, item, {
+                                    fileQuestions.push(Object.assign({}, item, {
                                         __sourceFile: filePath,
                                         __sourceIndex: i,
                                         __sourceLine: lineNumber
-                                    });
-                                    allQuestionsLoaded.push(enriched);
-                                    validCount++;
+                                    }));
                                 } catch (e) {
-                                    // Fallback: still include item without line info
-                                    allQuestionsLoaded.push(Object.assign({}, item, { __sourceFile: filePath, __sourceIndex: i, __sourceLine: null }));
-                                    validCount++;
+                                    fileQuestions.push(Object.assign({}, item, { __sourceFile: filePath, __sourceIndex: i, __sourceLine: null }));
                                 }
                             }
                         }
                     }
-
-                    if (validCount > 0) {
-                        console.log(`Successfully loaded ${validCount} questions from: ${filePath}`);
-                        document.getElementById('loading-count').textContent = `${allQuestionsLoaded.length} questions loaded`;
-                    }
+                    return fileQuestions;
                 } catch (e) {
-                    // Silently skip - file doesn't exist or fetch not supported
-                    continue;
+                    updateProgress();
+                    return [];
                 }
-            }
+            };
+
+            const results = await Promise.allSettled(filesToTry.map(f => loadFile(f)));
+
+            results.forEach(result => {
+                if (result.status === 'fulfilled' && result.value) {
+                    allQuestionsLoaded.push(...result.value);
+                }
+            });
 
             return allQuestionsLoaded;
         }
@@ -1201,33 +1181,35 @@
 
             // 5. Firebase already initialized at start
 
-            // Ensure device is registered on the remote leaderboard store
-            try {
-                await ensureRegistered();
-            } catch (e) {
-                console.error('Registration check failed:', e);
-                // allow app to continue but user will need to register to start sessions
-            }
+            // Non-blocking Background Tasks
+            (async () => {
+                // Background: Ensure device is registered
+                try {
+                    await ensureRegistered();
+                } catch (e) {
+                    console.debug('Background registration check failed:', e);
+                }
 
-            // Attempt one-time migration from JSONBin -> Firebase (non-blocking)
-            try {
-                try { await migrateJsonbinToFirebase(); } catch (e) { console.debug('Migration error (non-fatal)', e); }
-                try { await migrateUsersJsonbinToFirebase(); } catch (e) { console.debug('User migration error (non-fatal)', e); }
-            } catch (e) {
-                console.debug('Firebase migration step encountered an error (non-fatal):', e);
-            }
+                // Background: Attempt one-time migration from JSONBin -> Firebase
+                try {
+                    await migrateJsonbinToFirebase().catch(e => console.debug('Migration error (non-fatal)', e));
+                    await migrateUsersJsonbinToFirebase().catch(e => console.debug('User migration error (non-fatal)', e));
+                } catch (e) {
+                    console.debug('Background migration step encountered an error:', e);
+                }
+            })();
 
             // 6. Re-render based on loaded state
             setView(currentView);
+
+            // Immediate UI Reveal
+            document.getElementById('loading-indicator').classList.add('hidden');
+
             // Start online monitoring once the app has rendered
             try { startOnlineMonitoring(); } catch (e) { console.debug('Could not start online monitoring:', e); }
 
-            // 6. Hide loading indicator
-            setTimeout(() => {
-                document.getElementById('loading-indicator').classList.add('hidden');
-                // Check for admin feedback after app loads
-                checkAndShowAdminFeedback();
-            }, 500); // Small delay for smooth transition
+            // Check for admin feedback after app loads
+            setTimeout(() => checkAndShowAdminFeedback(), 500);
         }
 
         function saveQuestions(questions) {
@@ -4022,7 +4004,8 @@
 
             // Calculate quotas
             // 33% (1/3) should be True/False
-            const totalNeeded = quizSettings.numQuestions;
+            const totalRequested = quizSettings.numQuestions;
+            const totalNeeded = Math.max(0, totalRequested - prioritized.length);
             let tfCount = Math.round(totalNeeded / 3);
 
             // If we don't have enough TF questions, take what we have
@@ -4181,7 +4164,13 @@
 
             const userAnswer = userAnswers[q.id];
             currentSelection = userAnswer || null;
-            feedbackShown = !!userAnswer;
+
+            // In delayed marking mode, we don't show feedback colors/disabled state while navigating
+            if (quizSettings.markAfterSession) {
+                feedbackShown = false;
+            } else {
+                feedbackShown = !!userAnswer;
+            }
 
             const questionArea = document.getElementById('question-area');
             const navigationArea = document.getElementById('navigation-area');
@@ -4192,10 +4181,16 @@
 
             // Calculate current live score
             const currentScoreData = calculateScore();
-            // Update Score in Timer Bar
+            // Update Score in Timer Bar (Only if not in delayed marking mode)
             const scoreDisplay = document.getElementById('score-display');
             if (scoreDisplay) {
-                scoreDisplay.textContent = `Score: ${currentScoreData.correct}/${totalQuestions}`;
+                if (quizSettings.markAfterSession) {
+                    scoreDisplay.textContent = '';
+                    scoreDisplay.classList.add('hidden');
+                } else {
+                    scoreDisplay.textContent = `Score: ${currentScoreData.correct}/${totalQuestions}`;
+                    scoreDisplay.classList.remove('hidden');
+                }
             }
 
             let optionsHtml = '';
@@ -4255,9 +4250,16 @@
         }
 
         function selectOption(optionKey) {
-            if (feedbackShown) return;
+            if (feedbackShown && !quizSettings.markAfterSession) return;
+            if (reviewMode) return;
 
             currentSelection = optionKey;
+
+            // In Mark After Session mode, save the answer immediately upon selection
+            if (quizSettings.markAfterSession) {
+                const q = sessionQuestions[currentQuestionIndex];
+                userAnswers[q.id] = optionKey;
+            }
 
             document.querySelectorAll('.option-button').forEach(btn => {
                 btn.classList.remove('selected');
@@ -4351,14 +4353,21 @@
                     // Normal mode
                     actionButtons.innerHTML += `<button onclick="navigate('next')" ${isLastQuestion ? 'disabled' : ''} class="w-full sm:w-auto px-4 py-2 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 disabled:opacity-50">${isLastQuestion ? 'Review Complete' : 'Next'}</button>`;
                 }
+            } else if (quizSettings.markAfterSession) {
+                // Mark After Session Mode: Show Next/Finish instead of Check Answer
+                if (isLastQuestion) {
+                    actionButtons.innerHTML += `<button onclick="confirmFinish()" class="w-full sm:w-auto px-6 py-3 bg-purple-600 text-white font-bold rounded-xl hover:bg-purple-700">Finish Session</button>`;
+                } else {
+                    actionButtons.innerHTML += `<button onclick="navigate('next')" class="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700">Next Question</button>`;
+                }
             } else if (currentSelection) {
                 actionButtons.innerHTML += `<button onclick="checkAnswer()" class="w-full sm:w-auto px-6 py-3 bg-green-600 text-white font-bold rounded-xl">Check Answer</button>`;
             } else {
                 actionButtons.innerHTML += `<button disabled class="w-full sm:w-auto px-6 py-3 bg-gray-400 text-white font-bold rounded-xl">Select an Option</button>`;
             }
 
-            // Override for last question in normal mode
-            if (isLastQuestion && feedbackShown && !reviewingUnanswered) {
+            // Override for last question in normal mode (Immediate Feedback)
+            if (isLastQuestion && feedbackShown && !reviewingUnanswered && !quizSettings.markAfterSession) {
                 actionButtons.innerHTML = `${prevBtn} <button onclick="confirmFinish()" class="w-full sm:w-auto px-6 py-3 bg-purple-600 text-white font-bold rounded-xl">View Score</button>`;
             }
         }
@@ -4570,6 +4579,17 @@
                 if (userAnswers[q.id] === q.answer) correctCount++;
             });
             return { correct: correctCount, total: sessionQuestions.length };
+        }
+
+        // Final score calculation and cache updates for Mark After Session mode
+        function finalizeMarkAfterSession() {
+            sessionQuestions.forEach(q => {
+                const isCorrect = userAnswers[q.id] === q.answer;
+                // Only update cache for questions that were actually answered
+                if (userAnswers[q.id]) {
+                    updateWrongQuestionsCache(q, isCorrect);
+                }
+            });
         }
 
         function saveSessionToHistory(correctAnswers, totalQuestions) {
@@ -4943,6 +4963,12 @@
             stopTimer();
             renderResultsCalled = true;
             window.speechSynthesis.cancel();
+
+            // Finalize marking if in background marking mode
+            if (quizSettings.markAfterSession) {
+                finalizeMarkAfterSession();
+            }
+
             const result = calculateScore();
             const percentage = ((result.correct / result.total) * 100).toFixed(1);
 
