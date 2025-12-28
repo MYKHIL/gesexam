@@ -750,10 +750,16 @@
                 typeof item.explanation === 'string';
         }
 
-        function createQuestionHash(question) {
-            // Create a hash of the entire question to detect true duplicates
-            // Includes question, options, answer, and explanation
-            return JSON.stringify(question);
+        function createQuestionHash(q) {
+            // Create a stable hash of the core question content to detect true duplicates
+            // Excludes metadata like id, __sourceFile, etc. that can change
+            const core = {
+                question: q.question,
+                options: q.options,
+                answer: q.answer,
+                explanation: q.explanation
+            };
+            return JSON.stringify(core);
         }
 
         async function fetchJsonFilesRecursively(basePath = '.') {
@@ -3942,19 +3948,40 @@
         // Clean existing cache to ensure legacy questions with extra empty options are correctly categorized
         function cleanQuestionCache(cache) {
             if (!cache) return;
+            const uniqueEntries = {};
             Object.values(cache).forEach(q => {
-                if (q && q.options) {
+                if (!q) return;
+
+                // 1. Sanitize options first
+                if (q.options) {
                     const validKeys = Object.entries(q.options)
                         .filter(([key, val]) => val && val.trim() !== "")
                         .map(([key, val]) => key);
 
                     if (validKeys.length === 2) {
-                        // Prune keys that aren't in the valid set
                         const newOptions = {};
                         validKeys.forEach(k => newOptions[k] = q.options[k]);
                         q.options = newOptions;
                     }
                 }
+
+                // 2. Deduplicate using stable hash
+                const hash = createQuestionHash(q);
+                if (!uniqueEntries[hash]) {
+                    uniqueEntries[hash] = q;
+                } else {
+                    // Merge stats if duplicate found
+                    const existing = uniqueEntries[hash];
+                    existing.missCount = Math.max(existing.missCount || 0, q.missCount || 0);
+                    existing.consecutiveCorrect = Math.max(existing.consecutiveCorrect || 0, q.consecutiveCorrect || 0);
+                    existing.lastMissed = Math.max(existing.lastMissed || 0, q.lastMissed || 0);
+                }
+            });
+
+            // Clear and repopulate the cache object
+            for (const prop in cache) { delete cache[prop]; }
+            Object.keys(uniqueEntries).forEach(hash => {
+                cache[hash] = uniqueEntries[hash];
             });
         }
 
@@ -3996,7 +4023,7 @@
             const globalWrong = [...globalWrongQuestionsCache];
 
             // 1. Collect all prioritized candidates (Personal)
-            const personalCandidates = shuffle([...wrongHashes]);
+            const personalCandidates = shuffle(Object.keys(wrongQuestionsCache));
             personalCandidates.forEach(hash => {
                 const q = wrongQuestionsCache[hash];
                 if (!seenPrioritizedHashes.has(hash)) {
@@ -4017,12 +4044,19 @@
                 }
             });
 
-            // 3. Collect all regular candidates
+            // 3. Collect and Deduplicate all regular candidates
             allQuestions.forEach(q => {
                 const hash = createQuestionHash(q);
+                // IF we already have this question in prioritized group, SKIP
                 if (seenPrioritizedHashes.has(hash)) return;
-                if (isTrueFalse(q)) regularTF.push(q);
-                else regularMC.push(q);
+
+                // IF we already have this hash in our regular group (from allQuestions itself having dupes), SKIP
+                if (isTrueFalse(q)) {
+                    regularTF.push(q);
+                } else {
+                    regularMC.push(q);
+                }
+                seenPrioritizedHashes.add(hash); // Use same set to track all seen in this session
             });
 
             // 4. Determine Global Quotas
@@ -5100,7 +5134,7 @@
                 </div>`;
 
             // Save session to history only once when quiz is completed
-            if (!sessionResultsSaved && result.total > 0 && Object.keys(userAnswers).length === result.total) {
+            if (!sessionResultsSaved && result.total > 0) {
                 saveSessionToHistory(result.correct, result.total);
                 sessionResultsSaved = true;
             }
